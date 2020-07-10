@@ -1,0 +1,7 @@
+[[tilematrixsetlimits2d_model]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/tilematrixsetlimits2d/model* {set:cellbgcolor:#FFFFFF}
+2+|A tile matrix set limits 2D shall be defined following the UML model as shown in Figure 7 and model description in <<parts-of-tilematrixsetlimits-data-structure>> and <<parts-of-tilematrixlimits-data-structure>>. {set:cellbgcolor:#FFFFFF}
+|*Dependency* {set:cellbgcolor:#FFFFFF} |http://www.opengis.net/spec/owscommon/2.0/req[http://www.opengis.net/spec/owscommon/2.0/req] {set:cellbgcolor:#FFFFFF}
+|===

@@ -1,0 +1,45 @@
+[big]*i.     Abstract*
+
+The OGC Tile Matrix Set standard defines the rules and requirements for a tile matrix set as a way to index space based on a set of regular grids defining a domain (tile matrix) for a limited list of scales in a Coordinate Reference System (CRS) as defined in [OGC 08-015r2] Abstract Specification Topic 2: Spatial Referencing by Coordinates. Each tile matrix is divided into regular tiles. In a tile matrix set, a tile can be univocally identified by a tile column a tile row and a tile matrix identifier. This document presents a data structure defining the properties of the tile matrix set in both UML diagrams and in tabular form. This document also presents a data structure to define a subset of a tile matrix set called tile matrix set limits. XML and JSON encodings are suggested both for tile matrix sets and tile matrix set limits. Finally, the document offers practical examples of tile matrix sets both for common global projections and for specific regions.
+
+[big]*ii.    Keywords*
+
+The following are keywords to be used by search engines and document catalogues.
+
+ogcdoc, OGC document, tiles, maps, tile matrix set
+
+[big]*iii.   Preface*
+
+In 2007 OGC approved and released the Web Map Tile Service standard [OGC 07-057r7] (WMTS). This OGC standard provides a definition of a “tile matrix set.” Over time, other OGC standards dealing with tiles in other ways needed to use the same definition. Unfortunately, these OGC standards could not use the tile matrix set definition directly because the definition was formally linked to the tile service. This document frees the concept of a tile matrix set from the WMTS standard so that other standards can reference the concept directly. This standard also adds an informative list of commonly used tile matrix sets. The submitters believe that other tile matrix concepts will emerge in the future. This document is anticipated to impact future revisions of other OGC standards such as GeoPackage.
+
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+
+_Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation._
+
+[big]*iv.    Security Considerations*
+
+The correct definition of a tile matrix set is crucial to be able to correctly geo-reference a tile. The application of the wrong tile matrix set could result in an incorrect geo-referencing of the tiles and the features represented in those tiles. In an emergency situation, such poor referencing could result sending first responders to the wrong location.
+
+In a normal service interaction, the client requests the TileMatrixSet once and requests one or more tiles afterwards. The client needs to ensure that the TileMatrixSet definition has not been tampered with and corresponds to the correct TileMatrixSet. In practice this means that the client and server must to use a mechanism to ensure that the service is really who it claims to be and that the message that travels from the server to the client has not been altered.
+
+If a server points to a definition of a TileMatrixSet that is hosted elsewhere, in addition to the precautions stated in before, the client must ensure that the service providing the definition of the TileMatrixSet is a trusted service. In addition, the synchronization of the tiles and the tile matrix set definition need to be ensured, guaranteeing that the tile matrix set definition has not been updated afterwards without the tile service knowing it.
+
+[big]*v.    Submitting organizations*
+
+The following organizations submitted this document to the Open Geospatial Consortium (OGC):
+
+*   UAB-CREAF
+*   Image Matters LLC
+*   Natural Resources Canada NRCan
+
+[big]*vi.     Submitters*
+
+All questions regarding this submission should be directed to the editor or the submitters:
+
+[width="100%",cols="50%,50%",options="header",]
+|==========================================================================================
+|*Name* |*Affiliation*
+|Joan Masó |UAB-CREAF
+|Jeff Yutzler |Image Matters LLC
+|Peter Rushforth |Canada Centre for Mapping and Earth Observation, Natural Resources Canada
+|==========================================================================================

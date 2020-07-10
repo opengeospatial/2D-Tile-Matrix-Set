@@ -1,0 +1,6 @@
+[[req_json_tilematrixset2d_ietf]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/json-tilematrixset2d/ietf* {set:cellbgcolor:#FFFFFF}
+2+|A TileMatrixSet2D encoded in JSON _shall_ conform to IETF RFC7159
+|===

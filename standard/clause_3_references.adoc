@@ -1,0 +1,13 @@
+== References
+
+The following normative documents contain provisions that, through references in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
+
+[1]  OGC: OGC 06-121r9 Web Service Common Implementation Specification, version 2.0, 2010. http://portal.opengeospatial.org/files/?artifact_id=38867
+
+[2]  OGC: OGC 08-005r2 Abstract Specification Topic 2: Spatial referencing by coordinates, 2010. http://portal.opengeospatial.org/files/?artifact_id=39049
+
+[3]  OGC: OGC 09-146r6 Coverage Implementation Schema (“CIS”) Version 1.1, 2017. http://docs.opengeospatial.org/is/09-146r6/09-146r6.html
+
+[4]  IETF: IETF RFC 7159, The JavaScript Object Notation (JSON) Data Interchange Format, 2014. https://www.ietf.org/rfc/rfc7159.txt
+
+[5]  W3C: W3C JSON-LD 1.0, A JSON-based Serialization for Linked Data, 2014. http://www.w3.org/TR/json-ld/

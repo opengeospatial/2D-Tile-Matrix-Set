@@ -1,0 +1,6 @@
+[[timematrixsetlink2d_identifier]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/tilematrixsetlink2d/identifier* {set:cellbgcolor:#FFFFFF}
+2+|A tiled resource or dataset shall declare support to a tile matrix set 2D by link to a tile matrix set definition by citing a tile matrix set identifier defined in the same document instance or an active (resolvable) link to a TileMatrixSet definition in an external document. {set:cellbgcolor:#FFFFFF}
+|===

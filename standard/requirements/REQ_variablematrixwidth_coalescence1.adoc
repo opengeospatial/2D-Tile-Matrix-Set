@@ -1,0 +1,7 @@
+[[variablematrixwidth_coalescence1]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/variablematrixwidth/coalescence1* {set:cellbgcolor:#FFFFFF}
+2+|Only the tile rows will with coalesces factor different of one shall be encoded. It a tile row is not mentioned in the variablematrixwidth description a coalesce factor of 1 shall be considered for that row..
+ {set:cellbgcolor:#FFFFFF}
+|===

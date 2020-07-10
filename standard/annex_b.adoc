@@ -1,0 +1,52 @@
+[appendix]
+[[annex_b]]
+[[annex-b-schema-documents-normative]]
+:appendix-caption: Annex
+== Schema Documents (Normative)
+
+In addition to this document, this standard includes several normative Schema Documents. These Schema Documents are posted online at the URL http://schemas.opengis.net/tms/1.0.
+
+[[b.1-xml-schema]]
+=== XML Schema     
+
+The main XML Schema Document is situated in the xml subfolder and it is named:
+
+xml/tms.xsd
+
+It includes the schemas necessary to XML validate the class XMLTileMatrixSet2D. The xml/examples subfolder is provided with the complete set of XML instances that are also provided in the Annex E of this document. In addition, the file named:
+
+xml/examples/LayerWithTMSLink.xsd
+
+contains the schemas necessary to XML-validate the class XMLTileMatrixSetLimits2D and XMLTileMatrixSetLink2D. The XML example LayerWithTMSLink.xml illustrates how to use this function.
+
+[[b.2-json-schema]]
+=== JSON Schema
+
+The main JSON Schema Document is situated in the json subfolder and it is named:
+
+json/tms-schema.json
+
+It includes the schemas necessary to JSON-validate the class JSONTileMatrixSet2D. The json/examples subfolder is provided with the complete set of JSON Documents that are also provided in Annex E of this document. In addition, the file named:
+
+json/examples/LayerWithTMSLink-schema.json
+
+contains the schemas necessary to JSON-validate the class JSONTileMatrixSetLimits2D and JSONTileMatrixSetLink2D. The JSON example LayerWithTMSLink.json illustrates how to use this function.
+
+[[b.3-json-ld-and-turtle]]
+=== JSON-LD and Turtle
+
+The JSON-LD @context documents are situated in the rdf subfolder and it is named:
+
+rdf/tms-context.json
+
+rdf/tms-boundingbox-context.json
+
+rdf/tms-tilematrix-context.json
+
+rdf/tms-variablematrixwidth-context.json
+
+This @context documents can be used to transform any JSON document into a RDF document using a JSON-LD engine. They support the class JSONLDTileMatrixSet2D. The json/examples subfolder provides an example of JSON documents that includes the @context documents to become a JSON-LD file. It also contains the result of its automatic transformation to RDF turtle:
+
+rdf/examples/ WorldCRS84QuadVariableWidth.json
+
+rdf/examples/ WorldCRS84QuadVariableWidth.n3

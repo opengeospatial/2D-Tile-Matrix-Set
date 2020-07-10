@@ -1,0 +1,42 @@
+[appendix]
+:appendix-caption: Annex
+[[Bibliography]]
+= Bibliography
+
+Craig Rollins and Mike Paniccia National Geospatial-Intelligence Agency ESRI Users Conference, July 22, 2015. https://www.slideshare.net/NGA_GEOINT/ngas-position-on-webmercator
+
+Dengler, Klaus und Heinen, Torsten und Huber, Albert und Molch, Katrin und Mikusch, Eberhard (2013) The EOC Geoservice: Standardized Access to Earth Observation Data Sets and Value Added Products. PV 2013, 4.-6.Nov. 2013, Frascati, Italien. http://elib.dlr.de/86351
+
+DLR Geospatial Web Services Lists of services and their current status. https://geoservice.dlr.de/web/services#tilecache
+
+Digital Globe Web Map Tile Service Developer Guide. Cloud Services | August 2013. https://dg-cms-uploads-production.s3.amazonaws.com/uploads/document/file/174/DGCS_DeveloperGuide_WMTS.pdf
+
+Emmanuel Stefanakis. Web Mercator Projection & Raster Tile Maps. Two cornerstones of Online Map Service Providers. Annual Conference – 2017 – Ottawa, May 31- June 2, 2017. http://www2.unb.ca/~estef/talks/CCA2017_Technical_Session_Stefanakis.pdf
+
+Map projections: A working manual. Professional Paper 1395. By:John P. Snyder. https://pubs.usgs.gov/pp/1395/report.pdf
+
+MBTiles Specification. https://github.com/mapbox/mbtiles-spec
+
+NGA.SIG.0011_1.0_WEBMERC, National Geospatial-Intelligence Agency (NGA) Standardization Document. Implementation Practice Web Mercator Map Projection. https://nsgreg.nga.mil/doc/view?i=4105
+
+NGA.SIG.0012_2.0.0_UTMUPS, The Universal Grids and the Transverse Mercator and Polar Stereographic Map Projections, Version 2.0.0, 25 March 2014. https://nsgreg.nga.mil/doc/view?i=4106
+
+NGA.SIG.0014_1.0_PROJRAS, National Geospatial-Intelligence Agency (NGA) Map Projections for Tiled Raster Graphics, V1.0, 24 April 2015 https://nsgreg.nga.mil/doc/view?i=1810
+
+NGA.SIG.0014_1.0_PROJRAS, UPS-Amendment, Map Projections for Tiled Raster Graphics Amendment for Universal Polar Stereographic, 2016-06-03, Version 0.1
+
+NGA.SIG.0014_1.0_PROJRAS, Mercator-Addendum, Map Projections for Tiled Raster Graphics Addendum for the Mercator Projection, 2016-05-17, Version 0.2
+
+DGIWG 124 Defence Profile of OGC’s Web Map Tile Service 1.0, 17 October 2017. https://portal.dgiwg.org/files/?artifact_id=68271&format=pdf
+
+OGC 05-077r4 Symbology Encoding (SE) Implementation Specification, version 1.1.0. http://portal.opengeospatial.org/files/?artifact_id=16700
+
+OGC 06-042 Web Map Service (WMS), version 1.3.0. http://portal.opengeospatial.org/files/?artifact_id=14416
+
+OGC 07-036 Geography Markup Language (GML) Encoding Standard, version 3.2.1. http://portal.opengeospatial.org/files/?artifact_id=20509
+
+OGC 07-057r7 Web Map Tile Service (WMTS), version 1.0. http://portal.opengeospatial.org/files/?artifact_id=35326
+
+OGC 13-082r2 Web Map Tile Service (WMTS) Simple Profile, version 1.0. http://docs.opengeospatial.org/is/13-082r2/13-082r2.html
+
+ 

@@ -1,0 +1,8 @@
+[[req_xml_tilematrixsetlink2d_model]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/xml-tilematrixsetlink2d/model* {set:cellbgcolor:#FFFFFF}
+2+|A TileMatrixSetLink2D encoded in XML shall implement the class TileMatrixSetLink2D
+| *Dependency:* | /req/tilematrixsetlink2d
+| *Dependency:* | /req/xml-tilematrixsetlimits2d
+|===

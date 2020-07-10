@@ -1,0 +1,58 @@
+[[json-ld-encoding]]
+== JSON-LD encoding
+
+This section establishes how to connect the JSON encoding to linked data by providing a mapping between the JSON encoding and the RDF triples model using JSON-LD. In practice, this means that a JSON file with some additional content defined in the JSON-LD syntax (http://www.w3.org/TR/json-ld) can be converted into RDF notation automatically using the JSON-LD API (http://www.w3.org/TR/json-ld-api). One implementation of this API is provided in the JSON-LD Playground (http://json-ld.org/playground/).
+
+[[json-ldtilematrixset2d]]
+=== JSON-LDTileMatrixSet2D
+
+The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/jsonld-tilematrixset2d.
+
+include::requirements/REQ_jsonld_tilematrixset2d_model.adoc[]
+
+include::requirements/REQ_jsonld_tilematrixset2d_w3c.adoc[]
+
+include::requirements/REQ_jsonld_tilematrixset2d_context.adoc[]
+
+include::requirements/REQ_jsonld_tilematrixset2d_media-type.adoc[]
+
+NOTE: A TileMatrixSet2D description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
+
+Annex G provides JSON-LD examples for common TileMatrixSet2D
+
+[[json-ld-encoding-of-a-tilematrixsetlimits]]
+=== JSON-LD encoding of a TileMatrixSetLimits
+
+The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/jsonld-tilematrixsetlimits2d.
+
+include::requirements/REQ_jsonld_tilematrixsetlimits2d_model.adoc[]
+
+include::requirements/REQ_jsonld_tilematrixsetlimits2d_w3c.adoc[]
+
+include::requirements/REQ_jsonld_tilematrixsetlimits2d_context.adoc[]
+
+NOTE: A TileMatrixSetLimits2D description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
+
+[[json-ld-encoding-of-a-tilematrixsetlink]]
+=== JSON-LD encoding of a TileMatrixSetLink
+
+The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/jsonld-tilematrixsetlink2d.
+
+include::requirements/REQ_jsonld_tilematrixsetlink2d_model.adoc[]
+
+include::requirements/REQ_jsonld_tilematrixsetlink2d_w3c.adoc[]
+
+include::requirements/REQ_jsonld_tilematrixsetlink2d_context.adoc[]
+
+NOTE: A TileMatrixSetLink2D description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
+
+[[json-ld-encoding-of-a-variablematrixwidth]]
+=== JSON-LD encoding of a VariableMatrixWidth
+
+The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/jsonld-variablematrixwidth.
+
+include::requirements/REQ_jsonld_variablematrixwidth_model.adoc[]
+
+include::requirements/REQ_jsonld_variablematrixwidth_w3c.adoc[]
+
+include::requirements/REQ_jsonld_variablematrixwidth_context.adoc[]

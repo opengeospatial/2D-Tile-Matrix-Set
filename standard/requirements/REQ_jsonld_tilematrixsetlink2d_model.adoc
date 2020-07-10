@@ -1,0 +1,8 @@
+[[req_jsonld_tilematrixsetlink2d_model]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/jsonld-tilematrixsetlink2d/model* {set:cellbgcolor:#FFFFFF}
+2+|A TileMatrixSetLimits2D encoded in JSON-LD _shall_ implement the class TileMatrixSetLink2D +
+|*Dependency*  |/req/tilematrixsetlink2d
+|*Dependency*  |/req/json-tilematrixsetlimits2d
+|===

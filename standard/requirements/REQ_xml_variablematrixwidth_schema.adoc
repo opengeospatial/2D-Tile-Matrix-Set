@@ -1,0 +1,6 @@
+[[req_xml_variablematrixwidth_schema]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/xml-variablematrixwidth/schema* {set:cellbgcolor:#FFFFFF}
+2+|A VariableMatrixWidth encoded in XML _shall_ validate using the XML schema for a variable matrix width.
+|===

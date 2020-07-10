@@ -1,0 +1,6 @@
+[[req_xml_tilematrixset2d_media-type]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/xml-tilematrixset2d/media-type* {set:cellbgcolor:#FFFFFF}
+2+|A TileMatrixSet2D encoded in an independent JSON document shall use the media type application/json. {set:cellbgcolor:#FFFFFF}
+|===

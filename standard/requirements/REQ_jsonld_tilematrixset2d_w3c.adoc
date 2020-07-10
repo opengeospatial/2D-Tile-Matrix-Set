@@ -1,0 +1,6 @@
+[[req_jsonld_tilematrixset2d_w3c]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/jsonld-tilematrixset2d/w3c* {set:cellbgcolor:#FFFFFF}
+2+|A TileMatrixSet2D encoded in JSON-LD _shall_ conform to W3C JSON-LD syntax version 1.
+|===

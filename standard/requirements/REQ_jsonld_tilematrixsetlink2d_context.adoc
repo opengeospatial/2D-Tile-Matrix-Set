@@ -1,0 +1,6 @@
+[[req_jsonld_tilematrixsetlink2d_context]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/jsonld-tilematrixsetlink2d/context* {set:cellbgcolor:#FFFFFF}
+2+|A TileMatrixSetLink2D encoded in JSON-LD _shall_ include references to the @context for a tile matrix set link 2D.
+|===

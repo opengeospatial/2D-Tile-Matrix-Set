@@ -1,0 +1,63 @@
+[[json-encoding]]
+== JSON encoding
+
+[[jsontilematrixset2d]]
+=== JSONTileMatrixSet2D
+
+The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/json-tilematrixset2d.
+
+include::requirements/REQ_json_tilematrixset2d_model.adoc[]
+
+include::requirements/REQ_json_tilematrixset2d_ietf.adoc[]
+
+include::requirements/REQ_json_tilematrixset2d_schema.adoc[]
+
+include::requirements/REQ_json_tilematrixset2d_media-type.adoc[]
+
+
+NOTE: A TileMatrixSet2D description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
+
+Annex E provides JSON examples for common TileMatrixSet2D.
+
+[[json-encoding-of-a-tilematrixsetlimits]]
+=== JSON encoding of a TileMatrixSetLimits
+
+The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/json-tilematrixsetlimits2d.
+
+include::requirements/REQ_json_tilematrixsetlimits2d_model.adoc[]
+
+include::requirements/REQ_json_tilematrixsetlimits2d_ietf.adoc[]
+
+include::requirements/REQ_json_tilematrixsetlimits2d_schema.adoc[]
+
+NOTE: A TileMatrixSetLimits2D description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
+
+Annex F provides JSON examples for common TileMatrixSet2DLimits.
+
+[[json-encoding-of-a-tilematrixsetlink]]
+=== JSON encoding of a TileMatrixSetLink
+
+The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/json-tilematrixsetlink2d.
+
+include::requirements/REQ_json_tilematrixsetlink2d_model.adoc[]
+
+include::requirements/REQ_json_tilematrixsetlink2d_ietf.adoc[]
+
+include::requirements/REQ_json_tilematrixsetlink2d_schema.adoc[]
+
+NOTE: A TileMatrixSetLink2D description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
+
+Annex F provides JSON examples for common TileMatrixSet2DLink.
+
+[[json-variablematrixwitdh]]
+=== JSON VariableMatrixWitdh
+
+The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/json-variablematrixwidth.
+
+include::requirements/REQ_json_variablematrixwidth_model.adoc[]
+
+include::requirements/REQ_json_variablematrixwidth_ietf.adoc[]
+
+include::requirements/REQ_json_variablematrixwidth_schema.adoc[]
+
+Annex H provides JSON examples for common VariableMatrixWidth.

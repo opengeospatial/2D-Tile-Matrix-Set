@@ -98,7 +98,7 @@ Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^d^
 
-| abstract^  a^
+| abstract ^a^
 
 Abstract
  |
@@ -182,17 +182,17 @@ Positive integer type
  |
 One (mandatory)
 4+|
-a    The multilingual scoping rules in subclause 10.7.3 of OWS Common [OGC 06-121r9] SHALL apply.
+^a^    The multilingual scoping rules in subclause 10.7.3 of OWS Common [OGC 06-121r9] SHALL apply.
 
-b    CRS will be inherited from the supportedCRS parameter of the parent TileMatrixSet. The order of these axes shall be as specified by the supportedCRS. These are the precise coordinates of the top left corner of top left pixel of the 0,0 tile. See Figure 1.
+^b^    CRS will be inherited from the supportedCRS parameter of the parent TileMatrixSet. The order of these axes shall be as specified by the supportedCRS. These are the precise coordinates of the top left corner of top left pixel of the 0,0 tile. See Figure 1.
 
-c    This TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded pixel size. It is recommended to avoid repeating the TileMatrixSet identifier as part of the TileMatrix identifier.
+^c^    This TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded pixel size. It is recommended to avoid repeating the TileMatrixSet identifier as part of the TileMatrix identifier.
 
-d    If no Title is specified, client may display the Identifier value instead.
+^d^    If no Title is specified, client may display the Identifier value instead.
 
-e    In XML schemas ows:PositionType data type is used. See OWS 2.0 schemas (owsCommon.xsd).
+^e^    In XML schemas ows:PositionType data type is used. See OWS 2.0 schemas (owsCommon.xsd).
 
-g    The pixel size of the tile can be obtained from the scaleDenominator by multiplying the later by 0.28 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it has degrees, then metersPerUnit=2p__a__/360 (_a_ is the Earth maximum radius of the ellipsoid).
+^g^    The pixel size of the tile can be obtained from the scaleDenominator by multiplying the later by 0.28 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it has degrees, then metersPerUnit=2p__a__/360 (_a_ is the Earth maximum radius of the ellipsoid).
 |===
  
 
@@ -223,7 +223,7 @@ image::figures/7.png[TileMatrixSetLimits UML model]
 | tileMatrix‌Limits
 
 Tile‌Matrix‌Limits | Indices limits for this tileMatrix | TileMatrixLimits data structure, see <<parts-of-tilematrixlimits-data-structure>> | one or more (mandatory) ^a^
-4+| a       Multiplicity SHALL be the equal of inferior to multiplicity of tileMatrix of this tileMatrixSet. Each tileMatrix identifier shall be mentioned only once in this TileMatrixSetLimits. If a tileMatrix identifier is not mentioned, it should be interpreted as a tileMatrix that is not available.
+4+| ^a^       Multiplicity SHALL be the equal of inferior to multiplicity of tileMatrix of this tileMatrixSet. Each tileMatrix identifier shall be mentioned only once in this TileMatrixSetLimits. If a tileMatrix identifier is not mentioned, it should be interpreted as a tileMatrix that is not available.
 |===
  
 
@@ -273,15 +273,15 @@ Non negative integer type ^e^
  |
 One (mandatory)
 4+|
-a    SHALL be an identifier to a tileMatrix section of this tileMatrixSet.
+^a^    SHALL be an identifier to a tileMatrix section of this tileMatrixSet.
 
-b    From 0 to maxTileRow.
+^b^    From 0 to maxTileRow.
 
-c    From minTileRow to matrixWidth-1 of the tileMatrix section of this tileMatrixSet.
+^c^    From minTileRow to matrixWidth-1 of the tileMatrix section of this tileMatrixSet.
 
-d    From 0 to maxTileCol.
+^d^    From 0 to maxTileCol.
 
-e    From minTileCol to tileHeight-1 of the tileMatrix section of this tileMatrixSet.
+^e^    From minTileCol to tileHeight-1 of the tileMatrix section of this tileMatrixSet.
 |===
  
 
@@ -320,9 +320,9 @@ Tile‌Matrix‌Set | Reference to a tileMatrixSet | URI type | Values SHALL be 
 Tile‌Matrix‌Set‌Limits | Index limits for this tileMatrixSet | TileMatrixSetLimits data structure, see Table 4 | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^a,b^
 
 4+|
-a       The absence of this parameter means that tile row and tile column indices are only limited by 0 and the corresponding matrixWidth and matrixHeight for each tileMatrix of the tileMatrixSet definition.
+^a^       The absence of this parameter means that tile row and tile column indices are only limited by 0 and the corresponding matrixWidth and matrixHeight for each tileMatrix of the tileMatrixSet definition.
 
-b      Multiplicity more than one allows definition of more than one rectangular areas where there are tiles with data available.
+^b^      Multiplicity more than one allows definition of more than one rectangular areas where there are tiles with data available.
 |===
  
 
@@ -354,11 +354,11 @@ MinTile‌Row | Minimum tile row index valid for this layer | Non negative integ
 | maxTile‌Row
 
 MaxTile‌Row | Maximum tile row index valid for this layer | Non negative integer type ^c^ | One (mandatory)
-4+| a    Shall be more than 1. Rows with Coalescence factor of 1 shall not be described here.
+4+| ^a^    Shall be more than 1. Rows with Coalescence factor of 1 shall not be described here.
 
-b    From 0 to maxTileRow.
+^b^    From 0 to maxTileRow.
 
-c    From minTileRow to matrixWidth-1 of the tileMatrix section of this tileMatrixSet.
+^c^    From minTileRow to matrixWidth-1 of the tileMatrix section of this tileMatrixSet.
 |===
  
 include::requirements/REQ_variablematrixwidth_coalescence1.adoc[]

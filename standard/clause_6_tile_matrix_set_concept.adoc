@@ -8,11 +8,10 @@ As stated in [OGC 08-015r2] Abstract Specification Topic 2: Spatial Referencing 
 
 A _Tile Matrix_ is a tiling scheme defined as a grid coverage. For the [OGC 09-146r6] CIS GeneralGridCoverage, the domain set of a grid describes the direct positions in multi-dimensional coordinate space, depending on the type of grid. In a grid-regular, simple equidistant grids are established. When a regular grid coverage is used to represent the world, the space becomes discrete in each dimension of the grid _domain range_; e.g., it is divided into regular intervals that can be assigned to integer numbers that enumerate and identify _tiles_. This grid of tiles domain range can be defined by:
 
-a)     The extreme corner (called top left corner in a two-dimensional space) of the bounding box of regular grid coverage (e.g., the CRS coordinates of the top left corner of the top left extreme where the integer coordinates are 0);
-
-b)    A tile size in CRS units for in each dimension of the CRS; and
-
-c)     The size of the tile matrix in tile units (i.e., number of tiles) that closes the bounding box of the tiled space. Frequently the sizes of the two first dimensions are called _matrix width_ and _matrix height_.
+[loweralpha]
+. The extreme corner (called top left corner in a two-dimensional space) of the bounding box of regular grid coverage (e.g., the CRS coordinates of the top left corner of the top left extreme where the integer coordinates are 0);
+. A tile size in CRS units for in each dimension of the CRS; and
+. The size of the tile matrix in tile units (i.e., number of tiles) that closes the bounding box of the tiled space. Frequently the sizes of the two first dimensions are called _matrix width_ and _matrix height_.
 
 [[tile-matrix-in-a-two-dimensional-space.]]
 ==== Tile matrix in a two-dimensional space.
@@ -21,9 +20,10 @@ Tiles are originally designed to be rendered in rendering devices that have the 
 
 The tile size in CRS units of the first two dimensions and the size of the rendering device pixels are related. The relation is a function of the following two parameters:
 
-a)     A scale (expressed as a scale denominator) and
+[loweralpha]
+. A scale (expressed as a scale denominator) and
 
-b)    A grouping__of rendering pixels__ in a tile forming the tile. 256x256 or 512x512 are common grouping values. Frequently the sizes of the two first dimensions are called _tile width_ and _tile height_.
+. A grouping__of rendering pixels__ in a tile forming the tile. 256x256 or 512x512 are common grouping values. Frequently the sizes of the two first dimensions are called _tile width_ and _tile height_.
 
 NOTE: Normally _tile width_ and _tile height_ are equal but this constraint is not imposed by this standard.
 

@@ -1,7 +1,0 @@
-[[timematrixsetlink2d_model]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/tilematrixsetlink2d/identifier* {set:cellbgcolor:#FFFFFF}
-2+|When a tiled resource or dataset has tiles available only for a region or regions of the complete tiled space, the resource__or datasetshall declare partial support to a tile matrix set 2D using one or more__tile matrix set limits data structures. This will result in the following  UML model shown in <<img_tilematrixsetlimits-uml-model>> and model description in <<parts-of-tilematrixsetlink-data-structure>>. {set:cellbgcolor:#FFFFFF}
-|*Dependency* {set:cellbgcolor:#FFFFFF} |/req/tilematrixsetlimits {set:cellbgcolor:#FFFFFF}
-|===

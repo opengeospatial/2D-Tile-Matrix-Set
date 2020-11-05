@@ -1,0 +1,10 @@
+[[timesetmetadata2d_identifier]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/tilesetmetadata2d/identifier* {set:cellbgcolor:#FFFFFF}
+|A| A tiled resource or dataset SHALL declare support to a tile matrix set 2D by one of the following 3 methods: a link to a tile matrix set definition in the OGC NA definition service (based on the ((annex_d)) and ((annex_h)) definitions) (as a value of the tileMatrixSetURI property) by citing a tile matrix set URI defined in a service (as a value of the tileMatrixSetDefinition property) or by explicitly including a TileMatrixSet definition (as an object in the tileMatrixSet property). {set:cellbgcolor:#FFFFFF}
+|B| In a OGC API or a OGC Web Service and if the TileMatrixSet used is one of the ((annex_d)) or ((annex_h)) definitions,  tileMatrixSetURI SHALL be populated with a full URI to the OGC NA Definitions Server (an optional pointer to tileMatrixSetDefinition) can also be used {set:cellbgcolor:#FFFFFF}
+|C| In a OGC API or a OGC Web Service and if the TileMatrixSet used is not one of the ((annex_d)) or ((annex_h)) definitions,  tileMatrixSetDefinition SHALL be populated with a URI to a service (relative URIs are allowed; e.g. a  TileMatrixSet Id) {set:cellbgcolor:#FFFFFF}
+|===
+
+NOTE: The tileMatrixSet property with a object describing the TileMatrixSet is not intended for OGC APIs or OGC web services and it is included here for formats and encodings where links to resources are not possible or sensible.

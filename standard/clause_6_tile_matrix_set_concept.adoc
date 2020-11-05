@@ -139,3 +139,7 @@ NOTE: This decision is necessary to still be able to be able to define a rectang
 [#img_tilematrix-with-variable-matrix-width,reftext='{figure-caption} {counter:figure-num}']
 .TileMatrix with variable matrix width
 image::figures/5.png[TileMatrix with variable matrix width]
+
+[[tile-set-metadata]]
+=== TileSetMetadata
+Tiles are identified by tileMatrix id, tileRow number and tileCol number in a tileMatrixSet. but this four elements are completely meaningless if they are not associated to a tileMatrixSet description that contains the necessary information (in terms of scaleDenominator and topLeftCorner coordinates) to transform the indices into coordinates in a knows CRS. The main purpose of the TileSetMetadata is to  link the tileset with the tileMatrixSet description. This link is part of a model that acts as the conceptual foundation for describing the metadata for a tile set. The model contains elements describing the main characteristics of a tile set, the connection to the tileset with the original data collection and styles as well as the a recommended center point to start the navigation.

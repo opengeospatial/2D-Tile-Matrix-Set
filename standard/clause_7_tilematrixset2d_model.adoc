@@ -10,7 +10,7 @@ include::requirements/REQ_tilematrixset2d_model.adoc[]
 
 [#img_tilematrixset-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .TileMatrixSet UML model
-image::figures/6.png[TileMatrixSet UML model]
+image::figures/TileMatrixSet2D.png[TileMatrixSet UML model]
 
 
 <<parts-of-tilematrixset-data-structure>> defines the structure of the TileMatrixSet.
@@ -23,40 +23,40 @@ image::figures/6.png[TileMatrixSet UML model]
 | Names | Definition | Data type and values | Multiplicity and use
 | identifier
 
-Identifier | Tile matrix set identifier ^g^ | ows:CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
+Identifier | Tile matrix set identifier ^g^ | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
 |
 title ^a^
 
-Title | Title of this tile matrix set, normally used for display to a human | LanguageString data structure, see Figure 15 in OWS Common [OGC 06-121r9] | Zero or more (optional) Include when available and useful
+Title | Title of this tile matrix set, normally used for display to a human | LanguageString data structure,<<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^f^
 | abstract ^a^
 
-Abstract | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure, see Figure 15 in OWS Common [OGC 06-121r9] | Zero or more (optional) Include when available and useful
+Abstract | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 | keywords^a^
 
-Keywords | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this dataset | MD_Keywords class in ISO 19115 | Zero or more (optional)
+Keywords | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this dataset | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
 
 One for each keyword authority used
 | bounding‌Box
 
-Bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS ^b^ | BoundingBox data structure, see subclause 10.2 of OWS Common [OGC 06-121r9] | Zero or one (optional)
+Bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS ^b^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
 | supported‌CRS
 
-Supported‌CRS | Reference to one coordinate reference system (CRS) | URI type | One (mandatory)
+Supported‌CRS | a coordinate reference system (CRS) | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory)
 | wellKnown‌ScaleSet
 
-WellKnown‌ScaleSet | Reference to a well-known scale set^e^ | URI type | Zero or one (optional) ^c^
+WellKnown‌ScaleSet | Reference to a well-known scale set ^e^ | URI type | Zero or one (optional) ^c^
 | tileMatrix
 
-TileMatrix | Describes a scale level and its tile matrix | TileMatrix data structure, see Table Table 2 | One or more (mandatory) ^d^
+TileMatrix | Describes a scale level and its tile matrix | TileMatrix data structure, see <<parts-of-tilematrix-data-structure>> | One or more (mandatory) ^d^
 4+|
-^a^     The multilingual scoping rules in subclause 10.7.3 of OWS Common [OGC 06-121r9] SHALL apply.
+^a^     The multilingual scoping rules in <<img_languagestring-uml-model>> apply.
 
-^b^     Informative. boundingBox SHOULD NOT be used to calculate the position of the tiles in the CRS space; please use topLeftCorner of the corresponding TileMatrix instead. If data is not available for all tiled space, TileMatrixSetLimits will declare what the tiles have data (see section 7.2).
+^b^     Informative. boundingBox SHOULD NOT be used to calculate the position of the tiles in the CRS space; please use topLeftCorner of the corresponding TileMatrix instead. If data is not available for all tiled space, TileMatrixSetLimits will declare what the tiles have data (see <<tilematrixsetlimits2d-requirements-class>>).
 
 ^c^     When a tile matrix set conforms to a well-known scale set it can reference it by its URI. If used, the well-known scale set SHALL be consistent with the supportedCRS and with the scaleDenominators of the tileMatrix parameters.
 
@@ -69,19 +69,6 @@ TileMatrix | Describes a scale level and its tile matrix | TileMatrix data struc
 ^g^     TileMatrixSet identifies SHALL be unique (different) for each TileMatrixSet of a server.
 |===
  
-The BoundingBox class describes a Minimum Bounding Rectangle (MBR) surrounding the tile matrix set, in the supported CRS.
-
-[#parts-of-boundingbox-data-structure,reftext='{table-caption} {counter:table-num}']
-.Parts of BoundingBox data structure
-[width = "100%",options="header"]
-|===
-| Names | Definition | Data type and values | Multiplicity and use
-| lowerCorner | Southern-most coordinate of the limit of the Tile Matrix Set extent | |
-| upperCorner | Northern-most coordinate of the limit of the Tile Matrix Set extent | |
-| CRS | Coordinate reference system | |
-| dimension | The number of dimensions defined in the coordinate reference system | |
-|===
-
 [#parts-of-tilematrix-data-structure,reftext='{table-caption} {counter:table-num}']
 .Parts of TileMatrix data structure
 [width = "100%",options="header"]

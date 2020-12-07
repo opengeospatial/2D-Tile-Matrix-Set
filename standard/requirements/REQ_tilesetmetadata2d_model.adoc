@@ -2,6 +2,8 @@
 [width="90%",cols="2,6"]
 |===
 |*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/tilesetmetadata2d/model* {set:cellbgcolor:#FFFFFF}
-2+|When a tiled resource or dataset has tiles available only for a region or regions of the complete tiled space, the resource or dataset SHALL declare partial support to a tile matrix set 2D using one or more tile matrix set limits data structures. This will result in the following  UML model shown in <<img_tilematrixsetlimits-uml-model>> and model description in <<parts-of-tilesetmetadata-data-structure>>. {set:cellbgcolor:#FFFFFF}
+| A |When a tiled resource or dataset has tiles available it SHALL use the <<parts-of-tilesetmetadata-data-structure>> to declare the link to a tilematrixset definition.
+| B |When a tiled resource or dataset has tiles available, the metadata describing the tiles, the recomended center point and the data that originated them SHALL described using the data model in UML model shown in <<img_tilematrixsetlimits-uml-model>> and model description in <<parts-of-tilesetmetadata-data-structure>>.
+| B |When a tiled resource or dataset has tiles available only for a region or regions of the complete tiled space, the resource or dataset SHALL declare partial support to a tile matrix set 2D using one or more tile matrix set limits data structures defined in <<parts-of-tilematrixsetlimits-data-structure>>.  {set:cellbgcolor:#FFFFFF}
 |*Dependency* {set:cellbgcolor:#FFFFFF} |/req/tilematrixsetlimits {set:cellbgcolor:#FFFFFF}
 |===

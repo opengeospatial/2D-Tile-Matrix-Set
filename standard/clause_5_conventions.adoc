@@ -17,6 +17,7 @@ All requirements and conformance tests that appear in this document are denoted 
 
 The following classes are extracted from the OWS Common 06-121r9. This way, the data structures presented in this document become independent form OWS Common and can be used in the emerging OGC APIs that depends on OGS API Commons (avoiding a conflicting dependency with OWS Common)
 
+[[multilingualTextEncoding]]
 ==== Multilingual text encoding
 Some text parameters specified with the data type CharacterString in UML are intended to have human-readable values, but not all humans can understand the same languages. This data class can be latter mapped to XML encoding or JSON.
 
@@ -132,4 +133,51 @@ In this version of this standard we introduce the possibility define a CRS using
 | uri | A reference to a CRS | URI
 | WKT | A string defining the CRS using Well Known Text | CharacterString
 | referenceSystem | a reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115 | MD_ReferenceSystem data type
+|===
+
+==== AtomLink
+
+Many recent standards emphasize the usefulness of links as a way to relate a data structure instance to other data structures and make possible navigation through resources. Essential links are make explicit in the data structures of this document (recognizable by a URI data type) but other links can be added as needed for convenience. The data structure defined here allows the addition of other links. The definition is based on the atom link as defined in section 4.2.7 of the RFC4287.
+
+NOTE: In practice, some encodings can opt specify the essential links as part of this data structure for convenience
+
+[#img_boundingbox-uml-model,reftext='{figure-caption} {counter:figure-num}']
+.BoundingBox UML model
+image::figures/AtomLink.png[BoundingBox UML model]
+
+
+[#parts-of-atom-link-data-structure,reftext='{table-caption} {counter:table-num}']
+.Parts of AtomLink data structure
+[width = "100%",options="header"]
+|===
+| Names | Definition | Data type and values | Multiplicity and use
+| href | Reference from this resource to a web resource
+| URI
+| One (mandatory)
+
+| rel | Link relation type describing the meaning of the link.
+| CharacterString^a^
+| Zero or one (optional)
+
+| type | hint about the type of the representation that is expected to be returned from the href attribute
+| CharacterString^b^
+| Zero or one (optional)
+
+| hreflang | language of the resource pointed to by the href attribute
+| CharacterString^c^
+| Zero or one (optional)
+
+| title | human-readable information about the link
+| LanguageString data structure
+| Zero or one (optional)
+
+| length | hint about the length of the linked content in bytes
+| nonNegativeInteger
+| Zero or one (optional)
+
+4+| ^a^  It can be a name or a URI. If a name is given, implementations must consider the link relation type equivalent to the same name registered within the IANA Registry of Link Relations. The OGC NA maintains other possible values.
+
+^b^ It should be a media type format as specified in section 4.2 of rfc6838
+
+^c^ As specified in rfc5646
 |===

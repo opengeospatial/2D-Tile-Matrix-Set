@@ -1,5 +1,5 @@
-:Title: OGC Two Dimensional Tile Matrix Set
-:titletext: OGC Two Dimensional Tile Matrix Set
+:Title: OGC Two Dimensional Tile Matrix Set and Tile Set Metadata
+:titletext: OGC Two Dimensional Tile Matrix Set and Tile Set Metadata
 :doctype: book
 :encoding: utf-8
 :lang: en

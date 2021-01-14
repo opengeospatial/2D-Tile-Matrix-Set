@@ -1,0 +1,123 @@
+{
+   "title" : "Daraa multi-layer vector tiles",
+   "abstract" : "Vector tiles of Daraa, Syria from NSG OpenStreetMap Topographic Data Store",
+   "keywords" : [ "Daraa", "Syria", "OpenStreetMap", "NSG", "TDS" ],
+   "dataType" : "vector",
+   "accessConstraints" : "unclassified",
+   "links" : [
+      {
+         "rel"  : "item",
+         "href" : "/ogcapi/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}",
+         "templated" : true
+      },
+      {
+         "rel"  : "item",
+         "href" : "/ogcapi/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}.json",
+         "type" : "application/geo+json",
+         "templated" : true
+      },
+      {
+         "rel"  : "item",
+         "href" : "/ogcapi/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}.mvt",
+         "type" : "application/vnd.mapbox-vector-tile",
+         "templated" : true
+      },
+      {
+         "rel"  : "dataset",
+         "href" : "/Daraa/ogcapi"
+      }
+   ],
+   "layers" : [
+      {
+         "identifier" : "AgricultureSrf",
+         "dataType" : "vector",
+         "geometryType" : "polygons",
+         "maxTileMatrix" : "17",
+         "minScaleDenominator" : 4265.4591676995678,
+         "boundingBox" : { "lowerCorner" : [ 35.898213, 32.4633913 ], "upperCorner" : [ 36.5614696, 32.8370158 ] },
+         "stylableLayerSets" : [ "OSMNSGTDS" ],
+         "links" : [
+            {
+               "rel"  : "geodata",
+               "href" : "/ogcapi/collections/AgricultureSrf"
+            }
+         ],
+         "properties" :
+         {
+            "F_CODE" :
+            {
+               "title" : "Feature Code",
+               "type" : "string",
+               "enum" : [ "EA010", "EA040", "AM020" ]
+            },
+            "FFN" : { "type" : "integer" },
+            "FCSUBTYPE" :
+            {
+               "title" : "Feature subtype",
+               "type" : "integer",
+               "enum" : [ 100380, 100384 ]
+            },
+            "ZI005_FNA" : { "type" : "string"  }
+         }
+      },
+      {
+         "identifier" : "TransportationGroundCrv",
+         "dataType" : "vector",
+         "geometryType" : "lines",
+         "maxTileMatrix" : "17",
+         "minScaleDenominator" : 4265.4591676995678,
+         "boundingBox" : { "lowerCorner" : [ 35.9028738, 32.4168138 ], "upperCorner" : [ 36.5747694, 33.1424348 ] },
+         "stylableLayerSets" : [ "OSMNSGTDS" ],
+         "links" : [
+            {
+               "rel"  : "geodata",
+               "href" : "/ogcapi/collections/TransportationGroundCrv"
+            }
+         ],
+         "properties" :
+         {
+            "F_CODE" :
+            {
+               "title" : "Feature Code",
+               "type" : "string",
+               "enum" : [ "AN010", "AP010", "AP030", "AQ040" ]
+            },
+            "FFN" : { "type" : "integer" },
+            "FCSUBTYPE" :
+            {
+               "title" : "Feature subtype",
+               "type" : "integer",
+               "enum" : [ 100143, 100152, 100161 ]
+            },
+            "ZI005_FNA" : { "type" : "string"  }
+         }
+      }
+   ],
+   "tileMatrixSetURI" : "http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad",
+   "tileMatrixSetDefinition" : "/ogcapi/tileMatrixSets/WebMercatorQuad",
+   "tileMatrixSetLimits" : [
+      { "tileMatrix" : "0", "minTileRow" : 0, "maxTileRow" : 0, "minTileCol" : 0, "maxTileCol" : 0 },
+      { "tileMatrix" : "1", "minTileRow" : 0, "maxTileRow" : 0, "minTileCol" : 1, "maxTileCol" : 1 },
+      { "tileMatrix" : "2", "minTileRow" : 1, "maxTileRow" : 1, "minTileCol" : 2, "maxTileCol" : 2 },
+      { "tileMatrix" : "3", "minTileRow" : 3, "maxTileRow" : 3, "minTileCol" : 4, "maxTileCol" : 4 },
+      { "tileMatrix" : "4", "minTileRow" : 6, "maxTileRow" : 6, "minTileCol" : 9, "maxTileCol" : 9 },
+      { "tileMatrix" : "5", "minTileRow" : 12, "maxTileRow" : 12, "minTileCol" : 19, "maxTileCol" : 19 },
+      { "tileMatrix" : "6", "minTileRow" : 25, "maxTileRow" : 25, "minTileCol" : 38, "maxTileCol" : 38 },
+      { "tileMatrix" : "7", "minTileRow" : 51, "maxTileRow" : 51, "minTileCol" : 76, "maxTileCol" : 76 },
+      { "tileMatrix" : "8", "minTileRow" : 103, "maxTileRow" : 103, "minTileCol" : 153, "maxTileCol" : 153 },
+      { "tileMatrix" : "9", "minTileRow" : 206, "maxTileRow" : 207, "minTileCol" : 307, "maxTileCol" : 307 },
+      { "tileMatrix" : "10", "minTileRow" : 413, "maxTileRow" : 414, "minTileCol" : 614, "maxTileCol" : 615 },
+      { "tileMatrix" : "11", "minTileRow" : 826, "maxTileRow" : 828, "minTileCol" : 1228, "maxTileCol" : 1231 },
+      { "tileMatrix" : "12", "minTileRow" : 1652, "maxTileRow" : 1657, "minTileCol" : 2456, "maxTileCol" : 2463 },
+      { "tileMatrix" : "13", "minTileRow" : 3304, "maxTileRow" : 3314, "minTileCol" : 4912, "maxTileCol" : 4927 },
+      { "tileMatrix" : "14", "minTileRow" : 6608, "maxTileRow" : 6628, "minTileCol" : 9825, "maxTileCol" : 9855 },
+      { "tileMatrix" : "15", "minTileRow" : 13216, "maxTileRow" : 13257, "minTileCol" : 19651, "maxTileCol" : 19711 },
+      { "tileMatrix" : "16", "minTileRow" : 26433, "maxTileRow" : 26514, "minTileCol" : 39303, "maxTileCol" : 39423 },
+      { "tileMatrix" : "17", "minTileRow" : 52866, "maxTileRow" : 53028, "minTileCol" : 78606, "maxTileCol" : 78847 }
+   ],
+   "centerPoint" :
+   {
+      "coordinates" : [ 36.2298413, 32.65020355 ],
+      "tileMatrix" : "15"
+   }
+}

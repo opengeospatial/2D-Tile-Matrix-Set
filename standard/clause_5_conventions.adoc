@@ -1,27 +1,27 @@
 [[conventions]]
 == Conventions
 
-This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
+This section provides details and examples for any conventions used in the document.
 
 [[identifiers]]
 === Identifiers
 
 The normative provisions in this specification are denoted by the URI
 
-http://www.opengis.net/spec/TileMatrixSet/1.0
+http://www.opengis.net/spec/TileMatrixSet/2.0
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
 [[commonClasses]]
 === Common Classes
 
-The following classes are extracted from the OWS Common 06-121r9. This way, the data structures presented in this document become independent form OWS Common and can be used in the emerging OGC APIs that depends on OGS API Commons (avoiding a conflicting dependency with OWS Common)
+The following classes are extracted from the OWS Common 06-121r9. This way, the data structures presented in this document become independent from OWS Common and can be used in the emerging OGC APIs that depends on OGC API Commons (avoiding a conflicting dependency with the old OWS Common)
 
 [[multilingualTextEncoding]]
 ==== Multilingual text encoding
-Some text parameters specified with the data type CharacterString in UML are intended to have human-readable values, but not all humans can understand the same languages. This data class can be latter mapped to XML encoding or JSON.
+Some text parameters specified with the data type CharacterString in UML are intended to have human-readable values, but not all humans can understand the same languages. This data class can be latter mapped to XML or JSON encodings.
 
-The specified approach to allowing the language of a text value to be explicitly stated is indicated by the UML class diagram in the figure.
+The specified approach for allowing the language of a text value to be explicitly stated is indicated by the UML class diagram in the figure.
 
 [#img_languagestring-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .LanguageString UML model
@@ -29,7 +29,7 @@ image::figures/LanguageString.png[LanguageString UML model]
 
 The value parameter specifies the human-language string, and the lang parameter specifies the language (in IETF RFC 4646 syntax) of the string. If a lang parameter is not present, then no language has been specified for the string unless specified by another means.
 
-NOTE: OGC APIs will use the language negotiation with HTTP headers. In this situation it is expected that LanguageString will default into a CharacterString that in JSON will default into a string data type. This does not preclude that in other environments the JSON encodings for Language string can implement the LanguageString. In practice this means that a JSON schema for a LanguageString element should support both string and Language string types.
+NOTE: OGC APIs will use the language negotiation with HTTP headers. In this situation, it is expected that LanguageString will default into a CharacterString that in JSON will default into a string data type. This does not preclude that in other environments the JSON encodings for language string can implement the LanguageString. In practice this means that a JSON schema for a LanguageString element should support both string and language string types.
 
 ==== Description, Title and Keywords
 A basic set of data description parameters that includes human-readable title, abstract, and keywords is widely used in this standard and defined here as UML.
@@ -48,13 +48,13 @@ title ^a^
 
 Title | Title of this tile matrix set, normally used for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
 
-Include one for each language represented ^f^
+Include one for each language represented
 | abstract ^a^
 
 Abstract | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| keywords^a^
+| keywords ^a^
 
 Keywords | Unordered list of one or more keywords | MD_Keywords class in ISO 19115 | Zero or more (optional)
 
@@ -63,7 +63,7 @@ One for each keyword authority used (one for each 'type' value)
 ^a^     The multilingual scoping rules apply.
 |===
 
-keywords is described from MD_Keywords class in ISO 19115 and has a list of keyword of the same 'type' specified in the optional 'type' element,
+Keywords is described from MD_Keywords class in ISO 19115-1 and has a list of keywords of the same 'type' specified in the optional 'type' element,
 
 [#parts-of-descriptiontitlekeyword-elements,reftext='{table-caption} {counter:table-num}']
 .Parts of Description Title Keyword data elements
@@ -71,7 +71,7 @@ keywords is described from MD_Keywords class in ISO 19115 and has a list of keyw
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 |
-keyword^a^
+keyword ^a^
 
 Keyword | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this dataset | LanguageString data structure | One or more (optional)
 | type
@@ -82,7 +82,7 @@ Type | Type of the keyword | CodeType, as adaptation of MD_Identifier class ISO 
 |===
 
 ==== BoundingBox
-A (basic) bounding box is one type of bounding box that is used in this document. Bounding box data structure specified in the following UML model and table.
+A (basic) bounding box is one type of bounding box that is used in this document. The Bounding box data structure is specified in the following UML model and table.
 
 The BoundingBox class describes a Minimum Bounding Rectangle (MBR) surrounding a feature (in the broader sense), in the supported CRS.
 
@@ -123,7 +123,7 @@ If the data for which a bounding box is needed is continuous around the continuo
 
 ==== CRSType
 
-In this version of this standard we introduce the possibility define a CRS using a full description in addition to a reference to an external CRS catalogue. For descendent compatibility, CRSType can be defaulted as a URI but in here we propose to extend it to union of three possibilities.
+In this version of this standard we introduce the possibility define a CRS using a full description in addition to a reference to an external CRS catalogue. For descendent compatibility, CRSType can be defaulted as a URI but in here we extend it to a union of three possibilities.
 
 [#parts-of-crs-type-union,reftext='{table-caption} {counter:table-num}']
 .Parts of CRSType data structure
@@ -137,13 +137,13 @@ In this version of this standard we introduce the possibility define a CRS using
 
 ==== AtomLink
 
-Many recent standards emphasize the usefulness of links as a way to relate a data structure instance to other data structures and make possible navigation through resources. Essential links are make explicit in the data structures of this document (recognizable by a URI data type) but other links can be added as needed for convenience. The data structure defined here allows the addition of other links. The definition is based on the atom link as defined in section 4.2.7 of the RFC4287.
+Many recent standards emphasize the usefulness of links as a way to relate a data structure instance to other data structures and make navigation through resources possible. Essential links are make explicit in the data structures of this document (recognizable by a URI data type) but other links can be added as needed for convenience when an AtomLink is available. The data structure defined here allows the addition of other links. The definition is based on the atom link  defined in section 4.2.7 of the RFC4287.
 
-NOTE: In practice, some encodings can opt specify the essential links as part of this data structure for convenience
+NOTE: In practice, some encodings can opt to specify the essential links as part of this data structure for convenience
 
 [#img_boundingbox-uml-model,reftext='{figure-caption} {counter:figure-num}']
-.BoundingBox UML model
-image::figures/AtomLink.png[BoundingBox UML model]
+.Atom link UML model
+image::figures/AtomLink.png[Atom link UML model]
 
 
 [#parts-of-atom-link-data-structure,reftext='{table-caption} {counter:table-num}']
@@ -179,5 +179,5 @@ image::figures/AtomLink.png[BoundingBox UML model]
 
 ^b^ It should be a media type format as specified in section 4.2 of rfc6838
 
-^c^ As specified in rfc5646
+^c^ As specified in RFC5646
 |===

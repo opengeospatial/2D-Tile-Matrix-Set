@@ -23,3 +23,5 @@ Springer LNCS is widely used in technical and computer science journals and othe
 ((( Example )))
 [[OGC2015]]
 [1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).
+
+[2] OGC Vector Tiles Pilot 2: Tile Set Metadata Engineering Report (OGC 19-082r1) http://docs.opengeospatial.org/per/19-082r1.html#_metadatadate

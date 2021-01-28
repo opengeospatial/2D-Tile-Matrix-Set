@@ -99,11 +99,17 @@ a series of actual tiles contain data and following a common tiling scheme.
 
 *4.14*        
 
+*tile set metadata*
+
+metadata describing common properties defining a tile set, layers and styles, its limits and common metadata such as abstract, owner, author, etc.
+
+*4.15*        
+
 *vector tile*
 
 a tile that contains vector information that has been simplified at the tile scale resolution and clipped by the tile boundaries.
 
-*4.15*        
+*4.16*        
 
 *well-known scale set*
 

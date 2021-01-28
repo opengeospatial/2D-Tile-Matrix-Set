@@ -400,13 +400,9 @@ PointOfContact | Useful information to contact the authors or custodians for the
 
 AccessConstraints | Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set | ClassificationCode data structure, see <<parts-of-classification-code-enum>> | Zero or one (optional)
 
-| dataType
-
-DataType | Type of data represented in the tiles | CharacterString. Examples are "features" or "coverages" | Zero or one (optional)
-
 | mediaType
 
-MediaType | Media types available for the tile set | CharacterString restricted by RFC6838 section 4.2 | Zero or more (optional)
+MediaType | Media types available for the tiles | CharacterString restricted by RFC6838 section 4.2 | Zero or more (optional)^f^
 
 | tileMatrix‌Set
 
@@ -451,6 +447,8 @@ Common values of the rel attribute are: dataset, tiles, alternate ^e^ | Zero or 
 ^d^     At least one of the TileMatrixSet,  TileMatrixSetURI or TileMatrixSetDefinition is mandatory and shall be provided.
 
 ^e^     'dataset' relation should point to a URL to get the dataset, 'tiles' relation should point to a URL template to get the tiles. 'alternate' should point to another representation of the TileSetMetadata (e.g a TileJSON file).
+
+^f^     intended for offline use. In an online use you are supposed to provide links to the tiles that already have the mediaType specified.
 
 |===
 
@@ -536,11 +534,15 @@ Date | Dates of creation, publication, revision, validity and reception of the l
 
 | style
 
-Style | Style used to represent the layer in the tileset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)
+Style | Style used to generate the layer in the tileset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)
 
-| property
+| stylableLayerSet
 
-Property | properties represented by the features in this layer | FeatureAttribute data structure. See <<parts-of-feature-attribute-data-structure>> | Zero or more (optional)
+StylableLayerSet | Identifiers of styles that can be used in conjunction with this layer | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or more (optional)
+
+| propertiesSchema
+
+PropertiesSchema | properties represented by the features in this layer | FeatureAttribute data structure. See <<parts-of-feature-attribute-data-structure>> | Zero or more (optional)
 
 | link
 

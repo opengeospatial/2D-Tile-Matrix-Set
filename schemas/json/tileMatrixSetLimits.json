@@ -1,0 +1,58 @@
+{
+	"$schema": "http://json-schema.org/draft-04/schema#",
+	"title": "Tile Set Metadata",
+	"description": "A resource describing a tileset based on the OGC TileSet Metadata Standard",
+	"type": "object",
+	"definitions":
+	{
+		"tileMatrixLimit":
+		{
+			"type": "object",
+			"required":
+			[
+				"tileMatrix",
+				"minTileRow",
+				"maxTileRow",
+				"minTileCol",
+				"maxTileCol"
+			],
+			"properties":
+			{
+				"tileMatrix":
+				{
+					"type": "string",
+					"format": "uri",
+					"example": "5"
+				},
+				"minTileRow":
+				{
+					"type": "number",
+					"format": "integer",
+					"minimum": 0,
+					"examples": [0]
+				},
+				"maxTileRow":
+				{
+					"type": "number",
+					"format": "integer",
+					"minimum": 0,
+					"examples": [1]
+				},
+				"minTileCol":
+				{
+					"type": "number",
+					"format": "integer",
+					"minimum": 0,
+					"examples": [3]
+				},
+				"maxTileCol":
+				{
+					"type": "number",
+					"format": "integer",
+					"minimum": 0,
+					"examples": [4]
+				}
+			}
+		}
+	}
+}

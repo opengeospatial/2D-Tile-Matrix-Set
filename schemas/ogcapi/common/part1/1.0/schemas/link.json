@@ -1,0 +1,35 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Link Schema",
+    "description": "Schema for external references",
+    "type": "object",
+    "required": [
+        "href",
+        "rel"
+        ],
+    "properties": {    
+        "href": {
+            "type": "string",
+            "examples": ["http://data.example.com/buildings/123"]
+            },
+        "rel": {
+            "type": "string",
+            "examples": ["alternate"]
+            },
+        "type": {
+            "type": "string",
+            "examples": ["application/geo+json"]
+            },
+        "hreflang": {
+            "type": "string",
+            "examples": ["en"]
+            },
+        "title": {
+            "type": "string",
+            "examples": ["Trierer Strasse 70, 53115 Bonn"]
+            },
+        "length": {
+            "type": "integer"
+            }
+        }
+    }

@@ -29,7 +29,9 @@ image::figures/LanguageString.png[LanguageString UML model]
 
 The value parameter specifies the human-language string, and the lang parameter specifies the language (in IETF RFC 4646 syntax) of the string. If a lang parameter is not present, then no language has been specified for the string unless specified by another means.
 
-NOTE: OGC APIs will use the language negotiation with HTTP headers. In this situation, it is expected that LanguageString will default into a CharacterString that in JSON will default into a string data type. This does not preclude that in other environments the JSON encodings for language string can implement the LanguageString. In practice this means that a JSON schema for a LanguageString element should support both string and language string types.
+In case that multiple languages are necessary in a single document instance, the element that is of the LanguageString type should be a list with one entry for each _lang_ code.
+
+NOTE: OGC APIs will use the language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. This does not preclude that in other environments the JSON encodings for language string can implement the LanguageString. In practice this means that a JSON schema for a LanguageString element should support both string and language string types.
 
 ==== Description, Title and Keywords
 A basic set of data description parameters that includes human-readable title, abstract, and keywords is widely used in this standard and defined here as UML.
@@ -44,23 +46,22 @@ image::figures/DescriptionTitleKeyword.png[DescriptionTitleKeywords UML model]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 |
-title ^a^
+title
 
 Title | Title of this tile matrix set, normally used for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| abstract ^a^
+| abstract
 
 Abstract | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| keywords ^a^
+| keywords
 
 Keywords | Unordered list of one or more keywords | MD_Keywords class in ISO 19115 | Zero or more (optional)
 
 One for each keyword authority used (one for each 'type' value)
 4+|
-^a^     The multilingual scoping rules apply.
 |===
 
 Keywords is described from MD_Keywords class in ISO 19115-1 and has a list of keywords of the same 'type' specified in the optional 'type' element,
@@ -71,14 +72,13 @@ Keywords is described from MD_Keywords class in ISO 19115-1 and has a list of ke
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 |
-keyword ^a^
+keyword
 
 Keyword | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this dataset | LanguageString data structure | One or more (optional)
 | type
 
 Type | Type of the keyword | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or one (optional)
 4+|
-^a^     The multilingual scoping rules apply.
 |===
 
 ==== BoundingBox
@@ -171,6 +171,7 @@ image::figures/AtomLink.png[Atom link UML model]
 | LanguageString data structure
 | Zero or one (optional)
 
+Include one for each language represented
 | length | hint about the length of the linked content in bytes
 | nonNegativeInteger
 | Zero or one (optional)

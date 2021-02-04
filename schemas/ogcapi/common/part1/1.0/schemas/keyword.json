@@ -1,0 +1,28 @@
+{
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Keyword",
+      "description": "",
+	"type": "object",
+	"required": 
+	[
+		"keyword"
+	],
+	"properties":
+	{
+		"keyword":
+		{
+			"type": "string",
+			"examples": ["land cover"]
+		},
+		"code":
+		{
+			"type": "string",
+			"examples": ["4612"]
+		},
+		"codeSpace":
+		{
+			"type": "string",
+			"examples": ["https://www.eionet.europa.eu/gemet/en/concept/"]
+		}
+	}
+}

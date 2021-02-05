@@ -76,13 +76,18 @@
 			"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
 			"$ref": "../../../ogcapi/common/part1/1.0/schemas/boundingBox.json"
 		},
-		"dates":
+		"date":
 		{
 			"$ref": "#/definitions/dates"
 		},		
-		"layer":
+		"layers":
 		{
-			"$ref": "#/definitions/geospatialData"
+			"minItems": 1,
+			"type": "array",
+			"items":
+			{
+				"$ref": "#/definitions/geospatialData"
+			}
 		},
 		"centerPoint":
 		{
@@ -90,7 +95,7 @@
 		},
 		"links":
 		{
-			"description": "Links to related resources. Possible link 'rel' values are: 'dataset', 'item' or 'alternate'",
+			"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)",
 			"type": "array",
 			"items": {
 				"$ref": "../../../ogcapi/common/part1/1.0/schemas/link.json"
@@ -141,8 +146,8 @@
 					"description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this layer",
 					"type": "string"
 				},
-				"identifier": {
-					"description": "Unique identifier of the Layer",
+				"id": {
+					"description": "Unique identifier of the Layer. Implemetion of 'identifier'",
 					"type": "string"
 				},
 				"dataType": {
@@ -155,7 +160,8 @@
 				},
 				"featureType": {
 					"description": "Feature type identifier",
-					"type": "string"
+					"type": "string",
+					"enum": [""]
 				},
 				"pointOfContact": {
 					"description": "Useful information to contact the authors or custodians for the Layer | CharacterString  (e.g. e-mail address, a physical address,  phone numbers, etc)",
@@ -195,11 +201,15 @@
 				},
 				"date": {
 					"description": "Dates of creation, publication, revision, validity and reception of the layer  ",
-					"type": "string"
+					"$ref": "#/definitions/dates"
 				},
-				"style": {
+				"styles": {
 					"description": "Style used to generate the layer in the tileset",
-					"type": "string"
+					"type": "array",
+					"items":
+					{
+						"$ref": "#/definitions/style"
+					}
 				},
 				"stylableLayerSet": {
 					"description": "Identifiers of styles that can be used in conjunction with this layer",
@@ -207,11 +217,82 @@
 				},
 				"propertiesSchema": {
 					"description": "properties represented by the features in this layer",
-					"type": "string"
+					"$ref": "#/definitions/propertiesSchema"
 				},
-				"link": {
-					"description": "links to related resources",
-					"type": "string"
+				"links": {
+					"description": "Links related to this layer. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)",
+					"type": "array",
+					"minItems": 1,
+					"items":
+					{
+						"$ref": "../../../ogcapi/common/part1/1.0/schemas/link.json"
+					}
+				}
+			}
+		},
+		"propertiesSchema": {
+			"description": "Attributes of the features or rangetypes of a coverage. Defined by a subset of the JSON Schema for the properties of a feature",
+			"type": "object",
+			"properties": 
+			{
+				"type": { "type": "string", "enum": ["object"]},
+				"required": { "description":"Implements 'multiplicity' by citing property 'name' defined as 'additionalProperties'", 
+						"type": "array", "minItems": 1 },
+				"properties": {
+					"type": "object",
+					"default": {},
+					"additionalProperties": { 
+						"description": "No property names are defined but any property name they should be described by JSON Schema. So 'additionalProperties' implements 'name' ",
+						"type": "object",
+						"properties": 
+						{
+							"title": {"type": "string"},
+							"description": {"description":"Implements 'abstract'", "type": "string"},
+							"type": {"type": "string", "enum": [
+							    "array",
+							    "boolean",
+							    "integer",
+							    "null",
+							    "number",
+							    "object",
+							    "string"
+							]},
+							"enum": { "description":"Implements 'acceptedValues'", "type": "array", "minItems": 1, "uniqueItems": true },
+							"format": { "description":"Complements implementation of 'type'", "type": "string"},
+							"contentMediaType": { "description":"Implements 'mediaType'", "type": "string" },
+							"maximum": { "description":"Implements 'mediaType'", "type": "number"},
+							"exclusiveMaximum": { "description":"Implements 'mediaType'", "type": "number"},
+							"minimum": { "description":"Implements 'mediaType'", "type": "number"},
+							"exclusiveMinimum": { "description":"Implements 'mediaType'", "type": "number"},
+							"pattern": {
+								"type": "string",
+								"format": "regex"
+							},
+							"maxItems": { "description":"Implements 'multiplicity'", 
+								"type": "integer",
+								"minimum": 0
+							},
+							"minItems": { "description":"Implements 'multiplicity'", 
+								"type": "integer",
+								"minimum": 0,
+								"default": 0
+							},
+							"observedProperty": {
+								"type": "string"
+							},
+							"observedPropertyURI": {
+								"type": "string",
+								"format": "uri"
+							},
+							"uom": {
+								"type": "string"
+							},
+							"uomURI": {
+								"type": "string",
+								"format": "uri"
+							}
+						}
+					}
 				}
 			}
 		},
@@ -236,93 +317,42 @@
 				}
 			}
 		},
-		"stylesList":
-		{
-			"type": "object",
-			"required":
-			[
-				"styles"
-			],
-			"properties":
-			{
-				"styles":
-				{
-					"type": "array",
-					"items":
-					{
-						"$ref": "#/definitions/style"
-					},
-					"examples":
-					[
-					[
-						{
-							"id": "night",
-							"title": "Topographic night style",
-							"links":
-							[
-								{
-									"href": "https://example.com/api/1.0/styles/night?f=mapbox",
-									"type": "application/vnd.mapbox.style+json",
-									"rel": "stylesheet"
-								},
-								{
-									"href": "https://example.com/api/1.0/styles/night?f=sld10",
-									"type": "application/vnd.ogc.sld+xml;version=1.0",
-									"rel": "stylesheet"
-								},
-								{
-									"href": "https://example.com/api/1.0/styles/night/metadata?f=json",
-									"type": "application/json",
-									"rel": "describedBy"
-								}
-							]
-						},
-						{
-							"id": "topographic",
-							"title": "Regular topographic style",
-							"links":
-							[
-								{
-									"href": "https://example.com/api/1.0/styles/topographic?f=mapbox",
-									"type": "application/vnd.mapbox.style+json",
-									"rel": "stylesheet"
-								},
-								{
-									"href": "https://example.com/api/1.0/styles/topographic?f=sld10",
-									"type": "application/vnd.ogc.sld+xml;version=1.0",
-									"rel": "stylesheet"
-								},
-								{
-									"href": "https://example.com/api/1.0/styles/topographic/metadata?f=json",
-									"type": "application/json",
-									"rel": "describedBy"
-								}
-							]
-						}
-					]]
-				}
-			}
-		},
 		"style":
 		{
 			"type": "object",
 			"required":
 			[
-				"id",
-				"links"
+				"id"
 			],
 			"properties":
 			{
 				"id":
 				{
+					"description": "An identifier for this style. Implementation of 'identifier'",
 					"type": "string"
 				},
 				"title":
 				{
+					"description": "A title for this style",
 					"type": "string"
+				},
+				"abstract":
+				{
+					"description": "Brief narrative description of this style",
+					"type": "string"
+				},
+				"keywords":
+				{
+					"description": "keywords about this style",
+					"type": "array",
+					"items":
+					{
+						"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json"
+					} 
 				},
 				"links":
 				{
+					"description": "Links to style related resources. Possible link 'rel' values are: 'style' for a URL pointing to the style description, 'styleSpec' for a URL pointing to the specification or standard used to define the style.",
 					"type": "array",
 					"minItems": 1,
 					"items":
@@ -330,7 +360,54 @@
 						"$ref": "../../../ogcapi/common/part1/1.0/schemas/link.json"
 					}
 				}
-			}
+			},
+			"examples":
+			[
+				{
+					"id": "night",
+					"title": "Topographic night style",
+					"links":
+					[
+						{
+							"href": "https://example.com/api/1.0/styles/night?f=mapbox",
+							"type": "application/vnd.mapbox.style+json",
+							"rel": "stylesheet"
+						},
+						{
+							"href": "https://example.com/api/1.0/styles/night?f=sld10",
+							"type": "application/vnd.ogc.sld+xml;version=1.0",
+							"rel": "stylesheet"
+						},
+						{
+							"href": "https://example.com/api/1.0/styles/night/metadata?f=json",
+							"type": "application/json",
+							"rel": "describedBy"
+						}
+					]
+				},
+				{
+					"id": "topographic",
+					"title": "Regular topographic style",
+					"links":
+					[
+						{
+							"href": "https://example.com/api/1.0/styles/topographic?f=mapbox",
+							"type": "application/vnd.mapbox.style+json",
+							"rel": "stylesheet"
+						},
+						{
+							"href": "https://example.com/api/1.0/styles/topographic?f=sld10",
+							"type": "application/vnd.ogc.sld+xml;version=1.0",
+							"rel": "stylesheet"
+						},
+						{
+							"href": "https://example.com/api/1.0/styles/topographic/metadata?f=json",
+							"type": "application/json",
+							"rel": "describedBy"
+						}
+					]
+				}
+			]
 		}
 	}
 }

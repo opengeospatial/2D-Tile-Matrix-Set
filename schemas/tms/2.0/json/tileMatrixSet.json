@@ -3,7 +3,7 @@
 	"title": "Tile Matrix Set Definition",
 	"description": "A definition of a tile matrix set following the 2D Tile Matrix Set standard. For tileset metadata, this property is only required for offline use, as an alternative to tileMatrixSetURI and tileMatrixSetDefinition.",
 	"type": "object",
-	"required": ["identifier", "supportedCRS", "tileMatrices"],
+	"required": ["id", "supportedCRS", "tileMatrices"],
 	"properties": {
 		"title": {
 			"description": "Title of this tile matrix set, normally used for display to a human",
@@ -22,8 +22,8 @@
 				"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json" 
 			} 
 		},
-		"identifier": {
-			"description": "Tile matrix set identifier",
+		"id": {
+			"description": "Tile matrix set identifier. Implementation of 'identifier'",
 			"type": "string"
 		},
 		"boundingBox":
@@ -62,7 +62,7 @@
 		{
 			"description": "",
 			"type": "object",
-			"required": ["identifier", "scaleDenominator", "topLeftCorner", "tileWidth", "tileHeight", "matrixWidth", "matrixHeight"],
+			"required": ["id", "scaleDenominator", "topLeftCorner", "tileWidth", "tileHeight", "matrixWidth", "matrixHeight"],
 			"properties": 
 			{
 				"title": {
@@ -82,8 +82,8 @@
 						"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json" 
 					}
 				},
-				"identifier": {
-					"description": "Identifier selecting one of the scales defined in the TileMatrixSet and representing the scaleDenominator the tile",
+				"id": {
+					"description": "Identifier selecting one of the scales defined in the TileMatrixSet and representing the scaleDenominator the tile. Implementation of 'identifier'",
 					"type": "string",
 					"examples": ["3"]
 				},
@@ -104,7 +104,6 @@
 				},
 				"tileWidth":
 				{
-					"minimum": 1,
 					"type": "number",
 					"description": "Width of each tile of this tile matrix in pixels",
 					"format": "integer",
@@ -114,7 +113,6 @@
 				},
 				"tileHeight":
 				{
-					"minimum": 1,
 					"type": "number",
 					"description": "Height of each tile of this tile matrix in pixels",
 					"format": "integer",
@@ -124,7 +122,6 @@
 				},
 				"matrixHeight":
 				{
-					"minimum": 1,
 					"type": "number",
 					"description": "Width of the matrix (number of tiles in width)",
 					"format": "integer",
@@ -134,7 +131,6 @@
 				},
 				"matrixWidth":
 				{
-					"minimum": 1,
 					"type": "number",
 					"description": "Height of the matrix (number of tiles in height)",
 					"format": "integer",

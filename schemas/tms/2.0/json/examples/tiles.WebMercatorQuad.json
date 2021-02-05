@@ -1,7 +1,7 @@
 {
    "title" : "Daraa multi-layer vector tiles",
    "abstract" : "Vector tiles of Daraa, Syria from NSG OpenStreetMap Topographic Data Store",
-   "keywords" : [ "Daraa", "Syria", "OpenStreetMap", "NSG", "TDS" ],
+   "keywords": [ "Daraa", "Syria", "OpenStreetMap", "NSG", "TDS" ],
    "dataType" : "vector",
    "accessConstraints" : "unclassified",
    "links" : [
@@ -34,7 +34,7 @@
          "geometryType" : "polygons",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
-         "boundingBox" : { "lowerCorner" : [ 35.898213, 32.4633913 ], "upperCorner" : [ 36.5614696, 32.8370158 ] },
+         "boundingBox" : [35.898213, 32.4633913, 36.5614696, 32.8370158 ],
          "stylableLayerSets" : [ "OSMNSGTDS" ],
          "links" : [
             {
@@ -42,22 +42,25 @@
                "href" : "/ogcapi/collections/AgricultureSrf"
             }
          ],
-         "properties" :
+         "propertiesSchema" :
          {
-            "F_CODE" :
-            {
-               "title" : "Feature Code",
-               "type" : "string",
-               "enum" : [ "EA010", "EA040", "AM020" ]
-            },
-            "FFN" : { "type" : "integer" },
-            "FCSUBTYPE" :
-            {
-               "title" : "Feature subtype",
-               "type" : "integer",
-               "enum" : [ 100380, 100384 ]
-            },
-            "ZI005_FNA" : { "type" : "string"  }
+		"type": "object",
+		"properties":{
+			"F_CODE" :
+			{
+			   "title" : "Feature Code",
+			   "type" : "string",
+			   "enum" : [ "EA010", "EA040", "AM020" ]
+			},
+			"FFN" : { "type" : "integer" },
+			"FCSUBTYPE" :
+			{
+			   "title" : "Feature subtype",
+			   "type" : "integer",
+			   "enum" : [ 100380, 100384 ]
+			},
+			"ZI005_FNA" : { "type" : "string"  }
+		}
          }
       },
       {
@@ -66,7 +69,7 @@
          "geometryType" : "lines",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
-         "boundingBox" : { "lowerCorner" : [ 35.9028738, 32.4168138 ], "upperCorner" : [ 36.5747694, 33.1424348 ] },
+         "boundingBox" : [ 35.9028738, 32.4168138, 36.5747694, 33.1424348 ] ,
          "stylableLayerSets" : [ "OSMNSGTDS" ],
          "links" : [
             {

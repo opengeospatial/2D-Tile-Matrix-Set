@@ -142,7 +142,7 @@ Zero or more (optional). Default value is "topLeft"
 
 | pointOfOrigin
 
-PointOfOrigin
+PointOfOrigin^f^
  |
 Coordinate in CRS coordinates of the corner of origin of this tile matrix
  |
@@ -199,6 +199,8 @@ One (mandatory)
 ^d^    If no Title is specified, client may display the Identifier value instead.
 
 ^e^    In XML schemas ows:PositionType data type is used. See OWS 2.0 schemas (owsCommon.xsd).
+
+^f^    In previous versions was called topLeftCorner and cornerOfOrigin did not exist
 
 ^g^    The pixel size of the tile can be obtained from the scaleDenominator by multiplying the later by 0.28 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it has degrees, then metersPerUnit=2p__a__/360 (_a_ is the Earth maximum radius of the ellipsoid).
 |===
@@ -280,8 +282,6 @@ image::figures/TileMatrixSetLimits2D.png[TileMatrixSetLimits UML model]
 | tileMatrix‌Limits
 
 Tile‌Matrix‌Limits | Indices limits for this tileMatrix | TileMatrixLimits data structure, see <<parts-of-tilematrixlimits-data-structure>> | one or more (mandatory) ^a^
-
-4+| ^a^       Multiplicity SHALL be the equal of inferior to multiplicity of tileMatrix of this tileMatrixSet. Each tileMatrix identifier shall be mentioned only once in this TileMatrixSetLimits. If a tileMatrix identifier is not mentioned, it should be interpreted as a tileMatrix that is not available.
 
 |===
  
@@ -417,7 +417,11 @@ TileMatrix‌SetDefinition | Reference to a tileMatrixSet | URI type^c^
 
 | tileMatrix‌Set‌Limits
 
-Tile‌Matrix‌Set‌Limits | Index limits for this tileMatrixSet | TileMatrixSetLimits data structure, see <<parts-of-tilematrixsetlimits-data-structure>> | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^a,b^
+Tile‌Matrix‌Set‌Limits | Index limits for this tileMatrixSet | TileMatrixSetLimits data structure, see <<parts-of-tilematrixsetlimits-data-structure>> | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^g^
+
+| boundingBox
+
+BoundingBox | Minimum bounding rectangle surrounding the tileset | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>>^h^ | Zero or one (optional)
 
 | date
 
@@ -444,12 +448,15 @@ Link | Links to related resources | AtomLink data structure, see <<parts-of-atom
 
 ^c^     Points to a definition of the TileMatrixSet provided by a tile service
 
-^d^     At least one of the TileMatrixSet,  TileMatrixSetURI or TileMatrixSetDefinition is mandatory and shall be provided.
+^d^     At least one of the TileMatrixSet,  TileMatrixSetURI or TileMatrixSetDefinition SHALL be provided.
 
 ^e^     Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file).
 
-^f^     intended for offline use. In an online use you are supposed to provide links to the tiles that already have the mediaType specified.
+^f^     Intended for offline use. In an online use you are supposed to provide links to the tiles that already have the mediaType specified.
 
+^g^     If missing, there are no limits other that the ones imposed by the TileMatrixSet.
+
+^h^     In the same CRS than the TileMatrixSet
 |===
 
 A Layer is a set of geographic objects of the same type together in a way that can be presented to the user. Its elements are defined with a data structure defined in <<parts-of-geospatial-data-data-structure>>.

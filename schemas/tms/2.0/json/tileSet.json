@@ -2,106 +2,136 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"title": "Tile Set Metadata",
 	"description": "A resource describing a tileset based on the OGC TileSet Metadata Standard",
-	"type": "object",
-	"properties":
-	{
-		"title":
+	"allOf": 
+	[
 		{
-			"description": "A title for this tileset",
-			"type": "string"
-		},
-		"abstract":
-		{
-			"description": "Brief narrative description of this tile set",
-			"type": "string"
-		},
-		"keywords":
-		{
-			"description": "keywords about this tileset",
-			"type": "array",
-			"items":
+			"type": "object",
+			"properties":
 			{
-				"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json"
-			} 
-		},
-		"version": 
-		{
-			"description": "Version of the Tile Set. Changes if the data behind the tiles has been changed",
-			"type": "string"
-		},
-		"pointOfContact": 
-		{
-			"description": "Useful information to contact the authors or custodians for the Tile Set",
-			"type": "string"
-		},
-		"accessConstraints": 
-		{
-			"description": "Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set",
-			"type": "string"
-		},
-		"mediaType": 
-		{
-			"description": "Media types available for the tiles",
-			"type": "string"
-		},
-		"tileMatrixSet":
-		{
-			"description": "Tile matrix set definition",
-			"$ref": "tileMatrixSet.json"
-		},
-		"tileMatrixSetURI":
-		{
-			"description": "Reference to a Tile Matrix Set on the OGC definitions server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on the definition server.",
-			"type": "string",
-			"format": "uri",
-			"examples": ["http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid"]
-		},
-		"tileMatrixSetDefinition":
-		{
-			"description": "Reference to a tile matrix set definition following the 2D Tile Matrix Set Standard. Optional for tile matrix sets defined on the OGC definition server; required for custom Tile Matrix Sets.",
-			"type": "string",
-			"examples": ["http://data.example.com/tileMatrixSets/WorldMercatorWGS84Quad"]
-		},
-		"tileMatrixSetLimits":
-		{
-			"minItems": 1,
-			"type": "array",
-			"items":
-			{
-				"$ref": "tilematrixlimits.json"
+				"title":
+				{
+					"description": "A title for this tileset",
+					"type": "string"
+				},
+				"abstract":
+				{
+					"description": "Brief narrative description of this tile set",
+					"type": "string"
+				},
+				"keywords":
+				{
+					"description": "keywords about this tileset",
+					"type": "array",
+					"items":
+					{
+						"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json"
+					} 
+				},
+				"version": 
+				{
+					"description": "Version of the Tile Set. Changes if the data behind the tiles has been changed",
+					"type": "string"
+				},
+				"pointOfContact": 
+				{
+					"description": "Useful information to contact the authors or custodians for the Tile Set",
+					"type": "string"
+				},
+				"accessConstraints": 
+				{
+					"description": "Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set",
+					"type": "string"
+				},
+				"mediaType": 
+				{
+					"description": "Media types available for the tiles",
+					"type": "string"
+				},
+				"tileMatrixSetLimits":
+				{
+					"minItems": 1,
+					"type": "array",
+					"items":
+					{
+						"$ref": "tilematrixlimits.json"
+					}
+				},
+				"boundingBox":
+				{
+					"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
+					"$ref": "../../../ogcapi/common/part1/1.0/schemas/boundingBox.json"
+				},
+				"date":
+				{
+					"$ref": "#/definitions/dates"
+				},		
+				"layers":
+				{
+					"minItems": 1,
+					"type": "array",
+					"items":
+					{
+						"$ref": "#/definitions/geospatialData"
+					}
+				},
+				"centerPoint":
+				{
+					"$ref": "#/definitions/tilePoint"
+				},
+				"links":
+				{
+					"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)",
+					"type": "array",
+					"items": {
+						"$ref": "../../../ogcapi/common/part1/1.0/schemas/link.json"
+					}
+				}
 			}
 		},
-		"boundingBox":
 		{
-			"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
-			"$ref": "../../../ogcapi/common/part1/1.0/schemas/boundingBox.json"
-		},
-		"date":
-		{
-			"$ref": "#/definitions/dates"
-		},		
-		"layers":
-		{
-			"minItems": 1,
-			"type": "array",
-			"items":
-			{
-				"$ref": "#/definitions/geospatialData"
-			}
-		},
-		"centerPoint":
-		{
-			"$ref": "#/definitions/tilePoint"
-		},
-		"links":
-		{
-			"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)",
-			"type": "array",
-			"items": {
-				"$ref": "../../../ogcapi/common/part1/1.0/schemas/link.json"
-			}
+			"anyOf": [
+				{
+					"type": "object",
+					"required": ["tileMatrixSet"],
+					"properties":
+					{
+						"tileMatrixSet":
+						{
+							"description": "Tile matrix set definition",
+							"$ref": "tileMatrixSet.json"
+						}
+					}
+				},
+				{
+					"type": "object",
+					"required": ["tileMatrixSetURI"],
+					"properties":
+					{
+						"tileMatrixSetURI":
+						{
+							"description": "Reference to a Tile Matrix Set on the OGC definitions server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on the definition server.",
+							"type": "string",
+							"format": "uri",
+							"examples": ["http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid"]
+						}
+					}
+				},
+				{
+					"type": "object",
+					"required": ["tileMatrixSetDefinition"],
+					"properties":
+					{
+						"tileMatrixSetDefinition":
+						{
+							"description": "Reference to a tile matrix set definition following the 2D Tile Matrix Set Standard. Optional for tile matrix sets defined on the OGC definition server; required for custom Tile Matrix Sets.",
+							"type": "string",
+							"examples": ["http://data.example.com/tileMatrixSets/WorldMercatorWGS84Quad"]
+						}
+					}
+				}
+			]
 		}
-	},
+	],
 	"definitions":
 	{
 		"dates":

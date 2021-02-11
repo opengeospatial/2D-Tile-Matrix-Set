@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:common="http://www.opengis.net/common/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/common/1.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+	<annotation>
+		<appinfo>Description.xsd 2021-02-10</appinfo>
+		<documentation>This XML Schema Document encodes the parts of the
+    MD_DataIdentification class of ISO 19115 (OGC Abstract Specification Topic
+    11) which are expected to be used for most datasets. This Schema also
+    encodes the parts of this class that are expected to be useful for other
+    metadata. Both may be used within the Contents section of OWS service
+    metadata (Capabilities) documents.
+    
+    OWS is an OGC Standard.
+    Copyright (c) 2009 Open Geospatial Consortium, Inc. All Rights Reserved.
+    To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
+    </documentation>
+	</annotation>
+	<!-- ==============================================================
+                includes and imports
+        ============================================================== -->
+	<!--include schemaLocation="owsCommon.xsd" /-->
+	<!-- ==============================================================
+                elements and types
+        ============================================================== -->
+	<!-- ===========================================================-->
+	<element name="AvailableCRS">
+		<annotation>
+			<documentation>XML encoded CRS. To support dynamic CRSs we support the use references or explicit definitions in two variants.</documentation>
+		</annotation>
+		<complexType>
+			<choice>
+				<element name="URI" type="anyURI">
+					<annotation>
+						<documentation>A reference to a CRS. Typically a EPSG CRS reference</documentation>
+					</annotation>
+				</element>
+				<element name="WKT" type="string">
+					<annotation>
+						<documentation>A string defining the CRS using Well Known Text</documentation>
+					</annotation>
+				</element>
+				<element name="ReferenceSystem">
+					<annotation>
+						<documentation>A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115</documentation>
+					</annotation>
+					<complexType>
+						<sequence>
+							<any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+								<annotation>
+									<documentation>This is an extension point for other properties in the TileMatrix.</documentation>
+								</annotation>
+							</any>
+						</sequence>
+					</complexType>
+				</element>				
+			</choice>
+		</complexType>
+	</element>
+
+	<element name="SupportedCRS" substitutionGroup="common:AvailableCRS">
+		<annotation>
+			<documentation>Coordinate reference system in which data from this
+      data(set) or resource is available or supported. More specific parameter
+      names should be used by specific OWS specifications wherever applicable.
+      More than one such parameter can be included for different
+      purposes.</documentation>
+		</annotation>
+	</element>
+</schema>

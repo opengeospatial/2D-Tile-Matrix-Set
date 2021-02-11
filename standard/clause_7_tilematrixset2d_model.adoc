@@ -124,7 +124,7 @@ One for each keyword authority used
 
 Scale‌Denominator
  |
-Scale denominator level of this tile matrix ^g^
+Scale denominator level of this tile matrix ^f^
  |
 Double type
  |
@@ -138,11 +138,11 @@ Position of the corner of origin with respect of the tiles of this tile matrix
  |
 enumeration. See <<parts-of-corner-of-origin-enum>>
  |
-Zero or more (optional). Default value is "topLeft"
+Zero or one (optional). Default value is "topLeft"
 
 | pointOfOrigin
 
-PointOfOrigin^f^
+PointOfOrigin^e^
  |
 Coordinate in CRS coordinates of the corner of origin of this tile matrix
  |
@@ -198,11 +198,9 @@ One (mandatory)
 
 ^d^    If no Title is specified, client may display the Identifier value instead.
 
-^e^    In XML schemas ows:PositionType data type is used. See OWS 2.0 schemas (owsCommon.xsd).
+^e^    In previous versions was called topLeftCorner and cornerOfOrigin did not exist
 
-^f^    In previous versions was called topLeftCorner and cornerOfOrigin did not exist
-
-^g^    The pixel size of the tile can be obtained from the scaleDenominator by multiplying the later by 0.28 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it has degrees, then metersPerUnit=2p__a__/360 (_a_ is the Earth maximum radius of the ellipsoid).
+^f^    The pixel size of the tile can be obtained from the scaleDenominator by multiplying the later by 0.28 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it has degrees, then metersPerUnit=2p__a__/360 (_a_ is the Earth maximum radius of the ellipsoid).
 |===
  
 
@@ -250,10 +248,10 @@ In order to make the description of the model more compact, only the tile rows t
 Coalesce | Coalescence factor | Positive integer type ^a^ | One (mandatory)
 | minTile‌Row
 
-MinTile‌Row | Minimum tile row index valid for this layer | Non negative integer type ^b^ | One (mandatory)
+MinTile‌Row | First tile row where the coalese factor apply on this tilematrix | Non negative integer type ^b^ | One (mandatory)
 | maxTile‌Row
 
-MaxTile‌Row | Maximum tile row index valid for this layer | Non negative integer type ^c^ | One (mandatory)
+MaxTile‌Row | Last tile row where the coalese factor apply on this tilematrix | Non negative integer type ^c^ | One (mandatory)
 4+| ^a^    Shall be more than 1. Rows with Coalescence factor of 1 shall not be described here.
 
 ^b^    From 0 to maxTileRow.
@@ -316,7 +314,7 @@ One (mandatory)
 
 MinTile‌Col
  |
-Minimum tile column index valid for this layer.
+Minimum tile column index valid for this tile column.
  |
 Non negative integer type ^d^
  |
@@ -326,7 +324,7 @@ One (mandatory)
 
 MaxTile‌Col
  |
-Maximim tile column index valid for this layer.
+Maximum tile column index valid for this tile column.
  |
 Non negative integer type ^e^
  |
@@ -400,7 +398,7 @@ MediaType | Media types available for the tiles | CharacterString restricted by 
 
 | dataType
 
-DataType | Type of data represented in the tiles | DataTypeCode code list | Zero or one (optional)
+DataType | Type of data represented in the tiles | DataTypeCode code list | one (mandatory)
 
 | tileMatrix‌Set
 
@@ -433,7 +431,7 @@ Layer | Layer elements represented in the tile set | GeospatialData data structu
 
 | style
 
-Style | Style used to generate the tiles in the tileset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)
+Style | Style used to generate the tiles in the tileset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^i^
 
 | centerPoint
 
@@ -457,9 +455,11 @@ Link | Links to related resources | AtomLink data structure, see <<parts-of-atom
 ^g^     If missing, there are no limits other that the ones imposed by the TileMatrixSet.
 
 ^h^     In the same CRS than the TileMatrixSet
+
+^i^     If style property mentions a style applied to all layers, the style property in layer should not be used.
 |===
 
-A Layer is a set of geographic objects of the same type together in a way that can be presented to the user. Its elements are defined with a data structure defined in <<parts-of-geospatial-data-data-structure>>.
+A Layer can is a set of geographic objects (all of the same type) together in a way that can be presented to the user. IT can also be a coverage. Its elements are defined with a data structure defined in <<parts-of-geospatial-data-data-structure>>.
 
 [#parts-of-geospatial-data-data-structure,reftext='{table-caption} {counter:table-num}']
 .Parts of GeospatialData data structure
@@ -489,7 +489,7 @@ Identifier | Unique identifier of the Layer | CodeType, as adaptation of MD_Iden
 
 | dataType
 
-DataType | Type of data represented in the layer | DataTypeCode code list | Zero or one (optional)
+DataType | Type of data represented in the layer | DataTypeCode code list | one (mandatory)
 
 | geometryType
 
@@ -497,7 +497,7 @@ GeometryType | The geometry type of the features shown in this layer | GeometryT
 
 | featureType
 
-FeatureType | Feature type identifier | CharacterString | Zero or one (optional)
+FeatureType | Feature type identifier | CharacterString | Zero or one (optional)^i^
 
 | pointOfContact
 
@@ -509,7 +509,7 @@ Publisher | Organization or individual responsible for making the layer availabl
 
 | theme
 
-Theme | Category where the layer can be group | CharacterString | Zero or more (optional)
+Theme | Category where the layer can be grouped | CharacterString | Zero or more (optional)
 
 | supportedCRS
 
@@ -539,19 +539,25 @@ BoundingBox | Minimum bounding rectangle surrounding the layer ^g^ | BoundingBox
 
 Date | Dates of creation, publication, revision, validity and reception of the layer  | Dates data structure, see <<parts-of-dates-data-structure>> | Zero or one (optional)
 
+| style
+
+Style | Style applied to this layer to generate the tiles in the tileset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^b^
+
 | stylableLayerSet
 
 StylableLayerSet | Identifiers of styles that can be used in conjunction with this layer | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or more (optional)
 
 | propertiesSchema
 
-PropertiesSchema | Properties represented by the features in this layer | FeatureAttribute data structure. See <<parts-of-feature-attribute-data-structure>> | Zero or more (optional)
+PropertiesSchema | Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage) | FeatureAttribute data structure. See <<parts-of-feature-attribute-data-structure>> | Zero or more (optional)
 
 | link
 
 Link | Links to related resources | AtomLink data structure, see <<parts-of-atom-link-data-structure>>. ^h^ | Zero or more (optional)
 
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply
+
+^b^     If the tileSetMetadata style property mentions a style applied to all layers, this should be omitted
 
 ^c^     SHALL be an scaleDenominator defined in one of the TileMatrix of the TileMatrixSet
 
@@ -564,6 +570,8 @@ Link | Links to related resources | AtomLink data structure, see <<parts-of-atom
 ^g^     In the same CRS than the TileMatrixSet
 
 ^h^     Possible link 'rel' values are: 'collection' for a URL pointing to the collection represented in this layer
+
+^i^     Only applicable to layers of datatype='geometries'
 |===
 
 A FeatureAttribute element contains attributes that can be found in at least one feature belonging to the layer the FeatureAttribute element belongs to. Its elements are defined in <<parts-of-feature-attribute-data-structure>>.
@@ -593,6 +601,7 @@ One for each keyword authority used
 | identifier
 
 Identifier | identifier of the property | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
+
 | type
 
 Type | The data type of the property | CharacterString | One (mandatory)
@@ -717,9 +726,9 @@ The data type applicable to the tileset or the layer is defined in <<parts-of-da
 [width = "100%",options="header"]
 |===
 | Names | Definition
-| photograph | Images with values representing colors
+| map | Images representing colors for pictorial representation on the screen
 | geometries | Features composed by geometries and properties
-| coverage | Images with values representing physical quantities.
+| coverage | Images with values representing physical quantities
 |===
 
 The geometry type applicable to the geometries of the layer is defined in <<parts-of-geometry-type-code-enum>>.

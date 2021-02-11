@@ -74,6 +74,14 @@
 						"$ref": "#/definitions/geospatialData"
 					}
 				},
+				"styles": {
+					"description": "Style involving all layers used to generate the tileset",
+					"type": "array",
+					"items":
+					{
+						"$ref": "#/definitions/style"
+					}
+				},
 				"centerPoint":
 				{
 					"$ref": "#/definitions/tilePoint"
@@ -89,6 +97,7 @@
 			}
 		},
 		{
+			"description": "At least one of the 'TileMatrixSet',  'TileMatrixSetURI' or 'TileMatrixSetDefinition' SHALL be provided", 
 			"anyOf": [
 				{
 					"type": "object",
@@ -189,7 +198,7 @@
 					"type": "string"
 				},
 				"featureType": {
-					"description": "Feature type identifier",
+					"description": "Feature type identifier. Only applicable to layers of datatype 'geometries'",
 					"type": "string",
 					"enum": [""]
 				},
@@ -202,12 +211,12 @@
 					"type": "string"
 				},
 				"theme": {
-					"description": "Category where the layer can be group",
+					"description": "Category where the layer can be grouped",
 					"type": "string"
 				},
 				"supportedCRS": {
 					"description": "Coordinate Reference System (CRS)",
-					"type": "string"
+					"$ref": "../../../ogcapi/common/part1/1.0/schemas/crs.json"
 				},
 				"minScaleDenominator": {
 					"description": "Minimum scale denominator for usage of the layer",
@@ -289,11 +298,11 @@
 							]},
 							"enum": { "description":"Implements 'acceptedValues'", "type": "array", "minItems": 1, "uniqueItems": true },
 							"format": { "description":"Complements implementation of 'type'", "type": "string"},
-							"contentMediaType": { "description":"Implements 'mediaType'", "type": "string" },
-							"maximum": { "description":"Implements 'mediaType'", "type": "number"},
-							"exclusiveMaximum": { "description":"Implements 'mediaType'", "type": "number"},
-							"minimum": { "description":"Implements 'mediaType'", "type": "number"},
-							"exclusiveMinimum": { "description":"Implements 'mediaType'", "type": "number"},
+							"contentMediaType": { "description":"Implements 'range'", "type": "string" },
+							"maximum": { "description":"Implements 'range'", "type": "number"},
+							"exclusiveMaximum": { "description":"Implements 'range'", "type": "number"},
+							"minimum": { "description":"Implements 'range'", "type": "number"},
+							"exclusiveMinimum": { "description":"Implements 'range'", "type": "number"},
 							"pattern": {
 								"type": "string",
 								"format": "regex"

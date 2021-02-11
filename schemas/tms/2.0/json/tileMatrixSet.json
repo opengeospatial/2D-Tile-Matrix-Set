@@ -38,9 +38,8 @@
 			"examples":[[-20037508.3427892, -20037508.3427892, 20037508.3427892, 20037508.3427892]]
 		},
 		"supportedCRS": {
-			"description": "Reference to one coordinate reference system (CRS)",
-			"type": "string",
-			"format": "uri"
+			"description": "Coordinate Reference System (CRS)",
+			"$ref": "../../../ogcapi/common/part1/1.0/schemas/crs.json"
 		},
 		"wellKnownScaleSet": {
 			"description": "Reference to a well-known scale set",
@@ -62,7 +61,7 @@
 		{
 			"description": "",
 			"type": "object",
-			"required": ["id", "scaleDenominator", "topLeftCorner", "tileWidth", "tileHeight", "matrixWidth", "matrixHeight"],
+			"required": ["id", "scaleDenominator", "pointOfOrigin", "tileWidth", "tileHeight", "matrixWidth", "matrixHeight"],
 			"properties": 
 			{
 				"title": {
@@ -92,8 +91,14 @@
 					"type": "number",
 					"examples": [69885283.00358972]
 				},
-				"topLeftCorner": {					
-					"description": "Position in CRS coordinates of the top-left corner of this tile matrix",
+				"cornerOfOrigin": {					
+					"description": "Position of the corner of origin with respect of the tiles of this tile matrix",
+					"type": "string",
+					"enum": ["topLeft", "bottomLeft"],
+					"default": "topLeft"
+				},
+				"pointOfOrigin": {					
+					"description": "Coordinate in CRS coordinates of the corner of origin of this tile matrix. In previous version was 'topLeftCorner' and 'cornerOfOrigin' did not exist",
 					"type": "array",
 					"minItems": 2,
 					"maxItems": 2,
@@ -160,13 +165,13 @@
 					"multipleOf" : 1
 				},
 				"minTileRow": {
-					"description": "Minimum tile row index valid for this layer",
+					"description": "First tile row where the coalese factor apply on this tilematrix",
 					"type": "number",
 					"minimum": 0,
 					"multipleOf" : 1
 				},
 				"maxTileRow": {
-					"description": "Maximim tile row index valid for this layer",
+					"description": "Last tile row where the coalese factor apply on this tilematrix",
 					"type": "number",
 					"minimum": 0,
 					"multipleOf" : 1

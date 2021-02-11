@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Edited with XMLSpy v2008 sp1 (http://www.altova.com) by Joan Masó 
+	(UAB-CREAF-MiraMon). Based on previous documents of Keith Pomakis. -->
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:common="http://www.opengis.net/common/1.0" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en">
+	<annotation>
+		<appinfo>TileMatrixSet 2021-02-02</appinfo>
+		<documentation>
+			This XML Schema Document encodes the TileMatrisSet data structures.
+			TMS is an OGC Standard Copyright (c) 2021 Open Geospatial Consortium, Inc. All Rights Reserved. 
+		    To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
+		</documentation>
+	</annotation>
+
+	<!-- *********************************************************************
+	             Includes and imports.                            
+          ********************************************************************* -->
+	<import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/>
+	<import namespace="http://www.opengis.net/common/1.0" schemaLocation="../../../common/1.0/xml/all.xsd"/>
+
+	<!-- ****************************************************************************************** -->
+	<!-- **  The TileMatrixSetLink, TileMatrixSetLimits and TileMatrixLimits element. ** -->
+	<!-- ****************************************************************************************** -->
+	<element name="TileSetMetadata">
+		<annotation>
+			<documentation>Metadata about the TileMatrixSet reference.</documentation>
+		</annotation>
+		<complexType>
+			<complexContent>
+				<extension base="common:DescriptionType">
+					<sequence>
+						<element name="Version" type="string" minOccurs="0">
+							<annotation>
+								<documentation>Version of the Tile Set. Changes if the data behind the tiles has been changed</documentation>
+							</annotation>
+						</element>
+						<element name="PointOfContact" type="string" minOccurs="0">
+							<annotation>
+								<documentation>Useful information to contact the authors or custodians for the Tile Set</documentation>
+							</annotation>
+						</element>
+						<element name="AccessConstraints" minOccurs="0">
+							<annotation>
+								<documentation>Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set</documentation>
+							</annotation>
+							<simpleType>
+								<restriction base="string">
+									<enumeration value="unclassified"/>
+									<enumeration value="restricted"/>
+									<enumeration value="confidential"/>
+									<enumeration value="secret"/>
+									<enumeration value="topSecret"/>
+								</restriction>
+							</simpleType>
+						</element>
+						<element name="MediaType" type="common:MediaTypeType" minOccurs="0" maxOccurs="unbounded">
+							<annotation>
+								<documentation>Media types available for the tiles</documentation>
+							</annotation>
+						</element>
+						<element ref="tms:DataType">
+							<annotation>
+								<documentation>Type of data represented in the tiles</documentation>
+							</annotation>
+						</element>
+						<element ref="common:Identifier">
+							<annotation>
+								<documentation>Tile matrix set identifier</documentation>
+							</annotation>
+						</element>
+						<element ref="common:BoundingBox" minOccurs="0">
+							<annotation>
+								<documentation>
+									Minimum bounding rectangle surrounding 
+									the visible layer presented by this tile matrix 
+									set, in the supported CRS </documentation>
+							</annotation>
+						</element>
+						<element ref="common:SupportedCRS">
+							<annotation>
+								<documentation>Reference to one coordinate reference 
+								system (CRS).</documentation>
+							</annotation>
+						</element>
+		
+						<element name="TileMatrixSet" type="string">
+							<annotation>
+								<documentation>Reference to a tileMatrixSet</documentation>
+							</annotation>
+						</element>
+						<!--element ref="tms:TileMatrixSetLimits" minOccurs="0">
+							<annotation>
+								<documentation>Indices limits for this tileMatrixSet. The absence of this 
+								element means that tile row and tile col indices are only limited by 0 
+								and the corresponding tileMatrixSet maximum definitions.</documentation>
+							</annotation>
+						</element-->
+
+						<any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+							<annotation>
+								<documentation>This is an extension point for other properties in the TileMatrixSet.</documentation>
+							</annotation>
+						</any>
+					</sequence>
+					<attribute name="id" type="string">
+						<annotation>
+							<documentation/>
+						</annotation>
+					</attribute>
+				</extension>
+			</complexContent>
+		</complexType>
+	</element>
+	
+	<element name="DataType" type="tms:DataTypeType"/>
+	<!-- =========================================================== -->
+	<complexType name="DataTypeType">
+		<annotation>
+			<documentation>Type of data represented in the tiles</documentation>
+		</annotation>
+		<sequence>
+			<element name="CreatedOn" type="dateTime">
+				<annotation>
+					<documentation>Timestamp indicating when the Tile Set was first produced</documentation>
+				</annotation>
+			</element>
+			<element name="PublishedOn" type="dateTime">
+				<annotation>
+					<documentation>Timestamp indicating when the Tile Set was first made available to the users</documentation>
+				</annotation>
+			</element>
+			<element name="RevisedOn" type="dateTime">
+				<annotation>
+					<documentation>Timestamp of the last Tile Set change/revision</documentation>
+				</annotation>
+			</element>
+			<element name="ReceivedOn" type="dateTime">
+				<annotation>
+					<documentation>Timestamp indicating when the Tile Set was received from an external provider</documentation>
+				</annotation>
+			</element>
+			<element name="ValidUntil" type="dateTime">
+				<annotation>
+					<documentation>Timestamp marking the future validity of the Tile Set (the Tile Set may no longer be applicable at this date, or that a new revision of the Tile Set is going to be issued)		
+					</documentation>
+				</annotation>
+			</element>
+		</sequence>
+	</complexType>
+</schema>

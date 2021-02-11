@@ -130,14 +130,21 @@ In this version of this standard we introduce the possibility define a CRS using
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values
-| uri | A reference to a CRS | URI
-| WKT | A string defining the CRS using Well Known Text | CharacterString
-| referenceSystem | a reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115 | MD_ReferenceSystem data type
+| uri
+
+URI | A reference to a CRS. Typically a EPSG CRS reference | URI
+| wkt
+
+WKT | A string defining the CRS using Well Known Text | CharacterString
+| referenceSystem
+
+ReferenceSystem
+| A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115 | MD_ReferenceSystem data type
 |===
 
 ==== AtomLink
 
-Many recent standards emphasize the usefulness of links as a way to relate a data structure instance to other data structures and make navigation through resources possible. Essential links are make explicit in the data structures of this document (recognizable by a URI data type) but other links can be added as needed for convenience when an AtomLink is available. The data structure defined here allows the addition of other links. The definition is based on the atom link  defined in section 4.2.7 of the RFC4287.
+Many recent standards emphasize the usefulness of links as a way to relate a data structure instance to other data structures and make navigation through resources possible. Essential links are make explicit in the data structures of this document (recognizable by a URI data type) but other links can be added as needed for convenience when an AtomLink is available. The data structure defined here allows the addition of other links. The definition is based on the web linking defined in the RFC8288 and the XML serialization present in section 4.2.7 of the RFC4287 and in the JSON serialization found in this IETF draft: https://tools.ietf.org/id/draft-pot-json-link-01.html
 
 NOTE: In practice, some encodings can opt to specify the essential links as part of this data structure for convenience
 

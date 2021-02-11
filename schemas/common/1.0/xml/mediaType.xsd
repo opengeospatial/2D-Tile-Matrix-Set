@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<schema xmlns:common="http://www.opengis.net/common/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/common/1.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+	<annotation>
+		<appinfo>Description.xsd 2021-02-10</appinfo>
+		<documentation>This XML Schema Document encodes the parts of the
+    MD_DataIdentification class of ISO 19115 (OGC Abstract Specification Topic
+    11) which are expected to be used for most datasets. This Schema also
+    encodes the parts of this class that are expected to be useful for other
+    metadata. Both may be used within the Contents section of OWS service
+    metadata (Capabilities) documents.
+    
+    OWS is an OGC Standard.
+    Copyright (c) 2009 Open Geospatial Consortium, Inc. All Rights Reserved.
+    To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
+    </documentation>
+	</annotation>
+	<!-- ==============================================================
+                includes and imports
+        ============================================================== -->
+	<!--include schemaLocation="owsCommon.xsd" /-->
+	<!-- ==============================================================
+                elements and types
+        ============================================================== -->
+	<!-- ===========================================================-->
+	<simpleType name="MediaTypeType">
+		<annotation>
+			<documentation>XML encoded identifier of a standard media type, possibly
+      a parameterized media type.</documentation>
+		</annotation>
+		<restriction base="string">
+			<pattern value="(application|audio|image|text|video|message|multipart|model)/.+(;\s*.+=.+)*"/>
+		</restriction>
+	</simpleType>
+</schema>

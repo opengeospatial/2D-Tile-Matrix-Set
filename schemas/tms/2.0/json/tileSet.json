@@ -40,7 +40,9 @@
 				"accessConstraints": 
 				{
 					"description": "Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set",
-					"type": "string"
+					"type": "string",
+					"default": "unclassified",
+					"enum": ["unclassified", "restricted", "confidential", "secret", "topSecret"]
 				},
 				"mediaType": 
 				{

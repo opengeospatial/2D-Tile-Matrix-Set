@@ -413,9 +413,9 @@ Tile‌Matrix‌SetURI | Reference to a tileMatrixSet | URI type^b^ | Zero or On
 TileMatrix‌SetDefinition | Reference to a tileMatrixSet | URI type^c^
 | Zero or One (optional)^d^
 
-| tileMatrix‌Set‌Limits
+| tileMatrix‌Limits
 
-Tile‌Matrix‌Set‌Limits | Index limits for this tileMatrixSet | TileMatrixSetLimits data structure, see <<parts-of-tilematrixsetlimits-data-structure>> | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^g^
+Tile‌Matrix‌Limits | Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet | TileMatrixSetLimits data structure, see <<parts-of-tilematrixsetlimits-data-structure>> | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^g^
 
 | boundingBox
 
@@ -439,10 +439,10 @@ CenterPoint | Location of a tile that nicely represents the tileset. Implementat
 
 | link
 
-Link | Links to related resources | AtomLink data structure, see <<parts-of-atom-link-data-structure>>.^e^ | Zero or more (optional)
+Link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>.^e^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^     Points to a definition of the TileMatrixSet in the OGC NA (extracted from <<annex_d>> and <<annex_h>>)
+^b^     Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/) and extracted from <<annex_d>> and <<annex_h>>)
 
 ^c^     Points to a definition of the TileMatrixSet provided by a tile service
 
@@ -452,7 +452,7 @@ Link | Links to related resources | AtomLink data structure, see <<parts-of-atom
 
 ^f^     Intended for offline use. In an online use you are supposed to provide links to the tiles that already have the mediaType specified.
 
-^g^     If missing, there are no limits other that the ones imposed by the TileMatrixSet.
+^g^     If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all.
 
 ^h^     In the same CRS than the TileMatrixSet
 
@@ -553,7 +553,7 @@ PropertiesSchema | Properties represented by the features in this layer. Can be 
 
 | link
 
-Link | Links to related resources | AtomLink data structure, see <<parts-of-atom-link-data-structure>>. ^h^ | Zero or more (optional)
+Link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>. ^h^ | Zero or more (optional)
 
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply
 
@@ -699,7 +699,7 @@ Identifier | Identifier of a style | CodeType, as adaptation of MD_Identifier cl
 
 | link
 
-Link | Links to style related resources | AtomLink data structure, see <<parts-of-atom-link-data-structure>>. ^b^ | Zero or more (optional)
+Link | Links to style related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>. ^b^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply
   |
 ^b^     Possible link 'rel' values are: 'style' for a URL pointing to the style description, 'styleSpec' for a URL pointing to the specification or standard used to define the style.
@@ -727,7 +727,7 @@ The data type applicable to the tileset or the layer is defined in <<parts-of-da
 |===
 | Names | Definition
 | map | Images representing colors for pictorial representation on the screen
-| geometries | Features composed by geometries and properties
+| vector | Vector based elements. E.g. Features composed by geometries and properties
 | coverage | Images with values representing physical quantities
 |===
 

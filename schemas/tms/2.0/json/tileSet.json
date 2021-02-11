@@ -8,18 +8,15 @@
 			"type": "object",
 			"properties":
 			{
-				"title":
-				{
+				"title": {
 					"description": "A title for this tileset",
 					"type": "string"
 				},
-				"abstract":
-				{
+				"abstract": {
 					"description": "Brief narrative description of this tile set",
 					"type": "string"
 				},
-				"keywords":
-				{
+				"keywords": {
 					"description": "keywords about this tileset",
 					"type": "array",
 					"items":
@@ -27,48 +24,44 @@
 						"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json"
 					} 
 				},
-				"version": 
-				{
+				"version": {
 					"description": "Version of the Tile Set. Changes if the data behind the tiles has been changed",
 					"type": "string"
 				},
-				"pointOfContact": 
-				{
+				"pointOfContact": {
 					"description": "Useful information to contact the authors or custodians for the Tile Set",
 					"type": "string"
 				},
-				"accessConstraints": 
-				{
+				"accessConstraints": {
 					"description": "Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set",
 					"type": "string",
 					"default": "unclassified",
 					"enum": ["unclassified", "restricted", "confidential", "secret", "topSecret"]
 				},
-				"mediaType": 
-				{
+				"mediaType": {
 					"description": "Media types available for the tiles",
 					"type": "string"
 				},
-				"tileMatrixSetLimits":
-				{
-					"minItems": 1,
+				"dataType": {
+					"description": "Type of data represented in the tileset",
+					"$ref": "#/definitions/dataType"
+				},
+				"tileMatrixLimits": {
+					"description": "Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet. If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all"
 					"type": "array",
 					"items":
 					{
 						"$ref": "tilematrixlimits.json"
 					}
 				},
-				"boundingBox":
-				{
+				"boundingBox": {
 					"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
 					"$ref": "../../../ogcapi/common/part1/1.0/schemas/boundingBox.json"
 				},
-				"date":
-				{
+				"date": {
 					"$ref": "#/definitions/dates"
 				},		
-				"layers":
-				{
+				"layers": {
 					"minItems": 1,
 					"type": "array",
 					"items":
@@ -76,16 +69,13 @@
 						"$ref": "#/definitions/geospatialData"
 					}
 				},
-				"styles": {
+				"style": {
 					"description": "Style involving all layers used to generate the tileset",
-					"type": "array",
-					"items":
-					{
-						"$ref": "#/definitions/style"
-					}
+					"$ref": "#/definitions/style"
 				},
 				"centerPoint":
 				{
+					"description": "Location of a tile that nicely represents the tileset. Implementations may use this center value to set the default location or to present a representative tile in a user interface",
 					"$ref": "#/definitions/tilePoint"
 				},
 				"links":
@@ -120,7 +110,7 @@
 					{
 						"tileMatrixSetURI":
 						{
-							"description": "Reference to a Tile Matrix Set on the OGC definitions server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on the definition server.",
+							"description": "Reference to a Tile Matrix Set on the OGC NA definition server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on the definition server.",
 							"type": "string",
 							"format": "uri",
 							"examples": ["http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid"]
@@ -193,19 +183,19 @@
 				},
 				"dataType": {
 					"description": "Type of data represented in the layer",
-					"type": "string"
+					"$ref": "#/definitions/dataType"
 				},
 				"geometryType": {
 					"description": "The geometry type of the features shown in this layer",
-					"type": "string"
+					"type": "string",
+					"enum": ["points", "lines", "polygons"]  
 				},
 				"featureType": {
 					"description": "Feature type identifier. Only applicable to layers of datatype 'geometries'",
 					"type": "string",
-					"enum": [""]
 				},
 				"pointOfContact": {
-					"description": "Useful information to contact the authors or custodians for the Layer | CharacterString  (e.g. e-mail address, a physical address,  phone numbers, etc)",
+					"description": "Useful information to contact the authors or custodians for the layer (e.g. e-mail address, a physical address,  phone numbers, etc)",
 					"type": "string"
 				},
 				"publisher": {
@@ -241,27 +231,23 @@
 					"$ref": "../../../ogcapi/common/part1/1.0/schemas/boundingBox.json"
 				},
 				"date": {
-					"description": "Dates of creation, publication, revision, validity and reception of the layer  ",
+					"description": "Dates of creation, publication, revision, validity and reception of the layer",
 					"$ref": "#/definitions/dates"
 				},
-				"styles": {
+				"style": {
 					"description": "Style used to generate the layer in the tileset",
-					"type": "array",
-					"items":
-					{
-						"$ref": "#/definitions/style"
-					}
+					"$ref": "#/definitions/style"
 				},
 				"stylableLayerSet": {
 					"description": "Identifiers of styles that can be used in conjunction with this layer",
 					"type": "string"
 				},
 				"propertiesSchema": {
-					"description": "properties represented by the features in this layer",
+					"description": "Properties represented by the features in this layer",
 					"$ref": "#/definitions/propertiesSchema"
 				},
 				"links": {
-					"description": "Links related to this layer. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)",
+					"description": "Links related to this layer. Possible link 'rel' values are: 'collection' for a URL pointing to the collection",
 					"type": "array",
 					"minItems": 1,
 					"items":
@@ -300,7 +286,7 @@
 							]},
 							"enum": { "description":"Implements 'acceptedValues'", "type": "array", "minItems": 1, "uniqueItems": true },
 							"format": { "description":"Complements implementation of 'type'", "type": "string"},
-							"contentMediaType": { "description":"Implements 'range'", "type": "string" },
+							"contentMediaType": { "description":"Implements 'mediaType'", "type": "string" },
 							"maximum": { "description":"Implements 'range'", "type": "number"},
 							"exclusiveMaximum": { "description":"Implements 'range'", "type": "number"},
 							"minimum": { "description":"Implements 'range'", "type": "number"},
@@ -449,6 +435,11 @@
 					]
 				}
 			]
+		},
+		"dataType":
+		{
+			"type": "string",
+			"enum": ["map", "vector", "coverage"]
 		}
 	}
 }

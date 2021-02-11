@@ -83,7 +83,7 @@ The encoding of propertiesSchema adopts the JSON Schema form. <<propertiesSchema
 | observedPropertyURI | N/A
 | uom | N/A
 | uomURI | N/A
-
+|===
 
 [[json-variablematrixwitdh]]
 === JSON VariableMatrixWitdh

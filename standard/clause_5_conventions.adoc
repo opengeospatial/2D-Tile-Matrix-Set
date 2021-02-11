@@ -142,19 +142,19 @@ ReferenceSystem
 | A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115 | MD_ReferenceSystem data type
 |===
 
-==== AtomLink
+==== WebLink
 
-Many recent standards emphasize the usefulness of links as a way to relate a data structure instance to other data structures and make navigation through resources possible. Essential links are make explicit in the data structures of this document (recognizable by a URI data type) but other links can be added as needed for convenience when an AtomLink is available. The data structure defined here allows the addition of other links. The definition is based on the web linking defined in the RFC8288 and the XML serialization present in section 4.2.7 of the RFC4287 and in the JSON serialization found in this IETF draft: https://tools.ietf.org/id/draft-pot-json-link-01.html
+Many recent standards emphasize the usefulness of links as a way to relate a data structure instance to other data structures and make navigation through resources possible. Essential links are make explicit in the data structures of this document (recognizable by a URI data type) but other links can be added as needed for convenience when an WebLink is available. The data structure defined here allows the addition of other links. The definition is based on the web linking defined in the RFC8288 and the XML serialization present in section 4.2.7 of the RFC4287 and in the JSON serialization found in this IETF draft: https://tools.ietf.org/id/draft-pot-json-link-01.html
 
 NOTE: In practice, some encodings can opt to specify the essential links as part of this data structure for convenience
 
-[#img_boundingbox-uml-model,reftext='{figure-caption} {counter:figure-num}']
-.Atom link UML model
+[#img_web-link-uml-model,reftext='{figure-caption} {counter:figure-num}']
+.Web link UML model
 image::figures/AtomLink.png[Atom link UML model]
 
 
-[#parts-of-atom-link-data-structure,reftext='{table-caption} {counter:table-num}']
-.Parts of AtomLink data structure
+[#parts-of-web-link-data-structure,reftext='{table-caption} {counter:table-num}']
+.Parts of WebLink data structure
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use

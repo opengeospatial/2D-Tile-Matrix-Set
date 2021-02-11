@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<schema xmlns:common="http://www.opengis.net/common/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/common/1.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+<schema xmlns:common="http://www.opengis.net/common/1.0" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/common/1.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
 	<annotation>
 		<appinfo>Description.xsd 2021-02-10</appinfo>
 		<documentation>This XML Schema Document encodes the parts of the

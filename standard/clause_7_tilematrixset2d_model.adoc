@@ -600,47 +600,56 @@ One for each keyword authority used
 
 | identifier
 
-Identifier | identifier of the property | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
+Identifier | Identifier of the attribute | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
 
 | type
 
-Type | The data type of the property | CharacterString | One (mandatory)
+Type | The data type of the attribute | CharacterString | One (mandatory)
 
 | pattern
 
-Pattern | Regular expression to validate the values of the property | CharacterString | Zero or one (optional)
+Pattern | Regular expression to validate the values of the attribute | CharacterString | Zero or one (optional)^b^
 
 | mediaType
-MediaType | Encodings of a complex property (e.g. an image) | CharacterString restricted by RFC6838 section 4.2 | Zero or one (optional)
+MediaType | Encodings of a complex attribute (e.g. image/png) | CharacterString restricted by RFC6838 section 4.2 | Zero or one (optional)^b^
 
 | acceptedValues
 
-AcceptedValues | Valid values of the property | CharacterString | Zero or more (optional)
+AcceptedValues | Valid values of the attribute | CharacterString | Zero or more (optional)^b^
 
 | range
 
 Range
-| Range of valid values expressed as an array of two items | CharacterString | Zero or two (optional)
+| Range of valid values expressed as an array of two items | CharacterString | Zero or two (optional)^b^
 
-| multiplicity
-Multiplicity | Multiplicity of the property | CharacterString | Zero or one (optional)
+| lowerMultiplicity
+LowerMultiplicity | Lower multiplicity of the attribute | Non negative integer | Zero or one (optional)^c^
+
+| upperMultiplicity
+UpperMultiplicity | Upper Multiplicity of the property | Non negative integer. Use '*' for 'unbounded'  | Zero or one (optional)^d^
 
 | observedProperty
 ObservedProperty
-| measured phenomenon (variable) label, commonly a descriptive name | CharacterString | Zero or one (optional)
+| Measured phenomenon (variable) label, commonly a descriptive name | CharacterString | Zero or one (optional)
 
 | observedPropertyURI
 ObservedPropertyURI | URI pointing to a representation of the definition of the measured phenomenon (variable) | URI | Zero or one (optional)
 
 | uom
 
-UoM | Units of measure characterizing the values of the property | CharacterString | Zero or one (optional)
+UoM | Units of measure characterizing the values of the attribute | CharacterString | Zero or one (optional)
 
 | uomURI
 
-UoMURI | URI pointing to a representation of the definition of the units of measure characterizing the values of the property | CharacterString | Zero or one (optional)
+UoMURI | URI pointing to a representation of the definition of the units of measure characterizing the values of the attribute | CharacterString | Zero or one (optional)
 4+|
 ^a^     The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
+
+^b^     If missing all values compatible with the other restrictions are accepted
+
+^c^     If missing, 0 (optional) is assumed
+
+^d^     If missing, many (unbounded) is assumed
 |===
 
 A Tile Set or a Layer can contain a single date entry with dates for each of the types, as defined in <<parts-of-dates-data-structure>>.

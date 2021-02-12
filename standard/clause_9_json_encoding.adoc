@@ -78,7 +78,8 @@ The encoding of propertiesSchema adopts the JSON Schema form. <<propertiesSchema
 | mediaType | contentMediaType
 | acceptedValues | enum
 | range | a combination of 'maximum', 'exclusiveMaximum', 'minimum' and 'exclusiveMinimum'
-| multiplicity | a combination of 'minItems' and 'maxItems'
+| lowerMultiplicity | minItems
+| upperMultiplicity |  maxItems
 | observedProperty | N/A
 | observedPropertyURI | N/A
 | uom | N/A

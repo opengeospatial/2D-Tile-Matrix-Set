@@ -109,7 +109,7 @@
 						</element>
 						<element ref="atom:link" minOccurs="0" maxOccurs="unbounded">
 							<annotation>
-								<documentation>Links to related resources. Possible link 'role' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)</documentation>
+								<documentation>Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)</documentation>
 							</annotation>
 						</element>
 						<element name="DataType" type="tms:DataTypeType">
@@ -226,7 +226,7 @@
 					</element>
 					<element ref="tms:PropertiesSchema" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Properties represented by the features in this layer</documentation>
+							<documentation>Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage)</documentation>
 						</annotation>
 					</element>
 					<element ref="atom:link" minOccurs="0" maxOccurs="unbounded">
@@ -255,33 +255,111 @@
 	</complexType>
 
 	<!-- =========================================================== -->
-	<element name="PropertiesSchema" type="tms:PropertiesSchemaType"/>	
-	<complexType name="PropertiesSchemaType">
+	<element name="PropertiesSchema" type="tms:FeatureAttributeType"/>	
+	<complexType name="FeatureAttributeType">
 		<annotation>
-			<documentation>Type of data represented in the tiles</documentation>
+			<documentation>Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage)</documentation>
 		</annotation>
-		<sequence>
-			<element name="ToDo" type="dateTime">
-				<annotation>
-					<documentation>Timestamp indicating when the Tile Set was first produced</documentation>
-				</annotation>
-			</element>
-		</sequence>
+		<complexContent>
+			<extension base="common:DescriptionType">
+				<sequence>
+					<element name="Type" type="string">
+						<annotation>
+							<documentation>The data type of the attribute</documentation>
+						</annotation>
+					</element>
+					<element name="Pattern" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Regular expression to validate the values of the attribute</documentation>
+						</annotation>
+					</element>
+					<element name="MediaType" type="common:MediaTypeType" minOccurs="0">
+						<annotation>
+							<documentation>Encodings of a complex attribute (e.g. an image/png)</documentation>
+						</annotation>
+					</element>
+					<element name="AcceptedValues" type="string" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Valid values of the attribute</documentation>
+						</annotation>
+					</element>
+					<element name="Range" type="string" minOccurs="0" maxOccurs="2">
+						<annotation>
+							<documentation>Range of valid values expressed as an array of two items</documentation>
+						</annotation>
+					</element>
+					<element name="lowerMultiplicity" type="nonNegativeInteger" minOccurs="0">
+						<annotation>
+							<documentation>Lower multiplicity of the attribute. Default is 0 (optional)</documentation>
+						</annotation>
+					</element>
+					<element name="upperMultiplicity" type="nonNegativeInteger" minOccurs="0">
+						<annotation>
+							<documentation>Upper multiplicity of the attribute. Default is many (unbounded)</documentation>
+						</annotation>
+					</element>
+					<element name="ObservedProperty" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Measured phenomenon (variable) label, commonly a descriptive name</documentation>
+						</annotation>
+					</element>
+					<element name="ObservedPropertyURI" type="anyURI" minOccurs="0">
+						<annotation>
+							<documentation>URI pointing to a representation of the definition of the measured phenomenon (variable)</documentation>
+						</annotation>
+					</element>
+					<element name="UoM" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Units of measure characterizing the values of the attribute</documentation>
+						</annotation>
+					</element> 
+					<element name="UoMURI" type="anyURI" minOccurs="0">
+						<annotation>
+							<documentation>URI pointing to a representation of the definition of the units of measure characterizing the values of the attribute</documentation>
+						</annotation>
+					</element>
+					<element ref="common:Identifier">
+						<annotation>
+							<documentation>Unique identifier of the attribute</documentation>
+						</annotation>
+					</element>
+					<any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>This is an extension point for other properties in the TileMatrixSet.</documentation>
+						</annotation>
+					</any>
+				</sequence>
+			</extension>
+		</complexContent>
 	</complexType>
 	 	
     <!-- =========================================================== -->
 	<element name="Style" type="tms:StyleType"/>	
 	<complexType name="StyleType">
 		<annotation>
-			<documentation>Type of data represented in the tiles</documentation>
+			<documentation>Style used to generate the tiles</documentation>
 		</annotation>
-		<sequence>
-			<element name="ToDo" type="dateTime">
-				<annotation>
-					<documentation>Timestamp indicating when the Tile Set was first produced</documentation>
-				</annotation>
-			</element>
-		</sequence>
+		<complexContent>
+			<extension base="common:DescriptionType">
+				<sequence>
+					<element ref="atom:link" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>Links to related resources. Possible link 'rel' values are: 'style' for a URL pointing to the style description, 'styleSpec' for a URL pointing to the specification or standard used to define the style</documentation>
+						</annotation>
+					</element>
+					<element ref="common:Identifier">
+						<annotation>
+							<documentation>Unique identifier of the stype</documentation>
+						</annotation>
+					</element>
+					<any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded">
+						<annotation>
+							<documentation>This is an extension point for other properties in the TileMatrixSet.</documentation>
+						</annotation>
+					</any>
+				</sequence>
+			</extension>
+		</complexContent>
 	</complexType>	
 
     <!-- =========================================================== -->
@@ -303,27 +381,27 @@
 			<documentation>Type of data represented in the tiles</documentation>
 		</annotation>
 		<sequence>
-			<element name="CreatedOn" type="dateTime">
+			<element name="CreatedOn" type="dateTime" minOccurs="0">
 				<annotation>
 					<documentation>Timestamp indicating when the Tile Set was first produced</documentation>
 				</annotation>
 			</element>
-			<element name="PublishedOn" type="dateTime">
+			<element name="PublishedOn" type="dateTime" minOccurs="0">
 				<annotation>
 					<documentation>Timestamp indicating when the Tile Set was first made available to the users</documentation>
 				</annotation>
 			</element>
-			<element name="RevisedOn" type="dateTime">
+			<element name="RevisedOn" type="dateTime" minOccurs="0">
 				<annotation>
 					<documentation>Timestamp of the last Tile Set change/revision</documentation>
 				</annotation>
 			</element>
-			<element name="ReceivedOn" type="dateTime">
+			<element name="ReceivedOn" type="dateTime" minOccurs="0">
 				<annotation>
 					<documentation>Timestamp indicating when the Tile Set was received from an external provider</documentation>
 				</annotation>
 			</element>
-			<element name="ValidUntil" type="dateTime">
+			<element name="ValidUntil" type="dateTime" minOccurs="0">
 				<annotation>
 					<documentation>Timestamp marking the future validity of the Tile Set (the Tile Set may no longer be applicable at this date, or that a new revision of the Tile Set is going to be issued)		
 					</documentation>
@@ -336,12 +414,22 @@
 	<element name="CenterPoint" type="tms:TilePointType"/>
 	<complexType name="TilePointType">
 		<annotation>
-			<documentation>Type of data represented in the tiles</documentation>
+			<documentation>Point in a tile matrix</documentation>
 		</annotation>
 		<sequence>
-			<element name="ToDo" type="dateTime">
+			<element name="Coordinates" type="common:PositionType">
 				<annotation>
-					<documentation>Timestamp indicating when the Tile Set was first produced</documentation>
+					<documentation>Location of the center point of the tile set.</documentation>
+				</annotation>
+			</element>
+			<element name="ScaleDenominator" type="double" minOccurs="0">
+				<annotation>
+					<documentation>Scale denominator of the tile matrix selected</documentation>
+				</annotation>
+			</element>
+			<element name="TileMatrix" type="common:CodeType" minOccurs="0">
+				<annotation>
+					<documentation>TileMatrix identifier associated with the scaleDenominator</documentation>
 				</annotation>
 			</element>
 		</sequence>

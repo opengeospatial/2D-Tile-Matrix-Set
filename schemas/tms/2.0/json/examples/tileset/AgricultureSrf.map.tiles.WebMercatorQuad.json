@@ -2,7 +2,7 @@
    "title" : "Daraa Agricultural Surfaces map tiles",
    "abstract" : "Rendered tiles of agricultural areas in Daraa, Syria from NSG OpenStreetMap Topographic Data Store",
    "keywords" : [ "agriculture", "Daraa", "Syria", "OpenStreetMap", "NSG", "TDS" ],
-   "dataType" : "image",
+   "dataType" : "map",
    "accessConstraints" : "unclassified",
    "links" : [
       {
@@ -43,26 +43,27 @@
          "href" : "/Daraa/ogcapi"
       }
    ],
+   "style" :
+   {
+      "identifier" : "topographic",
+      "links" : [
+         {
+            "rel"  : "http://www.opengis.net/def/rel/ogc/1.0/style",
+            "href" : "/Daraa/ogcapi/styles/topographic"
+         }
+      ]
+   },
    "layers" : [
       {
          "identifier" : "AgricultureSrf",
-         "dataType" : "image",
+         "dataType" : "vector",
+         "geometryType" : "polygons",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
          "boundingBox" : { "lowerCorner" : [ 35.898213, 32.4633913 ], "upperCorner" : [ 36.5614696, 32.8370158 ] },
-         "style" :
-         {
-            "identifier" : "topographic",
-            "links" : [
-               {
-                  "rel"  : "style",
-                  "href" : "/Daraa/ogcapi/styles/topographic"
-               }
-            ]
-         },
          "links" : [
             {
-               "rel"  : "geodata",
+               "rel"  : "http://www.opengis.net/def/rel/ogc/1.0/geodata",
                "href" : "/Daraa/ogcapi/collections/AgricultureSrf"
             }
          ]
@@ -90,6 +91,7 @@
       { "tileMatrix" : "16", "minTileRow" : 26433, "maxTileRow" : 26514, "minTileCol" : 39303, "maxTileCol" : 39423 },
       { "tileMatrix" : "17", "minTileRow" : 52866, "maxTileRow" : 53028, "minTileCol" : 78606, "maxTileCol" : 78847 }
    ],
+   "boundingBox" : { "lowerCorner" : [ 35.898213, 32.4633913 ], "upperCorner" : [ 36.5614696, 32.8370158 ] },
    "centerPoint" :
    {
       "coordinates" : [ 36.2298413, 32.65020355 ],

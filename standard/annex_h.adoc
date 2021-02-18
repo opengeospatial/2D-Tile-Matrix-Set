@@ -126,7 +126,7 @@ This example takes the first five tile matrices of the definition of the GNOSIS 
    },
    "supportedCRS": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
    "wellKnownScaleSet": "http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad"
-   "tileMatrix":
+   "tileMatrices":
    [
       {
          "type": "TileMatrixType",
@@ -155,7 +155,7 @@ This example takes the first five tile matrices of the definition of the GNOSIS 
          "tileHeight": 256,
          "matrixWidth": 8,
          "matrixHeight": 4,
-         "variableMatrixWidth":
+         "variableMatrixWidths":
          [
            {
               "type": "VariableMatrixWidthType",
@@ -184,7 +184,7 @@ This example takes the first five tile matrices of the definition of the GNOSIS 
          "tileHeight": 256,
          "matrixWidth": 16,
          "matrixHeight": 8,
-         "variableMatrixWidth":
+         "variableMatrixWidths":
          [
            {
               "type": "VariableMatrixWidthType",
@@ -225,7 +225,7 @@ This example takes the first five tile matrices of the definition of the GNOSIS 
          "tileHeight": 256,
          "matrixWidth": 32,
          "matrixHeight": 16,
-         "variableMatrixWidth":
+         "variableMatrixWidths":
          [
            {
               "type": "VariableMatrixWidthType",
@@ -278,7 +278,7 @@ This example takes the first five tile matrices of the definition of the GNOSIS 
          "tileHeight": 256,
          "matrixWidth": 64,
          "matrixHeight": 32,
-         "variableMatrixWidth":
+         "variableMatrixWidths":
          [
            {
               "type": "VariableMatrixWidthType",

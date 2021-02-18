@@ -1,10 +1,8 @@
 {
-	"type": "TileMatrixSetType",
 	"title": "UTM31WGS84Quad",
 	"identifier": "Universal Transverse Mercator Zone 31 WGS84 Quad",
 	"boundingBox":
 	{
-		"type": "BoundingBoxType",
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/32631",
 		"lowerCorner":
 		[
@@ -18,10 +16,9 @@
 		]
 	},
 	"supportedCRS": "http://www.opengis.net/def/crs/EPSG/0/32631",
-	"tileMatrix":
+	"tileMatrices":
 	[
 		{
-			"type": "TileMatrixType",
 			"identifier": "1",
 			"scaleDenominator": 279072704.500914,
 			"topLeftCorner":
@@ -35,7 +32,6 @@
 			"matrixHeight": 2
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "2",
 			"scaleDenominator": 139536352.250457,
 			"topLeftCorner":
@@ -49,7 +45,6 @@
 			"matrixHeight": 4
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "3",
 			"scaleDenominator": 69768176.1252285,
 			"topLeftCorner":
@@ -63,7 +58,6 @@
 			"matrixHeight": 8
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "4",
 			"scaleDenominator": 34884088.0626143,
 			"topLeftCorner":
@@ -77,7 +71,6 @@
 			"matrixHeight": 16
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "5",
 			"scaleDenominator": 17442044.0313071,
 			"topLeftCorner":
@@ -91,7 +84,6 @@
 			"matrixHeight": 32
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "6",
 			"scaleDenominator": 8721022.01565356,
 			"topLeftCorner":
@@ -105,7 +97,6 @@
 			"matrixHeight": 64
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "7",
 			"scaleDenominator": 4360511.00782678,
 			"topLeftCorner":
@@ -119,7 +110,6 @@
 			"matrixHeight": 128
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "8",
 			"scaleDenominator": 2180255.50391339,
 			"topLeftCorner":
@@ -133,7 +123,6 @@
 			"matrixHeight": 256
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "9",
 			"scaleDenominator": 1090127.7519567,
 			"topLeftCorner":
@@ -147,7 +136,6 @@
 			"matrixHeight": 512
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "10",
 			"scaleDenominator": 545063.875978348,
 			"topLeftCorner":
@@ -161,7 +149,6 @@
 			"matrixHeight": 1024
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "11",
 			"scaleDenominator": 272531.937989174,
 			"topLeftCorner":
@@ -175,7 +162,6 @@
 			"matrixHeight": 2048
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "12",
 			"scaleDenominator": 136265.968994587,
 			"topLeftCorner":
@@ -189,7 +175,6 @@
 			"matrixHeight": 4096
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "13",
 			"scaleDenominator": 68132.9844972935,
 			"topLeftCorner":
@@ -203,7 +188,6 @@
 			"matrixHeight": 8192
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "14",
 			"scaleDenominator": 34066.4922486467,
 			"topLeftCorner":
@@ -217,7 +201,6 @@
 			"matrixHeight": 16384
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "15",
 			"scaleDenominator": 17033.2461243234,
 			"topLeftCorner":
@@ -231,7 +214,6 @@
 			"matrixHeight": 32768
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "16",
 			"scaleDenominator": 8516.62306216168,
 			"topLeftCorner":
@@ -245,7 +227,6 @@
 			"matrixHeight": 65536
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "17",
 			"scaleDenominator": 4258.31153108084,
 			"topLeftCorner":
@@ -259,7 +240,6 @@
 			"matrixHeight": 131072
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "18",
 			"scaleDenominator": 2129.15576554042,
 			"topLeftCorner":
@@ -273,7 +253,6 @@
 			"matrixHeight": 262144
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "19",
 			"scaleDenominator": 1064.57788277021,
 			"topLeftCorner":
@@ -287,7 +266,6 @@
 			"matrixHeight": 524288
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "20",
 			"scaleDenominator": 532.288941385105,
 			"topLeftCorner":
@@ -301,7 +279,6 @@
 			"matrixHeight": 1048576
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "21",
 			"scaleDenominator": 266.144470692553,
 			"topLeftCorner":
@@ -315,7 +292,6 @@
 			"matrixHeight": 2097152
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "22",
 			"scaleDenominator": 133.072235346276,
 			"topLeftCorner":
@@ -329,7 +305,6 @@
 			"matrixHeight": 4194304
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "23",
 			"scaleDenominator": 66.5361176731382,
 			"topLeftCorner":
@@ -343,7 +318,6 @@
 			"matrixHeight": 8388608
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "24",
 			"scaleDenominator": 33.2680588365691,
 			"topLeftCorner":

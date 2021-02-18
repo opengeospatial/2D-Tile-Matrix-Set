@@ -13,8 +13,8 @@ TileMatrixSetLink2D data structure can be used for a resource to specify the til
 
 [source,xml]
 ....
-<?xml version=“1.0” encoding=“UTF-8”?>
-<LayerExample xmlns=“http://www.opengis.net/tms/1.0/link_xmp” xmlns:tms=“http://www.opengis.net/tms/1.0” xmlns:ows=“http://www.opengis.net/ows/2.0” xmlns:xsi=“http://www.w3.org/2001/XMLSchema-instance” xsi:schemaLocation=“http://www.opengis.net/tms/1.0/link_xmp LayerWithTMSLink.xsd”>
+<?xml version="1.0" encoding="UTF-8"?>
+<LayerExample xmlns="http://www.opengis.net/tms/1.0/link_xmp" xmlns:tms="http://www.opengis.net/tms/1.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/1.0/link_xmp LayerWithTMSLink.xsd">
 <ows:Title>Catalonia</ows:Title>
 <ows:Abstract>Catalonia Extent</ows:Abstract>
 <ows:WGS84BoundingBox>
@@ -54,7 +54,7 @@ The TileMatrixSetLink2D data structure can be included in the definition of a re
 
 [source,xml]
 ....
-<schema xmlns=“http://www.w3.org/2001/XMLSchema” xmlns:xmp=“http://www.opengis.net/tms/1.0/link_xmp” xmlns:tms=“http://www.opengis.net/tms/1.0” xmlns:ows=“http://www.opengis.net/ows/2.0” xmlns:xlink=“http://www.w3.org/1999/xlink” targetNamespace=“http://www.opengis.net/tms/1.0/link_xmp” elementFormDefault=“qualified” xml:lang=“en”>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xmp="http://www.opengis.net/tms/1.0/link_xmp" xmlns:tms="http://www.opengis.net/tms/1.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.opengis.net/tms/1.0/link_xmp" elementFormDefault="qualified" xml:lang="en">
    <annotation>
       <appinfo>TMS Link example 2019-02-02</appinfo>
       <documentation>
@@ -66,21 +66,21 @@ The TileMatrixSetLink2D data structure can be included in the definition of a re
    <!– *********************************************************************
                 Includes and imports.                           
           ********************************************************************* –>
-   <import namespace=“http://www.opengis.net/tms/1.0” schemaLocation=“../tms.xsd”/>
-   <import namespace=“http://www.opengis.net/ows/2.0” schemaLocation=“../../../../ows/2.0/owsAll.xsd”/>
-   <import namespace=“http://www.w3.org/1999/xlink” schemaLocation=“../../../../xlink/1.0.0/xlinks.xsd”/>
+   <import namespace="http://www.opengis.net/tms/1.0" schemaLocation="../tms.xsd"/>
+   <import namespace="http://www.opengis.net/ows/2.0" schemaLocation="../../../../ows/2.0/owsAll.xsd"/>
+   <import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../../../xlink/1.0.0/xlinks.xsd"/>
    <!– ********************************************************************* –>
    <!– **  The Layer Example element.                                      ** –>
    <!– ********************************************************************* –>
-   <element name=“LayerExample” type=“xmp:LayerTypeExample” substitutionGroup=“ows:DatasetDescriptionSummary”/>
-   <complexType name=“LayerTypeExample”>
+   <element name="LayerExample" type="xmp:LayerTypeExample" substitutionGroup="ows:DatasetDescriptionSummary"/>
+   <complexType name="LayerTypeExample">
       <annotation>
          <documentation>Example of a Layer tht links to TMS Link</documentation>
       </annotation>
       <complexContent>
-         <extension base=“ows:DatasetDescriptionSummaryBaseType”>
+         <extension base="ows:DatasetDescriptionSummaryBaseType">
            <sequence>
-              <element ref=“tms:TileMatrixSetLink” minOccurs=“0” maxOccurs=“unbounded”>
+              <element ref="tms:TileMatrixSetLink" minOccurs="0" maxOccurs="unbounded">
                  <annotation>
                     <documentation>Link to a tile mateix set</documentation>
                  </annotation>
@@ -103,25 +103,22 @@ TileMatrixSetLink2D data structure can be used for a resource to specify the til
 [source,JSON]
 ....
 {
-   “title”: “Catalonia”,
-   “identifier”: “Cat”,
-   “tileMatrixSetLink”: {
-      “type”: “TileMatrixSetLink”,
-      “tileMatrixSet”: “WorldCRS84Quad”,
-      “tileMatrixSetLimits”: [{
-         “type”: “TileMatrixLimits”,
-         “tileMatrix”: “3”,
-         “minTileRow”: 4,
-         “maxTileRow”: 5,
-         “minTileCol”: 2,
-         “maxTileCol”: 2
+   "title": "Catalonia",
+   "identifier": "Cat",
+   "tileMatrixSetLink": {
+      "tileMatrixSet": "WorldCRS84Quad",
+      "tileMatrixSetLimits": [{
+         "tileMatrix": "3",
+         "minTileRow": 4,
+         "maxTileRow": 5,
+         "minTileCol": 2,
+         "maxTileCol": 2
       },{
-         “type”: “TileMatrixLimits”,
-         “tileMatrix”: “4”,
-         “minTileRow”: 8,
-         “maxTileRow”: 9,
-         “minTileCol”: 4,
-         “maxTileCol”: 4
+         "tileMatrix": "4",
+         "minTileRow": 8,
+         "maxTileRow": 9,
+         "minTileCol": 4,
+         "maxTileCol": 4
       }]
    }
 }
@@ -138,85 +135,85 @@ The TileMatrixSetLink2D data structure can be included in the definition of a re
 [source,JSON]
 ....
 {
-   “$schema”: “http://json-schema.org/draft-04/schema#”,
-   “title”: “”,
-   “description”: “”,
-   “type”: “object”,
-   “properties”: {
-      “title”: {
-         “description”: “Title of this resource, normally used for display to a human”,
-         “type”: “string”
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "",
+   "description": "",
+   "type": "object",
+   "properties": {
+      "title": {
+         "description": "Title of this resource, normally used for display to a human",
+         "type": "string"
       },
-      “abstract”: {
-         “description”: “Brief narrative description of this resource, normally available for display to a human”,
-         “type”: “string”
+      "abstract": {
+         "description": "Brief narrative description of this resource, normally available for display to a human",
+         "type": "string"
       },
-      “identifier”: {
-         “description”: “Resource identifier”,
-         “type”: “string”
+      "identifier": {
+         "description": "Resource identifier",
+         "type": "string"
       },
-      “tileMatrixSetLink”: {
-         “description”: “Tile Matrix Set Link data structure”,
-         “$ref”: “#/definitions/tileMatrixSetLink”
+      "tileMatrixSetLink": {
+         "description": "Tile Matrix Set Link data structure",
+         "$ref": "#/definitions/tileMatrixSetLink"
       }
    },
-   “definitions”:{
-      “tileMatrixSetLink”: {
-         “type”: “object”,
-         “required”: [“type”, “tileMatrixSet”],
-         “properties”: {
-           “type”: {
-              “description”: “Type of the Tile Matrix Set Link”,
-              “enum”: [“TileMatrixSetLink”]
+   "definitions":{
+      "tileMatrixSetLink": {
+         "type": "object",
+         "required": ["type", "tileMatrixSet"],
+         "properties": {
+           "type": {
+              "description": "Type of the Tile Matrix Set Link",
+              "enum": ["TileMatrixSetLink"]
            },
-           “tileMatrixSet”: {
-              “description”: “Reference to a tileMatrixSet”,
-              “type”: “string”
+           "tileMatrixSet": {
+              "description": "Reference to a tileMatrixSet",
+              "type": "string"
            },
-           “tileMatrixSetLimits”: {
-              “description”: “Index limits for this tileMatrixSet”,
-              “type”: “array”,
-              “items”: {
-                 “$ref”: “#/definitions/tileMatrixSetLimits”
+           "tileMatrixSetLimits": {
+              "description": "Index limits for this tileMatrixSet",
+              "type": "array",
+              "items": {
+                 "$ref": "#/definitions/tileMatrixSetLimits"
               }
            }
          }
       },
-      “tileMatrixSetLimits”: {
-         “type”: “object”,
-         “required”: [“type”, “tileMatrix”, “minTileRow”, “maxTileRow”, “minTileCol”, “maxTileCol”],
-         “properties”: {
-           “type”: {
-              “description”: “Type of the Tile Matrix Set Limits”,
-              “enum”: [“TileMatrixLimits”]
+      "tileMatrixSetLimits": {
+         "type": "object",
+         "required": ["type", "tileMatrix", "minTileRow", "maxTileRow", "minTileCol", "maxTileCol"],
+         "properties": {
+           "type": {
+              "description": "Type of the Tile Matrix Set Limits",
+              "enum": ["TileMatrixLimits"]
            },
-           “tileMatrix”: {
-              “description”: “Reference to a tileMatrix identifier”,
-              “type”: “string”
+           "tileMatrix": {
+              "description": "Reference to a tileMatrix identifier",
+              "type": "string"
            },
-           “minTileRow”: {
-              “description”: “Minimum tile row index valid for this layer”,
-              “type”: “number”,
-              “minimum”: 0,
-              “multipleOf” : 1
+           "minTileRow": {
+              "description": "Minimum tile row index valid for this layer",
+              "type": "number",
+              "minimum": 0,
+              "multipleOf" : 1
            },
-           “maxTileRow”: {
-              “description”: “Maximim tile row index valid for this layer”,
-              “type”: “number”,
-              “minimum”: 0,
-              “multipleOf” : 1
+           "maxTileRow": {
+              "description": "Maximim tile row index valid for this layer",
+              "type": "number",
+              "minimum": 0,
+              "multipleOf" : 1
            },
-           “minTileCol”: {
-              “description”: “Minimum tile column index valid for this layer”,
-              “type”: “number”,
-              “minimum”: 0,
-              “multipleOf” : 1
+           "minTileCol": {
+              "description": "Minimum tile column index valid for this layer",
+              "type": "number",
+              "minimum": 0,
+              "multipleOf" : 1
            },
-           “maxTileCol”: {
-              “description”: “Maximim tile column index valid for this layer”,
-              “type”: “number”,
-              “minimum”: 0,
-              “multipleOf” : 1
+           "maxTileCol": {
+              "description": "Maximim tile column index valid for this layer",
+              "type": "number",
+              "minimum": 0,
+              "multipleOf" : 1
            }
          }
       }

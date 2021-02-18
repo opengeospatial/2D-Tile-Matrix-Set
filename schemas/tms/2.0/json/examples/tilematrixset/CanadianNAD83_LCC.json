@@ -1,10 +1,8 @@
 {
-	"type": "TileMatrixSetType",
 	"title": "Lambert conformal conic NAD83 for Canada",
 	"identifier": "CanadianNAD83_LCC ",
 	"boundingBox":
 	{
-		"type": "BoundingBoxType",
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/3978",
 		"lowerCorner":
 		[
@@ -18,10 +16,9 @@
 		]
 	},
 	"supportedCRS": "http://www.opengis.net/def/crs/EPSG/0/3978",
-	"tileMatrix":
+	"tileMatrices":
 	[
 		{
-			"type": "TileMatrixType",
 			"identifier": "0",
 			"scaleDenominator": 145000000,
 			"topLeftCorner":
@@ -35,7 +32,6 @@
 			"matrixHeight": 5
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "1",
 			"scaleDenominator": 85000000,
 			"topLeftCorner":
@@ -49,7 +45,6 @@
 			"matrixHeight": 8
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "2",
 			"scaleDenominator": 50000000,
 			"topLeftCorner":
@@ -63,7 +58,6 @@
 			"matrixHeight": 14
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "3",
 			"scaleDenominator": 30000000,
 			"topLeftCorner":
@@ -77,7 +71,6 @@
 			"matrixHeight": 22
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "4",
 			"scaleDenominator": 17500000,
 			"topLeftCorner":
@@ -91,7 +84,6 @@
 			"matrixHeight": 38
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "5",
 			"scaleDenominator": 10000000,
 			"topLeftCorner":
@@ -105,7 +97,6 @@
 			"matrixHeight": 66
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "6",
 			"scaleDenominator": 6000000,
 			"topLeftCorner":
@@ -119,7 +110,6 @@
 			"matrixHeight": 110
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "7",
 			"scaleDenominator": 3500000,
 			"topLeftCorner":
@@ -133,7 +123,6 @@
 			"matrixHeight": 188
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "8",
 			"scaleDenominator": 2000000,
 			"topLeftCorner":
@@ -147,7 +136,6 @@
 			"matrixHeight": 329
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "9",
 			"scaleDenominator": 1200000,
 			"topLeftCorner":
@@ -161,7 +149,6 @@
 			"matrixHeight": 548
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "10",
 			"scaleDenominator": 700000,
 			"topLeftCorner":
@@ -175,7 +162,6 @@
 			"matrixHeight": 938
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "11",
 			"scaleDenominator": 420000,
 			"topLeftCorner":
@@ -189,7 +175,6 @@
 			"matrixHeight": 1563
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "12",
 			"scaleDenominator": 250000,
 			"topLeftCorner":
@@ -203,7 +188,6 @@
 			"matrixHeight": 2626
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "13",
 			"scaleDenominator": 145000,
 			"topLeftCorner":
@@ -217,7 +201,6 @@
 			"matrixHeight": 4528
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "14",
 			"scaleDenominator": 85000,
 			"topLeftCorner":
@@ -231,7 +214,6 @@
 			"matrixHeight": 7723
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "15",
 			"scaleDenominator": 50000,
 			"topLeftCorner":
@@ -245,7 +227,6 @@
 			"matrixHeight": 13130
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "16",
 			"scaleDenominator": 30000,
 			"topLeftCorner":
@@ -259,7 +240,6 @@
 			"matrixHeight": 21882
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "17",
 			"scaleDenominator": 17500,
 			"topLeftCorner":
@@ -273,7 +253,6 @@
 			"matrixHeight": 37512
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "18",
 			"scaleDenominator": 10000,
 			"topLeftCorner":
@@ -287,7 +266,6 @@
 			"matrixHeight": 65646
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "19",
 			"scaleDenominator": 6000,
 			"topLeftCorner":
@@ -301,7 +279,6 @@
 			"matrixHeight": 109409
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "20",
 			"scaleDenominator": 3500,
 			"topLeftCorner":
@@ -315,7 +292,6 @@
 			"matrixHeight": 187558
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "21",
 			"scaleDenominator": 2000,
 			"topLeftCorner":
@@ -329,7 +305,6 @@
 			"matrixHeight": 328227
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "22",
 			"scaleDenominator": 1200,
 			"topLeftCorner":
@@ -343,7 +318,6 @@
 			"matrixHeight": 547044
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "23",
 			"scaleDenominator": 700,
 			"topLeftCorner":
@@ -357,7 +331,6 @@
 			"matrixHeight": 937790
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "24",
 			"scaleDenominator": 420,
 			"topLeftCorner":
@@ -371,7 +344,6 @@
 			"matrixHeight": 1562983
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "25",
 			"scaleDenominator": 250,
 			"topLeftCorner":

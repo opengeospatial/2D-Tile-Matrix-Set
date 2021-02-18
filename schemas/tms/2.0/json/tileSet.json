@@ -2,7 +2,7 @@
 	"$schema": "http://json-schema.org/draft-07/schema#",
 	"title": "Tile Set Metadata",
 	"description": "A resource describing a tileset based on the OGC TileSet Metadata Standard",
-	"allOf": 
+	"allOf":
 	[
 		{
 			"type": "object",
@@ -22,7 +22,7 @@
 					"items":
 					{
 						"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json"
-					} 
+					}
 				},
 				"version": {
 					"description": "Version of the Tile Set. Changes if the data behind the tiles has been changed",
@@ -47,7 +47,7 @@
 					"$ref": "#/definitions/dataType"
 				},
 				"tileMatrixLimits": {
-					"description": "Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet. If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all"
+					"description": "Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet. If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all",
 					"type": "array",
 					"items":
 					{
@@ -60,7 +60,7 @@
 				},
 				"date": {
 					"$ref": "#/definitions/dates"
-				},		
+				},
 				"layers": {
 					"minItems": 1,
 					"type": "array",
@@ -89,7 +89,7 @@
 			}
 		},
 		{
-			"description": "At least one of the 'TileMatrixSet',  'TileMatrixSetURI' or 'TileMatrixSetDefinition' SHALL be provided", 
+			"description": "At least one of the 'TileMatrixSet',  'TileMatrixSetURI' or 'TileMatrixSetDefinition' SHALL be provided",
 			"anyOf": [
 				{
 					"type": "object",
@@ -188,11 +188,11 @@
 				"geometryType": {
 					"description": "The geometry type of the features shown in this layer",
 					"type": "string",
-					"enum": ["points", "lines", "polygons"]  
+					"enum": ["points", "lines", "polygons"]
 				},
 				"featureType": {
 					"description": "Feature type identifier. Only applicable to layers of datatype 'geometries'",
-					"type": "string",
+					"type": "string"
 				},
 				"pointOfContact": {
 					"description": "Useful information to contact the authors or custodians for the layer (e.g. e-mail address, a physical address,  phone numbers, etc)",
@@ -260,18 +260,18 @@
 		"propertiesSchema": {
 			"description": "Attributes of the features or rangetypes of a coverage. Defined by a subset of the JSON Schema for the properties of a feature",
 			"type": "object",
-			"properties": 
+			"properties":
 			{
 				"type": { "type": "string", "enum": ["object"]},
-				"required": { "description":"Implements 'multiplicity' by citing property 'name' defined as 'additionalProperties'", 
+				"required": { "description":"Implements 'multiplicity' by citing property 'name' defined as 'additionalProperties'",
 						"type": "array", "minItems": 1 },
 				"properties": {
 					"type": "object",
 					"default": {},
-					"additionalProperties": { 
+					"additionalProperties": {
 						"description": "No property names are defined but any property name they should be described by JSON Schema. So 'additionalProperties' implements 'name' ",
 						"type": "object",
-						"properties": 
+						"properties":
 						{
 							"title": {"type": "string"},
 							"description": {"description":"Implements 'abstract'", "type": "string"},
@@ -295,11 +295,11 @@
 								"type": "string",
 								"format": "regex"
 							},
-							"maxItems": { "description":"Implements 'upperMultiplicity'", 
+							"maxItems": { "description":"Implements 'upperMultiplicity'",
 								"type": "integer",
 								"minimum": 0
 							},
-							"minItems": { "description":"Implements 'lowerMultiplicity'", 
+							"minItems": { "description":"Implements 'lowerMultiplicity'",
 								"type": "integer",
 								"minimum": 0,
 								"default": 0
@@ -328,24 +328,24 @@
 			"type": "object",
 			"properties":
 			{
-				"coordinates": 
+				"coordinates":
 				{
 					"type": "array",
 					"minItems": 2,
 					"maxItems": 2,
 					"items": {
-						"type": "number" 
+						"type": "number"
 					}
 				},
-				"tileMatrix": 
+				"tileMatrix":
 				{
 					"description": "TileMatrix identifier associated with the scaleDenominator",
-					"type": "string" 
-				}
-				"scaleDenominator": 
+					"type": "string"
+				},
+				"scaleDenominator":
 				{
 					"description": "Scale denominator of the tile matrix selected",
-					"type": "number" 
+					"type": "number"
 				}
 			}
 		},
@@ -380,7 +380,7 @@
 					"items":
 					{
 						"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json"
-					} 
+					}
 				},
 				"links":
 				{

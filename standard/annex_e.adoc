@@ -274,12 +274,10 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
 [source,JSON]
 ....
 {
-   "type": "TileMatrixSetType",
    "title": "Google Maps Compatible for the World",
    "identifier": "WebMercatorQuad",
    "boundingBox":
    {
-      "type": "BoundingBoxType",
       "crs": "http://www.opengis.net/def/crs/EPSG/0/3857",
       "lowerCorner": [-20037508.3427892, -20037508.3427892],
       "upperCorner": [20037508.3427892, 20037508.3427892]
@@ -289,7 +287,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
    "tileMatrices":
    [
       {
-         "type": "TileMatrixType",
          "identifier": "0",
          "scaleDenominator": 559082264.028717,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -299,7 +296,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 1
       },
       {
-         "type": "TileMatrixType",
          "identifier": "1",
          "scaleDenominator": 279541132.014358,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -309,7 +305,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 2
       },
       {
-         "type": "TileMatrixType",
          "identifier": "2",
          "scaleDenominator": 139770566.007179,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -319,7 +314,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 4
       },
       {
-         "type": "TileMatrixType",
          "identifier": "3",
          "scaleDenominator": 69885283.0035897,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -329,7 +323,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 8
       },
       {
-         "type": "TileMatrixType",
          "identifier": "4",
          "scaleDenominator": 34942641.5017948,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -339,7 +332,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 16
       },
       {
-         "type": "TileMatrixType",
          "identifier": "5",
          "scaleDenominator": 17471320.7508974,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -349,7 +341,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 32
       },
       {
-         "type": "TileMatrixType",
          "identifier": "6",
          "scaleDenominator": 8735660.37544871,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -359,7 +350,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 64
       },
       {
-         "type": "TileMatrixType",
          "identifier": "7",
          "scaleDenominator": 4367830.18772435,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -369,7 +359,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 128
       },
       {
-         "type": "TileMatrixType",
          "identifier": "8",
          "scaleDenominator": 2183915.09386217,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -379,7 +368,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 256
       },
       {
-         "type": "TileMatrixType",
          "identifier": "9",
          "scaleDenominator": 1091957.54693108,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -389,7 +377,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 512
       },
       {
-         "type": "TileMatrixType",
          "identifier": "10",
          "scaleDenominator": 545978.773465544,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -399,7 +386,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 1024
       },
       {
-         "type": "TileMatrixType",
          "identifier": "11",
          "scaleDenominator": 272989.386732772,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -409,7 +395,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 2048
       },
       {
-         "type": "TileMatrixType",
          "identifier": "12",
          "scaleDenominator": 136494.693366386,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -419,7 +404,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 4096
       },
       {
-         "type": "TileMatrixType",
          "identifier": "13",
          "scaleDenominator": 68247.346683193,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -429,7 +413,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 8192
       },
       {
-         "type": "TileMatrixType",
          "identifier": "14",
          "scaleDenominator": 34123.6733415964,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -439,7 +422,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 16384
       },
       {
-         "type": "TileMatrixType",
          "identifier": "15",
          "scaleDenominator": 17061.8366707982,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -449,7 +431,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 32768
       },
       {
-         "type": "TileMatrixType",
          "identifier": "16",
          "scaleDenominator": 8530.91833539913,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -459,7 +440,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 65536
       },
       {
-         "type": "TileMatrixType",
          "identifier": "17",
          "scaleDenominator": 4265.45916769956,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -469,7 +449,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 131072
       },
       {
-         "type": "TileMatrixType",
          "identifier": "18",
          "scaleDenominator": 2132.72958384978,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -479,7 +458,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 262144
       },
       {
-         "type": "TileMatrixType",
          "identifier": "19",
          "scaleDenominator": 1066.36479192489,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -489,7 +467,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 524288
       },
       {
-         "type": "TileMatrixType",
          "identifier": "20",
          "scaleDenominator": 533.182395962445,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -499,7 +476,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 1048576
       },
       {
-         "type": "TileMatrixType",
          "identifier": "21",
          "scaleDenominator": 266.591197981222,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -509,7 +485,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 2097152
       },
       {
-         "type": "TileMatrixType",
          "identifier": "22",
          "scaleDenominator": 133.295598990611,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -519,7 +494,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 4194304
       },
       {
-         "type": "TileMatrixType",
          "identifier": "23",
          "scaleDenominator": 66.6477994953056,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -529,7 +503,6 @@ This is the JSON definition of the WebMercatorQuad tile matrix set that can be r
          "matrixHeight": 8388608
       },
       {
-         "type": "TileMatrixType",
          "identifier": "24",
          "scaleDenominator": 33.3238997476528,
          "topLeftCorner": [-20037508.3427892, 20037508.3427892],
@@ -744,12 +717,10 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
 [source,JSON]
 ....
 {
-   "type": "TileMatrixSetType",
    "title": "CRS84 for the World",
    "identifier": "WorldCRS84Quad",
    "boundingBox":
    {
-      "type": "BoundingBoxType",
       "crs": "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
       "lowerCorner": [-180, -90],
       "upperCorner": [180, 90]
@@ -759,7 +730,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
    "tileMatrices":
    [
       {
-         "type": "TileMatrixType",
          "identifier": "0",
          "scaleDenominator": 279541132.014358,
          "topLeftCorner": [-180, 90],
@@ -769,7 +739,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 1
       },
       {
-         "type": "TileMatrixType",
          "identifier": "1",
          "scaleDenominator": 139770566.007179,
          "topLeftCorner": [-180, 90],
@@ -779,7 +748,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 2
       },
       {
-         "type": "TileMatrixType",
          "identifier": "2",
          "scaleDenominator": 69885283.0035897,
          "topLeftCorner": [-180, 90],
@@ -789,7 +757,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 4
       },
       {
-         "type": "TileMatrixType",
          "identifier": "3",
          "scaleDenominator": 34942641.5017948,
          "topLeftCorner": [-180, 90],
@@ -799,7 +766,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 8
       },
       {
-         "type": "TileMatrixType",
          "identifier": "4",
          "scaleDenominator": 17471320.7508974,
          "topLeftCorner": [-180, 90],
@@ -809,7 +775,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 16
       },
       {
-         "type": "TileMatrixType",
          "identifier": "5",
          "scaleDenominator": 8735660.37544871,
          "topLeftCorner": [-180, 90],
@@ -819,7 +784,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 32
       },
       {
-         "type": "TileMatrixType",
          "identifier": "6",
          "scaleDenominator": 4367830.18772435,
          "topLeftCorner": [-180, 90],
@@ -829,7 +793,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 64
       },
       {
-         "type": "TileMatrixType",
          "identifier": "7",
          "scaleDenominator": 2183915.09386217,
          "topLeftCorner": [-180, 90],
@@ -839,7 +802,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 128
       },
       {
-         "type": "TileMatrixType",
          "identifier": "8",
          "scaleDenominator": 1091957.54693108,
          "topLeftCorner": [-180, 90],
@@ -849,7 +811,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 256
       },
       {
-         "type": "TileMatrixType",
          "identifier": "9",
          "scaleDenominator": 545978.773465544,
          "topLeftCorner": [-180, 90],
@@ -859,7 +820,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 512
       },
       {
-         "type": "TileMatrixType",
          "identifier": "10",
          "scaleDenominator": 272989.386732772,
          "topLeftCorner": [-180, 90],
@@ -869,7 +829,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 1024
       },
       {
-         "type": "TileMatrixType",
          "identifier": "11",
          "scaleDenominator": 136494.693366386,
          "topLeftCorner": [-180, 90],
@@ -879,7 +838,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 2048
       },
       {
-         "type": "TileMatrixType",
          "identifier": "12",
          "scaleDenominator": 68247.346683193,
          "topLeftCorner": [-180, 90],
@@ -889,7 +847,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 4096
       },
       {
-         "type": "TileMatrixType",
          "identifier": "13",
          "scaleDenominator": 34123.6733415964,
          "topLeftCorner": [-180, 90],
@@ -899,7 +856,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 8192
       },
       {
-         "type": "TileMatrixType",
          "identifier": "14",
          "scaleDenominator": 17061.8366707982,
          "topLeftCorner": [-180, 90],
@@ -909,7 +865,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 16384
       },
       {
-         "type": "TileMatrixType",
          "identifier": "15",
          "scaleDenominator": 8530.91833539913,
          "topLeftCorner": [-180, 90],
@@ -919,7 +874,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 32768
       },
       {
-         "type": "TileMatrixType",
          "identifier": "16",
          "scaleDenominator": 4265.45916769956,
          "topLeftCorner": [-180, 90],
@@ -929,7 +883,6 @@ This is the JSON definition of the WorldCRS84Quad tile matrix set that can be re
          "matrixHeight": 65536
       },
       {
-         "type": "TileMatrixType",
          "identifier": "17",
          "scaleDenominator": 2132.72958384978,
          "topLeftCorner": [-180, 90],
@@ -1211,12 +1164,10 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
 [source,JSON]
 ....
 {
-   "type": "TileMatrixSetType",
    "title": "World Mercator WGS84 (ellipsoid)",
    "identifier": "WorldMercatorWGS84Quad",
    "boundingBox":
    {
-      "type": "BoundingBoxType",
       "crs": "http://www.opengis.net/def/crs/EPSG/0/3395",
       "lowerCorner": [-20037508.3427892, -20037508.3427892],
       "upperCorner": [20037508.3427892, 20037508.3427892]
@@ -1226,7 +1177,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
    "tileMatrices":
    [
       {
-         "type": "TileMatrixType",
          "identifier": "0",
          "scaleDenominator": 559082264.028718,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1236,7 +1186,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 1
       },
       {
-         "type": "TileMatrixType",
          "identifier": "1",
          "scaleDenominator": 279541132.014358,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1246,7 +1195,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 2
       },
       {
-         "type": "TileMatrixType",
          "identifier": "2",
          "scaleDenominator": 139770566.007179,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1256,7 +1204,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 4
       },
       {
-         "type": "TileMatrixType",
          "identifier": "3",
          "scaleDenominator": 69885283.0035897,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1266,7 +1213,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 8
       },
       {
-         "type": "TileMatrixType",
          "identifier": "4",
          "scaleDenominator": 34942641.5017948,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1276,7 +1222,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 16
       },
       {
-         "type": "TileMatrixType",
          "identifier": "5",
          "scaleDenominator": 17471320.7508974,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1286,7 +1231,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 32
       },
       {
-         "type": "TileMatrixType",
          "identifier": "6",
          "scaleDenominator": 8735660.37544871,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1296,7 +1240,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 64
       },
       {
-         "type": "TileMatrixType",
          "identifier": "7",
          "scaleDenominator": 4367830.18772435,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1306,7 +1249,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 128
       },
       {
-         "type": "TileMatrixType",
          "identifier": "8",
          "scaleDenominator": 2183915.09386217,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1316,7 +1258,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 256
       },
       {
-         "type": "TileMatrixType",
          "identifier": "9",
          "scaleDenominator": 1091957.54693108,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1326,7 +1267,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 512
       },
       {
-         "type": "TileMatrixType",
          "identifier": "10",
          "scaleDenominator": 545978.773465544,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1336,7 +1276,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 1024
       },
       {
-         "type": "TileMatrixType",
          "identifier": "11",
          "scaleDenominator": 272989.386732772,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1346,7 +1285,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 2048
       },
       {
-         "type": "TileMatrixType",
          "identifier": "12",
          "scaleDenominator": 136494.693366386,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1356,7 +1294,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 4096
       },
       {
-         "type": "TileMatrixType",
          "identifier": "13",
          "scaleDenominator": 68247.346683193,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1366,7 +1303,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 8192
       },
       {
-         "type": "TileMatrixType",
          "identifier": "14",
          "scaleDenominator": 34123.6733415964,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1376,7 +1312,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 16384
       },
       {
-         "type": "TileMatrixType",
          "identifier": "15",
          "scaleDenominator": 17061.8366707982,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1386,7 +1321,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 32768
       },
       {
-         "type": "TileMatrixType",
          "identifier": "16",
          "scaleDenominator": 8530.91833539913,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1396,7 +1330,6 @@ This is the JSON definition of the WorldMercatorQuad tile matrix set that can be
          "matrixHeight": 65536
       },
       {
-         "type": "TileMatrixType",
          "identifier": "17",
          "scaleDenominator": 4265.45916769956,
          "topLeftCorner": [-20037508.3427892, -20037508.3427892],
@@ -1670,12 +1603,10 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
 [source,JSON]
 ....
 {
-   "type": "TileMatrixSetType",
    "title": "UTM31WGS84Quad",
    "identifier": "Universal Transverse Mercator Zone 31 WGS84 Quad",
    "boundingBox":
    {
-      "type": "BoundingBoxType",
       "crs": "http://www.opengis.net/def/crs/EPSG/0/32631",
       "lowerCorner":
       [
@@ -1692,7 +1623,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
    "tileMatrices":
    [
       {
-         "type": "TileMatrixType",
          "identifier": "1",
          "scaleDenominator": 279072704.500914,
          "topLeftCorner":
@@ -1706,7 +1636,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 2
       },
       {
-         "type": "TileMatrixType",
          "identifier": "2",
          "scaleDenominator": 139536352.250457,
          "topLeftCorner":
@@ -1720,7 +1649,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 4
       },
       {
-         "type": "TileMatrixType",
          "identifier": "3",
          "scaleDenominator": 69768176.1252285,
          "topLeftCorner":
@@ -1734,7 +1662,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 8
       },
       {
-         "type": "TileMatrixType",
          "identifier": "4",
          "scaleDenominator": 34884088.0626143,
          "topLeftCorner":
@@ -1748,7 +1675,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 16
       },
       {
-         "type": "TileMatrixType",
          "identifier": "5",
          "scaleDenominator": 17442044.0313071,
          "topLeftCorner":
@@ -1762,7 +1688,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 32
       },
       {
-         "type": "TileMatrixType",
          "identifier": "6",
          "scaleDenominator": 8721022.01565356,
          "topLeftCorner":
@@ -1776,7 +1701,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 64
       },
       {
-         "type": "TileMatrixType",
          "identifier": "7",
          "scaleDenominator": 4360511.00782678,
          "topLeftCorner":
@@ -1790,7 +1714,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 128
       },
       {
-         "type": "TileMatrixType",
          "identifier": "8",
          "scaleDenominator": 2180255.50391339,
          "topLeftCorner":
@@ -1804,7 +1727,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 256
       },
       {
-         "type": "TileMatrixType",
          "identifier": "9",
          "scaleDenominator": 1090127.7519567,
          "topLeftCorner":
@@ -1818,7 +1740,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 512
       },
       {
-         "type": "TileMatrixType",
          "identifier": "10",
          "scaleDenominator": 545063.875978348,
          "topLeftCorner":
@@ -1832,7 +1753,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 1024
       },
       {
-         "type": "TileMatrixType",
          "identifier": "11",
          "scaleDenominator": 272531.937989174,
          "topLeftCorner":
@@ -1846,7 +1766,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 2048
       },
       {
-         "type": "TileMatrixType",
          "identifier": "12",
          "scaleDenominator": 136265.968994587,
          "topLeftCorner":
@@ -1860,7 +1779,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 4096
       },
       {
-         "type": "TileMatrixType",
          "identifier": "13",
          "scaleDenominator": 68132.9844972935,
          "topLeftCorner":
@@ -1874,7 +1792,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 8192
       },
       {
-         "type": "TileMatrixType",
          "identifier": "14",
          "scaleDenominator": 34066.4922486467,
          "topLeftCorner":
@@ -1888,7 +1805,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 16384
       },
       {
-         "type": "TileMatrixType",
          "identifier": "15",
          "scaleDenominator": 17033.2461243234,
          "topLeftCorner":
@@ -1902,7 +1818,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 32768
       },
       {
-         "type": "TileMatrixType",
          "identifier": "16",
          "scaleDenominator": 8516.62306216168,
          "topLeftCorner":
@@ -1916,7 +1831,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 65536
       },
       {
-         "type": "TileMatrixType",
          "identifier": "17",
          "scaleDenominator": 4258.31153108084,
          "topLeftCorner":
@@ -1930,7 +1844,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 131072
       },
       {
-         "type": "TileMatrixType",
          "identifier": "18",
          "scaleDenominator": 2129.15576554042,
          "topLeftCorner":
@@ -1944,7 +1857,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 262144
       },
       {
-         "type": "TileMatrixType",
          "identifier": "19",
          "scaleDenominator": 1064.57788277021,
          "topLeftCorner":
@@ -1958,7 +1870,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 524288
       },
       {
-         "type": "TileMatrixType",
          "identifier": "20",
          "scaleDenominator": 532.288941385105,
          "topLeftCorner":
@@ -1972,7 +1883,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 1048576
       },
       {
-         "type": "TileMatrixType",
          "identifier": "21",
          "scaleDenominator": 266.144470692553,
          "topLeftCorner":
@@ -1986,7 +1896,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 2097152
       },
       {
-         "type": "TileMatrixType",
          "identifier": "22",
          "scaleDenominator": 133.072235346276,
          "topLeftCorner":
@@ -2000,7 +1909,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 4194304
       },
       {
-         "type": "TileMatrixType",
          "identifier": "23",
          "scaleDenominator": 66.5361176731382,
          "topLeftCorner":
@@ -2014,7 +1922,6 @@ This is the JSON definition of the UTM31WGS84Quad tile matrix set that can be re
          "matrixHeight": 8388608
       },
       {
-         "type": "TileMatrixType",
          "identifier": "24",
          "scaleDenominator": 33.2680588365691,
          "topLeftCorner":
@@ -2291,12 +2198,10 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
 [source,JSON]
 ....
 {
-   "type": "TileMatrixSetType",
    "title": "ArcticUniversalPolarStereoWGS84Quad",
    "identifier": "Universal Polar Stereographic WGS 84 Quad for Arctic",
    "boundingBox":
    {
-      "type": "BoundingBoxType",
       "crs": "http://www.opengis.net/def/crs/EPSG/0/5041",
       "lowerCorner":
       [
@@ -2313,7 +2218,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
    "tileMatrices":
    [
       {
-         "type": "TileMatrixType",
          "identifier": "0",
          "scaleDenominator": 458726544.4,
          "topLeftCorner":
@@ -2327,7 +2231,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 1
       },
       {
-         "type": "TileMatrixType",
          "identifier": "1",
          "scaleDenominator": 229363272.2,
          "topLeftCorner":
@@ -2341,7 +2244,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 2
       },
       {
-         "type": "TileMatrixType",
          "identifier": "2",
          "scaleDenominator": 114681636.1,
          "topLeftCorner":
@@ -2355,7 +2257,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 4
       },
       {
-         "type": "TileMatrixType",
          "identifier": "3",
          "scaleDenominator": 57340818.05,
          "topLeftCorner":
@@ -2369,7 +2270,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 8
       },
       {
-         "type": "TileMatrixType",
          "identifier": "4",
          "scaleDenominator": 28670409.02,
          "topLeftCorner":
@@ -2383,7 +2283,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 16
       },
       {
-         "type": "TileMatrixType",
          "identifier": "5",
          "scaleDenominator": 14335204.51,
          "topLeftCorner":
@@ -2397,7 +2296,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 32
       },
       {
-         "type": "TileMatrixType",
          "identifier": "6",
          "scaleDenominator": 7167602.256,
          "topLeftCorner":
@@ -2411,7 +2309,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 64
       },
       {
-         "type": "TileMatrixType",
          "identifier": "7",
          "scaleDenominator": 3583801.128,
          "topLeftCorner":
@@ -2425,7 +2322,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 128
       },
       {
-         "type": "TileMatrixType",
          "identifier": "8",
          "scaleDenominator": 1791900.564,
          "topLeftCorner":
@@ -2439,7 +2335,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 256
       },
       {
-         "type": "TileMatrixType",
          "identifier": "9",
          "scaleDenominator": 895950.282,
          "topLeftCorner":
@@ -2453,7 +2348,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 512
       },
       {
-         "type": "TileMatrixType",
          "identifier": "10",
          "scaleDenominator": 447975.141,
          "topLeftCorner":
@@ -2467,7 +2361,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 1024
       },
       {
-         "type": "TileMatrixType",
          "identifier": "11",
          "scaleDenominator": 223987.5705,
          "topLeftCorner":
@@ -2481,7 +2374,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 2048
       },
       {
-         "type": "TileMatrixType",
          "identifier": "12",
          "scaleDenominator": 111993.7852,
          "topLeftCorner":
@@ -2495,7 +2387,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 4096
       },
       {
-         "type": "TileMatrixType",
          "identifier": "13",
          "scaleDenominator": 55996.89262,
          "topLeftCorner":
@@ -2509,7 +2400,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 8192
       },
       {
-         "type": "TileMatrixType",
          "identifier": "14",
          "scaleDenominator": 27998.44631,
          "topLeftCorner":
@@ -2523,7 +2413,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 16384
       },
       {
-         "type": "TileMatrixType",
          "identifier": "15",
          "scaleDenominator": 13999.22316,
          "topLeftCorner":
@@ -2537,7 +2426,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 32768
       },
       {
-         "type": "TileMatrixType",
          "identifier": "16",
          "scaleDenominator": 6999.611578,
          "topLeftCorner":
@@ -2551,7 +2439,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 65536
       },
       {
-         "type": "TileMatrixType",
          "identifier": "17",
          "scaleDenominator": 3499.805789,
          "topLeftCorner":
@@ -2565,7 +2452,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 131072
       },
       {
-         "type": "TileMatrixType",
          "identifier": "18",
          "scaleDenominator": 1749.902894,
          "topLeftCorner":
@@ -2579,7 +2465,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 262144
       },
       {
-         "type": "TileMatrixType",
          "identifier": "19",
          "scaleDenominator": 874.9514472,
          "topLeftCorner":
@@ -2593,7 +2478,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 524288
       },
       {
-         "type": "TileMatrixType",
          "identifier": "20",
          "scaleDenominator": 437.4757236,
          "topLeftCorner":
@@ -2607,7 +2491,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 1048576
       },
       {
-         "type": "TileMatrixType",
          "identifier": "21",
          "scaleDenominator": 218.7378618,
          "topLeftCorner":
@@ -2621,7 +2504,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 2097152
       },
       {
-         "type": "TileMatrixType",
          "identifier": "22",
          "scaleDenominator": 109.3689309,
          "topLeftCorner":
@@ -2635,7 +2517,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 4194304
       },
       {
-         "type": "TileMatrixType",
          "identifier": "23",
          "scaleDenominator": 54.68446545,
          "topLeftCorner":
@@ -2649,7 +2530,6 @@ This is the XML definition of the UPSArcticWGS84Quad tile matrix set that can be
          "matrixHeight": 8388608
       },
       {
-         "type": "TileMatrixType",
          "identifier": "24",
          "scaleDenominator": 27.34223273,
          "topLeftCorner":
@@ -2926,12 +2806,10 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
 [source,JSON]
 ....
 {
-   "type": "TileMatrixSetType",
    "title": "AntarcticUniversalPolarStereoWGS84Quad",
    "identifier": "Universal Polar Stereographic WGS 84 Quad for Antarctic",
    "boundingBox":
    {
-      "type": "BoundingBoxType",
       "crs": "http://www.opengis.net/def/crs/EPSG/0/5042",
       "lowerCorner":
       [
@@ -2948,7 +2826,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
    "tileMatrices":
    [
       {
-         "type": "TileMatrixType",
          "identifier": "0",
          "scaleDenominator": 458726544.4,
          "topLeftCorner":
@@ -2962,7 +2839,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 1
       },
       {
-         "type": "TileMatrixType",
          "identifier": "1",
          "scaleDenominator": 229363272.2,
          "topLeftCorner":
@@ -2976,7 +2852,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 2
       },
       {
-         "type": "TileMatrixType",
          "identifier": "2",
          "scaleDenominator": 114681636.1,
          "topLeftCorner":
@@ -2990,7 +2865,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 4
       },
       {
-         "type": "TileMatrixType",
          "identifier": "3",
          "scaleDenominator": 57340818.05,
          "topLeftCorner":
@@ -3004,7 +2878,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 8
       },
       {
-         "type": "TileMatrixType",
          "identifier": "4",
          "scaleDenominator": 28670409.02,
          "topLeftCorner":
@@ -3018,7 +2891,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 16
       },
       {
-         "type": "TileMatrixType",
          "identifier": "5",
          "scaleDenominator": 14335204.51,
          "topLeftCorner":
@@ -3032,7 +2904,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 32
       },
       {
-         "type": "TileMatrixType",
          "identifier": "6",
          "scaleDenominator": 7167602.256,
          "topLeftCorner":
@@ -3046,7 +2917,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 64
       },
       {
-         "type": "TileMatrixType",
          "identifier": "7",
          "scaleDenominator": 3583801.128,
          "topLeftCorner":
@@ -3060,7 +2930,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 128
       },
       {
-         "type": "TileMatrixType",
          "identifier": "8",
          "scaleDenominator": 1791900.564,
          "topLeftCorner":
@@ -3074,7 +2943,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 256
       },
       {
-         "type": "TileMatrixType",
          "identifier": "9",
          "scaleDenominator": 895950.282,
          "topLeftCorner":
@@ -3088,7 +2956,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 512
       },
       {
-         "type": "TileMatrixType",
          "identifier": "10",
          "scaleDenominator": 447975.141,
          "topLeftCorner":
@@ -3102,7 +2969,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 1024
       },
       {
-         "type": "TileMatrixType",
          "identifier": "11",
          "scaleDenominator": 223987.5705,
          "topLeftCorner":
@@ -3116,7 +2982,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 2048
       },
       {
-         "type": "TileMatrixType",
          "identifier": "12",
          "scaleDenominator": 111993.7852,
          "topLeftCorner":
@@ -3130,7 +2995,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 4096
       },
       {
-         "type": "TileMatrixType",
          "identifier": "13",
          "scaleDenominator": 55996.89262,
          "topLeftCorner":
@@ -3144,7 +3008,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 8192
       },
       {
-         "type": "TileMatrixType",
          "identifier": "14",
          "scaleDenominator": 27998.44631,
          "topLeftCorner":
@@ -3158,7 +3021,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 16384
       },
       {
-         "type": "TileMatrixType",
          "identifier": "15",
          "scaleDenominator": 13999.22316,
          "topLeftCorner":
@@ -3172,7 +3034,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 32768
       },
       {
-         "type": "TileMatrixType",
          "identifier": "16",
          "scaleDenominator": 6999.611578,
          "topLeftCorner":
@@ -3186,7 +3047,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 65536
       },
       {
-         "type": "TileMatrixType",
          "identifier": "17",
          "scaleDenominator": 3499.805789,
          "topLeftCorner":
@@ -3200,7 +3060,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 131072
       },
       {
-         "type": "TileMatrixType",
          "identifier": "18",
          "scaleDenominator": 1749.902894,
          "topLeftCorner":
@@ -3214,7 +3073,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 262144
       },
       {
-         "type": "TileMatrixType",
          "identifier": "19",
          "scaleDenominator": 874.9514472,
          "topLeftCorner":
@@ -3228,7 +3086,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 524288
       },
       {
-         "type": "TileMatrixType",
          "identifier": "20",
          "scaleDenominator": 437.4757236,
          "topLeftCorner":
@@ -3242,7 +3099,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 1048576
       },
       {
-         "type": "TileMatrixType",
          "identifier": "21",
          "scaleDenominator": 218.7378618,
          "topLeftCorner":
@@ -3256,7 +3112,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 2097152
       },
       {
-         "type": "TileMatrixType",
          "identifier": "22",
          "scaleDenominator": 109.3689309,
          "topLeftCorner":
@@ -3270,7 +3125,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 4194304
       },
       {
-         "type": "TileMatrixType",
          "identifier": "23",
          "scaleDenominator": 54.68446545,
          "topLeftCorner":
@@ -3284,7 +3138,6 @@ This is the JSON definition of the UPSAntarcticWGS84Quad tile matrix set that ca
          "matrixHeight": 8388608
       },
       {
-         "type": "TileMatrixType",
          "identifier": "24",
          "scaleDenominator": 27.34223273,
          "topLeftCorner":
@@ -3480,12 +3333,10 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
 [source,JSON]
 ....
 {
-   "type": "TileMatrixSetType",
    "title": "Lambert Azimuthal Equal Area ETRS89 for Europe",
    "identifier": "EuropeanETRS89_LAEAQuad",
    "boundingBox":
    {
-      "type": "BoundingBoxType",
       "crs": "http://www.opengis.net/def/crs/EPSG/0/3035",
       "lowerCorner":
       [
@@ -3502,7 +3353,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
    "tileMatrices":
    [
       {
-         "type": "TileMatrixType",
          "identifier": "0",
          "scaleDenominator": 62779017.8571428,
          "topLeftCorner":
@@ -3516,7 +3366,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 1
       },
       {
-         "type": "TileMatrixType",
          "identifier": "1",
          "scaleDenominator": 31389508.9285714,
          "topLeftCorner":
@@ -3530,7 +3379,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 2
       },
       {
-         "type": "TileMatrixType",
          "identifier": "2",
          "scaleDenominator": 15694754.4642857,
          "topLeftCorner":
@@ -3544,7 +3392,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 4
       },
       {
-         "type": "TileMatrixType",
          "identifier": "3",
          "scaleDenominator": 7847377.23214285,
          "topLeftCorner":
@@ -3558,7 +3405,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 8
       },
       {
-         "type": "TileMatrixType",
          "identifier": "4",
          "scaleDenominator": 3923688.61607142,
          "topLeftCorner":
@@ -3572,7 +3418,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 16
       },
       {
-         "type": "TileMatrixType",
          "identifier": "5",
          "scaleDenominator": 1961844.30803571,
          "topLeftCorner":
@@ -3586,7 +3431,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 32
       },
       {
-         "type": "TileMatrixType",
          "identifier": "6",
          "scaleDenominator": 980922.154017857,
          "topLeftCorner":
@@ -3600,7 +3444,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 64
       },
       {
-         "type": "TileMatrixType",
          "identifier": "7",
          "scaleDenominator": 490461.077008928,
          "topLeftCorner":
@@ -3614,7 +3457,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 128
       },
       {
-         "type": "TileMatrixType",
          "identifier": "8",
          "scaleDenominator": 245230.538504464,
          "topLeftCorner":
@@ -3628,7 +3470,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 256
       },
       {
-         "type": "TileMatrixType",
          "identifier": "9",
          "scaleDenominator": 122615.269252232,
          "topLeftCorner":
@@ -3642,7 +3483,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 512
       },
       {
-         "type": "TileMatrixType",
          "identifier": "10",
          "scaleDenominator": 61307.634626116,
          "topLeftCorner":
@@ -3656,7 +3496,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 1024
       },
       {
-         "type": "TileMatrixType",
          "identifier": "11",
          "scaleDenominator": 30653.817313058,
          "topLeftCorner":
@@ -3670,7 +3509,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 2048
       },
       {
-         "type": "TileMatrixType",
          "identifier": "12",
          "scaleDenominator": 15326.908656529,
          "topLeftCorner":
@@ -3684,7 +3522,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 4096
       },
       {
-         "type": "TileMatrixType",
          "identifier": "13",
          "scaleDenominator": 7663.45432826451,
          "topLeftCorner":
@@ -3698,7 +3535,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 8192
       },
       {
-         "type": "TileMatrixType",
          "identifier": "14",
          "scaleDenominator": 3831.72716413225,
          "topLeftCorner":
@@ -3712,7 +3548,6 @@ This is the JSON definition of the EuropeanETRS89_LAEAQuad tile matrix set that 
          "matrixHeight": 16384
       },
       {
-         "type": "TileMatrixType",
          "identifier": "15",
          "scaleDenominator": 1915.86358206612,
          "topLeftCorner":
@@ -4000,12 +3835,10 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
 [source,JSON]
 ....
 {
-   "type": "TileMatrixSetType",
    "title": "Lambert conformal conic NAD83 for Canada",
    "identifier": "CanadianNAD83_LCC",
    "boundingBox":
    {
-      "type": "BoundingBoxType",
       "crs": "http://www.opengis.net/def/crs/EPSG/0/3978",
       "lowerCorner":
       [
@@ -4022,7 +3855,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
    "tileMatrices":
    [
       {
-         "type": "TileMatrixType",
          "identifier": "0",
          "scaleDenominator": 145000000,
          "topLeftCorner":
@@ -4036,7 +3868,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 5
       },
       {
-         "type": "TileMatrixType",
          "identifier": "1",
          "scaleDenominator": 85000000,
          "topLeftCorner":
@@ -4050,7 +3881,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 8
       },
       {
-         "type": "TileMatrixType",
          "identifier": "2",
          "scaleDenominator": 50000000,
          "topLeftCorner":
@@ -4064,7 +3894,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 14
       },
       {
-         "type": "TileMatrixType",
          "identifier": "3",
          "scaleDenominator": 30000000,
          "topLeftCorner":
@@ -4078,7 +3907,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 22
       },
       {
-         "type": "TileMatrixType",
          "identifier": "4",
          "scaleDenominator": 17500000,
          "topLeftCorner":
@@ -4092,7 +3920,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 38
       },
       {
-         "type": "TileMatrixType",
          "identifier": "5",
          "scaleDenominator": 10000000,
          "topLeftCorner":
@@ -4106,7 +3933,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 66
       },
       {
-         "type": "TileMatrixType",
          "identifier": "6",
          "scaleDenominator": 6000000,
          "topLeftCorner":
@@ -4120,7 +3946,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 110
       },
       {
-         "type": "TileMatrixType",
          "identifier": "7",
          "scaleDenominator": 3500000,
          "topLeftCorner":
@@ -4134,7 +3959,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 188
       },
       {
-         "type": "TileMatrixType",
          "identifier": "8",
          "scaleDenominator": 2000000,
          "topLeftCorner":
@@ -4148,7 +3972,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 329
       },
       {
-         "type": "TileMatrixType",
          "identifier": "9",
          "scaleDenominator": 1200000,
          "topLeftCorner":
@@ -4162,7 +3985,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 548
       },
       {
-         "type": "TileMatrixType",
          "identifier": "10",
          "scaleDenominator": 700000,
          "topLeftCorner":
@@ -4176,7 +3998,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 938
       },
       {
-         "type": "TileMatrixType",
          "identifier": "11",
          "scaleDenominator": 420000,
          "topLeftCorner":
@@ -4190,7 +4011,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 1563
       },
       {
-         "type": "TileMatrixType",
          "identifier": "12",
          "scaleDenominator": 250000,
          "topLeftCorner":
@@ -4204,7 +4024,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 2626
       },
       {
-         "type": "TileMatrixType",
          "identifier": "13",
          "scaleDenominator": 145000,
          "topLeftCorner":
@@ -4218,7 +4037,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 4528
       },
       {
-         "type": "TileMatrixType",
          "identifier": "14",
          "scaleDenominator": 85000,
          "topLeftCorner":
@@ -4232,7 +4050,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 7723
       },
       {
-         "type": "TileMatrixType",
          "identifier": "15",
          "scaleDenominator": 50000,
          "topLeftCorner":
@@ -4246,7 +4063,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 13130
       },
       {
-         "type": "TileMatrixType",
          "identifier": "16",
          "scaleDenominator": 30000,
          "topLeftCorner":
@@ -4260,7 +4076,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 21882
       },
       {
-         "type": "TileMatrixType",
          "identifier": "17",
          "scaleDenominator": 17500,
          "topLeftCorner":
@@ -4274,7 +4089,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 37512
       },
       {
-         "type": "TileMatrixType",
          "identifier": "18",
          "scaleDenominator": 10000,
          "topLeftCorner":
@@ -4288,7 +4102,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 65646
       },
       {
-         "type": "TileMatrixType",
          "identifier": "19",
          "scaleDenominator": 6000,
          "topLeftCorner":
@@ -4302,7 +4115,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 109409
       },
       {
-         "type": "TileMatrixType",
          "identifier": "20",
          "scaleDenominator": 3500,
          "topLeftCorner":
@@ -4316,7 +4128,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 187558
       },
       {
-         "type": "TileMatrixType",
          "identifier": "21",
          "scaleDenominator": 2000,
          "topLeftCorner":
@@ -4330,7 +4141,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 328227
       },
       {
-         "type": "TileMatrixType",
          "identifier": "22",
          "scaleDenominator": 1200,
          "topLeftCorner":
@@ -4344,7 +4154,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 547044
       },
       {
-         "type": "TileMatrixType",
          "identifier": "23",
          "scaleDenominator": 700,
          "topLeftCorner":
@@ -4358,7 +4167,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 937790
       },
       {
-         "type": "TileMatrixType",
          "identifier": "24",
          "scaleDenominator": 420,
          "topLeftCorner":
@@ -4372,7 +4180,6 @@ This is the JSON definition of the CanadianNAD83_LCC tile matrix set that can be
          "matrixHeight": 1562983
       },
       {
-         "type": "TileMatrixType",
          "identifier": "25",
          "scaleDenominator": 250,
          "topLeftCorner":

@@ -106,17 +106,14 @@ TileMatrixSetLink2D data structure can be used for a resource to specify the til
    "title": "Catalonia",
    "identifier": "Cat",
    "tileMatrixSetLink": {
-      "type": "TileMatrixSetLink",
       "tileMatrixSet": "WorldCRS84Quad",
       "tileMatrixSetLimits": [{
-         "type": "TileMatrixLimits",
          "tileMatrix": "3",
          "minTileRow": 4,
          "maxTileRow": 5,
          "minTileCol": 2,
          "maxTileCol": 2
       },{
-         "type": "TileMatrixLimits",
          "tileMatrix": "4",
          "minTileRow": 8,
          "maxTileRow": 9,

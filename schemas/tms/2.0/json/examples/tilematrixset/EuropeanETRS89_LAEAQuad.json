@@ -1,10 +1,8 @@
 {
-	"type": "TileMatrixSetType",
 	"title": "Lambert Azimuthal Equal Area ETRS89 for Europe",
 	"identifier": "EuropeanETRS89_LAEAQuad",
 	"boundingBox":
 	{
-		"type": "BoundingBoxType",
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/3035",
 		"lowerCorner":
 		[
@@ -21,7 +19,6 @@
 	"tileMatrices":
 	[
 		{
-			"type": "TileMatrixType",
 			"identifier": "0",
 			"scaleDenominator": 62779017.8571428,
 			"topLeftCorner":
@@ -35,7 +32,6 @@
 			"matrixHeight": 1
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "1",
 			"scaleDenominator": 31389508.9285714,
 			"topLeftCorner":
@@ -49,7 +45,6 @@
 			"matrixHeight": 2
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "2",
 			"scaleDenominator": 15694754.4642857,
 			"topLeftCorner":
@@ -63,7 +58,6 @@
 			"matrixHeight": 4
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "3",
 			"scaleDenominator": 7847377.23214285,
 			"topLeftCorner":
@@ -77,7 +71,6 @@
 			"matrixHeight": 8
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "4",
 			"scaleDenominator": 3923688.61607142,
 			"topLeftCorner":
@@ -91,7 +84,6 @@
 			"matrixHeight": 16
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "5",
 			"scaleDenominator": 1961844.30803571,
 			"topLeftCorner":
@@ -105,7 +97,6 @@
 			"matrixHeight": 32
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "6",
 			"scaleDenominator": 980922.154017857,
 			"topLeftCorner":
@@ -119,7 +110,6 @@
 			"matrixHeight": 64
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "7",
 			"scaleDenominator": 490461.077008928,
 			"topLeftCorner":
@@ -133,7 +123,6 @@
 			"matrixHeight": 128
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "8",
 			"scaleDenominator": 245230.538504464,
 			"topLeftCorner":
@@ -147,7 +136,6 @@
 			"matrixHeight": 256
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "9",
 			"scaleDenominator": 122615.269252232,
 			"topLeftCorner":
@@ -161,7 +149,6 @@
 			"matrixHeight": 512
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "10",
 			"scaleDenominator": 61307.634626116,
 			"topLeftCorner":
@@ -175,7 +162,6 @@
 			"matrixHeight": 1024
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "11",
 			"scaleDenominator": 30653.817313058,
 			"topLeftCorner":
@@ -189,7 +175,6 @@
 			"matrixHeight": 2048
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "12",
 			"scaleDenominator": 15326.908656529,
 			"topLeftCorner":
@@ -203,7 +188,6 @@
 			"matrixHeight": 4096
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "13",
 			"scaleDenominator": 7663.45432826451,
 			"topLeftCorner":
@@ -217,7 +201,6 @@
 			"matrixHeight": 8192
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "14",
 			"scaleDenominator": 3831.72716413225,
 			"topLeftCorner":
@@ -231,7 +214,6 @@
 			"matrixHeight": 16384
 		},
 		{
-			"type": "TileMatrixType",
 			"identifier": "15",
 			"scaleDenominator": 1915.86358206612,
 			"topLeftCorner":

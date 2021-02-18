@@ -19,8 +19,8 @@
 			"description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix set",
 			"type": "array",
 			"items": {
-				"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json" 
-			} 
+				"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json"
+			}
 		},
 		"id": {
 			"description": "Tile matrix set identifier. Implementation of 'identifier'",
@@ -56,13 +56,13 @@
 			}
 		}
 	},
-	"definitions":{ 
-		"tileMatrix": 
+	"definitions":{
+		"tileMatrix":
 		{
 			"description": "",
 			"type": "object",
 			"required": ["id", "scaleDenominator", "pointOfOrigin", "tileWidth", "tileHeight", "matrixWidth", "matrixHeight"],
-			"properties": 
+			"properties":
 			{
 				"title": {
 					"description": "Title of this tile matrix set, normally used for display to a human",
@@ -78,7 +78,7 @@
 					"description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this dataset",
 					"type": "array",
 					"items": {
-						"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json" 
+						"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json"
 					}
 				},
 				"id": {
@@ -91,13 +91,13 @@
 					"type": "number",
 					"examples": [69885283.00358972]
 				},
-				"cornerOfOrigin": {					
+				"cornerOfOrigin": {
 					"description": "Position of the corner of origin with respect of the tiles of this tile matrix",
 					"type": "string",
 					"enum": ["topLeft", "bottomLeft"],
 					"default": "topLeft"
 				},
-				"pointOfOrigin": {					
+				"pointOfOrigin": {
 					"description": "Coordinate in CRS coordinates of the corner of origin of this tile matrix. In previous version was 'topLeftCorner' and 'cornerOfOrigin' did not exist",
 					"type": "array",
 					"minItems": 2,
@@ -147,7 +147,7 @@
 					"description": "Describes the rows that has variable matrix width",
 					"type": "array",
 					"items": {
-						"$ref": "#/definitions/variableMatrixWidth" 
+						"$ref": "#/definitions/variableMatrixWidth"
 					}
 				}
 			}
@@ -156,7 +156,7 @@
 			"description": "Variable Matrix Width data structure",
 			"type": "object",
 			"required": ["coalesce", "minTileRow", "maxTileRow"],
-			"properties": 
+			"properties":
 			{
 				"coalesce" : {
 					"description": "Coalescence factor",

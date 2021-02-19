@@ -12,6 +12,9 @@ Note that the GNOSIS Global Grid scales match the _GoogleCRS84Quad_ Well Known S
 Since the _WorldCRS84Quad_ TileMatrixSet starts at the second scale, its TileMatrix identifier 1 is equivalent to the GNOSISGlobalGrid TileMatrix identifier 0,
 with the exception of the variable width considerations.
 In this case, the variable matrix width is applied only from the tile matrix with identifier 1 and higher.
+The GNOSIS Global Grid is easy to implement procedurally: it is a quad-tree starting with 8 90 degrees x 90 degrees tiles at level 0,
+with the exception that tiles touching a pole are split into 3 tiles rather than 4 -- the polar portion is not split longitude-wise.
+Therefore there will always be only 4 tiles touching each pole.
 
 The complete JSON example can be found in the supplemental material described in Annex B.
 

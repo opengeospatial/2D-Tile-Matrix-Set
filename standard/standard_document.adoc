@@ -10,6 +10,10 @@
 :sectanchors:
 :source-highlighter: pygments
 
+// set media to output format print or screen for pdf export
+:media: print
+:bibtex-file: resources/bibtex-file.bib
+
 <<<
 [cols = ">",frame = "none",grid = "none"]
 |===
@@ -95,7 +99,7 @@ include::clause_8_xml_encoding.adoc[]
 
 include::clause_9_json_encoding.adoc[]
 
-include::clause_10_json-ld_encoding.adoc[]
+//include::clause_10_json-ld_encoding.adoc[]
 
 <<<
 ////

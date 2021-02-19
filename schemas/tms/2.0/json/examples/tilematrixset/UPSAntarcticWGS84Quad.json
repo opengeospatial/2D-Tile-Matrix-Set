@@ -1,6 +1,6 @@
 {
-	"title": "AntarcticUniversalPolarStereoWGS84Quad",
-	"identifier": "Universal Polar Stereographic WGS 84 Quad for Antarctic",
+	"title": "Universal Polar Stereographic WGS 84 Quad for Antarctic",
+	"identifier": "UPSAntarcticWGS84Quad",
 	"boundingBox":
 	{
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/5042",

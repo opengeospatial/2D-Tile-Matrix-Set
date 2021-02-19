@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TileMatrixSet id="UPSArcticWGS84Quad" xmlns="http://www.opengis.net/tms/1.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/1.0 ../tms.xsd">
-      <ows:Title>UPSArcticWGS84Quad</ows:Title>
-      <ows:Identifier>Universal Polar Stereographic WGS 84 Quad for Arctic</ows:Identifier>
+      <ows:Title>Universal Polar Stereographic WGS 84 Quad for Arctic</ows:Title>
+      <ows:Identifier>UPSArcticWGS84Quad</ows:Identifier>
       <ows:BoundingBox crs="http://www.opengis.net/def/crs/EPSG/0/5041">
          <ows:LowerCorner>-14440759.350252 -14440759.350252</ows:LowerCorner>
          <ows:UpperCorner>18440759.350252 18440759.350252</ows:UpperCorner>

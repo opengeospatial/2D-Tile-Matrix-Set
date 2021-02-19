@@ -1,6 +1,6 @@
 {
-	"title": "ArcticUniversalPolarStereoWGS84Quad",
-	"identifier": "Universal Polar Stereographic WGS 84 Quad for Arctic",
+	"title": "Universal Polar Stereographic WGS 84 Quad for Arctic",
+	"identifier": "UPSArcticWGS84Quad",
 	"boundingBox":
 	{
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/5041",

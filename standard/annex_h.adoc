@@ -4,382 +4,64 @@
 :appendix-caption: Annex
 == Example encodings for Variable Matrix Width (Informative)
 
-This informative Annex provides an example of the Variable Matrix Width extension. In this case, the variable matrix width is applied only to the tile matrix with identifier 3 and 4.
+This informative Annex provides examples of the Variable Matrix Width extension.
 
-[[xml-document-instance-using-variablematrixwidth]]
-=== XML document instance using VariableMatrixWidth
+The first example shows the first five tile matrices of the definition of the https://ecere.ca/gnosis/[GNOSIS] Global Grid and presents them
+encoded in XML and JSON following this standard.
+Note that the GNOSIS Global Grid scales match the _GoogleCRS84Quad_ Well Known Scale Set, but starts at the third scale of the set.
+Since the _WorldCRS84Quad_ TileMatrixSet starts at the second scale, its TileMatrix identifier 1 is equivalent to the GNOSISGlobalGrid TileMatrix identifier 0,
+with the exception of the variable width considerations.
+In this case, the variable matrix width is applied only from the tile matrix with identifier 1 and higher.
+
+The complete JSON example can be found in the supplemental material described in Annex B.
+
+[[xml-gnosisglobalgrid]]
+=== GNOSIS Global Grid (XML)
 
 [source,xml]
 ....
-<?xml version="1.0" encoding="UTF-8"?>
-<TileMatrixSet id="GNOSISGlobalGrid" xmlns="http://www.opengis.net/tms/2.0"
-xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../tms.xsd">
-   <ows:Title>GNOSIS Global Grid</ows:Title>
-   <ows:Identifier>GNOSISGlobalGrid</ows:Identifier>
-   <ows:BoundingBox crs="http://www.opengis.net/def/crs/EPSG/0/4326">
-      <ows:LowerCorner>-90 -180</ows:LowerCorner>
-      <ows:UpperCorner>90 180</ows:UpperCorner>
-   </ows:BoundingBox>
-   <ows:SupportedCRS>
-      http://www.opengis.net/def/crs/EPSG/0/4326
-   </ows:SupportedCRS>
-   <TileMatrix>
-      <ows:Identifier>0</ows:Identifier>
-      <ScaleDenominator>139770566.0071794</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
-      <TileWidth>256</TileWidth>
-      <TileHeight>256</TileHeight>
-      <MatrixWidth>4</MatrixWidth>
-      <MatrixHeight>2</MatrixHeight>
-   </TileMatrix>
-   <TileMatrix>
-      <ows:Identifier>1</ows:Identifier>
-      <ScaleDenominator>69885283.00358972</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
-      <TileWidth>256</TileWidth>
-      <TileHeight>256</TileHeight>
-      <MatrixWidth>8</MatrixWidth>
-      <MatrixHeight>4</MatrixHeight>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>0</MinTileRow>
-         <MaxTileRow>0</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>3</MinTileRow>
-         <MaxTileRow>3</MaxTileRow>
-      </VariableMatrixWidth>
-   </TileMatrix>
-   <TileMatrix>
-      <ows:Identifier>2</ows:Identifier>
-      <ScaleDenominator>34942641.50179486</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
-      <TileWidth>256</TileWidth>
-      <TileHeight>256</TileHeight>
-      <MatrixWidth>16</MatrixWidth>
-      <MatrixHeight>8</MatrixHeight>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>0</MinTileRow>
-         <MaxTileRow>0</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>1</MinTileRow>
-         <MaxTileRow>1</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>6</MinTileRow>
-         <MaxTileRow>6</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>7</MinTileRow>
-         <MaxTileRow>7</MaxTileRow>
-      </VariableMatrixWidth>
-   </TileMatrix>
-   <TileMatrix>
-      <ows:Identifier>3</ows:Identifier>
-      <ScaleDenominator>17471320.7508974298835</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
-      <TileWidth>256</TileWidth>
-      <TileHeight>256</TileHeight>
-      <MatrixWidth>32</MatrixWidth>
-      <MatrixHeight>16</MatrixHeight>
-      <VariableMatrixWidth>
-         <Coalesce>8</Coalesce>
-         <MinTileRow>0</MinTileRow>
-         <MaxTileRow>0</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>1</MinTileRow>
-         <MaxTileRow>1</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>2</MinTileRow>
-         <MaxTileRow>3</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>12</MinTileRow>
-         <MaxTileRow>13</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>14</MinTileRow>
-         <MaxTileRow>14</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>8</Coalesce>
-         <MinTileRow>15</MinTileRow>
-         <MaxTileRow>15</MaxTileRow>
-      </VariableMatrixWidth>
-   </TileMatrix>
-   <TileMatrix>
-      <ows:Identifier>4</ows:Identifier>
-      <ScaleDenominator>8735660.3754487149417</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
-      <TileWidth>256</TileWidth>
-      <TileHeight>256</TileHeight>
-      <MatrixWidth>64</MatrixWidth>
-      <MatrixHeight>32</MatrixHeight>
-      <VariableMatrixWidth>
-         <Coalesce>16</Coalesce>
-         <MinTileRow>0</MinTileRow>
-         <MaxTileRow>0</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>8</Coalesce>
-         <MinTileRow>1</MinTileRow>
-         <MaxTileRow>1</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>2</MinTileRow>
-         <MaxTileRow>3</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>4</MinTileRow>
-         <MaxTileRow>7</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>24</MinTileRow>
-         <MaxTileRow>27</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>28</MinTileRow>
-         <MaxTileRow>29</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>8</Coalesce>
-         <MinTileRow>30</MinTileRow>
-         <MaxTileRow>30</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>16</Coalesce>
-         <MinTileRow>31</MinTileRow>
-         <MaxTileRow>31</MaxTileRow>
-      </VariableMatrixWidth>
-   </TileMatrix>
+include::../schemas/tms/2.0/xml/examples/tilematrixset/GNOSISGlobalGrid.xml[lines=1..157]
 </TileMatrixSet>
-
 ....
-
  
 
-[[json-document-instance-using-variablematrixwidth]]
-=== JSON document instance using VariableMatrixWidth
-
-This example takes the first five tile matrices of the definition of the GNOSIS Global Grid (http://ecere.ca/gnosis/) and presents them encoded in JSON following this standard. Please note that GNOSIS Global Grid conforms to the GoogleCRS84Quad well known scale set but it is not using the same identifiers as the WorldCRS84Quad TileMatrixSet. The complete example can be found in the supplemental material described in Annex B.
+[[json-gnosisglobalgrid]]
+=== GNOSIS Global Grid (JSON)
 
 [source,JSON]
 ....
-{
-   "title": "GNOSIS Global Grid",
-   "identifier": "GNOSISGlobalGrid",
-   "boundingBox":
-   {
-      "crs": "http://www.opengis.net/def/crs/EPSG/0/4326",
-      "lowerCorner":
-      [
-         -90,
-         -180
-      ],
-      "upperCorner":
-      [
-         90,
-         180
-      ]
-   },
-   "supportedCRS": "http://www.opengis.net/def/crs/EPSG/0/4326",
-   "tileMatrices":
-   [
-      {
-         "identifier": "0",
-         "scaleDenominator": 139770566.0071794390678,
-         "topLeftCorner":
-         [
-            90,
-           -180
-         ],
-         "tileWidth": 256,
-         "tileHeight": 256,
-         "matrixWidth": 4,
-         "matrixHeight": 2
-      },
-      {
-         "identifier": "1",
-         "scaleDenominator": 69885283.0035897195339,
-         "topLeftCorner":
-         [
-            90,
-           -180
-         ],
-         "tileWidth": 256,
-         "tileHeight": 256,
-         "matrixWidth": 8,
-         "matrixHeight": 4,
-         "variableMatrixWidths":
-         [
-           {
-              "coalesce": 2,
-              "minTileRow": 0,
-              "maxTileRow": 0
-           },
-           {
-              "coalesce": 2,
-              "minTileRow": 3,
-              "maxTileRow": 3
-           }
-         ]
-      },
-      {
-         "identifier": "2",
-         "scaleDenominator": 34942641.501794859767,
-         "topLeftCorner":
-         [
-           90,
-           -180
-         ],
-         "tileWidth": 256,
-         "tileHeight": 256,
-         "matrixWidth": 16,
-         "matrixHeight": 8,
-         "variableMatrixWidths":
-         [
-           {
-              "coalesce": 4,
-              "minTileRow": 0,
-              "maxTileRow": 0
-           },
-           {
-              "coalesce": 2,
-              "minTileRow": 1,
-              "maxTileRow": 1
-           },
-           {
-              "coalesce": 2,
-              "minTileRow": 6,
-              "maxTileRow": 6
-           },
-           {
-              "coalesce": 4,
-              "minTileRow": 7,
-              "maxTileRow": 7
-           }
-         ]
-      },
-      {
-         "identifier": "3",
-         "scaleDenominator": 17471320.7508974298835,
-         "topLeftCorner":
-         [
-           90,
-           -180
-         ],
-         "tileWidth": 256,
-         "tileHeight": 256,
-         "matrixWidth": 32,
-         "matrixHeight": 16,
-         "variableMatrixWidths":
-         [
-           {
-              "coalesce": 8,
-              "minTileRow": 0,
-              "maxTileRow": 0
-           },
-           {
-              "coalesce": 4,
-              "minTileRow": 1,
-              "maxTileRow": 1
-           },
-           {
-              "coalesce": 2,
-              "minTileRow": 2,
-              "maxTileRow": 3
-           },
-           {
-              "coalesce": 2,
-              "minTileRow": 12,
-              "maxTileRow": 13
-           },
-           {
-              "coalesce": 4,
-              "minTileRow": 14,
-              "maxTileRow": 14
-           },
-           {
-              "coalesce": 8,
-              "minTileRow": 15,
-              "maxTileRow": 15
-           }
-         ]
-      },
-      {
-         "identifier": "4",
-         "scaleDenominator": 8735660.3754487149417,
-         "topLeftCorner":
-         [
-           90,
-           -180
-         ],
-         "tileWidth": 256,
-         "tileHeight": 256,
-         "matrixWidth": 64,
-         "matrixHeight": 32,
-         "variableMatrixWidths":
-         [
-           {
-              "coalesce": 16,
-              "minTileRow": 0,
-              "maxTileRow": 0
-           },
-           {
-              "coalesce": 8,
-              "minTileRow": 1,
-              "maxTileRow": 1
-           },
-           {
-              "coalesce": 4,
-              "minTileRow": 2,
-              "maxTileRow": 3
-           },
-           {
-              "coalesce": 2,
-              "minTileRow": 4,
-              "maxTileRow": 7
-           },
-           {
-              "coalesce": 2,
-              "minTileRow": 24,
-              "maxTileRow": 27
-           },
-           {
-              "coalesce": 4,
-              "minTileRow": 28,
-              "maxTileRow": 29
-           },
-           {
-              "coalesce": 8,
-              "minTileRow": 30,
-              "maxTileRow": 30
-           },
-           {
-              "coalesce": 16,
-              "minTileRow": 31,
-              "maxTileRow": 31
-           }
-         ]
-      }
-   ] 
+include::../schemas/tms/2.0/json/examples/tilematrixset/GNOSISGlobalGrid.json[lines=1..183]
+      }
+   ]
 }
+....
 
+The second example represents the https://docs.opengeospatial.org/is/15-113r5/15-113r5.html#CharacteristicsoftheCDBtilingstoragemodel[CDB Zones and Levels of Detail]
+which can be encoded following this standard with the use of variable widths.
+For the tile matrices with negative identifiers of the CDB Global Grid, the tiles' geographic extents remain the same as those of tile matrix 0,
+but the tile size in pixels is reduced. The levels -1 to 2 are shown here.
+Note that unlike the GNOSIS Global Grid, for the CDB Global Grid the polar adjustment is the same for all tile matrices of the set.
+
+[[xml-cdbglobalgrid]]
+=== CDB Global Grid (XML)
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=1..12]
+include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=553..791]
+</TileMatrixSet>
+....
+ 
+
+[[json-cdbglobalgrid]]
+=== CDB Global Grid (JSON)
+
+[source,JSON]
+....
+include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=1..17]
+include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=594..848]
+      }
+   ]
+}
 ....
  

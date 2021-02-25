@@ -220,7 +220,7 @@ http://www.opengis.net/spec/tilematrixset/2.0/conf/xml-variablematrixwidth
 |===
 | Test id: | *xml-variablematrixwidth/model*
 | Test Purpose: | *Req 12 req/xml-tilematrixsetlimits2d/model:* +
-A TileMatrixSetMetadata encoded in XML _shall_ implement the class TileMatrixSetMetadata +
+A TileSetMetadata encoded in XML _shall_ implement the class TileSetMetadata +
 | Dependency: | req/tilematrixsetmetadata +
 | Dependency: | req/xml-tilematrixsetlimits2d.
 | Test method: | Validate the requirements of the model
@@ -233,7 +233,7 @@ Test passes if VariableMatrixWidth instances use a VariableMatrixWidth XML data 
 |===
 | Test id: | *xml-variablematrixwidth/schema*
 | Test Purpose: | *Req 13 req/xml-tilematrixsetmetadata/schema:* +
-A TileMatrixSetMetadata encoded in XML _shall_ validate using the XML schema for a tile matrix set link 2D.**
+A TileSetMetadata encoded in XML _shall_ validate using the XML schema for a tile matrix set link 2D.**
 | Test method: | Validate the requirements of the model
 
 Test passes if VariableMatrixWidth XML instances pass validation against the variable matrix width XML Schemas.
@@ -260,7 +260,7 @@ Test passes if TileMatrixSetLimits2D instances point to the TileMatrixSetLimits2
 |===
 
 [[a.8-conformance-class-tilematrixsetmetadata]]
-=== Conformance class: TileMatrixSetMetadata
+=== Conformance class: TileSetMetadata
 
 The OGC URI identifier of this conformance class is:
 
@@ -274,7 +274,7 @@ http://www.opengis.net/spec/tilematrixset/2.0/conf/tilematrixsetmetadata
 A tiled resource or dataset _shall_ declare support to a tile matrix set 2D by link to a tile matrix set definition by citing a tile matrix set identifier defined in the same document instance or an active (resolvable) link to a TileMatrixSet definition in an external document.**
 | Test method: | Validate the requirements of the model
 
-Test passes if all TileMatrixSetMetadata elements in the instance cite a tile matrix set by mentioning at least one TileMatrixSet identifier or by using a URI that can be resolved into a TileMatrixSet2D.
+Test passes if all TileSetMetadata elements in the instance cite a tile matrix set by mentioning at least one TileMatrixSet identifier or by using a URI that can be resolved into a TileMatrixSet2D.
 |===
 
 ==== Identifier
@@ -286,7 +286,7 @@ When a tiled resource or dataset has tiles available only for a region or region
 | Dependency: | req/tilematrixsetlimits
 | Test method: | Validate the requirements of the model
 
-Test passes if TileMatrixSetMetadata instances point to the TileMatrixSetMetadata data type definition and follow the data model specified in Table 5 and its dependencies.
+Test passes if TileSetMetadata instances point to the TileSetMetadata data type definition and follow the data model specified in Table 5 and its dependencies.
 |===
 
 [[a.9-conformance-class-json-encoding-for-tilematrixsetlimits2d]]
@@ -331,7 +331,7 @@ Test passes if TileMatrixSetLimits2D JSON instances pass validation against the 
 |===
 
 [[a.10-conformance-class-json-encoding-for-tilematrixsetmetadata]]
-=== Conformance class: JSON Encoding for TileMatrixSetMetadata
+=== Conformance class: JSON Encoding for TileSetMetadata
 
 The OGC URI identifier of this conformance class is:
 
@@ -342,12 +342,12 @@ http://www.opengis.net/spec/tilematrixset/2.0/conf/json-tilematrixsetmetadata
 |===
 | Test id: | *json-tilematrixsetmetadata/model*
 | Test Purpose: | *Req 23 req/json-tilematrixsetmetadata/model:* +
-A TileMatrixSetLimits2D encoded in JSON _shall_ implement the class TileMatrixSetMetadata +
+A TileMatrixSetLimits2D encoded in JSON _shall_ implement the class TileSetMetadata +
 | Dependency: | req/tilematrixsetmetadata +
 | Dependency: | req/json-tilematrixsetlimits2d.
 | Test method: | Validate the requirements of the model
 
-Test passes if TileMatrixSetMetadata instances follow the data model specified in Table 5 and its dependencies.
+Test passes if TileSetMetadata instances follow the data model specified in Table 5 and its dependencies.
 |===
 
 ==== IETF
@@ -355,10 +355,10 @@ Test passes if TileMatrixSetMetadata instances follow the data model specified i
 |===
 | Test id: | *json-tilematrixsetmetadata/ietf*
 | Test Purpose: | *Req 24 req/json-tilematrixsetmetadata/ietf:* +
-A TileMatrixSetMetadata encoded in JSON _shall_ conform to IETF RFC7159****
+A TileSetMetadata encoded in JSON _shall_ conform to IETF RFC7159****
 | Test method: | Validate the requirements of the IETF rules
 
-Test passes if TileMatrixSetMetadata JSON instances pass format validation against the IETF rules.
+Test passes if TileSetMetadata JSON instances pass format validation against the IETF rules.
 |===
 
 ==== Schema
@@ -366,10 +366,10 @@ Test passes if TileMatrixSetMetadata JSON instances pass format validation again
 |===
 | Test id: | *json-tilematrixsetmetadata/schema*
 | Test Purpose: | *Req 25 req/json-tilematrixsetmetadata/schema:* +
-A TileMatrixSetMetadata encoded in JSON _shall_ validate using the JSON schema for a tile matrix set link 2D.**
+A TileSetMetadata encoded in JSON _shall_ validate using the JSON schema for a tile matrix set link 2D.**
 | Test method: | Validate the requirements of the schema
 
-Test passes if TileMatrixSetMetadata JSON instances pass validation against the tile matrix set link 2D JSON Schemas.
+Test passes if TileSetMetadata JSON instances pass validation against the tile matrix set link 2D JSON Schemas.
 |===
 
 [[a.11-conformance-class-xml-encoding-for-tilematrixsetlimits2d]]
@@ -403,7 +403,7 @@ Test passes if TileMatrixSetLimits2D XML instances pass validation against the t
 |===
 
 [[a.12-conformance-class-xml-encoding-for-tilematrixsetmetadata]]
-=== Conformance class: XML Encoding for TileMatrixSetMetadata
+=== Conformance class: XML Encoding for TileSetMetadata
 
 The OGC URI identifier of this conformance class is:
 
@@ -414,12 +414,12 @@ http://www.opengis.net/spec/tilematrixset/2.0/conf/xml-tilematrixsetmetadata
 |===
 | Test id: | *xml-tilematrixsetmetadata/model*
 | Test Purpose: | *Req 12 req/xml-tilematrixsetlimits2d/model:* +
-A TileMatrixSetMetadata encoded in XML _shall_ implement the class TileMatrixSetMetadata +
+A TileSetMetadata encoded in XML _shall_ implement the class TileSetMetadata +
 | Dependency: | req/tilematrixsetmetadata +
 | Dependency: | req/xml-tilematrixsetlimits2d.**
 | Test method: | Validate the requirements of the model
 
-Test passes if TileMatrixSetMetadata instances use a TileMatrixSetMetadata XML data type definition that follows the data model specified in Table 5 and its dependencies.
+Test passes if TileSetMetadata instances use a TileSetMetadata XML data type definition that follows the data model specified in Table 5 and its dependencies.
 |===
 
 ==== Schema
@@ -427,9 +427,9 @@ Test passes if TileMatrixSetMetadata instances use a TileMatrixSetMetadata XML d
 |===
 | Test id: | *xml-tilematrixsetmetadata/schema*
 | Test Purpose: | *Req 13 req/xml-tilematrixsetmetadata/schema:* +
-A TileMatrixSetMetadata encoded in XML _shall_ validate using the XML schema for a tile matrix set link 2D.**
+A TileSetMetadata encoded in XML _shall_ validate using the XML schema for a tile matrix set link 2D.**
 | Test method: | Validate the requirements of the model
 
-Test passes if TileMatrixSetMetadata XML instances pass validation against the tile matrix set link 2D XML Schemas.
+Test passes if TileSetMetadata XML instances pass validation against the tile matrix set link 2D XML Schemas.
 |===
 

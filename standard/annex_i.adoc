@@ -14,7 +14,7 @@ Equivalences from the old version into the new version are:
 .Equivalences between the old and new data structures
 [width = "100%",options="header"]
 |===
-| Previous version (1.0) | Current version (1.1)
+| Previous version (1.0) | Current version (2.0)
 | TileMatrixSetLink | TileSetMetadata
 | |
 |===

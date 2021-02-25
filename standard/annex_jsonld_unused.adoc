@@ -11,7 +11,7 @@ This informative Annex provides an example of JSON-LD TileMatrixSet2D and the co
 
 Example of JSON-LD document instance. @context documents have been included when necessary and the identifiers have been qualified with a namespace ensuring a good transformation to RDF using a JSON-LD engine. The complete example can be found in the supplemental material described in Annex B.
 
-[source,JSON]
+[source,json]
 ....
 {
    "@context": ["http://localhost/json-ld/tms-context.json", {"example": "http://www.opengis.net/tms/1.0/example/WorldCRS84Quad/"}],
@@ -267,7 +267,7 @@ _:b9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:b10 .
 
 This is the tms-context.json document that is included at the beginning of a JSON TileMatrixSet2D instance to transform it into a JSON-LD file. Other similar @context documents are included in other sections and are provided as supplementary material to this document as explained in Annex B.
 
-[source,JSON]
+[source,json]
 ....
 {
    "@context":

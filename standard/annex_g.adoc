@@ -11,7 +11,7 @@ This informative Annex provides an example of use for TileSetMetadata and TileMa
 
 TileSetMetadata data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in JSON.
 
-[source,JSON]
+[source,json]
 ....
 include::../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
 ....
@@ -21,7 +21,7 @@ include::../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
 
 The TileSetMetadata data structure can be included in the definition of a resource data model. This JSON Schema fragment illustrates how this standard JSON schemas can be used in conjunction with the resource schemas.
 
-[source,JSON]
+[source,json]
 ....
 include::../schemas/tms/2.0/json/tileSet.json[]
 ....

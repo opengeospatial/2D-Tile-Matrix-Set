@@ -12,9 +12,9 @@ These Schema Documents are posted online at the URL http://schemas.opengis.net/t
 
 The JSON Schema Documents are situated in the json subfolder and are named:
 
-json/tileMatrixSet.json
-json/tileMatrixLimits.json
-json/tileSet.json
+- json/tileMatrixSet.json
+- json/tileMatrixLimits.json
+- json/tileSet.json
 
 They include the schemas necessary to JSON-validate the classes JSONTileMatrixSet2D, JSONTileMatrixSetLimits2D and JSONTileSetMetadata, respectively.
 The json/examples/tilematrixset subfolder is provided with the complete set of JSON documents that are also provided in Annex E and F of this document.
@@ -27,11 +27,11 @@ contains examples of the JSON tileset metadata encodings.
 [[b.2-xml-schema]]
 === XML Schema     
 
-The main XML Schema Document is situated in the xml subfolder and it is named:
+The XML Schema Documents are situated in the xml subfolder and are named:
 
-xml/tilematrixset.xsd
-xml/tilematrixlimits.xsd
-xml/tileset.xsd
+- xml/tilematrixset.xsd
+- xml/tilematrixlimits.xsd
+- xml/tileset.xsd
 
 They includes the schemas necessary to XML-validate the classes XMLTileMatrixSet2D, XMLTileMatrixSetLimits2D and XMLTileSetMetadata, respectively.
 The xml/examples/tilematrixset subfolder is provided with the complete set of XML documents that are also provided in Annex E and F of this document.

@@ -1,223 +1,71 @@
 [appendix]
-[[annex_f]]
-[[example-encodings-for-tilematrixsetlink2d-informative]]
+[[annex_h]]
+[[example-encodings-for-variable-matrix-width-informative]]
 :appendix-caption: Annex
-== Example encodings for TileMatrixSetLink2D (Informative)
+== Example encodings for Variable Matrix Width TileMatrixSets (Informative)
 
-This informative Annex provides an example of use for TileMatrixSetLink2D and TileMatrixSetLimits2D data structures.
+This informative Annex provides examples of the Variable Matrix Width extension.
 
-[[xml-document-instance-using-tilematrixsetlink2d]]
-=== XML document instance using TileMatrixSetLink2D
+The first example shows the first five tile matrices of the definition of the https://ecere.ca/gnosis/[GNOSIS] Global Grid and presents them
+encoded in XML and JSON following this standard.
+Note that the GNOSIS Global Grid scales match the _GoogleCRS84Quad_ Well Known Scale Set, but starts at the third scale of the set.
+Since the _WorldCRS84Quad_ TileMatrixSet starts at the second scale, its TileMatrix identifier 1 is equivalent to the GNOSISGlobalGrid TileMatrix identifier 0,
+with the exception of the variable width considerations.
+In this case, the variable matrix width is applied only from the tile matrix with identifier 1 and higher.
+The GNOSIS Global Grid is easy to implement procedurally: it is a quad-tree starting with 8 90 degrees x 90 degrees tiles at level 0,
+with the exception that tiles touching a pole are split into 3 tiles rather than 4 -- the polar portion is not split longitude-wise.
+Therefore there will always be only 4 tiles touching each pole.
 
-TileMatrixSetLink2D data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in XML.
+The complete JSON example can be found in the supplemental material described in Annex B.
 
-[source,xml]
-....
-<?xml version="1.0" encoding="UTF-8"?>
-<LayerExample xmlns="http://www.opengis.net/tms/1.0/link_xmp" xmlns:tms="http://www.opengis.net/tms/1.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/1.0/link_xmp LayerWithTMSLink.xsd">
-<ows:Title>Catalonia</ows:Title>
-<ows:Abstract>Catalonia Extent</ows:Abstract>
-<ows:WGS84BoundingBox>
-   <ows:LowerCorner>-1.062 38.198</ows:LowerCorner>
-   <ows:UpperCorner>4.827 43.748</ows:UpperCorner>
-</ows:WGS84BoundingBox>
-<ows:Identifier>Cat</ows:Identifier>
-<tms:TileMatrixSetLink>
-   <tms:TileMatrixSet>WorldCRS84Quad</tms:TileMatrixSet>
-   <tms:TileMatrixSetLimits>
-      <tms:TileMatrixLimits>
-         <tms:TileMatrix>3</tms:TileMatrix>
-         <tms:MinTileRow>4</tms:MinTileRow>
-         <tms:MaxTileRow>5</tms:MaxTileRow>
-         <tms:MinTileCol>2</tms:MinTileCol>
-         <tms:MaxTileCol>2</tms:MaxTileCol>
-      </tms:TileMatrixLimits>
-      <tms:TileMatrixLimits>
-         <tms:TileMatrix>4</tms:TileMatrix>
-         <tms:MinTileRow>8</tms:MinTileRow>
-         <tms:MaxTileRow>9</tms:MaxTileRow>
-         <tms:MinTileCol>4</tms:MinTileCol>
-         <tms:MaxTileCol>4</tms:MaxTileCol>
-      </tms:TileMatrixLimits>
-   </tms:TileMatrixSetLimits>
-</tms:TileMatrixSetLink>
-</LayerExample>
 
-....
-
- 
-
-[[xml-schema-used-to-validate-the-previous-xml-document]]
-=== XML schema used to validate the previous XML document
-
-The TileMatrixSetLink2D data structure can be included in the definition of a resource data model. This XML Schema fragment illustrates how this standard XML schemas can be used in conjunction with the resource schemas.
-
-[source,xml]
-....
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:xmp="http://www.opengis.net/tms/1.0/link_xmp" xmlns:tms="http://www.opengis.net/tms/1.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xlink="http://www.w3.org/1999/xlink" targetNamespace="http://www.opengis.net/tms/1.0/link_xmp" elementFormDefault="qualified" xml:lang="en">
-   <annotation>
-      <appinfo>TMS Link example 2019-02-02</appinfo>
-      <documentation>
-         This XML Schema Document encodes the TileMatrisSet data structures.
-         TMS is an OGC Standard Copyright (c) 2019 Open Geospatial Consortium, Inc. All Rights Reserved.
-          To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
-      </documentation>
-   </annotation>
-   <!– *********************************************************************
-                Includes and imports.                           
-          ********************************************************************* –>
-   <import namespace="http://www.opengis.net/tms/1.0" schemaLocation="../tms.xsd"/>
-   <import namespace="http://www.opengis.net/ows/2.0" schemaLocation="../../../../ows/2.0/owsAll.xsd"/>
-   <import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../../../xlink/1.0.0/xlinks.xsd"/>
-   <!– ********************************************************************* –>
-   <!– **  The Layer Example element.                                      ** –>
-   <!– ********************************************************************* –>
-   <element name="LayerExample" type="xmp:LayerTypeExample" substitutionGroup="ows:DatasetDescriptionSummary"/>
-   <complexType name="LayerTypeExample">
-      <annotation>
-         <documentation>Example of a Layer tht links to TMS Link</documentation>
-      </annotation>
-      <complexContent>
-         <extension base="ows:DatasetDescriptionSummaryBaseType">
-           <sequence>
-              <element ref="tms:TileMatrixSetLink" minOccurs="0" maxOccurs="unbounded">
-                 <annotation>
-                    <documentation>Link to a tile mateix set</documentation>
-                 </annotation>
-              </element>
-           </sequence>
-         </extension>
-      </complexContent>
-   </complexType>
-</schema>
-
-....
-
- 
-
-[[json-document-instance-using-tilematrissetlink2d]]
-=== JSON document instance using TileMatrisSetLink2D
-
-TileMatrixSetLink2D data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in JSON.
+[[json-gnosisglobalgrid]]
+=== GNOSIS Global Grid (JSON)
 
 [source,JSON]
 ....
-{
-   "title": "Catalonia",
-   "identifier": "Cat",
-   "tileMatrixSetLink": {
-      "tileMatrixSet": "WorldCRS84Quad",
-      "tileMatrixSetLimits": [{
-         "tileMatrix": "3",
-         "minTileRow": 4,
-         "maxTileRow": 5,
-         "minTileCol": 2,
-         "maxTileCol": 2
-      },{
-         "tileMatrix": "4",
-         "minTileRow": 8,
-         "maxTileRow": 9,
-         "minTileCol": 4,
-         "maxTileCol": 4
-      }]
-   }
+include::../schemas/tms/2.0/json/examples/tilematrixset/GNOSISGlobalGrid.json[lines=1..183]
+      }
+   ]
 }
-
 ....
 
- 
+[[xml-gnosisglobalgrid]]
+=== GNOSIS Global Grid (XML)
 
-[[json-schema-used-to-validate-the-previous-json-document]]
-=== JSON schema used to validate the previous JSON document
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/GNOSISGlobalGrid.xml[lines=1..157]
+</TileMatrixSet>
+....
 
-The TileMatrixSetLink2D data structure can be included in the definition of a resource data model. This JSON Schema fragment illustrates how this standard JSON schemas can be used in conjunction with the resource schemas.
+
+The second example represents the https://docs.opengeospatial.org/is/15-113r5/15-113r5.html#CharacteristicsoftheCDBtilingstoragemodel[CDB Zones and Levels of Detail]
+which can be encoded following this standard with the use of variable widths.
+For the tile matrices with negative identifiers of the CDB Global Grid, the tiles' geographic extents remain the same as those of tile matrix 0,
+but the tile size in pixels is reduced. The levels -1 to 2 are shown here.
+Note that unlike the GNOSIS Global Grid, for the CDB Global Grid the polar adjustment is the same for all tile matrices of the set.
+
+[[json-cdbglobalgrid]]
+=== CDB Global Grid (JSON)
 
 [source,JSON]
 ....
-{
-   "$schema": "http://json-schema.org/draft-04/schema#",
-   "title": "",
-   "description": "",
-   "type": "object",
-   "properties": {
-      "title": {
-         "description": "Title of this resource, normally used for display to a human",
-         "type": "string"
-      },
-      "abstract": {
-         "description": "Brief narrative description of this resource, normally available for display to a human",
-         "type": "string"
-      },
-      "identifier": {
-         "description": "Resource identifier",
-         "type": "string"
-      },
-      "tileMatrixSetLink": {
-         "description": "Tile Matrix Set Link data structure",
-         "$ref": "#/definitions/tileMatrixSetLink"
-      }
-   },
-   "definitions":{
-      "tileMatrixSetLink": {
-         "type": "object",
-         "required": ["type", "tileMatrixSet"],
-         "properties": {
-           "type": {
-              "description": "Type of the Tile Matrix Set Link",
-              "enum": ["TileMatrixSetLink"]
-           },
-           "tileMatrixSet": {
-              "description": "Reference to a tileMatrixSet",
-              "type": "string"
-           },
-           "tileMatrixSetLimits": {
-              "description": "Index limits for this tileMatrixSet",
-              "type": "array",
-              "items": {
-                 "$ref": "#/definitions/tileMatrixSetLimits"
-              }
-           }
-         }
-      },
-      "tileMatrixSetLimits": {
-         "type": "object",
-         "required": ["type", "tileMatrix", "minTileRow", "maxTileRow", "minTileCol", "maxTileCol"],
-         "properties": {
-           "type": {
-              "description": "Type of the Tile Matrix Set Limits",
-              "enum": ["TileMatrixLimits"]
-           },
-           "tileMatrix": {
-              "description": "Reference to a tileMatrix identifier",
-              "type": "string"
-           },
-           "minTileRow": {
-              "description": "Minimum tile row index valid for this layer",
-              "type": "number",
-              "minimum": 0,
-              "multipleOf" : 1
-           },
-           "maxTileRow": {
-              "description": "Maximim tile row index valid for this layer",
-              "type": "number",
-              "minimum": 0,
-              "multipleOf" : 1
-           },
-           "minTileCol": {
-              "description": "Minimum tile column index valid for this layer",
-              "type": "number",
-              "minimum": 0,
-              "multipleOf" : 1
-           },
-           "maxTileCol": {
-              "description": "Maximim tile column index valid for this layer",
-              "type": "number",
-              "minimum": 0,
-              "multipleOf" : 1
-           }
-         }
-      }
-   }
+include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=1..17]
+include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=594..848]
+      }
+   ]
 }
-
 ....
+ 
+
+[[xml-cdbglobalgrid]]
+=== CDB Global Grid (XML)
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=1..12]
+include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=553..791]
+</TileMatrixSet>
+....
+ 

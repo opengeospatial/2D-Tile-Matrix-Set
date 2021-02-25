@@ -66,7 +66,7 @@ One for each keyword authority used (one for each 'type' value)
 
 Keywords is described from MD_Keywords class in ISO 19115-1 and has a list of keywords of the same 'type' specified in the optional 'type' element,
 
-[#parts-of-descriptiontitlekeyword-elements,reftext='{table-caption} {counter:table-num}']
+[#parts-of-descriptiontitlekeyword-elements2,reftext='{table-caption} {counter:table-num}']
 .Parts of Description Title Keyword data elements
 [width = "100%",options="header"]
 |===

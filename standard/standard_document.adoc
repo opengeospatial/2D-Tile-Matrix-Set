@@ -87,15 +87,15 @@ include::clause_4_terms_and_definitions.adoc[]
 
 include::clause_5_conventions.adoc[]
 
-include::clause_6_tile_matrix_set_concept.adoc[]
+include::clause_6_tile_matrix_set.adoc[]
 
-include::clause_7_tilematrixset2d_model.adoc[]
+include::clause_7_tilematrixset_encodings.adoc[]
 
-include::clause_8_xml_encoding.adoc[]
+include::clause_8_tileset_metadata.adoc[]
 
-include::clause_9_json_encoding.adoc[]
+include::clause_9_tileset_metadata_encodings.adoc[]
 
-include::clause_10_json-ld_encoding.adoc[]
+// include::clause_10_json-ld_encoding.adoc[]
 
 <<<
 ////
@@ -113,11 +113,14 @@ include::annex_e.adoc[]
 
 include::annex_f.adoc[]
 
+// include::annex_jsonld_unused.adoc[]
+
 include::annex_g.adoc[]
 
 include::annex_h.adoc[]
 
 include::annex_i.adoc[]
+
 
 ////
 Revision History should be the last annex before the Bibliography

@@ -136,7 +136,7 @@ image::figures/5.png[TileMatrix with variable matrix width]
 [[tilematrixset2d-requirements-class]]
 ==== TileMatrixSet2D requirements class
 
-Requirements class tilematrixset2D establishes how to describe a TileMatrixSet for a two-dimensional tile space. It is expected that tile matrix sets are defined once and that servers or encodings using or distributing tiles will declare the usage of a tile matrix set by linking to that tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.1/req/tilematrixset2d.
+Requirements class tilematrixset2D establishes how to describe a TileMatrixSet for a two-dimensional tile space. It is expected that tile matrix sets are defined once and that servers or encodings using or distributing tiles will declare the usage of a tile matrix set by linking to that tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixset2d.
 
 include::requirements/REQ_tilematrixset2d_model.adoc[]
 

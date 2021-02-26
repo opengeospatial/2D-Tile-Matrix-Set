@@ -6,7 +6,7 @@
 
 This informative Annex provides an example of use for TileSetMetadata and TileMatrixSetLimits2D data structures.
 
-[[json-document-instance-using-tilematrissetlink2d]]
+[[json-document-instance-using-tilesetmetadata]]
 === JSON document instance using TileSetMetadata
 
 TileSetMetadata data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in JSON.
@@ -26,10 +26,10 @@ The TileSetMetadata data structure can be included in the definition of a resour
 include::../schemas/tms/2.0/json/tileSet.json[]
 ....
 
-[[xml-document-instance-using-tilematrixsetlink2d]]
+[[xml-document-instance-using-tilesetmetadata]]
 === XML document instance using TileSetMetadata
 
-TileMatrixSetLink2D data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in XML.
+TileSetMetadata data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in XML.
 
 [source,xml]
 ....

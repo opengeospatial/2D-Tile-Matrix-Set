@@ -7,7 +7,7 @@
 [[json-encoding-of-a-tilematrixsetlimits]]
 ==== JSON TileMatrixSetLimits2D
 
-The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/json-tilematrixsetlimits2d.
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/json-tilematrixsetlimits2d.
 
 include::requirements/REQ_json_tilematrixsetlimits2d_model.adoc[]
 
@@ -15,24 +15,24 @@ include::requirements/REQ_json_tilematrixsetlimits2d_ietf.adoc[]
 
 include::requirements/REQ_json_tilematrixsetlimits2d_schema.adoc[]
 
-NOTE: A TileMatrixSetLimits2D description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
+NOTE: A TileMatrixSetLimits2D description can be embedded within the TileSetMetadata, as for the _OGC API - Tiles_ tileset conformance class.
 
-Annex G provides JSON examples for common TileMatrixSet2DLimits.
+Annex G provides JSON examples for common TileMatrixSetLimits2D.
 
-[[json-encoding-of-a-tilematrixsetlink]]
+[[json-encoding-of-a-tilesetmetadata]]
 ==== JSON TileSetMetadata
 
-The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/json-tilematrixsetlink2d.
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/json-tilesetmetadata.
 
-include::requirements/REQ_json_tilesetmetadata2d_model.adoc[]
+include::requirements/REQ_json_tilesetmetadata_model.adoc[]
 
-include::requirements/REQ_json_tilesetmetadata2d_ietf.adoc[]
+include::requirements/REQ_json_tilesetmetadata_ietf.adoc[]
 
-include::requirements/REQ_json_tilesetmetadata2d_schema.adoc[]
+include::requirements/REQ_json_tilesetmetadata_schema.adoc[]
 
-NOTE: A TileSetMetadata2D description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
+NOTE: A TileSetMetadata description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
 
-Annex G provides JSON examples for common TileMatrixSet2DLink.
+Annex G provides JSON examples encoding TileSetMetadata.
 
 The encoding of propertiesSchema adopts the JSON Schema form. <<propertiesSchema-attributes-JSON-Schema-quivalences>> describes the mapping between the FeatureAttributes class attributes (in <<parts-of-feature-attribute-data-structure>>) and the JSON schema properties.
 
@@ -64,25 +64,25 @@ The encoding of propertiesSchema adopts the JSON Schema form. <<propertiesSchema
 [[xmltilematrixsetlimits2d-requirements-class]]
 ==== XML TileMatrixSetLimits2D
 
-The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/xml-tilematrixsetlimits2d.
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixsetlimits2d.
 
 include::requirements/REQ_xml_tilematrixsetlimits2d_model.adoc[]
 
 include::requirements/REQ_xml_tilematrixsetlimits2d_schema.adoc[]
 
-NOTE: A TileMatrixSetLimits2D description is normally used as embedded in other XML documents. That is the reason an associated media type is not provided.
+NOTE: A TileMatrixSetLimits2D is normally used as embedded in other XML documents. That is the reason an associated media type is not provided.
 
-Annex G provides XML examples for common TileMatrixSetLimits2D.
+Annex G provides XML examples encoding TileMatrixSetLimits2D.
 
 [[xml-tileset-metadata]]
 ==== XML TileSetMetadata
 
-The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/xml-tilematrixsetlink2d.
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/xml-tilesetmetadata.
 
-include::requirements/REQ_xml_tilematrixsetlink2d_model.adoc[]
+include::requirements/REQ_xml_tilesetmetadata_model.adoc[]
 
-include::requirements/REQ_xml_tilematrixsetlink2d_schema.adoc[]
+include::requirements/REQ_xml_tilesetmetadata_schema.adoc[]
 
-NOTE: A TileMatrixSetLink2D description is normally used as embedded in other XML documents. That is the reason an associated media type is not provided.
+NOTE: A TileSetMetadata does not currently have an associated media type.
 
-Annex G provides XML examples for common TileMatrixSetLink2D.
+Annex G provides XML examples encoding TileSetMetadata.

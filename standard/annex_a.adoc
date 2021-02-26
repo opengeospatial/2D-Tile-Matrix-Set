@@ -27,9 +27,9 @@ A TileMatrixSet implementation of this standard must satisfy the following syste
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/tilematrixset2d
+http://www.opengis.net/spec/tms/2.0/conf/tilematrixset2d
 
-Tests identifiers below are relative to http://www.opengis.net/spec/tilematrixset/2.0
+Tests identifiers below are relative to http://www.opengis.net/spec/tms/2.0
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -48,7 +48,7 @@ Test passes if TileMatrixSet2D instances point to the TileMatrixSet2D data type 
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/variablematrixwidth
+http://www.opengis.net/spec/tms/2.0/conf/variablematrixwidth
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -77,7 +77,7 @@ Test passes if all VariableMatrixWidth elements in the instance has a coalescenc
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/json-tilematrixset2d
+http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixset2d
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -129,7 +129,7 @@ Test passes if the independent instances of TileMatrixSet2D are exposed as appli
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/json-variablematrixwidth
+http://www.opengis.net/spec/tms/2.0/conf/json-variablematrixwidth
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -172,7 +172,7 @@ Test passes if VariableMatrixWidth JSON instances pass validation against the va
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/xml-tilematrixset2d
+http://www.opengis.net/spec/tms/2.0/conf/xml-tilematrixset2d
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -213,7 +213,7 @@ Test passes if the independent instances of TileMatrixSet2D are exposed as appli
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/xml-variablematrixwidth
+http://www.opengis.net/spec/tms/2.0/conf/xml-variablematrixwidth
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -245,7 +245,7 @@ Test passes if VariableMatrixWidth XML instances pass validation against the var
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/tilematrixsetlimits2d
+http://www.opengis.net/spec/tms/2.0/conf/tilematrixsetlimits2d
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -264,7 +264,7 @@ Test passes if TileMatrixSetLimits2D instances point to the TileMatrixSetLimits2
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/tilematrixsetmetadata
+http://www.opengis.net/spec/tms/2.0/conf/tilematrixsetmetadata
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -294,7 +294,7 @@ Test passes if TileSetMetadata instances point to the TileSetMetadata data type 
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/json-tilematrixsetlimits2d
+http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixsetlimits2d
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -335,7 +335,7 @@ Test passes if TileMatrixSetLimits2D JSON instances pass validation against the 
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/json-tilematrixsetmetadata
+http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixsetmetadata
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -377,7 +377,7 @@ Test passes if TileSetMetadata JSON instances pass validation against the tile m
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/xml-tilematrixsetlimits2d
+http://www.opengis.net/spec/tms/2.0/conf/xml-tilematrixsetlimits2d
 
 ==== Model
 [cols=">20h,<80d",width="100%"]
@@ -407,7 +407,7 @@ Test passes if TileMatrixSetLimits2D XML instances pass validation against the t
 
 The OGC URI identifier of this conformance class is:
 
-http://www.opengis.net/spec/tilematrixset/2.0/conf/xml-tilematrixsetmetadata
+http://www.opengis.net/spec/tms/2.0/conf/xml-tilematrixsetmetadata
 
 ==== Model
 [cols=">20h,<80d",width="100%"]

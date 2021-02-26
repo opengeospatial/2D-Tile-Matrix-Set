@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TileMatrixSet id="WorldCRS84Quad" xmlns="http://www.opengis.net/tms/1.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/1.0 ../tms.xsd">
+<TileMatrixSet id="WorldCRS84Quad" xmlns="http://www.opengis.net/tms/2.0" xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../tms.xsd">
 	<ows:Title>CRS84 for the World</ows:Title>
 	<ows:Identifier>WorldCRS84Quad</ows:Identifier>
 	<ows:BoundingBox crs="http://www.opengis.net/def/crs/OGC/1.3/CRS84">

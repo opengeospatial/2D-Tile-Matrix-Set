@@ -19,7 +19,7 @@ The JSON encoding has been done respecting the naming and types of the original 
 [[jsontilematrixset2d]]
 ==== JSON TileMatrixSet
 
-The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/json-tilematrixset2d.
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/json-tilematrixset2d.
 
 include::requirements/REQ_json_tilematrixset2d_model.adoc[]
 
@@ -38,7 +38,7 @@ Annex E provides JSON examples for common TileMatrixSet.
 [[json-variablematrixwidth]]
 ==== JSON VariableMatrixWidth
 
-The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/json-variablematrixwidth.
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/json-variablematrixwidth.
 
 include::requirements/REQ_json_variablematrixwidth_model.adoc[]
 
@@ -54,7 +54,7 @@ Annex H provides JSON examples for common VariableMatrixWidth.
 [[xmltilematrixset2d-requirements-class]]
 ==== XML TileMatrixSet
 
-The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/xml-tilematrixset2d.
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixset2d.
 
 include::requirements/REQ_xml_tilematrixset2d_model.adoc[]
 
@@ -69,7 +69,7 @@ Annex E provides XML examples for common TileMatrixSet.
 [[xml-variablematrixwidth]]
 ==== XML VariableMatrixWidth
 
-The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.0/req/xml-variablematrixwidth.
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/xml-variablematrixwidth.
 
 include::requirements/REQ_xml_variablematrixwidth_model.adoc[]
 

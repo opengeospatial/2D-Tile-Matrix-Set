@@ -1,0 +1,8 @@
+[[req_xml_tilsetmetadata_model]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/xml-tilesetmetadata/model* {set:cellbgcolor:#FFFFFF}
+2+|A TileSetMetadata encoded in XML shall implement the class TileSetMetadata
+| *Dependency:* | /req/tilesetmetadata
+| *Dependency:* | /req/xml-tilesetmetadata
+|===

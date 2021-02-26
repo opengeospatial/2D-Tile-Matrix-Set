@@ -25,7 +25,7 @@ Tiles are identified by tileMatrix id, tileRow number and tileCol number. These 
 [[tilematrixsetlimits2d-requirements-class]]
 ==== TileMatrixSetLimits2D requirements class
 
-Requirements class tilematrixsetlimits2D establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region of for a subset of scales. The array of TileMatrixLimits2D data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.1/req/tilematrixsetlimits2d.
+Requirements class tilematrixsetlimits2D establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region of for a subset of scales. The array of TileMatrixLimits2D data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits2d.
 
 include::requirements/REQ_tilematrixsetlimits2d_model.adoc[]
 
@@ -102,18 +102,18 @@ One (mandatory)
 ^e^    From minTileCol to tileHeight-1 of the tileMatrix of this tileMatrixSet.
 |===
  
-[[tilesetmetadata2d-requirements-class]]
+[[tilesetmetadata-requirements-class]]
 ==== TileSetMetadata requirements class
 
-Requirements class tilesetmetadata2d establishes how to describe TileSet Metadata for a two-dimensional tile space. The  tilesetmetadata2d data structure allows for a dataset declaring the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set, the list of geodata resources used to create the tileset and a recommended center point. Each TileSet in a dataset collection should declare the use of a tile matrix set using this data structure. The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.1/req/tilesetmetadata2d.
+Requirements class TileSetMetadata establishes how to describe TileSet Metadata for a two-dimensional tile space. The TileSetMetadata data structure allows for a dataset declaring the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set, the list of geodata resources used to create the tileset and a recommended center point. Each TileSet in a dataset collection should declare the use of a tile matrix set using this data structure. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata
 
-include::requirements/REQ_tilesetmetadata2d_identifier.adoc[]
+include::requirements/REQ_tilesetmetadata_identifier.adoc[]
 
 NOTE: To determine if two resources or datasets use the same TileMatrixSet, compare their TileMatrixSet identifier. Alternatively, compare TileMatrixSet definitions for an equivalency (a simple calculation can be performed to verify whether or not two given tile matrices are aligned).
 
 NOTE: If the same TileMatrixSet is externally available in more than one format, it is recommended that the format selected is the closer to the original description document format. For example if a OGC API defines tiles using JSON, it is expected to link to a JSON definition of a TileMatrixSet.
  
-include::requirements/REQ_tilesetmetadata2d_model.adoc[]
+include::requirements/REQ_tilesetmetadata_model.adoc[]
 
 [#img_tilesetmetadata-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .TileSetMetadata UML model
@@ -203,7 +203,7 @@ CenterPoint | Location of a tile that nicely represents the tileset. Implementat
 Link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>.^e^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^     Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/) and extracted from <<annex_d>> and <<annex_h>>)
+^b^     Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/) (including definitions from <<annex_d>> and <<annex_f>>)
 
 ^c^     Points to a definition of the TileMatrixSet provided by a tile service
 

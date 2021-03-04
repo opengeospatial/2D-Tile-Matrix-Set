@@ -3,12 +3,12 @@
 
 === Overview
 
-As stated in [OGC 08-015r2] Abstract Specification Topic 2: Spatial Referencing by Coordinates, a coordinate system is a set of mathematical rules for specifying how coordinates are to be assigned to points in space. A CRS is a coordinate system that is related to the real world by a reference datum. An example of mathematical rules is the application of a sphere or an ellipsoid centered in the datum and the use of a projection to transform the sphere or the ellipsoid into a planar representation of the world. Usually, the resulting planar coordinates are expressed as real numbers that express distances to the origin of the projection. This section introduces a tiling scheme called Tile Matrix Set that is defined on top of a CRS.
+As stated in [OGC 08-015r2] Abstract Specification Topic 2: Spatial Referencing by Coordinates, a coordinate system is a set of mathematical rules for specifying how coordinates are to be assigned to points in space. A CRS is a coordinate system that is related to the real world by a reference datum. An example of mathematical rules is the application of a sphere or an ellipsoid centered in the datum and the use of a projection to transform the sphere or the ellipsoid into a planar representation of the world. Usually, the resulting planar coordinates are expressed as real numbers that are distances to the origin of the projection. This section introduces a tiling scheme called Tile Matrix Set that is defined on top of a CRS. A fundamental part of the definiont of a Tile Matrix Set is the Tile Matrix.
 
 [[tile-matrix]]
 ==== Tile Matrix
 
-A _Tile Matrix_ is a tiling scheme defined as a grid coverage. For the [OGC 09-146r6] CIS GeneralGridCoverage, the domain set of a grid describes the direct positions in multi-dimensional coordinate space, depending on the type of grid. In a grid-regular, simple equidistant grids are established. When a regular grid coverage is used to represent the world, the space becomes discrete in each dimension of the grid _domain range_; e.g., it is divided into regular intervals that can be assigned to integer numbers that enumerate and identify _tiles_. This grid of tiles domain range can be defined by:
+A _Tile Matrix_ is a tiling scheme defined as a grid coverage. For the [OGC 09-146r6] CIS GeneralGridCoverage, the domain set of a grid describes the direct positions in multi-dimensional coordinate space, depending on the type of grid. In a grid-regular, simple equidistant grids are established. When a regular grid coverage is used to represent the world, the space becomes discrete in each dimension of the grid _domain range_. One possible discrete subdivision is the use of multidimensional atomic _grid cells_. Another is to divide the domain into regular intervals that can be assigned to integer numbers that enumerate and identify _tiles_. This grid of tiles domain range can be defined by:
 
 [loweralpha]
 . The extreme corner (called point of origin and corner of origin in a two-dimensional space) of the bounding box of regular grid coverage (e.g., the CRS coordinates of the top left corner of the top left extreme where the integer coordinates are 0);
@@ -20,16 +20,16 @@ A _Tile Matrix_ is a tiling scheme defined as a grid coverage. For the [OGC 09-1
 
 Tiles are originally designed to be rendered in rendering devices that have the space quantized in pixels characterized by a size.
 
-The tile size in CRS units of the first two dimensions and the size of the rendering device pixels are related. The relation is a function of the following two parameters:
+The tile size in CRS units of the first two spatial dimensions and the size of the rendering device pixels are related. The two spatial dimensions are aligned with the pixel axes of the device. The relation is a function of the following two parameters:
 
 [loweralpha]
 . A scale (expressed as a scale denominator) and
 
-. A grouping__of rendering pixels__ in a tile forming the tile. 256x256 or 512x512 are common grouping values. Frequently the sizes of the two first dimensions are called _tile width_ and _tile height_.
+. A grouping __of rendering pixels__ in a tile forming the tile. 256x256 or 512x512 are common grouping values. Frequently the sizes of the two first dimensions are called _tile width_ and _tile height_.
 
 NOTE: Normally _tile width_ and _tile height_ are equal but this constraint is not imposed by this standard.
 
-The scale denominator is defined here with respect to a “standardized rendering pixel size” of 0.28 mm × 0.28 mm (millimeters). The definition is the same as used in Web Map Service WMS 1.3.0 [OGC 06-042] and in Symbology Encoding (SE) Implementation Specification 1.1.0 [OGC 05-077r4] and later adopted by WMTS 1.0 [OGC 07-057r7]. Frequently, the true pixel size is unknown and 0.28 mm has the actual size of a common display from 2005. This value is still being used as reference even if current display devices are built with pixel sizes much smaller.
+The scale denominator is defined here with respect to a “standardized rendering pixel size” of 0.28 mm × 0.28 mm (millimeters). The definition is the same as used in Web Map Service WMS 1.3.0 [OGC 06-042] and in Symbology Encoding (SE) Implementation Specification 1.1.0 [OGC 05-077r4] that was later adopted by WMTS 1.0 [OGC 07-057r7]. Frequently, the true pixel size of the device is unknown and 0.28 mm was the actual size of a common display from 2005. This value is still being used as reference even if current display devices are built with pixel sizes much smaller.
 
 NOTE: Since the 1980s, the Microsoft Windows operating system has set their default standard display pixels per inch (PPI) to 96. This value results in an approximated 0.264 mm per pixel. The similarity of this value with the actual 0.28 mm adopted in this standard can create some confusion.
 
@@ -37,37 +37,37 @@ Normally the _matrix width_ is constant and in this circumstance, having a singl
 
 NOTE: The geometry above is different from WMS, which does allow non-square pixels (although many implementations fail to support non-square pixels properly).
 
-In raster tiles, a second regular grid that is coincident with the original regular grid coverage domain range but denser (with smaller cell size but an exact submultiple of that size) is defined. Each grid cell of this new higher resolution grid is called a _grid cell_. The gridded space is defined by the same corner as the original tile matrix. The grid cells are defined by equally dividing the original tiles into __grid cells__using the__number of rendering pixels in a tile__. In common tiled 2D visualization clients, a part of the _grid cells_ is made coincident with the device pixels and this part of the grid is rendered in the device: the second grid is known as the _extrapolated_ _device grid._ In other words, a tile is divided in a number of pixels in each dimension of the CRS in a way that creates pixels of the exact same size of the grid of a rendering device.
+In raster tiles, a second regular grid that is coincident with the original regular grid coverage domain range but denser (with smaller cell size but an exact submultiple of that size) is defined. Each grid cell of this new higher resolution grid is called a _grid cell_. The gridded space is defined by the same corner as the original tile matrix. The grid cells are defined by equally dividing the original tiles into __grid cells__using the__number of rendering pixels in a tile__. In common tiled 2D visualization clients, a part of the _grid cells_ is made coincident with the device pixels and this part of the grid is rendered in the device: the second grid is known as the _extrapolated_ _device grid_. In other words, a tile is divided in a number of pixels in each dimension of the CRS in a way that creates pixels of the exact same size of the grid of a rendering device.
 
-NOTE: In raster tiles, it is common that the range set represents colors of the cells and is stored in PNG or JPEG files of exactly one tile. Nevertheless, nothing prevents to store other kinds of values in other formats, such as TIFF files.
+NOTE: In map tiles, it is common that the range set represents colors of the cells and is stored in PNG or JPEG files of exactly one tile. Nevertheless, nothing prevents to store other kinds of values in other formats, such as TIFF files.
 
 Vector tiles also make use of the _extrapolated_ _device grid_ where vector tiles can be rendered for visualization purposes.
 
-NOTE: Vector tiles expressed in pure vector formats, such as GeoJSON, do not need an _extrapolated device grid_. Other vector tiles formats (e.g., MBTiles) define an internal coincident grid denser than the _extrapolated_ __device grid__and____express the vector coordinates using indices in this denser grid.
+NOTE: Vector tiles expressed in pure vector formats, such as GeoJSON, do not make use of an _extrapolated device grid_. Other vector tiles formats (e.g., MBTiles) define an internal coincident grid denser than the _extrapolated_ __device grid__ and expresses the vector coordinates using indices in this denser grid.
 
-For the case of a two-dimensional space, given the top left point of the tile matrix in CRS coordinates (tileMatrixMinX, tileMatrixMaxY), the width and height of the tile matrix in tile units (matrixWidth, matrixHeight), the __rendering pixels in a tile__values (tileWidth, tileHeight), the coefficient to convert the coordinate reference system (CRS) units into meters (metersPerUnit), and the scale (1:scaleDenominator), the bottom right corner of the bounding box of a tile matrix (tileMatrixMaxX, tileMatrixMinY) can be calculated as follows:
+For the case of a two-dimensional space, given the top left point of the tile matrix in CRS coordinates (tileMatrixMinX, tileMatrixMaxY), the width and height of the tile matrix in tile units (matrixWidth, matrixHeight), the __rendering pixels in a tile__ values (tileWidth, tileHeight), the coefficient to convert the coordinate reference system (CRS) units into meters (metersPerUnit), and the scale (1:scaleDenominator), the bottom right corner of the bounding box of a tile matrix (tileMatrixMaxX, tileMatrixMinY) can be calculated as follows:
 
-__pixelSpan = scaleDenominator__×_0.28 10^-3^ / metersPerUnit(crs);_
+__pixelSpan = scaleDenominator__ × 0.28 10^-3^ / __metersPerUnit(crs)__
 
-__tileSpanX = tileWidth__×_pixelSpan;_
+__tileSpanX = tileWidth__ × __pixelSpan__
 
-__tileSpanY = tileHeight__×_pixelSpan;_
+__tileSpanY = tileHeight__ × __pixelSpan__
 
-__tileMatrixMaxX = tileMatrixMinX + tileSpanX__×_matrixWidth;_
+__tileMatrixMaxX = tileMatrixMinX__ + __tileSpanX__ × __matrixWidth__
 
-__tileMatrixMinY = tileMatrixMaxY - tileSpanY__×_matrixHeight;_
+__tileMatrixMinY = tileMatrixMaxY__ - __tileSpanY__ × __matrixHeight__
 
 The tile space therefore looks like this:
 
 [#img_tile-space,reftext='{figure-caption} {counter:figure-num}']
-.Tile Space
+.Tile Space (the corner of origin is topLeft)
 image::figures/1.png[Tile Space]
 
-Each tile in a tile matrix is identified by its tileCol and tileRow indices that have their 0,0 origin in the tile next to the top left corner of the tile matrix and that increases towards the right and towards the bottom respectively, as shown in Figure 1 (other corners can also be used as origins). Annex F in this document includes pseudocode that illustrates the process for obtaining the tile indices that cover a bounding box rectangle and also the computation to get the CRS coordinates that bound a tile.
+Each tile in a tile matrix is identified by its __tileCol__ and __tileRow__ indices that have their 0,0 origin in one of the corners of the tile matrix. When the topLeft corner is used, __tileCol__ increases towards the right and __TileRow__ towards the bottom, as shown in Figure 1 (bottomLetf corner can also be used as origin making __TileRow__ increase towards the top). <<pseudocode-informative>> in this document includes pseudocode that illustrates the process for obtaining the tile indices that cover a bounding box rectangle and also the computation to get the CRS coordinates that bound a tile.
 
 NOTE: A tile matrix can be implemented as a set of image files (e.g., PNG or JPEG) in a file folder, each file representing a single tile
 
-NOTE2: Section 6 of the TIFF specification v6 defines 2D tiles in the same way that has been done in this standard. All tiles in a tile matrix can be stored in a single TIFF file. The TIFF file includes only one set conterminous tiles sharing a common single scale.
+NOTE: Section 6 of the TIFF specification v6 defines 2D tiles in the same way that has been done in this standard. All tiles in a tile matrix can be stored in a single TIFF file. The TIFF file includes only one set conterminous tiles sharing a common single scale.
 
 [[tile-matrix-set]]
 ==== Tile Matrix Set
@@ -91,11 +91,15 @@ NOTE: Clients and servers have to be careful when comparing floating numbers wit
 [[well-known-scale-sets]]
 ==== Well-known scale sets
 
-When overlaying and presenting tiles encoded in different tile matrix sets that do not have common sets of scale denominators and the same CRS in an integrated client, rescaling or re-projecting tiles to the common scale of the view might require re-sampling calculations that result in visual quality degradation. To prevent this situation, a common coordinate reference system and a common set of scales shared by as many layers and services as possible is desirable. Thus, the concept of well-known scale set (WKSS) is introduced.
+When overlaying and presenting together tiles encoded in different tile matrix sets that do not have common sets of scale denominators and the same CRS in an integrated client, rescaling or re-projecting tiles to the common scale of the view might require re-sampling calculations that result in visual quality degradation.
 
-Note that a WKSS only defines a small subset of what is needed to completely define a Tile Matrix Set. A WKSS is an optional feature that does not replace the need to define the Tile Matrix Set and its Tile Matrices. The original purpose of WKSS might not be necessary if services share and reference common Tile Matrix Sets definitions such as the ones in Annex D.
+The recommended way to prevent this problem is make use of the same global tile matrix sets, for example, one of the available in <<common-tilematrixset-definitions-informative>>. If the coverage of the data covers only a part of the tile matrix set area, The __tile matrix limits__ that can be used to inform about this limitations.
 
-A WKSS is a commonly used combination of a CRS and a set of scales. A tile matrix set can declare support for a WKSS set by referencing that WKSS. A client application can confirm that tiles in one tile matrix set are compatible with tiles in another tile matrix set merely by verifying that they declare a common WKSS. The informative Annex C provides several WKSSs and others could be incorporated in the future.
+If using the same tile matrix set is not possible, using a common coordinate reference system and a common set of scales shared by as many layers and services as possible can also be a solution. Thus, the concept of well-known scale set (WKSS) is introduced.
+
+Note that a WKSS only defines a small subset of what is needed to completely define a Tile Matrix Set. A WKSS is an optional feature that does not replace the need to define the Tile Matrix Set and its Tile Matrices. The original purpose of WKSS is no longer necessary if services share and reference common Tile Matrix Sets definitions such as the ones in <<common-tilematrixset-definitions-informative>>.
+
+A WKSS is a commonly used combination of a CRS and a set of scales. A tile matrix set can declare support for a WKSS set by referencing that WKSS. A client application can confirm that tiles in one tile matrix set are compatible with tiles in another tile matrix set merely by verifying that they declare a common WKSS. The informative <<annex-c-well-known-scale-sets-informative>> provides several WKSSs (and others could be incorporated in the future).
 
 A tile matrix set conforms to a particular WKSS when it uses the same CRS and defines all scale denominators ranging from the largest scale denominator in the WKSS to some low scale denominator (in other words, it is not necessary to define all the lower scale denominators to conform to a WKSS).
 

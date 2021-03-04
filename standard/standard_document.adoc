@@ -22,7 +22,7 @@
 |Submission Date: 2018-06-26
 |Approval Date:   2019-05-24
 |Publication Date:   2019-10-06
-|External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/tms/1.0
+|External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/tms/2.0
 |Internal reference number of this OGC(R) document:    17-083r2
 |Version: 1.0
 |Category: OGC(R) Implementation Standard
@@ -91,15 +91,15 @@ include::clause_4_terms_and_definitions.adoc[]
 
 include::clause_5_conventions.adoc[]
 
-include::clause_6_tile_matrix_set_concept.adoc[]
+include::clause_6_tile_matrix_set.adoc[]
 
-include::clause_7_tilematrixset2d_model.adoc[]
+include::clause_7_tilematrixset_encodings.adoc[]
 
-include::clause_8_xml_encoding.adoc[]
+include::clause_8_tileset_metadata.adoc[]
 
-include::clause_9_json_encoding.adoc[]
+include::clause_9_tileset_metadata_encodings.adoc[]
 
-//include::clause_10_json-ld_encoding.adoc[]
+// include::clause_10_json-ld_encoding.adoc[]
 
 <<<
 ////
@@ -117,11 +117,14 @@ include::annex_e.adoc[]
 
 include::annex_f.adoc[]
 
+// include::annex_jsonld_unused.adoc[]
+
 include::annex_g.adoc[]
 
 include::annex_h.adoc[]
 
 include::annex_i.adoc[]
+
 
 ////
 Revision History should be the last annex before the Bibliography

@@ -105,7 +105,7 @@ This WKSS has been defined to allow quadtree pyramids in CRS84. The scale denomi
 |===
  
 
-NOTE: The first scale denominator allows representation of the whole world in a single tile of 256x256 pixels, where 128 lines of the tile are left blank. The latter is the reason why in the Annex D.2 "World CRS84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad)" this level is not used. The next level allows representation of the whole world in 2x1 tiles of 256x256 pixels and so on in powers of 2.
+NOTE: The first scale denominator allows representation of the whole world in a single tile of 256x256 pixels, where 128 lines of the tile are left blank. The latter is the reason why in the Annex D.2 http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad["World CRS84 Quad TileMatrixSet definition"] this level is not used. The next level allows representation of the whole world in 2x1 tiles of 256x256 pixels and so on in powers of 2.
 
 NOTE: Selecting the word “Google” for this WKSS id is maintained for backwards compatibility even if the authors recognize that it was an unfortunate selection and might result confusing since the “Google-like” tiles do not use CRS84.
 

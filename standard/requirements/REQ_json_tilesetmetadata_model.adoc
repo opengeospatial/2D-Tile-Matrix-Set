@@ -1,0 +1,8 @@
+[[req_json_tilesetmetadata_model]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/json-tilesetmetadata/model* {set:cellbgcolor:#FFFFFF}
+2+|A TileSetMetadata encoded in JSON _shall_ implement the class TileSetMetadata
+|*Dependency*  |/req/tilesetmetadata
+|*Dependency*  |/req/json-tilesetmetadata
+|===

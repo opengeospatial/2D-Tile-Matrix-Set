@@ -1,270 +1,31 @@
-[[tilematrixset2d-model]]
-== TileMatrixSet2D model
 
-[[tilematrixset2d-requirements-class]]
-=== TileMatrixSet2D requirements class
+[[tile-set-metadata]]
+== TileSetMetadata
 
-Requirements class tilematrixset2D establishes how to describe a TileMatrixSet for a two-dimensional tile space. It is expected that tile matrix sets are defined once and that servers or encodings using or distributing tiles will declare the usage of a tile matrix set by linking to that tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.1/req/tilematrixset2d.
+=== Overview
 
-include::requirements/REQ_tilematrixset2d_model.adoc[]
+[[tile-matrix-set-limits-overview]]
+==== TileMatrixSet limits
 
-[#img_tilematrixset-uml-model,reftext='{figure-caption} {counter:figure-num}']
-.TileMatrixSet UML model
-image::figures/TileMatrixSet2D.png[TileMatrixSet UML model]
+If the tile matrix set for a dataset covering a bounding box defines the extreme corner adjusted to the actual content of this dataset, and later the bounding box needs to be extended, then the extreme corner of each TileMatrix will change, which will change the tile indices of any previous tile invalidating any previously cached tile. To overcome this problem, a dataset can optionally use a more generic TileMatrixSet that covers a bigger (or even global) area. In fact, that TileMatrixSet that defines an area that might be covered by the dataset in a future could easily be shared for many datasets and become a common TileMatrixSet.
 
+To inform the client about the valid range of tile indices, the TileMatrixSetLimits concept is introduced. TileMatrixSetLimits informs the minimum and a maximum limits of these indices for each TileMatrix that contains actual data. The area outside these limits is considered empty space.
 
-<<parts-of-tilematrixset-data-structure>> defines the structure of the TileMatrixSet.
+[#img_tilematrix-limits,reftext='{figure-caption} {counter:figure-num}']
+.TileMatrix Limits
+image::figures/4.png[TileMatrix Limits]
 
+[[tileset-medatadata-overview]]
+==== TileSet metadata
 
-[#parts-of-tilematrixset-data-structure,reftext='{table-caption} {counter:table-num}']
-.Parts of TileMatrixSet data structure
-[width = "100%",options="header"]
-|===
-| Names | Definition | Data type and values | Multiplicity and use
-| identifier
+Tiles are identified by tileMatrix id, tileRow number and tileCol number. These three elements have only meaning if they are associated to a tileMatrixSet description that contains the necessary information (in terms of scaleDenominator and corner point) to transform the indices into coordinates in a knows CRS. The main purpose of the TileSetMetadata is to  link the tileset with the tileMatrixSet description. In addition, the model contains elements describing the main characteristics of a tile set, the connection to the tileset with the original data collection and styles as well as the a recommended center point to start the navigation.
 
-Identifier | Tile matrix set identifier ^g^ | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
-|
-title ^a^
-
-Title | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
-
-Include one for each language represented ^f^
-| abstract ^a^
-
-Abstract | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
-
-Include one for each language represented
-| keywords^a^
-
-Keywords | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix set | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
-
-One for each keyword authority used
-| bounding‌Box
-
-Bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS ^b^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
-
-| supportedCRS
-
-SupportedCRS | Coordinate reference system (CRS) | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory)
-| wellKnown‌ScaleSet
-
-WellKnown‌ScaleSet | Reference to a well-known scale set ^e^ | URI type | Zero or one (optional) ^c^
-| tileMatrix
-
-TileMatrix | Description of a scale level and its tile matrix | TileMatrix data structure. See <<parts-of-tilematrix-data-structure>> | One or more (mandatory) ^d^
-4+|
-^a^     The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
-
-^b^     In the same CRS as the TileMatrixSet. boundingBox SHOULD NOT be used to calculate the position of the tiles in the CRS space; please use cornerOfOrigin and pointOfOrigin of the corresponding TileMatrix instead. If data is not available for all tiled space, TileMatrixSetLimits will declare what the tiles have data (see <<tilematrixsetlimits2d-requirements-class>>).
-
-^c^     When a tile matrix set conforms to a well-known scale set it can reference it by its URI. If used, the well-known scale set SHALL be consistent with the supportedCRS and with the scaleDenominators of the tileMatrix parameters.
-
-^d^     Commonly more than one. Each tileMatrix of a tileMatrixSet SHALL have a unique (different) scaleDenominator.
-
-^e^     Some possible values are defined the in Annex C.
-
-^f^     If no Title is specified, a client may display the Identifier value instead.
-
-^g^     TileMatrixSet identifies SHALL be unique (different) for each TileMatrixSet of a server.
-|===
-A part from the general tile matrix set description an array of tile matrix elements is needed to define the distribution of tiles for each scale denominator.
-[#parts-of-tilematrix-data-structure,reftext='{table-caption} {counter:table-num}']
-.Parts of TileMatrix data structure
-[width = "100%",options="header"]
-|===
-| Names | Definition | Data type and values | Multiplicity and use
-| identifier
-
-Identifier
- |
-Tile matrix identifier ^c^
- |
-ows:CodeType, as adaptation of MD_Identifier class ISO 19115
- |
-One (mandatory)
-
-| title ^a^
-
-Title
- |
-Title of this tile matrix, normally used for display to a human
- |
-LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>>
- |
-Zero or more (optional) Include when available and useful
-
-Include one for each language represented ^d^
-
-| abstract ^a^
-
-Abstract
- |
-Brief narrative description of this tile matrix, normally available for display to a human
- |
-LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>>
- |
-Zero or more (optional) Include when available and useful
-
-Include one for each language represented
-
-| keywords^c^
-
-Keywords
- |
-Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix
- |
-MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>>
- |
-Zero or more (optional)
-
-One for each keyword authority used
-
-| scale‌Denominator
-
-Scale‌Denominator
- |
-Scale denominator level of this tile matrix ^f^
- |
-Double type
- |
-One (mandatory)
-
-| cornerOfOrigin
-
-CornerOfOrigin
- |
-Position of the corner of origin with respect of the tiles of this tile matrix
- |
-enumeration. See <<parts-of-corner-of-origin-enum>>
- |
-Zero or one (optional). Default value is "topLeft"
-
-| pointOfOrigin
-
-PointOfOrigin^e^
- |
-Coordinate in CRS coordinates of the corner of origin of this tile matrix
- |
-Ordered sequence of double values ^b^
- |
-One (mandatory)
-
-| tileWidth
-
-TileWidth
- |
-Width of each tile of this tile matrix in pixels
- |
-Positive integer type
- |
-One (mandatory)
-
-| tileHeight
-
-TileHeight
- |
-Height of each tile of this tile matrix in pixels
- |
-Positive integer type
- |
-One (mandatory)
-
-| matrix‌Width
-
-Matrix‌Width
- |
-Width of the matrix (number of tiles in width)
- |
-Positive integer type
- |
-One (mandatory)
-
-| matrix‌Height
-
-Matrix‌Height
- |
-Height of the matrix (number of tiles in height)
- |
-Positive integer type
- |
-One (mandatory)
-4+|
-^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
-
-^b^    CRS will be inherited from the supportedCRS parameter of the parent TileMatrixSet. The order of these axes shall be as specified by the supportedCRS. These are the precise coordinates of the top left corner of top left pixel of the 0,0 tile. See Figure 1.
-
-^c^    This TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded pixel size. It is recommended to avoid repeating the TileMatrixSet identifier as part of the TileMatrix identifier.
-
-^d^    If no Title is specified, client may display the Identifier value instead.
-
-^e^    In previous versions was called topLeftCorner and cornerOfOrigin did not exist
-
-^f^    The pixel size of the tile can be obtained from the scaleDenominator by multiplying the later by 0.28 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it has degrees, then metersPerUnit=2p__a__/360 (_a_ is the Earth maximum radius of the ellipsoid).
-|===
- 
-
-NOTE: It may be desirable to define a tile matrix set with some general-scale tile matrices in one CRS (_e.g._, CRS:84) and with detailed-scale tile matrices in a different CRS (_e.g._, LCC projection). However, this standard does not allow mixing CRSs. Each tile matrix set declares a single CRS.
-
-NOTE: The width (matrixWidth) and height (matrixHeith) in tiles of each tile matrix is explicitly given, so the range of relevant tile indexes does not have to be calculated by the client application.
-
-NOTE: The bounding box of a tile matrix is not supplied explicitly because it can be calculated from cornerOfOrigin, pointOfOrigin, tileWidth, tileHeight and scaleDenominator.
-
-[#parts-of-corner-of-origin-enum,reftext='{table-caption} {counter:table-num}']
-.Parts of CornerOfOriginCode enumeration
-[width = "100%",options="header"]
-|===
-| Names | Definition
-| topLeft | Top left corner ^a^
-| bottomLeft | Bottom left corner ^b^
-2+|
-^a^    The only possibility available in WMTS 1.0. Sometimes known as "xyz" in other non OGC specifications.
-
-^b^    Used by Tile Map Service. Sometimes known as "tms" in other non OGC specifications
-|===
-
-
-[[variablematrixwidth-requirements-class]]
-=== VariableMatrixWidth requirements class
-
-This extension provides the necessary support for variable matrix width tile matrix sets.
-
-include::requirements/REQ_variablematrixwidth_model.adoc[]
-
-[#img_variablematrixwidth-uml-model,reftext='{figure-caption} {counter:figure-num}']
-.VariableMatrixWidth UML model
-image::figures/VariableMatrixWidth.png[VariableMatrixWidth UML model]
-
-In order to make the description of the model more compact, only the tile rows that have coalesced (i.e., coalescence factor larger than 1) will be encoded.
-
-
-[#parts-of-variablematrixwidth-data-structure,reftext='{table-caption} {counter:table-num}']
-.Parts of VariableMatrixWidth data structure
-[width = "100%",options="header"]
-|===
-| Names | Definition | Data type and values | Multiplicity and use
-| coalesce
-
-Coalesce | Coalescence factor | Positive integer type ^a^ | One (mandatory)
-| minTile‌Row
-
-MinTile‌Row | First tile row where the coalese factor apply on this tilematrix | Non negative integer type ^b^ | One (mandatory)
-| maxTile‌Row
-
-MaxTile‌Row | Last tile row where the coalese factor apply on this tilematrix | Non negative integer type ^c^ | One (mandatory)
-4+| ^a^    Shall be more than 1. Rows with Coalescence factor of 1 shall not be described here.
-
-^b^    From 0 to maxTileRow.
-
-^c^    From minTileRow to matrixWidth-1 of the tileMatrix section of this tileMatrixSet.
-|===
- 
-include::requirements/REQ_variablematrixwidth_coalescence1.adoc[]
+=== Requirements classes
 
 [[tilematrixsetlimits2d-requirements-class]]
-=== TileMatrixLimits2D requirements class
+==== TileMatrixSetLimits2D requirements class
 
-Requirements class tilematrixsetlimits2D establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region of for a subset of scales. The array of TileMatrixLimits2D data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.1/req/tilematrixsetlimits2d.
+Requirements class tilematrixsetlimits2D establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region of for a subset of scales. The array of TileMatrixLimits2D data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits2d.
 
 include::requirements/REQ_tilematrixsetlimits2d_model.adoc[]
 
@@ -341,18 +102,18 @@ One (mandatory)
 ^e^    From minTileCol to tileHeight-1 of the tileMatrix of this tileMatrixSet.
 |===
  
-[[tilesetmetadata2d-requirements-class]]
-=== TileSetMetadata requirements class
+[[tilesetmetadata-requirements-class]]
+==== TileSetMetadata requirements class
 
-Requirements class tilesetmetadata2d establishes how to describe TileSet Metadata for a two-dimensional tile space. The  tilesetmetadata2d data structure allows for a dataset declaring the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set, the list of geodata resources used to create the tileset and a recommended center point. Each TileSet in a dataset collection should declare the use of a tile matrix set using this data structure. The identifying URI for this class is http://www.opengis.net/spec/tilematrixset/1.1/req/tilesetmetadata2d.
+Requirements class TileSetMetadata establishes how to describe TileSet Metadata for a two-dimensional tile space. The TileSetMetadata data structure allows for a dataset declaring the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set, the list of geodata resources used to create the tileset and a recommended center point. Each TileSet in a dataset collection should declare the use of a tile matrix set using this data structure. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata
 
-include::requirements/REQ_tilesetmetadata2d_identifier.adoc[]
+include::requirements/REQ_tilesetmetadata_identifier.adoc[]
 
 NOTE: To determine if two resources or datasets use the same TileMatrixSet, compare their TileMatrixSet identifier. Alternatively, compare TileMatrixSet definitions for an equivalency (a simple calculation can be performed to verify whether or not two given tile matrices are aligned).
 
 NOTE: If the same TileMatrixSet is externally available in more than one format, it is recommended that the format selected is the closer to the original description document format. For example if a OGC API defines tiles using JSON, it is expected to link to a JSON definition of a TileMatrixSet.
  
-include::requirements/REQ_tilesetmetadata2d_model.adoc[]
+include::requirements/REQ_tilesetmetadata_model.adoc[]
 
 [#img_tilesetmetadata-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .TileSetMetadata UML model
@@ -442,7 +203,7 @@ CenterPoint | Location of a tile that nicely represents the tileset. Implementat
 Link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>.^e^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^     Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/) and extracted from <<annex_d>> and <<annex_h>>)
+^b^     Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/) (including definitions from <<annex_d>> and <<annex_f>>)
 
 ^c^     Points to a definition of the TileMatrixSet provided by a tile service
 

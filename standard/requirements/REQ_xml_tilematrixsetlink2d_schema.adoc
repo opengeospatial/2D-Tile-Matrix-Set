@@ -1,6 +1,0 @@
-[[req_xml_tilematrixsetlink2d_schema]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/xml-tilematrixsetlink2d/schema* {set:cellbgcolor:#FFFFFF}
-2+|A TileMatrixSetLink2D encoded in XML shall validate using the XML schema for a tile matrix set link 2D.
-|===

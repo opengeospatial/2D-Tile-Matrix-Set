@@ -1,0 +1,78 @@
+[[tilematrixset-encodings]]
+== TileMatrixSet encodings
+
+[[tms-json-encoding]]
+=== JSON encoding
+
+The JSON encoding has been done respecting the naming and types of the original classes. However, there are some differences.  <<class-attributes-JSON-element-quivalences>> describes some exceptions in the mapping between the class attributes and corresponding JSON element.
+
+[#class-attributes-JSON-element-quivalences,reftext='{table-caption} {counter:table-num}']
+.propertiesSchema attributes and JSON Schema properties equivalences
+[width = "100%",options="header"]
+|===
+| Class attribute | JSON element | Reason
+| identifier | id | Following come practice in GeoJSON and JSON-LD
+| BoundingBox class | array of 4 numbers representing lowerLeft and topRight coordinates | Following GeoJSON suggested encoding
+| LanguageString | string | JSON files are general used in the OGC API as monolingual documents. The language of the document is determined by the HTTP language negotiation headers
+|===
+
+[[jsontilematrixset2d]]
+==== JSON TileMatrixSet
+
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/json-tilematrixset2d.
+
+include::requirements/REQ_json_tilematrixset2d_model.adoc[]
+
+include::requirements/REQ_json_tilematrixset2d_ietf.adoc[]
+
+include::requirements/REQ_json_tilematrixset2d_schema.adoc[]
+
+include::requirements/REQ_json_tilematrixset2d_media-type.adoc[]
+
+
+NOTE: A TileMatrixSet description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
+
+Annex E provides JSON examples for common TileMatrixSet.
+
+
+[[json-variablematrixwidth]]
+==== JSON VariableMatrixWidth
+
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/json-variablematrixwidth.
+
+include::requirements/REQ_json_variablematrixwidth_model.adoc[]
+
+include::requirements/REQ_json_variablematrixwidth_ietf.adoc[]
+
+include::requirements/REQ_json_variablematrixwidth_schema.adoc[]
+
+Annex H provides JSON examples for common VariableMatrixWidth.
+
+[[tms-xml-encoding]]
+=== XML encoding
+
+[[xmltilematrixset2d-requirements-class]]
+==== XML TileMatrixSet
+
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixset2d.
+
+include::requirements/REQ_xml_tilematrixset2d_model.adoc[]
+
+include::requirements/REQ_xml_tilematrixset2d_schema.adoc[]
+
+include::requirements/REQ_xml_tilematrixset2d_media-type.adoc[]
+
+NOTE: A TileMatrixSet description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
+
+Annex E provides XML examples for common TileMatrixSet.
+
+[[xml-variablematrixwidth]]
+==== XML VariableMatrixWidth
+
+The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/xml-variablematrixwidth.
+
+include::requirements/REQ_xml_variablematrixwidth_model.adoc[]
+
+include::requirements/REQ_xml_variablematrixwidth_schema.adoc[]
+
+Annex H provides XML examples for common VariableMatrixWidth

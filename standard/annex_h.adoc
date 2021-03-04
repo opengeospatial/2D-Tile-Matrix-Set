@@ -1,70 +1,49 @@
 [appendix]
-[[annex_h]]
-[[example-encodings-for-variable-matrix-width-informative]]
+[[annex_i]]
+[[pseudocode-informative]]
 :appendix-caption: Annex
-== Example encodings for Variable Matrix Width (Informative)
+== Pseudocode (Informative)
 
-This informative Annex provides examples of the Variable Matrix Width extension.
+This informative Annex provides pseudocode that illustrates how to get the tiles that cover a bounding box rectangle and how to get the CRS coordinates that bound a tile.
 
-The first example shows the first five tile matrices of the definition of the https://ecere.ca/gnosis/[GNOSIS] Global Grid and presents them
-encoded in XML and JSON following this standard.
-Note that the GNOSIS Global Grid scales match the _GoogleCRS84Quad_ Well Known Scale Set, but starts at the third scale of the set.
-Since the _WorldCRS84Quad_ TileMatrixSet starts at the second scale, its TileMatrix identifier 1 is equivalent to the GNOSISGlobalGrid TileMatrix identifier 0,
-with the exception of the variable width considerations.
-In this case, the variable matrix width is applied only from the tile matrix with identifier 1 and higher.
-The GNOSIS Global Grid is easy to implement procedurally: it is a quad-tree starting with 8 90 degrees x 90 degrees tiles at level 0,
-with the exception that tiles touching a pole are split into 3 tiles rather than 4 -- the polar portion is not split longitude-wise.
-Therefore there will always be only 4 tiles touching each pole.
+[[from-bbox-to-tile-indices]]
+=== From BBOX to tile indices
 
-The complete JSON example can be found in the supplemental material described in Annex B.
+The following fragment of pseudocode could be used to convert from a desired bounding box (bBoxMinX, bBoxMinY, bBoxMaxX, bBoxMaxY) in CRS coordinates to a range of tile set indices. This pseudocode uses the same notation that subclause 6.1.1 uses. In this pseudocode it is assumed that bBoxMinX, bBoxMinY, bBoxMaxX, bBoxMaxY, tileMatrixMinX, tileMatrixMinY, tileMatrixMinY, tileMatrixMaxY, tileSpanX and tileSpanY are floating point variables (IEEE-754) that have accuracy issues derived from the finite precision of the representation. These accuracy issues could be amplified in a typical floor() rounding down function that could return a value ±1 than that expected. To overcome this issue this code uses a small value (epsilon) added or subtracted in a place that is not affected by CRS coordinate precision.
 
-[[xml-gnosisglobalgrid]]
-=== GNOSIS Global Grid (XML)
-
-[source,xml]
+[source,c]
 ....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/GNOSISGlobalGrid.xml[lines=1..157]
-</TileMatrixSet>
+// to compensate for floating point computation inaccuracies
+epsilon = 1e-6
+
+tileMinCol = floor((bBoxMinX - tileMatrixMinX) / tileSpanX + epsilon)
+tileMaxCol = floor((bBoxMaxX - tileMatrixMinX) / tileSpanX - epsilon)
+tileMinRow = floor((tileMatrixMaxY - bBoxMaxY) / tileSpanY + epsilon)
+tileMaxRow = floor((tileMatrixMaxY - bBoxMinY) / tileSpanY - epsilon)
+
+// to avoid requesting out-of-range tiles
+if (tileMinCol < 0) tileMinCol = 0
+if (tileMaxCol >= matrixWidth) tileMaxCol = matrixWidth-1
+if (tileMinRow < 0) tileMinRow = 0
+if (tileMaxRow >= matrixHeight) tileMaxRow = matrixHeight-1
 ....
+
  
 
-[[json-gnosisglobalgrid]]
-=== GNOSIS Global Grid (JSON)
+To fetch all the tiles that cover this bounding box, a client would scan through tileMinCol to tileMaxCol and tileMinRow to tileMaxRow, all inclusive. A total of (tileMaxCol- tileMinCol+1) × (tileMaxRow- tileMinRow+1) will be fetched.
 
-[source,JSON]
-....
-include::../schemas/tms/2.0/json/examples/tilematrixset/GNOSISGlobalGrid.json[lines=1..183]
-      }
-   ]
-}
-....
+[[from-tile-indices-to-bbox]]
+=== From tile indices to BBOX
 
-The second example represents the https://docs.opengeospatial.org/is/15-113r5/15-113r5.html#CharacteristicsoftheCDBtilingstoragemodel[CDB Zones and Levels of Detail]
-which can be encoded following this standard with the use of variable widths.
-For the tile matrices with negative identifiers of the CDB Global Grid, the tiles' geographic extents remain the same as those of tile matrix 0,
-but the tile size in pixels is reduced. The levels -1 to 2 are shown here.
-Note that unlike the GNOSIS Global Grid, for the CDB Global Grid the polar adjustment is the same for all tile matrices of the set.
 
-[[xml-cdbglobalgrid]]
-=== CDB Global Grid (XML)
+The following pseudocode could be used to convert from a pair of tile indices (tileCol, tileRow) to the bounding box (in CRS coordinates) of this tile defined by the upper-left corner (leftX, upperY) of the tile:
 
-[source,xml]
+[source,c]
 ....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=1..12]
-include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=553..791]
-</TileMatrixSet>
-....
- 
+leftX = tileCol * tileSpanX + tileMatrixMinX
+upperY = tileMatrixMaxY - tileRow * tileSpanY
 
-[[json-cdbglobalgrid]]
-=== CDB Global Grid (JSON)
-
-[source,JSON]
+and the lower-right corner (rightX, lowerY) of the tile:
+rightX = (tileCol+1) * tileSpanX + tileMatrixMinX
+lowerY = tileMatrixMaxY – (tileRow+1) * tileSpanY
 ....
-include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=1..17]
-include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=594..848]
-      }
-   ]
-}
-....
- 

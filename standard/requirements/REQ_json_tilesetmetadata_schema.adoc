@@ -1,0 +1,6 @@
+[[req_json_tilesetmetadata_schema]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/json-tilesetmetadata/schema* {set:cellbgcolor:#FFFFFF}
+2+|A TileSetMetadata encoded in JSON _shall_ validate using the JSON schema for a TileSetMetadata (http://schemas.opengis.net/tms/2.0/json/tileSet.json).
+|===

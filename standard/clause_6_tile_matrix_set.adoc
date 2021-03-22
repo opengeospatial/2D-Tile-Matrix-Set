@@ -157,38 +157,21 @@ image::figures/TileMatrixSet2D.png[TileMatrixSet UML model]
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| identifier
-
-Identifier | Tile matrix set identifier ^g^ | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
-|
-title ^a^
-
-Title | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| identifier | Tile matrix set identifier ^g^ | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
+| title ^a^ | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^f^
-| abstract ^a^
-
-Abstract | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| abstract ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| keywords^a^
-
-Keywords | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix set | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
+| keywords^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix set | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
 
 One for each keyword authority used
-| bounding‌Box
+| bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS ^b^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
-Bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS ^b^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
-
-| supportedCRS
-
-SupportedCRS | Coordinate reference system (CRS) | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory)
-| wellKnown‌ScaleSet
-
-WellKnown‌ScaleSet | Reference to a well-known scale set ^e^ | URI type | Zero or one (optional) ^c^
-| tileMatrix
-
-TileMatrix | Description of a scale level and its tile matrix | TileMatrix data structure. See <<parts-of-tilematrix-data-structure>> | One or more (mandatory) ^d^
+| supportedCRS | Coordinate reference system (CRS) | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory)
+| wellKnown‌ScaleSet | Reference to a well-known scale set ^e^ | URI type | Zero or one (optional) ^c^
+| tileMatrix | Description of a scale level and its tile matrix | TileMatrix data structure. See <<parts-of-tilematrix-data-structure>> | One or more (mandatory) ^d^
 4+|
 ^a^     The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
@@ -210,20 +193,14 @@ A part from the general tile matrix set description an array of tile matrix elem
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| identifier
-
-Identifier
- |
+| identifier |
 Tile matrix identifier ^c^
  |
 ows:CodeType, as adaptation of MD_Identifier class ISO 19115
  |
 One (mandatory)
 
-| title ^a^
-
-Title
- |
+| title ^a^ |
 Title of this tile matrix, normally used for display to a human
  |
 LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>>
@@ -232,10 +209,7 @@ Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^d^
 
-| abstract ^a^
-
-Abstract
- |
+| abstract ^a^ |
 Brief narrative description of this tile matrix, normally available for display to a human
  |
 LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>>
@@ -244,10 +218,7 @@ Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 
-| keywords^c^
-
-Keywords
- |
+| keywords ^c^ |
 Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix
  |
 MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>>
@@ -256,70 +227,49 @@ Zero or more (optional)
 
 One for each keyword authority used
 
-| scale‌Denominator
-
-Scale‌Denominator
- |
+| scale‌Denominator |
 Scale denominator level of this tile matrix ^f^
  |
 Double type
  |
 One (mandatory)
 
-| cornerOfOrigin
-
-CornerOfOrigin
- |
+| cornerOfOrigin |
 Position of the corner of origin with respect of the tiles of this tile matrix
  |
 enumeration. See <<parts-of-corner-of-origin-enum>>
  |
 Zero or one (optional). Default value is "topLeft"
 
-| pointOfOrigin
-
-PointOfOrigin^e^
- |
+| pointOfOrigin ^e^ |
 Coordinate in CRS coordinates of the corner of origin of this tile matrix
  |
 Ordered sequence of double values ^b^
  |
 One (mandatory)
 
-| tileWidth
-
-TileWidth
- |
+| tileWidth |
 Width of each tile of this tile matrix in pixels
  |
 Positive integer type
  |
 One (mandatory)
 
-| tileHeight
-
-TileHeight
- |
+| tileHeight |
 Height of each tile of this tile matrix in pixels
  |
 Positive integer type
  |
 One (mandatory)
 
-| matrix‌Width
-
-Matrix‌Width
- |
+| matrix‌Width |
 Width of the matrix (number of tiles in width)
  |
 Positive integer type
  |
 One (mandatory)
 
-| matrix‌Height
-
-Matrix‌Height
- |
+| matrix‌Height |
 Height of the matrix (number of tiles in height)
  |
 Positive integer type
@@ -379,15 +329,9 @@ In order to make the description of the model more compact, only the tile rows t
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| coalesce
-
-Coalesce | Coalescence factor | Positive integer type ^a^ | One (mandatory)
-| minTile‌Row
-
-MinTile‌Row | First tile row where the coalese factor apply on this tilematrix | Non negative integer type ^b^ | One (mandatory)
-| maxTile‌Row
-
-MaxTile‌Row | Last tile row where the coalese factor apply on this tilematrix | Non negative integer type ^c^ | One (mandatory)
+| coalesce | Coalescence factor | Positive integer type ^a^ | One (mandatory)
+| minTile‌Row | First tile row where the coalese factor apply on this tilematrix | Non negative integer type ^b^ | One (mandatory)
+| maxTile‌Row | Last tile row where the coalese factor apply on this tilematrix | Non negative integer type ^c^ | One (mandatory)
 4+| ^a^    Shall be more than 1. Rows with Coalescence factor of 1 shall not be described here.
 
 ^b^    From 0 to maxTileRow.

@@ -11,10 +11,12 @@ The JSON encoding has been done respecting the naming and types of the original 
 [width = "100%",options="header"]
 |===
 | Class attribute | JSON element | Reason
-| identifier | id | Following come practice in GeoJSON and JSON-LD
-| BoundingBox class | array of 4 numbers representing lowerLeft and topRight coordinates | Following GeoJSON suggested encoding
-| LanguageString | string | JSON files are general used in the OGC API as monolingual documents. The language of the document is determined by the HTTP language negotiation headers
+| identifier | id | Following come practice in GeoJSON and JSON-LD.
+| BoundingBox class | array of 4 numbers representing lowerLeft and topRight coordinates | Following GeoJSON suggested encoding.
+| LanguageString | string | JSON files are general used in the OGC API as monolingual documents. The language of the document is determined by the HTTP language negotiation headers.
 |===
+
+In addition, all elements with multiplicity greater than one changes names to plural. Please be aware of irregular plurals such as `tileMatrix` that changes to `tileMatrices`.
 
 [[jsontilematrixset2d]]
 ==== JSON TileMatrixSet
@@ -50,6 +52,7 @@ Annex H provides JSON examples for common VariableMatrixWidth.
 
 [[tms-xml-encoding]]
 === XML encoding
+The XML encoding has been done respecting the naming and types of the original classes. However all attribute names have been transformed to UpperCamelCase.
 
 [[xmltilematrixset2d-requirements-class]]
 ==== XML TileMatrixSet

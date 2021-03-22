@@ -3,6 +3,7 @@
 
 [[tsmd-json-encoding]]
 === JSON encoding
+The JSON encoding has been done respecting the naming and types of the original classes.
 
 [[json-encoding-of-a-tilematrixsetlimits]]
 ==== JSON TileMatrixSetLimits2D
@@ -60,6 +61,7 @@ The encoding of propertiesSchema adopts the JSON Schema form. <<propertiesSchema
 
 [[tsmd-xml-encoding]]
 === XML encoding
+The XML encoding has been done respecting the naming and types of the original classes. However all attribute names have been transformed to UpperCamelCase.
 
 [[xmltilematrixsetlimits2d-requirements-class]]
 ==== XML TileMatrixSetLimits2D

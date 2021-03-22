@@ -1,15 +1,15 @@
 {
 	"title": "Universal Polar Stereographic WGS 84 Quad for Arctic",
-	"identifier": "UPSArcticWGS84Quad",
+	"id": "UPSArcticWGS84Quad",
 	"boundingBox":
 	{
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/5041",
-		"lowerCorner":
+		"lowerLeft":
 		[
 			-14440759.350252,
 			-14440759.350252
 		],
-		"upperCorner":
+		"upperRight":
 		[
 			18440759.350252,
 			18440759.350252
@@ -19,9 +19,9 @@
 	"tileMatrices":
 	[
 		{
-			"identifier": "0",
+			"id": "0",
 			"scaleDenominator": 458726544.4,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -32,9 +32,9 @@
 			"matrixHeight": 1
 		},
 		{
-			"identifier": "1",
+			"id": "1",
 			"scaleDenominator": 229363272.2,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -45,9 +45,9 @@
 			"matrixHeight": 2
 		},
 		{
-			"identifier": "2",
+			"id": "2",
 			"scaleDenominator": 114681636.1,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -58,9 +58,9 @@
 			"matrixHeight": 4
 		},
 		{
-			"identifier": "3",
+			"id": "3",
 			"scaleDenominator": 57340818.05,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -71,9 +71,9 @@
 			"matrixHeight": 8
 		},
 		{
-			"identifier": "4",
+			"id": "4",
 			"scaleDenominator": 28670409.02,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -84,9 +84,9 @@
 			"matrixHeight": 16
 		},
 		{
-			"identifier": "5",
+			"id": "5",
 			"scaleDenominator": 14335204.51,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -97,9 +97,9 @@
 			"matrixHeight": 32
 		},
 		{
-			"identifier": "6",
+			"id": "6",
 			"scaleDenominator": 7167602.256,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -110,9 +110,9 @@
 			"matrixHeight": 64
 		},
 		{
-			"identifier": "7",
+			"id": "7",
 			"scaleDenominator": 3583801.128,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -123,9 +123,9 @@
 			"matrixHeight": 128
 		},
 		{
-			"identifier": "8",
+			"id": "8",
 			"scaleDenominator": 1791900.564,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -136,9 +136,9 @@
 			"matrixHeight": 256
 		},
 		{
-			"identifier": "9",
+			"id": "9",
 			"scaleDenominator": 895950.282,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -149,9 +149,9 @@
 			"matrixHeight": 512
 		},
 		{
-			"identifier": "10",
+			"id": "10",
 			"scaleDenominator": 447975.141,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -162,9 +162,9 @@
 			"matrixHeight": 1024
 		},
 		{
-			"identifier": "11",
+			"id": "11",
 			"scaleDenominator": 223987.5705,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -175,9 +175,9 @@
 			"matrixHeight": 2048
 		},
 		{
-			"identifier": "12",
+			"id": "12",
 			"scaleDenominator": 111993.7852,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -188,9 +188,9 @@
 			"matrixHeight": 4096
 		},
 		{
-			"identifier": "13",
+			"id": "13",
 			"scaleDenominator": 55996.89262,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -201,9 +201,9 @@
 			"matrixHeight": 8192
 		},
 		{
-			"identifier": "14",
+			"id": "14",
 			"scaleDenominator": 27998.44631,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -214,9 +214,9 @@
 			"matrixHeight": 16384
 		},
 		{
-			"identifier": "15",
+			"id": "15",
 			"scaleDenominator": 13999.22316,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -227,9 +227,9 @@
 			"matrixHeight": 32768
 		},
 		{
-			"identifier": "16",
+			"id": "16",
 			"scaleDenominator": 6999.611578,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -240,9 +240,9 @@
 			"matrixHeight": 65536
 		},
 		{
-			"identifier": "17",
+			"id": "17",
 			"scaleDenominator": 3499.805789,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -253,9 +253,9 @@
 			"matrixHeight": 131072
 		},
 		{
-			"identifier": "18",
+			"id": "18",
 			"scaleDenominator": 1749.902894,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -266,9 +266,9 @@
 			"matrixHeight": 262144
 		},
 		{
-			"identifier": "19",
+			"id": "19",
 			"scaleDenominator": 874.9514472,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -279,9 +279,9 @@
 			"matrixHeight": 524288
 		},
 		{
-			"identifier": "20",
+			"id": "20",
 			"scaleDenominator": 437.4757236,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -292,9 +292,9 @@
 			"matrixHeight": 1048576
 		},
 		{
-			"identifier": "21",
+			"id": "21",
 			"scaleDenominator": 218.7378618,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -305,9 +305,9 @@
 			"matrixHeight": 2097152
 		},
 		{
-			"identifier": "22",
+			"id": "22",
 			"scaleDenominator": 109.3689309,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -318,9 +318,9 @@
 			"matrixHeight": 4194304
 		},
 		{
-			"identifier": "23",
+			"id": "23",
 			"scaleDenominator": 54.68446545,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252
@@ -331,9 +331,9 @@
 			"matrixHeight": 8388608
 		},
 		{
-			"identifier": "24",
+			"id": "24",
 			"scaleDenominator": 27.34223273,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-14440759.350252,
 				18440759.350252

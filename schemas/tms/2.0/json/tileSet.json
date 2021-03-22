@@ -21,7 +21,7 @@
 					"type": "array",
 					"items":
 					{
-						"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json"
+						"$ref": "keyword.json"
 					}
 				},
 				"version": {
@@ -56,7 +56,7 @@
 				},
 				"boundingBox": {
 					"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
-					"$ref": "../../../ogcapi/common/part1/1.0/schemas/boundingBox.json"
+					"$ref": "2DBoundingBox.json"
 				},
 				"date": {
 					"$ref": "#/definitions/dates"
@@ -83,7 +83,7 @@
 					"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)",
 					"type": "array",
 					"items": {
-						"$ref": "../../../ogcapi/common/part1/1.0/schemas/link.json"
+						"$ref": "link.json"
 					}
 				}
 			}
@@ -141,23 +141,23 @@
 			"properties": {
 				"createdOn": {
 					"description": "When the Tile Set was first produced",
-					"$ref": "../../../ogcapi/common/part1/1.0/schemas/timeStamp.json"
+					"$ref": "timeStamp.json"
 				},
 				"publishedOn": {
 					"description": "When the Tile Set was first made available to the users",
-					"$ref": "../../../ogcapi/common/part1/1.0/schemas/timeStamp.json"
+					"$ref": "timeStamp.json"
 				},
 				"revisedOn": {
 					"description": "Last Tile Set change/revision",
-					"$ref": "../../../ogcapi/common/part1/1.0/schemas/timeStamp.json"
+					"$ref": "timeStamp.json"
 				},
 				"receivedOn": {
 					"description": "When the Tile Set was received from an external provider",
-					"$ref": "../../../ogcapi/common/part1/1.0/schemas/timeStamp.json"
+					"$ref": "timeStamp.json"
 				},
 				"validUntil": {
 					"description": "The future validity of the Tile Set (the Tile Set may no longer be applicable at this date, or that a new revision of the Tile Set is going to be issued)",
-					"$ref": "../../../ogcapi/common/part1/1.0/schemas/timeStamp.json"
+					"$ref": "timeStamp.json"
 				}
 			}
 		},
@@ -228,7 +228,7 @@
 				},
 				"boundingBox": {
 					"description": "Minimum bounding rectangle surrounding the layer",
-					"$ref": "../../../ogcapi/common/part1/1.0/schemas/boundingBox.json"
+					"$ref": "2DBoundingBox.json"
 				},
 				"date": {
 					"description": "Dates of creation, publication, revision, validity and reception of the layer",
@@ -252,7 +252,7 @@
 					"minItems": 1,
 					"items":
 					{
-						"$ref": "../../../ogcapi/common/part1/1.0/schemas/link.json"
+						"$ref": "link.json"
 					}
 				}
 			}
@@ -379,7 +379,7 @@
 					"type": "array",
 					"items":
 					{
-						"$ref": "../../../ogcapi/common/part1/1.0/schemas/keyword.json"
+						"$ref": "keyword.json"
 					}
 				},
 				"links":
@@ -389,7 +389,7 @@
 					"minItems": 1,
 					"items":
 					{
-						"$ref": "../../../ogcapi/common/part1/1.0/schemas/link.json"
+						"$ref": "link.json"
 					}
 				}
 			},

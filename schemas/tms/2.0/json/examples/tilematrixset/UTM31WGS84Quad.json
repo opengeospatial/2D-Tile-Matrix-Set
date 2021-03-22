@@ -1,15 +1,15 @@
 {
 	"title": "UTM31WGS84Quad",
-	"identifier": "Universal Transverse Mercator Zone 31 WGS84 Quad",
+	"id": "Universal Transverse Mercator Zone 31 WGS84 Quad",
 	"boundingBox":
 	{
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/32631",
-		"lowerCorner":
+		"lowerLeft":
 		[
 			-9501965.72931276,
 			-20003931.4586255
 		],
-		"upperCorner":
+		"upperRight":
 		[
 			10501965.7293128,
 			20003931.4586255
@@ -19,9 +19,9 @@
 	"tileMatrices":
 	[
 		{
-			"identifier": "1",
+			"id": "1",
 			"scaleDenominator": 279072704.500914,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -32,9 +32,9 @@
 			"matrixHeight": 2
 		},
 		{
-			"identifier": "2",
+			"id": "2",
 			"scaleDenominator": 139536352.250457,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -45,9 +45,9 @@
 			"matrixHeight": 4
 		},
 		{
-			"identifier": "3",
+			"id": "3",
 			"scaleDenominator": 69768176.1252285,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -58,9 +58,9 @@
 			"matrixHeight": 8
 		},
 		{
-			"identifier": "4",
+			"id": "4",
 			"scaleDenominator": 34884088.0626143,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -71,9 +71,9 @@
 			"matrixHeight": 16
 		},
 		{
-			"identifier": "5",
+			"id": "5",
 			"scaleDenominator": 17442044.0313071,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -84,9 +84,9 @@
 			"matrixHeight": 32
 		},
 		{
-			"identifier": "6",
+			"id": "6",
 			"scaleDenominator": 8721022.01565356,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -97,9 +97,9 @@
 			"matrixHeight": 64
 		},
 		{
-			"identifier": "7",
+			"id": "7",
 			"scaleDenominator": 4360511.00782678,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -110,9 +110,9 @@
 			"matrixHeight": 128
 		},
 		{
-			"identifier": "8",
+			"id": "8",
 			"scaleDenominator": 2180255.50391339,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -123,9 +123,9 @@
 			"matrixHeight": 256
 		},
 		{
-			"identifier": "9",
+			"id": "9",
 			"scaleDenominator": 1090127.7519567,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -136,9 +136,9 @@
 			"matrixHeight": 512
 		},
 		{
-			"identifier": "10",
+			"id": "10",
 			"scaleDenominator": 545063.875978348,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -149,9 +149,9 @@
 			"matrixHeight": 1024
 		},
 		{
-			"identifier": "11",
+			"id": "11",
 			"scaleDenominator": 272531.937989174,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -162,9 +162,9 @@
 			"matrixHeight": 2048
 		},
 		{
-			"identifier": "12",
+			"id": "12",
 			"scaleDenominator": 136265.968994587,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -175,9 +175,9 @@
 			"matrixHeight": 4096
 		},
 		{
-			"identifier": "13",
+			"id": "13",
 			"scaleDenominator": 68132.9844972935,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -188,9 +188,9 @@
 			"matrixHeight": 8192
 		},
 		{
-			"identifier": "14",
+			"id": "14",
 			"scaleDenominator": 34066.4922486467,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -201,9 +201,9 @@
 			"matrixHeight": 16384
 		},
 		{
-			"identifier": "15",
+			"id": "15",
 			"scaleDenominator": 17033.2461243234,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -214,9 +214,9 @@
 			"matrixHeight": 32768
 		},
 		{
-			"identifier": "16",
+			"id": "16",
 			"scaleDenominator": 8516.62306216168,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -227,9 +227,9 @@
 			"matrixHeight": 65536
 		},
 		{
-			"identifier": "17",
+			"id": "17",
 			"scaleDenominator": 4258.31153108084,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -240,9 +240,9 @@
 			"matrixHeight": 131072
 		},
 		{
-			"identifier": "18",
+			"id": "18",
 			"scaleDenominator": 2129.15576554042,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -253,9 +253,9 @@
 			"matrixHeight": 262144
 		},
 		{
-			"identifier": "19",
+			"id": "19",
 			"scaleDenominator": 1064.57788277021,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -266,9 +266,9 @@
 			"matrixHeight": 524288
 		},
 		{
-			"identifier": "20",
+			"id": "20",
 			"scaleDenominator": 532.288941385105,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -279,9 +279,9 @@
 			"matrixHeight": 1048576
 		},
 		{
-			"identifier": "21",
+			"id": "21",
 			"scaleDenominator": 266.144470692553,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -292,9 +292,9 @@
 			"matrixHeight": 2097152
 		},
 		{
-			"identifier": "22",
+			"id": "22",
 			"scaleDenominator": 133.072235346276,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -305,9 +305,9 @@
 			"matrixHeight": 4194304
 		},
 		{
-			"identifier": "23",
+			"id": "23",
 			"scaleDenominator": 66.5361176731382,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255
@@ -318,9 +318,9 @@
 			"matrixHeight": 8388608
 		},
 		{
-			"identifier": "24",
+			"id": "24",
 			"scaleDenominator": 33.2680588365691,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-9501965.72931276,
 				20003931.4586255

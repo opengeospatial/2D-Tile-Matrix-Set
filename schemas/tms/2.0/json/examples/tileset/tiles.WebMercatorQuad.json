@@ -44,7 +44,10 @@
          "geometryType" : "polygons",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
-         "boundingBox" : [35.898213, 32.4633913, 36.5614696, 32.8370158 ],
+         "boundingBox" : {
+		"lowerLeft": [35.898213, 32.4633913], 
+		"upperRight": [36.5614696, 32.8370158] 
+	    },
          "stylableLayerSets" : [ "OSMNSGTDS" ],
          "links" : [
             {
@@ -79,7 +82,10 @@
          "geometryType" : "lines",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
-         "boundingBox" : [ 35.9028738, 32.4168138, 36.5747694, 33.1424348 ] ,
+         "boundingBox" : { 
+		"lowerLeft": [35.9028738, 32.4168138],
+		"upperRight": [36.5747694, 33.1424348] 
+	   } ,
          "stylableLayerSets" : [ "OSMNSGTDS" ],
          "links" : [
             {
@@ -132,7 +138,7 @@
       { "tileMatrix" : "16", "minTileRow" : 26433, "maxTileRow" : 26514, "minTileCol" : 39303, "maxTileCol" : 39423 },
       { "tileMatrix" : "17", "minTileRow" : 52866, "maxTileRow" : 53028, "minTileCol" : 78606, "maxTileCol" : 78847 }
    ],
-   "boundingBox" : { "lowerCorner" : [ 35, 32 ], "upperCorner" : [ 37, 33.2671397 ] },
+   "boundingBox" : { "lowerLeft" : [ 35, 32 ], "upperRight" : [ 37, 33.2671397 ] },
    "centerPoint" :
    {
       "coordinates" : [ 36.2298413, 32.65020355 ],

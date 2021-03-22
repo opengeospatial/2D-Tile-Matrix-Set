@@ -45,7 +45,7 @@
    ],
    "style" :
    {
-      "identifier" : "topographic",
+      "id" : "topographic",
       "links" : [
          {
             "rel"  : "http://www.opengis.net/def/rel/ogc/1.0/style",
@@ -60,7 +60,10 @@
          "geometryType" : "polygons",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
-         "boundingBox" : { "lowerCorner" : [ 35, 32 ], "upperCorner" : [ 37, 33.2671397 ] },
+         "boundingBox" : { 
+		"lowerLeft" : [ 35, 32 ], 
+		"upperRight" : [ 37, 33.2671397 ] 
+	   },
          "links" : [
             {
                "rel"  : "http://www.opengis.net/def/rel/ogc/1.0/geodata",
@@ -91,7 +94,7 @@
       { "tileMatrix" : "16", "minTileRow" : 26433, "maxTileRow" : 26514, "minTileCol" : 39303, "maxTileCol" : 39423 },
       { "tileMatrix" : "17", "minTileRow" : 52866, "maxTileRow" : 53028, "minTileCol" : 78606, "maxTileCol" : 78847 }
    ],
-   "boundingBox" : { "lowerCorner" : [ 35, 32 ], "upperCorner" : [ 37, 33.2671397 ] },
+   "boundingBox" : { "lowerLeft" : [ 35, 32 ], "upperRight" : [ 37, 33.2671397 ] },
    "centerPoint" :
    {
       "coordinates" : [ 36.2298413, 32.65020355 ],

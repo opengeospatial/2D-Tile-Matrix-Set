@@ -1,15 +1,15 @@
 {
 	"title": "Lambert Azimuthal Equal Area ETRS89 for Europe",
-	"identifier": "EuropeanETRS89_LAEAQuad",
+	"id": "EuropeanETRS89_LAEAQuad",
 	"boundingBox":
 	{
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/3035",
-		"lowerCorner":
+		"lowerLeft":
 		[
 			2000000.0,
 			1000000.0
 		],
-		"upperCorner":
+		"upperRight":
 		[
 			6500000.0,
 			5500000.0
@@ -19,9 +19,9 @@
 	"tileMatrices":
 	[
 		{
-			"identifier": "0",
+			"id": "0",
 			"scaleDenominator": 62779017.8571428,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -32,9 +32,9 @@
 			"matrixHeight": 1
 		},
 		{
-			"identifier": "1",
+			"id": "1",
 			"scaleDenominator": 31389508.9285714,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -45,9 +45,9 @@
 			"matrixHeight": 2
 		},
 		{
-			"identifier": "2",
+			"id": "2",
 			"scaleDenominator": 15694754.4642857,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -58,9 +58,9 @@
 			"matrixHeight": 4
 		},
 		{
-			"identifier": "3",
+			"id": "3",
 			"scaleDenominator": 7847377.23214285,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -71,9 +71,9 @@
 			"matrixHeight": 8
 		},
 		{
-			"identifier": "4",
+			"id": "4",
 			"scaleDenominator": 3923688.61607142,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -84,9 +84,9 @@
 			"matrixHeight": 16
 		},
 		{
-			"identifier": "5",
+			"id": "5",
 			"scaleDenominator": 1961844.30803571,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -97,9 +97,9 @@
 			"matrixHeight": 32
 		},
 		{
-			"identifier": "6",
+			"id": "6",
 			"scaleDenominator": 980922.154017857,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -110,9 +110,9 @@
 			"matrixHeight": 64
 		},
 		{
-			"identifier": "7",
+			"id": "7",
 			"scaleDenominator": 490461.077008928,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -123,9 +123,9 @@
 			"matrixHeight": 128
 		},
 		{
-			"identifier": "8",
+			"id": "8",
 			"scaleDenominator": 245230.538504464,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -136,9 +136,9 @@
 			"matrixHeight": 256
 		},
 		{
-			"identifier": "9",
+			"id": "9",
 			"scaleDenominator": 122615.269252232,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -149,9 +149,9 @@
 			"matrixHeight": 512
 		},
 		{
-			"identifier": "10",
+			"id": "10",
 			"scaleDenominator": 61307.634626116,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -162,9 +162,9 @@
 			"matrixHeight": 1024
 		},
 		{
-			"identifier": "11",
+			"id": "11",
 			"scaleDenominator": 30653.817313058,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -175,9 +175,9 @@
 			"matrixHeight": 2048
 		},
 		{
-			"identifier": "12",
+			"id": "12",
 			"scaleDenominator": 15326.908656529,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -188,9 +188,9 @@
 			"matrixHeight": 4096
 		},
 		{
-			"identifier": "13",
+			"id": "13",
 			"scaleDenominator": 7663.45432826451,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -201,9 +201,9 @@
 			"matrixHeight": 8192
 		},
 		{
-			"identifier": "14",
+			"id": "14",
 			"scaleDenominator": 3831.72716413225,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0
@@ -214,9 +214,9 @@
 			"matrixHeight": 16384
 		},
 		{
-			"identifier": "15",
+			"id": "15",
 			"scaleDenominator": 1915.86358206612,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				2000000.0,
 				5500000.0

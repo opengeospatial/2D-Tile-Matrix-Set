@@ -1,13 +1,14 @@
 {
-   "identifier" : "CDBGlobalGrid",
+   "id" : "CDBGlobalGrid",
    "title" : "CDB Global Grid",
    "boundingBox" : {
       "crs" : "http://www.opengis.net/def/crs/EPSG/0/4326",
-      "lowerCorner" : [
+      "axisLabels": ["lat", "lon"],
+      "lowerLeft" : [
          -90,
          -180
       ],
-      "upperCorner" : [
+      "upperRight" : [
          90,
          180
       ]
@@ -16,13 +17,13 @@
    "wellKnownScaleSet" : "http://www.opengis.net/def/wkss/OGC/1.0/CDBGlobalGrid",
    "tileMatrices" : [
       {
-         "identifier" : "-10",
+         "id" : "-10",
          "scaleDenominator" : 397569609.975977063179,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 1,
          "tileHeight" : 1,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -80,13 +81,13 @@
          ]
       },
       {
-         "identifier" : "-9",
+         "id" : "-9",
          "scaleDenominator" : 198784804.9879885315895,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 2,
          "tileHeight" : 2,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -144,13 +145,13 @@
          ]
       },
       {
-         "identifier" : "-8",
+         "id" : "-8",
          "scaleDenominator" : 99392402.4939942657948,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 4,
          "tileHeight" : 4,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -208,13 +209,13 @@
          ]
       },
       {
-         "identifier" : "-7",
+         "id" : "-7",
          "scaleDenominator" : 49696201.2469971328974,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 8,
          "tileHeight" : 8,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -272,13 +273,13 @@
          ]
       },
       {
-         "identifier" : "-6",
+         "id" : "-6",
          "scaleDenominator" : 24848100.6234985664487,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 16,
          "tileHeight" : 16,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -336,13 +337,13 @@
          ]
       },
       {
-         "identifier" : "-5",
+         "id" : "-5",
          "scaleDenominator" : 12424050.3117492832243,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 32,
          "tileHeight" : 32,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -400,13 +401,13 @@
          ]
       },
       {
-         "identifier" : "-4",
+         "id" : "-4",
          "scaleDenominator" : 6212025.1558746416122,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 64,
          "tileHeight" : 64,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -464,13 +465,13 @@
          ]
       },
       {
-         "identifier" : "-3",
+         "id" : "-3",
          "scaleDenominator" : 3106012.5779373208061,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 128,
          "tileHeight" : 128,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -528,13 +529,13 @@
          ]
       },
       {
-         "identifier" : "-2",
+         "id" : "-2",
          "scaleDenominator" : 1553006.288968660403,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 256,
          "tileHeight" : 256,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -592,13 +593,13 @@
          ]
       },
       {
-         "identifier" : "-1",
+         "id" : "-1",
          "scaleDenominator" : 776503.1444843302015,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 512,
          "tileHeight" : 512,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -656,13 +657,13 @@
          ]
       },
       {
-         "identifier" : "0",
+         "id" : "0",
          "scaleDenominator" : 388251.5722421651008,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -720,13 +721,13 @@
          ]
       },
       {
-         "identifier" : "1",
+         "id" : "1",
          "scaleDenominator" : 194125.7861210825504,
          "matrixWidth" : 720,
          "matrixHeight" : 360,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -784,13 +785,13 @@
          ]
       },
       {
-         "identifier" : "2",
+         "id" : "2",
          "scaleDenominator" : 97062.8930605412752,
          "matrixWidth" : 1440,
          "matrixHeight" : 720,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -848,13 +849,13 @@
          ]
       },
       {
-         "identifier" : "3",
+         "id" : "3",
          "scaleDenominator" : 48531.4465302706376,
          "matrixWidth" : 2880,
          "matrixHeight" : 1440,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -912,13 +913,13 @@
          ]
       },
       {
-         "identifier" : "4",
+         "id" : "4",
          "scaleDenominator" : 24265.7232651353188,
          "matrixWidth" : 5760,
          "matrixHeight" : 2880,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -976,13 +977,13 @@
          ]
       },
       {
-         "identifier" : "5",
+         "id" : "5",
          "scaleDenominator" : 12132.8616325676594,
          "matrixWidth" : 11520,
          "matrixHeight" : 5760,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1040,13 +1041,13 @@
          ]
       },
       {
-         "identifier" : "6",
+         "id" : "6",
          "scaleDenominator" : 6066.4308162838297,
          "matrixWidth" : 23040,
          "matrixHeight" : 11520,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1104,13 +1105,13 @@
          ]
       },
       {
-         "identifier" : "7",
+         "id" : "7",
          "scaleDenominator" : 3033.2154081419148,
          "matrixWidth" : 46080,
          "matrixHeight" : 23040,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1168,13 +1169,13 @@
          ]
       },
       {
-         "identifier" : "8",
+         "id" : "8",
          "scaleDenominator" : 1516.6077040709574,
          "matrixWidth" : 92160,
          "matrixHeight" : 46080,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1232,13 +1233,13 @@
          ]
       },
       {
-         "identifier" : "9",
+         "id" : "9",
          "scaleDenominator" : 758.3038520354787,
          "matrixWidth" : 184320,
          "matrixHeight" : 92160,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1296,13 +1297,13 @@
          ]
       },
       {
-         "identifier" : "10",
+         "id" : "10",
          "scaleDenominator" : 379.1519260177394,
          "matrixWidth" : 368640,
          "matrixHeight" : 184320,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1360,13 +1361,13 @@
          ]
       },
       {
-         "identifier" : "11",
+         "id" : "11",
          "scaleDenominator" : 189.5759630088697,
          "matrixWidth" : 737280,
          "matrixHeight" : 368640,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1424,13 +1425,13 @@
          ]
       },
       {
-         "identifier" : "12",
+         "id" : "12",
          "scaleDenominator" : 94.7879815044348,
          "matrixWidth" : 1474560,
          "matrixHeight" : 737280,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1488,13 +1489,13 @@
          ]
       },
       {
-         "identifier" : "13",
+         "id" : "13",
          "scaleDenominator" : 47.3939907522174,
          "matrixWidth" : 2949120,
          "matrixHeight" : 1474560,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1552,13 +1553,13 @@
          ]
       },
       {
-         "identifier" : "14",
+         "id" : "14",
          "scaleDenominator" : 23.6969953761087,
          "matrixWidth" : 5898240,
          "matrixHeight" : 2949120,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1616,13 +1617,13 @@
          ]
       },
       {
-         "identifier" : "15",
+         "id" : "15",
          "scaleDenominator" : 11.8484976880544,
          "matrixWidth" : 11796480,
          "matrixHeight" : 5898240,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1680,13 +1681,13 @@
          ]
       },
       {
-         "identifier" : "16",
+         "id" : "16",
          "scaleDenominator" : 5.9242488440272,
          "matrixWidth" : 23592960,
          "matrixHeight" : 11796480,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1744,13 +1745,13 @@
          ]
       },
       {
-         "identifier" : "17",
+         "id" : "17",
          "scaleDenominator" : 2.9621244220136,
          "matrixWidth" : 47185920,
          "matrixHeight" : 23592960,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1808,13 +1809,13 @@
          ]
       },
       {
-         "identifier" : "18",
+         "id" : "18",
          "scaleDenominator" : 1.4810622110068,
          "matrixWidth" : 94371840,
          "matrixHeight" : 47185920,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1872,13 +1873,13 @@
          ]
       },
       {
-         "identifier" : "19",
+         "id" : "19",
          "scaleDenominator" : 0.7405311055034,
          "matrixWidth" : 188743680,
          "matrixHeight" : 94371840,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -1936,13 +1937,13 @@
          ]
       },
       {
-         "identifier" : "20",
+         "id" : "20",
          "scaleDenominator" : 0.3702655527517,
          "matrixWidth" : 377487360,
          "matrixHeight" : 188743680,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],
@@ -2000,13 +2001,13 @@
          ]
       },
       {
-         "identifier" : "21",
+         "id" : "21",
          "scaleDenominator" : 0.1851327763758,
          "matrixWidth" : 754974720,
          "matrixHeight" : 377487360,
          "tileWidth" : 1024,
          "tileHeight" : 1024,
-         "topLeftCorner" : [
+         "pointOfOrigin" : [
             90,
             -180
          ],

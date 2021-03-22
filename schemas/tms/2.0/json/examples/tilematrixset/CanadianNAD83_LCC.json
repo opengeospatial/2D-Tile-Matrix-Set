@@ -1,15 +1,15 @@
 {
 	"title": "Lambert conformal conic NAD83 for Canada",
-	"identifier": "CanadianNAD83_LCC",
+	"id": "CanadianNAD83_LCC",
 	"boundingBox":
 	{
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/3978",
-		"lowerCorner":
+		"lowerLeft":
 		[
 			-7786476.885838887,
 			-5153821.09213678
 		],
-		"upperCorner":
+		"upperRight":
 		[
 			7148753.233541353,
 			7928343.534071138
@@ -19,9 +19,9 @@
 	"tileMatrices":
 	[
 		{
-			"identifier": "0",
+			"id": "0",
 			"scaleDenominator": 145000000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -32,9 +32,9 @@
 			"matrixHeight": 5
 		},
 		{
-			"identifier": "1",
+			"id": "1",
 			"scaleDenominator": 85000000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -45,9 +45,9 @@
 			"matrixHeight": 8
 		},
 		{
-			"identifier": "2",
+			"id": "2",
 			"scaleDenominator": 50000000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -58,9 +58,9 @@
 			"matrixHeight": 14
 		},
 		{
-			"identifier": "3",
+			"id": "3",
 			"scaleDenominator": 30000000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -71,9 +71,9 @@
 			"matrixHeight": 22
 		},
 		{
-			"identifier": "4",
+			"id": "4",
 			"scaleDenominator": 17500000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -84,9 +84,9 @@
 			"matrixHeight": 38
 		},
 		{
-			"identifier": "5",
+			"id": "5",
 			"scaleDenominator": 10000000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -97,9 +97,9 @@
 			"matrixHeight": 66
 		},
 		{
-			"identifier": "6",
+			"id": "6",
 			"scaleDenominator": 6000000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -110,9 +110,9 @@
 			"matrixHeight": 110
 		},
 		{
-			"identifier": "7",
+			"id": "7",
 			"scaleDenominator": 3500000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -123,9 +123,9 @@
 			"matrixHeight": 188
 		},
 		{
-			"identifier": "8",
+			"id": "8",
 			"scaleDenominator": 2000000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -136,9 +136,9 @@
 			"matrixHeight": 329
 		},
 		{
-			"identifier": "9",
+			"id": "9",
 			"scaleDenominator": 1200000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -149,9 +149,9 @@
 			"matrixHeight": 548
 		},
 		{
-			"identifier": "10",
+			"id": "10",
 			"scaleDenominator": 700000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -162,9 +162,9 @@
 			"matrixHeight": 938
 		},
 		{
-			"identifier": "11",
+			"id": "11",
 			"scaleDenominator": 420000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -175,9 +175,9 @@
 			"matrixHeight": 1563
 		},
 		{
-			"identifier": "12",
+			"id": "12",
 			"scaleDenominator": 250000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -188,9 +188,9 @@
 			"matrixHeight": 2626
 		},
 		{
-			"identifier": "13",
+			"id": "13",
 			"scaleDenominator": 145000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -201,9 +201,9 @@
 			"matrixHeight": 4528
 		},
 		{
-			"identifier": "14",
+			"id": "14",
 			"scaleDenominator": 85000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -214,9 +214,9 @@
 			"matrixHeight": 7723
 		},
 		{
-			"identifier": "15",
+			"id": "15",
 			"scaleDenominator": 50000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -227,9 +227,9 @@
 			"matrixHeight": 13130
 		},
 		{
-			"identifier": "16",
+			"id": "16",
 			"scaleDenominator": 30000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -240,9 +240,9 @@
 			"matrixHeight": 21882
 		},
 		{
-			"identifier": "17",
+			"id": "17",
 			"scaleDenominator": 17500,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -253,9 +253,9 @@
 			"matrixHeight": 37512
 		},
 		{
-			"identifier": "18",
+			"id": "18",
 			"scaleDenominator": 10000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -266,9 +266,9 @@
 			"matrixHeight": 65646
 		},
 		{
-			"identifier": "19",
+			"id": "19",
 			"scaleDenominator": 6000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -279,9 +279,9 @@
 			"matrixHeight": 109409
 		},
 		{
-			"identifier": "20",
+			"id": "20",
 			"scaleDenominator": 3500,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -292,9 +292,9 @@
 			"matrixHeight": 187558
 		},
 		{
-			"identifier": "21",
+			"id": "21",
 			"scaleDenominator": 2000,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -305,9 +305,9 @@
 			"matrixHeight": 328227
 		},
 		{
-			"identifier": "22",
+			"id": "22",
 			"scaleDenominator": 1200,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -318,9 +318,9 @@
 			"matrixHeight": 547044
 		},
 		{
-			"identifier": "23",
+			"id": "23",
 			"scaleDenominator": 700,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -331,9 +331,9 @@
 			"matrixHeight": 937790
 		},
 		{
-			"identifier": "24",
+			"id": "24",
 			"scaleDenominator": 420,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000
@@ -344,9 +344,9 @@
 			"matrixHeight": 1562983
 		},
 		{
-			"identifier": "25",
+			"id": "25",
 			"scaleDenominator": 250,
-			"topLeftCorner":
+			"pointOfOrigin":
 			[
 				-34655800,
 				39310000

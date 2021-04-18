@@ -1,0 +1,15 @@
+{
+   "1" : {
+      "OGC_doc_number" : "17-083r3",
+      "urn" : "http://www.opengis.net/doc/IS/tms/2.0",
+      "title" : "OGC Two-dimensional Tile Matrix Set and Tile Set Metadata",
+      "path" : "standard/17-083r3.adoc",
+      "options" : [ "--trace" ],
+      "a" : [
+         "data-uri",
+         "stylesdir=./resources/stylesheets",
+         "dot=/usr/bin/dot"
+      ],
+      "r" : [ "asciidoctor-diagram" ]
+   }
+}

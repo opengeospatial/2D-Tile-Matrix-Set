@@ -23,8 +23,8 @@
 |Approval Date:   2019-05-24
 |Publication Date:   2019-10-06
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/tms/2.0
-|Internal reference number of this OGC(R) document:    17-083r2
-|Version: 1.0
+|Internal reference number of this OGC(R) document:    17-083r3
+|Version: 2.0
 |Category: OGC(R) Implementation Standard
 |Editor:   Joan Masó
 |===

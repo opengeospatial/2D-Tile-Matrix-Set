@@ -13,7 +13,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>-10</ows:Identifier>
       <ScaleDenominator>397569609.975977063179</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>1</TileWidth>
       <TileHeight>1</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -73,7 +73,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>-9</ows:Identifier>
       <ScaleDenominator>198784804.9879885315895</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>2</TileWidth>
       <TileHeight>2</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -133,7 +133,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>-8</ows:Identifier>
       <ScaleDenominator>99392402.4939942657948</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>4</TileWidth>
       <TileHeight>4</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -193,7 +193,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>-7</ows:Identifier>
       <ScaleDenominator>49696201.2469971328974</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>8</TileWidth>
       <TileHeight>8</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -253,7 +253,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>-6</ows:Identifier>
       <ScaleDenominator>24848100.6234985664487</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>16</TileWidth>
       <TileHeight>16</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -313,7 +313,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>-5</ows:Identifier>
       <ScaleDenominator>12424050.3117492832243</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>32</TileWidth>
       <TileHeight>32</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -373,7 +373,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>-4</ows:Identifier>
       <ScaleDenominator>6212025.1558746416122</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>64</TileWidth>
       <TileHeight>64</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -433,7 +433,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>-3</ows:Identifier>
       <ScaleDenominator>3106012.5779373208061</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>128</TileWidth>
       <TileHeight>128</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -493,7 +493,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>-2</ows:Identifier>
       <ScaleDenominator>1553006.288968660403</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -553,7 +553,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>-1</ows:Identifier>
       <ScaleDenominator>776503.1444843302015</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>512</TileWidth>
       <TileHeight>512</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -613,7 +613,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>0</ows:Identifier>
       <ScaleDenominator>388251.5722421651008</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>1024</TileWidth>
       <TileHeight>1024</TileHeight>
       <MatrixWidth>360</MatrixWidth>
@@ -673,7 +673,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>1</ows:Identifier>
       <ScaleDenominator>194125.7861210825504</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>1024</TileWidth>
       <TileHeight>1024</TileHeight>
       <MatrixWidth>720</MatrixWidth>
@@ -733,7 +733,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>2</ows:Identifier>
       <ScaleDenominator>97062.8930605412752</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>1024</TileWidth>
       <TileHeight>1024</TileHeight>
       <MatrixWidth>1440</MatrixWidth>
@@ -793,7 +793,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>3</ows:Identifier>
       <ScaleDenominator>48531.4465302706376</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>1024</TileWidth>
       <TileHeight>1024</TileHeight>
       <MatrixWidth>2880</MatrixWidth>
@@ -853,7 +853,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>4</ows:Identifier>
       <ScaleDenominator>24265.7232651353188</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>1024</TileWidth>
       <TileHeight>1024</TileHeight>
       <MatrixWidth>5760</MatrixWidth>

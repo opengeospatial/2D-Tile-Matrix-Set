@@ -13,7 +13,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>0</ows:Identifier>
       <ScaleDenominator>139770566.0071794</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
       <MatrixWidth>4</MatrixWidth>
@@ -22,7 +22,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>1</ows:Identifier>
       <ScaleDenominator>69885283.00358972</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
       <MatrixWidth>8</MatrixWidth>
@@ -41,7 +41,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>2</ows:Identifier>
       <ScaleDenominator>34942641.50179486</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
       <MatrixWidth>16</MatrixWidth>
@@ -70,7 +70,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>3</ows:Identifier>
       <ScaleDenominator>17471320.7508974298835</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
       <MatrixWidth>32</MatrixWidth>
@@ -109,7 +109,7 @@ xmlns:ows="http://www.opengis.net/ows/2.0" xmlns:xsi="http://www.w3.org/2001/XML
    <TileMatrix>
       <ows:Identifier>4</ows:Identifier>
       <ScaleDenominator>8735660.3754487149417</ScaleDenominator>
-      <TopLeftCorner>90 -180</TopLeftCorner>
+      <PointOfOrigin>90 -180</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
       <MatrixWidth>64</MatrixWidth>

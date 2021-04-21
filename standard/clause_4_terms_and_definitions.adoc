@@ -7,17 +7,27 @@ For the purposes of this document, the following additional terms and definition
 
 *4.1*           
 
+*cell*
+
+minimum geometrical spaces delimited by the grid lines of a regular grid.
+
+NOTE: in 2D spaces, cells are often referred as pixels.
+
+NOTE: In this standard, the term _pixel_ is reserved to the individual elements of a visualization device. Tiles are composed by regular grid cells that can be made partially coincident with the pixels of a visualization device for display purposes.
+
+*4.2*
+
 *coordinate reference system*
 
 coordinate system that is related to the real world by a datum [ISO 19111]
 
-*4.2*           
+*4.3*           
 
 *coordinate system*
 
 set of mathematical rules for specifying how coordinates are to be assigned to points [ISO 19111]
 
-*4.3*           
+*4.4*           
 
 *domain*
 
@@ -25,7 +35,7 @@ well-defined set [ISO/TS 19103:2005]
 
 NOTE: A mathematical function may be defined on this set, i.e. in a function f:A–>B, A is the domain of the function f.
 
-*4.4*           
+*4.5*           
 
 *grid*
 
@@ -35,19 +45,19 @@ NOTE: The curves partition a space into grid cells.
 
 NOTE: A grid can be used to define a tessellation of the space.
 
-*4.5*           
+*4.6*           
 
 *range set*
 
 set of all values a function f can take as its arguments vary over its domain [OGC 07-036]
 
-*4.6*           
+*4.7*           
 
 *raster tile*
 
-a tile that contains information in a gridded form. Commonly the values of the grid represent colors of each cell in the grid for immediate pictorial representation on rendering devices, but can also be coverage subsets.
+a tile that contains information in a gridded form. Commonly the values of the grid represent colors of each cell in the grid for immediate pictorial representation on visualization devices, but can also be coverage subsets.
 
-*4.7*           
+*4.8*           
 
 *regular grid*
 
@@ -55,7 +65,7 @@ grid whose grid lines have a constant distance along each grid axis [OGC 09-146r
 
 NOTE: A regular grid can be used to define a regular tessellation of the space.
 
-*4.8*           
+*4.9*           
 
 *tessellation*
 
@@ -63,13 +73,13 @@ partitioning of a space into a set of conterminous subspaces having the same dim
 
 NOTE: A tessellation composed of congruent regular polygons or polyhedra is a regular tessellation. One composed of regular, but non-congruent polygons or polyhedra is a semi-regular tessellation. Otherwise the tessellation is irregular.
 
-*4.9*           
+*4.10*           
 
 *tile*
 
-a small rectangular representation of geographic data, often part of a set of such elements, covering a tiling scheme and sharing similar information content and graphical styling. A tile can be uniquely defined in a tile matrix by one integer index in each dimension. Tiles are mainly used for fast transfer (particularly in the web) and easy display at the resolution of a rendering device. Tiles can be grid based pictorial representations, coverage subsets, or feature based representations (e.g., vector tiles).
+a small rectangular representation of geographic data, often part of a set of such elements, covering a tiling scheme and sharing similar information content and graphical styling. A tile can be uniquely defined in a tile matrix by one integer index in each dimension. Tiles are mainly used for fast transfer (particularly in the web) and easy display at the resolution of a visualization device. Tiles can be grid based pictorial representations, coverage subsets, or feature based representations (e.g., vector tiles).
 
-*4.10*        
+*4.11*        
 
 *tile matrix*
 
@@ -77,13 +87,13 @@ a grid tiling scheme that defines how space is partitioned into a set of conterm
 
 NOTE A tile matrix constitutes a tessellation of the space that resembles a matrix in a 2D space characterized by a matrix width (columns) and a matrix height (rows).
 
-*4.11*        
+*4.12*        
 
 *tile matrix set*
 
 a tiling scheme composed by collection of tile matrices defined at different scales covering approximately the same area and has a common coordinate reference system.
 
-*4.12*        
+*4.13*        
 
 *tiling scheme*
 
@@ -91,25 +101,25 @@ a scheme that defines how space is partitioned into individual tiled units. A ti
 
 NOTE: A tiling scheme is not restricted to a coordinate reference system or a tile matrix set and allows for other spatial reference systems such as DGGS and other organizations including irregular ones.
 
-*4.13*        
+*4.14*        
 
 *tile set*
 
 a series of actual tiles contain data and following a common tiling scheme.
 
-*4.14*        
+*4.15*        
 
 *tile set metadata*
 
 metadata describing common properties defining a tile set, layers and styles, its limits and common metadata such as abstract, owner, author, etc.
 
-*4.15*        
+*4.16*        
 
 *vector tile*
 
 a tile that contains vector information that has been simplified at the tile scale resolution and clipped by the tile boundaries.
 
-*4.16*        
+*4.17*        
 
 *well-known scale set*
 

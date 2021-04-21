@@ -21,12 +21,12 @@ This Annex includes some definitions for TileMatrixSets that are commonly used.
 
 *WellKnownScaleSet*: http://www.opengis.net/def/wkss/OGC/1.0/GoogleMapsCompatible
 
-*TopLeftCorner*: -20037508.3427892 20037508.3427892
+*PointOfOrigin*: -20037508.3427892 20037508.3427892
 
 *TileWidth*: 256
 
 *TileHeight*: 256
-| *TileMatrix id* | *Scale Denominator* | *Pixel Size (m)* | *Matrix Width* | *Matrix Height*
+| *TileMatrix id* | *Scale Denominator* | *Cell Size (m)* | *Matrix Width* | *Matrix Height*
 | 0 | 559082264.0287178 | 156543.0339280410 | 1 | 1
 | 1 | 279541132.0143589 | 78271.51696402048 | 2 | 2
 | 2 | 139770566.0071794 | 39135.75848201023 | 4 | 4
@@ -56,7 +56,7 @@ This Annex includes some definitions for TileMatrixSets that are commonly used.
 
 One can define an arbitrary number of zoom levels and do not need to include all the zoom levels defined here. Here, 25 zoom levels are illustrated.
 
-NOTE: Mercator projection distorts the pixel size the closer to the poles. The pixel sizes provided here are only valid next to the equator in the direction E-W.
+NOTE: Mercator projection distorts the cell size the closer to the poles. The cell sizes provided here are only valid next to the equator in the direction E-W.
 
 NOTE: The CRS code 3857 is the official code for Web Mercator. An unofficial code “900913” (GOOGLE spelled with numbers) was initially assigned and is sometimes still used.
 
@@ -87,12 +87,12 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 
 *WellKnownScaleSet*: http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad
 
-*TopLeftCorner*: -180 90
+*PointOfOrigin*: -180 90
 
 *TileWidth*: 256
 
 *TileHeight*: 256
-| *TileMatrix id* | *Scale Denominator* | *Pixel Size (degrees) (true at the equator)* | *Matrix Width* | *Matrix Height*
+| *TileMatrix id* | *Scale Denominator* | *CEll Size (degrees) (true at the equator)* | *Matrix Width* | *Matrix Height*
 | 0 | 279541132.0143589 | 0.703125000000000 | 2 | 1
 | 1 | 139770566.0071794 | 0.351562500000000 | 4 | 2
 | 2 | 69885283.00358972 | 0.175781250000000 | 8 | 4
@@ -129,7 +129,7 @@ NOTE: The scale denominators for this TileMatrixSet and WorldMercatorWGS84Quad a
 
 NOTE: for INSPIRE: The Technical Guidance for the implementation of INSPIRE View Services defines a TileMatrixSet called InspireCRS84Quad that is identical to this one. Note that the current version of the INSPIRE Technical Guidance cited in the Bibliography Annex could accidentally generate confusion because it is comparing a GoogleCRS84Quad (that is a well-known scale set name) with the InspireCRS84Quad (that is a TileMatrixSet definition that does not link to any WKSS).
 
-NOTE: Some implementers prefer to define this TileMatrixSet using the CRS http://www.opengis.net/def/crs/EPSG/0/4326. The definition is the same except that CRS coordinates are expressed in latitude, longitude order, affecting the TopLeftCorner and the BBox encoding only.
+NOTE: Some implementers prefer to define this TileMatrixSet using the CRS http://www.opengis.net/def/crs/EPSG/0/4326. The definition is the same except that CRS coordinates are expressed in latitude, longitude order, affecting the PointOfOrigin and the BBox encoding only.
 
 [[world-mercator-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldmercatorwgs84quad.]]
 === World Mercator WGS84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldMercatorWGS84Quad).
@@ -146,12 +146,12 @@ NOTE: Some implementers prefer to define this TileMatrixSet using the CRS http:/
 
 *WellKnownScaleSet*: http://www.opengis.net/def/wkss/OGC/1.0/WorldMercatorWGS84
 
-*TopLeftCorner*: -20037508.3427892 20037508.3427892
+*PointOfOrigin*: -20037508.3427892 20037508.3427892
 
 *TileWidth*: 256
 
 *TileHeight*: 256
-| *TileMatrix id* | *Scale Denominator* | *Pixel Size (m) (true at the equator)* | *Pixel Size (m) at latitude ±31.0606963703645 (informative)* | *Matrix Width* | *Matrix Height*
+| *TileMatrix id* | *Scale Denominator* | *Cell Size (m) (true at the equator)* | *Cell Size (m) at latitude ±31.0606963703645 (informative)* | *Matrix Width* | *Matrix Height*
 | 0 |559082264.02871774 |156543.033928040 |134217.728 |1 |1
 | 1 |279541132.01435887 |78271.5169640205 |67108.864 |2 |2
 | 2 |139770566.00717943 |39135.7584820102 |33554.432 |4 |4
@@ -190,7 +190,7 @@ image::figures/12.png[Tile Matrix Id 1 (red lines; 2x2 tiles) and 3 (blue lines;
 
 NOTE: The NGA Geomatics Office reminds the community to use DoD approved World Geodetic System 1984 (WGS 84) applications for all mission critical activities and encourages the use of WGS84 based tile matrix sets like this one and discourages the use of Web Mercator tiles based on Web Mercator such as WebMercatorQuad.
 
-NOTE: The NGA Geomatics Office recommends the use of Universal zoom-levels scale set that are defined as true pixel size at ±31.0606963703645 degrees of latitude that implies a scale reduction at the equator of 0.857385503731176. This standard recommends the use of scale denominators at the equator for convenience.
+NOTE: The NGA Geomatics Office recommends the use of Universal zoom-levels scale set that are defined as true cell size at ±31.0606963703645 degrees of latitude that implies a scale reduction at the equator of 0.857385503731176. This standard recommends the use of scale denominators at the equator for convenience.
 
 [[universal-transverse-mercator-wgs84-quad-family-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0utmwgs84quad]]
 === Universal Transverse Mercator WGS84 Quad family TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/UTM##WGS84Quad)
@@ -211,13 +211,13 @@ The Universal Transversal Mercator (a special case of transverse Mercator), divi
 
 *WellKnownScaleSet*: N/A
 
-*TopLeftCorner*: -9501965.72931276 20003931.4586255
+*PointOfOrigin*: -9501965.72931276 20003931.4586255
 
 *TileWidth*: 256
 
 *TileHeight*: 256
 
-| *TileMatrix id* | *Scale Denominator* | *Pixel Size (m) along the central meridian* | *Pixel Size (m) at a point in the Equator and at a longitude ±30.700524332812+3+(##-31)*6* | *Matrix Width* | *Matrix Height*
+| *TileMatrix id* | *Scale Denominator* | *Cell Size (m) along the central meridian* | *Cell Size (m) at a point in the Equator and at a longitude ±30.700524332812+3+(##-31)*6* | *Matrix Width* | *Matrix Height*
 | 1 | 279072704.500914 | 78140.3572602559 | 67108.864 | 1 | 2
 | 2 | 139536352.250457 | 39070.178630128 | 33554.432 | 2 | 4
 | 3 | 69768176.1252285 | 19535.089315064 | 16777.216 | 4 | 8
@@ -255,12 +255,12 @@ NOTE: The UTM projection is supposed to be used in zones that are only 3 degrees
 .Tile Matrix Id 1 (dashed blue lines; 1x2 tiles) and 2 (red lines; 2x4 tiles) of the UTM18WGS84Quad TileMatrixSet (Source NGA)
 image::figures/13.png[Tile Matrix Id 1 (dashed blue lines; 1x2 tiles) and 2 (red lines; 2x4 tiles) of the UTM18WGS84Quad TileMatrixSet (Source NGA)]
 
-NOTE: The NGA Geomatics Office recommends the use of Universal zoom-levels scale set that are defined as true pixel size at ±30.700524332812 degrees of longitude at both sides of the central meridian that implies a scale reduction at the central meridian of 0.85882463752355. The tiles considering this scale are exactly the same than considering true pixel size at the equation and no scale reduction. This standard recommends the use of scale denominators at the equator for convenience.
+NOTE: The NGA Geomatics Office recommends the use of Universal zoom-levels scale set that are defined as true cell size at ±30.700524332812 degrees of longitude at both sides of the central meridian that implies a scale reduction at the central meridian of 0.85882463752355. The tiles considering this scale are exactly the same than considering true cell size at the equation and no scale reduction. This standard recommends the use of scale denominators at the equator for convenience.
 
 [[arctic-universal-polar-stereographic-wgs-84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0upsarcticwgs84quad]]
 === Arctic Universal Polar Stereographic WGS 84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/UPSArcticWGS84Quad)
 
-It is difficult to find consensus in the geospatial community for what constitutes the “best” tile matrix set for the polar areas. Even if everyone agrees on using a polar stereographic, the election of the TopLeftCorner and scale denominators is almost arbitrary. This document presents the NGA recommendation for polar stereographic that allows for the representation of more than one hemisphere to 15 degrees into the opposite hemisphere and shares a common set of pixel sizes with the WorldMercatorWGS84Quad and the UTM##WGS84Quad. The selection of a CRS for a polar stereographic is difficult and this document follows several criteria (see NOTE 2). In the end, the UPS North that is commonly used in conjunction with UTM was selected.
+It is difficult to find consensus in the geospatial community for what constitutes the “best” tile matrix set for the polar areas. Even if everyone agrees on using a polar stereographic, the election of the PointOfOrigin and scale denominators is almost arbitrary. This document presents the NGA recommendation for polar stereographic that allows for the representation of more than one hemisphere to 15 degrees into the opposite hemisphere and shares a common set of cell sizes with the WorldMercatorWGS84Quad and the UTM##WGS84Quad. The selection of a CRS for a polar stereographic is difficult and this document follows several criteria (see NOTE 2). In the end, the UPS North that is commonly used in conjunction with UTM was selected.
 
 NOTE: In Mercator or Transversal Mercator projections the first scale denominator and top left corner are selected in a way that a single tile can cover all ranges of longitudes or latitudes respectively. Due to the nature of this projection, these criteria cannot be applied. The top left corner selection deeply depends on the application. The very distant top left corner was selected here to include as many applications as possible.
 
@@ -276,12 +276,12 @@ NOTE: In Mercator or Transversal Mercator projections the first scale denominato
 
 *WellKnownScaleSet*: N/A
 
-*TopLeftCorner*: -14440759.350252,18440759.350252
+*PointOfOrigin*: -14440759.350252,18440759.350252
 
 *TileWidth*: 256
 
 *TileHeight*: 256
-| *Tile Matrix id* | *Scale Denominator* | *Pixel Size (m) (true at latitude  ~81)* | *True Pixel Size (m) at the pole (informative)* | *Matrix Width* | *Matrix Height*
+| *Tile Matrix id* | *Scale Denominator* | *Cell Size (m) (true at latitude  ~81)* | *True Cell Size (m) at the pole (informative)* | *Matrix Width* | *Matrix Height*
 | 0 | 458726544.4 | 128443.4324 | 129218.7449 | 1 | 1
 | 1 | 229363272.2 | 64221.71621 | 64609.37245 | 2 | 2
 | 2 | 114681636.1 | 32110.85811 | 32304.68622 | 4 | 4
@@ -319,7 +319,7 @@ image::figures/14.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (blank li
 
 NOTE: In practice, there are many polar stereographic CRS and it is difficult to prioritize one. In many occasions, the meridian of origin is selected in order to rotate the projection and allow a region to become more prominent. Examples are rotations emphasizing Greenland or Alaska. To be general, the 0 meridian of origin was selected. In addition, polar projections have a variety of standard parallels and here is selected 90N. In the UPS system, the North Pole is assigned the coordinates x=2000000, y=2000000.
 
-NOTE: NGA has suggested also another TileMatrixSet called _sixteenth tile_ that covers less area by having the TopLeftCorner: at ‑2 110 189.837563, 6 110 189.837563,   BBOX LowerCorner: ‑2110189.837562966 -2110189.837562966 and BBOX UpperCorner: 6110189.837562966 6110189.837562966, The same result can be achieved by using the TileMatrixSetLimits mechanism without having to define an entirely new TileMatrixSet.
+NOTE: NGA has suggested also another TileMatrixSet called _sixteenth tile_ that covers less area by having the PointOfOrigin: at ‑2 110 189.837563, 6 110 189.837563,   BBOX LowerCorner: ‑2110189.837562966 -2110189.837562966 and BBOX UpperCorner: 6110189.837562966 6110189.837562966, The same result can be achieved by using the TileMatrixSetLimits mechanism without having to define an entirely new TileMatrixSet.
 
 [#img_rotation-of-the-meridian,reftext='{figure-caption} {counter:figure-num}']
 .Rotation of the meridian of origin to allow a region to become more prominent (a. EPSG:3995, Arctic WGS 84 Polar Stereographic, b. EPSG:3413 WGS 84 / NSIDC Polar Stereographic North, c. EPSG:5936 / Alaska Polar Stereographic). This TileMatrixSet has 0 rotation angle for the meridian of origin.
@@ -329,7 +329,7 @@ image::figures/15.png[Rotation of the meridian of origin to allow a region to be
 [[antarctic-universal-polar-stereographic-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0-upsantarcticwgs84quad]]
 === Antarctic Universal Polar Stereographic WGS84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/ UPSAntarcticWGS84Quad)
 
-There is no consensus in the geospatial community for what constitutes the “best” tile matrix set for the polar stereographic projection. One reason for this is that the election of the TopLeftCorner and scale denominators is almost completely arbitrary. In this document, a TileMatrixSet identical to the Arctic one but with and Antarctic CRS was selected.
+There is no consensus in the geospatial community for what constitutes the “best” tile matrix set for the polar stereographic projection. One reason for this is that the election of the PointOfOrigin and scale denominators is almost completely arbitrary. In this document, a TileMatrixSet identical to the Arctic one but with and Antarctic CRS was selected.
 
 
 [#definition-of-the-upsantarcticwgs84quad-tilematrixset,reftext='{table-caption} {counter:table-num}']
@@ -344,13 +344,13 @@ There is no consensus in the geospatial community for what constitutes the “be
 
 *WellKnownScaleSet*: N/A
 
-*TopLeftCorner*: -14440759.350252,18440759.350252
+*PointOfOrigin*: -14440759.350252,18440759.350252
 
 *TileWidth*: 256
 
 *TileHeight*: 256
 
-| *Tile Matrix id* | *Scale Denominator* | *Pixel Size (m) (true at latitude  ~-81)* | *True Pixel Size (m) at the pole (informative)* | *Matrix Width* | *Matrix Height*
+| *Tile Matrix id* | *Scale Denominator* | *Cell Size (m) (true at latitude  ~-81)* | *True Cell Size (m) at the pole (informative)* | *Matrix Width* | *Matrix Height*
 | 0 | 458726544.4 | 128443.4324 | 129218.7449 | 1 | 1
 | 1 | 229363272.2 | 64221.71621 | 64609.37245 | 2 | 2
 | 2 | 114681636.1 | 32110.85811 | 32304.68622 | 4 | 4
@@ -402,12 +402,12 @@ image::figures/16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black li
 
 *WellKnownScaleSet*: N/A
 
-*TopLeftCorner*: 2000000.0 5500000.0
+*PointOfOrigin*: 2000000.0 5500000.0
 
 *TileWidth*: 256
 
 *TileHeight*: 256
-| *TileMatrix id* | *Scale Denominator* | *Pixel Size (m)* | *Matrix Width* | *Matrix Height*
+| *TileMatrix id* | *Scale Denominator* | *Cell Size (m)* | *Matrix Width* | *Matrix Height*
 | 0 |62779017.857142866 |17578.1250000000 |1 |1
 | 1 |31389508.928571433 |8789.0625000000 |2 |2
 | 2 |15694754.464285716 |4394.5312500000 |4 |4
@@ -444,12 +444,12 @@ One can define an arbitrary number of zoom levels and does not need to include a
 
 *WellKnownScaleSet*: N/A
 
-*TopLeftCorner*: -34655800, 39310000
+*PointOfOrigin*: -34655800, 39310000
 
 *TileWidth*: 256
 
 *TileHeight*: 256
-| *TileMatrix id* | *Scale Denominator* | *Scale Denominator at latitudes 37.897505 and 83.3032475 (informative)* | *Cartographic product (informative)* | *Pixel Size (m) (true at the equator)* | *Matrix Width* | *Matrix Height*
+| *TileMatrix id* | *Scale Denominator* | *Scale Denominator at latitudes 37.897505 and 83.3032475 (informative)* | *Cartographic product (informative)* | *Cell Size (m) (true at the equator)* | *Matrix Width* | *Matrix Height*
 | 0 | 137016643.1 | 145000000 | World | 38364.66006 | 5 | 5
 | 1 | 80320101.12 | 85000000 | World | 22489.62831 | 8 | 8
 | 2 | 47247118.3 | 50000000 | Atlas SM | 13229.19313 | 13 | 14

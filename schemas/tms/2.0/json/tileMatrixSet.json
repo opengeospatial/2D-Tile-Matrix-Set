@@ -29,16 +29,15 @@
 		"boundingBox":
 		{
 			"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
-			"$ref": "2DBoundingBox.json",
-			"examples": [
-				{
-					"crs" : {"uri": "http://www.opengis.net/def/crs/EPSG/0/4326"},
-					"axesLabels" : ["Lat", "Lon"],
-					"lowerLeft" : [-20037508.3427892, -20037508.342789],
-					"upperRight" : [20037508.3427892, 20037508.342789]
-				}
-			]
+			"$ref": "2DBoundingBox.json"
 		},
+		"orderedAxes": {
+			"type": "array",
+			"minItems": 1,
+			"items": {
+				"type": "string"
+			}
+		},		
 		"supportedCRS": {
 			"description": "Coordinate Reference System (CRS)",
 			"$ref": "crs.json"

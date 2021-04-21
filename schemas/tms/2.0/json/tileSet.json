@@ -208,7 +208,7 @@
 				},
 				"supportedCRS": {
 					"description": "Coordinate Reference System (CRS)",
-					"$ref": "../../../ogcapi/common/part1/1.0/schemas/crs.json"
+					"$ref": "crs.json"
 				},
 				"minScaleDenominator": {
 					"description": "Minimum scale denominator for usage of the layer",

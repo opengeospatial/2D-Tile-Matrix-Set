@@ -42,8 +42,7 @@ include::../schemas/tms/2.0/xml/examples/tilematrixset/GNOSISGlobalGrid.xml[line
 
 The second example represents the https://docs.opengeospatial.org/is/15-113r5/15-113r5.html#CharacteristicsoftheCDBtilingstoragemodel[CDB Zones and Levels of Detail]
 which can be encoded following this standard with the use of variable widths.
-For the tile matrices with negative identifiers of the CDB Global Grid, the tiles' geographic extents remain the same as those of tile matrix 0,
-but the tile size in pixels is reduced. The levels -1 to 2 are shown here.
+For the tile matrices with negative identifiers of the CDB Global Grid, the tiles' geographic extents remain the same as those of tile matrix 0, but the tile size in cells is reduced. The levels -1 to 2 are shown here.
 Note that unlike the GNOSIS Global Grid, for the CDB Global Grid the polar adjustment is the same for all tile matrices of the set.
 
 [[json-cdbglobalgrid]]

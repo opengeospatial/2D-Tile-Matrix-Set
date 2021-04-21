@@ -31,8 +31,8 @@
 					"properties":
 					{
 						"wkt": {
-							"description": "A string defining the CRS using Well Known Text",
-							"type": "string"
+							"description": "A string defining the CRS using the JSON encodng for Well Known Text",
+							"$ref": "projJSON.json"
 						}
 					}
 				},

@@ -3,7 +3,7 @@
 
 === Overview
 
-As stated in [OGC 08-015r2] Abstract Specification Topic 2: Spatial Referencing by Coordinates, a coordinate system is a set of mathematical rules for specifying how coordinates are to be assigned to points in space. A CRS is a coordinate system that is related to the real world by a reference datum. An example of mathematical rules is the application of a sphere or an ellipsoid centered in the datum and the use of a projection to transform the sphere or the ellipsoid into a planar representation of the world. Usually, the resulting planar coordinates are expressed as real numbers that are distances to the origin of the projection. This section introduces a tiling scheme called Tile Matrix Set that is defined on top of a CRS. A fundamental part of the definiont of a Tile Matrix Set is the Tile Matrix.
+As stated in [OGC 08-015r2] Abstract Specification Topic 2: Spatial Referencing by Coordinates, a coordinate system is a set of mathematical rules for specifying how coordinates are to be assigned to points in space. A CRS is a coordinate system that is related to the real world by a reference datum. An example of mathematical rules is the application of a sphere or an ellipsoid centered in the datum and the use of a projection to transform the sphere or the ellipsoid into a planar representation of the world. Usually, the resulting planar coordinates are expressed as real numbers that are distances to the origin of the projection. This section introduces a tiling scheme called Tile Matrix Set that is defined on top of a CRS. A fundamental part of the definion of a Tile Matrix Set is the Tile Matrix.
 
 [[tile-matrix]]
 ==== Tile Matrix
@@ -18,44 +18,50 @@ A _Tile Matrix_ is a tiling scheme defined as a grid coverage. For the [OGC 09-1
 [[tile-matrix-in-a-two-dimensional-space.]]
 ===== Tile matrix in a two-dimensional space.
 
-Tiles are originally designed to be rendered in rendering devices that have the space quantized in pixels characterized by a size.
+Tiles are originally designed to be rendered in visualization devices that have the space quantized in pixels characterized by a size.
 
-The tile size in CRS units of the first two spatial dimensions and the size of the rendering device pixels are related. The two spatial dimensions are aligned with the pixel axes of the device. The relation is a function of the following two parameters:
+The tile size in CRS units of the first two spatial dimensions and the size of the visualization device pixels are related. The two spatial dimensions are aligned with the pixel axes of the device. The relation is a function of the following two parameters:
+In raster tiles, a second regular grid that is coincident with the original regular grid coverage domain range but denser (with smaller cell size but an exact submultiple of that size) is defined. Each grid cell of this new higher resolution grid is called a _grid cell_. The gridded space is defined by the same corner as the original tile matrix. The grid cells are defined by equally dividing the original tiles into __grid cells__using the__number of rendering cells in a tile__ (_tile width_ and _tile height_). In common tiled 2D visualization clients, a part of the _grid cells_ is made coincident with the device pixels and this part of the grid is rendered in the device: the second grid is known as the _extrapolated_ _device grid_. In other words, a tile is divided in a number of cells in each dimension of the CRS in a way that creates cells of the exact same size of the pixels of a visualization device.
 
 [loweralpha]
 . A scale (expressed as a scale denominator) and
 
 . A grouping __of rendering pixels__ in a tile forming the tile. 256x256 or 512x512 are common grouping values. Frequently the sizes of the two first dimensions are called _tile width_ and _tile height_.
 
-NOTE: Normally _tile width_ and _tile height_ are equal but this constraint is not imposed by this standard.
+NOTE: Commonly _tile width_ and _tile height_ are equal but this constraint is not imposed by this standard.
 
-The scale denominator is defined here with respect to a “standardized rendering pixel size” of 0.28 mm × 0.28 mm (millimeters). The definition is the same as used in Web Map Service WMS 1.3.0 [OGC 06-042] and in Symbology Encoding (SE) Implementation Specification 1.1.0 [OGC 05-077r4] that was later adopted by WMTS 1.0 [OGC 07-057r7]. Frequently, the true pixel size of the device is unknown and 0.28 mm was the actual size of a common display from 2005. This value is still being used as reference even if current display devices are built with pixel sizes much smaller.
+The scale denominator is defined here with respect to a “standardized rendering pixel size” of 0.28 mm × 0.28 mm (millimeters). The definition is the same as used in Web Map Service WMS 1.3.0 [OGC 06-042] and in Symbology Encoding (SE) Implementation Specification 1.1.0 [OGC 05-077r4] that was later adopted by WMTS 1.0 [OGC 07-057r7]. Frequently, the true pixel size of the device is unknown and 0.28 mm was the actual size of a common display from 2005. This value is still being used as reference, even if current display devices are built with much smaller pixel sizes.
 
 NOTE: Since the 1980s, the Microsoft Windows operating system has set their default standard display pixels per inch (PPI) to 96. This value results in an approximated 0.264 mm per pixel. The similarity of this value with the actual 0.28 mm adopted in this standard can create some confusion.
 
-Normally the _matrix width_ is constant and in this circumstance, having a single scale factor using a single standardized rendering pixel size for the two dimensions, results in pixels that have the same size in the first two dimensions. This is commonly known as square pixels.
+NOTE: Modern display devices (screens) have pixels so small that operating systems allow for defining a presentation scale factor bigger than one (e.g. 150%). In these circumstances, the actual size of the device pixels are not the same as the size used by the operating system.
+
+Normally the _matrix width_ is constant and in this circumstance, having a single scale factor using a single standardized rendering cell size for the two dimensions, results in cells that have the same size in the first two dimensions. This is commonly known as _square pixels_.
 
 NOTE: The geometry above is different from WMS, which does allow non-square pixels (although many implementations fail to support non-square pixels properly).
 
-In raster tiles, a second regular grid that is coincident with the original regular grid coverage domain range but denser (with smaller cell size but an exact submultiple of that size) is defined. Each grid cell of this new higher resolution grid is called a _grid cell_. The gridded space is defined by the same corner as the original tile matrix. The grid cells are defined by equally dividing the original tiles into __grid cells__using the__number of rendering pixels in a tile__. In common tiled 2D visualization clients, a part of the _grid cells_ is made coincident with the device pixels and this part of the grid is rendered in the device: the second grid is known as the _extrapolated_ _device grid_. In other words, a tile is divided in a number of pixels in each dimension of the CRS in a way that creates pixels of the exact same size of the grid of a rendering device.
 
 NOTE: In map tiles, it is common that the range set represents colors of the cells and is stored in PNG or JPEG files of exactly one tile. Nevertheless, nothing prevents to store other kinds of values in other formats, such as TIFF files.
 
-Vector tiles also make use of the _extrapolated_ _device grid_ where vector tiles can be rendered for visualization purposes.
+Vector tiles also make use of the _extrapolated_ _device grid_, where vector tiles can be rendered for visualization purposes.
 
 NOTE: Vector tiles expressed in pure vector formats, such as GeoJSON, do not make use of an _extrapolated device grid_. Other vector tiles formats (e.g., MBTiles) define an internal coincident grid denser than the _extrapolated_ __device grid__ and expresses the vector coordinates using indices in this denser grid.
 
-For the case of a two-dimensional space, given the top left point of the tile matrix in CRS coordinates (tileMatrixMinX, tileMatrixMaxY), the width and height of the tile matrix in tile units (matrixWidth, matrixHeight), the __rendering pixels in a tile__ values (tileWidth, tileHeight), the coefficient to convert the coordinate reference system (CRS) units into meters (metersPerUnit), and the scale (1:scaleDenominator), the bottom right corner of the bounding box of a tile matrix (tileMatrixMaxX, tileMatrixMinY) can be calculated as follows:
+For the case of a two-dimensional space, given the top left point of the tile matrix in CRS coordinates (tileMatrixMinX, tileMatrixMaxY), the width and height of the tile matrix in tile units (matrixWidth, matrixHeight), the __rendering cells in a tile__ values (tileWidth, tileHeight), the coefficient to convert the coordinate reference system (CRS) units into meters (metersPerUnit), and the scale (1:scaleDenominator), the bottom right corner of the bounding box of a tile matrix (tileMatrixMaxX, tileMatrixMinY) can be calculated as follows:
 
-__pixelSpan = scaleDenominator__ × 0.28 10^-3^ / __metersPerUnit(crs)__
+__cellSize = scaleDenominator__ × 0.28 10^-3^ / __metersPerUnit(crs)__
 
-__tileSpanX = tileWidth__ × __pixelSpan__
+__tileSpanX = tileWidth__ × __cellSize__
 
-__tileSpanY = tileHeight__ × __pixelSpan__
+__tileSpanY = tileHeight__ × __cellSize__
 
 __tileMatrixMaxX = tileMatrixMinX__ + __tileSpanX__ × __matrixWidth__
 
 __tileMatrixMinY = tileMatrixMaxY__ - __tileSpanY__ × __matrixHeight__
+
+NOTE: In a CRS with coordinates expressed in meters, __metersPerUnit(crs)__ equals 1.
+
+NOTE: In CRS with coordinates expressed in degrees __metersPerUnit(crs)__ equals 360/(__EquatorialRadius__*2*PI) (360 degrees are equivalent to the EquatorialPerimeter). E.g for WGS84 __metersPerUnit(crs)__ is 111319.4908 meters/degree.
 
 The tile space therefore looks like this:
 
@@ -170,7 +176,7 @@ One for each keyword authority used
 | bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS ^b^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
 | supportedCRS | Coordinate reference system (CRS) | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory)
-| wellKnown‌ScaleSet | Reference to a well-known scale set ^e^ | URI type | Zero or one (optional) ^c^
+| wellKnown‌ScaleSet | Reference to a well-known scale set ^e^ | URI type ^h^ | Zero or one (optional) ^c^
 | tileMatrix | Description of a scale level and its tile matrix | TileMatrix data structure. See <<parts-of-tilematrix-data-structure>> | One or more (mandatory) ^d^
 4+|
 ^a^     The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
@@ -186,7 +192,10 @@ One for each keyword authority used
 ^f^     If no Title is specified, a client may display the Identifier value instead.
 
 ^g^     TileMatrixSet identifies SHALL be unique (different) for each TileMatrixSet of a server.
+
+^h^     In WMTS 1.0 a URN was used as a reference to a well-known scale set on the URN in WMTS. Later, OGC adopted URIs (instead of URNs) to do references. The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming Authority - Procedures document] specifies rules to transform form URN to URI. Implement a on-the-fly translations based on these rules is possible.
 |===
+
 A part from the general tile matrix set description an array of tile matrix elements is needed to define the distribution of tiles for each scale denominator.
 [#parts-of-tilematrix-data-structure,reftext='{table-caption} {counter:table-num}']
 .Parts of TileMatrix data structure
@@ -227,12 +236,9 @@ Zero or more (optional)
 
 One for each keyword authority used
 
-| scale‌Denominator |
-Scale denominator level of this tile matrix ^f^
- |
-Double type
- |
-One (mandatory)
+| scale‌Denominator | Scale denominator level of this tile matrix ^f^ | Double type | One (mandatory)
+
+| cellSize | cell size of this tile matrix ^f^ | Double type | One (mandatory)
 
 | cornerOfOrigin |
 Position of the corner of origin with respect of the tiles of this tile matrix
@@ -249,14 +255,14 @@ Ordered sequence of double values ^b^
 One (mandatory)
 
 | tileWidth |
-Width of each tile of this tile matrix in pixels
+Width of each tile of this tile matrix in cells
  |
 Positive integer type
  |
 One (mandatory)
 
 | tileHeight |
-Height of each tile of this tile matrix in pixels
+Height of each tile of this tile matrix in cells
  |
 Positive integer type
  |
@@ -278,15 +284,15 @@ One (mandatory)
 4+|
 ^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^    CRS will be inherited from the supportedCRS parameter of the parent TileMatrixSet. The order of these axes shall be as specified by the supportedCRS. These are the precise coordinates of the top left corner of top left pixel of the 0,0 tile. See Figure 1.
+^b^    CRS will be inherited from the supportedCRS parameter of the parent TileMatrixSet. The order of these axes shall be as specified by the supportedCRS. These are the precise coordinates of the top left corner of top left cell of the 0,0 tile. See Figure 1.
 
-^c^    This TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded pixel size. It is recommended to avoid repeating the TileMatrixSet identifier as part of the TileMatrix identifier.
+^c^    This TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded cell size. It is recommended to avoid repeating the TileMatrixSet identifier as part of the TileMatrix identifier.
 
 ^d^    If no Title is specified, client may display the Identifier value instead.
 
 ^e^    In previous versions was called topLeftCorner and cornerOfOrigin did not exist
 
-^f^    The pixel size of the tile can be obtained from the scaleDenominator by multiplying the later by 0.28 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it has degrees, then metersPerUnit=2p__a__/360 (_a_ is the Earth maximum radius of the ellipsoid).
+^f^    The cell size of the tile can be obtained from the scaleDenominator by multiplying the later by 0.28 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it uses degrees, then metersPerUnit=2*pi__a__/360 (_a_ is the Earth maximum radius of the ellipsoid; a.k.a the radius of the equator.).
 |===
  
 

@@ -238,7 +238,7 @@ One for each keyword authority used
 
 | scale‌Denominator | Scale denominator level of this tile matrix ^f^ | Double type | One (mandatory)
 
-| cellSize | cell size of this tile matrix ^f^ | Double type | One (mandatory)
+| cellSize | Cell size of this tile matrix ^f^ | Double type | One (mandatory)
 
 | cornerOfOrigin |
 Position of the corner of origin with respect of the tiles of this tile matrix

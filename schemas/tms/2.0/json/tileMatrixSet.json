@@ -62,7 +62,7 @@
 		{
 			"description": "",
 			"type": "object",
-			"required": ["id", "scaleDenominator", "pointOfOrigin", "tileWidth", "tileHeight", "matrixWidth", "matrixHeight"],
+			"required": ["id", "scaleDenominator", "cellSize", "pointOfOrigin", "tileWidth", "tileHeight", "matrixWidth", "matrixHeight"],
 			"properties":
 			{
 				"title": {
@@ -90,7 +90,12 @@
 				"scaleDenominator": {
 					"description": "Scale denominator level of this tile matrix",
 					"type": "number",
-					"examples": [69885283.00358972]
+					"examples": [69885283]
+				},
+				"cellSize": {
+					"description": "Cell size of this tile matrix",
+					"type": "number",
+					"examples": [19567.87924]
 				},
 				"cornerOfOrigin": {
 					"description": "Position of the corner of origin with respect of the tiles of this tile matrix",

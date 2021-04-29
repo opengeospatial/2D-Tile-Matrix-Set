@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Edited with XMLSpy v2008 sp1 (http://www.altova.com) by Joan Masó 
 	(UAB-CREAF-MiraMon). Based on previous documents of Keith Pomakis. -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" xmlns:common="http://www.opengis.net/common/1.0" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en">
 	<annotation>
 		<appinfo>TileMatrixSet 2021-02-02</appinfo>
 		<documentation>
@@ -14,7 +14,7 @@
 	             Includes and imports.                            
           ********************************************************************* -->
 	<!--import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/-->
-	<import namespace="http://www.opengis.net/common/1.0" schemaLocation="../../../common/1.0/xml/all.xsd"/>
+	<import namespace="http://www.opengis.net/tms/2.0/common" schemaLocation="common.xsd"/>
 	<!-- ********************************************************************* -->
 	<!-- **  The TileMatrixSet element.                                         ** -->
 	<!-- ********************************************************************* -->
@@ -24,14 +24,14 @@
 		</annotation>
 		<complexType>
 			<complexContent>
-				<extension base="common:DescriptionType">
+				<extension base="tmsc:DescriptionType">
 					<sequence>
-						<element ref="common:Identifier">
+						<element ref="tmsc:Identifier">
 							<annotation>
 								<documentation>Tile matrix set identifier</documentation>
 							</annotation>
 						</element>
-						<element ref="common:BoundingBox" minOccurs="0">
+						<element ref="tmsc:BoundingBox" minOccurs="0">
 							<annotation>
 								<documentation>
 									Minimum bounding rectangle surrounding 
@@ -39,7 +39,7 @@
 									set, in the supported CRS </documentation>
 							</annotation>
 						</element>
-						<element ref="common:SupportedCRS">
+						<element ref="tmsc:SupportedCRS">
 							<annotation>
 								<documentation>Reference to one coordinate reference 
 								system (CRS).</documentation>
@@ -86,9 +86,9 @@
 		</annotation>
 		<complexType>
 			<complexContent>
-				<extension base="common:DescriptionType">
+				<extension base="tmsc:DescriptionType">
 					<sequence>
-						<element ref="common:Identifier">
+						<element ref="tmsc:Identifier">
 							<annotation>
 								<documentation>Tile matrix identifier. Typically an abreviation of 
 								the ScaleDenominator value or its equivalent pixel size</documentation>
@@ -97,6 +97,11 @@
 						<element name="ScaleDenominator" type="double">
 							<annotation>
 								<documentation>Scale denominator level of this tile matrix</documentation>
+							</annotation>
+						</element>
+						<element name="CellSize" type="double">
+							<annotation>
+								<documentation>Cell size of this tile matrix</documentation>
 							</annotation>
 						</element>
 						<element name="CornerOfOrigin" minOccurs="0">
@@ -109,12 +114,12 @@
 							</annotation>
 							<simpleType>
 								<restriction base="string">
-								  <enumeration value="topLeft"/>
-								  <enumeration value="bottomLeft"/>
+									<enumeration value="topLeft"/>
+									<enumeration value="bottomLeft"/>
 								</restriction>
-							  </simpleType>							
+							</simpleType>
 						</element>
-						<element name="PointOfOrigin" type="common:PositionType">
+						<element name="PointOfOrigin" type="tmsc:PositionType">
 							<annotation>
 								<documentation>
 									Position in CRS coordinates of the top-left corner of this tile matrix. 

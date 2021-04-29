@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<schema xmlns:common="http://www.opengis.net/common/1.0" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/common/1.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+<schema xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/tms/2.0/common" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
 	<annotation>
 		<appinfo>Description.xsd 2021-02-10</appinfo>
 		<documentation>This XML Schema Document encodes the parts of the
@@ -51,12 +51,11 @@
 							</any>
 						</sequence>
 					</complexType>
-				</element>				
+				</element>
 			</choice>
 		</complexType>
 	</element>
-
-	<element name="SupportedCRS" substitutionGroup="common:AvailableCRS">
+	<element name="SupportedCRS" substitutionGroup="tmsc:AvailableCRS">
 		<annotation>
 			<documentation>Coordinate reference system in which data from this
       data(set) or resource is available or supported. More specific parameter

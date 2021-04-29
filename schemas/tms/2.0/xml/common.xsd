@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schema xmlns:common="http://www.opengis.net/common/1.0" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/common/1.0" elementFormDefault="qualified" version="2.0.0" xml:lang="en">
+<schema xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/tms/2.0/common" elementFormDefault="qualified" version="2.0.0" xml:lang="en">
 	<annotation>
 		<appinfo>owsAll.xsd 2010-03-19</appinfo>
 		<documentation>This XML Schema Document includes and imports, directly or
@@ -14,8 +14,8 @@
 	<!-- ==============================================================
 		includes and imports
 	============================================================== -->
-	<include schemaLocation="../../../common/1.0/xml/description.xsd"/>
-	<include schemaLocation="../../../common/1.0/xml/bbox.xsd"/>
-	<include schemaLocation="../../../common/1.0/xml/crs.xsd"/>
-	<include schemaLocation="../../../common/1.0/xml/mediaType.xsd"/>
+	<include schemaLocation="description.xsd"/>
+	<include schemaLocation="bbox.xsd"/>
+	<include schemaLocation="crs.xsd"/>
+	<include schemaLocation="mediaType.xsd"/>
 </schema>

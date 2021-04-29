@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<schema xmlns:common="http://www.opengis.net/common/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/common/1.0" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
+<schema xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/tms/2.0/common" elementFormDefault="qualified" version="1.0.0" xml:lang="en">
 	<annotation>
 		<appinfo>Description.xsd 2021-02-10</appinfo>
 		<documentation>This XML Schema Document encodes the parts of the
@@ -19,8 +19,8 @@
 	  ============================================================== -->
 	<!--import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../xlink/1.0.0/xlinks.xsd"/-->
 	<import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/xml.xsd"/>
-	<include schemaLocation="../../../common/1.0/xml/bbox.xsd"/>
-	<include schemaLocation="../../../common/1.0/xml/crs.xsd"/>
+	<include schemaLocation="bbox.xsd"/>
+	<include schemaLocation="crs.xsd"/>
 	<!-- ==============================================================
 		    elements and types
 	  ============================================================== -->
@@ -40,13 +40,13 @@
 	attribute value unless otherwise specified.</documentation>
 		</annotation>
 		<sequence>
-			<element ref="common:Title" minOccurs="0" maxOccurs="unbounded"/>
-			<element ref="common:Abstract" minOccurs="0" maxOccurs="unbounded"/>
-			<element ref="common:Keywords" minOccurs="0" maxOccurs="unbounded"/>
+			<element ref="tmsc:Title" minOccurs="0" maxOccurs="unbounded"/>
+			<element ref="tmsc:Abstract" minOccurs="0" maxOccurs="unbounded"/>
+			<element ref="tmsc:Keywords" minOccurs="0" maxOccurs="unbounded"/>
 		</sequence>
 	</complexType>
 	<!-- ===========================================================-->
-	<element name="Identifier" type="common:CodeType">
+	<element name="Identifier" type="tmsc:CodeType">
 		<annotation>
 			<documentation>Unique identifier or name of this
 	dataset.</documentation>
@@ -68,21 +68,21 @@
 		</simpleContent>
 	</complexType>
 	<!-- =========================================================== -->
-	<element name="Title" type="common:LanguageStringType">
+	<element name="Title" type="tmsc:LanguageStringType">
 		<annotation>
 			<documentation>Title of this resource, normally used for display to
 	humans.</documentation>
 		</annotation>
 	</element>
 	<!-- =========================================================== -->
-	<element name="Abstract" type="common:LanguageStringType">
+	<element name="Abstract" type="tmsc:LanguageStringType">
 		<annotation>
 			<documentation>Brief narrative description of this resource, normally
 	used for display to humans.</documentation>
 		</annotation>
 	</element>
 	<!-- =========================================================== -->
-	<element name="Keywords" type="common:KeywordsType"/>
+	<element name="Keywords" type="tmsc:KeywordsType"/>
 	<!-- =========================================================== -->
 	<complexType name="KeywordsType">
 		<annotation>
@@ -101,8 +101,8 @@
 	codeSpace attribute of the Type element.</documentation>
 		</annotation>
 		<sequence>
-			<element name="Keyword" type="common:LanguageStringType" maxOccurs="unbounded"/>
-			<element name="Type" type="common:CodeType" minOccurs="0"/>
+			<element name="Keyword" type="tmsc:LanguageStringType" maxOccurs="unbounded"/>
+			<element name="Type" type="tmsc:CodeType" minOccurs="0"/>
 		</sequence>
 	</complexType>
 	<!-- =========================================================== -->

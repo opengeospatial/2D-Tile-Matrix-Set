@@ -1,5 +1,6 @@
 [appendix]
 :appendix-caption: Annex
+[[annex-conformance-class-abstract-test-suite]]
 == Conformance Class Abstract Test Suite (Normative)
 
 ////
@@ -432,4 +433,3 @@ A TileSetMetadata encoded in XML _shall_ validate using the XML schema for a til
 
 Test passes if TileSetMetadata XML instances pass validation against the tile matrix set link 2D XML Schemas.
 |===
-

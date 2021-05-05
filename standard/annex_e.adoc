@@ -1,10 +1,29 @@
 [appendix]
-[[annex_e]]
-[[annex-e-example-encodings-for-common-tilematrixset2d-informative]]
+[[annex-example-encodings-for-common-tilematrixset2d-informative]]
 :appendix-caption: Annex
 == Example Encodings for Common TileMatrixSet2D (Informative)
 
 This Annex provides examples of XML and JSON encodings than can be used to define tile matrix sets.
+
+[[$$$$json-schema-used-to-validate-the-previous-json-document]]
+=== JSON schema used to validate the JSON examples provided
+$$$$
+The TileSetMetadata data structure can be included in the definition of a resource data model. This JSON Schema fragment illustrates how this standard JSON schemas can be used in conjunction with the resource schemas.
+
+[source,json]
+....
+include::../schemas/tms/2.0/json/tileMatriSet.json[]
+....
+
+[[$$$$xml-schema-used-to-validate-the-previous-xml-document]]
+=== XML schema used to validate the XML examples document
+
+The TileSetMetadata data structure can be included in the definition of a resource data model. This XML Schema fragment illustrates how this standard XML schemas can be used in conjunction with the resource schemas.
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/tileMatrixSet.xsd[]
+....
 
 [[e.1-web-mercator-quad-tilematrixset-definition.]]
 === Web Mercator Quad TileMatrixSet definition.

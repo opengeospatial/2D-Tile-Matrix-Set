@@ -1,6 +1,5 @@
 [appendix]
-[[annex_b]]
-[[annex-b-schema-documents-normative]]
+[[annex-schema-documents-normative]]
 :appendix-caption: Annex
 == Schema Documents (Normative)
 
@@ -16,13 +15,13 @@ The JSON Schema Documents are situated in the json subfolder and are named:
 - json/tileMatrixLimits.json
 - json/tileSet.json
 
-They include the schemas necessary to JSON-validate the classes JSONTileMatrixSet2D, JSONTileMatrixSetLimits2D and JSONTileSetMetadata, respectively.
-The json/examples/tilematrixset subfolder is provided with the complete set of JSON documents that are also provided in Annex E and F of this document.
+They include the schemas necessary to JSON-validate the classes JSONTileMatrixSet2D, JSONTileMatrixSetLimits2D and JSONTileSetMetadata, respectively that are also reproduced in <<annex-example-encodings-for-common-tilematrixset2d-informative>> and <<example-encodings-for-tilesetmetadata-informative>>.
+The json/examples/tilematrixset subfolder is provided with the complete set of JSON documents that are also provided in <<annex-example-encodings-for-common-tilematrixset2d-informative>> and <<annex-example-encodings-for-variable-matrix-width-informative>> of this document.
 In addition, the directory named:
 
 json/examples/tileset
 
-contains examples of the JSON tileset metadata encodings.
+contains examples of the JSON tileset metadata encodings that are also reproduced in <<example-encodings-for-tilesetmetadata-informative>>.
 
 [[b.2-xml-schema]]
 === XML Schema     
@@ -33,10 +32,10 @@ The XML Schema Documents are situated in the xml subfolder and are named:
 - xml/tilematrixlimits.xsd
 - xml/tileset.xsd
 
-They includes the schemas necessary to XML-validate the classes XMLTileMatrixSet2D, XMLTileMatrixSetLimits2D and XMLTileSetMetadata, respectively.
-The xml/examples/tilematrixset subfolder is provided with the complete set of XML documents that are also provided in Annex E and F of this document.
+They includes the schemas necessary to XML-validate the classes XMLTileMatrixSet2D, XMLTileMatrixSetLimits2D and XMLTileSetMetadata, respectively that are also reproduced in <<annex-example-encodings-for-common-tilematrixset2d-informative>> and <<example-encodings-for-tilesetmetadata-informative>>.
+The xml/examples/tilematrixset subfolder is provided with the complete set of XML documents that are also provided in <<annex-example-encodings-for-common-tilematrixset2d-informative>> and <<annex-example-encodings-for-variable-matrix-width-informative>> of this document.
 In addition, the directory named:
 
 xml/examples/tileset
 
-contains examples of the XML tileset metadata encodings.
+contains examples of the XML tileset metadata encodings that are also reproduced in <<example-encodings-for-tilesetmetadata-informative>>.

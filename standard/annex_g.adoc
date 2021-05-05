@@ -1,5 +1,5 @@
 [appendix]
-[[annex_f]]
+[[annex_f_$$$$]]
 [[example-encodings-for-tilesetmetadata-informative]]
 :appendix-caption: Annex
 == Example encodings for TileSetMetadata (Informative)
@@ -15,15 +15,20 @@ TileSetMetadata data structure can be used for a resource to specify the tiling 
 ....
 include::../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
 ....
-Â 
+ 
 [[json-schema-used-to-validate-the-previous-json-document]]
 === JSON schema used to validate the previous JSON document
 
-The TileSetMetadata data structure can be included in the definition of a resource data model. This JSON Schema fragment illustrates how this standard JSON schemas can be used in conjunction with the resource schemas.
+The TileSetMetadata data structure can be included the definition of an API that provides tiles. This JSON Schema can be used in an API definition in JSON format and to validate the previous JSON example.
 
 [source,json]
 ....
 include::../schemas/tms/2.0/json/tileSet.json[]
+....
+
+[source,json]
+....
+include::../schemas/tms/2.0/json/tileMatrixLimits.json[]
 ....
 
 [[xml-document-instance-using-tilesetmetadata]]
@@ -38,10 +43,14 @@ include::../schemas/tms/2.0/xml/examples/tileset/tiles.WebMercatorQuad.xml[]
 
 [[xml-schema-used-to-validate-the-previous-xml-document]]
 === XML schema used to validate the previous XML document
-
-The TileSetMetadata data structure can be included in the definition of a resource data model. This XML Schema fragment illustrates how this standard XML schemas can be used in conjunction with the resource schemas.
+This XML Schema can be used to validate the previous XML example.
 
 [source,xml]
 ....
 include::../schemas/tms/2.0/xml/tileset.xsd[]
+....
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/tilematrixlimits.xsd[]
 ....

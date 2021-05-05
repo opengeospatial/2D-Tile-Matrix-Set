@@ -30,6 +30,6 @@ NOTE: JSONTileSetMetadata in this standard replaces and extends JSONTileMatrixSe
 NOTE: JSONLDTileSetMetadata in this standard replaces and extends JSONLDTileMatrixSetLink2d in the version 1.0
 ////
 
-Conformance with this standard shall be verified using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site footnote:[http://www.opengeospatial.org/cite].
+Conformance with this standard shall be verified using all the relevant tests specified in <<annex-conformance-class-abstract-test-suite>> (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site footnote:[http://www.opengeospatial.org/cite].
 
 All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.

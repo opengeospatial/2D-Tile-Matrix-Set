@@ -1,6 +1,5 @@
 [appendix]
-[[annex_d]]
-[[common-tilematrixset-definitions-informative]]
+[[annex-common-tilematrixset-definitions-informative]]
 :appendix-caption: Annex
 == Common TileMatrixSet definitions (Informative)
 

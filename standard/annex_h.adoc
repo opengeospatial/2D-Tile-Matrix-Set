@@ -1,6 +1,5 @@
 [appendix]
-[[annex_i]]
-[[pseudocode-informative]]
+[[annex-pseudocode-informative]]
 :appendix-caption: Annex
 == Pseudocode (Informative)
 

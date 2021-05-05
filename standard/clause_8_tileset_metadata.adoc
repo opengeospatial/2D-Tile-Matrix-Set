@@ -129,7 +129,7 @@ One for each keyword authority used
 | link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>.^e^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^     Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/) (including definitions from <<annex_d>> and <<annex_f>>)
+^b^     Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/) (including definitions from <<annex-common-tilematrixset-definitions-informative>> and <<annex-example-encodings-for-variable-matrix-width-informative>>)
 
 ^c^     Points to a definition of the TileMatrixSet provided by a tile service
 

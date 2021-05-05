@@ -1,12 +1,11 @@
 [appendix]
-[[annex_c]]
-[[annex-c-well-known-scale-sets-informative]]
+[[annex-well-known-scale-sets-informative]]
 :appendix-caption: Annex
 == Well-known scale sets (Informative)
 
 The following well-known scale sets (WKSS) are defined in this standard. To be conformant to a WKSS, the dataset of resource should be available from the first or second largest scale denominator on the following tables and all intermediate scale denominators down to the most detailed scale resolution of that dataset. In other words, it is not required to support the largest scale denominator and the smallest scale denominators in order to be conformant to a WKSS. Cell sizes (in terrain units) are calculated assuming 0.28 mm pixel size and the WGS84 equatorial Earth diameter.
 
-The WKSS concept was introduced in WMTS to improve interoperability, but experience has demonstrated that the use of Common TileMatrixSet2D (Annex D) is even better. The use of WKSS is no longer encouraged by this standard.
+The WKSS concept was introduced in WMTS to improve interoperability, but experience has demonstrated that the use of Common TileMatrixSet2D (<<annex-common-tilematrixset-definitions-informative>>) is even better. The use of WKSS is no longer encouraged by this standard.
 
 [[globalcrs84scale-httpwww.opengis.netdefwkssogc1.0globalcrs84scale]]
 === GlobalCRS84Scale (http://www.opengis.net/def/wkss/OGC/1.0/GlobalCRS84Scale)
@@ -105,7 +104,7 @@ This WKSS has been defined to allow quadtree pyramids in CRS84. The scale denomi
 |===
  
 
-NOTE: The first scale denominator allows representation of the whole world in a single tile of 256x256 cells, where 128 lines of the tile are left blank. The latter is the reason why in the Annex D.2 http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad["World CRS84 Quad TileMatrixSet definition"] this level is not used. The next level allows representation of the whole world in 2x1 tiles of 256x256 cells and so on in powers of 2.
+NOTE: The first scale denominator allows representation of the whole world in a single tile of 256x256 cells, where 128 lines of the tile are left blank. The latter is the reason why in the <<annex-common-tilematrixset-definitions-informative>> http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad["World CRS84 Quad TileMatrixSet definition"] this level is not used. The next level allows representation of the whole world in 2x1 tiles of 256x256 cells and so on in powers of 2.
 
 NOTE: Selecting the word “Google” for this WKSS id is maintained for backwards compatibility even if the authors recognize that it was an unfortunate selection and might result confusing since the “Google-like” tiles do not use CRS84.
 

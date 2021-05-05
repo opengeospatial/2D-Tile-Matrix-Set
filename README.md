@@ -1,5 +1,7 @@
 # Revision of the OGC Two Dimensional Tile Matrix Set
 
+Latest draft specifications: [HTML](https://docs.opengeospatial.org/DRAFTS/17-083r3.html) [PDF](https://docs.opengeospatial.org/DRAFTS/17-083r3.pdf)
+
 This GitHub repository contains the draft content for the revision of the OGC 17-083r2 Two Dimensional Tile Matrix Set standard.
 
 The repo is organized as follows:

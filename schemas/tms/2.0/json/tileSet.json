@@ -46,7 +46,7 @@
 					"description": "Type of data represented in the tileset",
 					"$ref": "#/definitions/dataType"
 				},
-				"tileMatrixLimits": {
+				"tileMatrixSetLimits": {
 					"description": "Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet. If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all",
 					"type": "array",
 					"items":

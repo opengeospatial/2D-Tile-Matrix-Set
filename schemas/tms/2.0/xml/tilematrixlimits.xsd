@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Edited with XMLSpy v2008 sp1 (http://www.altova.com) by Joan Masó 
 	(UAB-CREAF-MiraMon). Based on previous documents of Keith Pomakis. -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" xmlns:common="http://www.opengis.net/common/1.0" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en">
 	<annotation>
 		<appinfo>TileMatrixSet 2021-02-02</appinfo>
 		<documentation>
@@ -14,12 +14,10 @@
 	             Includes and imports.                            
           ********************************************************************* -->
 	<!--import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/-->
-	<import namespace="http://www.opengis.net/common/1.0" schemaLocation="../../../common/1.0/xml/all.xsd"/>
-	
 	<!-- ****************************************************************************************** -->
 	<!-- **  TileMatrixSetLimits and TileMatrixLimits element.                                  ** -->
 	<!-- ****************************************************************************************** -->
-	<element name="TileMatrixLimits">
+	<element name="TileMatrixSetLimit">
 		<annotation>
 			<documentation>Metadata describing the limits of a TileMatrix 
 						for this layer.</documentation>

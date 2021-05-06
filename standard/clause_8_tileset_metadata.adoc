@@ -9,10 +9,10 @@
 
 If the tile matrix set for a dataset covering a bounding box defines the extreme corner adjusted to the actual content of this dataset, and later the bounding box needs to be extended, then the extreme corner of each TileMatrix will change, which will change the tile indices of any previous tile invalidating any previously cached tile. To overcome this problem, a dataset can optionally use a more generic TileMatrixSet that covers a bigger (or even global) area. In fact, that TileMatrixSet that defines an area that might be covered by the dataset in a future could easily be shared for many datasets and become a common TileMatrixSet.
 
-To inform the client about the valid range of tile indices, the TileMatrixSetLimits concept is introduced. TileMatrixSetLimits informs the minimum and a maximum limits of these indices for each TileMatrix that contains actual data. The area outside these limits is considered empty space.
+To inform the client about the valid range of tile indices, the TileMatrixSetLimits concept is introduced. A list of TileMatrixSetLimit informs the minimum and a maximum limits of these indices for each TileMatrix that contains actual data. The area outside these limits is considered empty space.
 
 [#img_tilematrix-limits,reftext='{figure-caption} {counter:figure-num}']
-.TileMatrix Limits
+.TileMatrixSet Limits
 image::figures/4.png[TileMatrix Limits]
 
 [[tileset-medatadata-overview]]
@@ -25,26 +25,26 @@ Tiles are identified by tileMatrix id, tileRow number and tileCol number. These 
 [[tilematrixsetlimits2d-requirements-class]]
 ==== TileMatrixSetLimits2D requirements class
 
-Requirements class tilematrixsetlimits2D establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region of for a subset of scales. The array of TileMatrixLimits2D data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits2d.
+Requirements class tilematrixsetlimits2D establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region of for a subset of scales. The array of TileMatrixSetLimits2D data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits2d.
 
 include::requirements/REQ_tilematrixsetlimits2d_model.adoc[]
 
 [#img_tilematrixsetlimits-uml-model,reftext='{figure-caption} {counter:figure-num}']
-.TileMatrixLimits array UML model
+.TileMatrixLimit array UML model
 image::figures/TileMatrixSetLimits2D.png[TileMatrixSetLimits UML model]
  
 [#parts-of-tilematrixsetlimits-data-structure,reftext='{table-caption} {counter:table-num}']
-.TileMatrixLimits array
+.TileMatrixSetLimits array
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| tileMatrix‌Limits | Indices limits for this tileMatrix | TileMatrixLimits data structure, see <<parts-of-tilematrixlimits-data-structure>> | one or more (mandatory) ^a^
+| tileMatrixSet‌Limit | Indices limits for this tileMatrix | TileMatrixSetLimits data structure, see <<parts-of-tilematrixlimits-data-structure>> | one or more (mandatory) ^a^
 
 |===
  
 
 [#parts-of-tilematrixlimits-data-structure,reftext='{table-caption} {counter:table-num}']
-.Parts of TileMatrixLimits data structure
+.Parts of TileMatrixLimit data structure
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
@@ -114,7 +114,7 @@ One for each keyword authority used
 | tileMatrix‌SetDefinition | Reference to a tileMatrixSet | URI type^c^
 | Zero or One (optional)^d^
 
-| tileMatrix‌Limits | Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet | TileMatrixSetLimits data structure, see <<parts-of-tilematrixsetlimits-data-structure>> | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^g^
+| tileMatrixSet‌Limit | Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet | TileMatrixSetLimits data structure, see <<parts-of-tilematrixsetlimits-data-structure>> | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^g^
 
 | boundingBox | Minimum bounding rectangle surrounding the tileset | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>>^h^ | Zero or one (optional)
 
@@ -195,7 +195,7 @@ One for each keyword authority used
 
 | stylableLayerSet | Identifiers of styles that can be used in conjunction with this layer | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or more (optional)
 
-| propertiesSchema | Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage) | FeatureAttribute data structure. See <<parts-of-feature-attribute-data-structure>> | Zero or more (optional)
+| propertySchema | Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage) | FeatureAttribute data structure. See <<parts-of-feature-attribute-data-structure>> | Zero or more (optional)
 
 | link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>. ^h^ | Zero or more (optional)
 

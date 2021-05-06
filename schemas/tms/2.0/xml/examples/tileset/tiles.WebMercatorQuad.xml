@@ -1,144 +1,232 @@
-<!-- TODO:
-   Convert this TileSetMetadata example to XML
-   {
-      "title" : "Daraa multi-layer vector tiles",
-      "abstract" : "Vector tiles of Daraa, Syria from NSG OpenStreetMap Topographic Data Store",
-      "keywords" : [ "Daraa", "Syria", "OpenStreetMap", "NSG", "TDS" ],
-      "dataType" : "vector",
-      "accessConstraints" : "unclassified",
-      "links" : [
-         {
-            "rel" : "self",
-            "type" : "application/json",
-            "href" : "/Daraa/ogcapi/tiles/WebMercatorQuad?f=json"
-         },
-         {
-            "rel" : "alternate",
-            "type" : "application/json+vnd.mapbox.tilejson",
-            "href" : "/Daraa/ogcapi/tiles/WebMercatorQuad?f=tilejson"
-         },
-         {
-            "rel"  : "item",
-            "href" : "/Daraa/ogcapi/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}",
-            "templated" : true
-         },
-         {
-            "rel"  : "item",
-            "href" : "/Daraa/ogcapi/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}.json",
-            "type" : "application/geo+json",
-            "templated" : true
-         },
-         {
-            "rel"  : "item",
-            "href" : "/Daraa/ogcapi/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}.mvt",
-            "type" : "application/vnd.mapbox-vector-tile",
-            "templated" : true
-         },
-         {
-            "rel"  : "dataset",
-            "href" : "/Daraa/ogcapi"
-         }
-      ],
-      "layers" : [
-         {
-            "identifier" : "AgricultureSrf",
-            "dataType" : "vector",
-            "geometryType" : "polygons",
-            "maxTileMatrix" : "17",
-            "minScaleDenominator" : 4265.4591676995678,
-            "boundingBox" : [35.898213, 32.4633913, 36.5614696, 32.8370158 ],
-            "stylableLayerSets" : [ "OSMNSGTDS" ],
-            "links" : [
-               {
-                  "rel"  : "http://www.opengis.net/def/rel/ogc/1.0/geodata",
-                  "href" : "/Daraa/ogcapi/collections/AgricultureSrf"
-               }
-            ],
-            "propertiesSchema" :
-            {
-               "type": "object",
-               "properties": {
-                  "F_CODE" :
-                  {
-                     "title" : "Feature Code",
-                     "type" : "string",
-                     "enum" : [ "EA010", "EA040", "AM020" ]
-                  },
-                  "FFN" : { "type" : "integer" },
-                  "FCSUBTYPE" :
-                  {
-                     "title" : "Feature subtype",
-                     "type" : "integer",
-                     "enum" : [ 100380, 100384 ]
-                  },
-                  "ZI005_FNA" : { "type" : "string"  }
-               }
-            }
-         },
-         {
-            "identifier" : "TransportationGroundCrv",
-            "dataType" : "vector",
-            "geometryType" : "lines",
-            "maxTileMatrix" : "17",
-            "minScaleDenominator" : 4265.4591676995678,
-            "boundingBox" : [ 35.9028738, 32.4168138, 36.5747694, 33.1424348 ] ,
-            "stylableLayerSets" : [ "OSMNSGTDS" ],
-            "links" : [
-               {
-                  "rel"  : "http://www.opengis.net/def/rel/ogc/1.0/geodata",
-                  "href" : "/Daraa/ogcapi/collections/TransportationGroundCrv"
-               }
-            ],
-            "propertiesSchema" :
-            {
-               "type": "object",
-               "properties" :
-               {
-                  "F_CODE" :
-                  {
-                     "title" : "Feature Code",
-                     "type" : "string",
-                     "enum" : [ "AN010", "AP010", "AP030", "AQ040" ]
-                  },
-                  "FFN" : { "type" : "integer" },
-                  "FCSUBTYPE" :
-                  {
-                     "title" : "Feature subtype",
-                     "type" : "integer",
-                     "enum" : [ 100143, 100152, 100161 ]
-                  },
-                  "ZI005_FNA" : { "type" : "string"  }
-               }
-            }
-         }
-      ],
-      "tileMatrixSetURI" : "http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad",
-      "tileMatrixSetDefinition" : "/Daraa/ogcapi/tileMatrixSets/WebMercatorQuad",
-      "tileMatrixSetLimits" : [
-         { "tileMatrix" : "0", "minTileRow" : 0, "maxTileRow" : 0, "minTileCol" : 0, "maxTileCol" : 0 },
-         { "tileMatrix" : "1", "minTileRow" : 0, "maxTileRow" : 0, "minTileCol" : 1, "maxTileCol" : 1 },
-         { "tileMatrix" : "2", "minTileRow" : 1, "maxTileRow" : 1, "minTileCol" : 2, "maxTileCol" : 2 },
-         { "tileMatrix" : "3", "minTileRow" : 3, "maxTileRow" : 3, "minTileCol" : 4, "maxTileCol" : 4 },
-         { "tileMatrix" : "4", "minTileRow" : 6, "maxTileRow" : 6, "minTileCol" : 9, "maxTileCol" : 9 },
-         { "tileMatrix" : "5", "minTileRow" : 12, "maxTileRow" : 12, "minTileCol" : 19, "maxTileCol" : 19 },
-         { "tileMatrix" : "6", "minTileRow" : 25, "maxTileRow" : 25, "minTileCol" : 38, "maxTileCol" : 38 },
-         { "tileMatrix" : "7", "minTileRow" : 51, "maxTileRow" : 51, "minTileCol" : 76, "maxTileCol" : 76 },
-         { "tileMatrix" : "8", "minTileRow" : 103, "maxTileRow" : 103, "minTileCol" : 153, "maxTileCol" : 153 },
-         { "tileMatrix" : "9", "minTileRow" : 206, "maxTileRow" : 207, "minTileCol" : 307, "maxTileCol" : 307 },
-         { "tileMatrix" : "10", "minTileRow" : 413, "maxTileRow" : 414, "minTileCol" : 614, "maxTileCol" : 615 },
-         { "tileMatrix" : "11", "minTileRow" : 826, "maxTileRow" : 828, "minTileCol" : 1228, "maxTileCol" : 1231 },
-         { "tileMatrix" : "12", "minTileRow" : 1652, "maxTileRow" : 1657, "minTileCol" : 2456, "maxTileCol" : 2463 },
-         { "tileMatrix" : "13", "minTileRow" : 3304, "maxTileRow" : 3314, "minTileCol" : 4912, "maxTileCol" : 4927 },
-         { "tileMatrix" : "14", "minTileRow" : 6608, "maxTileRow" : 6628, "minTileCol" : 9825, "maxTileCol" : 9855 },
-         { "tileMatrix" : "15", "minTileRow" : 13216, "maxTileRow" : 13257, "minTileCol" : 19651, "maxTileCol" : 19711 },
-         { "tileMatrix" : "16", "minTileRow" : 26433, "maxTileRow" : 26514, "minTileCol" : 39303, "maxTileCol" : 39423 },
-         { "tileMatrix" : "17", "minTileRow" : 52866, "maxTileRow" : 53028, "minTileCol" : 78606, "maxTileCol" : 78847 }
-      ],
-      "boundingBox" : { "lowerCorner" : [ 35, 32 ], "upperCorner" : [ 37, 33.2671397 ] },
-      "centerPoint" :
-      {
-         "coordinates" : [ 36.2298413, 32.65020355 ],
-         "tileMatrix" : "15"
-      }
-   }
--->
+<?xml version="1.0" encoding="UTF-8"?>
+<TileSetMetadata xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../../tileset.xsd">
+	<tmsc:Title>Daraa multi-layer vector tiles</tmsc:Title>
+	<tmsc:Abstract>Vector tiles of Daraa, Syria from NSG OpenStreetMap Topographic Data Store</tmsc:Abstract>
+	<tmsc:Keywords>
+		<tmsc:Keyword>Daraa</tmsc:Keyword>
+		<tmsc:Keyword>Syria</tmsc:Keyword>
+		<tmsc:Keyword>OpenStreetMap</tmsc:Keyword>
+		<tmsc:Keyword>NSG</tmsc:Keyword>
+		<tmsc:Keyword>TDS</tmsc:Keyword>
+	</tmsc:Keywords>
+	<AccessConstraints>unclassified</AccessConstraints>
+	<TileMatrixSetURI>http://www.opengis.net/def/TileMatrixset/OGC/1.0/WebMercatorQuad</TileMatrixSetURI>
+	<TileMatrixSetDefinition>/Daraa/ogcapi/TileMatrixSets/WebMercatorQuad</TileMatrixSetDefinition>
+	<TileMatrixSetLimit>
+		<TileMatrix>0</TileMatrix>
+		<MinTileRow>0</MinTileRow>
+		<MaxTileRow>0</MaxTileRow>
+		<MinTileCol>0</MinTileCol>
+		<MaxTileCol>0</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>1</TileMatrix>
+		<MinTileRow>0</MinTileRow>
+		<MaxTileRow>0</MaxTileRow>
+		<MinTileCol>1</MinTileCol>
+		<MaxTileCol>1</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>2</TileMatrix>
+		<MinTileRow>1</MinTileRow>
+		<MaxTileRow>1</MaxTileRow>
+		<MinTileCol>2</MinTileCol>
+		<MaxTileCol>2</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>3</TileMatrix>
+		<MinTileRow>3</MinTileRow>
+		<MaxTileRow>3</MaxTileRow>
+		<MinTileCol>4</MinTileCol>
+		<MaxTileCol>4</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>4</TileMatrix>
+		<MinTileRow>6</MinTileRow>
+		<MaxTileRow>6</MaxTileRow>
+		<MinTileCol>9</MinTileCol>
+		<MaxTileCol>9</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>5</TileMatrix>
+		<MinTileRow>12</MinTileRow>
+		<MaxTileRow>12</MaxTileRow>
+		<MinTileCol>19</MinTileCol>
+		<MaxTileCol>19</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>6</TileMatrix>
+		<MinTileRow>25</MinTileRow>
+		<MaxTileRow>25</MaxTileRow>
+		<MinTileCol>38</MinTileCol>
+		<MaxTileCol>38</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>7</TileMatrix>
+		<MinTileRow>51</MinTileRow>
+		<MaxTileRow>51</MaxTileRow>
+		<MinTileCol>76</MinTileCol>
+		<MaxTileCol>76</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>8</TileMatrix>
+		<MinTileRow>103</MinTileRow>
+		<MaxTileRow>103</MaxTileRow>
+		<MinTileCol>153</MinTileCol>
+		<MaxTileCol>153</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>9</TileMatrix>
+		<MinTileRow>206</MinTileRow>
+		<MaxTileRow>207</MaxTileRow>
+		<MinTileCol>307</MinTileCol>
+		<MaxTileCol>307</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>10</TileMatrix>
+		<MinTileRow>413</MinTileRow>
+		<MaxTileRow>414</MaxTileRow>
+		<MinTileCol>614</MinTileCol>
+		<MaxTileCol>615</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>11</TileMatrix>
+		<MinTileRow>826</MinTileRow>
+		<MaxTileRow>828</MaxTileRow>
+		<MinTileCol>1228</MinTileCol>
+		<MaxTileCol>1231</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>12</TileMatrix>
+		<MinTileRow>1652</MinTileRow>
+		<MaxTileRow>1657</MaxTileRow>
+		<MinTileCol>2456</MinTileCol>
+		<MaxTileCol>2463</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>13</TileMatrix>
+		<MinTileRow>3304</MinTileRow>
+		<MaxTileRow>3314</MaxTileRow>
+		<MinTileCol>4912</MinTileCol>
+		<MaxTileCol>4927</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>14</TileMatrix>
+		<MinTileRow>6608</MinTileRow>
+		<MaxTileRow>6628</MaxTileRow>
+		<MinTileCol>9825</MinTileCol>
+		<MaxTileCol>9855</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>15</TileMatrix>
+		<MinTileRow>13216</MinTileRow>
+		<MaxTileRow>13257</MaxTileRow>
+		<MinTileCol>19651</MinTileCol>
+		<MaxTileCol>19711</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>16</TileMatrix>
+		<MinTileRow>26433</MinTileRow>
+		<MaxTileRow>26514</MaxTileRow>
+		<MinTileCol>39303</MinTileCol>
+		<MaxTileCol>39423</MaxTileCol>
+	</TileMatrixSetLimit>
+	<TileMatrixSetLimit>
+		<TileMatrix>17</TileMatrix>
+		<MinTileRow>52866</MinTileRow>
+		<MaxTileRow>53028</MaxTileRow>
+		<MinTileCol>78606</MinTileCol>
+		<MaxTileCol>78847</MaxTileCol>
+	</TileMatrixSetLimit>
+	<tmsc:BoundingBox>
+		<tmsc:LowerCorner>35 32</tmsc:LowerCorner>
+		<tmsc:UpperCorner>37 33.2671397</tmsc:UpperCorner>
+	</tmsc:BoundingBox>
+	<Layer>
+		<tmsc:Identifier>AgricultureSrf</tmsc:Identifier>
+		<GeometryType>polygons</GeometryType>
+		<MinScaleDenominator>4265.4591676995678</MinScaleDenominator>
+		<MaxTileMatrix>17</MaxTileMatrix>
+		<tmsc:BoundingBox>
+			<tmsc:LowerCorner>35.898213 32.4633913</tmsc:LowerCorner>
+			<tmsc:UpperCorner>36.5614696 32.8370158</tmsc:UpperCorner>
+		</tmsc:BoundingBox>
+		<StylableLayerSet>OSMNSGTDS</StylableLayerSet>
+		<PropertySchema>
+			<tmsc:Title>Feature Code</tmsc:Title>
+			<Type>string</Type>
+			<AcceptedValues>EA010</AcceptedValues>
+			<AcceptedValues>EA040</AcceptedValues>
+			<AcceptedValues>AM020</AcceptedValues>
+			<tmsc:Identifier>F_CODE</tmsc:Identifier>
+		</PropertySchema>
+		<PropertySchema>
+			<Type>integer</Type>
+			<tmsc:Identifier>FFN</tmsc:Identifier>
+		</PropertySchema>
+		<PropertySchema>
+			<tmsc:Title>Feature subtype</tmsc:Title>
+			<Type>integer</Type>
+			<AcceptedValues>100380</AcceptedValues>
+			<AcceptedValues>100384</AcceptedValues>
+			<tmsc:Identifier>FCSUBTYPE</tmsc:Identifier>
+		</PropertySchema>
+		<PropertySchema>
+			<Type>string</Type>
+			<tmsc:Identifier>ZI005_FNA</tmsc:Identifier>
+		</PropertySchema>
+		<Link rel="http://www.opengis.net/def/rel/ogc/1.0/geodata" href="/Daraa/ogcapi/collections/AgricultureSrf"/>
+		<DataType>vector</DataType>
+	</Layer>
+	<Layer>
+		<tmsc:Identifier>TransportationGroundCrv</tmsc:Identifier>
+		<GeometryType>lines</GeometryType>
+		<MinScaleDenominator>4265.4591676995678</MinScaleDenominator>
+		<MaxTileMatrix>17</MaxTileMatrix>
+		<tmsc:BoundingBox>
+			<tmsc:LowerCorner>35.9028738 32.4168138</tmsc:LowerCorner>
+			<tmsc:UpperCorner>36.5747694 33.1424348</tmsc:UpperCorner>
+		</tmsc:BoundingBox>
+		<StylableLayerSet>OSMNSGTDS</StylableLayerSet>
+		<PropertySchema>
+			<tmsc:Title>Feature Code</tmsc:Title>
+			<Type>string</Type>
+			<AcceptedValues>AN010</AcceptedValues>
+			<AcceptedValues>AP010</AcceptedValues>
+			<AcceptedValues>AN030</AcceptedValues>
+			<AcceptedValues>AQ040</AcceptedValues>
+			<tmsc:Identifier>F_CODE</tmsc:Identifier>
+		</PropertySchema>
+		<PropertySchema>
+			<Type>integer</Type>
+			<tmsc:Identifier>FFN</tmsc:Identifier>
+		</PropertySchema>
+		<PropertySchema>
+			<tmsc:Title>Feature subtype</tmsc:Title>
+			<Type>integer</Type>
+			<AcceptedValues>100143</AcceptedValues>
+			<AcceptedValues>100152</AcceptedValues>
+			<AcceptedValues>100161</AcceptedValues>
+			<tmsc:Identifier>FCSUBTYPE</tmsc:Identifier>
+		</PropertySchema>
+		<PropertySchema>
+			<Type>string</Type>
+			<tmsc:Identifier>ZI005_FNA</tmsc:Identifier>
+		</PropertySchema>
+		<Link rel="http://www.opengis.net/def/rel/ogc/1.0/geodata" href="/Daraa/ogcapi/collections/TransportationGroundCrv"/>
+		<DataType>vector</DataType>
+	</Layer>
+	<CenterPoint>
+		<Coordinates>36.2298413 32.65020355</Coordinates>
+		<ScaleDenominator>17061.8366707982</ScaleDenominator>
+		<CellSize>17061.8366707982</CellSize>
+		<TileMatrix>15</TileMatrix>
+	</CenterPoint>
+	<Link rel="self" href="/Daraa/ogcapi/tiles/WebMercatorQuad?f=json" type="application/json" />
+	<Link rel="alternate" href="/Daraa/ogcapi/tiles/WebMercatorQuad?f=tilejson" type="application/json+vnd.mapbox.tilejson" />
+	<Link rel="item" href="/Daraa/ogcapi/tiles/WebMercatorQuad/{TileMatrix}/{tileRow}/{tileCol}" templated="true" />
+	<Link rel="item" href="/Daraa/ogcapi/tiles/WebMercatorQuad/{TileMatrix}/{tileRow}/{tileCol}.json" type="application/geo+json" templated="true" />
+	<Link rel="item" href="/Daraa/ogcapi/tiles/WebMercatorQuad/{TileMatrix}/{tileRow}/{tileCol}.mvt" type="application/vnd.mapbox-vector-tile" templated="true" />
+	<Link rel="dataset" href="/Daraa/ogcapi" />
+	<DataType>vector</DataType>
+</TileSetMetadata>

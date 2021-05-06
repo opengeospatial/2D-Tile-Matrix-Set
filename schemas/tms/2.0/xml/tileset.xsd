@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Edited with XMLSpy v2008 sp1 (http://www.altova.com) by Joan Masó 
 	(UAB-CREAF-MiraMon). Based on previous documents of Keith Pomakis. -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:common="http://www.opengis.net/common/1.0" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en">
 	<annotation>
 		<appinfo>TileMatrixSet 2021-02-02</appinfo>
 		<documentation>
@@ -10,15 +10,13 @@
 		    To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
 		</documentation>
 	</annotation>
-
 	<!-- *********************************************************************
 	             Includes and imports.                            
           ********************************************************************* -->
-    <include schemaLocation="tilematrixset.xsd"/>
-    <include schemaLocation="tilematrixlimits.xsd"/>
+	<include schemaLocation="tilematrixset.xsd"/>
+	<include schemaLocation="tilematrixlimits.xsd"/>
 	<import namespace="http://www.w3.org/2005/Atom" schemaLocation="../../../kml/2.3/atom-author-link.xsd"/>
-	<import namespace="http://www.opengis.net/common/1.0" schemaLocation="../../../common/1.0/xml/all.xsd"/>
-
+	<import namespace="http://www.opengis.net/tms/2.0/common" schemaLocation="common.xsd"/>
 	<!-- ****************************************************************************************** -->
 	<!-- **  The TileMatrixSetLink, TileMatrixSetLimits and TileMatrixLimits element. ** -->
 	<!-- ****************************************************************************************** -->
@@ -28,7 +26,7 @@
 		</annotation>
 		<complexType>
 			<complexContent>
-				<extension base="common:DescriptionType">
+				<extension base="tmsc:DescriptionType">
 					<sequence>
 						<element name="Version" type="string" minOccurs="0">
 							<annotation>
@@ -54,7 +52,7 @@
 								</restriction>
 							</simpleType>
 						</element>
-						<element name="MediaType" type="common:MediaTypeType" minOccurs="0" maxOccurs="unbounded">
+						<element name="MediaType" type="tmsc:MediaTypeType" minOccurs="0" maxOccurs="unbounded">
 							<annotation>
 								<documentation>Media types available for the tiles</documentation>
 							</annotation>
@@ -74,12 +72,12 @@
 								<documentation>Reference to a tileMatrixSet. Points to a definition of the TileMatrixSet provided by a tile service</documentation>
 							</annotation>
 						</element>
-						<element ref="tms:TileMatrixLimits" minOccurs="0" maxOccurs="unbounded">
+						<element ref="tms:TileMatrixSetLimit" minOccurs="0" maxOccurs="unbounded">
 							<annotation>
 								<documentation>Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet. If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all</documentation>
 							</annotation>
 						</element>
-						<element ref="common:BoundingBox" minOccurs="0">
+						<element ref="tmsc:BoundingBox" minOccurs="0">
 							<annotation>
 								<documentation>
 									Minimum bounding rectangle surrounding 
@@ -107,7 +105,7 @@
 								<documentation>Style involving all layers used to generate the tileset</documentation>
 							</annotation>
 						</element>
-						<element ref="atom:link" minOccurs="0" maxOccurs="unbounded">
+						<element ref="tms:Link" minOccurs="0" maxOccurs="unbounded">
 							<annotation>
 								<documentation>Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)</documentation>
 							</annotation>
@@ -132,17 +130,16 @@
 			</complexContent>
 		</complexType>
 	</element>
-	
 	<!-- =========================================================== -->
-	<element name="Layer" type="tms:GeospatialDataType"/>	
+	<element name="Layer" type="tms:GeospatialDataType"/>
 	<complexType name="GeospatialDataType">
 		<annotation>
 			<documentation>Geospatial data type</documentation>
 		</annotation>
 		<complexContent>
-			<extension base="common:DescriptionType">
+			<extension base="tmsc:DescriptionType">
 				<sequence>
-					<element ref="common:Identifier">
+					<element ref="tmsc:Identifier">
 						<annotation>
 							<documentation>Unique identifier of the Layer. Implemetion of 'identifier'</documentation>
 						</annotation>
@@ -151,20 +148,20 @@
 						<annotation>
 							<documentation>The geometry type of the features shown in this layer</documentation>
 						</annotation>
-							<simpleType>
-								<restriction base="string">
-									<enumeration value="points"/>
-									<enumeration value="lines"/>
-									<enumeration value="polygons"/>
-								</restriction>
-							</simpleType>
+						<simpleType>
+							<restriction base="string">
+								<enumeration value="points"/>
+								<enumeration value="lines"/>
+								<enumeration value="polygons"/>
+							</restriction>
+						</simpleType>
 					</element>
 					<element name="FeatureType" type="string" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Feature type identifier. Only applicable to layers of datatype 'geometries'</documentation>
 						</annotation>
 					</element>
-					<element name="pointOfContact" type="string" minOccurs="0">
+					<element name="PointOfContact" type="string" minOccurs="0">
 						<annotation>
 							<documentation>Useful information to contact the authors or custodians for the layer. (e.g. e-mail address, a physical address,  phone numbers, etc)</documentation>
 						</annotation>
@@ -179,7 +176,7 @@
 							<documentation>Category where the layer can be grouped</documentation>
 						</annotation>
 					</element>
-					<element ref="common:SupportedCRS" minOccurs="0" maxOccurs="unbounded">
+					<element ref="tmsc:SupportedCRS" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Coordinate Reference System (CRS)</documentation>
 						</annotation>
@@ -194,17 +191,27 @@
 							<documentation>Maximum scale denominator for usage of the layer</documentation>
 						</annotation>
 					</element>
-					<element name="maxTileMatrix" type="common:CodeType" minOccurs="0">
+					<element name="MinCellSize" type="double" minOccurs="0">
 						<annotation>
-							<documentation>TileMatrix identifier associated with the minScaleDenominator</documentation>
+							<documentation>Minimum cel size for usage of the layer</documentation>
 						</annotation>
 					</element>
-					<element name="minTileMatrix" type="common:CodeType" minOccurs="0">
+					<element name="MaxCellSize" type="double" minOccurs="0">
 						<annotation>
-							<documentation>TileMatrix identifier associated with the maxScaleDenominator</documentation>
+							<documentation>Maximum cell size for usage of the layer</documentation>
+						</annotation>
+					</element>					
+					<element name="MaxTileMatrix" type="tmsc:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>TileMatrix identifier associated with the MinScaleDenominator</documentation>
 						</annotation>
 					</element>
-					<element ref="common:BoundingBox" minOccurs="0">
+					<element name="MinTileMatrix" type="tmsc:CodeType" minOccurs="0">
+						<annotation>
+							<documentation>TileMatrix identifier associated with the MaxScaleDenominator</documentation>
+						</annotation>
+					</element>
+					<element ref="tmsc:BoundingBox" minOccurs="0">
 						<annotation>
 							<documentation>Minimum bounding rectangle surrounding the layer</documentation>
 						</annotation>
@@ -219,17 +226,17 @@
 							<documentation>Style used to generate the layer in the tileset</documentation>
 						</annotation>
 					</element>
-					<element name="StylableLayerSet" type="common:CodeType" minOccurs="0" maxOccurs="unbounded">
+					<element name="StylableLayerSet" type="tmsc:CodeType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Identifiers of styles that can be used in conjunction with this layer</documentation>
 						</annotation>
 					</element>
-					<element ref="tms:PropertiesSchema" minOccurs="0" maxOccurs="unbounded">
+					<element ref="tms:PropertySchema" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage)</documentation>
 						</annotation>
 					</element>
-					<element ref="atom:link" minOccurs="0" maxOccurs="unbounded">
+					<element ref="tms:Link" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Links related to this layer. Possible link 'rel' values are: 'collection' for a URL pointing to the collection</documentation>
 						</annotation>
@@ -253,15 +260,14 @@
 			</extension>
 		</complexContent>
 	</complexType>
-
 	<!-- =========================================================== -->
-	<element name="PropertiesSchema" type="tms:FeatureAttributeType"/>	
+	<element name="PropertySchema" type="tms:FeatureAttributeType"/>
 	<complexType name="FeatureAttributeType">
 		<annotation>
 			<documentation>Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage)</documentation>
 		</annotation>
 		<complexContent>
-			<extension base="common:DescriptionType">
+			<extension base="tmsc:DescriptionType">
 				<sequence>
 					<element name="Type" type="string">
 						<annotation>
@@ -273,7 +279,7 @@
 							<documentation>Regular expression to validate the values of the attribute</documentation>
 						</annotation>
 					</element>
-					<element name="MediaType" type="common:MediaTypeType" minOccurs="0">
+					<element name="MediaType" type="tmsc:MediaTypeType" minOccurs="0">
 						<annotation>
 							<documentation>Encodings of a complex attribute (e.g. an image/png)</documentation>
 						</annotation>
@@ -312,13 +318,13 @@
 						<annotation>
 							<documentation>Units of measure characterizing the values of the attribute</documentation>
 						</annotation>
-					</element> 
+					</element>
 					<element name="UoMURI" type="anyURI" minOccurs="0">
 						<annotation>
 							<documentation>URI pointing to a representation of the definition of the units of measure characterizing the values of the attribute</documentation>
 						</annotation>
 					</element>
-					<element ref="common:Identifier">
+					<element ref="tmsc:Identifier">
 						<annotation>
 							<documentation>Unique identifier of the attribute</documentation>
 						</annotation>
@@ -332,22 +338,21 @@
 			</extension>
 		</complexContent>
 	</complexType>
-	 	
-    <!-- =========================================================== -->
-	<element name="Style" type="tms:StyleType"/>	
+	<!-- =========================================================== -->
+	<element name="Style" type="tms:StyleType"/>
 	<complexType name="StyleType">
 		<annotation>
 			<documentation>Style used to generate the tiles</documentation>
 		</annotation>
 		<complexContent>
-			<extension base="common:DescriptionType">
+			<extension base="tmsc:DescriptionType">
 				<sequence>
-					<element ref="atom:link" minOccurs="0" maxOccurs="unbounded">
+					<element ref="tms:Link" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
 							<documentation>Links to related resources. Possible link 'rel' values are: 'style' for a URL pointing to the style description, 'styleSpec' for a URL pointing to the specification or standard used to define the style</documentation>
 						</annotation>
 					</element>
-					<element ref="common:Identifier">
+					<element ref="tmsc:Identifier">
 						<annotation>
 							<documentation>Unique identifier of the stype</documentation>
 						</annotation>
@@ -360,9 +365,8 @@
 				</sequence>
 			</extension>
 		</complexContent>
-	</complexType>	
-
-    <!-- =========================================================== -->
+	</complexType>
+	<!-- =========================================================== -->
 	<simpleType name="DataTypeType">
 		<annotation>
 			<documentation>Data type for tiles and layers</documentation>
@@ -373,7 +377,6 @@
 			<enumeration value="coverage"/>
 		</restriction>
 	</simpleType>
-	
 	<!-- =========================================================== -->
 	<element name="Date" type="tms:DateType"/>
 	<complexType name="DateType">
@@ -409,7 +412,6 @@
 			</element>
 		</sequence>
 	</complexType>
-
 	<!-- =========================================================== -->
 	<element name="CenterPoint" type="tms:TilePointType"/>
 	<complexType name="TilePointType">
@@ -417,7 +419,7 @@
 			<documentation>Point in a tile matrix</documentation>
 		</annotation>
 		<sequence>
-			<element name="Coordinates" type="common:PositionType">
+			<element name="Coordinates" type="tmsc:PositionType">
 				<annotation>
 					<documentation>Location of the center point of the tile set.</documentation>
 				</annotation>
@@ -427,11 +429,30 @@
 					<documentation>Scale denominator of the tile matrix selected</documentation>
 				</annotation>
 			</element>
-			<element name="TileMatrix" type="common:CodeType" minOccurs="0">
+			<element name="CellSize" type="double" minOccurs="0">
+				<annotation>
+					<documentation>Cell size of the tile matrix selected</documentation>
+				</annotation>
+			</element>
+			<element name="TileMatrix" type="tmsc:CodeType" minOccurs="0">
 				<annotation>
 					<documentation>TileMatrix identifier associated with the scaleDenominator</documentation>
 				</annotation>
 			</element>
 		</sequence>
+	</complexType>
+
+	<element name="Link" type="tms:LinkType"/>
+	<complexType name="LinkType">
+		<annotation>
+			<documentation>Templated link based on atom link</documentation>
+		</annotation>
+		<attribute name="href" use="required"/>
+		<attribute name="rel"/>
+		<attribute name="type" type="atom:atomMediaType"/>
+		<attribute name="hreflang" type="atom:atomLanguageTag"/>
+		<attribute name="title"/>
+		<attribute name="length"/>
+		<attribute name="templated"/>
 	</complexType>
 </schema>

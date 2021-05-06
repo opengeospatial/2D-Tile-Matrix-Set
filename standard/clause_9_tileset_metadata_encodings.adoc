@@ -35,7 +35,7 @@ NOTE: A TileSetMetadata description can be embedded in other file formats, such 
 
 <<example-encodings-for-tilesetmetadata-informative>> provides JSON examples encoding TileSetMetadata.
 
-The encoding of propertiesSchema adopts the JSON Schema form. <<propertiesSchema-attributes-JSON-Schema-quivalences>> describes the mapping between the FeatureAttributes class attributes (in <<parts-of-feature-attribute-data-structure>>) and the JSON schema properties.
+The encoding of PropertySchema adopts the JSON Schema form starting by and element propertiesSchema that defines the GeoJSON element "properties" for this layer (the composition of "properties" is undefined by GeoJSON but it can be define for a layer instance if its features follow a data model). <<propertiesSchema-attributes-JSON-Schema-quivalences>> describes the mapping between the FeatureAttribute class attributes (in <<parts-of-feature-attribute-data-structure>>) and the JSON schema properties.
 
 [#propertiesSchema-attributes-JSON-Schema-quivalences,reftext='{table-caption} {counter:table-num}']
 .propertiesSchema attributes and JSON Schema properties equivalences

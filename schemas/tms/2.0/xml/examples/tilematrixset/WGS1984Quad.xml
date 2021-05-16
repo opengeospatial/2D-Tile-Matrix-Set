@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TileMatrixSet id="WorldCRS84Quad" xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../../tilematrixset.xsd">
-	<tmsc:Title>CRS84 for the World</tmsc:Title>
-	<tmsc:Identifier>WorldCRS84Quad</tmsc:Identifier>
-	<tmsc:BoundingBox crs="http://www.opengis.net/def/crs/OGC/1.3/CRS84">
-		<tmsc:LowerCorner>-180 -90</tmsc:LowerCorner>
-		<tmsc:UpperCorner>180 90</tmsc:UpperCorner>
+<TileMatrixSet id="WGS1984Quad" xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../../tilematrixset.xsd">
+	<tmsc:Title>EPSG:4326 for the World</tmsc:Title>
+	<tmsc:Identifier>WGS1984Quad</tmsc:Identifier>
+	<tmsc:BoundingBox crs="http://www.opengis.net/def/crs/EPSG/0/4326">
+		<tmsc:LowerCorner>-90 -180</tmsc:LowerCorner>
+		<tmsc:UpperCorner>90 180</tmsc:UpperCorner>
 	</tmsc:BoundingBox>
 	<tmsc:SupportedCRS>
-		<tmsc:URI>http://www.opengis.net/def/crs/OGC/1.3/CRS84</tmsc:URI>
+		<tmsc:URI>http://www.opengis.net/def/crs/EPSG/0/4326</tmsc:URI>
 	</tmsc:SupportedCRS>
 	<WellKnownScaleSet>
             http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad
@@ -16,7 +16,7 @@
         <tmsc:Identifier>0</tmsc:Identifier>
         <ScaleDenominator>279541132.014358</ScaleDenominator>
         <CellSize>0.703125</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>2</MatrixWidth>
@@ -26,7 +26,7 @@
         <tmsc:Identifier>1</tmsc:Identifier>
         <ScaleDenominator>139770566.007179</ScaleDenominator>
         <CellSize>0.3515625</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>4</MatrixWidth>
@@ -36,7 +36,7 @@
         <tmsc:Identifier>2</tmsc:Identifier>
         <ScaleDenominator>69885283.0035897</ScaleDenominator>
         <CellSize>0.17578125</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>8</MatrixWidth>
@@ -46,7 +46,7 @@
         <tmsc:Identifier>3</tmsc:Identifier>
         <ScaleDenominator>34942641.5017948</ScaleDenominator>
         <CellSize>0.087890625</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>16</MatrixWidth>
@@ -56,7 +56,7 @@
         <tmsc:Identifier>4</tmsc:Identifier>
         <ScaleDenominator>17471320.7508974</ScaleDenominator>
         <CellSize>0.0439453125</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>32</MatrixWidth>
@@ -66,7 +66,7 @@
         <tmsc:Identifier>5</tmsc:Identifier>
         <ScaleDenominator>8735660.37544871</ScaleDenominator>
         <CellSize>0.02197265625</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>64</MatrixWidth>
@@ -76,7 +76,7 @@
         <tmsc:Identifier>6</tmsc:Identifier>
         <ScaleDenominator>4367830.18772435</ScaleDenominator>
         <CellSize>0.010986328125</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>128</MatrixWidth>
@@ -86,7 +86,7 @@
         <tmsc:Identifier>7</tmsc:Identifier>
         <ScaleDenominator>2183915.09386217</ScaleDenominator>
         <CellSize>0.0054931640625</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>256</MatrixWidth>
@@ -96,7 +96,7 @@
         <tmsc:Identifier>8</tmsc:Identifier>
         <ScaleDenominator>1091957.54693108</ScaleDenominator>
         <CellSize>0.00274658203125</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>512</MatrixWidth>
@@ -106,7 +106,7 @@
         <tmsc:Identifier>9</tmsc:Identifier>
         <ScaleDenominator>545978.773465544</ScaleDenominator>
         <CellSize>0.001373291015625</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>1024</MatrixWidth>
@@ -116,7 +116,7 @@
         <tmsc:Identifier>10</tmsc:Identifier>
         <ScaleDenominator>272989.386732772</ScaleDenominator>
         <CellSize>0.0006866455078125</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>2048</MatrixWidth>
@@ -126,7 +126,7 @@
         <tmsc:Identifier>11</tmsc:Identifier>
         <ScaleDenominator>136494.693366386</ScaleDenominator>
         <CellSize>0.00034332275390625</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>4096</MatrixWidth>
@@ -136,7 +136,7 @@
         <tmsc:Identifier>12</tmsc:Identifier>
         <ScaleDenominator>68247.346683193</ScaleDenominator>
         <CellSize>0.000171661376953125</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>8192</MatrixWidth>
@@ -146,7 +146,7 @@
         <tmsc:Identifier>13</tmsc:Identifier>
         <ScaleDenominator>34123.6733415964</ScaleDenominator>
         <CellSize>0.0000858306884765625</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>16384</MatrixWidth>
@@ -156,7 +156,7 @@
         <tmsc:Identifier>14</tmsc:Identifier>
         <ScaleDenominator>17061.8366707982</ScaleDenominator>
         <CellSize>0.0000429153442382812</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>32768</MatrixWidth>
@@ -166,7 +166,7 @@
         <tmsc:Identifier>15</tmsc:Identifier>
         <ScaleDenominator>8530.91833539913</ScaleDenominator>
         <CellSize>0.0000214576721191406</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>65536</MatrixWidth>
@@ -176,7 +176,7 @@
         <tmsc:Identifier>16</tmsc:Identifier>
         <ScaleDenominator>4265.45916769956</ScaleDenominator>
         <CellSize>0.0000107288360595703</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>131072</MatrixWidth>
@@ -186,7 +186,7 @@
         <tmsc:Identifier>17</tmsc:Identifier>
         <ScaleDenominator>2132.72958384978</ScaleDenominator>
         <CellSize>0.00000536441802978515</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>262144</MatrixWidth>
@@ -196,7 +196,7 @@
         <tmsc:Identifier>18</tmsc:Identifier>
         <ScaleDenominator>1066.36479192489</ScaleDenominator>
         <CellSize>0.00000268220901489258</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>524288</MatrixWidth>
@@ -206,7 +206,7 @@
         <tmsc:Identifier>19</tmsc:Identifier>
         <ScaleDenominator>533.182395962445</ScaleDenominator>
         <CellSize>0.00000134110450744629</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>1048576</MatrixWidth>
@@ -216,7 +216,7 @@
         <tmsc:Identifier>20</tmsc:Identifier>
         <ScaleDenominator>266.591197981222</ScaleDenominator>
         <CellSize>0.000000670552253723144</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>2097152</MatrixWidth>
@@ -226,7 +226,7 @@
         <tmsc:Identifier>21</tmsc:Identifier>
         <ScaleDenominator>133.295598990611</ScaleDenominator>
         <CellSize>0.000000335276126861572</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>4194304</MatrixWidth>
@@ -236,7 +236,7 @@
         <tmsc:Identifier>22</tmsc:Identifier>
         <ScaleDenominator>66.6477994953056</ScaleDenominator>
         <CellSize>0.000000167638063430786</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>8388608</MatrixWidth>
@@ -246,7 +246,7 @@
         <tmsc:Identifier>23</tmsc:Identifier>
         <ScaleDenominator>33.3238997476528</ScaleDenominator>
         <CellSize>0.000000083819031715393</CellSize>
-        <PointOfOrigin>-180 90</PointOfOrigin>
+        <PointOfOrigin>90 -180</PointOfOrigin>
         <TileWidth>256</TileWidth>
         <TileHeight>256</TileHeight>
         <MatrixWidth>16777216</MatrixWidth>

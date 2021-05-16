@@ -27,7 +27,9 @@ Tiles are identified by tileMatrix id, tileRow number and tileCol number. These 
 
 Requirements class tilematrixsetlimits2D establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region of for a subset of scales. The array of TileMatrixSetLimits2D data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits2d.
 
-include::requirements/REQ_tilematrixsetlimits2d_model.adoc[]
+include::requirements/requirements_tilematrixsetlimits2d.adoc[]
+
+include::requirements/tilematrixsetlimits2d/REQ_tilematrixsetlimits2d_model.adoc[]
 
 [#img_tilematrixsetlimits-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .TileMatrixLimit array UML model
@@ -70,13 +72,15 @@ image::figures/TileMatrixSetLimits2D.png[TileMatrixSetLimits UML model]
 
 Requirements class TileSetMetadata establishes how to describe TileSet Metadata for a two-dimensional tile space. The TileSetMetadata data structure allows for a dataset declaring the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set, the list of geodata resources used to create the tileset and a recommended center point. Each TileSet in a dataset collection should declare the use of a tile matrix set using this data structure. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata
 
-include::requirements/REQ_tilesetmetadata_identifier.adoc[]
+include::requirements/requirements_tilesetmetadata.adoc[]
+
+include::requirements/tilesetmetadata/REQ_tilesetmetadata_identifier.adoc[]
 
 NOTE: To determine if two resources or datasets use the same TileMatrixSet, compare their TileMatrixSet identifier. Alternatively, compare TileMatrixSet definitions for an equivalency (a simple calculation can be performed to verify whether or not two given tile matrices are aligned).
 
 NOTE: If the same TileMatrixSet is externally available in more than one format, it is recommended that the format selected is the closer to the original description document format. For example if a OGC API defines tiles using JSON, it is expected to link to a JSON definition of a TileMatrixSet.
  
-include::requirements/REQ_tilesetmetadata_model.adoc[]
+include::requirements/tilesetmetadata/REQ_tilesetmetadata_model.adoc[]
 
 [#img_tilesetmetadata-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .TileSetMetadata UML model

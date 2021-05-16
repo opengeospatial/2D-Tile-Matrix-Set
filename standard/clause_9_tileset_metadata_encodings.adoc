@@ -8,13 +8,13 @@ The JSON encoding has been done respecting the naming and types of the original 
 [[json-encoding-of-a-tilematrixsetlimits]]
 ==== JSON TileMatrixSetLimits2D
 
-The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/json-tilematrixsetlimits2d.
+include::requirements/requirements_json-tilematrixsetlimits2d.adoc[]
 
-include::requirements/REQ_json_tilematrixsetlimits2d_model.adoc[]
+include::requirements/json-tilematrixsetlimits2d/REQ_json_tilematrixsetlimits2d_model.adoc[]
 
-include::requirements/REQ_json_tilematrixsetlimits2d_ietf.adoc[]
+include::requirements/json-tilematrixsetlimits2d/REQ_json_tilematrixsetlimits2d_ietf.adoc[]
 
-include::requirements/REQ_json_tilematrixsetlimits2d_schema.adoc[]
+include::requirements/json-tilematrixsetlimits2d/REQ_json_tilematrixsetlimits2d_schema.adoc[]
 
 NOTE: A TileMatrixSetLimits2D description can be embedded within the TileSetMetadata, as for the _OGC API - Tiles_ tileset conformance class.
 
@@ -23,13 +23,13 @@ NOTE: A TileMatrixSetLimits2D description can be embedded within the TileSetMeta
 [[json-encoding-of-a-tilesetmetadata]]
 ==== JSON TileSetMetadata
 
-The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/json-tilesetmetadata.
+include::requirements/requirements_json-tilesetmetadata.adoc[]
 
-include::requirements/REQ_json_tilesetmetadata_model.adoc[]
+include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_model.adoc[]
 
-include::requirements/REQ_json_tilesetmetadata_ietf.adoc[]
+include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_ietf.adoc[]
 
-include::requirements/REQ_json_tilesetmetadata_schema.adoc[]
+include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_schema.adoc[]
 
 NOTE: A TileSetMetadata description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
 
@@ -66,11 +66,11 @@ The XML encoding has been done respecting the naming and types of the original c
 [[xmltilematrixsetlimits2d-requirements-class]]
 ==== XML TileMatrixSetLimits2D
 
-The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixsetlimits2d.
+include::requirements/requirements_xml-tilematrixsetlimits2d.adoc[]
 
-include::requirements/REQ_xml_tilematrixsetlimits2d_model.adoc[]
+include::requirements/xml-tilematrixsetlimits2d/REQ_xml_tilematrixsetlimits2d_model.adoc[]
 
-include::requirements/REQ_xml_tilematrixsetlimits2d_schema.adoc[]
+include::requirements/xml-tilematrixsetlimits2d/REQ_xml_tilematrixsetlimits2d_schema.adoc[]
 
 NOTE: A TileMatrixSetLimits2D is normally used as embedded in other XML documents. That is the reason an associated media type is not provided.
 
@@ -79,11 +79,11 @@ NOTE: A TileMatrixSetLimits2D is normally used as embedded in other XML document
 [[xml-tileset-metadata]]
 ==== XML TileSetMetadata
 
-The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/xml-tilesetmetadata.
+include::requirements/requirements_xml-tilesetmetadata.adoc[]
 
-include::requirements/REQ_xml_tilesetmetadata_model.adoc[]
+include::requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_model.adoc[]
 
-include::requirements/REQ_xml_tilesetmetadata_schema.adoc[]
+include::requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_schema.adoc[]
 
 NOTE: A TileSetMetadata does not currently have an associated media type.
 

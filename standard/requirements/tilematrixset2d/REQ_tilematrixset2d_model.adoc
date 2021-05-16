@@ -3,5 +3,4 @@
 |===
 |*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/tilematrixset2d/model* {set:cellbgcolor:#FFFFFF}
 2+|A tile matrix set 2D _shall_ be defined following the UML model as shown in <<img_tile-space>> and the model description in <<parts-of-tilematrixset-data-structure>> and <<parts-of-tilematrix-data-structure>>. {set:cellbgcolor:#FFFFFF}
-|*Dependency* {set:cellbgcolor:#FFFFFF} |http://www.opengis.net/spec/owscommon/2.0/req[http://www.opengis.net/spec/owscommon/2.0/req] {set:cellbgcolor:#FFFFFF}
 |===

@@ -22,15 +22,15 @@ In addition, all elements with multiplicity greater than one changes names to pl
 [[jsontilematrixset2d]]
 ==== JSON TileMatrixSet
 
-The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/json-tilematrixset2d.
+include::requirements/REQ_json_tilematrixset2d.adoc[]
 
-include::requirements/REQ_json_tilematrixset2d_model.adoc[]
+include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_model.adoc[]
 
-include::requirements/REQ_json_tilematrixset2d_ietf.adoc[]
+include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_ietf.adoc[]
 
-include::requirements/REQ_json_tilematrixset2d_schema.adoc[]
+include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_schema.adoc[]
 
-include::requirements/REQ_json_tilematrixset2d_media-type.adoc[]
+include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_media-type.adoc[]
 
 
 NOTE: A TileMatrixSet description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
@@ -41,13 +41,13 @@ NOTE: A TileMatrixSet description can be embedded in other file formats, such as
 [[json-variablematrixwidth]]
 ==== JSON VariableMatrixWidth
 
-The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/json-variablematrixwidth.
+include::requirements/requirements-json-variablematrixwidth.adoc[]
 
-include::requirements/REQ_json_variablematrixwidth_model.adoc[]
+include::requirements/json-variablematrixwidth/REQ_json_variablematrixwidth_model.adoc[]
 
-include::requirements/REQ_json_variablematrixwidth_ietf.adoc[]
+include::requirements/json-variablematrixwidth/REQ_json_variablematrixwidth_ietf.adoc[]
 
-include::requirements/REQ_json_variablematrixwidth_schema.adoc[]
+include::requirements/json-variablematrixwidth/REQ_json_variablematrixwidth_schema.adoc[]
 
 <<annex-example-encodings-for-variable-matrix-width-informative>> provides JSON examples for common VariableMatrixWidth.
 
@@ -58,13 +58,13 @@ The XML encoding has been done respecting the naming and types of the original c
 [[xmltilematrixset2d-requirements-class]]
 ==== XML TileMatrixSet
 
-The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixset2d.
+include::requirements/requirements-xml-tilematrixset2d.adoc[]
 
-include::requirements/REQ_xml_tilematrixset2d_model.adoc[]
+include::requirements/xml-tilematrixset2d/REQ_xml_tilematrixset2d_model.adoc[]
 
-include::requirements/REQ_xml_tilematrixset2d_schema.adoc[]
+include::requirements/xml-tilematrixset2d/REQ_xml_tilematrixset2d_schema.adoc[]
 
-include::requirements/REQ_xml_tilematrixset2d_media-type.adoc[]
+include::requirements/xml-tilematrixset2d/REQ_xml_tilematrixset2d_media-type.adoc[]
 
 NOTE: A TileMatrixSet description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
 
@@ -73,10 +73,11 @@ NOTE: A TileMatrixSet description can be embedded in other file formats, such as
 [[xml-variablematrixwidth]]
 ==== XML VariableMatrixWidth
 
-The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/xml-variablematrixwidth.
 
-include::requirements/REQ_xml_variablematrixwidth_model.adoc[]
+include::requirements/requirements-xml-variablematrixwidth.adoc[]
 
-include::requirements/REQ_xml_variablematrixwidth_schema.adoc[]
+include::requirements/xml-variablematrixwidth/REQ_xml_variablematrixwidth_model.adoc[]
+
+include::requirements/xml-variablematrixwidth/REQ_xml_variablematrixwidth_schema.adoc[]
 
 <<annex-example-encodings-for-variable-matrix-width-informative>> provides XML examples for common VariableMatrixWidth

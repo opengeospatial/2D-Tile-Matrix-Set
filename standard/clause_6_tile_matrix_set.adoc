@@ -3,12 +3,12 @@
 
 === Overview
 
-As stated in [OGC 08-015r2] Abstract Specification Topic 2: Spatial Referencing by Coordinates, a coordinate system is a set of mathematical rules for specifying how coordinates are to be assigned to points in space. A CRS is a coordinate system that is related to the real world by a reference datum. An example of mathematical rules is the application of a sphere or an ellipsoid centered in the datum and the use of a projection to transform the sphere or the ellipsoid into a planar representation of the world. Usually, the resulting planar coordinates are expressed as real numbers that are distances to the origin of the projection. This section introduces a tiling scheme called Tile Matrix Set that is defined on top of a CRS. A fundamental part of the definion of a Tile Matrix Set is the Tile Matrix.
+As stated in [OGC 08-015r2] Abstract Specification Topic 2: Spatial Referencing by Coordinates, a coordinate system is a set of mathematical rules for specifying how coordinates are to be assigned to points in space. A CRS is a coordinate system that is related to the real world by a reference datum. An example of mathematical rules is the application of a sphere or an ellipsoid centered in the datum and the use of a projection to transform the sphere or the ellipsoid into a planar representation of the world. Usually, the resulting planar coordinates are expressed as real numbers that are distances to the origin of the projection. This section introduces a tile scheme called Tile Matrix Set that is defined on top of a CRS. A fundamental part of the definion of a Tile Matrix Set is the Tile Matrix.
 
 [[tile-matrix]]
 ==== Tile Matrix
 
-A _Tile Matrix_ is a tiling scheme defined as a grid coverage. For the [OGC 09-146r6] CIS GeneralGridCoverage, the domain set of a grid describes the direct positions in multi-dimensional coordinate space, depending on the type of grid. In a grid-regular, simple equidistant grids are established. When a regular grid coverage is used to represent the world, the space becomes discrete in each dimension of the grid _domain range_. One possible discrete subdivision is the use of multidimensional atomic _grid cells_. Another is to divide the domain into regular intervals that can be assigned to integer numbers that enumerate and identify _tiles_. This grid of tiles domain range can be defined by:
+A _Tile Matrix_ is a tile scheme defined as a grid coverage. For the [OGC 09-146r6] CIS GeneralGridCoverage, the domain set of a grid describes the direct positions in multi-dimensional coordinate space, depending on the type of grid. In a grid-regular, simple equidistant grids are established. When a regular grid coverage is used to represent the world, the space becomes discrete in each dimension of the grid _domain range_. One possible discrete subdivision is the use of multidimensional atomic _grid cells_. Another is to divide the domain into regular intervals that can be assigned to integer numbers that enumerate and identify _tiles_. This grid of tiles domain range can be defined by:
 
 [loweralpha]
 . The extreme corner (called point of origin and corner of origin in a two-dimensional space) of the bounding box of regular grid coverage (e.g., the CRS coordinates of the top left corner of the top left extreme where the integer coordinates are 0);
@@ -80,7 +80,7 @@ NOTE: Section 6 of the TIFF specification v6 defines 2D tiles in the same way th
 
 Depending on the range of scales needed to be represented in the screen of a client, a single tile matrix is impractical and might force the software to spend too much time simplifying/generalizing the dataset prior to rendering.
 
-Commonly, several tile matrices are progressively defined covering the expected ranges of scales needed for the application. A _Tile Matrix Set_ is a tiling scheme composed of a collection of tile matrices, optimized for a particular scale and identified by a tile matrix identifier. Each Tile Matrix Set has an optional approximated bounding box, but each tile matrix has an exact bounding box that is deduced indirectly from other parameters. Tile matrix bounding boxes at each scale will usually vary slightly due to their cell alignment.
+Commonly, several tile matrices are progressively defined covering the expected ranges of scales needed for the application. A _Tile Matrix Set_ is a tile scheme composed of a collection of tile matrices, optimized for a particular scale and identified by a tile matrix identifier. Each Tile Matrix Set has an optional approximated bounding box, but each tile matrix has an exact bounding box that is deduced indirectly from other parameters. Tile matrix bounding boxes at each scale will usually vary slightly due to their cell alignment.
 
 [#img_tile-matrix-set-representation,reftext='{figure-caption} {counter:figure-num}']
 .Tile Matrix Set representation
@@ -146,9 +146,11 @@ image::figures/5.png[TileMatrix with variable matrix width]
 [[tilematrixset2d-requirements-class]]
 ==== TileMatrixSet2D requirements class
 
-Requirements class tilematrixset2D establishes how to describe a TileMatrixSet for a two-dimensional tile space. It is expected that tile matrix sets are defined once and that servers or encodings using or distributing tiles will declare the usage of a tile matrix set by linking to that tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixset2d.
+Requirements class tilematrixset2D establishes how to describe a TileMatrixSet for a two-dimensional tile space. It is expected that tile matrix sets are defined once and that servers or encodings using or distributing tiles will declare the usage of a tile matrix set by linking to that tile matrix set.
 
-include::requirements/REQ_tilematrixset2d_model.adoc[]
+include::requirements/requirements_tilematrixset2d.adoc[]
+
+include::requirements/tilematrixset2d/REQ_tilematrixset2d_model.adoc[]
 
 [#img_tilematrixset-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .TileMatrixSet UML model
@@ -321,7 +323,9 @@ NOTE: The bounding box of a tile matrix is not supplied explicitly because it ca
 
 This extension provides the necessary support for variable matrix width tile matrix sets.
 
-include::requirements/REQ_variablematrixwidth_model.adoc[]
+include::requirements/requirements_variablematrixwidth.adoc[]
+
+include::requirements/variablematrixwidth/REQ_variablematrixwidth_model.adoc[]
 
 [#img_variablematrixwidth-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .VariableMatrixWidth UML model
@@ -345,4 +349,4 @@ In order to make the description of the model more compact, only the tile rows t
 ^c^    From minTileRow to matrixWidth-1 of the tileMatrix section of this tileMatrixSet.
 |===
  
-include::requirements/REQ_variablematrixwidth_coalescence1.adoc[]
+include::requirements/variablematrixwidth/REQ_variablematrixwidth_coalescence1.adoc[]

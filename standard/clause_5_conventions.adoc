@@ -3,6 +3,20 @@
 
 This section provides details and examples for any conventions used in the document.
 
+=== Abbreviations
+
+[horizontal]
+2D:: 2-dimensional
+3D:: 3-dimensional
+CDB:: Abbreviated reference for the OGC CDB Standard.
+CRS:: Coordinate Reference System
+DGGS:: Discrete Global Grid System
+EPSG:: European Petroleum Survey Group
+JSON:: JavaScript Object Notation
+TMS:: Tile Matrix Set
+WMTS:: Web Map Tile Service
+XML:: eXtensible Markup Language
+
 [[identifiers]]
 === Identifiers
 

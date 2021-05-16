@@ -1,0 +1,7 @@
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
+2+|http://www.opengis.net/spec/tms/2.0/req/json-tilematrixsetlimits2d {set:cellbgcolor:#FFFFFF}
+|Target type |tile matrix sets
+|Dependency |http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits2d
+|===

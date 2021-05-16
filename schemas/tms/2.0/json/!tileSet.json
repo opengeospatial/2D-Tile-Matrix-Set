@@ -2,137 +2,107 @@
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
 	"title": "Tile Set Metadata",
 	"description": "A resource describing a tileset based on the OGC TileSet Metadata Standard",
-	"allOf":
-	[
-		{
-			"type": "object",
-			"properties":
+	"type": "object",
+	"properties":
+	{
+		"title": {
+			"description": "A title for this tileset",
+			"type": "string"
+		},
+		"abstract": {
+			"description": "Brief narrative description of this tile set",
+			"type": "string"
+		},
+		"keywords": {
+			"description": "keywords about this tileset",
+			"type": "array",
+			"items":
 			{
-				"title": {
-					"description": "A title for this tileset",
-					"type": "string"
-				},
-				"abstract": {
-					"description": "Brief narrative description of this tile set",
-					"type": "string"
-				},
-				"keywords": {
-					"description": "keywords about this tileset",
-					"type": "array",
-					"items":
-					{
-						"$ref": "keyword.json"
-					}
-				},
-				"version": {
-					"description": "Version of the Tile Set. Changes if the data behind the tiles has been changed",
-					"type": "string"
-				},
-				"pointOfContact": {
-					"description": "Useful information to contact the authors or custodians for the Tile Set",
-					"type": "string"
-				},
-				"accessConstraints": {
-					"description": "Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set",
-					"type": "string",
-					"default": "unclassified",
-					"enum": ["unclassified", "restricted", "confidential", "secret", "topSecret"]
-				},
-				"mediaType": {
-					"description": "Media types available for the tiles",
-					"type": "string"
-				},
-				"dataType": {
-					"description": "Type of data represented in the tileset",
-					"$ref": "#/definitions/dataType"
-				},
-				"tileMatrixSetLimits": {
-					"description": "Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet. If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all",
-					"type": "array",
-					"items":
-					{
-						"$ref": "tilematrixlimits.json"
-					}
-				},
-				"boundingBox": {
-					"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
-					"$ref": "2DBoundingBox.json"
-				},
-				"date": {
-					"$ref": "#/definitions/dates"
-				},
-				"layers": {
-					"minItems": 1,
-					"type": "array",
-					"items":
-					{
-						"$ref": "#/definitions/geospatialData"
-					}
-				},
-				"style": {
-					"description": "Style involving all layers used to generate the tileset",
-					"$ref": "#/definitions/style"
-				},
-				"centerPoint":
-				{
-					"description": "Location of a tile that nicely represents the tileset. Implementations may use this center value to set the default location or to present a representative tile in a user interface",
-					"$ref": "#/definitions/tilePoint"
-				},
-				"links":
-				{
-					"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)",
-					"type": "array",
-					"items": {
-						"$ref": "link.json"
-					}
-				}
+				"$ref": "keyword.json"
 			}
 		},
+		"version": {
+			"description": "Version of the Tile Set. Changes if the data behind the tiles has been changed",
+			"type": "string"
+		},
+		"pointOfContact": {
+			"description": "Useful information to contact the authors or custodians for the Tile Set",
+			"type": "string"
+		},
+		"accessConstraints": {
+			"description": "Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set",
+			"type": "string",
+			"default": "unclassified",
+			"enum": ["unclassified", "restricted", "confidential", "secret", "topSecret"]
+		},
+		"mediaType": {
+			"description": "Media types available for the tiles",
+			"type": "string"
+		},
+		"dataType": {
+			"description": "Type of data represented in the tileset",
+			"$ref": "#/definitions/dataType"
+		},
+		"tileMatrixSetLimits": {
+			"description": "Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet. If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all",
+			"type": "array",
+			"items":
+			{
+				"$ref": "tilematrixlimits.json"
+			}
+		},
+		"boundingBox": {
+			"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
+			"$ref": "2DBoundingBox.json"
+		},
+		"date": {
+			"$ref": "#/definitions/dates"
+		},
+		"layers": {
+			"minItems": 1,
+			"type": "array",
+			"items":
+			{
+				"$ref": "#/definitions/geospatialData"
+			}
+		},
+		"style": {
+			"description": "Style involving all layers used to generate the tileset",
+			"$ref": "#/definitions/style"
+		},
+		"centerPoint":
 		{
-			"description": "At least one of the 'TileMatrixSet',  'TileMatrixSetURI' or 'TileMatrixSetDefinition' SHALL be provided",
-			"anyOf": [
-				{
-					"type": "object",
-					"required": ["tileMatrixSet"],
-					"properties":
-					{
-						"tileMatrixSet":
-						{
-							"description": "Tile matrix set definition",
-							"$ref": "tileMatrixSet.json"
-						}
-					}
-				},
-				{
-					"type": "object",
-					"required": ["tileMatrixSetURI"],
-					"properties":
-					{
-						"tileMatrixSetURI":
-						{
-							"description": "Reference to a Tile Matrix Set on the OGC NA definition server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on the definition server.",
-							"type": "string",
-							"format": "uri",
-							"examples": ["http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid"]
-						}
-					}
-				},
-				{
-					"type": "object",
-					"required": ["tileMatrixSetDefinition"],
-					"properties":
-					{
-						"tileMatrixSetDefinition":
-						{
-							"description": "Reference to a tile matrix set definition following the 2D Tile Matrix Set Standard. Optional for tile matrix sets defined on the OGC definition server; required for custom Tile Matrix Sets.",
-							"type": "string",
-							"examples": ["http://data.example.com/tileMatrixSets/WorldMercatorWGS84Quad"]
-						}
-					}
-				}
-			]
+			"description": "Location of a tile that nicely represents the tileset. Implementations may use this center value to set the default location or to present a representative tile in a user interface",
+			"$ref": "#/definitions/tilePoint"
+		},
+		"links":
+		{
+			"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)",
+			"type": "array",
+			"items": {
+				"$ref": "link.json"
+			}
+		},
+		"tileMatrixSet":
+		{
+			"description": "Tile matrix set definition",
+			"$ref": "tileMatrixSet.json"
+		},
+		"tileMatrixSetURI":
+		{
+			"description": "Reference to a Tile Matrix Set on the OGC NA definition server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on the definition server.",
+			"type": "string",
+			"format": "uri",
+			"examples": ["http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid"]
+		},
+		"tileMatrixSetDefinition":
+		{
+			"description": "Reference to a tile matrix set definition following the 2D Tile Matrix Set Standard. Optional for tile matrix sets defined on the OGC definition server; required for custom Tile Matrix Sets.",
+			"type": "string",
+			"examples": ["http://data.example.com/tileMatrixSets/WorldMercatorWGS84Quad"]
 		}
-	],
+	},
+	"unevaluatedProperties": false,
 	"definitions":
 	{
 		"dates":
@@ -159,7 +129,8 @@
 					"description": "The future validity of the Tile Set (the Tile Set may no longer be applicable at this date, or that a new revision of the Tile Set is going to be issued)",
 					"$ref": "timeStamp.json"
 				}
-			}
+			},
+			"unevaluatedProperties": false
 		},
 		"geospatialData":
 		{

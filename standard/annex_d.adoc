@@ -5,7 +5,7 @@
 
 This Annex includes some definitions for TileMatrixSets that are commonly used.
 
-[[web-mercator-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0webmercatorquad.]]
+[[web-mercator-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0webmercatorquad]]
 === Web Mercator Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad).
 
 [#definition-of-the-webmercatorquad-tilematrixset,reftext='{table-caption} {counter:table-num}']
@@ -69,8 +69,10 @@ NOTE: For example, the EPSG database version 8.9 says about the 3857: “Uses sp
 
 NOTE: The risks caused by imprecision in the use of Web Mercator is also emphasized by the US National Geospatial Agency (NGA). NGA has issued an Advisory Notice on web Mercator (http://earth-info.nga.mil/GandG/wgs84/web_mercator/index.html) that says that “it may cause geo-location / geo-coordinate errors up to 40,000 meters. This erroneous geospatial positioning information poses an unacceptable risk to global safety of navigation activities, and department of defense, intelligence community, and allied partner systems, missions, and operations that require accurate and precise positioning and navigation information.” The use of WorldMercatorWGS84Quad is recommended.
 
+=== World WGS84 Quad TileMatrixSet definitions
+
 [[world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldcrs84quad]]
-=== World CRS84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad)
+==== Variant 1: World CRS84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad) (recommended)
 
 This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in the CRS84 CRS for the whole world.
 
@@ -110,9 +112,14 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 | 15 | 8530.918335399136 | 2.14576721191406 10^-5^ | 65536 | 32768
 | 16 | 4265.459167699568 | 1.07288360595703 10^-5^ | 131072 | 65536
 | 17 | 2132.729583849784 | 5.36441802978516 10^-6^ | 262144 | 131072
+| 18 | 1066.36479192489 | 2.68220901489258 10^-6^ | 524288 | 262144
+| 19 | 533.182395962445 | 1.34110450744629 10^-6^ | 1048576 | 524288
+| 20 | 266.591197981222 | 6.70552253723144 10^-7^ | 2097152 | 1048576
+| 21 | 133.295598990611 | 3.35276126861572 10^-7^ | 4194304 | 2097152
+| 22 | 66.6477994953056 | 1.67638063430786 10^-7^ | 8388608 | 4194304
+| 23 | 33.3238997476528 | 8.3819031715393 10^-8^ | 16777216 | 8388608
 |===
  
-
 One can define an arbitrary number of zoom levels and do not need to include all the ones defined here. Here, 18 zoom levels are illustrated.
 
 [#img_tile-matrix-id-1,reftext='{figure-caption} {counter:figure-num}']
@@ -128,9 +135,58 @@ NOTE: The scale denominators for this TileMatrixSet and WorldMercatorWGS84Quad a
 
 NOTE: for INSPIRE: The Technical Guidance for the implementation of INSPIRE View Services defines a TileMatrixSet called InspireCRS84Quad that is identical to this one. Note that the current version of the INSPIRE Technical Guidance cited in the Bibliography Annex could accidentally generate confusion because it is comparing a GoogleCRS84Quad (that is a well-known scale set name) with the InspireCRS84Quad (that is a TileMatrixSet definition that does not link to any WKSS).
 
-NOTE: Some implementers prefer to define this TileMatrixSet using the CRS http://www.opengis.net/def/crs/EPSG/0/4326. The definition is the same except that CRS coordinates are expressed in latitude, longitude order, affecting the PointOfOrigin and the BBox encoding only.
+[[world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad]]
+==== Variant 2: World EPSG:4326 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WGS1984Quad)
 
-[[world-mercator-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldmercatorwgs84quad.]]
+Some implementers prefer to define the previoius TileMatrixSet using the CRS http://www.opengis.net/def/crs/EPSG/0/4326. The definition is the same as http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad except that CRS coordinates are expressed in latitude, longitude order, affecting the PointOfOrigin and the BBox encoding only. If possible, the use of http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad is recommended instead of this one, because it uses coordinates in the same order than the tiles indices. However, we introduce it here to clarify how an implementation based on EPSG:4326 should look like and avoid confusion.
+
+This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in the EPSG:4326 CRS for the whole world.
+
+[#definition-of-the-worldcrs84quad-tilematrixset,reftext='{table-caption} {counter:table-num}']
+.Definition of the WorldCRS84Quad TileMatrixSet
+[width = "100%"]
+|===
+5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/4326, EPSG:4326
+
+*BBOX LowerCorner:* -90 -180
+
+*BBOX UpperCorner:* 90 180
+
+*WellKnownScaleSet*: http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad
+
+*PointOfOrigin*: 90 -180
+
+*TileWidth*: 256
+
+*TileHeight*: 256
+| *TileMatrix id* | *Scale Denominator* | *CEll Size (degrees) (true at the equator)* | *Matrix Width* | *Matrix Height*
+| 0 | 279541132.0143589 | 0.703125000000000 | 2 | 1
+| 1 | 139770566.0071794 | 0.351562500000000 | 4 | 2
+| 2 | 69885283.00358972 | 0.175781250000000 | 8 | 4
+| 3 | 34942641.50179486 | 8.78906250000000 10^-2^ | 16 | 8
+| 4 | 17471320.75089743 | 4.39453125000000 10^-2^ | 32 | 16
+| 5 | 8735660.375448715 | 2.19726562500000 10^-2^ | 64 | 32
+| 6 | 4367830.187724357 | 1.09863281250000 10^-2^ | 128 | 64
+| 7 | 2183915.093862179 | 5.49316406250000 10^-3^ | 256 | 128
+| 8 | 1091957.546931089 | 2.74658203125000 10^-3^ | 512 | 256
+| 9 | 545978.7734655447 | 1.37329101562500 10^-3^ | 1024 | 512
+| 10 | 272989.3867327723 | 6.86645507812500 10^-4^ | 2048 | 1024
+| 11 | 136494.6933663862 | 3.43322753906250 10^-4^ | 4096 | 2048
+| 12 | 68247.34668319309 | 1.71661376953125 10^-4^ | 8192 | 4096
+| 13 | 34123.67334159654 | 8.58306884765625 10^-5^ | 16384 | 8192
+| 14 | 17061.83667079827 | 4.29153442382812 10^-5^ | 32768 | 16384
+| 15 | 8530.918335399136 | 2.14576721191406 10^-5^ | 65536 | 32768
+| 16 | 4265.459167699568 | 1.07288360595703 10^-5^ | 131072 | 65536
+| 17 | 2132.729583849784 | 5.36441802978516 10^-6^ | 262144 | 131072
+| 18 | 1066.36479192489 | 2.68220901489258 10^-6^ | 524288 | 262144
+| 19 | 533.182395962445 | 1.34110450744629 10^-6^ | 1048576 | 524288
+| 20 | 266.591197981222 | 6.70552253723144 10^-7^ | 2097152 | 1048576
+| 21 | 133.295598990611 | 3.35276126861572 10^-7^ | 4194304 | 2097152
+| 22 | 66.6477994953056 | 1.67638063430786 10^-7^ | 8388608 | 4194304
+| 23 | 33.3238997476528 | 8.3819031715393 10^-8^ | 16777216 | 8388608
+|===
+
+[[world-mercator-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldmercatorwgs84quad]]
 === World Mercator WGS84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldMercatorWGS84Quad).
 
 [#definition-of-the-worldmercatorwgs84quad-tilematrixset,reftext='{table-caption} {counter:table-num}']

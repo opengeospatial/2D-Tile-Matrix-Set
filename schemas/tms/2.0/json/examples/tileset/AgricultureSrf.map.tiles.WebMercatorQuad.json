@@ -58,7 +58,7 @@
          "identifier" : "AgricultureSrf",
          "dataType" : "vector",
          "geometryType" : "polygons",
-         "maxTileMatrix" : "17",
+         "maxTileMatrix" : "17", 
          "minScaleDenominator" : 4265.4591676995678,
          "boundingBox" : { "lowerLeft" : [ 35.898213, 32.4633913 ], "upperRight" : [ 36.5614696, 32.8370158 ] },
          "links" : [

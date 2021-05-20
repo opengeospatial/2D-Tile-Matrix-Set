@@ -466,13 +466,13 @@ image::figures/16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black li
 |===
 5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3035, ETRS89
 
-*BBOX LowerLeft:* 2,000,000.0, 1,000,000.0
+*BBOX LowerLeft:* 1,000,000.0, 2,000,000.0
 
-*BBOX UpperRight:* 6,500,000, 5,500,000.0
+*BBOX UpperRight:* 5,500,000.0, 6,500,000.0
 
 *WellKnownScaleSet*: N/A
 
-*PointOfOrigin*: 2,000,000.0, 5,500,000.0
+*PointOfOrigin*: 5,500,000.0, 2,000,000.0
 
 *TileWidth*: 256
 

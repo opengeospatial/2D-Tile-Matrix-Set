@@ -1,5 +1,4 @@
 [appendix]
-[[annex_f_$$$$]]
 [[example-encodings-for-tilesetmetadata-informative]]
 :appendix-caption: Annex
 == Example encodings for TileSetMetadata (Informative)

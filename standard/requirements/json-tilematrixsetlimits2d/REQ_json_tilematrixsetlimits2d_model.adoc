@@ -1,4 +1,4 @@
-[[req_xml_tilematrixsetlimits2d_model]]
+[[req_json_tilematrixsetlimits2d_model]]
 [width="90%",cols="2,6"]
 |===
 |*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/json-tilematrixsetlimits2d/model* {set:cellbgcolor:#FFFFFF}

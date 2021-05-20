@@ -22,11 +22,11 @@ In addition, all elements with multiplicity greater than one changes names to pl
 [[jsontilematrixset2d]]
 ==== JSON TileMatrixSet
 
-include::requirements/REQ_json_tilematrixset2d.adoc[]
+include::requirements/requirements_json-tilematrixset2d.adoc[]
 
 include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_model.adoc[]
 
-include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_ietf.adoc[]
+// include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_ietf.adoc[]
 
 include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_schema.adoc[]
 
@@ -41,7 +41,7 @@ NOTE: A TileMatrixSet description can be embedded in other file formats, such as
 [[json-variablematrixwidth]]
 ==== JSON VariableMatrixWidth
 
-include::requirements/requirements-json-variablematrixwidth.adoc[]
+include::requirements/requirements_json-variablematrixwidth.adoc[]
 
 include::requirements/json-variablematrixwidth/REQ_json_variablematrixwidth_model.adoc[]
 
@@ -58,7 +58,7 @@ The XML encoding has been done respecting the naming and types of the original c
 [[xmltilematrixset2d-requirements-class]]
 ==== XML TileMatrixSet
 
-include::requirements/requirements-xml-tilematrixset2d.adoc[]
+include::requirements/requirements_xml-tilematrixset2d.adoc[]
 
 include::requirements/xml-tilematrixset2d/REQ_xml_tilematrixset2d_model.adoc[]
 
@@ -74,7 +74,7 @@ NOTE: A TileMatrixSet description can be embedded in other file formats, such as
 ==== XML VariableMatrixWidth
 
 
-include::requirements/requirements-xml-variablematrixwidth.adoc[]
+include::requirements/requirements_xml-variablematrixwidth.adoc[]
 
 include::requirements/xml-variablematrixwidth/REQ_xml_variablematrixwidth_model.adoc[]
 

@@ -10,7 +10,7 @@ The TileMatrixSet data structure has been transformed into JSON schemes as descr
 
 [source,json]
 ....
-include::../schemas/tms/2.0/json/tileMatriSet.json[]
+include::../schemas/tms/2.0/json/tileMatrixSet.json[]
 ....
 
 === XML schema used to validate the XML examples document

@@ -1,48 +1,55 @@
 [appendix]
-[[annex-pseudocode-informative]]
+[[example-encodings-for-tilesetmetadata-informative]]
 :appendix-caption: Annex
-== Pseudocode (Informative)
+== Example encodings for TileSetMetadata (Informative)
 
-This informative Annex provides pseudocode that illustrates how to get the tiles that cover a bounding box rectangle and how to get the CRS coordinates that bound a tile.
+This informative Annex provides an example of use for TileSetMetadata and TileMatrixSetLimits2D data structures.
 
-[[from-bbox-to-tile-indices]]
-=== From BBOX to tile indices
+[[json-document-instance-using-tilesetmetadata]]
+=== JSON document instance using TileSetMetadata
 
-The following fragment of pseudocode could be used to convert from a desired bounding box (bBoxMinX, bBoxMinY, bBoxMaxX, bBoxMaxY) in CRS coordinates to a range of tile set indices. This pseudocode uses the same notation that subclause 6.1.1 uses. In this pseudocode it is assumed that bBoxMinX, bBoxMinY, bBoxMaxX, bBoxMaxY, tileMatrixMinX, tileMatrixMinY, tileMatrixMinY, tileMatrixMaxY, tileSpanX and tileSpanY are floating point variables (IEEE-754) that have accuracy issues derived from the finite precision of the representation. These accuracy issues could be amplified in a typical floor() rounding down function that could return a value ±1 than that expected. To overcome this issue this code uses a small value (epsilon) added or subtracted in a place that is not affected by CRS coordinate precision.
+TileSetMetadata data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in JSON.
 
-[source,c]
+[source,json]
 ....
-// to compensate for floating point computation inaccuracies
-epsilon = 1e-6
-
-tileMinCol = floor((bBoxMinX - tileMatrixMinX) / tileSpanX + epsilon)
-tileMaxCol = floor((bBoxMaxX - tileMatrixMinX) / tileSpanX - epsilon)
-tileMinRow = floor((tileMatrixMaxY - bBoxMaxY) / tileSpanY + epsilon)
-tileMaxRow = floor((tileMatrixMaxY - bBoxMinY) / tileSpanY - epsilon)
-
-// to avoid requesting out-of-range tiles
-if (tileMinCol < 0) tileMinCol = 0
-if (tileMaxCol >= matrixWidth) tileMaxCol = matrixWidth-1
-if (tileMinRow < 0) tileMinRow = 0
-if (tileMaxRow >= matrixHeight) tileMaxRow = matrixHeight-1
+include::../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
 ....
 
- 
+[json-schema-used-to-validate-the-previous-json-document]]
+=== JSON schema used to validate the previous JSON document
 
-To fetch all the tiles that cover this bounding box, a client would scan through tileMinCol to tileMaxCol and tileMinRow to tileMaxRow, all inclusive. A total of (tileMaxCol- tileMinCol+1) × (tileMaxRow- tileMinRow+1) will be fetched.
+The TileSetMetadata data structure can be included the definition of an API that provides tiles. This JSON Schema can be used in an API definition in JSON format and to validate the previous JSON example.
 
-[[from-tile-indices-to-bbox]]
-=== From tile indices to BBOX
-
-
-The following pseudocode could be used to convert from a pair of tile indices (tileCol, tileRow) to the bounding box (in CRS coordinates) of this tile defined by the upper-left corner (leftX, upperY) of the tile:
-
-[source,c]
+[source,json]
 ....
-leftX = tileCol * tileSpanX + tileMatrixMinX
-upperY = tileMatrixMaxY - tileRow * tileSpanY
+include::../schemas/tms/2.0/json/tileSet.json[]
+....
 
-and the lower-right corner (rightX, lowerY) of the tile:
-rightX = (tileCol+1) * tileSpanX + tileMatrixMinX
-lowerY = tileMatrixMaxY – (tileRow+1) * tileSpanY
+[source,json]
+....
+include::../schemas/tms/2.0/json/tileMatrixLimits.json[]
+....
+
+[[xml-document-instance-using-tilesetmetadata]]
+=== XML document instance using TileSetMetadata
+
+TileSetMetadata data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in XML.
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tileset/tiles.WebMercatorQuad.xml[]
+....
+
+[[xml-schema-used-to-validate-the-previous-xml-document]]
+=== XML schema used to validate the previous XML document
+This XML Schema can be used to validate the previous XML example.
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/tileset.xsd[]
+....
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/tilematrixlimits.xsd[]
 ....

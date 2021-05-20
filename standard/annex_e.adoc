@@ -1,198 +1,150 @@
 [appendix]
-[[annex-example-encodings-for-common-tilematrixset2d-informative]]
+[[annex-variable-tilematrixset-definitions-informative]]
 :appendix-caption: Annex
-== Example Encodings for Common TileMatrixSet2D (Informative)
+== Variable width TileMatrixSet definitions (Informative)
 
-This Annex provides examples of JSON and XML encodings than can be used to define tile matrix sets.
+This annex includes definitions for TileMatrixSets utilizing the variable width capability.
+This capability allows to coalesce tiles of specific rows so that the overwall width of the tile matrix is divided among fewer tiles.
+This is particularly well suited to define global grids in an Equirectangular Plate Carrée projection, where tiles closer to the pole cover a smaller area
+area than tiles at the equator.
 
-=== JSON schema used to validate the JSON examples provided
-The TileMatrixSet data structure has been transformed into JSON schemes as described in seccion <<tilematrixset-encodings>> and provided with this standard as indicated in <<annex-schema-documents-normative>>. JSON document instances describing TileMatrixSets (including the ones reproduced in this annex) should validate against these schemes. The following JSON Schema fragment reproduces the main module of the TileMatrixSet schema.
+Such TileMatrixSets may therefore attempt to approximate equal area tiles.
+Because the resulting tiles would likely only tend towards equal area but still be off by a significant margin,
+they cannot be considered a Discrete Global Grid Systems (DGGS) per http://www.opengis.net/doc/AS/dggs/1.0[OGC Abtract Topic 21 - Part 1] which specifies
+a maximum threshold of 1% difference. However, they may qualify as an Axis-Aligned DGGS per OGC Abtract Topic 21 - Part 4 introduced in version 2.
 
-[source,json]
-....
-include::../schemas/tms/2.0/json/tileMatrixSet.json[]
-....
+[[gnosis-global-grid-tilematrixset-definition]]
+=== GNOSIS Global Grid TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid).
 
-=== XML schema used to validate the XML examples document
+[#definition-of-the-gnosisglobalgrid-tilematrixset,reftext='{table-caption} {counter:table-num}']
 
-The TileMatrixSet data structure has been transformed into XSD schemes as described in seccion <<tilematrixset-encodings>> and provided with this standard as indicated in <<annex-schema-documents-normative>>. XML document instances describing TileMatrixSets (including the ones reproduced in this annex) should validate against these schemes. The following XML Schema fragment reproduces the main module of the TileMatrixSet schema.
+The https://ecere.ca/gnosis/[GNOSIS] Global Grid Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in the EPSG:4326 CRS
+for the whole world while still attempting to approxiate equal area tiles, even near the poles.
 
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/tileMatrixSet.xsd[]
-....
+Starting at the tile matrix with identifier 1, a variable matrix coalescence factor is applied for polar tiles to tend towards equal area.
 
-=== Web Mercator Quad TileMatrixSet definition.
+It is easy to implement procedurally: it is a quad-tree starting with 8 90 degrees x 90 degrees tiles at level 0,
+with the exception that tiles touching a pole are split into 3 tiles rather than 4 -- the polar portion is not split longitude-wise.
+Therefore there will always be only 4 tiles touching each pole.
 
-These are the JSON and XML definitions of the WebMercatorQuad tile matrix set (see <<web-mercator-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0webmercatorquad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+.Definition of the GNOSISGlobalGrid TileMatrixSet
+|===
+6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/4326, EPSG:4326
 
-One can define an arbitrary number of zoom levels. Here, 25 zoom levels are illustrated.
+*BBOX LowerLeft:* -90 -180
 
-==== Web Mercator Quad TileMatrixSet definition. JSON Encoding
+*BBOX UpperRight:* 90 180
 
-[source,json]
-....
-include::../schemas/tms/2.0/json/examples/tilematrixset/WebMercatorQuad.json[]
-....
+*WellKnownScaleSet*: http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad
 
-==== Web Mercator Quad TileMatrixSet definition. XML example.
+*PointOfOrigin*: 90 -180
 
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/WebMercatorQuad.xml[]
-....
+*TileWidth*: 256
 
-=== World WGS84 Quad TileMatrixSet definitions
-
-==== Variant 1: World CRS84 Quad TileMatrixSet definition (recommended)
-
-These are the JSON and XML definitions of the WorldCRS84Quad tile matrix set (see <<world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldcrs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
-
-One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illustrated.
-
-==== World CRS84 Quad TileMatrixSet definition. JSON Encoding
-
-[source,json]
-....
-include::../schemas/tms/2.0/json/examples/tilematrixset/WorldCRS84Quad.json[]
-....
-
-==== World CRS84 Quad TileMatrixSet definition. XML encoding
-
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/WorldCRS84Quad.xml[]
-....
-
-==== Variant 2: World EPSG:4326 Quad TileMatrixSet definition
-
-These are the JSON definitions of the WorldCRS84Quad tile matrix set (see <<world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
-
-One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illustrated.
-
-===== World EPSG:4326 Quad TileMatrixSet definition. JSON Encoding
-
-[source,json]
-....
-include::../schemas/tms/2.0/json/examples/tilematrixset/WGS1984Quad.json[]
-....
-
-==== World EPSG:4326 Quad TileMatrixSet definition. XML encoding
-
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/WGS1984Quad.xml[]
-....
+*TileHeight*: 256
+| *TileMatrix id* | *Scale Denominator* | *Cell Size (degrees) (true at the equator)* | *Matrix Width (c=1)* | *Matrix Height* | *Coalescing Coefficient (c)*
+| 0 | 139,770,566.0071794 | 0.351562500000000 | 4 | 2 |
+.2+| 1 .2+| 69,885,283.00358972 .2+| 0.175781250000000 .2+| 8 .2+| 4 | Row 0: 1
+                                                    | Row 3: 2
+.4+| 2 .4+| 34,942,641.50179486 .4+| 8.78906250000000 10^-2^ .4+| 16 .4+| 8 | Row 0:	4
+                                                    | Row 1:	2
+                                                    | Row 6:	2
+                                                    | Row 7:	4
+.6+| 3 .6+| 17,471,320.75089743 .6+| 4.39453125000000 10^-2^ .6+| 32 .6+| 16 | Row 0:	8
+                                                    | Row 1:	4
+                                                    | Rows 2..3:	2
+                                                    | Rows 12..13:	2
+                                                    | Row 14:	4
+                                                    | Row 15:	8
+.8+| 4 .8+| 8,735,660.375448715 .8+| 2.19726562500000 10^-2^ .8+| 64 .8+| 32 | Row 0:	16
+                                                    | Row 1:	8
+                                                    | Rows 2..3:	4
+                                                    | Rows 4..7:	2
+                                                    | Rows 24..27:	2
+                                                    | Rows 28..29:	4
+                                                    | Row 30:	8
+                                                    | Row 31:	16
+|===
  
-=== World Mercator WGS84 Quad TileMatrixSet definition.
+One can define an arbitrary number of zoom levels and do not need to include all the ones defined here. Here, 5 zoom levels are illustrated.
+Levels 0..28 are officially defined, allowing to reach 2:1 scale while a matrix, row and column can still fit within a single 64-bit key.
 
-These are the JSON and XML definitions of the WorldMercatorQuad tile matrix set (see <<world-mercator-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldmercatorwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+[#img_ggg,reftext='{figure-caption} {counter:figure-num}']
+.GNOSIS Global Grid (TileMatrix Id 2)
+image::figures/5.png[GNOSISGlobalGrid]
 
-One can define an arbitrary number of zoom levels. Here, 19 zoom levels are illustrated but resolutions up to 24 are currently available in some mass market services.
+NOTE: The GNOSIS Global Grid scales match the _GoogleCRS84Quad_ Well Known Scale Set, but starts at the third scale of the set.
 
-==== World Mercator WGS84 Quad TileMatrixSet definition. JSON Encoding
+NOTE: Aside from the variable width considerations, the only other difference with the
+<<world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad,WorldCRS84Quad TileMatrixSet>>
+is the fact that the latter starts at the second scale of the WKSS -- its TileMatrix identifier 1 is equivalent to
+the GNOSISGlobalGrid TileMatrix identifier 0.
 
-[source,json]
-....
-include::../schemas/tms/2.0/json/examples/tilematrixset/WorldMercatorWGS84Quad.json[]
-....
+[[cdb-global-grid-tilematrixset-definition]]
+=== CDB Global Grid TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/CDBGlobalGrid).
 
-==== World Mercator WGS84 Quad TileMatrixSet definition. XML encoding
+[#definition-of-the-cdbglobalgrid-tilematrixset,reftext='{table-caption} {counter:table-num}']
 
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/WorldMercatorWGS84Quad.xml[]
-....
+This CDB Global Grid Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in the EPSG:4326 CRS for the whole world, based
+on the level of details and zones defined by the https://docs.ogc.org/is/15-113r6/15-113r6.html[OGC CDB 1.x],
+which can be encoded following this standard with the use of variable widths.
+For the tile matrices with negative identifiers of the CDB Global Grid, the tiles' geographic extents remain the same as those of tile matrix 0,
+but the tile size in cells is reduced. The levels -1 to 2 are shown here.
+For the CDB Global Grid, the polar adjustment zones corresponding to coalescence factors are the same for all tile matrices of the set.
 
+.Definition of the CDBGlobalGrid TileMatrixSet
+[width = "100%"]
+|===
+6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/4326, EPSG:4326
 
-=== Universal Transverse Mercator WGS84 Quad for TileMatrixSet definition for zone 31
+*BBOX LowerLeft:* -90 -180
 
-These are the JSON and XML definitions of the UTM31WGS84Quad tile matrix set (see <<universal-transverse-mercator-wgs84-quad-family-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0utmwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set if the zone 31 is required. The other 59 zones in the 60 UTM partition can be defined similarly. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+*BBOX UpperRight:* 90 180
 
-==== UTM WGS84 Quad for TileMatrixSet definition for zone 31. JSON Encoding
+*PointOfOrigin*: 90 -180
 
-[source,json]
-....
-include::../schemas/tms/2.0/json/examples/tilematrixset/UTM31WGS84Quad.json[]
-....
+*TileWidth*: 1024
+
+*TileHeight*: 1024
+| *TileMatrix id* | *Scale Denominator* | *Cell Size (degrees) (true at the equator)* | *Matrix Width (c=1)* | *Matrix Height* | *Coalescing Coefficient (c)*
+.10+| -1 .10+| 776,503.144	 .10+| 0.001953125 .10+| 360 .10+| 180 | Row 0:	12
+| Rows 1..9:	6
+| Rows 10..14:	4
+| Rows 15..19:	3
+| Rows 20..39:	2
+| Rows 140..159:	2
+| Rows 160..164:	3
+| Rows 165..169:	4
+| Rows 170..178:	6
+| Row 179:	12
+.10+| 0 .10+| 388,251.572 .10+| 0.009765625 .10+| 360 .10+| 180 | Row 0:	12
+| Rows 1..9:	6
+| Rows 10..14:	4
+| Rows 15..19:	3
+| Rows 20..39:	2
+| Rows 140..159:	2
+| Rows 160..164:	3
+| Rows 165..169:	4
+| Rows 170..178:	6
+| Row 179:	12
+.10+| 1 .10+| 194,125.786 .10+| 0.004882813 .10+| 720 .10+| 360 |Row 0:	12
+| Rows 1..9:	6
+| Rows 10..14:	4
+| Rows 15..19:	3
+| Rows 20..39:	2
+| Rows 140..159:	2
+| Rows 160..164:	3
+| Rows 165..169:	4
+| Rows 170..178:	6
+| Row 179:	12
+|===
  
-==== UTM WGS84 Quad for TileMatrixSet definition for zone 31. XML encoding
+One can define an arbitrary number of zoom levels and do not need to include all the ones defined here. Here, 3 zoom levels are illustrated.
 
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/UTM31WGS84Quad.xml[]
-....
- 
+[#img_cdb_zones,reftext='{figure-caption} {counter:figure-num}']
+.CDB Zones (from OGC CDB Volume 1)
+image::figures/cdb-zones.jpg[width=600]
 
-=== Arctic Universal Polar Stereographic WGS 84 Quad TileMatrixSet definition.
-
-These are the JSON and XML definition of the UPSArcticWGS84Quad tile matrix set (see <<arctic-universal-polar-stereographic-wgs-84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0upsarcticwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
-
-==== Arctic UPS WGS 84 Quad TileMatrixSet definition. JSON enconding
-
-[source,json]
-....
-include::../schemas/tms/2.0/json/examples/tilematrixset/UPSArcticWGS84Quad.json[]
-....
-
-==== Arctic UPS WGS 84 Quad TileMatrixSet definition. XML encoding
-
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/UPSArcticWGS84Quad.xml[]
-....
-
- 
-=== Antarctic Universal Polar Stereographic WGS84 Quad TileMatrixSet definition.
-
-These are the JSON and XML definitions of the UPSAntarcticWGS84Quad tile matrix set (see <<antarctic-universal-polar-stereographic-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0-upsantarcticwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
-
-==== Antarctic UPS WGS84 Quad TileMatrixSet definition. JSON Encoding
-
-[source,json]
-....
-include::../schemas/tms/2.0/json/examples/tilematrixset/UPSAntarcticWGS84Quad.json[]
-....
-
-==== Antarctic UPS WGS84 Quad TileMatrixSet definition. XML Encoding
-
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/UPSAntarcticWGS84Quad.xml[]
-....
-
-=== European ETRS89 LAEA Quad TileMatrixSet definition.
-
-These are the JSON and XML definitions of the EuropeanETRS89_LAEAQuad tile matrix set (see <<european-etrs89-laea-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0europeanetrs89_laeaquad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
-
-==== European ETRS89 LAEA Quad TileMatrixSet definition. JSON Encoding
-
-[source,json]
-....
-include::../schemas/tms/2.0/json/examples/tilematrixset/EuropeanETRS89_LAEAQuad.json[]
-....
-
-==== European ETRS89 LAEA Quad TileMatrixSet definition. XML Encoding
-
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/EuropeanETRS89_LAEAQuad.xml[]
-....
-
-=== Canadian Lambert Conformal Conic NAD83 TileMatrixSet definition.
-
-These are the JSON and XML definitions of the CanadianNAD83_LCC tile matrix set (see <<canadian-nad83-lcc-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0canadiannad83_lcc>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
-
-==== Canadian Lambert Conformal Conic NAD83 TileMatrixSet definition. JSON Encoding
-
-[source,json]
-....
-include::../schemas/tms/2.0/json/examples/tilematrixset/CanadianNAD83_LCC.json[]
-....
-
-==== Canadian Lambert Conformal Conic NAD83 TileMatrixSet definition. XML Encoding
-
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/CanadianNAD83_LCC.xml[]
-....
+[#img_cdb_LODs,reftext='{figure-caption} {counter:figure-num}']
+.CDB Level of Details (from OGC CDB Volume 1)
+image::figures/cdb-lod.png[width=600]

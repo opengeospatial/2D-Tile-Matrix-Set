@@ -93,7 +93,7 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 *TileWidth*: 256
 
 *TileHeight*: 256
-| *TileMatrix id* | *Scale Denominator* | *CEll Size (degrees) (true at the equator)* | *Matrix Width* | *Matrix Height*
+| *TileMatrix id* | *Scale Denominator* | *Cell Size (degrees) (true at the equator)* | *Matrix Width* | *Matrix Height*
 | 0 | 279541132.0143589 | 0.703125000000000 | 2 | 1
 | 1 | 139770566.0071794 | 0.351562500000000 | 4 | 2
 | 2 | 69885283.00358972 | 0.175781250000000 | 8 | 4
@@ -159,7 +159,7 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 *TileWidth*: 256
 
 *TileHeight*: 256
-| *TileMatrix id* | *Scale Denominator* | *CEll Size (degrees) (true at the equator)* | *Matrix Width* | *Matrix Height*
+| *TileMatrix id* | *Scale Denominator* | *Cell Size (degrees) (true at the equator)* | *Matrix Width* | *Matrix Height*
 | 0 | 279541132.0143589 | 0.703125000000000 | 2 | 1
 | 1 | 139770566.0071794 | 0.351562500000000 | 4 | 2
 | 2 | 69885283.00358972 | 0.175781250000000 | 8 | 4

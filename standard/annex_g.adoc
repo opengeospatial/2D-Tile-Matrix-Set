@@ -1,55 +1,69 @@
-[appendix]
-[[example-encodings-for-tilesetmetadata-informative]]
+   [appendix]
+[[annex-example-encodings-for-variable-matrix-width-informative]]
 :appendix-caption: Annex
-== Example encodings for TileSetMetadata (Informative)
+== Example encodings for Variable Matrix Width TileMatrixSets (Informative)
 
-This informative Annex provides an example of use for TileSetMetadata and TileMatrixSetLimits2D data structures.
+This informative Annex provides examples of encodings for tile matrix sets using the Variable Matrix Width requirements class.
 
-[[json-document-instance-using-tilesetmetadata]]
-=== JSON document instance using TileSetMetadata
+=== GNOSIS Global Grid
 
-TileSetMetadata data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in JSON.
+These are the JSON and XML definitions of the GNOSISGlobalGrid tile matrix set (see <<gnosis-global-grid-tilematrixset-definition>>)
+that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices
+for more detailed scales is possible if they follow the same pattern.
 
-[source,json]
-....
-include::../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
-....
+One can define an arbitrary number of zoom levels. Here, 5 zoom levels are illustrated.
 
-[json-schema-used-to-validate-the-previous-json-document]]
-=== JSON schema used to validate the previous JSON document
+[[json-gnosisglobalgrid]]
+==== GNOSIS Global Grid (JSON encoding)
 
-The TileSetMetadata data structure can be included the definition of an API that provides tiles. This JSON Schema can be used in an API definition in JSON format and to validate the previous JSON example.
+The complete JSON example can be found in the supplemental material described in <<annex-schema-documents-normative>>
 
 [source,json]
 ....
-include::../schemas/tms/2.0/json/tileSet.json[]
+include::../schemas/tms/2.0/json/examples/tilematrixset/GNOSISGlobalGrid.json[lines=1..183]
+      }
+   ]
+}
 ....
+
+[[xml-gnosisglobalgrid]]
+==== GNOSIS Global Grid (XML encoding)
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/GNOSISGlobalGrid.xml[lines=1..157]
+</TileMatrixSet>
+....
+
+=== CDB Global Grid
+
+These are the JSON and XML definitions of the CDBGlobalGrid tile matrix set (see <<cdb-global-grid-tilematrixset-definition>>)
+that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices
+for more detailed scales is possible if they follow the same pattern.
+
+One can define an arbitrary number of zoom levels. Here, 3 zoom levels are illustrated.
+
+
+[[json-cdbglobalgrid]]
+==== CDB Global Grid (JSON encoding)
 
 [source,json]
 ....
-include::../schemas/tms/2.0/json/tileMatrixLimits.json[]
+include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=1..17]
+include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=594..848]
+      }
+   ]
+}
 ....
+ 
 
-[[xml-document-instance-using-tilesetmetadata]]
-=== XML document instance using TileSetMetadata
-
-TileSetMetadata data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in XML.
-
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/examples/tileset/tiles.WebMercatorQuad.xml[]
-....
-
-[[xml-schema-used-to-validate-the-previous-xml-document]]
-=== XML schema used to validate the previous XML document
-This XML Schema can be used to validate the previous XML example.
+[[xml-cdbglobalgrid]]
+==== CDB Global Grid (XML encoding)
 
 [source,xml]
 ....
-include::../schemas/tms/2.0/xml/tileset.xsd[]
+include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=1..12]
+include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=553..791]
+</TileMatrixSet>
 ....
-
-[source,xml]
-....
-include::../schemas/tms/2.0/xml/tilematrixlimits.xsd[]
-....
+ 

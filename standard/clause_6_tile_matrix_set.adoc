@@ -321,7 +321,7 @@ NOTE: The bounding box of a tile matrix is not supplied explicitly because it ca
 [[variablematrixwidth-requirements-class]]
 ==== VariableMatrixWidth requirements class
 
-This extension provides the necessary support for variable matrix width tile matrix sets.
+This requirements class provides the necessary support for variable matrix width tile matrix sets.
 
 include::requirements/requirements_variablematrixwidth.adoc[]
 

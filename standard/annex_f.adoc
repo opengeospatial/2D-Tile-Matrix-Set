@@ -1,69 +1,198 @@
 [appendix]
-[[annex-example-encodings-for-variable-matrix-width-informative]]
+[[annex-example-encodings-for-common-tilematrixset2d-informative]]
 :appendix-caption: Annex
-== Example encodings for Variable Matrix Width TileMatrixSets (Informative)
+== Example Encodings for Common TileMatrixSet2D (Informative)
 
-This informative Annex provides examples of the Variable Matrix Width extension.
+This Annex provides examples of JSON and XML encodings than can be used to define tile matrix sets.
 
-The first example shows the first five tile matrices of the definition of the https://ecere.ca/gnosis/[GNOSIS] Global Grid and presents them
-encoded in XML and JSON following this standard.
-Note that the GNOSIS Global Grid scales match the _GoogleCRS84Quad_ Well Known Scale Set, but starts at the third scale of the set.
-Since the _WorldCRS84Quad_ TileMatrixSet starts at the second scale, its TileMatrix identifier 1 is equivalent to the GNOSISGlobalGrid TileMatrix identifier 0,
-with the exception of the variable width considerations.
-In this case, the variable matrix width is applied only from the tile matrix with identifier 1 and higher.
-The GNOSIS Global Grid is easy to implement procedurally: it is a quad-tree starting with 8 90 degrees x 90 degrees tiles at level 0,
-with the exception that tiles touching a pole are split into 3 tiles rather than 4 -- the polar portion is not split longitude-wise.
-Therefore there will always be only 4 tiles touching each pole.
-
-The complete JSON example can be found in the supplemental material described in <<annex-schema-documents-normative>>
-
-
-[[json-gnosisglobalgrid]]
-=== GNOSIS Global Grid (JSON)
+=== JSON schema used to validate the JSON examples provided
+The TileMatrixSet data structure has been transformed into JSON schemes as described in seccion <<tilematrixset-encodings>> and provided with this standard as indicated in <<annex-schema-documents-normative>>. JSON document instances describing TileMatrixSets (including the ones reproduced in this annex) should validate against these schemes. The following JSON Schema fragment reproduces the main module of the TileMatrixSet schema.
 
 [source,json]
 ....
-include::../schemas/tms/2.0/json/examples/tilematrixset/GNOSISGlobalGrid.json[lines=1..183]
-      }
-   ]
-}
+include::../schemas/tms/2.0/json/tileMatrixSet.json[]
 ....
 
-[[xml-gnosisglobalgrid]]
-=== GNOSIS Global Grid (XML)
+=== XML schema used to validate the XML examples document
+
+The TileMatrixSet data structure has been transformed into XSD schemes as described in seccion <<tilematrixset-encodings>> and provided with this standard as indicated in <<annex-schema-documents-normative>>. XML document instances describing TileMatrixSets (including the ones reproduced in this annex) should validate against these schemes. The following XML Schema fragment reproduces the main module of the TileMatrixSet schema.
 
 [source,xml]
 ....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/GNOSISGlobalGrid.xml[lines=1..157]
-</TileMatrixSet>
+include::../schemas/tms/2.0/xml/tileMatrixSet.xsd[]
 ....
 
+=== Web Mercator Quad TileMatrixSet definition.
 
-The second example represents the https://docs.opengeospatial.org/is/15-113r5/15-113r5.html#CharacteristicsoftheCDBtilingstoragemodel[CDB Zones and Levels of Detail]
-which can be encoded following this standard with the use of variable widths.
-For the tile matrices with negative identifiers of the CDB Global Grid, the tiles' geographic extents remain the same as those of tile matrix 0, but the tile size in cells is reduced. The levels -1 to 2 are shown here.
-Note that unlike the GNOSIS Global Grid, for the CDB Global Grid the polar adjustment is the same for all tile matrices of the set.
+These are the JSON and XML definitions of the WebMercatorQuad tile matrix set (see <<web-mercator-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0webmercatorquad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
 
-[[json-cdbglobalgrid]]
-=== CDB Global Grid (JSON)
+One can define an arbitrary number of zoom levels. Here, 25 zoom levels are illustrated.
+
+==== Web Mercator Quad TileMatrixSet definition. JSON Encoding
 
 [source,json]
 ....
-include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=1..17]
-include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=594..848]
-      }
-   ]
-}
+include::../schemas/tms/2.0/json/examples/tilematrixset/WebMercatorQuad.json[]
 ....
- 
 
-[[xml-cdbglobalgrid]]
-=== CDB Global Grid (XML)
+==== Web Mercator Quad TileMatrixSet definition. XML example.
 
 [source,xml]
 ....
-include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=1..12]
-include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=553..791]
-</TileMatrixSet>
+include::../schemas/tms/2.0/xml/examples/tilematrixset/WebMercatorQuad.xml[]
+....
+
+=== World WGS84 Quad TileMatrixSet definitions
+
+==== Variant 1: World CRS84 Quad TileMatrixSet definition (recommended)
+
+These are the JSON and XML definitions of the WorldCRS84Quad tile matrix set (see <<world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldcrs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+
+One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illustrated.
+
+==== World CRS84 Quad TileMatrixSet definition. JSON Encoding
+
+[source,json]
+....
+include::../schemas/tms/2.0/json/examples/tilematrixset/WorldCRS84Quad.json[]
+....
+
+==== World CRS84 Quad TileMatrixSet definition. XML encoding
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/WorldCRS84Quad.xml[]
+....
+
+==== Variant 2: World EPSG:4326 Quad TileMatrixSet definition
+
+These are the JSON definitions of the WorldCRS84Quad tile matrix set (see <<world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+
+One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illustrated.
+
+===== World EPSG:4326 Quad TileMatrixSet definition. JSON Encoding
+
+[source,json]
+....
+include::../schemas/tms/2.0/json/examples/tilematrixset/WGS1984Quad.json[]
+....
+
+==== World EPSG:4326 Quad TileMatrixSet definition. XML encoding
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/WGS1984Quad.xml[]
 ....
  
+=== World Mercator WGS84 Quad TileMatrixSet definition.
+
+These are the JSON and XML definitions of the WorldMercatorQuad tile matrix set (see <<world-mercator-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldmercatorwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+
+One can define an arbitrary number of zoom levels. Here, 19 zoom levels are illustrated but resolutions up to 24 are currently available in some mass market services.
+
+==== World Mercator WGS84 Quad TileMatrixSet definition. JSON Encoding
+
+[source,json]
+....
+include::../schemas/tms/2.0/json/examples/tilematrixset/WorldMercatorWGS84Quad.json[]
+....
+
+==== World Mercator WGS84 Quad TileMatrixSet definition. XML encoding
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/WorldMercatorWGS84Quad.xml[]
+....
+
+
+=== Universal Transverse Mercator WGS84 Quad for TileMatrixSet definition for zone 31
+
+These are the JSON and XML definitions of the UTM31WGS84Quad tile matrix set (see <<universal-transverse-mercator-wgs84-quad-family-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0utmwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set if the zone 31 is required. The other 59 zones in the 60 UTM partition can be defined similarly. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+
+==== UTM WGS84 Quad for TileMatrixSet definition for zone 31. JSON Encoding
+
+[source,json]
+....
+include::../schemas/tms/2.0/json/examples/tilematrixset/UTM31WGS84Quad.json[]
+....
+ 
+==== UTM WGS84 Quad for TileMatrixSet definition for zone 31. XML encoding
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/UTM31WGS84Quad.xml[]
+....
+ 
+
+=== Arctic Universal Polar Stereographic WGS 84 Quad TileMatrixSet definition.
+
+These are the JSON and XML definition of the UPSArcticWGS84Quad tile matrix set (see <<arctic-universal-polar-stereographic-wgs-84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0upsarcticwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+
+==== Arctic UPS WGS 84 Quad TileMatrixSet definition. JSON enconding
+
+[source,json]
+....
+include::../schemas/tms/2.0/json/examples/tilematrixset/UPSArcticWGS84Quad.json[]
+....
+
+==== Arctic UPS WGS 84 Quad TileMatrixSet definition. XML encoding
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/UPSArcticWGS84Quad.xml[]
+....
+
+ 
+=== Antarctic Universal Polar Stereographic WGS84 Quad TileMatrixSet definition.
+
+These are the JSON and XML definitions of the UPSAntarcticWGS84Quad tile matrix set (see <<antarctic-universal-polar-stereographic-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0-upsantarcticwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+
+==== Antarctic UPS WGS84 Quad TileMatrixSet definition. JSON Encoding
+
+[source,json]
+....
+include::../schemas/tms/2.0/json/examples/tilematrixset/UPSAntarcticWGS84Quad.json[]
+....
+
+==== Antarctic UPS WGS84 Quad TileMatrixSet definition. XML Encoding
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/UPSAntarcticWGS84Quad.xml[]
+....
+
+=== European ETRS89 LAEA Quad TileMatrixSet definition.
+
+These are the JSON and XML definitions of the EuropeanETRS89_LAEAQuad tile matrix set (see <<european-etrs89-laea-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0europeanetrs89_laeaquad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+
+==== European ETRS89 LAEA Quad TileMatrixSet definition. JSON Encoding
+
+[source,json]
+....
+include::../schemas/tms/2.0/json/examples/tilematrixset/EuropeanETRS89_LAEAQuad.json[]
+....
+
+==== European ETRS89 LAEA Quad TileMatrixSet definition. XML Encoding
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/EuropeanETRS89_LAEAQuad.xml[]
+....
+
+=== Canadian Lambert Conformal Conic NAD83 TileMatrixSet definition.
+
+These are the JSON and XML definitions of the CanadianNAD83_LCC tile matrix set (see <<canadian-nad83-lcc-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0canadiannad83_lcc>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+
+==== Canadian Lambert Conformal Conic NAD83 TileMatrixSet definition. JSON Encoding
+
+[source,json]
+....
+include::../schemas/tms/2.0/json/examples/tilematrixset/CanadianNAD83_LCC.json[]
+....
+
+==== Canadian Lambert Conformal Conic NAD83 TileMatrixSet definition. XML Encoding
+
+[source,xml]
+....
+include::../schemas/tms/2.0/xml/examples/tilematrixset/CanadianNAD83_LCC.xml[]
+....

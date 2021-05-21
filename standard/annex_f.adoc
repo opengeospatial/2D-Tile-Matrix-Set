@@ -50,14 +50,14 @@ These are the JSON and XML definitions of the WorldCRS84Quad tile matrix set (se
 
 One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illustrated.
 
-==== World CRS84 Quad TileMatrixSet definition. JSON Encoding
+===== World CRS84 Quad TileMatrixSet definition. JSON Encoding
 
 [source,json]
 ....
 include::../schemas/tms/2.0/json/examples/tilematrixset/WorldCRS84Quad.json[]
 ....
 
-==== World CRS84 Quad TileMatrixSet definition. XML encoding
+===== World CRS84 Quad TileMatrixSet definition. XML encoding
 
 [source,xml]
 ....
@@ -77,7 +77,7 @@ One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illu
 include::../schemas/tms/2.0/json/examples/tilematrixset/WGS1984Quad.json[]
 ....
 
-==== World EPSG:4326 Quad TileMatrixSet definition. XML encoding
+===== World EPSG:4326 Quad TileMatrixSet definition. XML encoding
 
 [source,xml]
 ....
@@ -142,7 +142,6 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/UPSArcticWGS84Quad.json[
 include::../schemas/tms/2.0/xml/examples/tilematrixset/UPSArcticWGS84Quad.xml[]
 ....
 
- 
 === Antarctic Universal Polar Stereographic WGS84 Quad TileMatrixSet definition.
 
 These are the JSON and XML definitions of the UPSAntarcticWGS84Quad tile matrix set (see <<antarctic-universal-polar-stereographic-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0-upsantarcticwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.

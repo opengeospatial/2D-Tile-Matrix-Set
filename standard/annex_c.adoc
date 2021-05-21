@@ -154,7 +154,7 @@ http://www.epsg-registry.org/export.htm?‌gml= http://www.opengis.net/def/crs/E
 NOTE: Level 0 allows representing most of the world (limited to latitudes between approximately ±85 degrees) in a single tile of 256x256 cells (Mercator projection cannot cover the whole world because mathematically the poles are at infinity). The next level represents most of the world in 2x2 tiles of 256x256 cellss and so on in powers of 2.
 
 [[worldmercatorwgs84-httpwww.opengis.netdefwkssogc1.0-worldmercatorwgs84]]
-=== WorldMercatorWGS84 (http://www.opengis.net/def/wkss/OGC/1.0/ WorldMercatorWGS84)
+=== WorldMercatorWGS84 (http://www.opengis.net/def/wkss/OGC/1.0/WorldMercatorWGS84)
 
 This well-known scale set has been defined as similar to Google Maps and Microsoft Bing Maps but using the WGS84 ellipsoid. The scale denominator and cell size are only accurate near the equator.
 

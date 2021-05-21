@@ -15,7 +15,7 @@ TileSetMetadata data structure can be used for a resource to specify the tiling 
 include::../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
 ....
 
-[json-schema-used-to-validate-the-previous-json-document]]
+[[json-schema-used-to-validate-the-previous-json-document]]
 === JSON schema used to validate the previous JSON document
 
 The TileSetMetadata data structure can be included the definition of an API that provides tiles. This JSON Schema can be used in an API definition in JSON format and to validate the previous JSON example.

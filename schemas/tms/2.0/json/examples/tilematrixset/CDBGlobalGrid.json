@@ -19,7 +19,7 @@
       {
          "id" : "-10",
          "scaleDenominator": 397569609.975977063179,
-         "cellSize": 1, 
+         "cellSize": 1,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 1,
@@ -84,7 +84,7 @@
       {
          "id" : "-9",
          "scaleDenominator": 198784804.9879885315895,
-         "cellSize": 0.5, 
+         "cellSize": 0.5,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 2,
@@ -149,7 +149,7 @@
       {
          "id" : "-8",
          "scaleDenominator": 99392402.4939942657948,
-         "cellSize": 0.25, 
+         "cellSize": 0.25,
          "matrixWidth" : 360,
          "matrixHeight" : 180,
          "tileWidth" : 4,

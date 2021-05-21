@@ -191,7 +191,7 @@
       {
          "id" : "5",
          "scaleDenominator" : 4367830.1877243574709,
-         "cellSize": 0.010986328125, 
+         "cellSize": 0.010986328125,
          "matrixWidth" : 128,
          "matrixHeight" : 64,
          "tileWidth" : 256,
@@ -511,7 +511,7 @@
       {
          "id" : "9",
          "scaleDenominator" : 272989.3867327723419,
-         "cellSize": 0.0006866455078125, 
+         "cellSize": 0.0006866455078125,
          "matrixWidth" : 2048,
          "matrixHeight" : 1024,
          "tileWidth" : 256,
@@ -2216,7 +2216,7 @@
       {
          "id" : "20",
          "scaleDenominator" : 133.2955989906115,
-         "cellSize": 0.000000335276126861571, 
+         "cellSize": 0.000000335276126861571,
          "matrixWidth" : 4194304,
          "matrixHeight" : 2097152,
          "tileWidth" : 256,
@@ -3931,7 +3931,7 @@
       {
          "id" : "27",
          "scaleDenominator" : 1.0413718671142,
-         "cellSize": 0.0000000026193447411062, 
+         "cellSize": 0.0000000026193447411062,
          "matrixWidth" : 536870912,
          "matrixHeight" : 268435456,
          "tileWidth" : 256,

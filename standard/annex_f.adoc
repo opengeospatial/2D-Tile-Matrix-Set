@@ -57,7 +57,7 @@ One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illu
 include::../schemas/tms/2.0/json/examples/tilematrixset/WorldCRS84Quad.json[]
 ....
 
-===== World CRS84 Quad TileMatrixSet definition. XML encoding
+===== World CRS84 Quad TileMatrixSet definition (XML encoding)
 
 [source,xml]
 ....
@@ -77,13 +77,13 @@ One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illu
 include::../schemas/tms/2.0/json/examples/tilematrixset/WGS1984Quad.json[]
 ....
 
-===== World EPSG:4326 Quad TileMatrixSet definition. XML encoding
+===== World EPSG:4326 Quad TileMatrixSet definition (XML encoding)
 
 [source,xml]
 ....
 include::../schemas/tms/2.0/xml/examples/tilematrixset/WGS1984Quad.xml[]
 ....
- 
+
 === World Mercator WGS84 Quad TileMatrixSet definition.
 
 These are the JSON and XML definitions of the WorldMercatorQuad tile matrix set (see <<world-mercator-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldmercatorwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
@@ -97,7 +97,7 @@ One can define an arbitrary number of zoom levels. Here, 19 zoom levels are illu
 include::../schemas/tms/2.0/json/examples/tilematrixset/WorldMercatorWGS84Quad.json[]
 ....
 
-==== World Mercator WGS84 Quad TileMatrixSet definition. XML encoding
+==== World Mercator WGS84 Quad TileMatrixSet definition (XML encoding)
 
 [source,xml]
 ....
@@ -115,8 +115,8 @@ These are the JSON and XML definitions of the UTM31WGS84Quad tile matrix set (se
 ....
 include::../schemas/tms/2.0/json/examples/tilematrixset/UTM31WGS84Quad.json[]
 ....
- 
-==== UTM WGS84 Quad for TileMatrixSet definition for zone 31. XML encoding
+
+==== UTM WGS84 Quad for TileMatrixSet definition for zone 31 (XML encoding)
 
 [source,xml]
 ....
@@ -128,14 +128,14 @@ include::../schemas/tms/2.0/xml/examples/tilematrixset/UTM31WGS84Quad.xml[]
 
 These are the JSON and XML definition of the UPSArcticWGS84Quad tile matrix set (see <<arctic-universal-polar-stereographic-wgs-84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0upsarcticwgs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
 
-==== Arctic UPS WGS 84 Quad TileMatrixSet definition. JSON enconding
+==== Arctic UPS WGS 84 Quad TileMatrixSet definition (JSON enconding)
 
 [source,json]
 ....
 include::../schemas/tms/2.0/json/examples/tilematrixset/UPSArcticWGS84Quad.json[]
 ....
 
-==== Arctic UPS WGS 84 Quad TileMatrixSet definition. XML encoding
+==== Arctic UPS WGS 84 Quad TileMatrixSet definition (XML encoding)
 
 [source,xml]
 ....

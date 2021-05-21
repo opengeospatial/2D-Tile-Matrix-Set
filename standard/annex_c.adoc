@@ -8,7 +8,9 @@ The following well-known scale sets (WKSS) are defined in this standard. To be c
 The WKSS concept was introduced in WMTS to improve interoperability, but experience has demonstrated that the use of Common TileMatrixSet2D (<<annex-common-tilematrixset-definitions-informative>>) is even better. The use of WKSS is no longer encouraged by this standard.
 
 [[globalcrs84scale-httpwww.opengis.netdefwkssogc1.0globalcrs84scale]]
-=== GlobalCRS84Scale (http://www.opengis.net/def/wkss/OGC/1.0/GlobalCRS84Scale)
+=== GlobalCRS84Scale
+
+*URI: http://www.opengis.net/def/wkss/OGC/1.0/GlobalCRS84Scale*
 
 This WKSS has been defined for global cartographic products. Rounded scales have been chosen for intuitive cartographic representation of vector data. The scale denominator is only accurate near the Equator.
 
@@ -42,7 +44,9 @@ This WKSS has been defined for global cartographic products. Rounded scales have
 |===
 
 [[globalcrs84pixel-httpwww.opengis.netdefwkssogc1.0globalcrs84pixel]]
-=== GlobalCRS84Pixel (http://www.opengis.net/def/wkss/OGC/1.0/GlobalCRS84Pixel)
+=== GlobalCRS84Pixel
+
+*URI: http://www.opengis.net/def/wkss/OGC/1.0/GlobalCRS84Pixel*
 
 This WKSS has been defined for global cartographic products. Rounded cell sizes have been chosen for intuitive cartographic representation of raster data. Some values have been chosen to coincide with original cell size of commonly used global products like STRM (1" and 3“), GTOPO (30”) or ETOPO (2’ and 5’). The scale denominator and approximated cell size in meters are only accurate near the Equator.
 
@@ -73,7 +77,9 @@ This WKSS has been defined for global cartographic products. Rounded cell sizes 
  
 
 [[googlecrs84quad-httpwww.opengis.netdefwkssogc1.0googlecrs84quad]]
-=== GoogleCRS84Quad (http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad)
+=== GoogleCRS84Quad
+
+*URI: http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad*
 
 This WKSS has been defined to allow quadtree pyramids in CRS84. The scale denominator is only accurate near the equator.
 
@@ -109,7 +115,9 @@ NOTE: The first scale denominator allows representation of the whole world in a 
 NOTE: Selecting the word “Google” for this WKSS id is maintained for backwards compatibility even if the authors recognize that it was an unfortunate selection and might result confusing since the “Google-like” tiles do not use CRS84.
 
 [[GoogleMapsCompatible-httpwww.opengis.netdefwkssOGC1.0GoogleMapsCompatible]]
-=== GoogleMapsCompatible (http://www.opengis.net/def/wkss/OGC/1.0/GoogleMapsCompatible)
+=== GoogleMapsCompatible
+
+*URI: http://www.opengis.net/def/wkss/OGC/1.0/GoogleMapsCompatible*
 
 This well-known scale set has been defined to be compatible with many mass marked implementations such as Google Maps, Microsoft Bing Maps (formerly Microsoft Live Maps) and Open Street Map tiles. The scale denominator and cell size are only accurate near the equator.
 
@@ -154,7 +162,9 @@ http://www.epsg-registry.org/export.htm?‌gml= http://www.opengis.net/def/crs/E
 NOTE: Level 0 allows representing most of the world (limited to latitudes between approximately ±85 degrees) in a single tile of 256x256 cells (Mercator projection cannot cover the whole world because mathematically the poles are at infinity). The next level represents most of the world in 2x2 tiles of 256x256 cellss and so on in powers of 2.
 
 [[worldmercatorwgs84-httpwww.opengis.netdefwkssogc1.0-worldmercatorwgs84]]
-=== WorldMercatorWGS84 (http://www.opengis.net/def/wkss/OGC/1.0/WorldMercatorWGS84)
+=== WorldMercatorWGS84
+
+*URI: http://www.opengis.net/def/wkss/OGC/1.0/WorldMercatorWGS84*
 
 This well-known scale set has been defined as similar to Google Maps and Microsoft Bing Maps but using the WGS84 ellipsoid. The scale denominator and cell size are only accurate near the equator.
 

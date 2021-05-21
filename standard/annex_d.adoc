@@ -6,7 +6,9 @@
 This Annex includes some definitions for TileMatrixSets that are commonly used.
 
 [[web-mercator-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0webmercatorquad]]
-=== Web Mercator Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad).
+=== WebMercatorQuad TileMatrixSet definition
+
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad*
 
 [#definition-of-the-webmercatorquad-tilematrixset,reftext='{table-caption} {counter:table-num}']
 .Definition of the WebMercatorQuad TileMatrixSet
@@ -69,10 +71,12 @@ NOTE: For example, the EPSG database version 8.9 says about the 3857: “Uses sp
 
 NOTE: The risks caused by imprecision in the use of Web Mercator is also emphasized by the US National Geospatial Agency (NGA). NGA has issued an Advisory Notice on web Mercator (http://earth-info.nga.mil/GandG/wgs84/web_mercator/index.html) that says that “it may cause geo-location / geo-coordinate errors up to 40,000 meters. This erroneous geospatial positioning information poses an unacceptable risk to global safety of navigation activities, and department of defense, intelligence community, and allied partner systems, missions, and operations that require accurate and precise positioning and navigation information.” The use of WorldMercatorWGS84Quad is recommended.
 
-=== World WGS84 Quad TileMatrixSet definitions
+=== WorldCRS84Quad TileMatrixSet definitions
 
 [[world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldcrs84quad]]
-==== Variant 1: World CRS84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad) (recommended)
+==== Variant 1: World CRS84 Quad TileMatrixSet definition (recommended)
+
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad*
 
 This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in the CRS84 CRS for the whole world.
 
@@ -136,7 +140,9 @@ NOTE: The scale denominators for this TileMatrixSet and WorldMercatorWGS84Quad a
 NOTE: for INSPIRE: The Technical Guidance for the implementation of INSPIRE View Services defines a TileMatrixSet called InspireCRS84Quad that is identical to this one. Note that the current version of the INSPIRE Technical Guidance cited in the Bibliography Annex could accidentally generate confusion because it is comparing a GoogleCRS84Quad (that is a well-known scale set name) with the InspireCRS84Quad (that is a TileMatrixSet definition that does not link to any WKSS).
 
 [[world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad]]
-==== Variant 2: World EPSG:4326 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WGS1984Quad)
+==== Variant 2: World EPSG:4326 Quad TileMatrixSet definition
+
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/WGS1984Quad*
 
 Some implementers prefer to define the previous TileMatrixSet using the CRS http://www.opengis.net/def/crs/EPSG/0/4326. The definition is the same as http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad except that CRS coordinates are expressed in latitude, longitude order, affecting the PointOfOrigin and the BBox encoding only. If possible, the use of http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad is recommended instead of this one, because it uses coordinates in the same order as the tiles indices. However, we introduce it here to clarify how an implementation based on EPSG:4326 should look like and avoid confusion.
 
@@ -187,7 +193,9 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 |===
 
 [[world-mercator-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldmercatorwgs84quad]]
-=== World Mercator WGS84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldMercatorWGS84Quad).
+=== WorldMercatorWGS84Quad TileMatrixSet definition
+
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldMercatorWGS84Quad*
 
 [#definition-of-the-worldmercatorwgs84quad-tilematrixset,reftext='{table-caption} {counter:table-num}']
 .Definition of the WorldMercatorWGS84Quad TileMatrixSet
@@ -248,7 +256,9 @@ NOTE: The NGA Geomatics Office reminds the community to use DoD approved World G
 NOTE: The NGA Geomatics Office recommends the use of Universal zoom-levels scale set that are defined as true cell size at ±31.0606963703645 degrees of latitude that implies a scale reduction at the equator of 0.857385503731176. This standard recommends the use of scale denominators at the equator for convenience.
 
 [[universal-transverse-mercator-wgs84-quad-family-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0utmwgs84quad]]
-=== Universal Transverse Mercator WGS84 Quad family TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/UTM##WGS84Quad)
+=== Universal Transverse Mercator WGS84 Quad family TileMatrixSet definition (UTM##WGS84Quad)
+
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/UTM##WGS84Quad*
 
 The Universal Transversal Mercator (a special case of transverse Mercator), divides the world into 60 zones by longitude. No single zone would make a global or near-global map. Therefore, this definition is a family of 60 TileMatrixSets in a single table.
 
@@ -313,7 +323,9 @@ image::figures/13.png[Tile Matrix Id 1 (dashed blue lines; 1x2 tiles) and 2 (red
 NOTE: The NGA Geomatics Office recommends the use of Universal zoom-levels scale set that are defined as true cell size at ±30.700524332812 degrees of longitude at both sides of the central meridian that implies a scale reduction at the central meridian of 0.85882463752355. The tiles considering this scale are exactly the same than considering true cell size at the equation and no scale reduction. This standard recommends the use of scale denominators at the equator for convenience.
 
 [[arctic-universal-polar-stereographic-wgs-84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0upsarcticwgs84quad]]
-=== Arctic Universal Polar Stereographic WGS 84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/UPSArcticWGS84Quad)
+=== Arctic Universal Polar Stereographic WGS 84 Quad TileMatrixSet definition (UPSArcticWGS84Quad)
+
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/UPSArcticWGS84Quad*
 
 It is difficult to find consensus in the geospatial community for what constitutes the “best” tile matrix set for the polar areas. Even if everyone agrees on using a polar stereographic, the election of the PointOfOrigin and scale denominators is almost arbitrary. This document presents the NGA recommendation for polar stereographic that allows for the representation of more than one hemisphere to 15 degrees into the opposite hemisphere and shares a common set of cell sizes with the WorldMercatorWGS84Quad and the UTM##WGS84Quad. The selection of a CRS for a polar stereographic is difficult and this document follows several criteria (see NOTE 2). In the end, the UPS North that is commonly used in conjunction with UTM was selected.
 
@@ -382,7 +394,9 @@ image::figures/15.png[Rotation of the meridian of origin to allow a region to be
 
 
 [[antarctic-universal-polar-stereographic-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0-upsantarcticwgs84quad]]
-=== Antarctic Universal Polar Stereographic WGS84 Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/ UPSAntarcticWGS84Quad)
+=== Antarctic Universal Polar Stereographic WGS84 Quad TileMatrixSet definition (UPSAntarcticWGS84Quad)
+
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/UPSAntarcticWGS84Quad*
 
 There is no consensus in the geospatial community for what constitutes the “best” tile matrix set for the polar stereographic projection. One reason for this is that the election of the PointOfOrigin and scale denominators is almost completely arbitrary. In this document, a TileMatrixSet identical to the Arctic one but with and Antarctic CRS was selected.
 
@@ -442,8 +456,9 @@ image::figures/16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black li
  
 
 [[european-etrs89-laea-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0europeanetrs89_laeaquad]]
-=== European ETRS89 LAEA Quad TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/EuropeanETRS89_LAEAQuad)
+=== European ETRS89 Lambert azimuthal equal-area Quad TileMatrixSet definition (EuropeanETRS89_LAEAQuad)
 
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/EuropeanETRS89_LAEAQuad*
 
 [#definition-of-the-europeanetrs89_laeaquad-tilematrixset,reftext='{table-caption} {counter:table-num}']
 .Definition of the EuropeanETRS89_LAEAQuad TileMatrixSet
@@ -485,7 +500,9 @@ image::figures/16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black li
 One can define an arbitrary number of zoom levels and does not need to include all the zoom levels defined here. Here, 16 zoom levels are illustrated.
 
 [[canadian-nad83-lcc-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0canadiannad83_lcc]]
-=== Canadian NAD83 LCC TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/CanadianNAD83_LCC)
+=== Canadian NAD83 Lambert Conformal Conic TileMatrixSet definition (CanadianNAD83_LCC)
+
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/CanadianNAD83_LCC*
 
 [#Definition-of-the-canadiannad83_lcc-tilematrixset,reftext='{table-caption} {counter:table-num}']
 .Definition of the CanadianNAD83_LCC TileMatrixSet

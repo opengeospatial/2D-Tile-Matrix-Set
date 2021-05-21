@@ -14,7 +14,9 @@ they cannot be considered a Discrete Global Grid Systems (DGGS) per http://www.o
 a maximum threshold of 1% difference. However, they may qualify as an Axis-Aligned DGGS per OGC Abtract Topic 21 - Part 4 introduced in version 2.
 
 [[gnosis-global-grid-tilematrixset-definition]]
-=== GNOSIS Global Grid TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid).
+=== GNOSISGlobalGrid TileMatrixSet definition
+
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid*
 
 [#definition-of-the-gnosisglobalgrid-tilematrixset,reftext='{table-caption} {counter:table-num}']
 
@@ -81,7 +83,9 @@ is the fact that the latter starts at the second scale of the WKSS -- its TileMa
 the GNOSISGlobalGrid TileMatrix identifier 0.
 
 [[cdb-global-grid-tilematrixset-definition]]
-=== CDB Global Grid TileMatrixSet definition (http://www.opengis.net/def/tilematrixset/OGC/1.0/CDBGlobalGrid).
+=== CDBGlobalGrid TileMatrixSet definition
+
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/CDBGlobalGrid*
 
 [#definition-of-the-cdbglobalgrid-tilematrixset,reftext='{table-caption} {counter:table-num}']
 

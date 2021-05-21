@@ -1,4 +1,4 @@
-   [appendix]
+[appendix]
 [[annex-example-encodings-for-variable-matrix-width-informative]]
 :appendix-caption: Annex
 == Example encodings for Variable Matrix Width TileMatrixSets (Informative)

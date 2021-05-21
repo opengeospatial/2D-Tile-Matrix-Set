@@ -18,11 +18,11 @@ _Recipients of this document are requested to submit, with their comments, notif
 
 [big]*iv.    Security Considerations*
 
-The correct definition of a tile matrix set is crucial to be able to correctly geo-reference a tile. The application of the wrong tile matrix set could result in an incorrect geo-referencing of the tiles and the features represented in those tiles. In an emergency situation, such poor referencing could result sending first responders to the wrong location.
+The correct definition of a tile matrix set is crucial to be able to correctly geo-reference a tile. The application of the wrong tile matrix set could result in an incorrect geo-referencing of the tiles and the features represented in those tiles. In an emergency situation, such poor referencing could result in sending first responders to the wrong location.
 
-In a normal service interaction, the client requests the TileMatrixSet once and requests one or more tiles afterwards. The client needs to ensure that the TileMatrixSet definition has not been tampered with and corresponds to the correct TileMatrixSet. In practice this means that the client and server must to use a mechanism to ensure that the service is really who it claims to be and that the message that travels from the server to the client has not been altered.
+In a normal service interaction, the client requests the TileMatrixSet once and requests one or more tiles afterwards. The client needs to ensure that the TileMatrixSet definition has not been tampered with and corresponds to the correct TileMatrixSet. In practice this means that the client and server must use a mechanism to ensure that the service is really who it claims to be and that the message that travels from the server to the client has not been altered.
 
-If a server points to a definition of a TileMatrixSet that is hosted elsewhere, in addition to the precautions stated in before, the client must ensure that the service providing the definition of the TileMatrixSet is a trusted service. In addition, the synchronization of the tiles and the tile matrix set definition need to be ensured, guaranteeing that the tile matrix set definition has not been updated afterwards without the tile service knowing it.
+If a server points to a definition of a TileMatrixSet that is hosted elsewhere, in addition to the precautions stated above, the client must ensure that the service providing the definition of the TileMatrixSet is a trusted service. In addition, the synchronization of the tiles and the tile matrix set definition need to be ensured, guaranteeing that the tile matrix set definition has not been updated afterwards without the tile service knowing it.
 
 [big]*v.    Submitting organizations*
 

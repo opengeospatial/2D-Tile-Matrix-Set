@@ -42,7 +42,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/WebMercatorQuad.json[]
 include::../schemas/tms/2.0/xml/examples/tilematrixset/WebMercatorQuad.xml[]
 ....
 
-=== World WGS84 Quad
+=== World CRS84 Quad
 
 *Variant 1: World CRS84 Quad (recommended)*
 

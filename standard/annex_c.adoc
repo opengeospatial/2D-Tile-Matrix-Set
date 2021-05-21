@@ -3,7 +3,11 @@
 :appendix-caption: Annex
 == Well-known scale sets (Informative)
 
-The following well-known scale sets (WKSS) are defined in this standard. To be conformant to a WKSS, the dataset of resource should be available from the first or second largest scale denominator on the following tables and all intermediate scale denominators down to the most detailed scale resolution of that dataset. In other words, it is not required to support the largest scale denominator and the smallest scale denominators in order to be conformant to a WKSS. Cell sizes (in terrain units) are calculated assuming 0.28 mm pixel size and the WGS84 equatorial Earth diameter.
+The following well-known scale sets (WKSS) are defined in this standard.
+To be conformant to a WKSS, the tile matrices of a tile matrix set should only include a consecutive subset of the scales defined in one of the following
+tables (or their implied extensions). Note that the correspondance between the numeric identifiers of a TileMatrixSet and those of a WKSS might be offset
+by a fixed number of scales.
+Cell sizes (in terrain units) are calculated assuming 0.28 mm pixel size and the WGS84 equatorial Earth diameter.
 
 The WKSS concept was introduced in WMTS to improve interoperability, but experience has demonstrated that the use of Common TileMatrixSet2D (<<annex-common-tilematrixset-definitions-informative>>) is even better. The use of WKSS is no longer encouraged by this standard.
 

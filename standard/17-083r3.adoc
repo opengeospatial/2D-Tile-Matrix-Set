@@ -19,9 +19,9 @@
 |===
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
-|Submission Date: 2018-06-26
-|Approval Date:   2019-05-24
-|Publication Date:   2019-10-06
+|Submission Date: XXXX-XX-XX
+|Approval Date:   XXXX-XX-XX
+|Publication Date:   XXXX-XX-XX
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/tms/2.0
 |Internal reference number of this OGC(R) document:    17-083r3
 |Version: 2.0
@@ -37,7 +37,7 @@
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) 2019 Open Geospatial Consortium
+|Copyright (C) 2019-2021 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
 |===
 
@@ -46,13 +46,13 @@
 |*Warning*
 |===
 
-This document is an OGC Member approved international standard. This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
+This document is an OGC Members (draft) international standard. This document is available on a royalty free, non-discriminatory basis. Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.
 
 [width = "50%", grid = "none"]
 |===
 |Document type:   	OGC® Standard
 |Document subtype:   
-|Document stage:   	Approved for Public Release
+|Document stage:   	Draft
 |Document language: 	English
 |===
 

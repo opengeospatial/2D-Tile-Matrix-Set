@@ -14,13 +14,13 @@ This Annex includes some definitions for TileMatrixSets that are commonly used.
 |===
 5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3857, WGS 84 / Pseudo-Mercator
 
-*BBOX LowerCorner:* -20037508.3427892 -20037508.3427892 (lat/long: -85.0511287798,-180)
+*BBOX LowerLeft:* -20037508.3427892, -20037508.3427892 (lat/long: -85.0511287798, -180)
 
-*BBOX UpperCorner:* 20037508.3427892 20037508.3427892 (lat/long: 85.0511287798,180)
+*BBOX UpperRight:* 20037508.3427892, 20037508.3427892 (lat/long: 85.0511287798, 180)
 
 *WellKnownScaleSet*: http://www.opengis.net/def/wkss/OGC/1.0/GoogleMapsCompatible
 
-*PointOfOrigin*: -20037508.3427892 20037508.3427892
+*PointOfOrigin*: -20037508.3427892, 20037508.3427892
 
 *TileWidth*: 256
 
@@ -82,13 +82,13 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 |===
 5+| *CRS*: http://www.opengis.net/def/crs/OGC/1.3/CRS84, CRS84
 
-*BBOX LowerCorner:* -180 -90
+*BBOX LowerLeft:* -180, -90
 
-*BBOX UpperCorner:* 180 90
+*BBOX UpperRight:* 180, 90
 
 *WellKnownScaleSet*: http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad
 
-*PointOfOrigin*: -180 90
+*PointOfOrigin*: -180, 90
 
 *TileWidth*: 256
 
@@ -148,13 +148,13 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 |===
 5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/4326, EPSG:4326
 
-*BBOX LowerCorner:* -90 -180
+*BBOX LowerLeft:* -90, -180
 
-*BBOX UpperCorner:* 90 180
+*BBOX UpperRight:* 90, 180
 
 *WellKnownScaleSet*: http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad
 
-*PointOfOrigin*: 90 -180
+*PointOfOrigin*: 90, -180
 
 *TileWidth*: 256
 
@@ -195,13 +195,13 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 |===
 6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3395, WGS 84 / World-Mercator
 
-*BBOX LowerCorner:* -20037508.3427892  -20037508.3427892  (lat, long: -85.08405903,-180)
+*BBOX LowerLeft:* -20037508.3427892, -20037508.3427892  (lat, long: -85.08405903, -180)
 
-*BBOX UpperCorner:* 20037508.3427892 20037508.3427892 (lat, long: 85.08405903,180)
+*BBOX UpperRight:* 20037508.3427892, 20037508.3427892 (lat, long: 85.08405903, 180)
 
 *WellKnownScaleSet*: http://www.opengis.net/def/wkss/OGC/1.0/WorldMercatorWGS84
 
-*PointOfOrigin*: -20037508.3427892 20037508.3427892
+*PointOfOrigin*: -20037508.3427892, 20037508.3427892
 
 *TileWidth*: 256
 
@@ -260,13 +260,13 @@ The Universal Transversal Mercator (a special case of transverse Mercator), divi
 
 *CRSs*: [http://www.opengis.net/def/crs/EPSG/0/32601, http://www.opengis.net/def/crs/EPSG/0/32660] WGS 84 / UTM
 
-*BBOX LowerCorner:* -9501965.72931276 -20003931.4586255; lat, long: -180 -62+(+++##+++-31)+++*+++6
+*BBOX LowerLeft:* -9501965.72931276, -20003931.4586255; lat, long: -180, -62+(+++##+++-31)+++*+++6
 
-*BBOX UpperCorner:* 10501965.7293128 20003931.4586255 (lat, long: 180, 68+(+++##+++-31)+++*+++6)
+*BBOX UpperRight:* 10501965.7293128, 20003931.4586255 (lat, long: 180, 68+(+++##+++-31)+++*+++6)
 
 *WellKnownScaleSet*: N/A
 
-*PointOfOrigin*: -9501965.72931276 20003931.4586255
+*PointOfOrigin*: -9501965.72931276, 20003931.4586255
 
 *TileWidth*: 256
 
@@ -325,13 +325,13 @@ NOTE: In Mercator or Transversal Mercator projections the first scale denominato
 |===
 6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/5041, WGS 84 Universal Polar Stereographic North
 
-*BBOX LowerCorner:* -14440759.350252, -14440759.350252
+*BBOX LowerLeft:* -14440759.350252, -14440759.350252
 
-*BBOX UpperCorner:* 18440759.350252, 18440759.350252
+*BBOX UpperRight:* 18440759.350252, 18440759.350252
 
 *WellKnownScaleSet*: N/A
 
-*PointOfOrigin*: -14440759.350252,18440759.350252
+*PointOfOrigin*: -14440759.350252, 18440759.350252
 
 *TileWidth*: 256
 
@@ -374,7 +374,7 @@ image::figures/14.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (blank li
 
 NOTE: In practice, there are many polar stereographic CRS and it is difficult to prioritize one. In many occasions, the meridian of origin is selected in order to rotate the projection and allow a region to become more prominent. Examples are rotations emphasizing Greenland or Alaska. To be general, the 0 meridian of origin was selected. In addition, polar projections have a variety of standard parallels and here is selected 90N. In the UPS system, the North Pole is assigned the coordinates x=2000000, y=2000000.
 
-NOTE: NGA has suggested also another TileMatrixSet called _sixteenth tile_ that covers less area by having the PointOfOrigin: at ‑2 110 189.837563, 6 110 189.837563,   BBOX LowerCorner: ‑2110189.837562966 -2110189.837562966 and BBOX UpperCorner: 6110189.837562966 6110189.837562966, The same result can be achieved by using the TileMatrixSetLimits mechanism without having to define an entirely new TileMatrixSet.
+NOTE: NGA has suggested also another TileMatrixSet called _sixteenth tile_ that covers less area by having the PointOfOrigin: at 2110189.837563, 6110189.837563, BBOX LowerLeft: 2110189.837562966, -2110189.837562966 and BBOX UpperRight: 6110189.837562966, 6110189.837562966. The same result can be achieved by using the TileMatrixSetLimits mechanism without having to define an entirely new TileMatrixSet.
 
 [#img_rotation-of-the-meridian,reftext='{figure-caption} {counter:figure-num}']
 .Rotation of the meridian of origin to allow a region to become more prominent (a. EPSG:3995, Arctic WGS 84 Polar Stereographic, b. EPSG:3413 WGS 84 / NSIDC Polar Stereographic North, c. EPSG:5936 / Alaska Polar Stereographic). This TileMatrixSet has 0 rotation angle for the meridian of origin.
@@ -393,13 +393,13 @@ There is no consensus in the geospatial community for what constitutes the “be
 |===
 6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/5042, WGS 84 Universal Polar Stereographic South
 
-*BBOX LowerCorner:* -14440759.350252, -14440759.350252
+*BBOX LowerLeft:* -14440759.350252, -14440759.350252
 
-*BBOX UpperCorner:* 18440759.350252, 18440759.350252
+*BBOX UpperRight:* 18440759.350252, 18440759.350252
 
 *WellKnownScaleSet*: N/A
 
-*PointOfOrigin*: -14440759.350252,18440759.350252
+*PointOfOrigin*: -14440759.350252, 18440759.350252
 
 *TileWidth*: 256
 
@@ -451,13 +451,13 @@ image::figures/16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black li
 |===
 5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3035, ETRS89
 
-*BBOX LowerCorner:* 2000000.0 1000000.0****
+*BBOX LowerLeft:* 2000000.0, 1000000.0
 
-*BBOX UpperCorner:* 6500000 ** 5500000.0
+*BBOX UpperRight:* 6500000, 5500000.0
 
 *WellKnownScaleSet*: N/A
 
-*PointOfOrigin*: 2000000.0 5500000.0
+*PointOfOrigin*: 2000000.0, 5500000.0
 
 *TileWidth*: 256
 
@@ -493,9 +493,9 @@ One can define an arbitrary number of zoom levels and does not need to include a
 |===
 7+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3978, NAD83
 
-*BBOX LowerCorner:* -7786476.885838887, -5153821.09213678
+*BBOX LowerLeft:* -7786476.885838887, -5153821.09213678
 
-*BBOX UpperCorner:* 7148753.233541353, 7928343.534071138
+*BBOX UpperRight:* 7148753.233541353, 7928343.534071138
 
 *WellKnownScaleSet*: N/A
 

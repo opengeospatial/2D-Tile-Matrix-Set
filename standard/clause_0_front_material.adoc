@@ -42,4 +42,5 @@ All questions regarding this submission should be directed to the editor or the 
 |Joan Masó |UAB-CREAF
 |Jeff Yutzler |Image Matters LLC
 |Peter Rushforth |Canada Centre for Mapping and Earth Observation, Natural Resources Canada
+|Jérôme St-Louis |Ecere Corporation
 |==========================================================================================

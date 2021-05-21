@@ -26,7 +26,7 @@
 |Internal reference number of this OGC(R) document:    17-083r3
 |Version: 2.0
 |Category: OGC(R) Implementation Standard
-|Editor:   Joan Masó and Jerome St-Louis
+|Editors:   Joan Masó and Jérôme St-Louis
 |===
 
 [cols = "^", frame = "none"]

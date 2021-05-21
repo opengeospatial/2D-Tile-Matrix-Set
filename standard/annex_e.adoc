@@ -10,7 +10,7 @@ than tiles at the equator.
 
 Such TileMatrixSets may therefore attempt to approximate equal area tiles.
 Because the resulting tiles would likely only tend towards equal area but still be off by a significant margin,
-they cannot be considered a Discrete Global Grid Systems (DGGS) per http://www.opengis.net/doc/AS/dggs/1.0[OGC Abstract Specification Topic 21 - Part 1] which specifies
+they cannot be considered Discrete Global Grid Systems (DGGS) per http://www.opengis.net/doc/AS/dggs/1.0[OGC Abstract Specification Topic 21 - Part 1] which specifies
 a maximum threshold of 1% difference. However, they may qualify as an _Axis-Aligned DGGS_ per _OGC Abstract Specification Topic 21 - Part 4_ introduced in version 2.
 
 [#img_ggg-cdb,reftext='{figure-caption} {counter:figure-num}']

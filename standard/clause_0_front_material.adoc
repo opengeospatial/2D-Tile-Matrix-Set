@@ -31,6 +31,7 @@ The following organizations submitted this document to the Open Geospatial Conso
 *   UAB-CREAF
 *   Image Matters LLC
 *   Natural Resources Canada NRCan
+*   Ecere Corporation
 
 [big]*vi.     Submitters*
 

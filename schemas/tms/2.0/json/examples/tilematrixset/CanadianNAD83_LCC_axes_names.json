@@ -11,7 +11,6 @@
 	"tileMatrices":
 	[
 		{
-		  "type": "TileMatrixType",
 		  "id": "0",
 		  "scaleDenominator": 145000000,
 		  "cellSize": 38364.6600626534,
@@ -22,7 +21,6 @@
 		  "matrixHeight": 5
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "1",
 		  "scaleDenominator": 85000000,
 		  "cellSize": 22489.6283125899,
@@ -33,7 +31,6 @@
 		  "matrixHeight": 8
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "2",
 		  "scaleDenominator": 50000000,
 		  "cellSize": 13229.1931250529,
@@ -44,7 +41,6 @@
 		  "matrixHeight": 14
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "3",
 		  "scaleDenominator": 30000000,
 		  "cellSize": 7937.51587503175,
@@ -55,7 +51,6 @@
 		  "matrixHeight": 22
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "4",
 		  "scaleDenominator": 17500000,
 		  "cellSize": 4630.21759376852,
@@ -66,7 +61,6 @@
 		  "matrixHeight": 38
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "5",
 		  "scaleDenominator": 10000000,
 		  "cellSize": 2645.83862501058,
@@ -77,7 +71,6 @@
 		  "matrixHeight": 66
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "6",
 		  "scaleDenominator": 6000000,
 		  "cellSize": 1587.50317500635,
@@ -88,7 +81,6 @@
 		  "matrixHeight": 110
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "7",
 		  "scaleDenominator": 3500000,
 		  "cellSize": 926.043518753704,
@@ -99,7 +91,6 @@
 		  "matrixHeight": 188
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "8",
 		  "scaleDenominator": 2000000,
 		  "cellSize": 529.167725002116,
@@ -110,7 +101,6 @@
 		  "matrixHeight": 329
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "9",
 		  "scaleDenominator": 1200000,
 		  "cellSize": 317.50063500127,
@@ -121,7 +111,6 @@
 		  "matrixHeight": 548
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "10",
 		  "scaleDenominator": 700000,
 		  "cellSize": 185.20870375074,
@@ -132,7 +121,6 @@
 		  "matrixHeight": 938
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "11",
 		  "scaleDenominator": 420000,
 		  "cellSize": 111.125222250444,
@@ -143,7 +131,6 @@
 		  "matrixHeight": 1563
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "12",
 		  "scaleDenominator": 250000,
 		  "cellSize": 66.1459656252646,
@@ -154,7 +141,6 @@
 		  "matrixHeight": 2626
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "13",
 		  "scaleDenominator": 145000,
 		  "cellSize": 38.3646600626534,
@@ -165,7 +151,6 @@
 		  "matrixHeight": 4528
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "14",
 		  "scaleDenominator": 85000,
 		  "cellSize": 22.4896283125899,
@@ -176,7 +161,6 @@
 		  "matrixHeight": 7723
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "15",
 		  "scaleDenominator": 50000,
 		  "cellSize": 13.2291931250529,
@@ -187,7 +171,6 @@
 		  "matrixHeight": 13130
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "16",
 		  "scaleDenominator": 30000,
 		  "cellSize": 7.93751587503175,
@@ -198,7 +181,6 @@
 		  "matrixHeight": 21882
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "17",
 		  "scaleDenominator": 17500,
 		  "cellSize": 4.63021759376852,
@@ -209,7 +191,6 @@
 		  "matrixHeight": 37512
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "18",
 		  "scaleDenominator": 10000,
 		  "cellSize": 2.64583862501058,
@@ -220,7 +201,6 @@
 		  "matrixHeight": 65646
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "19",
 		  "scaleDenominator": 6000,
 		  "cellSize": 1.58750317500635,
@@ -231,7 +211,6 @@
 		  "matrixHeight": 109409
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "20",
 		  "scaleDenominator": 3500,
 		  "cellSize": 0.926043518753704,
@@ -242,7 +221,6 @@
 		  "matrixHeight": 187558
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "21",
 		  "scaleDenominator": 2000,
 		  "cellSize": 0.529167725002116,
@@ -253,7 +231,6 @@
 		  "matrixHeight": 328227
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "22",
 		  "scaleDenominator": 1200,
 		  "cellSize": 0.31750063500127,
@@ -264,7 +241,6 @@
 		  "matrixHeight": 547044
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "23",
 		  "scaleDenominator": 700,
 		  "cellSize": 0.18520870375074,
@@ -275,7 +251,6 @@
 		  "matrixHeight": 937790
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "24",
 		  "scaleDenominator": 420,
 		  "cellSize": 0.111125222250444,
@@ -286,7 +261,6 @@
 		  "matrixHeight": 1562983
 		},
 		{
-		  "type": "TileMatrixType",
 		  "id": "25",
 		  "scaleDenominator": 250,
 		  "cellSize": 0.0661459656252645,

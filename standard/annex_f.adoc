@@ -44,40 +44,40 @@ include::../schemas/tms/2.0/xml/examples/tilematrixset/WebMercatorQuad.xml[]
 
 === World WGS84 Quad
 
-==== Variant 1: World CRS84 Quad (recommended)
+*Variant 1: World CRS84 Quad (recommended)*
 
 These are the JSON and XML definitions of the WorldCRS84Quad tile matrix set (see <<world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldcrs84quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
 
 One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illustrated.
 
-===== World CRS84 Quad (JSON encoding)
+==== World CRS84 Quad (recommended, JSON encoding)
 
 [source,json]
 ....
 include::../schemas/tms/2.0/json/examples/tilematrixset/WorldCRS84Quad.json[]
 ....
 
-===== World CRS84 Quad (XML encoding)
+==== World CRS84 Quad (recommended, XML encoding)
 
 [source,xml]
 ....
 include::../schemas/tms/2.0/xml/examples/tilematrixset/WorldCRS84Quad.xml[]
 ....
 
-==== Variant 2: World EPSG:4326 Quad
+*Variant 2: World EPSG:4326 Quad*
 
 These are the JSON definitions of the WorldCRS84Quad tile matrix set (see <<world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
 
 One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illustrated.
 
-===== World EPSG:4326 Quad (JSON encoding)
+==== World EPSG:4326 Quad (JSON encoding)
 
 [source,json]
 ....
 include::../schemas/tms/2.0/json/examples/tilematrixset/WGS1984Quad.json[]
 ....
 
-===== World EPSG:4326 Quad (XML encoding)
+==== World EPSG:4326 Quad (XML encoding)
 
 [source,xml]
 ....

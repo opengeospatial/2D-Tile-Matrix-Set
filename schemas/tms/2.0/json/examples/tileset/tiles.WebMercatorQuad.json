@@ -39,14 +39,14 @@
    ],
    "layers" : [
       {
-         "identifier" : "AgricultureSrf",
+         "id" : "AgricultureSrf",
          "dataType" : "vector",
          "geometryType" : "polygons",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
          "boundingBox" : {
-		"lowerLeft": [35.898213, 32.4633913], 
-		"upperRight": [36.5614696, 32.8370158] 
+		"lowerLeft": [35.898213, 32.4633913],
+		"upperRight": [36.5614696, 32.8370158]
 	    },
          "stylableLayerSets" : [ "OSMNSGTDS" ],
          "links" : [
@@ -77,14 +77,14 @@
          }
       },
       {
-         "identifier" : "TransportationGroundCrv",
+         "id" : "TransportationGroundCrv",
          "dataType" : "vector",
          "geometryType" : "lines",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
-         "boundingBox" : { 
+         "boundingBox" : {
 		"lowerLeft": [35.9028738, 32.4168138],
-		"upperRight": [36.5747694, 33.1424348] 
+		"upperRight": [36.5747694, 33.1424348]
 	   } ,
          "stylableLayerSets" : [ "OSMNSGTDS" ],
          "links" : [

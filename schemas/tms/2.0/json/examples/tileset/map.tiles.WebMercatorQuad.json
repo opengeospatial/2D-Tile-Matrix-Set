@@ -55,7 +55,7 @@
    },
    "layers" : [
       {
-         "identifier" : "Daraa",
+         "id" : "Daraa",
          "dataType" : "vector",
          "geometryType" : "polygons",
          "maxTileMatrix" : "17",

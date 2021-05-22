@@ -3,12 +3,16 @@
 :appendix-caption: Annex
 == Example encodings for TileSetMetadata (Informative)
 
-This informative Annex provides an example of use for TileSetMetadata and TileMatrixSetLimits2D data structures.
+This informative Annex provides an example of use for _TileSetMetadata_ and _TileMatrixSetLimits2D_ data structures.
+
+The _TileSetMetadata _data structure can be used for a resource to specify the tiling scheme supported by the resource, as well as additional metadata.
+
+The _TileMatrixSetLimits2D_ data structure is populated to indicate that the resource is only available in a fragment of the tiled space.
 
 [[json-document-instance-using-tilesetmetadata]]
-=== JSON document instance using TileSetMetadata
+=== Example JSON encoding of TileSetMetadata
 
-TileSetMetadata data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in JSON.
+This example illustrates a TileSetMetadata instance encoded in JSON.
 
 [source,json]
 ....
@@ -16,14 +20,19 @@ include::../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
 ....
 
 [[json-schema-used-to-validate-the-previous-json-document]]
-=== JSON schema used to validate the previous JSON document
+=== TileSetMetadata JSON Schema
 
-The TileSetMetadata data structure can be included the definition of an API that provides tiles. This JSON Schema can be used in an API definition in JSON format and to validate the previous JSON example.
+The TileSetMetadata data structure can be included the definition of an API that provides tiles.
+This JSON Schema can be used in an API definition in JSON format and to validate the previous JSON example.
 
 [source,json]
 ....
 include::../schemas/tms/2.0/json/tileSet.json[]
 ....
+
+=== TileMatrixSetLimits2D JSON Schema
+
+This JSON Schema is referenced by the TileSetMetadata schema to define limits for each tile matrix.
 
 [source,json]
 ....
@@ -31,9 +40,9 @@ include::../schemas/tms/2.0/json/tileMatrixLimits.json[]
 ....
 
 [[xml-document-instance-using-tilesetmetadata]]
-=== XML document instance using TileSetMetadata
+=== Example XML encoding of TileSetMetadata
 
-TileSetMetadata data structure can be used for a resource to specify the tiling schema the resource supports. Eventually, the resource can only be available in a fragment of the tiled space and to specify that, the TileMatrixSetLimits2D data structure is populated. This example illustrates and instance encoded in XML.
+This example illustrates a TileSetMetadata instance encoded in XML.
 
 [source,xml]
 ....
@@ -41,13 +50,16 @@ include::../schemas/tms/2.0/xml/examples/tileset/tiles.WebMercatorQuad.xml[]
 ....
 
 [[xml-schema-used-to-validate-the-previous-xml-document]]
-=== XML schema used to validate the previous XML document
+=== TileSetMetadata XML Schema
 This XML Schema can be used to validate the previous XML example.
 
 [source,xml]
 ....
 include::../schemas/tms/2.0/xml/tileset.xsd[]
 ....
+
+=== TileMatrixSetLimits2D XML Schema
+This XML Schema is referenced by the TileSetMetadata schema to define limits for each tile matrix.
 
 [source,xml]
 ....

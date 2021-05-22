@@ -5,17 +5,17 @@
 
 This Annex provides examples of JSON and XML encodings than can be used to define tile matrix sets.
 
-=== JSON schema used to validate the JSON examples provided
-The TileMatrixSet data structure has been transformed into JSON schemes as described in section <<tilematrixset-encodings>> and provided with this standard as indicated in <<annex-schema-documents-normative>>. JSON document instances describing TileMatrixSets (including the ones reproduced in this annex) should validate against these schemes. The following JSON Schema fragment reproduces the main module of the TileMatrixSet schema.
+=== JSON schema for TileMatrixSet
+The TileMatrixSet data structure has been transformed into JSON schemas as described in section <<tilematrixset-encodings>> and provided with this standard as indicated in <<annex-schema-documents-normative>>. JSON document instances describing TileMatrixSets (including the ones reproduced in this annex) should validate against these schemas. The following JSON Schema fragment reproduces the main module of the TileMatrixSet schema.
 
 [source,json]
 ....
 include::../schemas/tms/2.0/json/tileMatrixSet.json[]
 ....
 
-=== XML schema used to validate the XML examples document
+=== XML schema for TileMatrixSet
 
-The TileMatrixSet data structure has been transformed into XSD schemes as described in section <<tilematrixset-encodings>> and provided with this standard as indicated in <<annex-schema-documents-normative>>. XML document instances describing TileMatrixSets (including the ones reproduced in this annex) should validate against these schemes. The following XML Schema fragment reproduces the main module of the TileMatrixSet schema.
+The TileMatrixSet data structure has been transformed into XSD schemas as described in section <<tilematrixset-encodings>> and provided with this standard as indicated in <<annex-schema-documents-normative>>. XML document instances describing TileMatrixSets (including the ones reproduced in this annex) should validate against these schemas. The following XML Schema fragment reproduces the main module of the TileMatrixSet schema.
 
 [source,xml]
 ....

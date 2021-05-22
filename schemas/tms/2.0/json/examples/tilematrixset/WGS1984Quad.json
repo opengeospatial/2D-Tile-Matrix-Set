@@ -3,7 +3,7 @@
 	"id": "WGS1984Quad",
 	"boundingBox": {
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/4326",
-		"axisLabels": [ "lon", "lat" ],
+		"axisLabels": [ "lat", "lon" ],
 		"lowerLeft": [ -90, -180 ],
 		"upperRight": [ 90, 180 ]
 	},

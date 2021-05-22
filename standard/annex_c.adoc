@@ -208,4 +208,7 @@ WGS 84 / World Mercator | 0 | 559,082,264.02871774 | 156,543.033928040
 NOTE: Level 0 allows representing most of the world (limited to latitudes between approximately ±85 degrees) in a single tile of 256x256 cells (Mercator projection cannot cover the whole world because mathematically the poles are at infinity). The next level represents most of the world in 2x2 tiles of 256x256 cells and so on in powers of 2.
 
 NOTE: Mercator projection distorts the cell size closer to the poles. The cell sizes provided here are only valid next to the equator.
- 
+
+NOTE: The scales and cell sizes of _WorldMercatorWGS84_ and _GoogleMapsCompatible_ are identical, but the two WKSS reference a different CRS.
+This _WorldMercatorWGS84_ WKSS was introduced in the first version of this standard and not present in the WMTS 1.0.0 specifications Annex E.
+However, WKSS are obsolete and not required to define a TileMatrixSet, so the introduction of this new WKSS was not necessary to define the _WorldMercatorWGS84Quad_ TileMatrixSet.

@@ -5,7 +5,7 @@
 
 The following well-known scale sets (WKSS) are defined in this standard.
 To be conformant to a WKSS, the tile matrices of a tile matrix set should only include a consecutive subset of the scales defined in one of the following
-tables (or their implied extensions). Note that the correspondance between the numeric identifiers of a TileMatrixSet and those of a WKSS might be offset
+tables (or their implied extensions). Note that the correspondence between the numeric identifiers of a TileMatrixSet and those of a WKSS might be offset
 by a fixed number of scales.
 Cell sizes (in terrain units) are calculated assuming 0.28 mm pixel size and the WGS84 equatorial Earth diameter.
 

@@ -99,7 +99,7 @@ NOTE: Clients and servers have to be careful when comparing floating numbers wit
 
 When overlaying and presenting together tiles encoded in different tile matrix sets that do not have common sets of scale denominators and the same CRS in an integrated client, rescaling or re-projecting tiles to the common scale of the view might require re-sampling calculations that result in visual quality degradation.
 
-The recommended way to prevent this problem is make use of the same global tile matrix set, for example, one of the available in <<common-tilematrixset-definitions-informative>>. If the coverage of the data covers only a part of the tile matrix set area, the __tile matrix limits__ can be used to inform about these limitations.
+The recommended way to prevent this problem is make use of the same global tile matrix set, for example, one of those available in <<common-tilematrixset-definitions-informative>>. If the coverage of the data covers only a part of the tile matrix set area, the __tile matrix limits__ can be used to inform about these limitations.
 
 If using the same tile matrix set is not possible, using a common coordinate reference system and a common set of scales shared by as many layers and services as possible can also be a solution. Thus, the concept of well-known scale set (WKSS) is introduced.
 

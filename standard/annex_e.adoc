@@ -19,7 +19,7 @@ image::figures/cdb-gnosis.png[GNOSISGlobalGrid]
 
 
 [[gnosis-global-grid-tilematrixset-definition]]
-=== GNOSISGlobalGrid TileMatrixSet definition
+=== GNOSISGlobalGrid
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid*
 
@@ -97,7 +97,7 @@ the GNOSISGlobalGrid TileMatrix identifier 0.
 image::figures/ggg-0-3.png[]
 
 [[cdb-global-grid-tilematrixset-definition]]
-=== CDBGlobalGrid TileMatrixSet definition
+=== CDBGlobalGrid
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/CDBGlobalGrid*
 

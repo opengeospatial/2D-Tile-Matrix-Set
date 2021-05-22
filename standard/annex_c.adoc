@@ -131,11 +131,10 @@ This well-known scale set has been defined to be compatible with many mass marke
 [width = "100%"]
 |===
 | CRS | Zoom level name | Scale Denominator | Cell Size (m)
-.25+| http://www.opengis.net/def/crs/EPSG/6.18:3/3857
+.25+| http://www.opengis.net/def/crs/EPSG/0/3857
 
 WGS 84 / Pseudo-Mercator
-
-http://www.epsg-registry.org/export.htm?gml=http://www.opengis.net/def/crs/EPSG/0/3857 | 0 | 559,082,264.0287178 | 156,543.0339280410
+| 0 | 559,082,264.0287178 | 156,543.0339280410
 | 1 | 279,541,132.0143589 | 78,271.51696402048
 | 2 | 139,770,566.0071794 | 39,135.75848201023
 | 3 | 69,885,283.00358972 | 19,567.87924100512

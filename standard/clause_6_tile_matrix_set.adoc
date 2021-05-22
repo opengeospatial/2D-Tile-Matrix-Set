@@ -131,7 +131,7 @@ Until now, it has been assumed that __matrixWidth__ is constant in for all tile 
 
 The solution consists of reducing the number of tiles (__matrixWidth__) in the high latitude rows and generating those tiles with a compressed scale in the _i_ dimension (see Figure 5). To allow that, the tile model must be extended to specify coalescence coefficients (c) that reduce the number of tiles in the width direction by aggregating c horizontal tiles but keeping the __tileWidth__ (and __tileHeight__). The coalescence coefficient will not be applied next to the Equator but will be used in medium and high latitudes (the higher the latitude the bigger the coefficient).
 
-Even if tiles can coalesce, this does not change the indexing or the tile matrix set that will be the same as if no coalescence has been applied. For example, if the c coefficient is 4, the __tileRow__ of the first tile will be 0, the __tileRow__ of the second tile will be 4, the __tileRow__ of the third tile will be 8 and so on. In other words, and for the same example, __tileRow__ 0, 1, 2 and 3 points to the same tile.
+Even if tiles can coalesce, this does not change the indexing or the tile matrix set that will be the same as if no coalescence has been applied. For example, if the c coefficient is 4, the __tileCol__ of the first tile will be 0, the __tileCol__ of the second tile will be 4, the __tileCol__ of the third tile will be 8 and so on. In other words, and for the same example, __tileCol__ 0, 1, 2 and 3 points to the same tile.
 
 NOTE: This decision is necessary to still be able to be able to define a rectangle in the space based on tile indices as we do in tile matrix limits section.
 

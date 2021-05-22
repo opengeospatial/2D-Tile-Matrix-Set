@@ -66,7 +66,7 @@ include::../schemas/tms/2.0/xml/examples/tilematrixset/WorldCRS84Quad.xml[]
 
 *Variant 2: World EPSG:4326 Quad*
 
-These are the JSON definitions of the WorldCRS84Quad tile matrix set (see <<world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
+These are the JSON and XML definitions of the WorldCRS84Quad tile matrix based on EPSG:4326 (see <<world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad>>) that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices for more detailed scales is possible if they follow the same pattern.
 
 One can define an arbitrary number of zoom levels. Here, 23 zoom levels are illustrated.
 

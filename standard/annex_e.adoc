@@ -4,7 +4,7 @@
 == Variable width TileMatrixSet definitions (Informative)
 
 This annex includes definitions for TileMatrixSets utilizing the variable width capability.
-This capability allows to coalesce tiles of specific rows so that the overwall width of the tile matrix is divided among fewer tiles.
+This capability allows to coalesce tiles of specific rows so that the overall width of the tile matrix is divided among fewer tiles.
 This is particularly well suited to define global grids in an Equirectangular Plate Carrée projection, where tiles closer to the pole cover a smaller physical area
 than tiles at the equator.
 

@@ -11,7 +11,7 @@ The JSON encoding has been done respecting the naming and types of the original 
 [width = "100%",options="header"]
 |===
 | Class attribute | JSON element | Reason
-| identifier | id | Following come practice in GeoJSON and JSON-LD.
+| identifier | id | Following common practice in GeoJSON and JSON-LD.
 | BoundingBox class | array of 4 numbers representing lowerLeft and topRight coordinates | Following GeoJSON suggested encoding.
 | LanguageString | string | JSON files are general used in the OGC API as monolingual documents. The language of the document is determined by the HTTP language negotiation headers.
 | WKT | object | The WKT encoding for JSON is an object representing a JSON encoding of the WKT defined by https://proj.org/specifications/projjson.html |

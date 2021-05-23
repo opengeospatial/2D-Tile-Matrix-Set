@@ -99,7 +99,7 @@ NOTE: Clients and servers have to be careful when comparing floating numbers wit
 
 When overlaying and presenting together tiles encoded in different tile matrix sets that do not have common sets of scale denominators and the same CRS in an integrated client, rescaling or re-projecting tiles to the common scale of the view might require re-sampling calculations that result in visual quality degradation.
 
-The recommended way to prevent this problem is make use of the same global tile matrix set, for example, one of the available in <<common-tilematrixset-definitions-informative>>. If the coverage of the data covers only a part of the tile matrix set area, the __tile matrix limits__ can be used to inform about these limitations.
+The recommended way to prevent this problem is make use of the same global tile matrix set, for example, one of those available in <<common-tilematrixset-definitions-informative>>. If the coverage of the data covers only a part of the tile matrix set area, the __tile matrix limits__ can be used to inform about these limitations.
 
 If using the same tile matrix set is not possible, using a common coordinate reference system and a common set of scales shared by as many layers and services as possible can also be a solution. Thus, the concept of well-known scale set (WKSS) is introduced.
 
@@ -131,7 +131,7 @@ Until now, it has been assumed that __matrixWidth__ is constant in for all tile 
 
 The solution consists of reducing the number of tiles (__matrixWidth__) in the high latitude rows and generating those tiles with a compressed scale in the _i_ dimension (see Figure 5). To allow that, the tile model must be extended to specify coalescence coefficients (c) that reduce the number of tiles in the width direction by aggregating c horizontal tiles but keeping the __tileWidth__ (and __tileHeight__). The coalescence coefficient will not be applied next to the Equator but will be used in medium and high latitudes (the higher the latitude the bigger the coefficient).
 
-Even if tiles can coalesce, this does not change the indexing or the tile matrix set that will be the same as if no coalescence has been applied. For example, if the c coefficient is 4, the __tileRow__ of the first tile will be 0, the __tileRow__ of the second tile will be 4, the __tileRow__ of the third tile will be 8 and so on. In other words, and for the same example, __tileRow__ 0, 1, 2 and 3 points to the same tile.
+Even if tiles can coalesce, this does not change the indexing or the tile matrix set that will be the same as if no coalescence has been applied. For example, if the c coefficient is 4, the __tileCol__ of the first tile will be 0, the __tileCol__ of the second tile will be 4, the __tileCol__ of the third tile will be 8 and so on. In other words, and for the same example, __tileCol__ 0, 1, 2 and 3 points to the same tile.
 
 NOTE: This decision is necessary to still be able to be able to define a rectangle in the space based on tile indices as we do in tile matrix limits section.
 

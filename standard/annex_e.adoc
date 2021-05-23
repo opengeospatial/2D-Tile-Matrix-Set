@@ -4,7 +4,7 @@
 == Variable width TileMatrixSet definitions (Informative)
 
 This annex includes definitions for TileMatrixSets utilizing the variable width capability.
-This capability allows to coalesce tiles of specific rows so that the overwall width of the tile matrix is divided among fewer tiles.
+This capability allows to coalesce tiles of specific rows so that the overall width of the tile matrix is divided among fewer tiles.
 This is particularly well suited to define global grids in an Equirectangular Plate Carrée projection, where tiles closer to the pole cover a smaller physical area
 than tiles at the equator.
 
@@ -19,7 +19,7 @@ image::figures/cdb-gnosis.png[GNOSISGlobalGrid]
 
 
 [[gnosis-global-grid-tilematrixset-definition]]
-=== GNOSISGlobalGrid TileMatrixSet definition
+=== GNOSISGlobalGrid
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid*
 
@@ -97,7 +97,7 @@ the GNOSISGlobalGrid TileMatrix identifier 0.
 image::figures/ggg-0-3.png[]
 
 [[cdb-global-grid-tilematrixset-definition]]
-=== CDBGlobalGrid TileMatrixSet definition
+=== CDBGlobalGrid
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/CDBGlobalGrid*
 

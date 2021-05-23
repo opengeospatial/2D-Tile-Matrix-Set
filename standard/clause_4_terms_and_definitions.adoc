@@ -91,8 +91,8 @@ NOTE: A tessellation composed of congruent regular polygons or polyhedra is a re
 
 *tile*
 
-geometric shape with known properties that may or may not be the result of a tiling (tessellation) process. A tile consists of a single connected "piece" (topological disc) without "holes" or "lines" [OGC 19-014r3]
-
+geometric shape with known properties that may or may not be the result of a tiling (tessellation) process. A tile consists of a single connected "piece" (topological disc) without "holes" or "lines" [OGC 19-014r3] +
++
 small rectangular representation of geographic data, often part of a set of such elements, covering a tiling scheme and sharing similar information content and graphical styling. A tile can be uniquely defined in a tile matrix by one integer index in each dimension. Tiles are mainly used for fast transfer (particularly in the web) and easy display at the resolution of a visualization device. Tiles can be grid based pictorial representations, coverage subsets, or feature based representations (e.g., vector tiles).
 
 *4.13*        
@@ -123,16 +123,16 @@ NOTE: A tile scheme is not restricted to a coordinate reference system or a tile
 
 *tile set*
 
-set of tiles - a collection of subsets of the space being partitioned. [OGC 19-014r3]
-
+set of tiles - a collection of subsets of the space being partitioned. [OGC 19-014r3]+
++
 series of actual tiles contain data and following a common tiling scheme.
 
 *4.17*        
 
 *tile set metadata*
 
-additional metadata beyond the common properties defining the tile set. Such metadata could be an abstract, the owner, the author, or other common metadata. [OGC 19-014r3]
-
+additional metadata beyond the common properties defining the tile set. Such metadata could be an abstract, the owner, the author, or other common metadata. [OGC 19-014r3]+
++
 metadata describing common properties defining a tile set, layers and styles used to produce the tile set, the limits of the time matrix with actual data and common metadata such as abstract, owner, author, etc.
 
 *4.18*        

@@ -39,7 +39,7 @@
    ],
    "layers" : [
       {
-         "identifier" : "AgricultureSrf",
+         "id" : "AgricultureSrf",
          "dataType" : "vector",
          "geometryType" : "polygons",
          "maxTileMatrix" : "17",

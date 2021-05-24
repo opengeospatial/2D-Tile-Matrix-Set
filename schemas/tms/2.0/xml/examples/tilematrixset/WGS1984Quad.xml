@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TileMatrixSet id="WGS1984Quad" xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../../tilematrixset.xsd">
 	<tmsc:Title>EPSG:4326 for the World</tmsc:Title>
-	<tmsc:Identifier>WGS1984Quad</tmsc:Identifier>
+	<tmsc:Identifier>WorldCRS84Quad</tmsc:Identifier>
 	<tmsc:BoundingBox crs="http://www.opengis.net/def/crs/EPSG/0/4326">
 		<tmsc:LowerCorner>-90 -180</tmsc:LowerCorner>
 		<tmsc:UpperCorner>90 180</tmsc:UpperCorner>

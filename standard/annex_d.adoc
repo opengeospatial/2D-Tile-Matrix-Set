@@ -73,10 +73,10 @@ NOTE: The risks caused by imprecision in the use of Web Mercator is also emphasi
 
 === WorldCRS84Quad
 
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad*
+
 [[world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldcrs84quad]]
 ==== Variant 1: World CRS84 Quad (recommended)
-
-*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad*
 
 This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in the CRS84 CRS for the whole world.
 
@@ -142,9 +142,15 @@ NOTE: for INSPIRE: The Technical Guidance for the implementation of INSPIRE View
 [[world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad]]
 ==== Variant 2: World EPSG:4326 Quad
 
-*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/WGS1984Quad*
+Some implementers prefer to define the previous TileMatrixSet using the CRS http://www.opengis.net/def/crs/EPSG/0/4326.
+The definition is the same as the variant defined using http://www.opengis.net/def/crs/OGC/1.3/CRS84 except that CRS coordinates are expressed in latitude, longitude order, affecting the _PointOfOrigin_ and the _BoundingBox_ encoding only.
+For most practical purposes, both variations are equivalent because a TileMatrixSet primarily defines the tiling structure as well as the scale/resolution at each tile matrix, rather than how the data within each tile is stored.
+For many raster and vector tiles formats, CRS84 and EPSG:4326 are equivalent as a particular axis order is enforced.
+Additional parameters to an API for example could also override the default axis order by specifying the CRS as either CRS84 or EPSG:4326.
 
-Some implementers prefer to define the previous TileMatrixSet using the CRS http://www.opengis.net/def/crs/EPSG/0/4326. The definition is the same as http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad except that CRS coordinates are expressed in latitude, longitude order, affecting the PointOfOrigin and the BBox encoding only. If possible, the use of http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad is recommended instead of this one, because it uses coordinates in the same order as the tiles indices. However, we introduce it here to clarify how an implementation based on EPSG:4326 should look like and avoid confusion.
+If possible, defining it in terms of http://www.opengis.net/def/crs/OGC/1.3/CRS84 is recommended instead of this variation,
+because it uses the CRS consistent with the TileMatrixSet URI.
+However, we introduce it here to clarify how an implementation based on EPSG:4326 should look like and avoid confusion.
 
 This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in the EPSG:4326 CRS for the whole world.
 
@@ -466,13 +472,13 @@ image::figures/16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black li
 |===
 5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3035, ETRS89
 
-*BBOX LowerLeft:* 2,000,000.0, 1,000,000.0
+*BBOX LowerLeft:* 1,000,000.0, 2,000,000.0
 
-*BBOX UpperRight:* 6,500,000, 5,500,000.0
+*BBOX UpperRight:* 5,500,000.0, 6,500,000.0
 
 *WellKnownScaleSet*: N/A
 
-*PointOfOrigin*: 2,000,000.0, 5,500,000.0
+*PointOfOrigin*: 5,500,000.0, 2,000,000.0
 
 *TileWidth*: 256
 

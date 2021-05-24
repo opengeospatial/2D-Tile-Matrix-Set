@@ -1,6 +1,6 @@
 {
 	"title": "EPSG:4326 for the World",
-	"id": "WGS1984Quad",
+	"id": "WorldCRS84Quad",
 	"boundingBox": {
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/4326",
 		"axisLabels": [ "lat", "lon" ],

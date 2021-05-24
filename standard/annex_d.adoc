@@ -505,6 +505,8 @@ image::figures/16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black li
 
 One can define an arbitrary number of zoom levels and does not need to include all the zoom levels defined here. Here, 16 zoom levels are illustrated.
 
+NOTE: Please note that the EPSG:3035 is defined as: "Cartesian 2D CS. Axes: northing, easting (Y,X). Orientations: north, east. UoM: m". Be aware the axis order is not (X,Y).
+
 [[canadian-nad83-lcc-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0canadiannad83_lcc]]
 === Canadian NAD83 Lambert Conformal Conic (CanadianNAD83_LCC)
 

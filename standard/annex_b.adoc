@@ -6,7 +6,7 @@
 In addition to this document, this standard includes several normative Schema Documents.
 These Schema Documents are posted online at the URL http://schemas.opengis.net/tms/2.0.
 
-The schemas for both JSON and XML encodings of TileMatrixSets are reproduced in the <<annex-example-encodings-for-common-tilematrixset2d-informative>> and <<annex-example-encodings-for-variable-matrix-width-informative>> sections of this document, along with examples.
+The schemas for both JSON and XML encodings of TileMatrixSets are reproduced in the <<annex-example-encodings-for-common-tilematrixset2d-informative>> section of this document, along with examples. Additional examples are found in the <<annex-example-encodings-for-variable-matrix-width-informative>> section.
 
 The schemas for both JSON and XML encodings of TileSet Metadata are reproduced in the <<example-encodings-for-tilesetmetadata-informative>> sections of this document, along with examples.
 

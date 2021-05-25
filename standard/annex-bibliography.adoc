@@ -3,25 +3,26 @@
 [[Bibliography]]
 = Bibliography
 
-[NOTE]
-.Example Bibliography (Delete this note).
-===============================================
-The TC has approved Springer LNCS as the official document citation type.
+[1] Cavazzi S.: OGC Testbed-13: Vector Tiles Engineering Report (OGC 17-041), https://docs.ogc.org/per/17-041.html
 
-Springer LNCS is widely used in technical and computer science journals and other publications
+[2] Graham, D.: Project Report from the SOFWERX Geospatial Tech Sprint II (CDB X) OGC Discussion Paper (OGC 20-092)
 
-* For citations in the text please use square brackets and consecutive numbers: [1], [2], [3]
+[3] Hobona G, Terry Idol, T.: OGC Vector Tiles Pilot 2: Summary Engineering Report (OGC 19-088r2), http://docs.ogc.org/per/19-088r2.html
 
-â€“ Actual References:
+[4] Ingensand J and Maia K.: OGC Vector Tiles Pilot: Tiled Feature Data Conceptual Model Engineering Report (OGC 18-076), https://docs.opengeospatial.org/per/18-076.html
 
-[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)
+[5] Jacovella-St-Louis, J.:OGC Testbed-14: CityGML and AR Engineering Report (OGC 18-025), https://docs.ogc.org/per/18-025.html#ClientServerCommunication
 
-[n] Web: Author Surname, A.: Title, http://Website-Url
+[6] Masó, J.: OGC Testbed-15: Maps and Tiles API Engineering Report (OGC 19-069), https://docs.ogc.org/per/19-069.html
 
-===============================================
+[7] Meek S.: OGC Vector Tiles Pilot: Summary Engineering Report (OGC 18-086r1), https://docs.opengeospatial.org/per/18-086r1.html
 
-((( Example )))
-[[OGC2015]]
-[1] OGC: OGC Testbed 12 Annex B: Architecture. (2015).
+[8] Reed, C.: OGC CDB Core Standard: Volume 1: Model and Physical Data Store Structure (OGC 15-113r5), https://docs.opengeospatial.org/is/15-113r5/15-113r5.html
 
-[2] OGC Vector Tiles Pilot 2: Tile Set Metadata Engineering Report (OGC 19-082r1) http://docs.opengeospatial.org/per/19-082r1.html#_metadatadate
+[9] Taleisnik S.: OGC Vector Tiles Pilot 2: Tile Set Metadata Engineering Report (OGC 19-082r1), http://docs.opengeospatial.org/per/19-082r1.html#_metadatadate
+
+[10] Vretanos, P.A.: OGC Vector Tiles Pilot: WFS 3.0 Vector Tiles Extension Engineering Report (OGC 18-078), https://docs.opengeospatial.org/per/18-078.html
+
+[11] Vretanos, P.A.: OGC Vector Tiles Pilot: WMTS Vector Tiles Extension Engineering Report (OGC 18-083), https://docs.opengeospatial.org/per/18-083.html
+
+[12] Yutzler J.: Vector Tiles Pilot Extension Engineering Report (OGC 18-101), http://docs.opengeospatial.org/per/18-101.html

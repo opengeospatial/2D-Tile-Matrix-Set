@@ -18,7 +18,7 @@ image::figures/4.png[TileMatrix Limits]
 [[tileset-medatadata-overview]]
 ==== TileSet metadata
 
-Tiles are identified by tileMatrix id, tileRow number and tileCol number. These three elements have only meaning if they are associated to a tileMatrixSet description that contains the necessary information (in terms of scaleDenominator and corner point) to transform the indices into coordinates in a knows CRS. The main purpose of the TileSetMetadata is to  link the tileset with the tileMatrixSet description. In addition, the model contains elements describing the main characteristics of a tile set, the connection to the tileset with the original data collection and styles as well as the a recommended center point to start the navigation.
+Tiles are identified by tileMatrix id, tileRow number and tileCol number. These three elements have only meaning if they are associated to a tileMatrixSet description that contains the necessary information (in terms of scaleDenominator, cellSize, pointOfOrigin and cornerOfOrigin) to transform the indices into coordinates in a knows CRS. The main purpose of the TileSetMetadata is to  link the tileset with the tileMatrixSet description. In addition, the model contains elements describing the main characteristics of a tile set, the connection to the tileset with the original data collection and styles as well as the a recommended center point to start the navigation.
 
 === Requirements classes
 
@@ -50,7 +50,7 @@ image::figures/TileMatrixSetLimits.png[TileMatrixSetLimits UML model]
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| tileMatrix | Reference to a tileMatrix identifier | ows:CodeType, as adaptation of MD_Identifier class ISO 19115 ^a^ | One (mandatory)
+| tileMatrixId | Reference to a tileMatrix identifier | ows:CodeType, as adaptation of MD_Identifier class ISO 19115 ^a^ | One (mandatory)
 | minTile‌Row | Minimum tile row index valid for this layer. | Non negative integer type ^b^ | One (mandatory)
 | maxTile‌Row | Maximim tile row index valid for this layer. | Non negative integer type ^c^ | One (mandatory)
 | minTile‌Col | Minimum tile column index valid for this tile column. | Non negative integer type ^d^ | One (mandatory)
@@ -185,11 +185,15 @@ One for each keyword authority used
 
 | minScaleDenominator | Minimum scale denominator for usage of the layer | double^c^ | Zero or one (optional)^e^
 
-| maxScaleDenominator | Maximum scale denominator for usage of the layer | double^c^ | Zero or one (optional)^f^
+| minCellSize | Minimum cell size for usage of the layer | double^c^ | Zero or one (optional)^e^
 
-| maxTileMatrix | TileMatrix identifier associated with the minScaleDenominator | CharacterString^d^ | Zero or one (optional)^e^
+| maxScaleDenominator | Maximum cell size for usage of the layer | double^c^ | Zero or one (optional)^f^
 
-| minTileMatrix | TileMatrix identifier associated with the maxScaleDenominator | CharacterString^d^ | Zero or one (optional)^f^
+| maxCellSize | Maximum scale denominator for usage of the layer | double^c^ | Zero or one (optional)^f^
+
+| maxTileMatrixId | TileMatrix identifier associated with the minScaleDenominator | CharacterString^d^ | Zero or one (optional)^e^
+
+| minTileMatrixId | TileMatrix identifier associated with the maxScaleDenominator | CharacterString^d^ | Zero or one (optional)^f^
 
 | boundingBox | Minimum bounding rectangle surrounding the layer ^g^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
@@ -211,9 +215,9 @@ One for each keyword authority used
 
 ^d^     SHALL be an identifier to a tileMatrix element of this tileMatrixSet
 
-^e^     If both minScaleDenominator and maxTileMatrix are provided they SHALL refer to the same TileMatrix
+^e^     If minCellSize, minScaleDenominator and maxTileMatrixId are provided they SHALL be related to the same TileMatrix
 
-^f^     If both maxScaleDenominator and minTileMatrix are provided they SHALL refer to the same TileMatrix
+^f^     If maxCellSize, maxScaleDenominator and minTileMatrixId are provided they SHALL be related to the same TileMatrix
 
 ^g^     In the same CRS than the TileMatrixSet
 
@@ -338,7 +342,7 @@ The data type applicable to the tileset or the layer is defined in <<parts-of-da
 | Names | Definition
 | map | Images representing colors for pictorial representation on the screen
 | vector | Vector based elements. E.g. Features composed by geometries and properties
-| coverage | Images with values representing physical quantities
+| coverage | Coverage rangeset. E.g. Arrays of values representing physical quantities that are function of the position in a regular grid.
 |===
 
 The geometry type applicable to the geometries of the layer is defined in <<parts-of-geometry-type-code-enum>>.
@@ -353,14 +357,17 @@ The geometry type applicable to the geometries of the layer is defined in <<part
 | polygons | 2D geometries
 |===
 
-A center point is a place and scaleDemoninator that results in a tile that is representative of the tileset. A tile that contains some variety of objects, is visually appealing and easy to understand will be selected. The center point data structure applicable to the tile set is defined in <<parts-of-tilepoint-data-structure>>.
+A center point is a place and scale that results in a tile that is representative of the tileset. A tile that contains some variety of objects, is visually appealing and easy to understand will be selected. The center point data structure applicable to the tile set is defined in <<parts-of-tilepoint-data-structure>>.
 
 [#parts-of-tilepoint-data-structure,reftext='{table-caption} {counter:table-num}']
 .Parts of TilePoint data structure
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| coordinates | Location of the center point of the tile set | GM_Point data structure | one (mandatory)
-| tileMatrix | Tile matrix identifier | CodeType, as adaptation of MD_Identifier class ISO 19115^a^ | One (mandatory)
-^a^     SHALL be an identifier to a tileMatrix element of this tileMatrixSet.
+| coordinates | Location of the center point in the tile set | GM_Point data structure | one (mandatory)
+| tileMatrixId | Tile matrix identifier of the tile | CodeType, as adaptation of MD_Identifier class ISO 19115^a^ | One (mandatory)
+| scaleDenominator | Scale denominator of the tile | double^c^ | Zero or one (optional)^e^
+| cellSize | Cell size of the tile | double^c^ | Zero or one (optional)^e^
+^a^     SHALL be an identifier to a tileMatrix in relevant tileMatrixSet.
+^b^     If cellSize and scaleDenominator are provided they SHALL be related to TileMatrix with the indicated tileMatrixId
 |===

@@ -218,11 +218,19 @@
 					"description": "Maximum scale denominator for usage of the layer",
 					"type": "number"
 				},
-				"maxTileMatrix": {
+				"minCellSize": {
+					"description": "Minimum cell size for usage of the layer",
+					"type": "number"
+				},
+				"maxCellSize": {
+					"description": "Maximum cell size for usage of the layer",
+					"type": "number"
+				},
+				"maxTileMatrixId": {
 					"description": "TileMatrix identifier associated with the minScaleDenominator",
 					"type": "string"
 				},
-				"minTileMatrix": {
+				"minTileMatrixId": {
 					"description": "TileMatrix identifier associated with the maxScaleDenominator",
 					"type": "string"
 				},
@@ -337,7 +345,7 @@
 						"type": "number"
 					}
 				},
-				"tileMatrix":
+				"tileMatrixId":
 				{
 					"description": "TileMatrix identifier associated with the scaleDenominator",
 					"type": "string"
@@ -345,6 +353,11 @@
 				"scaleDenominator":
 				{
 					"description": "Scale denominator of the tile matrix selected",
+					"type": "number"
+				},
+				"cellSize":
+				{
+					"description": "Cell size of the tile matrix selected",
 					"type": "number"
 				}
 			}

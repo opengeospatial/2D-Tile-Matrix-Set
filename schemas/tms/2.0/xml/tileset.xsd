@@ -201,12 +201,12 @@
 							<documentation>Maximum cell size for usage of the layer</documentation>
 						</annotation>
 					</element>					
-					<element name="MaxTileMatrix" type="tmsc:CodeType" minOccurs="0">
+					<element name="MaxTileMatrixId" type="tmsc:CodeType" minOccurs="0">
 						<annotation>
 							<documentation>TileMatrix identifier associated with the MinScaleDenominator</documentation>
 						</annotation>
 					</element>
-					<element name="MinTileMatrix" type="tmsc:CodeType" minOccurs="0">
+					<element name="MinTileMatrixId" type="tmsc:CodeType" minOccurs="0">
 						<annotation>
 							<documentation>TileMatrix identifier associated with the MaxScaleDenominator</documentation>
 						</annotation>
@@ -434,7 +434,7 @@
 					<documentation>Cell size of the tile matrix selected</documentation>
 				</annotation>
 			</element>
-			<element name="TileMatrix" type="tmsc:CodeType" minOccurs="0">
+			<element name="TileMatrixId" type="tmsc:CodeType" minOccurs="0">
 				<annotation>
 					<documentation>TileMatrix identifier associated with the scaleDenominator</documentation>
 				</annotation>

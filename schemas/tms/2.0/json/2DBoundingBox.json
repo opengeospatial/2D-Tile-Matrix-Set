@@ -7,14 +7,6 @@
 		"crs" : {
 			"$ref": "crs.json"
 		},
-		"axisLabels" : {
-			"type": "array",
-			"minItems": 2,
-			"maxItems": 2,
-			"items": {
-				"type": "string"
-			}
-		},
 		"lowerLeft" : {
 			"$ref": "2DPoint.json"
 		},

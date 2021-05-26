@@ -1,0 +1,7 @@
+[[req_json_tilematrixsetlimits_model]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/json-tilematrixsetlimits/model* {set:cellbgcolor:#FFFFFF}
+2+|A TileMatrixSetLimits encoded in JSON __shall__ implement the class TileMatrixSetLimits {set:cellbgcolor:#FFFFFF}
+| *Dependency:* | /req/tilematrixsetlimits
+|===

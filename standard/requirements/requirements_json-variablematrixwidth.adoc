@@ -5,6 +5,6 @@
 |Target type |tile matrix sets
 
 |Dependency |http://www.opengis.net/spec/tms/2.0/req/variablematrixwidth
-|Dependency |http://www.opengis.net/spec/tms/2.0/req/json_tilematrixset2d
+|Dependency |http://www.opengis.net/spec/tms/2.0/req/json_tilematrixset
 
 |===

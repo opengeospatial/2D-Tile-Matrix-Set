@@ -4,7 +4,7 @@
 |*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/tilesetmetadata/model* {set:cellbgcolor:#FFFFFF}
 | A |When a tiled resource or dataset has tiles available it SHALL use the <<parts-of-tilesetmetadata-data-structure>> to declare the link to a TileMatrixSet definition.
 | B |When a tiled resource or dataset has tiles available, the metadata describing the tiles (and optionally additional information such as the recommended center point and the data from which it was sourced) SHALL be described using the data model in UML model shown in <<img_tilesetmetadata-uml-model>> and model description in <<parts-of-tilesetmetadata-data-structure>>.
-| C |When a tiled resource or dataset has tiles available only for a region or regions of the complete tiled space, the resource or dataset SHALL declare partial support to a tile matrix set 2D using one or more tile matrix limits data structures defined in <<parts-of-tilematrixlimits-data-structure>>.  {set:cellbgcolor:#FFFFFF}
+| C |When a tiled resource or dataset has tiles available only for a region or regions of the complete tiled space, the resource or dataset SHALL declare partial support to a tile matrix set using one or more tile matrix limits data structures defined in <<parts-of-tilematrixlimits-data-structure>>.  {set:cellbgcolor:#FFFFFF}
 |*Dependency* {set:cellbgcolor:#FFFFFF} |/req/tilematrixset
 
 /req/tilematrixsetlimits{set:cellbgcolor:#FFFFFF}

@@ -124,7 +124,7 @@
 					{
 						"tileMatrixSetDefinition":
 						{
-							"description": "Reference to a tile matrix set definition following the 2D Tile Matrix Set Standard. Optional for tile matrix sets defined on the OGC definition server; required for custom Tile Matrix Sets.",
+							"description": "Reference to a tile matrix set definition following the Tile Matrix Set Standard. Optional for tile matrix sets defined on the OGC definition server; required for custom Tile Matrix Sets.",
 							"type": "string",
 							"examples": ["http://data.example.com/tileMatrixSets/WorldMercatorWGS84Quad"]
 						}

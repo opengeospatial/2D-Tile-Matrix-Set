@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
 	"title": "Tile Matrix Set Definition",
-	"description": "A definition of a tile matrix set following the 2D Tile Matrix Set standard. For tileset metadata, this property is only required for offline use, as an alternative to tileMatrixSetURI and tileMatrixSetDefinition.",
+	"description": "A definition of a tile matrix set following the Tile Matrix Set standard. For tileset metadata, this property is only required for offline use, as an alternative to tileMatrixSetURI and tileMatrixSetDefinition.",
 	"type": "object",
 	"required": ["id", "supportedCRS", "tileMatrices"],
 	"properties": {
@@ -37,7 +37,7 @@
 			"items": {
 				"type": "string"
 			}
-		},		
+		},
 		"supportedCRS": {
 			"description": "Coordinate Reference System (CRS)",
 			"$ref": "crs.json"

@@ -22,18 +22,18 @@ Tiles are identified by tileMatrix id, tileRow number and tileCol number. These 
 
 === Requirements classes
 
-[[tilematrixsetlimits2d-requirements-class]]
-==== TileMatrixSetLimits2D requirements class
+[[tilematrixsetlimits-requirements-class]]
+==== TileMatrixSetLimits requirements class
 
-Requirements class tilematrixsetlimits2D establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region of for a subset of scales. The array of TileMatrixSetLimits2D data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits2d.
+Requirements class tilematrixsetlimits establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region of for a subset of scales. The array of TileMatrixSetLimits data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits.
 
-include::requirements/requirements_tilematrixsetlimits2d.adoc[]
+include::requirements/requirements_tilematrixsetlimits.adoc[]
 
-include::requirements/tilematrixsetlimits2d/REQ_tilematrixsetlimits2d_model.adoc[]
+include::requirements/tilematrixsetlimits/REQ_tilematrixsetlimits_model.adoc[]
 
 [#img_tilematrixsetlimits-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .TileMatrixLimit array UML model
-image::figures/TileMatrixSetLimits2D.png[TileMatrixSetLimits UML model]
+image::figures/TileMatrixSetLimits.png[TileMatrixSetLimits UML model]
  
 [#parts-of-tilematrixsetlimits-data-structure,reftext='{table-caption} {counter:table-num}']
 .TileMatrixSetLimits array

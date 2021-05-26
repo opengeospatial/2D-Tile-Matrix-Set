@@ -1,0 +1,6 @@
+[[req_json_tilematrixset_schema]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/json-tilematrixset/schema* {set:cellbgcolor:#FFFFFF}
+2+|A TileMatrixSet encoded in JSON _shall_ validate using the JSON schema for a tile matrix set  (http://schemas.opengis.net/tms/2.0/json/tileMatrixSet.json).
+|===

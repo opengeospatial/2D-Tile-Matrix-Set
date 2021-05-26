@@ -9,7 +9,7 @@ tables (or their implied extensions). Note that the correspondence between the n
 by a fixed number of scales.
 Cell sizes (in terrain units) are calculated assuming 0.28 mm pixel size and the WGS84 equatorial Earth diameter.
 
-The WKSS concept was introduced in WMTS to improve interoperability, but experience has demonstrated that the use of Common TileMatrixSet2D (<<annex-common-tilematrixset-definitions-informative>>) is even better. The use of WKSS is no longer encouraged by this standard.
+The WKSS concept was introduced in WMTS to improve interoperability, but experience has demonstrated that the use of Common TileMatrixSet (<<annex-common-tilematrixset-definitions-informative>>) is even better. The use of WKSS is no longer encouraged by this standard.
 
 [[globalcrs84scale-httpwww.opengis.netdefwkssogc1.0globalcrs84scale]]
 === GlobalCRS84Scale

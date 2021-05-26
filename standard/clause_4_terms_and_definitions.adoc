@@ -101,7 +101,7 @@ small rectangular representation of geographic data, often part of a set of such
 
 grid tile scheme that defines how space is partitioned into a set of conterminous tiles at a fixed scale.
 
-NOTE: A tile matrix constitutes a tessellation of the space that resembles a matrix in a 2D space characterized by a matrix width (columns) and a matrix height (rows).
+NOTE: In 2d, a tile matrix constitutes a tessellation of the space that resembles a matrix characterized by a matrix width (columns) and a matrix height (rows).
 
 NOTE: In this standard, a tile matrix is not used alone and it is part of time matrix set.
 

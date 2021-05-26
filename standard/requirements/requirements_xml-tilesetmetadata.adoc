@@ -4,5 +4,5 @@
 2+|http://www.opengis.net/spec/tms/2.0/req/xml-tilesetmetadata {set:cellbgcolor:#FFFFFF}
 |Target type |tile matrix sets
 |Dependency |http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata
-|Dependency |http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixsetlimits2d
+|Dependency |http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixsetlimits
 |===

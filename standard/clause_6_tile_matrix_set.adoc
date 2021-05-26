@@ -140,21 +140,21 @@ NOTE: This decision is necessary to still be able to be able to define a rectang
 image::figures/5.png[TileMatrix with variable matrix width]
 
 
-[[tilematrixset2d-requirements]]
+[[tilematrixset-requirements]]
 === TileMatrixSet Requirements Classes
 
-[[tilematrixset2d-requirements-class]]
-==== TileMatrixSet2D requirements class
+[[tilematrixset-requirements-class]]
+==== TileMatrixSet requirements class
 
-Requirements class tilematrixset2D establishes how to describe a TileMatrixSet for a two-dimensional tile space. It is expected that tile matrix sets are defined once and that servers or encodings using or distributing tiles will declare the usage of a tile matrix set by linking to that tile matrix set.
+Requirements class tilematrixset establishes how to describe a TileMatrixSet for a two-dimensional tile space. It is expected that tile matrix sets are defined once and that servers or encodings using or distributing tiles will declare the usage of a tile matrix set by linking to that tile matrix set.
 
-include::requirements/requirements_tilematrixset2d.adoc[]
+include::requirements/requirements_tilematrixset.adoc[]
 
-include::requirements/tilematrixset2d/REQ_tilematrixset2d_model.adoc[]
+include::requirements/tilematrixset/REQ_tilematrixset_model.adoc[]
 
 [#img_tilematrixset-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .TileMatrixSet UML model
-image::figures/TileMatrixSet2D.png[TileMatrixSet UML model]
+image::figures/TileMatrixSet.png[TileMatrixSet UML model]
 
 
 <<parts-of-tilematrixset-data-structure>> defines the structure of the TileMatrixSet.
@@ -183,7 +183,7 @@ One for each keyword authority used
 4+|
 ^a^     The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^     In the same CRS as the TileMatrixSet. boundingBox SHOULD NOT be used to calculate the position of the tiles in the CRS space; please use cornerOfOrigin and pointOfOrigin of the corresponding TileMatrix instead. If data is not available for all tiled space, TileMatrixSetLimits will declare what the tiles have data (see <<tilematrixsetlimits2d-requirements-class>>).
+^b^     In the same CRS as the TileMatrixSet. boundingBox SHOULD NOT be used to calculate the position of the tiles in the CRS space; please use cornerOfOrigin and pointOfOrigin of the corresponding TileMatrix instead. If data is not available for all tiled space, TileMatrixSetLimits will declare what the tiles have data (see <<tilematrixsetlimits-requirements-class>>).
 
 ^c^     When a tile matrix set conforms to a well-known scale set it can reference it by its URI. If used, the well-known scale set SHALL be consistent with the supportedCRS and with the scaleDenominators of the tileMatrix parameters.
 

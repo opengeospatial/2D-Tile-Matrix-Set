@@ -1,5 +1,5 @@
 [appendix]
-[[annex-example-encodings-for-common-tilematrixset2d-informative]]
+[[annex-example-encodings-for-common-tilematrixset-informative]]
 :appendix-caption: Annex
 == Example encodings for Common TileMatrixSets (Informative)
 

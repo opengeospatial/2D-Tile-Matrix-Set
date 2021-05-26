@@ -19,18 +19,18 @@ The JSON encoding has been done respecting the naming and types of the original 
 
 In addition, all elements with multiplicity greater than one changes names to plural. Please be aware of irregular plurals such as `tileMatrix` that changes to `tileMatrices`.
 
-[[jsontilematrixset2d]]
+[[jsontilematrixset]]
 ==== JSON TileMatrixSet
 
-include::requirements/requirements_json-tilematrixset2d.adoc[]
+include::requirements/requirements_json-tilematrixset.adoc[]
 
-include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_model.adoc[]
+include::requirements/json-tilematrixset/REQ_json_tilematrixset_model.adoc[]
 
-// include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_ietf.adoc[]
+// include::requirements/json-tilematrixset/REQ_json_tilematrixset_ietf.adoc[]
 
-include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_schema.adoc[]
+include::requirements/json-tilematrixset/REQ_json_tilematrixset_schema.adoc[]
 
-include::requirements/json-tilematrixset2d/REQ_json_tilematrixset2d_media-type.adoc[]
+include::requirements/json-tilematrixset/REQ_json_tilematrixset_media-type.adoc[]
 
 
 NOTE: A TileMatrixSet description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
@@ -55,16 +55,16 @@ include::requirements/json-variablematrixwidth/REQ_json_variablematrixwidth_sche
 === XML encoding
 The XML encoding has been done respecting the naming and types of the original classes. However all attribute names have been transformed to UpperCamelCase.
 
-[[xmltilematrixset2d-requirements-class]]
+[[xmltilematrixset-requirements-class]]
 ==== XML TileMatrixSet
 
-include::requirements/requirements_xml-tilematrixset2d.adoc[]
+include::requirements/requirements_xml-tilematrixset.adoc[]
 
-include::requirements/xml-tilematrixset2d/REQ_xml_tilematrixset2d_model.adoc[]
+include::requirements/xml-tilematrixset/REQ_xml_tilematrixset_model.adoc[]
 
-include::requirements/xml-tilematrixset2d/REQ_xml_tilematrixset2d_schema.adoc[]
+include::requirements/xml-tilematrixset/REQ_xml_tilematrixset_schema.adoc[]
 
-include::requirements/xml-tilematrixset2d/REQ_xml_tilematrixset2d_media-type.adoc[]
+include::requirements/xml-tilematrixset/REQ_xml_tilematrixset_media-type.adoc[]
 
 NOTE: A TileMatrixSet description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
 

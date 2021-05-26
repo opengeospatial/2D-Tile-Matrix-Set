@@ -1,0 +1,7 @@
+[[req_xml_tilematrixsetlimits_model]]
+[width="90%",cols="2,6"]
+|===
+|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/xml-tilematrixsetlimits/model* {set:cellbgcolor:#FFFFFF}
+2+|A TileMatrixSetLimits encoded in XML SHALL implement the class TileMatrixSetLimits {set:cellbgcolor:#FFFFFF}
+| *Dependency:* | /req/tilematrixsetlimits
+|===

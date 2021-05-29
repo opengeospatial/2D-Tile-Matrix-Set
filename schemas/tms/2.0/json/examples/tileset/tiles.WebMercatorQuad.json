@@ -1,6 +1,6 @@
 {
    "title" : "Daraa multi-layer vector tiles",
-   "abstract" : "Vector tiles of Daraa, Syria from NSG OpenStreetMap Topographic Data Store",
+   "description" : "Vector tiles of Daraa, Syria from NSG OpenStreetMap Topographic Data Store",
    "keywords" : [ "Daraa", "Syria", "OpenStreetMap", "NSG", "TDS" ],
    "dataType" : "vector",
    "accessConstraints" : "unclassified",

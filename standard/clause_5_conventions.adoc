@@ -48,7 +48,7 @@ In case that multiple languages are necessary in a single document instance, the
 NOTE: OGC APIs will use the language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. This does not preclude that in other environments the JSON encodings for language string can implement the LanguageString. In practice this means that a JSON schema for a LanguageString element should support both string and language string types.
 
 ==== Description, Title and Keywords
-A basic set of data description parameters that includes human-readable title, abstract, and keywords is widely used in this standard and defined here as UML.
+A basic set of data description parameters that includes human-readable title, description, and keywords is widely used in this standard and defined here as UML.
 
 [#img_description-title-keyword-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .Description Title Keywords UML model
@@ -62,7 +62,7 @@ image::figures/DescriptionTitleKeyword.png[DescriptionTitleKeywords UML model]
 | title | Title of this tile matrix set, normally used for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| abstract | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
+| description | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 | keywords | Unordered list of one or more keywords | MD_Keywords class in ISO 19115 | Zero or more (optional)
@@ -83,12 +83,16 @@ Keywords is described from MD_Keywords class in ISO 19115-1 and has a list of ke
 4+|
 |===
 
+NOTE: OGC APIs will use the language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. In addition in JSON encodings we are not considering namespaces or codespaces (optional in the model). This will results in a simplification of the keywords in the JSON encoding to a simple array of strings.
+
 ==== BoundingBox
 A (basic) bounding box is one type of bounding box that is used in this document. The Bounding box data structure is specified in the following UML model and table.
 
 The BoundingBox class describes a Minimum Bounding Rectangle (MBR) surrounding a feature (in the broader sense), in the supported CRS.
 
-A WGS 84 bounding box is another type of bounding box. This type is simplified from the basic bounding box data type for use only with the 2D geographic coordinate reference system which uses the WGS 84 geodetic datum, where longitude precedes latitude and both are recorded in decimal degrees.
+A 2DBoundingBox is another type of bounding box. This type is simplified from the basic BoundingBox data type for use only with the 2D geographic coordinate reference system. This is useful to specify the extent 2D part of tile matrix set.
+
+A WGS84BoundingBox is another type of bounding box. This type is simplified from the basic BoundingBox data type for use only with the 2D geographic coordinate reference system which uses the WGS 84 geodetic datum, where longitude precedes latitude and both are recorded in decimal degrees.
 
 [#img_boundingbox-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .BoundingBox UML model
@@ -100,18 +104,16 @@ image::figures/BoundingBox.png[BoundingBox UML model]
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| lowerCorner | Coordinates of bounding box corner at which the value of each coordinate normally is the algebraic minimum within this bounding box ^a^
+| lowerLeft | Coordinates of bounding box corner at which the value of each coordinate normally is the algebraic minimum within this bounding box ^a^
 | Ordered sequence of double values ^b^
 | One (mandatory)
-| upperCorner | Coordinates of bounding box corner at
-which the value of each coordinate
-normally is the algebraic maximum
-within this bounding box ^a^
+| upperRight | Coordinates of bounding box corner at which the value of each coordinate
+normally is the algebraic maximum within this bounding box ^a^
 | Ordered sequence of double values ^b^
 | One (mandatory)
 | CRS | Reference or a definition of the CRS used by the LowerCorner and UpperCorner coordinates  | CRStype | Zero or one (optional)
 Include unless referenced elsewhere
-| axisLabel | Names of the dimensions in this CRS | Ordered sequence of strings | Zero or one (optional) ^c^
+| orderedAxis | Names of the dimensions in this CRS | Ordered sequence of strings | Zero or one (optional) ^c^
 4+| ^a^  Values other than the minimum and maximum may be used as discussed below.
 
 ^b^  The number of axes included, and the order of these axes, as specified by the referenced CRS.

@@ -169,23 +169,25 @@ image::figures/TileMatrixSet.png[TileMatrixSet UML model]
 | title ^a^ | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^f^
-| abstract ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 | keywords^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix set | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
 
 One for each keyword authority used
-| bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS ^b^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
+| bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the crs ^b^ | 2DBoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
-| supportedCRS | Coordinate reference system (CRS) | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory)
+| crs | Coordinate reference system (CRS) | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory) ^i^
+
 | wellKnown‌ScaleSet | Reference to a well-known scale set ^e^ | URI type ^h^ | Zero or one (optional) ^c^
+
 | tileMatrix | Description of a scale level and its tile matrix | TileMatrix data structure. See <<parts-of-tilematrix-data-structure>> | One or more (mandatory) ^d^
 4+|
 ^a^     The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^     In the same CRS as the TileMatrixSet. boundingBox SHOULD NOT be used to calculate the position of the tiles in the CRS space; please use cornerOfOrigin and pointOfOrigin of the corresponding TileMatrix instead. If data is not available for all tiled space, TileMatrixSetLimits will declare what the tiles have data (see <<tilematrixsetlimits-requirements-class>>).
+^b^     In the same CRS as the TileMatrixSet. boundingBox should be considered informative about the area covered by this TileMatrixSet. It SHOULD NOT be used to calculate the position of the tiles in the CRS space; please use cornerOfOrigin and pointOfOrigin of the corresponding TileMatrix instead. If data is not available for all tiled space, TileMatrixSetLimits will declare what the tiles have data (see <<tilematrixsetlimits-requirements-class>>).
 
-^c^     When a tile matrix set conforms to a well-known scale set it can reference it by its URI. If used, the well-known scale set SHALL be consistent with the supportedCRS and with the scaleDenominators of the tileMatrix parameters.
+^c^     When a tile matrix set conforms to a well-known scale set it can reference it by its URI. If used, the well-known scale set SHALL be consistent with the crs and with the scaleDenominators of the tileMatrix parameters.
 
 ^d^     Commonly more than one. Each tileMatrix of a tileMatrixSet SHALL have a unique (different) scaleDenominator.
 
@@ -196,6 +198,8 @@ One for each keyword authority used
 ^g^     TileMatrixSet identifies SHALL be unique (different) for each TileMatrixSet of a server.
 
 ^h^     In WMTS 1.0 a URN was used as a reference to a well-known scale set on the URN in WMTS. Later, OGC adopted URIs (instead of URNs) to do references. The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming Authority - Procedures document] specifies rules to transform form URN to URI. Implement a on-the-fly translations based on these rules is possible.
+
+^i^     A single CRS can have several realizations and can be complemented by an epoch. In here it was decided that a TileMatrixSet is defined in a generic CRS. The CRS realization and epoch used by a concrete tileset is specified in the tileset metadata.
 |===
 
 A part from the general tile matrix set description an array of tile matrix elements is needed to define the distribution of tiles for each scale denominator.
@@ -220,7 +224,7 @@ Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^d^
 
-| abstract ^a^ |
+| description ^a^ |
 Brief narrative description of this tile matrix, normally available for display to a human
  |
 LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>>

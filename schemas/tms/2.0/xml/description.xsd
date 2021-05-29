@@ -31,17 +31,17 @@
 	OWS use to include additional metadata for each type of information.
 	This type shall not be restricted for a specific OWS to change the
 	multiplicity (or optionality) of some elements. If the xml:lang
-	attribute is not included in a Title, Abstract or Keyword element, then
+	attribute is not included in a Title, Description or Keyword element, then
 	no language is specified for that element unless specified by another
-	means. All Title, Abstract and Keyword elements in the same Description
+	means. All Title, Description and Keyword elements in the same Description
 	that share the same xml:lang attribute value represent the description
-	of the parent object in that language. Multiple Title or Abstract
+	of the parent object in that language. Multiple Title or Description
 	elements shall not exist in the same Description with the same xml:lang
 	attribute value unless otherwise specified.</documentation>
 		</annotation>
 		<sequence>
 			<element ref="tmsc:Title" minOccurs="0" maxOccurs="unbounded"/>
-			<element ref="tmsc:Abstract" minOccurs="0" maxOccurs="unbounded"/>
+			<element ref="tmsc:Description" minOccurs="0" maxOccurs="unbounded"/>
 			<element ref="tmsc:Keywords" minOccurs="0" maxOccurs="unbounded"/>
 		</sequence>
 	</complexType>
@@ -75,7 +75,7 @@
 		</annotation>
 	</element>
 	<!-- =========================================================== -->
-	<element name="Abstract" type="tmsc:LanguageStringType">
+	<element name="Description" type="tmsc:LanguageStringType">
 		<annotation>
 			<documentation>Brief narrative description of this resource, normally
 	used for display to humans.</documentation>

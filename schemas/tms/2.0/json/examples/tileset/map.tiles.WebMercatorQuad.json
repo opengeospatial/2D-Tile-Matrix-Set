@@ -1,6 +1,6 @@
 {
    "title" : "Daraa map tiles",
-   "abstract" : "Rendered tiles of Daraa, Syria from NSG OpenStreetMap Topographic Data Store",
+   "description" : "Rendered tiles of Daraa, Syria from NSG OpenStreetMap Topographic Data Store",
    "keywords" : [ "Daraa", "Syria", "OpenStreetMap", "NSG", "TDS" ],
    "dataType" : "map",
    "accessConstraints" : "unclassified",

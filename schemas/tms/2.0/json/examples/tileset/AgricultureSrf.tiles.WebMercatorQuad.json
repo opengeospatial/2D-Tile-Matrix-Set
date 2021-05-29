@@ -1,6 +1,6 @@
 {
    "title" : "Daraa Agricultural Surfaces vector tiles",
-   "abstract" : "Vector tiles of agricultural areas in Daraa, Syria from NSG OpenStreetMap Topographic Data Store",
+   "description" : "Vector tiles of agricultural areas in Daraa, Syria from NSG OpenStreetMap Topographic Data Store",
    "keywords" : [ "agriculture", "Daraa", "Syria", "OpenStreetMap", "NSG", "TDS" ],
    "dataType" : "vector",
    "accessConstraints" : "unclassified",

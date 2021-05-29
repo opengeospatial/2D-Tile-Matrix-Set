@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TileSetMetadata xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../../tileset.xsd">
 	<tmsc:Title>Daraa multi-layer vector tiles</tmsc:Title>
-	<tmsc:Abstract>Vector tiles of Daraa, Syria from NSG OpenStreetMap Topographic Data Store</tmsc:Abstract>
+	<tmsc:Description>Vector tiles of Daraa, Syria from NSG OpenStreetMap Topographic Data Store</tmsc:Description>
 	<tmsc:Keywords>
 		<tmsc:Keyword>Daraa</tmsc:Keyword>
 		<tmsc:Keyword>Syria</tmsc:Keyword>

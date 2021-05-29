@@ -10,7 +10,7 @@
 			"type": "string",
 			"examples": ["Google Maps Compatible for the World"]
 		},
-		"abstract": {
+		"description": {
 			"description": "Brief narrative description of this tile matrix set, normally available for display to a human",
 			"type": "string",
 			"examples": ["The most common TileMatrixSet, used in most of the main IT map browsers. It was initially popularized by Google Maps"]
@@ -70,7 +70,7 @@
 					"type": "string",
 					"examples": ["Google Maps Compatible for the World zoom level 3"]
 				},
-				"abstract": {
+				"description": {
 					"description": "Brief narrative description of this tile matrix set, normally available for display to a human",
 					"type": "string",
 					"examples": ["Google Maps Compatible zoom level 3 that is equivalent to a scale of 1:69885283.00358972 and has 19567.87924100512 meters of pixel size in the equator"]

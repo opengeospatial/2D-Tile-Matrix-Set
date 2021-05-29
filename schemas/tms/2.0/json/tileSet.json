@@ -12,7 +12,7 @@
 					"description": "A title for this tileset",
 					"type": "string"
 				},
-				"abstract": {
+				"description": {
 					"description": "Brief narrative description of this tile set",
 					"type": "string"
 				},
@@ -169,7 +169,7 @@
 					"description": "Title of this tile matrix set, normally used for display to a human",
 					"type": "string"
 				},
-				"abstract": {
+				"description": {
 					"description": "Brief narrative description of this tile matrix set, normally available for display to a human",
 					"type": "string"
 				},
@@ -282,7 +282,7 @@
 						"properties":
 						{
 							"title": {"type": "string"},
-							"description": {"description":"Implements 'abstract'", "type": "string"},
+							"description": {"description":"Implements 'description'", "type": "string"},
 							"type": {"type": "string", "enum": [
 							    "array",
 							    "boolean",
@@ -381,7 +381,7 @@
 					"description": "A title for this style",
 					"type": "string"
 				},
-				"abstract":
+				"description":
 				{
 					"description": "Brief narrative description of this style",
 					"type": "string"

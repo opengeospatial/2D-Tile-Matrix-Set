@@ -95,7 +95,7 @@ image::figures/TileSet.png[TileSetMetadata UML model]
 | title ^a^ | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| abstract ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 | keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile set | MD_Keywords class in ISO 19115 See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
@@ -160,7 +160,7 @@ A Layer can is a set of geographic objects (all of the same type) together in a 
 | title ^a^ | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| abstract ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 | keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this layer | MD_Keywords class in ISO 19115 See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
@@ -236,7 +236,7 @@ A FeatureAttribute element contains attributes that can be found in at least one
 | title ^a^ | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^f^
-| abstract ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 | keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this attribute | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
@@ -304,7 +304,7 @@ The style structure applicable to the layer is defined in <<parts-of-style-data-
 | title ^a^ | Title of this style, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^f^
-| abstract ^a^ | Brief narrative description of this style, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of this style, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 | keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this style | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)

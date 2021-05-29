@@ -43,7 +43,6 @@ The encoding of PropertySchema adopts the JSON Schema form starting by and eleme
 |===
 | .propertiesSchema attributes | JSON Schema properties
 | title | title
-| abstract | description
 | keywords | N/A
 | identifier | name of the additional property
 | type | combination of 'type' and 'format'

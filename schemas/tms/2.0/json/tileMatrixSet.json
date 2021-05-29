@@ -19,7 +19,7 @@
 			"description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix set",
 			"type": "array",
 			"items": {
-				"$ref": "keyword.json"
+				"type": "string"
 			}
 		},
 		"id": {
@@ -79,7 +79,7 @@
 					"description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this dataset",
 					"type": "array",
 					"items": {
-						"$ref": "keyword.json"
+						"type": "string"
 					}
 				},
 				"id": {

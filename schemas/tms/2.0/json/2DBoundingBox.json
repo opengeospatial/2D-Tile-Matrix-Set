@@ -7,6 +7,14 @@
 		"crs" : {
 			"$ref": "crs.json"
 		},
+		"orderedAxes": {
+			"type": "array",
+			"minItems": 2,
+			"maxItems": 2,
+			"items": {
+				"type": "string"
+			}
+		},		
 		"lowerLeft" : {
 			"$ref": "2DPoint.json"
 		},

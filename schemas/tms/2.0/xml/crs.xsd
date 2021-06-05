@@ -64,4 +64,13 @@
       purposes.</documentation>
 		</annotation>
 	</element>
+	<element name="crs" substitutionGroup="tmsc:AvailableCRS">
+		<annotation>
+			<documentation>The only coordinate reference system in which data from this
+      data(set) or resource is available or supported. More specific parameter
+      names should be used by specific OWS specifications wherever applicable.
+      More than one such parameter can be included for different
+      purposes.</documentation>
+		</annotation>
+	</element>
 </schema>

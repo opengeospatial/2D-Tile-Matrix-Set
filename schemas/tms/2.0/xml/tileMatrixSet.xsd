@@ -31,6 +31,11 @@
 								<documentation>Tile matrix set identifier</documentation>
 							</annotation>
 						</element>
+						<element name="uri" type="anyURI" minOccurs="0">
+							<annotation>
+								<documentation>Reference to an official source for this tileMatrixSet</documentation>
+							</annotation>
+						</element>						
 						<element ref="tmsc:BoundingBox" minOccurs="0">
 							<annotation>
 								<documentation>
@@ -39,7 +44,7 @@
 									set, in the supported CRS </documentation>
 							</annotation>
 						</element>
-						<element ref="tmsc:SupportedCRS">
+						<element ref="tmsc:crs">
 							<annotation>
 								<documentation>Reference to one coordinate reference
 								system (CRS).</documentation>
@@ -54,7 +59,7 @@
 									http://www.opengis.net/def/wkss/OGC/1.0/GoogleMapsCompatible and
 									http://www.opengis.net/def/wkss/OGC/1.0/WorldMercatorWGS84 are
 								possible values that are defined in Annex C. It has to be consistent with the
-								SupportedCRS and with the ScaleDenominators of the TileMatrix elements.
+								crs and with the ScaleDenominators of the TileMatrix elements.
 								</documentation>
 							</annotation>
 						</element>
@@ -110,7 +115,7 @@
 								<documentation>
 									Position in CRS coordinates of the top-left corner of this tile matrix.
 									This are the  precise coordinates of the top left corner of top left
-									pixel of the 0,0 tile in SupportedCRS coordinates of this TileMatrixSet.
+									pixel of the 0,0 tile in crs coordinates of this TileMatrixSet.
 								</documentation>
 							</annotation>
 							<simpleType>
@@ -125,7 +130,7 @@
 								<documentation>
 									Position in CRS coordinates of the top-left corner of this tile matrix.
 									This are the  precise coordinates of the top left corner of top left
-									pixel of the 0,0 tile in SupportedCRS coordinates of this TileMatrixSet.
+									pixel of the 0,0 tile in crs coordinates of this TileMatrixSet.
 								</documentation>
 							</annotation>
 						</element>

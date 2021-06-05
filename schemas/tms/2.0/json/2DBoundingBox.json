@@ -4,6 +4,12 @@
 	"type": "object",
 	"required": ["lowerLeft", "upperRight"],
 	"properties": {
+		"lowerCorner" : {
+			"$ref": "2DPoint.json"
+		},
+		"upperCorner" : {
+			"$ref": "2DPoint.json"
+		}
 		"crs" : {
 			"$ref": "crs.json"
 		},
@@ -15,11 +21,5 @@
 				"type": "string"
 			}
 		},		
-		"lowerLeft" : {
-			"$ref": "2DPoint.json"
-		},
-		"upperRight" : {
-			"$ref": "2DPoint.json"
-		}
 	}
 }

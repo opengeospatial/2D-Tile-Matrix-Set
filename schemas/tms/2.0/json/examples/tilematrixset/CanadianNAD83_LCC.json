@@ -4,18 +4,18 @@
 	"boundingBox":
 	{
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/3978",
-		"lowerLeft":
+		"lowerCorner":
 		[
 			-7786476.885838887,
 			-5153821.09213678
 		],
-		"upperRight":
+		"upperCorner":
 		[
 			7148753.233541353,
 			7928343.534071138
 		]
 	},
-	"supportedCRS": "http://www.opengis.net/def/crs/EPSG/0/3978",
+	"crs": "http://www.opengis.net/def/crs/EPSG/0/3978",
 	"tileMatrices":
 	[
 		{

@@ -175,11 +175,15 @@ Include one for each language represented
 | keywords^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix set | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
 
 One for each keyword authority used
-| bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the crs ^b^ | 2DBoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
+| uri | Reference to an official source for this tileMatrixSet | URI type | Zero or One (optional) Include when an official source exists
 
 | crs | Coordinate reference system (CRS) | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory) ^i^
 
+| orderedAxes | Ordered list of names of the dimensions defined in the CRS | Ordered sequence of strings | Zero or one (optional)
+
 | wellKnown‌ScaleSet | Reference to a well-known scale set ^e^ | URI type ^h^ | Zero or one (optional) ^c^
+
+| bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the crs ^b^ | 2DBoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
 | tileMatrix | Description of a scale level and its tile matrix | TileMatrix data structure. See <<parts-of-tilematrix-data-structure>> | One or more (mandatory) ^d^
 4+|

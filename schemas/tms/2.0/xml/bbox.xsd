@@ -68,9 +68,9 @@
         use of the bounding box type.</documentation>
 			</annotation>
 		</attribute>
-		<attribute name="dimensions" type="positiveInteger" use="optional">
+		<attribute name="orderedAxes" type="string" use="optional">
 			<annotation>
-				<documentation>The number of dimensions in this CRS (the length of a
+				<documentation>Names of dimensions in this CRS (the length of a
         coordinate sequence in this use of the PositionType). This number is
         specified by the CRS definition, but can also be specified
         here.</documentation>

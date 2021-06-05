@@ -3,11 +3,11 @@
 	"id": "WorldCRS84Quad",
 	"boundingBox": {
 		"crs": "http://www.opengis.net/def/crs/EPSG/0/4326",
-		"axisLabels": [ "lat", "lon" ],
-		"lowerLeft": [ -90, -180 ],
-		"upperRight": [ 90, 180 ]
+		"orderedAxes": [ "lat", "lon" ],
+		"lowerCorner": [ -90, -180 ],
+		"upperCorner": [ 90, 180 ]
 	},
-	"supportedCRS": "http://www.opengis.net/def/crs/EPSG/0/4326",
+	"crs": "http://www.opengis.net/def/crs/EPSG/0/4326",
 	"wellKnownScaleSet": "http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad",
 	"tileMatrices": [
 		{

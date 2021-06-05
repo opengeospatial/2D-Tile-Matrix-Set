@@ -26,11 +26,11 @@
 			"description": "Tile matrix set identifier. Implementation of 'identifier'",
 			"type": "string"
 		},
-		"boundingBox":
-		{
-			"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
-			"$ref": "2DBoundingBox.json"
-		},
+		"uri": {
+			"description": "Reference to an official source for this tileMatrixSet",
+			"type": "string",
+			"format": "uri",
+		}
 		"orderedAxes": {
 			"type": "array",
 			"minItems": 1,
@@ -38,7 +38,7 @@
 				"type": "string"
 			}
 		},
-		"supportedCRS": {
+		"crs": {
 			"description": "Coordinate Reference System (CRS)",
 			"$ref": "crs.json"
 		},
@@ -46,6 +46,11 @@
 			"description": "Reference to a well-known scale set",
 			"type": "string",
 			"format": "uri"
+		},
+		"boundingBox":
+		{
+			"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
+			"$ref": "2DBoundingBox.json"
 		},
 		"tileMatrices":
 		{

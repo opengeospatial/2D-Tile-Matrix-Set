@@ -3,19 +3,20 @@
 	"id": "EuropeanETRS89_LAEAQuad",
 	"boundingBox":
 	{
-		"crs": "http://www.opengis.net/def/crs/EPSG/0/3035",
-		"lowerLeft":
+		"lowerCorner":
 		[
 			1000000.0,
 			2000000.0
 		],
-		"upperRight":
+		"upperCorner":
 		[
 			5500000.0,
 			6500000.0
 		]
+		"orderedAxes": "Y,X",
+		"crs": "http://www.opengis.net/def/crs/EPSG/0/3035",
 	},
-	"supportedCRS": "http://www.opengis.net/def/crs/EPSG/0/3035",
+	"crs": "http://www.opengis.net/def/crs/EPSG/0/3035",
 	"tileMatrices":
 	[
 		{

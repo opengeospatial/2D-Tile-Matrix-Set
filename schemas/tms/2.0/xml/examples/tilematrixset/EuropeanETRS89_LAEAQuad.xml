@@ -2,14 +2,14 @@
 <TileMatrixSet id="EuropeanETRS89_LAEAQuad" xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../../tilematrixset.xsd">
 	<tmsc:Title>Lambert Azimuthal Equal Area ETRS89 for Europe</tmsc:Title>
 	<tmsc:Identifier>EuropeanETRS89_LAEAQuad</tmsc:Identifier>
-	<tmsc:BoundingBox crs="http://www.opengis.net/def/crs/EPSG/0/3035">
-		<tmsc:LowerCorner>1000000.0 2000000.0</tmsc:LowerCorner>
-		<tmsc:UpperCorner>5500000.0 6500000</tmsc:UpperCorner>
+	<tmsc:BoundingBox crs="http://www.opengis.net/def/crs/EPSG/0/3035" orderedAxes="Y,X">
+		<tmsc:LowerCorner>1000000 2000000</tmsc:LowerCorner>
+		<tmsc:UpperCorner>5500000 6500000</tmsc:UpperCorner>
 	</tmsc:BoundingBox>
-	<tmsc:SupportedCRS>
+	<tmsc:crs>
 		<tmsc:URI>
          http://www.opengis.net/def/crs/EPSG/0/3035</tmsc:URI>
-	</tmsc:SupportedCRS>
+	</tmsc:crs>
 	<TileMatrix>
 		<tmsc:Identifier>0</tmsc:Identifier>
 		<ScaleDenominator>62779017.8571428</ScaleDenominator>

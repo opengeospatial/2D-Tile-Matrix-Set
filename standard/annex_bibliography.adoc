@@ -25,15 +25,15 @@
 
 [11] MapBox: MBTiles Specification. https://github.com/mapbox/mbtiles-spec
 
-[12] Masó J.: OGC Testbed-15: Maps and Tiles API Engineering Report (OGC 19-069), https://docs.ogc.org/per/19-069.html
+[12] MasÃ³ J.: OGC Testbed-15: Maps and Tiles API Engineering Report (OGC 19-069), https://docs.ogc.org/per/19-069.html
 
-[13] Masó J., Pomakis K. and Julià N.: Web Map Tile Service (WMTS), version 1.0. (OGC 07-057r7) http://portal.opengeospatial.org/files/?artifact_id=35326
+[13] MasÃ³ J., Pomakis K. and JuliÃ  N.: Web Map Tile Service (WMTS), version 1.0. (OGC 07-057r7) http://portal.opengeospatial.org/files/?artifact_id=35326
 
-[14] Masó J., Web Map Tile Service (WMTS) Simple Profile, version 1.0 (OGC 13-082r2), http://docs.opengeospatial.org/is/13-082r2/13-082r2.html
+[14] MasÃ³ J.: Map Tile Service (WMTS) Simple Profile, version 1.0 (OGC 13-082r2), http://docs.opengeospatial.org/is/13-082r2/13-082r2.html
 
 [15] Meek S.: OGC Vector Tiles Pilot: Summary Engineering Report (OGC 18-086r1), https://docs.opengeospatial.org/per/18-086r1.html
 
-[16] Müller M.: Symbology Encoding (SE) Implementation Specification, version 1.1.0 (OGC 05-077r4), http://portal.opengeospatial.org/files/?artifact_id=16700
+[16] MÃ¼ller M.: Symology Encoding (SE) Implementation Specification, version 1.1.0 (OGC 05-077r4), http://portal.opengeospatial.org/files/?artifact_id=16700
 
 [17] NGA: Implementation Practice Web Mercator Map Projection. NGA.SIG.0011_1.0_WEBMERC, https://nsgreg.nga.mil/doc/view?i=4105
 

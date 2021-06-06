@@ -113,7 +113,7 @@ One for each keyword authority used
 
 | tileMatrix‌Set | Tile matrix set definition | TileMatrixSet data strcuture. See <<parts-of-tilematrixset-data-structure>> | Zero or one (optional)^d^
 
-| tileMatrix‌SetURI | Reference to a tileMatrixSet | URI type^b^ | Zero or One (optional)^d^
+| tileMatrix‌SetURI | Reference to an official source for this tileMatrixSet | URI type^b^ | Zero or One (optional)^d^
 
 | tileMatrix‌SetDefinition | Reference to a tileMatrixSet | URI type^c^
 | Zero or One (optional)^d^

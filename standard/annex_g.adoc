@@ -20,7 +20,7 @@ The complete JSON example can be found in the supplemental material described in
 
 [source,json]
 ....
-include::../schemas/tms/2.0/json/examples/tilematrixset/GNOSISGlobalGrid.json[lines=1..189]
+include::../schemas/tms/2.0/json/examples/tilematrixset/GNOSISGlobalGrid.json[lines=1..184]
       }
    ]
 }
@@ -49,8 +49,8 @@ One can define an arbitrary number of zoom levels. Here, 3 zoom levels are illus
 
 [source,json]
 ....
-include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=1..18]
-include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=604..862]
+include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=1..11]
+include::../schemas/tms/2.0/json/examples/tilematrixset/CDBGlobalGrid.json[lines=597..790]
       }
    ]
 }

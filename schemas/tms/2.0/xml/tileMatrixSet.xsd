@@ -35,7 +35,7 @@
 							<annotation>
 								<documentation>Reference to an official source for this tileMatrixSet</documentation>
 							</annotation>
-						</element>						
+						</element>
 						<element ref="tmsc:BoundingBox" minOccurs="0">
 							<annotation>
 								<documentation>
@@ -48,6 +48,15 @@
 							<annotation>
 								<documentation>Reference to one coordinate reference
 								system (CRS).</documentation>
+							</annotation>
+						</element>
+						<element name="OrderedAxes" type="string" minOccurs="0">
+							<annotation>
+								<documentation>
+									Names of dimensions in this CRS, separated by a comma.
+                           These names are specified by the CRS definition,
+                           but can also be specified here to avoid any ambiguity.
+                        </documentation>
 							</annotation>
 						</element>
 						<element name="WellKnownScaleSet" type="anyURI" minOccurs="0">

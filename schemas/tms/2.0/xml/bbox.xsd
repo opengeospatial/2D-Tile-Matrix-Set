@@ -8,7 +8,7 @@
     encodes the parts of this class that are expected to be useful for other
     metadata. Both may be used within the Contents section of OWS service
     metadata (Capabilities) documents.
-    
+
     OWS is an OGC Standard.
     Copyright (c) 2009 Open Geospatial Consortium, Inc. All Rights Reserved.
     To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
@@ -33,24 +33,14 @@
       SURROUNDING all associated data.</documentation>
 		</annotation>
 		<sequence>
-			<element name="LowerCorner" type="tmsc:PositionType">
+			<element name="LowerLeft" type="tmsc:PositionType">
 				<annotation>
-					<documentation>Position of the bounding box corner at which the
-          value of each coordinate normally is the algebraic minimum within
-          this bounding box. In some cases, this position is normally
-          displayed at the top, such as the top left for some image
-          coordinates. For more information, see Subclauses 10.2.5 and
-          C.13.</documentation>
+					<documentation>Position at the bottom-left corner of the bounding box.</documentation>
 				</annotation>
 			</element>
-			<element name="UpperCorner" type="tmsc:PositionType">
+			<element name="UpperRight" type="tmsc:PositionType">
 				<annotation>
-					<documentation>Position of the bounding box corner at which the
-          value of each coordinate normally is the algebraic maximum within
-          this bounding box. In some cases, this position is normally
-          displayed at the bottom, such as the bottom right for some image
-          coordinates. For more information, see Subclauses 10.2.5 and
-          C.13.</documentation>
+					<documentation>Position at the top-right corner of the bounding box.</documentation>
 				</annotation>
 			</element>
 		</sequence>
@@ -71,9 +61,9 @@
 		<attribute name="orderedAxes" type="string" use="optional">
 			<annotation>
 				<documentation>Names of dimensions in this CRS (the length of a
-        coordinate sequence in this use of the PositionType). This number is
-        specified by the CRS definition, but can also be specified
-        here.</documentation>
+        coordinate sequence in this use of the PositionType). These names are
+        specified by the CRS definition, but can also be specified here to
+        avoid any ambiguity.</documentation>
 			</annotation>
 		</attribute>
 	</complexType>

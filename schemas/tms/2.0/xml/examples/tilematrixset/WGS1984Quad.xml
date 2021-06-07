@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TileMatrixSet id="WGS1984Quad" xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../../tilematrixset.xsd">
-	<tmsc:Title>EPSG:4326 for the World</tmsc:Title>
-	<tmsc:Identifier>WorldCRS84Quad</tmsc:Identifier>
-	<tmsc:BoundingBox crs="http://www.opengis.net/def/crs/EPSG/0/4326" orderedAxes="lat,lon">
-		<tmsc:LowerCorner>-90 -180</tmsc:LowerCorner>
-		<tmsc:UpperCorner>90 180</tmsc:UpperCorner>
-	</tmsc:BoundingBox>
-	<tmsc:crs>
-		<tmsc:URI>http://www.opengis.net/def/crs/EPSG/0/4326</tmsc:URI>
-	</tmsc:crs>
-	<WellKnownScaleSet>
-            http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad
-         </WellKnownScaleSet>
+   <tmsc:Title>EPSG:4326 for the World</tmsc:Title>
+   <tmsc:Identifier>WorldCRS84Quad</tmsc:Identifier>
+   <uri>http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad</uri>
+   <tmsc:crs>
+      <tmsc:URI>http://www.opengis.net/def/crs/EPSG/0/4326</tmsc:URI>
+   </tmsc:crs>
+   <OrderedAxes>Lat,Lon</OrderedAxes>
+   <tmsc:BoundingBox>
+      <tmsc:LowerLeft>-90 -180</tmsc:LowerLeft>
+      <tmsc:UpperRight>90 180</tmsc:UpperRight>
+   </tmsc:BoundingBox>
+   <WellKnownScaleSet>http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad</WellKnownScaleSet>
       <TileMatrix>
         <tmsc:Identifier>0</tmsc:Identifier>
         <ScaleDenominator>279541132.014358</ScaleDenominator>

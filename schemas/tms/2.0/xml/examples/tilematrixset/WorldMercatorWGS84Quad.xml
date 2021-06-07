@@ -7,10 +7,6 @@
       <tmsc:URI>http://www.opengis.net/def/crs/EPSG/0/3395</tmsc:URI>
    </tmsc:crs>
    <OrderedAxes>E,N</OrderedAxes>
-   <tmsc:BoundingBox>
-      <tmsc:LowerLeft>-20037508.3427892 -20037508.3427892</tmsc:LowerLeft>
-      <tmsc:UpperRight>20037508.3427892 20037508.3427892</tmsc:UpperRight>
-   </tmsc:BoundingBox>
    <WellKnownScaleSet>http://www.opengis.net/def/wkss/OGC/1.0/WorldMercatorWGS84</WellKnownScaleSet>
    <TileMatrix>
       <tmsc:Identifier>0</tmsc:Identifier>

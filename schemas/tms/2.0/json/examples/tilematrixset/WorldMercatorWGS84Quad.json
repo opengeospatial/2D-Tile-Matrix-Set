@@ -4,10 +4,6 @@
    "uri": "http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldMercatorWGS84Quad",
    "crs": "http://www.opengis.net/def/crs/EPSG/0/3395",
    "orderedAxes": ["E", "N"],
-   "boundingBox": {
-      "lowerLeft": [-20037508.3427892, -20037508.3427892],
-      "upperRight": [20037508.3427892, 20037508.3427892]
-   },
    "wellKnownScaleSet": "http://www.opengis.net/def/wkss/OGC/1.0/WorldMercatorWGS84",
    "tileMatrices":
    [

@@ -4,10 +4,6 @@
    "uri": "http://www.opengis.net/def/tilematrixset/OGC/1.0/UTM31WGS84Quad",
    "crs": "http://www.opengis.net/def/crs/EPSG/0/32631",
    "orderedAxes": ["E", "N"],
-   "boundingBox": {
-      "lowerLeft": [ -9501965.72931276, -20003931.4586255 ],
-      "upperRight": [ 10501965.7293128, 20003931.4586255 ]
-   },
    "tileMatrices":
    [
       {

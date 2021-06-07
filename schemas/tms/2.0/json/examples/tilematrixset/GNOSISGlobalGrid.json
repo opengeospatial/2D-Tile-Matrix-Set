@@ -4,10 +4,6 @@
    "uri": "http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid",
    "crs": "http://www.opengis.net/def/crs/EPSG/0/4326",
    "orderedAxes": ["Lat", "Lon"],
-   "boundingBox": {
-      "lowerLeft": [ -90, -180 ],
-      "upperRight": [ 90, 180 ]
-   },
    "wellKnownScaleSet": "http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad",
    "tileMatrices" : [
       {

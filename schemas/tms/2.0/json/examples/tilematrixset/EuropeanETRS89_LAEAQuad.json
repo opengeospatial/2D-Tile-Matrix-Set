@@ -4,10 +4,6 @@
    "uri": "http://www.opengis.net/def/tilematrixset/OGC/1.0/EuropeanETRS89_LAEAQuad",
    "crs": "http://www.opengis.net/def/crs/EPSG/0/3035",
    "orderedAxes": [ "Y", "X" ],
-   "boundingBox": {
-      "lowerLeft": [ 1000000.0, 2000000.0 ],
-      "upperRight": [ 5500000.0, 6500000.0 ]
-   },
    "tileMatrices":
    [
       {

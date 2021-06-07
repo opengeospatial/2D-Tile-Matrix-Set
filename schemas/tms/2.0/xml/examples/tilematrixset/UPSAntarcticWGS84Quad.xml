@@ -7,10 +7,6 @@
       <tmsc:URI>http://www.opengis.net/def/crs/EPSG/0/5042</tmsc:URI>
    </tmsc:crs>
    <OrderedAxes>E,N</OrderedAxes>
-   <tmsc:BoundingBox>
-      <tmsc:LowerLeft>-14440759.350252 -14440759.350252</tmsc:LowerLeft>
-      <tmsc:UpperRight>18440759.350252 18440759.350252</tmsc:UpperRight>
-   </tmsc:BoundingBox>
    <TileMatrix>
       <tmsc:Identifier>0</tmsc:Identifier>
       <ScaleDenominator>458726544.4</ScaleDenominator>

@@ -7,10 +7,6 @@
       <tmsc:URI>http://www.opengis.net/def/crs/OGC/1.3/CRS84</tmsc:URI>
    </tmsc:crs>
    <OrderedAxes>Lon,Lat</OrderedAxes>
-   <tmsc:BoundingBox>
-      <tmsc:LowerLeft>-180 -90</tmsc:LowerLeft>
-      <tmsc:UpperRight>180 90</tmsc:UpperRight>
-   </tmsc:BoundingBox>
    <WellKnownScaleSet>http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad</WellKnownScaleSet>
       <TileMatrix>
         <tmsc:Identifier>0</tmsc:Identifier>

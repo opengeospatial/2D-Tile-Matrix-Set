@@ -4,7 +4,6 @@
    "keywords" : [ "agriculture", "Daraa", "Syria", "OpenStreetMap", "NSG", "TDS" ],
    "dataType" : "vector",
    "accessConstraints" : "unclassified",
-   "dates": 1,
    "links" : [
       {
          "rel" : "self",

@@ -52,6 +52,11 @@
 								</restriction>
 							</simpleType>
 						</element>
+						<element name="License" type="string" minOccurs="0">
+							<annotation>
+								<documentation>License applicable to the tiles</documentation>
+							</annotation>
+						</element>
 						<element name="MediaType" type="tmsc:MediaTypeType" minOccurs="0" maxOccurs="unbounded">
 							<annotation>
 								<documentation>Media types available for the tiles</documentation>
@@ -77,6 +82,16 @@
 								<documentation>Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet. If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all</documentation>
 							</annotation>
 						</element>
+						<element ref="tmsc:CRS" minOccurs="0">
+							<annotation>
+								<documentation>Coordinate Reference System (CRS)</documentation>
+							</annotation>
+						</element>						
+						<element name="Epoch" type="double" minOccurs="0">
+							<annotation>
+								<documentation>Epoch of the Coordinate Reference System (CRS)</documentation>
+							</annotation>
+						</element>						
 						<element ref="tmsc:BoundingBox" minOccurs="0">
 							<annotation>
 								<documentation>
@@ -85,9 +100,14 @@
 									set, in the supported CRS </documentation>
 							</annotation>
 						</element>
-						<element ref="tms:Date" minOccurs="0">
+						<element name="Created" type="dateTime" minOccurs="0">
 							<annotation>
-								<documentation>Type of data represented in the tiles</documentation>
+								<documentation>Timestamp indicating when the Tile Set was first produced</documentation>
+							</annotation>
+						</element>
+						<element name="Updated" type="dateTime" minOccurs="0">
+							<annotation>
+								<documentation>Timestamp of the last Tile Set change/revision</documentation>
 							</annotation>
 						</element>
 						<element ref="tms:Layer" minOccurs="0" maxOccurs="unbounded">
@@ -200,13 +220,13 @@
 						<annotation>
 							<documentation>Maximum cell size for usage of the layer</documentation>
 						</annotation>
-					</element>					
-					<element name="MaxTileMatrixId" type="tmsc:CodeType" minOccurs="0">
+					</element>
+					<element name="MaxTileMatrix" type="tmsc:CodeType" minOccurs="0">
 						<annotation>
 							<documentation>TileMatrix identifier associated with the MinScaleDenominator</documentation>
 						</annotation>
 					</element>
-					<element name="MinTileMatrixId" type="tmsc:CodeType" minOccurs="0">
+					<element name="MinTileMatrix" type="tmsc:CodeType" minOccurs="0">
 						<annotation>
 							<documentation>TileMatrix identifier associated with the MaxScaleDenominator</documentation>
 						</annotation>
@@ -216,9 +236,14 @@
 							<documentation>Minimum bounding rectangle surrounding the layer</documentation>
 						</annotation>
 					</element>
-					<element ref="tms:Date" minOccurs="0">
+					<element name="Created" type="dateTime" minOccurs="0">
 						<annotation>
-							<documentation>Dates of creation, publication, revision, validity and reception of the layer</documentation>
+							<documentation>Timestamp indicating when the layer was first produced</documentation>
+						</annotation>
+					</element>
+					<element name="Updated" type="dateTime" minOccurs="0">
+						<annotation>
+							<documentation>Timestamp of the last layer change/revision</documentation>
 						</annotation>
 					</element>
 					<element ref="tms:Style" minOccurs="0" maxOccurs="unbounded">
@@ -378,41 +403,6 @@
 		</restriction>
 	</simpleType>
 	<!-- =========================================================== -->
-	<element name="Date" type="tms:DateType"/>
-	<complexType name="DateType">
-		<annotation>
-			<documentation>Type of data represented in the tiles</documentation>
-		</annotation>
-		<sequence>
-			<element name="CreatedOn" type="dateTime" minOccurs="0">
-				<annotation>
-					<documentation>Timestamp indicating when the Tile Set was first produced</documentation>
-				</annotation>
-			</element>
-			<element name="PublishedOn" type="dateTime" minOccurs="0">
-				<annotation>
-					<documentation>Timestamp indicating when the Tile Set was first made available to the users</documentation>
-				</annotation>
-			</element>
-			<element name="RevisedOn" type="dateTime" minOccurs="0">
-				<annotation>
-					<documentation>Timestamp of the last Tile Set change/revision</documentation>
-				</annotation>
-			</element>
-			<element name="ReceivedOn" type="dateTime" minOccurs="0">
-				<annotation>
-					<documentation>Timestamp indicating when the Tile Set was received from an external provider</documentation>
-				</annotation>
-			</element>
-			<element name="ValidUntil" type="dateTime" minOccurs="0">
-				<annotation>
-					<documentation>Timestamp marking the future validity of the Tile Set (the Tile Set may no longer be applicable at this date, or that a new revision of the Tile Set is going to be issued)		
-					</documentation>
-				</annotation>
-			</element>
-		</sequence>
-	</complexType>
-	<!-- =========================================================== -->
 	<element name="CenterPoint" type="tms:TilePointType"/>
 	<complexType name="TilePointType">
 		<annotation>
@@ -434,14 +424,13 @@
 					<documentation>Cell size of the tile matrix selected</documentation>
 				</annotation>
 			</element>
-			<element name="TileMatrixId" type="tmsc:CodeType" minOccurs="0">
+			<element name="TileMatrix" type="tmsc:CodeType" minOccurs="0">
 				<annotation>
 					<documentation>TileMatrix identifier associated with the scaleDenominator</documentation>
 				</annotation>
 			</element>
 		</sequence>
 	</complexType>
-
 	<element name="Link" type="tms:LinkType"/>
 	<complexType name="LinkType">
 		<annotation>

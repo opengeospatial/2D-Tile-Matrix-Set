@@ -107,13 +107,15 @@ One for each keyword authority used
 
 | accessConstraints | Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set | ClassificationCode code list, see <<parts-of-classification-code-enum>> | Zero or one (optional)
 
+| license | License applicable to the tiles | CharacterString | Zero or one (optional)
+
 | mediaType | Media types available for the tiles | CharacterString restricted by RFC6838 section 4.2 | Zero or more (optional)^f^
 
 | dataType | Type of data represented in the tiles | DataTypeCode code list | one (mandatory)
 
 | tileMatrix‌Set | Tile matrix set definition | TileMatrixSet data strcuture. See <<parts-of-tilematrixset-data-structure>> | Zero or one (optional)^d^
 
-| tileMatrix‌SetURI | Reference to an official source for this tileMatrixSet | URI type^b^ | Zero or One (optional)^d^
+| tileMatrix‌SetURI | Reference to an official source for this tileMatrixSet | URI type^b^ | Zero or One (optional) Include if this is one of the OGC NA TileMatrixSets
 
 | tileMatrix‌SetDefinition | Reference to a tileMatrixSet | URI type^c^
 | Zero or One (optional)^d^
@@ -137,7 +139,7 @@ One for each keyword authority used
 
 ^c^     Points to a definition of the TileMatrixSet provided by a tile service
 
-^d^     At least one of the TileMatrixSet,  TileMatrixSetURI or TileMatrixSetDefinition SHALL be provided.
+^d^     At least one of the TileMatrixSet, TileMatrixSetDefinition SHALL be provided.
 
 ^e^     Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file).
 

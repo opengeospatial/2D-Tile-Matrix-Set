@@ -64,7 +64,7 @@
       purposes.</documentation>
 		</annotation>
 	</element>
-	<element name="crs" substitutionGroup="tmsc:AvailableCRS">
+	<element name="CRS" substitutionGroup="tmsc:AvailableCRS">
 		<annotation>
 			<documentation>The only coordinate reference system in which data from this
       data(set) or resource is available or supported. More specific parameter

@@ -44,7 +44,7 @@
 									set, in the supported CRS </documentation>
 							</annotation>
 						</element>
-						<element ref="tmsc:crs">
+						<element ref="tmsc:CRS">
 							<annotation>
 								<documentation>Reference to one coordinate reference
 								system (CRS).</documentation>

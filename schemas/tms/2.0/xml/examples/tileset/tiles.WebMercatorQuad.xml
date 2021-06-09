@@ -13,143 +13,143 @@
 	<TileMatrixSetURI>http://www.opengis.net/def/TileMatrixset/OGC/1.0/WebMercatorQuad</TileMatrixSetURI>
 	<TileMatrixSetDefinition>/Daraa/ogcapi/TileMatrixSets/WebMercatorQuad</TileMatrixSetDefinition>
 	<TileMatrixSetLimit>
-		<TileMatrixId>0</TileMatrixId>
+		<TileMatrix>0</TileMatrix>
 		<MinTileRow>0</MinTileRow>
 		<MaxTileRow>0</MaxTileRow>
 		<MinTileCol>0</MinTileCol>
 		<MaxTileCol>0</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>1</TileMatrixId>
+		<TileMatrix>1</TileMatrix>
 		<MinTileRow>0</MinTileRow>
 		<MaxTileRow>0</MaxTileRow>
 		<MinTileCol>1</MinTileCol>
 		<MaxTileCol>1</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>2</TileMatrixId>
+		<TileMatrix>2</TileMatrix>
 		<MinTileRow>1</MinTileRow>
 		<MaxTileRow>1</MaxTileRow>
 		<MinTileCol>2</MinTileCol>
 		<MaxTileCol>2</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>3</TileMatrixId>
+		<TileMatrix>3</TileMatrix>
 		<MinTileRow>3</MinTileRow>
 		<MaxTileRow>3</MaxTileRow>
 		<MinTileCol>4</MinTileCol>
 		<MaxTileCol>4</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>4</TileMatrixId>
+		<TileMatrix>4</TileMatrix>
 		<MinTileRow>6</MinTileRow>
 		<MaxTileRow>6</MaxTileRow>
 		<MinTileCol>9</MinTileCol>
 		<MaxTileCol>9</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>5</TileMatrixId>
+		<TileMatrix>5</TileMatrix>
 		<MinTileRow>12</MinTileRow>
 		<MaxTileRow>12</MaxTileRow>
 		<MinTileCol>19</MinTileCol>
 		<MaxTileCol>19</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>6</TileMatrixId>
+		<TileMatrix>6</TileMatrix>
 		<MinTileRow>25</MinTileRow>
 		<MaxTileRow>25</MaxTileRow>
 		<MinTileCol>38</MinTileCol>
 		<MaxTileCol>38</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>7</TileMatrixId>
+		<TileMatrix>7</TileMatrix>
 		<MinTileRow>51</MinTileRow>
 		<MaxTileRow>51</MaxTileRow>
 		<MinTileCol>76</MinTileCol>
 		<MaxTileCol>76</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>8</TileMatrixId>
+		<TileMatrix>8</TileMatrix>
 		<MinTileRow>103</MinTileRow>
 		<MaxTileRow>103</MaxTileRow>
 		<MinTileCol>153</MinTileCol>
 		<MaxTileCol>153</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>9</TileMatrixId>
+		<TileMatrix>9</TileMatrix>
 		<MinTileRow>206</MinTileRow>
 		<MaxTileRow>207</MaxTileRow>
 		<MinTileCol>307</MinTileCol>
 		<MaxTileCol>307</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>10</TileMatrixId>
+		<TileMatrix>10</TileMatrix>
 		<MinTileRow>413</MinTileRow>
 		<MaxTileRow>414</MaxTileRow>
 		<MinTileCol>614</MinTileCol>
 		<MaxTileCol>615</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>11</TileMatrixId>
+		<TileMatrix>11</TileMatrix>
 		<MinTileRow>826</MinTileRow>
 		<MaxTileRow>828</MaxTileRow>
 		<MinTileCol>1228</MinTileCol>
 		<MaxTileCol>1231</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>12</TileMatrixId>
+		<TileMatrix>12</TileMatrix>
 		<MinTileRow>1652</MinTileRow>
 		<MaxTileRow>1657</MaxTileRow>
 		<MinTileCol>2456</MinTileCol>
 		<MaxTileCol>2463</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>13</TileMatrixId>
+		<TileMatrix>13</TileMatrix>
 		<MinTileRow>3304</MinTileRow>
 		<MaxTileRow>3314</MaxTileRow>
 		<MinTileCol>4912</MinTileCol>
 		<MaxTileCol>4927</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>14</TileMatrixId>
+		<TileMatrix>14</TileMatrix>
 		<MinTileRow>6608</MinTileRow>
 		<MaxTileRow>6628</MaxTileRow>
 		<MinTileCol>9825</MinTileCol>
 		<MaxTileCol>9855</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>15</TileMatrixId>
+		<TileMatrix>15</TileMatrix>
 		<MinTileRow>13216</MinTileRow>
 		<MaxTileRow>13257</MaxTileRow>
 		<MinTileCol>19651</MinTileCol>
 		<MaxTileCol>19711</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>16</TileMatrixId>
+		<TileMatrix>16</TileMatrix>
 		<MinTileRow>26433</MinTileRow>
 		<MaxTileRow>26514</MaxTileRow>
 		<MinTileCol>39303</MinTileCol>
 		<MaxTileCol>39423</MaxTileCol>
 	</TileMatrixSetLimit>
 	<TileMatrixSetLimit>
-		<TileMatrixId>17</TileMatrixId>
+		<TileMatrix>17</TileMatrix>
 		<MinTileRow>52866</MinTileRow>
 		<MaxTileRow>53028</MaxTileRow>
 		<MinTileCol>78606</MinTileCol>
 		<MaxTileCol>78847</MaxTileCol>
 	</TileMatrixSetLimit>
 	<tmsc:BoundingBox>
-		<tmsc:LowerCorner>35 32</tmsc:LowerCorner>
-		<tmsc:UpperCorner>37 33.2671397</tmsc:UpperCorner>
+		<tmsc:LowerLeft>35 32</tmsc:LowerLeft>
+		<tmsc:UpperRight>37 33.2671397</tmsc:UpperRight>
 	</tmsc:BoundingBox>
 	<Layer>
 		<tmsc:Identifier>AgricultureSrf</tmsc:Identifier>
 		<GeometryType>polygons</GeometryType>
 		<MinScaleDenominator>4265.4591676995678</MinScaleDenominator>
-		<MaxTileMatrixId>17</MaxTileMatrixId>
+		<MaxTileMatrix>17</MaxTileMatrix>
 		<tmsc:BoundingBox>
-			<tmsc:LowerCorner>35.898213 32.4633913</tmsc:LowerCorner>
-			<tmsc:UpperCorner>36.5614696 32.8370158</tmsc:UpperCorner>
+			<tmsc:LowerLeft>35.898213 32.4633913</tmsc:LowerLeft>
+			<tmsc:UpperRight>36.5614696 32.8370158</tmsc:UpperRight>
 		</tmsc:BoundingBox>
 		<StylableLayerSet>OSMNSGTDS</StylableLayerSet>
 		<PropertySchema>
@@ -182,10 +182,10 @@
 		<tmsc:Identifier>TransportationGroundCrv</tmsc:Identifier>
 		<GeometryType>lines</GeometryType>
 		<MinScaleDenominator>4265.4591676995678</MinScaleDenominator>
-		<MaxTileMatrixId>17</MaxTileMatrixId>
+		<MaxTileMatrix>17</MaxTileMatrix>
 		<tmsc:BoundingBox>
-			<tmsc:LowerCorner>35.9028738 32.4168138</tmsc:LowerCorner>
-			<tmsc:UpperCorner>36.5747694 33.1424348</tmsc:UpperCorner>
+			<tmsc:LowerLeft>35.9028738 32.4168138</tmsc:LowerLeft>
+			<tmsc:UpperRight>36.5747694 33.1424348</tmsc:UpperRight>
 		</tmsc:BoundingBox>
 		<StylableLayerSet>OSMNSGTDS</StylableLayerSet>
 		<PropertySchema>
@@ -220,7 +220,7 @@
 		<Coordinates>36.2298413 32.65020355</Coordinates>
 		<ScaleDenominator>17061.8366707982</ScaleDenominator>
 		<CellSize>17061.8366707982</CellSize>
-		<TileMatrixId>15</TileMatrixId>
+		<TileMatrix>15</TileMatrix>
 	</CenterPoint>
 	<Link rel="self" href="/Daraa/ogcapi/tiles/WebMercatorQuad?f=json" type="application/json" />
 	<Link rel="alternate" href="/Daraa/ogcapi/tiles/WebMercatorQuad?f=tilejson" type="application/json+vnd.mapbox.tilejson" />

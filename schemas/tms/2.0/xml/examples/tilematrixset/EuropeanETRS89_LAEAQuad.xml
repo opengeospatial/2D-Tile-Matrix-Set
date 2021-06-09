@@ -3,9 +3,9 @@
    <tmsc:Title>Lambert Azimuthal Equal Area ETRS89 for Europe</tmsc:Title>
    <tmsc:Identifier>EuropeanETRS89_LAEAQuad</tmsc:Identifier>
    <uri>http://www.opengis.net/def/tilematrixset/OGC/1.0/EuropeanETRS89_LAEAQuad</uri>
-   <tmsc:crs>
+   <tmsc:CRS>
       <tmsc:URI>http://www.opengis.net/def/crs/EPSG/0/3035</tmsc:URI>
-   </tmsc:crs>
+   </tmsc:CRS>
    <OrderedAxes>Y,X</OrderedAxes>
    <TileMatrix>
       <tmsc:Identifier>0</tmsc:Identifier>

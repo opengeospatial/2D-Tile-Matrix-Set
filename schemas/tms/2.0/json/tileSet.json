@@ -239,8 +239,8 @@
 					"description": "Style used to generate the layer in the tileset",
 					"$ref": "#/definitions/style"
 				},
-				"stylableLayerSet": {
-					"description": "Identifiers of styles that can be used in conjunction with this layer",
+				"geoDataClass": {
+					"description": "URI identifying a class of data contained in this layer (useful to determine compatibility with styles or processes)",
 					"type": "string"
 				},
 				"propertiesSchema": {

@@ -215,11 +215,11 @@
 					"description": "Maximum cell size for usage of the layer",
 					"type": "number"
 				},
-				"maxTileMatrixId": {
+				"maxTileMatrix": {
 					"description": "TileMatrix identifier associated with the minScaleDenominator",
 					"type": "string"
 				},
-				"minTileMatrixId": {
+				"minTileMatrix": {
 					"description": "TileMatrix identifier associated with the maxScaleDenominator",
 					"type": "string"
 				},

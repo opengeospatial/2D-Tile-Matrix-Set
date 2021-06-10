@@ -86,12 +86,12 @@
 							<annotation>
 								<documentation>Coordinate Reference System (CRS)</documentation>
 							</annotation>
-						</element>						
+						</element>
 						<element name="Epoch" type="double" minOccurs="0">
 							<annotation>
 								<documentation>Epoch of the Coordinate Reference System (CRS)</documentation>
 							</annotation>
-						</element>						
+						</element>
 						<element ref="tmsc:BoundingBox" minOccurs="0">
 							<annotation>
 								<documentation>
@@ -196,11 +196,16 @@
 							<documentation>Category where the layer can be grouped</documentation>
 						</annotation>
 					</element>
-					<element ref="tmsc:SupportedCRS" minOccurs="0" maxOccurs="unbounded">
-						<annotation>
-							<documentation>Coordinate Reference System (CRS)</documentation>
-						</annotation>
-					</element>
+						<element ref="tmsc:CRS" minOccurs="0">
+							<annotation>
+								<documentation>Coordinate Reference System (CRS)</documentation>
+							</annotation>
+						</element>
+						<element name="Epoch" type="double" minOccurs="0">
+							<annotation>
+								<documentation>Epoch of the Coordinate Reference System (CRS)</documentation>
+							</annotation>
+						</element>
 					<element name="MinScaleDenominator" type="double" minOccurs="0">
 						<annotation>
 							<documentation>Minimum scale denominator for usage of the layer</documentation>
@@ -251,9 +256,9 @@
 							<documentation>Style used to generate the layer in the tileset</documentation>
 						</annotation>
 					</element>
-					<element name="StylableLayerSet" type="tmsc:CodeType" minOccurs="0" maxOccurs="unbounded">
+					<element name="GeoDataClass" type="tmsc:CodeType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Identifiers of styles that can be used in conjunction with this layer</documentation>
+							<documentation>URI identifying a class of data contained in this layer (useful to determine compatibility with styles or processes)</documentation>
 						</annotation>
 					</element>
 					<element ref="tms:PropertySchema" minOccurs="0" maxOccurs="unbounded">

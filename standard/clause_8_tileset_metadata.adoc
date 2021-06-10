@@ -113,6 +113,10 @@ One for each keyword authority used
 
 | dataType | Type of data represented in the tiles | DataTypeCode code list | one (mandatory)
 
+| crs | Coordinate Reference System (CRS)^j^ | CRSType type, see <<parts-of-crs-type-union>> | Zero or one (optional)
+
+| epoch | Epoch of the Coordinate Reference System (CRS) | Number | Zero or one (optional)
+
 | tileMatrix‌Set | Tile matrix set definition | TileMatrixSet data strcuture. See <<parts-of-tilematrixset-data-structure>> | Zero or one (optional)^d^
 
 | tileMatrix‌SetURI | Reference to an official source for this tileMatrixSet | URI type^b^ | Zero or One (optional) Include if this is one of the OGC NA TileMatrixSets
@@ -150,6 +154,8 @@ One for each keyword authority used
 ^h^     In the same CRS than the TileMatrixSet
 
 ^i^     If style property mentions a style applied to all layers, the style property in layer should not be used.
+
+^j^     It should be compatible with the CRS of the TileMatrixSet. See <<TileMatrixSetCRSCompatibility>>
 |===
 
 A Layer can is a set of geographic objects (all of the same type) together in a way that can be presented to the user. IT can also be a coverage. Its elements are defined with a data structure defined in <<parts-of-geospatial-data-data-structure>>.
@@ -193,9 +199,9 @@ One for each keyword authority used
 
 | maxCellSize | Maximum scale denominator for usage of the layer | double^c^ | Zero or one (optional)^f^
 
-| maxTileMatrixId | TileMatrix identifier associated with the minScaleDenominator | CharacterString^d^ | Zero or one (optional)^e^
+| maxTileMatrix | TileMatrix identifier associated with the minScaleDenominator | CharacterString^d^ | Zero or one (optional)^e^
 
-| minTileMatrixId | TileMatrix identifier associated with the maxScaleDenominator | CharacterString^d^ | Zero or one (optional)^f^
+| minTileMatrix | TileMatrix identifier associated with the maxScaleDenominator | CharacterString^d^ | Zero or one (optional)^f^
 
 | boundingBox | Minimum bounding rectangle surrounding the layer ^g^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
@@ -203,7 +209,7 @@ One for each keyword authority used
 
 | style | Style applied to this layer to generate the tiles in the tileset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^b^
 
-| stylableLayerSet | Identifiers of styles that can be used in conjunction with this layer | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or more (optional)
+| geoDataClass | URI identifying a class of data contained in this layer (useful to determine compatibility with styles or processes) | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or more (optional)
 
 | propertySchema | Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage) | FeatureAttribute data structure. See <<parts-of-feature-attribute-data-structure>> | Zero or more (optional)
 

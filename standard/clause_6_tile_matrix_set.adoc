@@ -177,7 +177,7 @@ Include one for each language represented
 One for each keyword authority used
 | uri | Reference to an official source for this tileMatrixSet | URI type | Zero or One (optional) Include when an official source exists
 
-| crs | Coordinate reference system (CRS) | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory) ^i^
+| crs | Coordinate reference system (CRS)^j^ | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory) ^i^
 
 | orderedAxes | Ordered list of names of the dimensions defined in the CRS | Ordered sequence of strings | Zero or one (optional)
 
@@ -204,6 +204,8 @@ One for each keyword authority used
 ^h^     In WMTS 1.0 a URN was used as a reference to a well-known scale set on the URN in WMTS. Later, OGC adopted URIs (instead of URNs) to do references. The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming Authority - Procedures document] specifies rules to transform form URN to URI. Implement a on-the-fly translations based on these rules is possible.
 
 ^i^     A single CRS can have several realizations and can be complemented by an epoch. In here it was decided that a TileMatrixSet is defined in a generic CRS. The CRS realization and epoch used by a concrete tileset is specified in the tileset metadata.
+
+^j^     The CRS of the TileSets using this TileMatrixSet should be compatible with this CRS. See <<TileMatrixSetCRSCompatibility>>
 |===
 
 A part from the general tile matrix set description an array of tile matrix elements is needed to define the distribution of tiles for each scale denominator.
@@ -325,6 +327,13 @@ NOTE: The bounding box of a tile matrix is not supplied explicitly because it ca
 ^b^    Used by Tile Map Service. Sometimes known as "tms" in other non OGC specifications
 |===
 
+[[TileMatrixSetCRSCompatibility]]
+===== TileMatrixSet CRS Compatibility
+In general the CRS of the TileSets using a TileMatrixSet should use the same CRS. However there are some situations where there is some flexibility:
+
+* The CRS of the TileSet is a realization of the datum ensemble CRS specified in the TileMatrixSet. E.g. TileSet CRS: EPSG:9057 (G1762 realization of WGS84) and TileMatrixSet CRS: EPSG:4326 (WGS84)
+* The CRS of the TileSet includes additional dimensions beyond the 2 specified in the CRS of the TileMatrixSet. E.g. TileSet CRS: EPSG:4979 (lat, lon, h in WGS84) and TileMatrixSet CRS: EPSG:4326 (lat, lon in WGS84)
+* The CRS of the TileSet and the CRS of the TileMatrixSet only differ in axes ordering. E.g. TileSet CRS: EPSG:4326 (lat, lon) and TileMatrixSet CRS: CRS84 (lon, lat). The order specified in the TileMatrixSet only affects the ordering of the coordinates in PointOfOrigin and the optional BoundingBox coordinates. The CRS of the TileSet affects the ordering of the data in the tiles if applicable (e.g some formats of vector tiles)
 
 [[variablematrixwidth-requirements-class]]
 ==== VariableMatrixWidth requirements class

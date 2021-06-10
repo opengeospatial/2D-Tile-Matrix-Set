@@ -195,9 +195,13 @@
 					"description": "Category where the layer can be grouped",
 					"type": "string"
 				},
-				"supportedCRS": {
+				"crs": {
 					"description": "Coordinate Reference System (CRS)",
 					"$ref": "crs.json"
+				},
+				"epoch": {
+					"description": "Epoch of the Coordinate Reference System (CRS)",
+					"type": "number"
 				},
 				"minScaleDenominator": {
 					"description": "Minimum scale denominator for usage of the layer",
@@ -241,7 +245,10 @@
 				},
 				"geoDataClass": {
 					"description": "URI identifying a class of data contained in this layer (useful to determine compatibility with styles or processes)",
-					"type": "string"
+					"type": "array",
+					"items":{
+						"type": "string"
+					}					
 				},
 				"propertiesSchema": {
 					"description": "Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage)",

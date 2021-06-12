@@ -93,7 +93,7 @@
 					"examples": ["3"]
 				},
 				"scaleDenominator": {
-					"description": "Scale denominator level of this tile matrix",
+					"description": "Scale denominator of this tile matrix",
 					"type": "number",
 					"examples": [69885283]
 				},

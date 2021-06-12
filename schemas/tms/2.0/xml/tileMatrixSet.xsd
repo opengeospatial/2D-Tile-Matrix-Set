@@ -111,7 +111,7 @@
 						</element>
 						<element name="ScaleDenominator" type="double">
 							<annotation>
-								<documentation>Scale denominator level of this tile matrix</documentation>
+								<documentation>Scale denominator of this tile matrix</documentation>
 							</annotation>
 						</element>
 						<element name="CellSize" type="double">

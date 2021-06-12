@@ -169,17 +169,17 @@
 								<sequence>
 									<element name="Coalesce" type="positiveInteger">
 										<annotation>
-											<documentation>Number of tiles in width that coalesce in a single tile for this rows</documentation>
+											<documentation>Number of tiles in width that coalesce in a single tile for these rows</documentation>
 										</annotation>
 									</element>
 									<element name="MinTileRow" type="nonNegativeInteger">
 										<annotation>
-											<documentation>First tile row where the coalese factor apply on this tilematrix</documentation>
+											<documentation>First tile row where the coalescence factor applies for this tilematrix</documentation>
 										</annotation>
 									</element>
 									<element name="MaxTileRow" type="nonNegativeInteger">
 										<annotation>
-											<documentation>Last tile row where the coalese factor apply on this tilematrix</documentation>
+											<documentation>Last tile row where the coalescence factor applies for this tilematrix</documentation>
 										</annotation>
 									</element>
 								</sequence>

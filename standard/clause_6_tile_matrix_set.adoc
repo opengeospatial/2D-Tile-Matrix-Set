@@ -357,8 +357,8 @@ In order to make the description of the model more compact, only the tile rows t
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 | coalesce | Coalescence factor | Positive integer type ^a^ | One (mandatory)
-| minTileRow | First tile row where the coalese factor apply on this tilematrix | Non negative integer type ^b^ | One (mandatory)
-| maxTileRow | Last tile row where the coalese factor apply on this tilematrix | Non negative integer type ^c^ | One (mandatory)
+| minTileRow | First tile row where the coalescence factor applies for this tilematrix | Non negative integer type ^b^ | One (mandatory)
+| maxTileRow | Last tile row where the coalescence factor applies for this tilematrix | Non negative integer type ^c^ | One (mandatory)
 4+| ^a^    Shall be more than 1. Rows with Coalescence factor of 1 shall not be described here.
 
 ^b^    From 0 to maxTileRow.

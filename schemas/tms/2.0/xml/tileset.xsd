@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Edited with XMLSpy v2008 sp1 (http://www.altova.com) by Joan Masó 
+<!-- Edited with XMLSpy v2008 sp1 (http://www.altova.com) by Joan Masó
 	(UAB-CREAF-MiraMon). Based on previous documents of Keith Pomakis. -->
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en">
 	<annotation>
 		<appinfo>TileMatrixSet 2021-02-02</appinfo>
 		<documentation>
 			This XML Schema Document encodes the TileMatrisSet data structures.
-			TMS is an OGC Standard Copyright (c) 2021 Open Geospatial Consortium, Inc. All Rights Reserved. 
+			TMS is an OGC Standard Copyright (c) 2021 Open Geospatial Consortium, Inc. All Rights Reserved.
 		    To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
 		</documentation>
 	</annotation>
 	<!-- *********************************************************************
-	             Includes and imports.                            
+	             Includes and imports.
           ********************************************************************* -->
 	<include schemaLocation="tilematrixset.xsd"/>
 	<include schemaLocation="tilematrixlimits.xsd"/>
@@ -95,8 +95,8 @@
 						<element ref="tmsc:BoundingBox" minOccurs="0">
 							<annotation>
 								<documentation>
-									Minimum bounding rectangle surrounding 
-									the visible layer presented by this tile matrix 
+									Minimum bounding rectangle surrounding
+									the visible layer presented by this tile matrix
 									set, in the supported CRS </documentation>
 							</annotation>
 						</element>

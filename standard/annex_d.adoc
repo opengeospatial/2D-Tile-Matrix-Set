@@ -141,7 +141,7 @@ NOTE: for INSPIRE: The Technical Guidance for the implementation of INSPIRE View
 
 [[world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad]]
 ==== Variant 2: World EPSG:4326 Quad
-Despite that was commented in <<TileMatrixSetCRSCompatibility>>, some implementers prefer to define the previous TileMatrixSet using the CRS http://www.opengis.net/def/crs/EPSG/0/4326.
+Despite what is stated in <<TileMatrixSetCRSCompatibility>>, some implementers prefer to define the previous TileMatrixSet using the CRS http://www.opengis.net/def/crs/EPSG/0/4326.
 The definition is the same as the variant defined using http://www.opengis.net/def/crs/OGC/1.3/CRS84 except that CRS coordinates are expressed in latitude, longitude order, affecting the _PointOfOrigin_ and the _BoundingBox_ encoding only.
 For most practical purposes, both variations are equivalent because a TileMatrixSet primarily defines the tiling structure as well as the scale/resolution at each tile matrix, rather than how the data within each tile is stored.
 For many raster and vector tiles formats, CRS84 and EPSG:4326 are equivalent as a particular axis order is enforced.

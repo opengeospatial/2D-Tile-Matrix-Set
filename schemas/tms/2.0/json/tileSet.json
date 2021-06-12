@@ -248,7 +248,7 @@
 					"type": "array",
 					"items":{
 						"type": "string"
-					}					
+					}
 				},
 				"propertiesSchema": {
 					"description": "Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage)",

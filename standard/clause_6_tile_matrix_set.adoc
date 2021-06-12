@@ -333,7 +333,7 @@ In general the CRS of the TileSets using a TileMatrixSet should use the same CRS
 
 * The CRS of the TileSet is a realization of the datum ensemble CRS specified in the TileMatrixSet. E.g. TileSet CRS: EPSG:9057 (G1762 realization of WGS84) and TileMatrixSet CRS: EPSG:4326 (WGS84)
 * The CRS of the TileSet includes additional dimensions beyond the 2 specified in the CRS of the TileMatrixSet. E.g. TileSet CRS: EPSG:4979 (lat, lon, h in WGS84) and TileMatrixSet CRS: EPSG:4326 (lat, lon in WGS84)
-* The CRS of the TileSet and the CRS of the TileMatrixSet only differ in axes ordering. E.g. TileSet CRS: EPSG:4326 (lat, lon) and TileMatrixSet CRS: CRS84 (lon, lat). The order specified in the TileMatrixSet only affects the ordering of the coordinates in PointOfOrigin and the optional BoundingBox coordinates. The CRS of the TileSet affects the ordering of the data in the tiles if applicable (e.g some formats of vector tiles)
+* The CRS of the TileSet and the CRS of the TileMatrixSet only differ in axes ordering. E.g. TileSet CRS: EPSG:4326 (lat, lon) and TileMatrixSet CRS: CRS84 (lon, lat). The order specified in the TileMatrixSet only affects the coordinates order for the PointOfOrigin and optional BoundingBox within the TileMatrixSet definition itself. The CRS of the TileSet affects the coordinates order for the data in the tiles, if applicable (e.g some formats of vector tiles)
 
 [[variablematrixwidth-requirements-class]]
 ==== VariableMatrixWidth requirements class

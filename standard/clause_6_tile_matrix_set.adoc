@@ -248,7 +248,7 @@ Zero or more (optional)
 
 One for each keyword authority used
 
-| scaleDenominator | Scale denominator level of this tile matrix ^f^ | Double type | One (mandatory)
+| scaleDenominator | Scale denominator of this tile matrix ^f^ | Double type | One (mandatory)
 
 | cellSize | Cell size of this tile matrix ^f^ | Double type | One (mandatory)
 
@@ -304,7 +304,7 @@ One (mandatory)
 
 ^e^    In previous versions was called topLeftCorner and cornerOfOrigin did not exist
 
-^f^    The cell size of the tile can be obtained from the scaleDenominator by multiplying the later by 0.28 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it uses degrees, then metersPerUnit=2*pi__a__/360 (_a_ is the Earth maximum radius of the ellipsoid; a.k.a the radius of the equator.).
+^f^    The cell size of the tile can be obtained from the scaleDenominator by multiplying the latter by 0.28 × 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it uses degrees, then metersPerUnit=2*pi__a__/360 (_a_ is the Earth maximum radius of the ellipsoid; a.k.a the radius of the equator.).
 |===
  
 

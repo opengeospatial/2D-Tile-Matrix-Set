@@ -181,9 +181,9 @@ One for each keyword authority used
 
 | orderedAxes | Ordered list of names of the dimensions defined in the CRS | Ordered sequence of strings | Zero or one (optional)
 
-| wellKnown‌ScaleSet | Reference to a well-known scale set ^e^ | URI type ^h^ | Zero or one (optional) ^c^
+| wellKnownScaleSet | Reference to a well-known scale set ^e^ | URI type ^h^ | Zero or one (optional) ^c^
 
-| bounding‌Box | Minimum bounding rectangle surrounding the tile matrix set, in the crs ^b^ | 2DBoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
+| boundingBox | Minimum bounding rectangle surrounding the tile matrix set, in the crs ^b^ | 2DBoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
 | tileMatrix | Description of a scale level and its tile matrix | TileMatrix data structure. See <<parts-of-tilematrix-data-structure>> | One or more (mandatory) ^d^
 4+|
@@ -248,7 +248,7 @@ Zero or more (optional)
 
 One for each keyword authority used
 
-| scale‌Denominator | Scale denominator level of this tile matrix ^f^ | Double type | One (mandatory)
+| scaleDenominator | Scale denominator level of this tile matrix ^f^ | Double type | One (mandatory)
 
 | cellSize | Cell size of this tile matrix ^f^ | Double type | One (mandatory)
 
@@ -280,14 +280,14 @@ Positive integer type
  |
 One (mandatory)
 
-| matrix‌Width |
+| matrixWidth |
 Width of the matrix (number of tiles in width)
  |
 Positive integer type
  |
 One (mandatory)
 
-| matrix‌Height |
+| matrixHeight |
 Height of the matrix (number of tiles in height)
  |
 Positive integer type
@@ -357,8 +357,8 @@ In order to make the description of the model more compact, only the tile rows t
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 | coalesce | Coalescence factor | Positive integer type ^a^ | One (mandatory)
-| minTile‌Row | First tile row where the coalese factor apply on this tilematrix | Non negative integer type ^b^ | One (mandatory)
-| maxTile‌Row | Last tile row where the coalese factor apply on this tilematrix | Non negative integer type ^c^ | One (mandatory)
+| minTileRow | First tile row where the coalese factor apply on this tilematrix | Non negative integer type ^b^ | One (mandatory)
+| maxTileRow | Last tile row where the coalese factor apply on this tilematrix | Non negative integer type ^c^ | One (mandatory)
 4+| ^a^    Shall be more than 1. Rows with Coalescence factor of 1 shall not be described here.
 
 ^b^    From 0 to maxTileRow.

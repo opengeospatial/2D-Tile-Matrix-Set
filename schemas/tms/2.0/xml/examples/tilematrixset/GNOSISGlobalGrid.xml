@@ -27,16 +27,8 @@
       <TileHeight>256</TileHeight>
       <MatrixWidth>8</MatrixWidth>
       <MatrixHeight>4</MatrixHeight>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>0</MinTileRow>
-         <MaxTileRow>0</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>3</MinTileRow>
-         <MaxTileRow>3</MaxTileRow>
-      </VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>0</MinTileRow><MaxTileRow>0</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>3</MinTileRow><MaxTileRow>3</MaxTileRow></VariableMatrixWidth>
    </TileMatrix>
    <TileMatrix>
       <tmsc:Identifier>2</tmsc:Identifier>
@@ -47,26 +39,10 @@
       <TileHeight>256</TileHeight>
       <MatrixWidth>16</MatrixWidth>
       <MatrixHeight>8</MatrixHeight>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>0</MinTileRow>
-         <MaxTileRow>0</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>1</MinTileRow>
-         <MaxTileRow>1</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>6</MinTileRow>
-         <MaxTileRow>6</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>7</MinTileRow>
-         <MaxTileRow>7</MaxTileRow>
-      </VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>0</MinTileRow><MaxTileRow>0</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>1</MinTileRow><MaxTileRow>1</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>6</MinTileRow><MaxTileRow>6</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>7</MinTileRow><MaxTileRow>7</MaxTileRow></VariableMatrixWidth>
    </TileMatrix>
    <TileMatrix>
       <tmsc:Identifier>3</tmsc:Identifier>
@@ -77,36 +53,12 @@
       <TileHeight>256</TileHeight>
       <MatrixWidth>32</MatrixWidth>
       <MatrixHeight>16</MatrixHeight>
-      <VariableMatrixWidth>
-         <Coalesce>8</Coalesce>
-         <MinTileRow>0</MinTileRow>
-         <MaxTileRow>0</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>1</MinTileRow>
-         <MaxTileRow>1</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>2</MinTileRow>
-         <MaxTileRow>3</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>12</MinTileRow>
-         <MaxTileRow>13</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>14</MinTileRow>
-         <MaxTileRow>14</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>8</Coalesce>
-         <MinTileRow>15</MinTileRow>
-         <MaxTileRow>15</MaxTileRow>
-      </VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>8</Coalesce><MinTileRow>0</MinTileRow><MaxTileRow>0</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>1</MinTileRow><MaxTileRow>1</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>2</MinTileRow><MaxTileRow>3</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>12</MinTileRow><MaxTileRow>13</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>14</MinTileRow><MaxTileRow>14</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>8</Coalesce><MinTileRow>15</MinTileRow><MaxTileRow>15</MaxTileRow></VariableMatrixWidth>
    </TileMatrix>
    <TileMatrix>
       <tmsc:Identifier>4</tmsc:Identifier>
@@ -117,45 +69,13 @@
       <TileHeight>256</TileHeight>
       <MatrixWidth>64</MatrixWidth>
       <MatrixHeight>32</MatrixHeight>
-      <VariableMatrixWidth>
-         <Coalesce>16</Coalesce>
-         <MinTileRow>0</MinTileRow>
-         <MaxTileRow>0</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>8</Coalesce>
-         <MinTileRow>1</MinTileRow>
-         <MaxTileRow>1</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>2</MinTileRow>
-         <MaxTileRow>3</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>4</MinTileRow>
-         <MaxTileRow>7</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>2</Coalesce>
-         <MinTileRow>24</MinTileRow>
-         <MaxTileRow>27</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>4</Coalesce>
-         <MinTileRow>28</MinTileRow>
-         <MaxTileRow>29</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>8</Coalesce>
-         <MinTileRow>30</MinTileRow>
-         <MaxTileRow>30</MaxTileRow>
-      </VariableMatrixWidth>
-      <VariableMatrixWidth>
-         <Coalesce>16</Coalesce>
-         <MinTileRow>31</MinTileRow>
-         <MaxTileRow>31</MaxTileRow>
-      </VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>16</Coalesce><MinTileRow>0</MinTileRow><MaxTileRow>0</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>8</Coalesce><MinTileRow>1</MinTileRow><MaxTileRow>1</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>2</MinTileRow><MaxTileRow>3</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>4</MinTileRow><MaxTileRow>7</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>24</MinTileRow><MaxTileRow>27</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>28</MinTileRow><MaxTileRow>29</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>8</Coalesce><MinTileRow>30</MinTileRow><MaxTileRow>30</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>16</Coalesce><MinTileRow>31</MinTileRow><MaxTileRow>31</MaxTileRow></VariableMatrixWidth>
    </TileMatrix>
 </TileMatrixSet>

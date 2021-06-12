@@ -103,13 +103,13 @@
 					"examples": [19567.87924]
 				},
 				"cornerOfOrigin": {
-					"description": "Position of the corner of origin with respect of the tiles of this tile matrix",
+					"description": "The corner of the tile matrix (_topLeft_ or _bottomLeft_) used as the origin for numbering tile rows and columns. This corner is also a corner of the (0, 0) tile.",
 					"type": "string",
 					"enum": ["topLeft", "bottomLeft"],
 					"default": "topLeft"
 				},
 				"pointOfOrigin": {
-					"description": "Coordinate in CRS coordinates of the corner of origin of this tile matrix. In previous version was 'topLeftCorner' and 'cornerOfOrigin' did not exist",
+					"description": "Precise position in CRS coordinates of the corner of origin (e.g. the top-left corner) for this tile matrix. This position is also a corner of the (0, 0) tile. In previous version, this was 'topLeftCorner' and 'cornerOfOrigin' did not exist.",
 					"$ref": "2DPoint.json",
 					"examples":[[-20037508.3427892, 20037508.342789]]
 				},

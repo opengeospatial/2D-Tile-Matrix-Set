@@ -189,7 +189,7 @@ One for each keyword authority used
 
 | theme | Category where the layer can be grouped | CharacterString | Zero or more (optional)
 
-| supportedCRS | Coordinate Reference System (CRS) | CRSType type, see <<parts-of-crs-type-union>> | Zero or more (optional)
+| crs | Coordinate Reference System (CRS) | CRSType type, see <<parts-of-crs-type-union>> | Zero or more (optional)
 
 | minScaleDenominator | Minimum scale denominator for usage of the layer | double^c^ | Zero or one (optional)^e^
 

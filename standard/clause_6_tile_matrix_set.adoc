@@ -253,14 +253,14 @@ One for each keyword authority used
 | cellSize | Cell size of this tile matrix ^f^ | Double type | One (mandatory)
 
 | cornerOfOrigin |
-Position of the corner of origin with respect of the tiles of this tile matrix
+Corner of the tile matrix used as the origin for numbering tile rows and columns.
  |
 enumeration. See <<parts-of-corner-of-origin-enum>>
  |
 Zero or one (optional). Default value is "topLeft"
 
 | pointOfOrigin ^e^ |
-Coordinate in CRS coordinates of the corner of origin of this tile matrix
+Position in CRS coordinates of the corner of origin for this tile matrix.
  |
 Ordered sequence of double values ^b^
  |
@@ -296,7 +296,7 @@ One (mandatory)
 4+|
 ^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^    CRS will be inherited from the supportedCRS parameter of the parent TileMatrixSet. The order of these axes shall be as specified by the supportedCRS. These are the precise coordinates of the top left corner of top left cell of the 0,0 tile. See Figure 1.
+^b^    The CRS and order of these coordinates shall be as specified by the _crs_ of the parent TileMatrixSet. These are the precise coordinates of the corner of origin (e.g. the top-left corner) for the tile matrix, which is also the corner of the (0, 0) tile. See Figure 1.
 
 ^c^    This TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded cell size. It is recommended to avoid repeating the TileMatrixSet identifier as part of the TileMatrix identifier.
 

@@ -3,38 +3,56 @@
 :appendix-caption: Annex
 == Extending TileMatrixSets for additional dimensions (Informative)
 
-This annex proposes approaches to extending TileMatrixSets and TileSet metadata for storing, indexing, accessing 3D
-(with the third dimension being either vertical or temporal), 4D (spatio-temporal) and n-D data.
+This informative annex proposes approaches to extending TileMatrixSets and TileSet metadata for storing, indexing and accessing as tiles 3D
+(e.g. with the third dimension being vertical or temporal), 4D (e.g. spatio-temporal) and n-D (n > 2) data.
 
 === Extension approaches
 
+All of these approaches assume that the multi-dimensional content still spans the two dimensions defined by 2D TileMatrixSets, which are
+usually latitude and longitude for geographic CRSes, and X/Easting or Y/Northing for projected CRSes.
+
 ==== No explicit tiling of extra dimensions
+
+One way to extend the use of TileMatrixSet to support additional dimensions is to simply regroup all content falling within a 2D tile boundary of the
+TileMatrixSet together in the same tile, for the full extent of those additional dimensions.
 
 [#img_nd_extend,reftext='{figure-caption} {counter:figure-num}']
 .Extending TileMatrixSet vertically with no division
 image::figures/nd-extend.png[]
 
-As an example, OGC CDB 1.x tiling of 3D data is based on this approach (see definition of the <<cdb-global-grid-tilematrixset-definition, CDB Global Grid>>).
+Storing, indexing and accessing the content for the additional dimensions can then be achieved through separate mechanisms, such as using formats
+supporting multiple dimensions (e.g. netCDF for coverages, glTF for 3D models, LAS for point clouds), and via subsetting mechanisms for access via APIs such as
+the `subset` (trimming or slicing) and `datetime` (temporal slicing) query parameters.
+Note that the density of the extra dimensions can still be reduced for the lower resolution tile matrices.
 
-The extra dimensions could still be subset using a mechanism other than tile indices.
+This is the approach used in OGC CDB 1.x (see definition of the <<cdb-global-grid-tilematrixset-definition, CDB Global Grid>>).
 
-==== Same division for for all tile matrices
+==== Same division for all tile matrices
+
+Another approach is to also divide the extra dimension(s), but divide them them the same for all tile matrices.
 
 [#img_nd_divide,reftext='{figure-caption} {counter:figure-num}']
 .Extending TileMatrixSet vertically with the same division for all tile matrices
 image::figures/nd-divide.png[]
 
-Fixed divisions for the extra dimensions may be suitable to scenarios where the extra dimensions have a limited extent (e.g. a few floors, or months or years).
+Fixed divisions for the extra dimensions may be suitable to scenarios where the extra dimensions have a limited extent, such as
+dividing all tile matrices by a small number of floors, by a few segments of altitudes, by month of the year or by a few years.
 
 ==== Octrees and Orthtrees (Hyperoctrees)
+
+Finally, it might be beneficial to increase the number of divisions for those additional dimensions for higher resolution tile matrices.
+Often, a 2D TileMatrixSet is built as a quad-tree, and a similar approach can be used with additional dimensions where it becomes an octree,
+or _orthree_ for higher dimension (orthant being the generalization of quadrants and octants), sometimes also called a _hyperoctree_.
 
 [#img_nd_octree,reftext='{figure-caption} {counter:figure-num}']
 .Extending TileMatrixSet vertically as an octree
 image::figures/nd-octree.png[]
 
-NOTE: The name _orthtree_ comes from orthant, the generalization of quadrants and octants.
-
 === Extended properties for TileMatrixSet schema
+
+The following example introduces a new `extraDimensions` property which can be added to either a TileMatrixSet's TileMatrix or to a
+TileSet's TileMatrixSetLimit object to describe how the TileMatrixSet is extended into additional dimensions using
+any of the three approaches proposed above.
 
 ==== Example TileMatrix
 
@@ -84,7 +102,7 @@ Point cloud data can be stored in tiles based on TileMatrixSets extended to 3D s
 
 ==== Points referencing and posing 3D models
 
-Vector tiles referencing individual 3D models (available at /models/{modelId} and textures at /textures/{textureId})
+Vector tiles referencing individual 3D models (available at `/models/{modelId}` and textures at `/textures/{textureId})`
 
     trees/tiles/GNOSISGlobalGrid/13/5200/5715.json
     trees/tiles/GNOSISGlobalGrid/13/5200/5715.mvt
@@ -106,13 +124,13 @@ glTF, E3D and Batched 3D Model 3D Tile (glTF + a header) tile of all buildings i
 === Relationship with 3D Tiles and i3s
 
 The _3D Tiles_ and _i3s_ OGC community standards allow to describe Bounding Volume Hierarchies (BVH) of 3D data.
-Those BVH _tilesets_ allow dimension of each tile to differ.
+Those BVH _tilesets_ allow dimensions of each tile to differ.
 While a TileMatrixSet can be used as the basis for producing _3D Tiles_ or _i3s_ BVH tilesets,
 not all _3D Tiles_ or _i3s_ tilesets need to be based on a TileMatrixSet.
 
 When deciding on the use of a TileMatrixSet to define such tilesets, the space is partitioned exactly the same way,
 regardless of the content within that space.
-This has the advantage of allowing to determonistically access data for a particular portion of space from a fixed location irrespective of
+This has the advantage of allowing to deterministically access data for a particular portion of space from a fixed location irrespective of
 what or how much data may be contained in that space.
 
 An alternative approach allowed by BVH is to distribute the data in tiles based on density, with the objective to balance the amount of data per tile,

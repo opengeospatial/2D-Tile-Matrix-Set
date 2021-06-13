@@ -4,6 +4,8 @@
    "keywords" : [ "Daraa", "Syria", "OpenStreetMap", "NSG", "TDS" ],
    "dataType" : "vector",
    "accessConstraints" : "unclassified",
+   "crs" : "http://www.opengis.net/def/crs/EPSG/0/3857",
+   "epoch" : 2021.33,
    "links" : [
       {
          "rel" : "self",
@@ -42,13 +44,16 @@
          "id" : "AgricultureSrf",
          "dataType" : "vector",
          "geometryType" : "polygons",
-         "maxtileMatrixId" : "17",
+         "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
-         "boundingBox" : {
-		"lowerLeft": [35.898213, 32.4633913],
-		"upperRight": [36.5614696, 32.8370158]
-	    },
-         "stylableLayerSets" : [ "OSMNSGTDS" ],
+         "minCellSize" : 1.19432856696,
+         "boundingBox" :
+         {
+            "crs" : "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "lowerLeft": [35.898213, 32.4633913],
+            "upperRight": [36.5614696, 32.8370158]
+         },
+         "geoDataClasses" : [ "http://example.com/def/geodataclasses/OSMNSGTDS" ],
          "links" : [
             {
                "rel"  : "http://www.opengis.net/def/rel/ogc/1.0/geodata",
@@ -80,13 +85,16 @@
          "id" : "TransportationGroundCrv",
          "dataType" : "vector",
          "geometryType" : "lines",
-         "maxtileMatrixId" : "17",
+         "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
-         "boundingBox" : {
-		"lowerLeft": [35.9028738, 32.4168138],
-		"upperRight": [36.5747694, 33.1424348]
-	   } ,
-         "stylableLayerSets" : [ "OSMNSGTDS" ],
+         "minCellSize" : 1.19432856696,
+         "boundingBox" :
+         {
+            "crs" : "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+            "lowerLeft": [35.9028738, 32.4168138],
+            "upperRight": [36.5747694, 33.1424348]
+         },
+         "geoDataClasses" : [ "http://example.com/def/geodataclasses/OSMNSGTDS" ],
          "links" : [
             {
                "rel"  : "http://www.opengis.net/def/rel/ogc/1.0/geodata",
@@ -119,29 +127,37 @@
    "tileMatrixSetURI" : "http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad",
    "tileMatrixSetDefinition" : "/Daraa/ogcapi/tileMatrixSets/WebMercatorQuad",
    "tileMatrixSetLimits" : [
-      { "tileMatrixId" : "0", "minTileRow" : 0, "maxTileRow" : 0, "minTileCol" : 0, "maxTileCol" : 0 },
-      { "tileMatrixId" : "1", "minTileRow" : 0, "maxTileRow" : 0, "minTileCol" : 1, "maxTileCol" : 1 },
-      { "tileMatrixId" : "2", "minTileRow" : 1, "maxTileRow" : 1, "minTileCol" : 2, "maxTileCol" : 2 },
-      { "tileMatrixId" : "3", "minTileRow" : 3, "maxTileRow" : 3, "minTileCol" : 4, "maxTileCol" : 4 },
-      { "tileMatrixId" : "4", "minTileRow" : 6, "maxTileRow" : 6, "minTileCol" : 9, "maxTileCol" : 9 },
-      { "tileMatrixId" : "5", "minTileRow" : 12, "maxTileRow" : 12, "minTileCol" : 19, "maxTileCol" : 19 },
-      { "tileMatrixId" : "6", "minTileRow" : 25, "maxTileRow" : 25, "minTileCol" : 38, "maxTileCol" : 38 },
-      { "tileMatrixId" : "7", "minTileRow" : 51, "maxTileRow" : 51, "minTileCol" : 76, "maxTileCol" : 76 },
-      { "tileMatrixId" : "8", "minTileRow" : 103, "maxTileRow" : 103, "minTileCol" : 153, "maxTileCol" : 153 },
-      { "tileMatrixId" : "9", "minTileRow" : 206, "maxTileRow" : 207, "minTileCol" : 307, "maxTileCol" : 307 },
-      { "tileMatrixId" : "10", "minTileRow" : 413, "maxTileRow" : 414, "minTileCol" : 614, "maxTileCol" : 615 },
-      { "tileMatrixId" : "11", "minTileRow" : 826, "maxTileRow" : 828, "minTileCol" : 1228, "maxTileCol" : 1231 },
-      { "tileMatrixId" : "12", "minTileRow" : 1652, "maxTileRow" : 1657, "minTileCol" : 2456, "maxTileCol" : 2463 },
-      { "tileMatrixId" : "13", "minTileRow" : 3304, "maxTileRow" : 3314, "minTileCol" : 4912, "maxTileCol" : 4927 },
-      { "tileMatrixId" : "14", "minTileRow" : 6608, "maxTileRow" : 6628, "minTileCol" : 9825, "maxTileCol" : 9855 },
-      { "tileMatrixId" : "15", "minTileRow" : 13216, "maxTileRow" : 13257, "minTileCol" : 19651, "maxTileCol" : 19711 },
-      { "tileMatrixId" : "16", "minTileRow" : 26433, "maxTileRow" : 26514, "minTileCol" : 39303, "maxTileCol" : 39423 },
-      { "tileMatrixId" : "17", "minTileRow" : 52866, "maxTileRow" : 53028, "minTileCol" : 78606, "maxTileCol" : 78847 }
+      { "tileMatrix" : "0", "minTileRow" : 0, "maxTileRow" : 0, "minTileCol" : 0, "maxTileCol" : 0 },
+      { "tileMatrix" : "1", "minTileRow" : 0, "maxTileRow" : 0, "minTileCol" : 1, "maxTileCol" : 1 },
+      { "tileMatrix" : "2", "minTileRow" : 1, "maxTileRow" : 1, "minTileCol" : 2, "maxTileCol" : 2 },
+      { "tileMatrix" : "3", "minTileRow" : 3, "maxTileRow" : 3, "minTileCol" : 4, "maxTileCol" : 4 },
+      { "tileMatrix" : "4", "minTileRow" : 6, "maxTileRow" : 6, "minTileCol" : 9, "maxTileCol" : 9 },
+      { "tileMatrix" : "5", "minTileRow" : 12, "maxTileRow" : 12, "minTileCol" : 19, "maxTileCol" : 19 },
+      { "tileMatrix" : "6", "minTileRow" : 25, "maxTileRow" : 25, "minTileCol" : 38, "maxTileCol" : 38 },
+      { "tileMatrix" : "7", "minTileRow" : 51, "maxTileRow" : 51, "minTileCol" : 76, "maxTileCol" : 77 },
+      { "tileMatrix" : "8", "minTileRow" : 102, "maxTileRow" : 103, "minTileCol" : 152, "maxTileCol" : 154 },
+      { "tileMatrix" : "9", "minTileRow" : 205, "maxTileRow" : 207, "minTileCol" : 305, "maxTileCol" : 308 },
+      { "tileMatrix" : "10", "minTileRow" : 411, "maxTileRow" : 415, "minTileCol" : 611, "maxTileCol" : 617 },
+      { "tileMatrix" : "11", "minTileRow" : 823, "maxTileRow" : 831, "minTileCol" : 1223, "maxTileCol" : 1234 },
+      { "tileMatrix" : "12", "minTileRow" : 1646, "maxTileRow" : 1663, "minTileCol" : 2446, "maxTileCol" : 2468 },
+      { "tileMatrix" : "13", "minTileRow" : 3292, "maxTileRow" : 3326, "minTileCol" : 4892, "maxTileCol" : 4937 },
+      { "tileMatrix" : "14", "minTileRow" : 6584, "maxTileRow" : 6653, "minTileCol" : 9784, "maxTileCol" : 9875 },
+      { "tileMatrix" : "15", "minTileRow" : 13169, "maxTileRow" : 13306, "minTileCol" : 19569, "maxTileCol" : 19751 },
+      { "tileMatrix" : "16", "minTileRow" : 26339, "maxTileRow" : 26613, "minTileCol" : 39139, "maxTileCol" : 39503 },
+      { "tileMatrix" : "17", "minTileRow" : 52679, "maxTileRow" : 53227, "minTileCol" : 78279, "maxTileCol" : 79007 }
    ],
-   "boundingBox" : { "lowerLeft" : [ 35, 32 ], "upperRight" : [ 37, 33.2671397 ] },
+   "boundingBox" :
+   {
+      "crs" : "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+      "lowerLeft" : [ 35, 32 ],
+      "upperRight" : [ 37, 33.2671397 ]
+   },
    "centerPoint" :
    {
+      "crs" : "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
       "coordinates" : [ 36.2298413, 32.65020355 ],
-      "tileMatrixId" : "15"
+      "scaleDenominator" : 17061.8366707982,
+      "cellSize" : 4.77731426782,
+      "tileMatrix" : "15"
    }
 }

@@ -128,7 +128,9 @@ One for each keyword authority used
 
 | boundingBox | Minimum bounding rectangle surrounding the tileset | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>>^h^ | Zero or one (optional)
 
-| date | Dates of creation, publication, revision, validity and reception of the tile set  | Dates data structure, see <<parts-of-dates-data-structure>> | Zero or one (optional)
+| created | Timestamp indicating when the Tile Set was first produced | DateTime | Zero or one (optional)
+
+| updated | Timestamp of the last Tile Set change/revision | DateTime | Zero or one (optional)
 
 | layer | Layer elements represented in the tile set | GeospatialData data structure, see <<parts-of-geospatial-data-data-structure>> | Zero or more (optional)
 
@@ -205,7 +207,9 @@ One for each keyword authority used
 
 | boundingBox | Minimum bounding rectangle surrounding the layer ^g^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
-| date | Dates of creation, publication, revision, validity and reception of the layer  | Dates data structure, see <<parts-of-dates-data-structure>> | Zero or one (optional)
+| created | Timestamp indicating when the layer was first produced | DateTime | Zero or one (optional)
+
+| updated | Timestamp of the last layer change/revision | DateTime | Zero or one (optional)
 
 | style | Style applied to this layer to generate the tiles in the tileset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^b^
 
@@ -282,24 +286,6 @@ One for each keyword authority used
 ^c^     If missing, 0 (optional) is assumed
 
 ^d^     If missing, many (unbounded) is assumed
-|===
-
-A Tile Set or a Layer can contain a single date entry with dates for each of the types, as defined in <<parts-of-dates-data-structure>>.
-
-[#parts-of-dates-data-structure,reftext='{table-caption} {counter:table-num}']
-.Parts of Dates data structure
-[width = "100%",options="header"]
-|===
-| Names | Definition | Data type and values | Multiplicity and use
-| createdOn | Timestamp indicating when the Tile Set was first produced | DateTime | Zero or one (optional)
-
-| publishedOn | Timestamp indicating when the Tile Set was first made available to the users | DateTime | Zero or one (optional)
-
-| revisedOn | Timestamp of the last Tile Set change/revision | DateTime | Zero or one (optional)
-
-| receivedOn | Timestamp indicating when the Tile Set was received from an external provider | DateTime | Zero or one (optional)
-
-| validUntil | Timestamp marking the future validity of the Tile Set (the Tile Set may no longer be applicable at this date, or that a new revision of the Tile Set is going to be issued) | DateTime | Zero or one (optional)
 |===
 
 The style structure applicable to the layer is defined in <<parts-of-style-data-structure>>.

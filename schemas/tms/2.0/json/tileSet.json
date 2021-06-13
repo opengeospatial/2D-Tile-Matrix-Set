@@ -82,7 +82,7 @@
 				"updated": {
 					"description": "Last Tile Set change/revision",
 					"$ref": "timeStamp.json"
-				},				
+				},
 				"layers": {
 					"minItems": 1,
 					"type": "array",
@@ -106,7 +106,7 @@
 					"type": "string",
 					"format": "uri",
 					"examples": ["http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid"]
-				},				
+				},
 				"links":
 				{
 					"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)",
@@ -238,7 +238,7 @@
 				"updated": {
 					"description": "Last layer change/revision",
 					"$ref": "timeStamp.json"
-				},				
+				},
 				"style": {
 					"description": "Style used to generate the layer in the tileset",
 					"$ref": "#/definitions/style"

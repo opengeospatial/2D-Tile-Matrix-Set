@@ -127,6 +127,8 @@ include::annex_i.adoc[]
 
 include::annex_j.adoc[]
 
+include::annex_k.adoc[]
+
 ////
 Revision History should be the last annex before the Bibliography
 Bibliography should be the last annex

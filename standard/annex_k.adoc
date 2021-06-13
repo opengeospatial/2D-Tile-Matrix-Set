@@ -1,0 +1,122 @@
+[appendix]
+[[annex-extending-additional-dimensinos]]
+:appendix-caption: Annex
+== Extending TileMatrixSets for additional dimensions (Informative)
+
+This annex proposes approaches to extending TileMatrixSets and TileSet metadata for storing, indexing, accessing 3D
+(with the third dimension being either vertical or temporal), 4D (spatio-temporal) and n-D data.
+
+=== Extension approaches
+
+==== No explicit tiling of extra dimensions
+
+[#img_nd_extend,reftext='{figure-caption} {counter:figure-num}']
+.Extending TileMatrixSet vertically with no division
+image::figures/nd-extend.png[]
+
+As an example, OGC CDB 1.x tiling of 3D data is based on this approach (see definition of the <<cdb-global-grid-tilematrixset-definition, CDB Global Grid>>).
+
+The extra dimensions could still be subset using a mechanism other than tile indices.
+
+==== Same division for for all tile matrices
+
+[#img_nd_divide,reftext='{figure-caption} {counter:figure-num}']
+.Extending TileMatrixSet vertically with the same division for all tile matrices
+image::figures/nd-divide.png[]
+
+Fixed divisions for the extra dimensions may be suitable to scenarios where the extra dimensions have a limited extent (e.g. a few floors, or months or years).
+
+==== Octrees and Orthtrees (Hyperoctrees)
+
+[#img_nd_octree,reftext='{figure-caption} {counter:figure-num}']
+.Extending TileMatrixSet vertically as an octree
+image::figures/nd-octree.png[]
+
+NOTE: The name _orthtree_ comes from orthant, the generalization of quadrants and octants.
+
+=== Extended properties for TileMatrixSet schema
+
+==== Example TileMatrix
+
+```json
+      {
+         "identifier" : "0",
+         "scaleDenominator" : 139770566.0071794390678,
+         "matrixWidth" : 4,
+         "matrixHeight" : 2,
+         "tileWidth" : 256,
+         "tileHeight" : 256,
+         "pointOfOrigin" : [ 90, -180 ],
+         "extraDimensions" :
+         {
+            "elevation" : {
+               "min" : -12000, "max" : 12000,
+               "uom" : "http://www.opengis.net/def/uom/SI/metre",
+               "divisions" : 2,
+               "resolution" : 1000
+            },
+            "time" : {
+               "min" : "2021-01-01", "max" : "2021-12-31",
+               "uom" :  "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian",
+               "divisions" : 1,
+               "temporalDivision" : "year",
+               "temporalResolution" : "month"
+            }
+         }
+      },
+```
+
+==== JSON Schema for above example
+
+=== Data contained in tiles
+
+==== Vector features
+
+Many vector formats support geometry with a depth coordinates.
+
+==== Coverages
+
+Coverage tiles can contain an additional dimension, which may or may not have gone through a trim operation.
+
+==== Point Clouds
+
+Point cloud data can be stored in tiles based on TileMatrixSets extended to 3D space, and thinned for lower resolution tile matrices.
+
+==== Points referencing and posing 3D models
+
+Vector tiles referencing individual 3D models (available at /models/{modelId} and textures at /textures/{textureId})
+
+    trees/tiles/GNOSISGlobalGrid/13/5200/5715.json
+    trees/tiles/GNOSISGlobalGrid/13/5200/5715.mvt
+
+Example 3D model & textures:
+
+    trees/models/coniferous_tree01.glb
+    trees/models/coniferous_tree01.e3d
+    trees/textures/1.jpg
+
+==== Batched 3D Models
+
+glTF, E3D and Batched 3D Model 3D Tile (glTF + a header) tile of all buildings in that tile:
+
+    buildings/tiles/GNOSISGlobalGrid/13/5200/5715.glb
+    buildings/tiles/GNOSISGlobalGrid/13/5200/5715.e3d
+    buildings/tiles/GNOSISGlobalGrid/13/5200/5715.b3dm
+
+=== Relationship with 3D Tiles and i3s
+
+The _3D Tiles_ and _i3s_ OGC community standards allow to describe Bounding Volume Hierarchies (BVH) of 3D data.
+Those BVH _tilesets_ allow dimension of each tile to differ.
+While a TileMatrixSet can be used as the basis for producing _3D Tiles_ or _i3s_ BVH tilesets,
+not all _3D Tiles_ or _i3s_ tilesets need to be based on a TileMatrixSet.
+
+When deciding on the use of a TileMatrixSet to define such tilesets, the space is partitioned exactly the same way,
+regardless of the content within that space.
+This has the advantage of allowing to determonistically access data for a particular portion of space from a fixed location irrespective of
+what or how much data may be contained in that space.
+
+An alternative approach allowed by BVH is to distribute the data in tiles based on density, with the objective to balance the amount of data per tile,
+reducing the overhead of having many tiles where data is sparse, while avoiding a heavy load per tile in dense areas.
+
+3D datasets based on a TileMatrixSet can be distributed as Tiles just like 2D tilesets instead (or in addition to) as
+Bounding Volume Hierarchies (3D Tiles / i3s), where the latter can simply reference the former (e.g. linking to .b3dm files organized in a TileMatrixSet paths).

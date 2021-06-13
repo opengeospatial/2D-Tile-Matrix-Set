@@ -36,7 +36,7 @@ include::requirements/json-tilematrixset/REQ_json_tilematrixset_media-type.adoc[
 
 NOTE: A TileMatrixSet description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
 
-<<annex-common-tilematrixset-definitions-informative>> provides JSON examples for common TileMatrixSet.
+An annex provides <<annex-example-encodings-for-common-tilematrixset-informative>> in JSON.
 
 
 [[json-variablematrixwidth]]
@@ -50,7 +50,7 @@ include::requirements/json-variablematrixwidth/REQ_json_variablematrixwidth_ietf
 
 include::requirements/json-variablematrixwidth/REQ_json_variablematrixwidth_schema.adoc[]
 
-<<annex-example-encodings-for-variable-matrix-width-informative>> provides JSON examples for common VariableMatrixWidth.
+An annex provides <<annex-example-encodings-for-variable-matrix-width-informative>> in JSON.
 
 [[tms-xml-encoding]]
 === XML encoding
@@ -69,7 +69,7 @@ include::requirements/xml-tilematrixset/REQ_xml_tilematrixset_media-type.adoc[]
 
 NOTE: A TileMatrixSet description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
 
-<<annex-common-tilematrixset-definitions-informative>> provides XML examples for common TileMatrixSet.
+An annex provides <<annex-example-encodings-for-common-tilematrixset-informative>> in XML.
 
 [[xml-variablematrixwidth]]
 ==== XML VariableMatrixWidth
@@ -81,4 +81,4 @@ include::requirements/xml-variablematrixwidth/REQ_xml_variablematrixwidth_model.
 
 include::requirements/xml-variablematrixwidth/REQ_xml_variablematrixwidth_schema.adoc[]
 
-<<annex-example-encodings-for-variable-matrix-width-informative>> provides XML examples for common VariableMatrixWidth
+An annex provides <<annex-example-encodings-for-variable-matrix-width-informative>> in XML.

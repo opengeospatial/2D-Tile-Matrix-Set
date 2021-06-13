@@ -40,7 +40,7 @@ image::figures/TileMatrixSetLimits.png[TileMatrixSetLimits UML model]
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| tileMatrixSet‌Limit | Indices limits for this tileMatrix | TileMatrixSetLimits data structure, see <<parts-of-tilematrixlimits-data-structure>> | one or more (mandatory) ^a^
+| tileMatrixSetLimit | Indices limits for this tileMatrix | TileMatrixSetLimits data structure, see <<parts-of-tilematrixlimits-data-structure>> | one or more (mandatory) ^a^
 
 |===
  
@@ -50,11 +50,11 @@ image::figures/TileMatrixSetLimits.png[TileMatrixSetLimits UML model]
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| tileMatrixId | Reference to a tileMatrix identifier | ows:CodeType, as adaptation of MD_Identifier class ISO 19115 ^a^ | One (mandatory)
-| minTile‌Row | Minimum tile row index valid for this layer. | Non negative integer type ^b^ | One (mandatory)
-| maxTile‌Row | Maximim tile row index valid for this layer. | Non negative integer type ^c^ | One (mandatory)
-| minTile‌Col | Minimum tile column index valid for this tile column. | Non negative integer type ^d^ | One (mandatory)
-| maxTile‌Col | Maximum tile column index valid for this tile column. | Non negative integer type ^e^ | One (mandatory)
+| tileMatrix | Reference to a tileMatrix identifier | ows:CodeType, as adaptation of MD_Identifier class ISO 19115 ^a^ | One (mandatory)
+| minTileRow | Minimum tile row index valid for this layer. | Non negative integer type ^b^ | One (mandatory)
+| maxTileRow | Maximim tile row index valid for this layer. | Non negative integer type ^c^ | One (mandatory)
+| minTileCol | Minimum tile column index valid for this tile column. | Non negative integer type ^d^ | One (mandatory)
+| maxTileCol | Maximum tile column index valid for this tile column. | Non negative integer type ^e^ | One (mandatory)
 4+|
 ^a^    SHALL be an identifier to a tileMatrix element of this tileMatrixSet.
 
@@ -117,14 +117,14 @@ One for each keyword authority used
 
 | epoch | Epoch of the Coordinate Reference System (CRS) | Number | Zero or one (optional)
 
-| tileMatrix‌Set | Tile matrix set definition | TileMatrixSet data strcuture. See <<parts-of-tilematrixset-data-structure>> | Zero or one (optional)^d^
+| tileMatrixSet | Tile matrix set definition | TileMatrixSet data strcuture. See <<parts-of-tilematrixset-data-structure>> | Zero or one (optional)^d^
 
-| tileMatrix‌SetURI | Reference to an official source for this tileMatrixSet | URI type^b^ | Zero or One (optional) Include if this is one of the OGC NA TileMatrixSets
+| tileMatrixSetURI | Reference to an official source for this tileMatrixSet | URI type^b^ | Zero or One (optional) Include if this is one of the OGC NA TileMatrixSets
 
-| tileMatrix‌SetDefinition | Reference to a tileMatrixSet | URI type^c^
+| tileMatrixSetDefinition | Reference to a tileMatrixSet | URI type^c^
 | Zero or One (optional)^d^
 
-| tileMatrixSet‌Limit | Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet | TileMatrixSetLimits data structure, see <<parts-of-tilematrixsetlimits-data-structure>> | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^g^
+| tileMatrixSetLimit | Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet | TileMatrixSetLimits data structure, see <<parts-of-tilematrixsetlimits-data-structure>> | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^g^
 
 | boundingBox | Minimum bounding rectangle surrounding the tileset | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>>^h^ | Zero or one (optional)
 
@@ -141,7 +141,7 @@ One for each keyword authority used
 | link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>.^e^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^     Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/) (including definitions from <<annex-common-tilematrixset-definitions-informative>> and <<annex-example-encodings-for-variable-matrix-width-informative>>)
+^b^     Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/) (including definitions from <<annex-common-tilematrixset-definitions-informative>> and <<annex-variable-tilematrixset-definitions-informative>>)
 
 ^c^     Points to a definition of the TileMatrixSet provided by a tile service
 
@@ -153,7 +153,7 @@ One for each keyword authority used
 
 ^g^     If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all.
 
-^h^     In the same CRS than the TileMatrixSet
+^h^     If the bounding box does not specify a CRS, it is inherited from the CRS of the TileSet if available, otherwise to that of the TileMatrixSet.
 
 ^i^     If style property mentions a style applied to all layers, the style property in layer should not be used.
 
@@ -227,9 +227,9 @@ One for each keyword authority used
 
 ^d^     SHALL be an identifier to a tileMatrix element of this tileMatrixSet
 
-^e^     If minCellSize, minScaleDenominator and maxTileMatrixId are provided they SHALL be related to the same TileMatrix
+^e^     If minCellSize, minScaleDenominator and maxTileMatrix are provided they SHALL be related to the same TileMatrix
 
-^f^     If maxCellSize, maxScaleDenominator and minTileMatrixId are provided they SHALL be related to the same TileMatrix
+^f^     If maxCellSize, maxScaleDenominator and minTileMatrix are provided they SHALL be related to the same TileMatrix
 
 ^g^     In the same CRS than the TileMatrixSet
 

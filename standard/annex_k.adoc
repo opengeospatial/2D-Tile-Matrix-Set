@@ -3,112 +3,109 @@
 :appendix-caption: Annex
 == Extending TileMatrixSets for additional dimensions (Informative)
 
-This informative annex proposes approaches to extending TileMatrixSets and TileSet metadata for storing, indexing and accessing as tiles 3D, 4D and n-D (n > 2) data,
+This informative annex proposes approaches for extending TileMatrixSets and TileSet metadata for indexing and accessing 3D, 4D and n-D (n > 2) data as tiles,
 regardless of whether a simple file-based data store, a database (e.g. a GeoPackage) or a web API is used.
 
 === Extension approaches
 
-All of these approaches assume that the multi-dimensional content still spans the two dimensions defined by 2D TileMatrixSets, which are
-usually latitude and longitude for geographic CRSes, and X/Easting or Y/Northing for projected CRSes.
-It is possible for a TileSet CRS to have more than two dimensions, as well as to re-use a common TileMatrixSet using a compatible CRS while including
+All of these approaches assume that the multi-dimensional content spans the two dimensions defined by 2D TileMatrixSets, which are
+usually either latitude and longitude for geographic CRSes, or X/Easting or Y/Northing for projected CRSes as well as other extra dimensions
+TileSet CRS can have more than two dimensions by re-use a common 2D TileMatrixSet and using a compatible CRS that includes
 additional dimensions, as specified in <<TileMatrixSetCRSCompatibility>>.
 
 ==== No explicit tiling of extra dimensions
 
 One way to extend the use of TileMatrixSet to support additional dimensions is to simply regroup all content falling within a 2D tile boundary of the
-TileMatrixSet together in the same tile, for the full extent of those additional dimensions.
+TileMatrixSet together in the same tile, for the full extent of those additional dimensions. In other words, the additional dimensions are not tiled. This data structure is the only one supported by WMTS 1.0 and it was called "extra dimensions".
 
 [#img_nd_extend,reftext='{figure-caption} {counter:figure-num}']
 .Extending TileMatrixSet vertically with no division
 image::figures/nd-extend.png[]
 
 Storing, indexing and accessing the content for the additional dimensions can then be achieved through separate mechanisms, such as using formats
-supporting multiple dimensions (e.g. netCDF for coverages, glTF for 3D models, LAS for point clouds), and via subsetting mechanisms for access via APIs such as
+supporting multiple dimensions (e.g. netCDF for coverages, glTF for 3D models, LAS for point clouds). Despite not being structured as tiles, extra dimensions could still be subset if the APIs such as
 the `subset` (trimming or slicing) and `datetime` (temporal slicing) query parameters.
-Note that the density of the extra dimensions can still be reduced for the lower resolution tile matrices.
+Note that the data density or resolution of the extra dimensions can still be reduced for the lower resolution 2D tile matrices.
 
-This is the approach used in OGC CDB 1.x (see definition of the <<cdb-global-grid-tilematrixset-definition, CDB Global Grid>>).
+This is the approach used in WMTS as well as in OGC CDB 1.x (see definition of the <<cdb-global-grid-tilematrixset-definition, CDB Global Grid>>).
 
 ==== Same division for all tile matrices
 
-Another approach is to also divide the extra dimension(s), but divide them them the same for all tile matrices.
+Another approach is to also to "tile" (divide) the extra dimension(s), but tile them the same number of pieces for all "D tile matrices.
 
 [#img_nd_divide,reftext='{figure-caption} {counter:figure-num}']
-.Extending TileMatrixSet vertically with the same division for all tile matrices
+.Extending TileMatrixSet vertically with the same tilings for all tile matrices (the illustration shows 2 "vertical" tile divisions for the extra "vertical" dimension for all tile matrices)
 image::figures/nd-divide.png[]
 
 Fixed divisions for the extra dimensions may be suitable to scenarios where the extra dimensions have a limited extent, such as
 dividing all tile matrices by a small number of floors, by a few segments of altitudes, by month of the year or by a few years.
+Again note that the data density or resolution of the extra dimensions can still be reduced for the lower resolution 2D tile matrices
 
 ==== Octrees and Orthtrees (Hyperoctrees)
 
-Finally, it might be beneficial to increase the number of divisions for those additional dimensions for higher resolution tile matrices.
+Finally, it might be beneficial to increase the number of tiles (divisions) for those additional dimensions for higher resolution tile matrices.
 Often, a 2D TileMatrixSet is built as a quad-tree, and a similar approach can be used with additional dimensions where it becomes an octree,
 or _orthree_ for higher dimensions (orthant being the generalization of quadrants and octants), sometimes also called a _hyperoctree_.
 
 [#img_nd_octree,reftext='{figure-caption} {counter:figure-num}']
-.Extending TileMatrixSet vertically as an octree
+.Extending TileMatrixSet vertically as an octree (The lowest resolution has 2 "vertical" tile divisions while the highest resolution has 8 "vertical" tile divisions)
 image::figures/nd-octree.png[]
 
 === Extended properties for TileMatrix & limits
 
-An `extraDimensions` property consisting of an associative array (a.k.a. map or dictionary) of dimension names mapping to a description on how the additional
-dimensions are tiled can be added to either a _TileMatrixSet_'s _TileMatrix_ or to a _TileSet_'s _TileMatrixSetLimit_.
-Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows to re-use common 2D TileMatrixSets.
+An `extraDimensions` property can be added consisting of an associative array (list) of dimension names mapping to a description on how the additional
+dimensions are tiled. This information can be added to either a _TileMatrixSet_'s _TileMatrix_ or to a _TileSet_'s _TileMatrixSetLimit_.
+Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows to re-use commonly used 2D TileMatrixSets.
 
 [#nd-extensions-fields,reftext='{table-caption} {counter:table-num}']
-.Properties for extraDimensions map
-[width="100%",cols="22%,58%,20%",options="header"]
+.Properties for a ExtraDimension data structure
+[width="100%",cols="15%,55%,15%,15%",options="header"]
 |===
-| *name*             | *description*                                                                                                         | *type*
-| min                | minimum value for that dimension (lower bound)                                                                        | number
-| max                | maximum value for that dimension (upper bound)                                                                        | number
-| uom                | unit of measure for defining min, max and resolution                                                                  | string (URI)
-| divisions          | in how many segments (trims in _Coverages_ term) the space between min & max is divided at this particular tile matrix.
-                       Defaults to 1 if unspecified.                                                                                         | number (integer)
-| resolution         | resolution of the data in that dimension. For a coverage, this would be separate slices at that resolution
-                       interval, where the number of slices is equal to `(max - min) / divisions / resolution`, (`+1` for _point_ rather than
-                       _area_ coverage). For 3D models, point clouds, vector features, the resolution would represent the average accuracy
-                       level at which you will find distinct coordinates.                                                                    | number
-| temporalDivision   | an alternative to _divisions_ for temporal dimensions allowing to divide by unequal temporal units^a^                 | enum^b^
-| temporalResolution | an alternative to _resolution_ for temporal dimensions allowing to specify a resolution in unequal temporal units ^a^ | enum^b^
-|===
-
-^a^ Temporal units such as years and month have unequal number of days, and even days have unequal number of seconds when considering leap seconds.
+| Names | Definition | Data type and values | Multiplicity and use
+| min | minimum value for that dimension (lower bound) | number | One (mandatory)
+| max | maximum value for that dimension (upper bound) | number | One (mandatory)
+| uom | unit of measure for defining min, max and resolution | string (URI) | One (mandatory)
+| divisions | in how many segments (trims in _Coverages_ term) the space between min & max is divided at this particular tile matrix | positiveInteger | Zero or one (optional) Defaults to 1 if unspecified
+| resolution | resolution of the data in the extra dimension. For a coverage, this would be separate slices at that resolution interval, where the number of slices is equal to `(max - min) / divisions / resolution`, (`+1` for _point_ rather than _area_ coverage). For 3D models, point clouds, vector features, the resolution would represent the average accuracy level at which you will find distinct coordinates. | number | Zero or one (optional)
+| temporalDivision   | an alternative to _divisions_ for temporal dimensions allowing to divide by unequal temporal units^a^ | enumeration^b^ | Zero or one (optional)
+| temporalResolution | an alternative to _resolution_ for temporal dimensions allowing to specify a resolution in unequal temporal units^a^ | enumeration^b^ | Zero or one (optional)
+4+| ^a^ Temporal units such as years and month have unequal number of days, and even days have unequal number of seconds when considering leap seconds.
 If these are not used, then _divisions_ would divide the temporal range equally, and (potentially fractional) seconds would be assumed as the resolution unit.
 
 ^b^ second, minute, hour, day, week, month, year, ...
+|===
 
 ==== Example TileMatrix extended to 4 dimensions
 
-```json
-      {
-         "identifier" : "0",
-         "scaleDenominator" : 139770566.0071794390678,
-         "matrixWidth" : 4, "matrixHeight" : 2,
-         "tileWidth" : 256, "tileHeight" : 256,
-         "pointOfOrigin" : [ 90, -180 ],
-         "extraDimensions" :
-         {
-            "elevation" : {
-               "min" : -12000, "max" : 12000,
-               "uom" : "http://www.opengis.net/def/uom/SI/metre",
-               "divisions" : 2,
-               "resolution" : 1000
-            },
-            "time" : {
-               "min" : "2021-01-01", "max" : "2021-12-31",
-               "uom" :  "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian",
-               "divisions" : 1,
-               "temporalDivision" : "year",
-               "temporalResolution" : "month"
-            }
-         }
+[source, json]
+----
+{
+   "identifier" : "0",
+   "scaleDenominator" : 139770566.0071794390678,
+   "matrixWidth" : 4, "matrixHeight" : 2,
+   "tileWidth" : 256, "tileHeight" : 256,
+   "pointOfOrigin" : [ 90, -180 ],
+   "extraDimensions" :
+   {
+      "elevation" : {
+         "min" : -12000, "max" : 12000,
+         "uom" : "http://www.opengis.net/def/uom/SI/metre",
+         "divisions" : 2,
+         "resolution" : 1000
+      },
+      "time" : {
+         "min" : "2021-01-01", "max" : "2021-12-31",
+         "uom" :  "http://www.opengis.net/def/uom/ISO-8601/0/Gregorian",
+         "divisions" : 1,
+         "temporalDivision" : "year",
+         "temporalResolution" : "month"
       }
-```
+   }
+}
+----
 
-This example low-resolution overview tile matrix would feature 4 x 2 x 2 x 1 (16) tiles,
-each containing e.g. a 4D+ coverage (a tile could always contain additional dimensions beyond what is specified in the TMS)
+In this example the low-resolution overview tile matrix would feature 4 x 2 x 2 x 1 (16) tiles,
+each containing e.g. a 4D+ coverage (a tile may contain additional dimensions beyond what is specified in the TMS)
 with 256 x 256 x 12 x 12 values (equivalent to 144 regular 2D lat/lon slices or tiles).
 
 This _extraDimensions_ property supports any of the three approaches proposed above:
@@ -116,7 +113,7 @@ This _extraDimensions_ property supports any of the three approaches proposed ab
 - The first approach (no explicit tiling of extra dimensions) does not strictly require this _extraDimensions_ property,
 but may benefit from the ability to explicitly list the available dimensions and their extent, and to also specify a different _resolution_ at each tile matrix.
 - The second approach (same division for all tile matrices) is handled by specifying the same _divisions_ value for all tile matrices.
-Note that the _resolution_ can still differ.
+Note that the _resolution_ may still differ.
 - For the third approach (octrees and orthtrees), both the _divisions_ and _resolution_ properties would differ for each tile matrix.
 
 === Data contained in tiles
@@ -128,7 +125,7 @@ Many vector formats support geometry with an extra coordinate for the depth dime
 Some formats may also explicitly support defining solids such as polyhedrons.
 Different approaches can be used to tile those features, e.g. picking one of the three aforementioned ways to divide (or not divide) those extra dimensions,
 and deciding whether to clip the features at tile boundaries (potentially marking artificial segments
-to facilitate reconstruction) or allow them to spill onto neighboring tiles so as to preserve the features whole.
+to facilitate reconstruction) or allow them to spill onto neighboring tiles so as to preserve the features whole. For formats that does not allow extra dimensions, properties that are not supposed to be spatial may contain coordinates (temporal).
 
 ==== Coverages
 
@@ -165,23 +162,24 @@ while referencing shared 3D models, available at `models/{modelId}` and textures
 
 A specific schema can be defined for position, orientation (e.g. yaw, pitch, roll), and scale (x, y, z), and a feature encoded as GeoJSON could look like:
 
-```json
-   {
-      "type" : "Feature",
-      "id" : 1175,
-      "geometry" :
-      {
-         "type" : "Point",
-         "coordinates" : [ -117.1577729394728, 32.8687124736055, 0 ]
-      },
-      "properties" :
-      {
-         "modelId" : "coniferous_tree01",
-         "modelScale" : [ 1.0, 0.8, 1.1 ],
-         "modelOrientation" : [ 323.0, 0, 0 ]
-      }
-   }
-```
+[source,json]
+----
+ {
+    "type" : "Feature",
+    "id" : 1175,
+    "geometry" :
+    {
+       "type" : "Point",
+       "coordinates" : [ -117.1577729394728, 32.8687124736055, 0 ]
+    },
+    "properties" :
+    {
+       "modelId" : "coniferous_tree01",
+       "modelScale" : [ 1.0, 0.8, 1.1 ],
+       "modelOrientation" : [ 323.0, 0, 0 ]
+    }
+ }
+----
 
 The vertical position could either be relative to the terrain, to facilitate the use of different elevation models, or absolute coordinates in the CRS
 (e.g. relative to the WGS84 spheroid).

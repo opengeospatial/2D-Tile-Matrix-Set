@@ -153,7 +153,7 @@ One for each keyword authority used
 
 ^g^     If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all.
 
-^h^     If the bounding box does not specify a CRS, it is inherited from the CRS of the TileSet if available, otherwise to that of the TileMatrixSet.
+^h^     If the bounding box does not specify a CRS, it is inherited from the CRS of the TileSet if available, otherwise from the TileMatrixSet.
 
 ^i^     If style property mentions a style applied to all layers, the style property in layer should not be used.
 

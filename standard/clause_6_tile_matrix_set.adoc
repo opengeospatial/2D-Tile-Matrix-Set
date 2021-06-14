@@ -329,7 +329,7 @@ NOTE: The bounding box of a tile matrix is not supplied explicitly because it ca
 
 [[TileMatrixSetCRSCompatibility]]
 ===== TileMatrixSet CRS Compatibility
-In general the CRS of the TileSets using a TileMatrixSet should use the same CRS. However there are some situations where there is some flexibility:
+In general the CRS of the TileSets using a TileMatrixSet should be the same as the CRS of that TileMatrixSet. However there are some situations where there is some flexibility:
 
 * The CRS of the TileSet is a realization of the datum ensemble CRS specified in the TileMatrixSet. E.g. TileSet CRS: EPSG:9057 (G1762 realization of WGS84) and TileMatrixSet CRS: EPSG:4326 (WGS84)
 * The CRS of the TileSet includes additional dimensions beyond the 2 specified in the CRS of the TileMatrixSet. E.g. TileSet CRS: EPSG:4979 (lat, lon, h in WGS84) and TileMatrixSet CRS: EPSG:4326 (lat, lon in WGS84)

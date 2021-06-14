@@ -3,8 +3,8 @@
 :appendix-caption: Annex
 == Extending TileMatrixSets for additional dimensions (Informative)
 
-This annex proposes approaches to extending TileMatrixSets and TileSet metadata for storing, indexing and accessing as tiles 3D, 4D and n-D (n > 2) data,
-regardless of whether simple a file-based data store, a database (e.g. a GeoPackage) or a web API is used.
+This informative annex proposes approaches to extending TileMatrixSets and TileSet metadata for storing, indexing and accessing as tiles 3D, 4D and n-D (n > 2) data,
+regardless of whether a simple file-based data store, a database (e.g. a GeoPackage) or a web API is used.
 
 === Extension approaches
 
@@ -149,10 +149,10 @@ and orienting them (i.e. defining a _GeoPose_). This can be accomplished by the 
 also allowing to pitch and roll orientation, or separately scale the x, y and z dimensions).
 In CDB 1.x, this approach is used for both geo-typical as well as for geo-specific models.
 
-It is especially suitable for shared geo-typical models which defined only once and re-used many times, including in multiple tiles,
+It is especially suitable for shared geo-typical models which are defined only once and re-used many times, including in multiple tiles,
 for example to build forests re-using models of trees while varying their sizes and orientations.
 Such models (and potentially their textures as well) would then need to be accessible separately from the tiling hierarchy.
-For example, vector tiles could available as usual, e.g.:
+For example, vector tiles could be available as usual at, e.g.:
 
     trees/tiles/GNOSISGlobalGrid/13/5200/5715.json
     trees/tiles/GNOSISGlobalGrid/13/5200/5715.mvt
@@ -194,8 +194,14 @@ but flagging them as such.
 
 Another approach is to define a single 3D mesh batching all content within the tile.
 This approach is used by _3D Tiles_ and _i3s_ tilesets.
-This could either clip the geometry exactly at the tile's boundary boundary, or allow spilling onto the neighboring tile,
+
+This could either clip the geometry exactly at the tile's boundary, or allow spilling onto the neighboring tiles,
 in which case information about the precise 3D bounding volume of the tile's content can come in handy.
+
+Ideally, the mesh is defined with the center of the tile (e.g latitude, longitude and spheroid height) as the local origin, with the local axes
+lined up to the TileMatrixSet axes and the vertical axis orthogonal to them, and no separate geo-referencing or orientation information is required.
+This way, opening up a tile from anywhere in the world in a 3D model viewer or editor buildings for example would always appear properly oriented upwards.
+
 It is also useful to identify which portions of the mesh (e.g. triangles or faces) make up a particular features, e.g. the terrain,
 or a particular building, if supported by the 3D model format.
 The tiles batching 3D models can then follow the regular TileMatrixSet hierarchy. As an example the following paths could offer glTF, E3D and
@@ -222,4 +228,4 @@ reducing the overhead of having many tiles where data is sparse, while avoiding 
 
 3D datasets based on a TileMatrixSet can be distributed as Tiles just like 2D tilesets instead (or in addition to) as
 Bounding Volume Hierarchies (e.g. 3D Tiles and/or i3s), where the latter can simply reference the former
-(e.g. linking to .b3dm files organized in TileMatrixSet paths).
+(e.g. linking to _.b3dm_ files organized in TileMatrixSet paths).

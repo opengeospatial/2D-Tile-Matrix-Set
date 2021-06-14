@@ -9,6 +9,6 @@ An additional annex for <<annex-variable-tilematrixset-definitions-informative>>
 
 Global identifiers for the Tile Matrix Sets defined in these annexes are registered with the OGC Naming Authority in the http://www.opengis.net/def/tms[Tile Matrix Set Register].
 
-The Tile Set Metadata provides information about the intended usage of a Tile Set as well as the origin, security level, tiling scheme, layers and feature properties contained within. A tile set is a series of tiles containing data and following a common tiling scheme. Tile Set Metadata is intended to facilitate retrieval of tile sets and describes the major characteristics of tile sets without actually accessing the tiles nor the content contained in a tile. The Tile set Metadata was initially developed in phase two of the OGC Vector Tiles Pilot.
+The Tile Set Metadata provides information about the intended usage of a Tile Set as well as the origin, security level, tiling scheme, layers and feature properties contained within. A tile set is a series of tiles containing data and following a common tiling scheme. Tile Set Metadata is intended to facilitate retrieval of tile sets and describes the major characteristics of tile sets without actually accessing the tiles nor the content within a tile. The Tile set Metadata was initially developed in phase two of the OGC Vector Tiles Pilot.
 
 NOTE: A previous version of this standard had a JSON-LD encoding of the classes presented in <<tilematrixset-model>>. This encoding was abandoned as no interest was detected.

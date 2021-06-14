@@ -141,7 +141,7 @@ metadata describing common properties defining a tile set, layers and styles use
 
 tile that contains geometric features information that has been simplified at the tile scale resolution and clipped by the tile boundaries.
 
-NOTE: The expression "vector tile" has associated some controversy in the OGC. Actually, the OGC uses geometrical features to refer to things that are commonly knows as vectors in many GIS tools. However, in this case, this standard recognizes the level fo penetration of the expression in the sector and assumes that the concept is not associated to any particular technology or commercial brand.
+NOTE: The expression "vector tile" has stirred some controversy in the OGC. Actually, the OGC uses geometrical features to refer to things that are commonly knows as vectors in many GIS tools. However, in this case, this standard recognizes the ubiquity of the expression in the sector and assumes that the concept is not associated to any particular technology or commercial brand.
 
 *4.19*        
 

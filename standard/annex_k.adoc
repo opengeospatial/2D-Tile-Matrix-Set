@@ -132,7 +132,7 @@ to facilitate reconstruction) or allow them to spill onto neighboring tiles so a
 
 ==== Coverages
 
-Coverage tiles can contain an additional dimension, which may or may not have gone through a trim operation.
+Coverage tiles can contain additional dimensions, which may or may not have gone through a trim operation.
 A precise subset operation corresponds to each of the three proposed approach, which would also typically make use of a re-scaling (downsampling)
 operation as well to produce the lower resolution tiles.
 

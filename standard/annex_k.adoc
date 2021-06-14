@@ -10,7 +10,7 @@ regardless of whether a simple file-based data store, a database (e.g. a GeoPack
 
 All of these approaches assume that the multi-dimensional content still spans the two dimensions defined by 2D TileMatrixSets, which are
 usually latitude and longitude for geographic CRSes, and X/Easting or Y/Northing for projected CRSes.
-It is possible for a TileSet CRS to have more than two dimensions, as well as to re-use a common TileMatrixSet using a compatible CRS including
+It is possible for a TileSet CRS to have more than two dimensions, as well as to re-use a common TileMatrixSet using a compatible CRS while including
 additional dimensions, as specified in <<TileMatrixSetCRSCompatibility>>.
 
 ==== No explicit tiling of extra dimensions

@@ -53,7 +53,7 @@ image::figures/nd-octree.png[]
 
 === Extended properties for TileMatrix & limits
 
-An `extraDimensions` property can be added consisting of an associative array (list) of dimension names mapping to a description on how the additional
+An `extraDimensions` property can be added consisting of an list of identified (with dimension names) objects (associative array), each one with aa description on how the additional
 dimensions are tiled. This information can be added to either a _TileMatrixSet_'s _TileMatrix_ or to a _TileSet_'s _TileMatrixSetLimit_.
 Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows to re-use commonly used 2D TileMatrixSets.
 
@@ -62,6 +62,7 @@ Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows to re-us
 [width="100%",cols="15%,55%,15%,15%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
+| identifier | Dimension identifier ^c^ | ows:CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
 | min | minimum value for that dimension (lower bound) | number | One (mandatory)
 | max | maximum value for that dimension (upper bound) | number | One (mandatory)
 | uom | unit of measure for defining min, max and resolution | string (URI) | One (mandatory)
@@ -72,10 +73,13 @@ Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows to re-us
 4+| ^a^ Temporal units such as years and month have unequal number of days, and even days have unequal number of seconds when considering leap seconds.
 If these are not used, then _divisions_ would divide the temporal range equally, and (potentially fractional) seconds would be assumed as the resolution unit.
 
-^b^ second, minute, hour, day, week, month, year, ...
+^b^ Possible values are: second, minute, hour, day, week, month, year, ...
+
+^c^ These ExtraDimension identifiers SHALL be unique (different) within the context of the  TileMatrixSet.
+
 |===
 
-==== Example TileMatrix extended to 4 dimensions
+==== Example TileMatrix extended to with 2 extra dimensions to 4 dimensions
 
 [source, json]
 ----

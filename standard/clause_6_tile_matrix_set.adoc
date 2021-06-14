@@ -298,7 +298,7 @@ One (mandatory)
 
 ^b^    The CRS and order of these coordinates shall be as specified by the _crs_ of the parent TileMatrixSet. These are the precise coordinates of the corner of origin (e.g. the top-left corner) for the tile matrix, which is also the corner of the (0, 0) tile. See Figure 1.
 
-^c^    This TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded cell size. It is recommended to avoid repeating the TileMatrixSet identifier as part of the TileMatrix identifier.
+^c^    These TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded cell size. It is recommended to avoid repeating the TileMatrixSet identifier as part of the TileMatrix identifier.
 
 ^d^    If no Title is specified, client may display the Identifier value instead.
 

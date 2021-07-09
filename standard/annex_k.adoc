@@ -16,7 +16,7 @@ additional dimensions, as specified in <<TileMatrixSetCRSCompatibility>>.
 ==== No explicit tiling of extra dimensions
 
 One way to extend the use of TileMatrixSet to support additional dimensions is to simply regroup all content falling within a 2D tile boundary of the
-TileMatrixSet together in the same tile, for the full extent of those additional dimensions. In other words, the additional dimensions are not tiled. This data structure is the only one supported by WMTS 1.0 and it was called "extra dimensions".
+TileMatrixSet together in the same tile, for the full extent of those additional dimensions. In other words, the additional dimensions are not tiled.
 
 [#img_nd_extend,reftext='{figure-caption} {counter:figure-num}']
 .Extending TileMatrixSet vertically with no division
@@ -27,11 +27,12 @@ supporting multiple dimensions (e.g. netCDF for coverages, glTF for 3D models, L
 the `subset` (trimming or slicing) and `datetime` (temporal slicing) query parameters.
 Note that the data density or resolution of the extra dimensions can still be reduced for the lower resolution 2D tile matrices.
 
-This is the approach used in WMTS as well as in OGC CDB 1.x (see definition of the <<cdb-global-grid-tilematrixset-definition, CDB Global Grid>>).
+This approach is the only one supported by WMTS 1.0 where it is called "extra dimensions",
+and it is also used in OGC CDB 1.x (see definition of the <<cdb-global-grid-tilematrixset-definition, CDB Global Grid>>).
 
 ==== Same division for all tile matrices
 
-Another approach is to also to "tile" (divide) the extra dimension(s), but tile them the same number of pieces for all "D tile matrices.
+Another approach is to also "tile" (divide) the extra dimension(s), but tile them in the same number of pieces for all n-D tile matrices.
 
 [#img_nd_divide,reftext='{figure-caption} {counter:figure-num}']
 .Extending TileMatrixSet vertically with the same tilings for all tile matrices (the illustration shows 2 "vertical" tile divisions for the extra "vertical" dimension for all tile matrices)
@@ -59,10 +60,10 @@ Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows to re-us
 
 [#nd-extensions-fields,reftext='{table-caption} {counter:table-num}']
 .Properties for a ExtraDimension data structure
-[width="100%",cols="15%,55%,15%,15%",options="header"]
+[width="100%",cols="21%,47%,17%,15%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| identifier | Dimension identifier ^c^ | ows:CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
+| identifier | Dimension identifier ^c^ | ows:CodeType | One (mandatory)
 | min | minimum value for that dimension (lower bound) | number | One (mandatory)
 | max | maximum value for that dimension (upper bound) | number | One (mandatory)
 | uom | unit of measure for defining min, max and resolution | string (URI) | One (mandatory)
@@ -75,11 +76,11 @@ If these are not used, then _divisions_ would divide the temporal range equally,
 
 ^b^ Possible values are: second, minute, hour, day, week, month, year, ...
 
-^c^ These ExtraDimension identifiers SHALL be unique (different) within the context of the  TileMatrixSet.
+^c^ These _ExtraDimension_ identifiers SHALL be unique (different) within the context of the TileMatrixSet.
 
 |===
 
-==== Example TileMatrix extended to with 2 extra dimensions to 4 dimensions
+==== Example TileMatrix extended to 4 dimensions (2 extra dimensions)
 
 [source, json]
 ----
@@ -109,7 +110,7 @@ If these are not used, then _divisions_ would divide the temporal range equally,
 ----
 
 In this example the low-resolution overview tile matrix would feature 4 x 2 x 2 x 1 (16) tiles,
-each containing e.g. a 4D+ coverage (a tile may contain additional dimensions beyond what is specified in the TMS)
+each containing e.g. a 4+D coverage (a tile may contain additional dimensions beyond what is specified in the TileMatrixSet)
 with 256 x 256 x 12 x 12 values (equivalent to 144 regular 2D lat/lon slices or tiles).
 
 This _extraDimensions_ property supports any of the three approaches proposed above:
@@ -188,7 +189,7 @@ A specific schema can be defined for position, orientation (e.g. yaw, pitch, rol
 The vertical position could either be relative to the terrain, to facilitate the use of different elevation models, or absolute coordinates in the CRS
 (e.g. relative to the WGS84 spheroid).
 
-With this approach, only the points are clipped to the tile's boundary, while the model themselves may extend beyond.
+With this approach, only the points are clipped to the tile's boundary, while the models themselves may extend beyond.
 Techniques could be used to manage handling this scenario, such as still including the points from neighboring tiles spilling into the current tile,
 but flagging them as such.
 

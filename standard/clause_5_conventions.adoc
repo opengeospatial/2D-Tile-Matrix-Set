@@ -83,7 +83,7 @@ Keywords is described from MD_Keywords class in ISO 19115-1 and has a list of ke
 4+|
 |===
 
-NOTE: OGC APIs will use the language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. In addition in JSON encodings we are not considering namespaces or codespaces (optional in the model). This will results in a simplification of the keywords in the JSON encoding to a simple array of strings.
+NOTE: OGC APIs will use language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. In JSON encodings we are not considering namespaces or codespaces (optional in the model). This will results in a simplification of the keywords in the JSON encoding to a simple array of strings.
 
 ==== BoundingBox
 A (basic) bounding box is one type of bounding box that is used in this document. The Bounding box data structure is specified in the following UML model and table.
@@ -123,7 +123,7 @@ Include unless referenced elsewhere
 
 The bounding box contents defined will not always specify the MINIMUM rectangular BOUNDING region, if the referenced CRS uses an Ellipsoidal, Spherical, Polar, or Cylindrical coordinate system, as those terms are specified in OGC Abstract Specification Topic 2. Specifically, this box will not specify the minimum rectangular bounding region surrounding a geometry whose set of points span the value discontinuity in an angular coordinate axis. Such axes include the longitude and latitude of Ellipsoidal and Spherical coordinate systems. That geometry could lie within a small region on the surface of the ellipsoid or sphere.
 
-Theoretically, there are cases where defining a bounding box could be problematic or impossible, such as angular axis of an Ellipsoidal, Spherical, Polar, or Cylindrical coordinate system. However, tiles need to be circumscribed to real coordinates and will deliberately avoid to enter into regions of the space where coordinates go to infinite or cannot be defined. For example, the `WorldMercatorWGS84Quad` tile matrix set (based on a cylindrical projection) deliberately avoids to get close to the poles. Since tiles are conterminous, it is always possible to define a bounding box that includes them all.
+Theoretically, there are cases where defining a bounding box could be problematic or impossible, such as angular axis of an Ellipsoidal, Spherical, Polar, or Cylindrical coordinate system. However, tiles need to be circumscribed to real coordinates and will deliberately avoid regions of the space where coordinates go to infinite or cannot be defined. For example, the `WorldMercatorWGS84Quad` tile matrix set (based on a cylindrical projection) should not be used close to the poles. Since tiles are conterminous, it is always possible to define a bounding box that includes them all.
 
 ==== CRSType
 
@@ -136,12 +136,12 @@ In this version of this standard we introduce the possibility define a CRS using
 | Names | Definition | Data type and values
 | uri | A reference to a CRS. Typically a EPSG CRS reference | URI
 | wkt | A string defining the CRS using Well Known Text | CharacterString
-| referenceSystem | A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115 | MD_ReferenceSystem data type
+| referenceSystem | A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115 | MD_ReferenceSystem
 |===
 
 ==== WebLink
 
-Many recent standards emphasize the usefulness of links as a way to relate a data structure instance to other data structures and make navigation through resources possible. Essential links are make explicit in the data structures of this document (recognizable by a URI data type) but other links can be added as needed for convenience when an WebLink is available. The data structure defined here allows the addition of other links. The definition is based on the web linking defined in the RFC8288 and the XML serialization present in section 4.2.7 of the RFC4287 and in the JSON serialization found in this IETF draft: https://tools.ietf.org/id/draft-pot-json-link-01.html
+Many recent standards emphasize the usefulness of links as a way to relate a data structure instance to other data structures and make navigation through resources possible. Essential links are made explicit in the data structures of this document (recognizable by a URI data type) but other links can be added as needed for convenience when a WebLink is available. The data structure defined here allows the addition of other links. The definition is based on the web linking defined in the RFC8288 and the XML serialization present in section 4.2.7 of the RFC4287 and in the JSON serialization found in this IETF draft: https://tools.ietf.org/id/draft-pot-json-link-01.html
 
 NOTE: In practice, some encodings can opt to specify the essential links as part of this data structure for convenience
 
@@ -168,11 +168,11 @@ image::figures/AtomLink.png[Atom link UML model]
 | Zero or one (optional)
 
 | hreflang | language of the resource pointed to by the href attribute
-| CharacterString ^c^
+| LanguageString data structureCharacterString ^c^
 | Zero or one (optional)
 
 | title | human-readable information about the link
-| LanguageString data structure
+| CharacterString ^c^
 | Zero or one (optional)
 
 Include one for each language represented

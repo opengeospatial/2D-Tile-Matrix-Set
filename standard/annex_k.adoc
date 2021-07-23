@@ -10,8 +10,7 @@ regardless of whether a simple file-based data store, a database (e.g. a GeoPack
 === Extension approaches
 
 All of these approaches assume that the multi-dimensional content spans the two dimensions defined by 2D TileMatrixSets, which are
-usually either latitude and longitude for geographic CRSes, or X/Easting or Y/Northing for projected CRSes as well as other extra dimensions
-TileSet CRS can have more than two dimensions by re-use a common 2D TileMatrixSet and using a compatible CRS that includes
+usually either latitude and longitude for geographic CRSes, or X/Easting or Y/Northing for projected CRSes, as well as other extra dimensions.  TileSet CRS can have more than two dimensions by re-use a common 2D TileMatrixSet and using a compatible CRS that includes
 additional dimensions, as specified in <<TileMatrixSetCRSCompatibility>>.
 
 ==== No explicit tiling of extra dimensions
@@ -55,9 +54,9 @@ image::figures/nd-octree.png[]
 
 === Extended properties for TileMatrix & limits
 
-An `extraDimensions` property can be added consisting of an list of identified (with dimension names) objects (associative array), each one with aa description on how the additional
+An `extraDimensions` property can be added consisting of an list of identified (with dimension names) objects (associative array), each one with a description on how the additional
 dimensions are tiled. This information can be added to either a _TileMatrixSet_'s _TileMatrix_ or to a _TileSet_'s _TileMatrixSetLimit_.
-Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows to re-use commonly used 2D TileMatrixSets.
+Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows for the re-use commonly used 2D TileMatrixSets.
 
 [#nd-extensions-fields,reftext='{table-caption} {counter:table-num}']
 .Properties for a ExtraDimension data structure
@@ -131,7 +130,7 @@ Many vector formats support geometry with an extra coordinate for the depth dime
 Some formats may also explicitly support defining solids such as polyhedrons.
 Different approaches can be used to tile those features, e.g. picking one of the three aforementioned ways to divide (or not divide) those extra dimensions,
 and deciding whether to clip the features at tile boundaries (potentially marking artificial segments
-to facilitate reconstruction) or allow them to spill onto neighboring tiles so as to preserve the features whole. For formats that does not allow extra dimensions, properties that are not supposed to be spatial may contain coordinates (temporal).
+to facilitate reconstruction) or allow them to spill onto neighboring tiles so as to preserve the features whole. For formats that do not allow extra dimensions, properties that are not supposed to be spatial may contain coordinates (temporal).
 
 ==== Coverages
 
@@ -217,7 +216,7 @@ The tiles batching 3D models can then follow the regular TileMatrixSet hierarchy
 
 === Relationship with _3D Tiles_ and _i3s_
 
-The _3D Tiles_ and _i3s_ OGC community standards allow to describe Bounding Volume Hierarchies (BVH) of 3D data.
+The _3D Tiles_ and _i3s_ OGC community standards describe Bounding Volume Hierarchies (BVH) of 3D data.
 Those BVH _tilesets_ allow dimensions of each tile to differ.
 While a TileMatrixSet can be used as the basis for producing _3D Tiles_ or _i3s_ BVH tilesets,
 not all _3D Tiles_ or _i3s_ tilesets need to be based on a TileMatrixSet.

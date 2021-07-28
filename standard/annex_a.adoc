@@ -41,7 +41,7 @@ A tile matrix set  _shall_ be defined following the UML model as shown in Figure
 | Dependency: | http://www.opengis.net/spec/owscommon/2.0/req
 | Test method: | Validate the requirements of the model
 
-Test passes if TileMatrixSet instances point to the TileMatrixSet data type definition and follow the data model specified in Table 1 and Table 2 and its dependencies.
+Test passes if TileMatrixSet instances point to the TileMatrixSet data type definition and follows the data model specified in Table 1 and Table 2 and its dependencies.
 |===
 
 [[a.2-conformance-class-variablematrixwidth]]
@@ -67,7 +67,7 @@ Test passes if VariableMatrixWidth instances point to the VariableMatrixWidth da
 |===
 | Test id: | *variablematrixwidth/coalescence1*
 | Test Purpose: | *Req 6 req/variablematrixwidth/coalescence1:* +
-Only the tile rows will with coalesces factor different of one shall be encoded. It a tile row is not mentioned in the variablematrixwidth description a coalesce factor of 1 shall be considered for that row.**
+Only the tile rows will with coalesces factor different than one shall be encoded. It a tile row is not mentioned in the variablematrixwidth description a coalesce factor of 1 shall be considered for that row.**
 | Test method: | Validate the requirements of the model
 
 Test passes if all VariableMatrixWidth elements in the instance has a coalescence factor bigger than 1.

@@ -2,12 +2,12 @@
 [[annex-changes-previous-version]]
 :appendix-caption: Annex
 == Changes from previous version (Informative)
-This annex enumerates some main changes done from the previous version of this Standard. These changes were carefully designed to provide conceptual descendent compatibility. Unfortunately, provided compatibility for XML documents is very restrictive and XML encoding of the previous version will not validate with the schemas of this version. There are many other small changes between both standards.
+This annex enumerates the main changes done from the previous version of this Standard. These changes were carefully designed to provide conceptual descendent compatibility. Unfortunately, provided compatibility for XML documents is very restrictive and XML encoding of the previous version will not validate with the schemas of this version. There are many other small changes between both standards.
 
 NOTE: At the point of finalizing this document no OGC standard references version 1.0. New standards are encouraged to use this version.
 
 === TileSetMetadata
-In the version 1.0 there was a concept of TileMatrixSetLink (and data structure) designed to allow for a dataset declaring the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set. In this standard, this concept has been extended beyond recognition into the TileSetMetadata structure that contains the metadata describing a set of tiles representing the same geospatial data and all conforming to a tile matrix set (a tileset), the limited coverage, and the suggested center point. Even if the new data structure looks different and covers more use cases, the previous functionality provided by the TileMatrixSetLink data structure is still included in the TileSetMetadata structure.
+In version 1.0 there was a concept of TileMatrixSetLink (and data structure) designed to allow a dataset to declare the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set. In this standard, this concept has been extended beyond recognition into the TileSetMetadata structure that contains the metadata describing a set of tiles representing the same geospatial data and all conforming to a tile matrix set (a tileset), the limited coverage, and the suggested center point. Even if the new data structure looks different and covers more use cases, the previous functionality provided by the TileMatrixSetLink data structure is still included in the TileSetMetadata structure.
 
 Equivalences from the old version into the new version are:
 

@@ -4,7 +4,7 @@
 == Variable width TileMatrixSet definitions (Informative)
 
 This annex includes definitions for TileMatrixSets utilizing the variable width capability.
-This capability allows to coalesce tiles of specific rows so that the overall width of the tile matrix is divided among fewer tiles.
+This capability allows for the coalescence of tiles for specific rows so that the overall width of the tile matrix is divided among fewer tiles.
 This is particularly well suited to define global grids in an Equirectangular Plate Carrée projection, where tiles closer to the pole cover a smaller physical area
 than tiles at the equator.
 
@@ -79,11 +79,11 @@ image::figures/5.png[]
 |===
 
 One can define an arbitrary number of zoom levels and do not need to include all the ones defined here. Here, 6 zoom levels are illustrated.
-Levels 0..28 are officially defined, allowing to reach 2:1 scale while the matrix, row and column identifiers can still fit together within a single 64-bit key.
+Levels 0 to 28 are officially defined, allowing to reach 2:1 scale while the matrix, row and column identifiers can still fit together within a single 64-bit key.
 
-It is easy to implement procedurally: it is a quad-tree starting with eight 90 degrees x 90 degrees tiles at level 0,
+It is easy to implement procedurally: it is a quad-tree starting with eight 90 x 90 degree tiles at level 0,
 with the exception that tiles touching a pole are split into 3 tiles rather than 4 -- the polar portion is not split longitude-wise.
-Therefore there will always be only 4 tiles touching each pole.
+Therefore, there will always be only 4 tiles touching each pole.
 
 NOTE: The GNOSIS Global Grid scales match the _GoogleCRS84Quad_ Well Known Scale Set, but starts at the third scale of the set.
 

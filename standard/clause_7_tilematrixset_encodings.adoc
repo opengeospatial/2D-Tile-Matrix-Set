@@ -13,7 +13,7 @@ The JSON encoding has been done respecting the naming and types of the original 
 | Class attribute | JSON element | Reason
 | identifier | id | Following common practice in GeoJSON and JSON-LD.
 | BoundingBox class | array of 4 numbers representing lowerLeft and topRight coordinates | Following GeoJSON suggested encoding.
-| LanguageString | string | JSON files are general used in the OGC API as monolingual documents. The language of the document is determined by the HTTP language negotiation headers.
+| LanguageString | string | JSON files are generally used in the OGC API as monolingual documents. The language of the document is determined by the HTTP language negotiation headers.
 | keyworks | string array | JSON files are general used in the OGC API as monolingual documents. JSON does not use namespaces or codespaces. |
 | WKT | object | The WKT encoding for JSON is an object representing a JSON encoding of the WKT defined by https://proj.org/specifications/projjson.html |
 |===

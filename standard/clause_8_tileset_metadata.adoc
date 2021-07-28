@@ -18,14 +18,14 @@ image::figures/4.png[TileMatrix Limits]
 [[tileset-medatadata-overview]]
 ==== TileSet metadata
 
-Tiles are identified by tileMatrix id, tileRow number and tileCol number. These three elements have only meaning if they are associated to a tileMatrixSet description that contains the necessary information (in terms of scaleDenominator, cellSize, pointOfOrigin and cornerOfOrigin) to transform the indices into coordinates in a knows CRS. The main purpose of the TileSetMetadata is to  link the tileset with the tileMatrixSet description. In addition, the model contains elements describing the main characteristics of a tile set, the connection to the tileset with the original data collection and styles as well as the a recommended center point to start the navigation.
+Tiles are identified by tileMatrix id, tileRow number and tileCol number. These three elements only have meaning if they are associated to a tileMatrixSet description that contains the necessary information (in terms of scaleDenominator, cellSize, pointOfOrigin and cornerOfOrigin) to transform the indices into coordinates in a known CRS. The main purpose of the TileSetMetadata is to  link the tileset with the tileMatrixSet description. In addition, the model contains elements describing the main characteristics of a tile set, the connection to the tileset with the original data collection and styles as well as the a recommended center point to start the navigation.
 
 === Requirements classes
 
 [[tilematrixsetlimits-requirements-class]]
 ==== TileMatrixSetLimits requirements class
 
-Requirements class tilematrixsetlimits establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region of for a subset of scales. The array of TileMatrixSetLimits data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits.
+Requirements class tilematrixsetlimits establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region or for a subset of scales. The array of TileMatrixSetLimits data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits.
 
 include::requirements/requirements_tilematrixsetlimits.adoc[]
 

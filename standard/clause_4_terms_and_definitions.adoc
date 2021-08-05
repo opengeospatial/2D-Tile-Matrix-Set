@@ -103,7 +103,7 @@ grid tile scheme that defines how space is partitioned into a set of conterminou
 
 NOTE: In 2d, a tile matrix constitutes a tessellation of the space that resembles a matrix characterized by a matrix width (columns) and a matrix height (rows).
 
-NOTE: In this standard, a tile matrix is not used alone and it is part of the matrix set.
+NOTE: In this standard, a tile matrix is not used alone and it is part of a tile matrix set.
 
 *4.14*        
 

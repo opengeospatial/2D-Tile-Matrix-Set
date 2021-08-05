@@ -5,7 +5,7 @@
 
 This informative Annex provides an example of use for _TileSetMetadata_ and _TileMatrixSetLimits_ data structures.
 
-The _TileSetMetadata_ data structure can be used for a resource to specify the tiling scheme supported by the resource, as well as additional metadata.
+The _TileSetMetadata_ data structure can be used for a resource to specify the tiling scheme supported by a particular tile set, as well as additional metadata.
 
 The _TileMatrixSetLimits_ data structure is populated to indicate that the resource is only available in a fragment of the tiled space.
 

@@ -10,7 +10,7 @@ regardless of whether a simple file-based data store, a database (e.g. a GeoPack
 === Extension approaches
 
 All of these approaches assume that the multi-dimensional content spans the two dimensions defined by 2D TileMatrixSets, which are
-usually either latitude and longitude for geographic CRSes, or X/Easting or Y/Northing for projected CRSes, as well as other extra dimensions.  TileSet CRS can have more than two dimensions by re-use a common 2D TileMatrixSet and using a compatible CRS that includes
+usually either latitude and longitude for geographic CRSes, or X/Easting or Y/Northing for projected CRSes, as well as other extra dimensions. The TileSet CRS can have more than two dimensions by re-using a common 2D TileMatrixSet but selecting a compatible CRS that includes
 additional dimensions, as specified in <<TileMatrixSetCRSCompatibility>>.
 
 ==== No explicit tiling of extra dimensions
@@ -56,7 +56,7 @@ image::figures/nd-octree.png[]
 
 An `extraDimensions` property can be added consisting of an list of identified (with dimension names) objects (associative array), each one with a description on how the additional
 dimensions are tiled. This information can be added to either a _TileMatrixSet_'s _TileMatrix_ or to a _TileSet_'s _TileMatrixSetLimit_.
-Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows for the re-use commonly used 2D TileMatrixSets.
+Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows for the re-use of common 2D TileMatrixSets.
 
 [#nd-extensions-fields,reftext='{table-caption} {counter:table-num}']
 .Properties for a ExtraDimension data structure

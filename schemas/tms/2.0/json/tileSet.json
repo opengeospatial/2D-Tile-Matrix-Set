@@ -60,7 +60,7 @@
 					"type": "array",
 					"items":
 					{
-						"$ref": "tilematrixlimits.json"
+						"$ref": "tileMatrixLimits.json"
 					}
 				},
 				"crs": {

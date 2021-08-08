@@ -6,7 +6,7 @@
 	[
 		{
 			"type": "object",
-			"required": ["dataType"],
+			"required": ["dataType", "links"],
 			"properties":
 			{
 				"title": {

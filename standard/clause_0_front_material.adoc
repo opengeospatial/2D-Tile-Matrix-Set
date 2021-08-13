@@ -28,10 +28,11 @@ If a server points to a definition of a TileMatrixSet that is hosted elsewhere, 
 
 The following organizations submitted this document to the Open Geospatial Consortium (OGC):
 
-*   UAB-CREAF
+*   Universitat Autònoma de Barcelona (UAB-CREAF)
 *   Image Matters LLC
 *   Natural Resources Canada (NRCan)
 *   Ecere Corporation
+*   US Army Geospatial Center
 
 [big]*vi.     Submitters*
 
@@ -40,8 +41,9 @@ All questions regarding this submission should be directed to the editor or the 
 [width="100%",cols="50%,50%",options="header",]
 |==========================================================================================
 |*Name* |*Affiliation*
-|Joan Masó |UAB-CREAF
+|Joan Masó |Universitat Autònoma de Barcelona (UAB-CREAF)
 |Jeff Yutzler |Image Matters LLC
 |Peter Rushforth |Canada Centre for Mapping and Earth Observation, Natural Resources Canada
 |Jérôme St-Louis |Ecere Corporation
+|Jeff Harrison |US Army Geospatial Center
 |==========================================================================================

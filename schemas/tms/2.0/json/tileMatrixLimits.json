@@ -16,7 +16,6 @@
 		"tileMatrix":
 		{
 			"type": "string",
-			"format": "uri",
 			"examples": ["5"]
 		},
 		"minTileRow":

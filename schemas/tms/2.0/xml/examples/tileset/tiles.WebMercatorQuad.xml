@@ -11,7 +11,6 @@
 	</tmsc:Keywords>
 	<AccessConstraints>unclassified</AccessConstraints>
 	<TileMatrixSetURI>http://www.opengis.net/def/TileMatrixset/OGC/1.0/WebMercatorQuad</TileMatrixSetURI>
-	<TileMatrixSetDefinition>/Daraa/ogcapi/TileMatrixSets/WebMercatorQuad</TileMatrixSetDefinition>
 	<tmsc:CRS>
 		<tmsc:URI>http://www.opengis.net/def/crs/EPSG/0/3857</tmsc:URI>
 	</tmsc:CRS>
@@ -113,13 +112,10 @@
 	<Layer>
 		<tmsc:Identifier>AgricultureSrf</tmsc:Identifier>
 		<GeometryType>polygons</GeometryType>
-		<MaxTileMatrix>17</MaxTileMatrix>
 		<MinScaleDenominator>4265.4591676995678</MinScaleDenominator>
 		<MinCellSize>1.19432856696</MinCellSize>
-		<tmsc:BoundingBox>
-			<tmsc:CRS>
-				<tmsc:URI>http://www.opengis.net/def/crs/OGC/1.3/CRS84</tmsc:URI>
-			</tmsc:CRS>
+		<MaxTileMatrix>17</MaxTileMatrix>
+		<tmsc:BoundingBox crs="http://www.opengis.net/def/crs/OGC/1.3/CRS84">
 			<tmsc:LowerLeft>35.898213 32.4633913</tmsc:LowerLeft>
 			<tmsc:UpperRight>36.5614696 32.8370158</tmsc:UpperRight>
 		</tmsc:BoundingBox>
@@ -153,13 +149,10 @@
 	<Layer>
 		<tmsc:Identifier>TransportationGroundCrv</tmsc:Identifier>
 		<GeometryType>lines</GeometryType>
-		<MaxTileMatrix>17</MaxTileMatrix>
 		<MinScaleDenominator>4265.4591676995678</MinScaleDenominator>
 		<MinCellSize>1.19432856696</MinCellSize>
-		<tmsc:BoundingBox>
-			<tmsc:CRS>
-				<tmsc:URI>http://www.opengis.net/def/crs/OGC/1.3/CRS84</tmsc:URI>
-			</tmsc:CRS>
+		<MaxTileMatrix>17</MaxTileMatrix>
+		<tmsc:BoundingBox crs="http://www.opengis.net/def/crs/OGC/1.3/CRS84">
 			<tmsc:LowerLeft>35.9028738 32.4168138</tmsc:LowerLeft>
 			<tmsc:UpperRight>36.5747694 33.1424348</tmsc:UpperRight>
 		</tmsc:BoundingBox>
@@ -193,9 +186,6 @@
 		<DataType>vector</DataType>
 	</Layer>
 	<CenterPoint>
-		<tmsc:CRS>
-			<tmsc:URI>http://www.opengis.net/def/crs/OGC/1.3/CRS84</tmsc:URI>
-		</tmsc:CRS>
 		<Coordinates>36.2298413 32.65020355</Coordinates>
 		<ScaleDenominator>17061.8366707982</ScaleDenominator>
 		<CellSize>4.77731426782</CellSize>
@@ -207,5 +197,6 @@
 	<Link rel="item" href="/Daraa/ogcapi/tiles/WebMercatorQuad/{TileMatrix}/{tileRow}/{tileCol}.json" type="application/geo+json" templated="true" />
 	<Link rel="item" href="/Daraa/ogcapi/tiles/WebMercatorQuad/{TileMatrix}/{tileRow}/{tileCol}.mvt" type="application/vnd.mapbox-vector-tile" templated="true" />
 	<Link rel="dataset" href="/Daraa/ogcapi" />
+	<Link rel="tiling-scheme" href="/Daraa/ogcapi/TileMatrixSets/WebMercatorQuad" type="application/json" />
 	<DataType>vector</DataType>
 </TileSetMetadata>

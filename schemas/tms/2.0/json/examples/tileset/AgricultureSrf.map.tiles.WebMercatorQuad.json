@@ -18,6 +18,11 @@
          "href" : "/Daraa/ogcapi/collections/AgricultureSrf/map/tiles/WebMercatorQuad?f=tilejson"
       },
       {
+         "rel" : "tiling-scheme",
+         "type" : "application/json",
+         "href" : "/Daraa/ogcapi/tileMatrixSets/WebMercatorQuad"
+      },
+      {
          "rel"  : "item",
          "href" : "/Daraa/ogcapi/collections/AgricultureSrf/map/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}",
          "templated" : true
@@ -78,7 +83,6 @@
       }
    ],
    "tileMatrixSetURI" : "http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad",
-   "tileMatrixSetDefinition" : "/Daraa/ogcapi/tileMatrixSets/WebMercatorQuad",
    "tileMatrixSetLimits" : [
       { "tileMatrix" : "0", "minTileRow" : 0, "maxTileRow" : 0, "minTileCol" : 0, "maxTileCol" : 0 },
       { "tileMatrix" : "1", "minTileRow" : 0, "maxTileRow" : 0, "minTileCol" : 1, "maxTileCol" : 1 },

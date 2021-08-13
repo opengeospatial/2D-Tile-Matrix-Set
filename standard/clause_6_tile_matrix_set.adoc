@@ -179,7 +179,7 @@ One for each keyword authority used
 
 | crs | Coordinate reference system (CRS)^j^ | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory) ^i^
 
-| orderedAxes | Ordered list of names of the dimensions defined in the CRS | Ordered sequence of strings | Zero or one (optional)
+| orderedAxes | Ordered list of names of the dimensions defined in the CRS^k^ | Ordered sequence of strings | Zero or one (optional)
 
 | wellKnownScaleSet | Reference to a well-known scale set ^e^ | URI type ^h^ | Zero or one (optional) ^c^
 
@@ -206,6 +206,8 @@ One for each keyword authority used
 ^i^     A single CRS can have several realizations and can be complemented by an epoch. In here it was decided that a TileMatrixSet is defined in a generic CRS. The CRS realization and epoch used by a concrete tileset is specified in the tileset metadata.
 
 ^j^     The CRS of the TileSets using this TileMatrixSet should be compatible with this CRS. See <<TileMatrixSetCRSCompatibility>>
+
+^k^     This element is not intended to overwrite the CRS axis order but to make it visible to developers by repeating information that is already contained in the CRS definition.
 |===
 
 A part from the general tile matrix set description an array of tile matrix elements is needed to define the distribution of tiles for each scale denominator.

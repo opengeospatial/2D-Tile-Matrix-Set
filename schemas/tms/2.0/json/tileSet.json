@@ -1,7 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
 	"title": "Tile Set Metadata",
-<<<<<<< HEAD
 	"description": "A resource describing a tileset based on the OGC TileSet Metadata Standard. At least one of the 'TileMatrixSet',  or a link with 'rel' tiling-scheme",
 	"type": "object",
 	"required": ["dataType"],
@@ -21,122 +20,6 @@
 			"items":
 			{
 				"type": "string"
-=======
-	"description": "A resource describing a tileset based on the OGC TileSet Metadata Standard",
-	"allOf":
-	[
-		{
-			"type": "object",
-			"required": ["dataType", "links"],
-			"properties":
-			{
-				"title": {
-					"description": "A title for this tileset",
-					"type": "string"
-				},
-				"description": {
-					"description": "Brief narrative description of this tile set",
-					"type": "string"
-				},
-				"keywords": {
-					"description": "keywords about this tileset",
-					"type": "array",
-					"items":
-					{
-						"type": "string"
-					}
-				},
-				"version": {
-					"description": "Version of the Tile Set. Changes if the data behind the tiles has been changed",
-					"type": "string"
-				},
-				"pointOfContact": {
-					"description": "Useful information to contact the authors or custodians for the Tile Set",
-					"type": "string"
-				},
-				"accessConstraints": {
-					"description": "Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set",
-					"type": "string",
-					"default": "unclassified",
-					"enum": ["unclassified", "restricted", "confidential", "secret", "topSecret"]
-				},
-				"license": {
-					"description": "License applicable to the tiles",
-					"type": "string"
-				},
-				"mediaTypes": {
-					"description": "Media types available for the tiles",
-					"type": "array",
-					"items":
-					{
-						"type": "string"
-					}
-				},
-				"dataType": {
-					"description": "Type of data represented in the tileset",
-					"$ref": "#/definitions/dataType"
-				},
-				"tileMatrixSetLimits": {
-					"description": "Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet. If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all",
-					"type": "array",
-					"items":
-					{
-						"$ref": "tileMatrixLimits.json"
-					}
-				},
-				"crs": {
-					"description": "Coordinate Reference System (CRS)",
-					"$ref": "crs.json"
-				},
-				"epoch": {
-					"description": "Epoch of the Coordinate Reference System (CRS)",
-					"type": "number"
-				},
-				"boundingBox": {
-					"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
-					"$ref": "2DBoundingBox.json"
-				},
-				"created": {
-					"description": "When the Tile Set was first produced",
-					"$ref": "timeStamp.json"
-				},
-				"updated": {
-					"description": "Last Tile Set change/revision",
-					"$ref": "timeStamp.json"
-				},
-				"layers": {
-					"minItems": 1,
-					"type": "array",
-					"items":
-					{
-						"$ref": "#/definitions/geospatialData"
-					}
-				},
-				"style": {
-					"description": "Style involving all layers used to generate the tileset",
-					"$ref": "#/definitions/style"
-				},
-				"centerPoint":
-				{
-					"description": "Location of a tile that nicely represents the tileset. Implementations may use this center value to set the default location or to present a representative tile in a user interface",
-					"$ref": "#/definitions/tilePoint"
-				},
-				"tileMatrixSetURI":
-				{
-					"description": "Reference to a Tile Matrix Set on the OGC NA definition server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on the definition server.",
-					"type": "string",
-					"format": "uri",
-					"examples": ["http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid"]
-				},
-				"links":
-				{
-					"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles. 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file)",
-					"type": "array",
-					"items": {
-						"$ref": "link.json"
-					}
-				}
->>>>>>> cfd3b2d8a9fdd1d5ce7870971a1368b4cc8ac166
 			}
 		},
 		"version": {

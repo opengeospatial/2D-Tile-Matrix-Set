@@ -1,0 +1,12 @@
+[[ats-tilematrixsetlimits]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/tms/2.0/conf/tilematrixsetlimits
+|Target type |tile matrix sets
+|Requirements class |<<tilematrixsetlimits-requirements-class,Requirements Class "TileMatrixSetLimit">>
+|===
+
+==== Model
+
+include::tilematrixsetlimits/ATS_tilematrixsetlimits_model.adoc[]

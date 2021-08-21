@@ -1,0 +1,20 @@
+[[ats_json-tilematrixsetlimits]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixsetlimits
+|Target type |tile set metadata
+|Requirements class |<<json-tilematrixsetlimits-requirements-class,Requirements Class "JSON TileMatrixSetLimits">>
+|===
+
+==== Model
+
+include::json-tilematrixsetlimits/ATS_json_tilematrixsetlimits_model.adoc[]
+
+==== IETF
+
+include::json-tilematrixsetlimits/ATS_json_tilematrixsetlimits_ietf.adoc[]
+
+==== Schema
+
+include::json-tilematrixsetlimits/ATS_json_tilematrixsetlimits_schema.adoc[]

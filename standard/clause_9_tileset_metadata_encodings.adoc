@@ -5,8 +5,8 @@
 === JSON encoding
 The JSON encoding has been done respecting the naming and types of the original classes.
 
-[[json-encoding-of-a-tilematrixsetlimits]]
-==== JSON TileMatrixSetLimits
+[[json-tilematrixsetlimits-requirements-class]]
+==== JSON TileMatrixSetLimits requirements class
 
 include::requirements/requirements_json-tilematrixsetlimits.adoc[]
 
@@ -20,8 +20,8 @@ NOTE: A TileMatrixSetLimits description can be embedded within the TileSetMetada
 
 An annex provides an <<json-document-instance-using-tilesetmetadata>> including TileMatrixSetLimits.
 
-[[json-encoding-of-a-tilesetmetadata]]
-==== JSON TileSetMetadata
+[[json-tilesetmetadata]]
+==== JSON TileSetMetadata requirements class
 
 include::requirements/requirements_json-tilesetmetadata.adoc[]
 
@@ -30,6 +30,8 @@ include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_model.adoc[]
 include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_ietf.adoc[]
 
 include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_schema.adoc[]
+
+include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_media-type.adoc[]
 
 NOTE: A TileSetMetadata description can be embedded in other file formats, such as a Service Metadata document of a WMTS service. In this case, the media type of the containing document prevails.
 
@@ -62,8 +64,8 @@ The encoding of PropertySchema adopts the JSON Schema form starting by and eleme
 === XML encoding
 The XML encoding has been done respecting the naming and types of the original classes. However all attribute names have been transformed to UpperCamelCase.
 
-[[xmltilematrixsetlimits-requirements-class]]
-==== XML TileMatrixSetLimits
+[[xml-tilematrixsetlimits-requirements-class]]
+==== XML TileMatrixSetLimits requirements class
 
 include::requirements/requirements_xml-tilematrixsetlimits.adoc[]
 
@@ -75,14 +77,16 @@ NOTE: A TileMatrixSetLimits is normally used as embedded in other XML documents.
 
 An annex provides an <<xml-document-instance-using-tilesetmetadata>> including TileMatrixSetLimits.
 
-[[xml-tileset-metadata]]
-==== XML TileSetMetadata
+[[xml-tilesetmetadata-requirements-class]]
+==== XML TileSetMetadata requirements class
 
 include::requirements/requirements_xml-tilesetmetadata.adoc[]
 
 include::requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_model.adoc[]
 
 include::requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_schema.adoc[]
+
+include::requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_media-type.adoc[]
 
 NOTE: A TileSetMetadata does not currently have an associated media type.
 

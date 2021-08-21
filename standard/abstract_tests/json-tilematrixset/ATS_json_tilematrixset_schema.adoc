@@ -1,0 +1,10 @@
+[[ats_json_tilematrixset_schema]]
+[cols=">20h,<80d",width="100%"]
+|===
+|*Abstract Test {counter:ats-id}* |*/conf/json-tilematrixset/schema*
+| Test Purpose | Validate that a TileMatrixSet encoded in JSON using the JSON schema for a tile matrix set.
+| Requirement |<<req_json_tilematrixset_schema>>
+| Test method | Validate the requirements of the model
+
+Test passes if TileMatrixSet JSON instances pass validation against the tile matrix set JSON Schemas.
+|===

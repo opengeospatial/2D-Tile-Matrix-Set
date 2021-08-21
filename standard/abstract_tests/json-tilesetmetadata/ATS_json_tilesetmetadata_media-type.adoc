@@ -1,0 +1,10 @@
+[[ats_json_tilesetmetadata_media-type]]
+[cols=">20h,<80d",width="100%"]
+|===
+|*Abstract Test {counter:ats-id}* |*/conf/json-tilesetmetadata/media-type*
+| Test Purpose | Validate that a TileSetMetadata encoded in an independent JSON document uses the media type application/json.
+|Requirement |<<req_json_tilesetmetadata_media-type>>
+| Test method | Validate the requirements of the media type
+
+Test passes if the independent instances of TileSetMetadata are exposed as application/json media type.
+|===

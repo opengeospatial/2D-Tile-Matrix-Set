@@ -1,0 +1,10 @@
+[[ats_variablematrixwidth_model]]
+[cols=">20h,<80d",width="100%"]
+|===
+|*Abstract Test {counter:ats-id}* |*/conf/variablematrixwidth/model*
+| Test Purpose | Validate that a tiled resource with variable width tiles, the resource defines the variable matrix width in a tile matrix set using a variablematrixwidth data structure.
+|Requirement |<<ats_variablematrixwidth_model>>
+| Test method | Validate the requirements of the model
+
+Test passes if VariableMatrixWidth instances point to the VariableMatrixWidth data type definition and follow the data model specified in the requirement tables and its dependencies.
+|===

@@ -1,0 +1,10 @@
+[[ats_xml_tilematrixset_schema]]
+[cols=">20h,<80d",width="100%"]
+|===
+|*Abstract Test {counter:ats-id}* |*/conf/xml-tilematrixset/schema*
+| Test Purpose | Validates if a TileMatrixSet encoded in XML validates using the XML schema for a tile matrix set.
+|Requirement |<<req_xml_tilematrixset_schema>>
+| Test method | Validate the requirements of the model
+
+Test passes if TileMatrixSet XML instances pass validation against the tile matrix set XML Schemas.
+|===

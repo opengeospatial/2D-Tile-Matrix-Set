@@ -1,0 +1,24 @@
+[[ats_json-tilesetmetadata]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/tms/2.0/conf/json-tilesetmetadata
+|Target type |tile set metadata
+|Requirements class |<<json-tilesetmetadata-requirements-class,Requirements Class "JSON TileSetMetadata">>
+|===
+
+==== Model
+
+include::json-tilesetmetadata/ATS_json_tilesetmetadata_model.adoc[]
+
+==== IETF
+
+include::json-tilesetmetadata/ATS_json_tilesetmetadata_ietf.adoc[]
+
+==== Schema
+
+include::json-tilesetmetadata/ATS_json_tilesetmetadata_schema.adoc[]
+
+==== Media type
+
+include::json-tilesetmetadata/ATS_json_tilesetmetadata_media-type.adoc[]

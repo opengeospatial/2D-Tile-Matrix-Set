@@ -1,0 +1,10 @@
+[[ats_xml_tilsetmetadata_model]]
+[cols=">20h,<80d",width="100%"]
+|===
+|*Abstract Test {counter:ats-id}* |*/conf/xml-tilematrixsetmetadata/model*
+| Test Purpose: | Validate if a TileSetMetadata encoded in XML implements the class TileSetMetadata
+|Requirement |<<req__xml_tilsetmetadata_model>>
+| Test method: | Validate the requirements of the model
+
+Test passes if TileSetMetadata instances use a TileSetMetadata XML data type definition that follows the data model specified in the requirement and associated tables and its dependencies.
+|===

@@ -1,0 +1,10 @@
+[[ats_xml_tilematrixset_media-type]]
+[cols=">20h,<80d",width="100%"]
+|===
+|*Abstract Test {counter:ats-id}* |*/conf/xml-tilematrixset/media-type*
+| Test Purpose | Validate that a TileMatrixSet encoded in an independent XML document uses the media type application/xml.
+|Requirement |<<req_xml_tilematrixset_media-type>>
+| Test method | Validate the requirements of the media type
+
+Test passes if the independent instances of TileMatrixSet are exposed as application/xml MIME type.
+|===

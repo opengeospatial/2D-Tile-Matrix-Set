@@ -1,0 +1,16 @@
+[[ats_tilesetmetadata]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/tms/2.0/conf/tilesetmetadata
+|Target type |tile set metadata
+|Requirements class |<<tilesetmetadata-requirements-class,Requirements Class "TileSetMetadata">>
+|===
+
+==== Identifier
+
+include::tilesetmetadata/ATS_tilesetmetadata_identifier.adoc[]
+
+==== Model
+
+include::tilesetmetadata/ATS_tilesetmetadata_model.adoc[]

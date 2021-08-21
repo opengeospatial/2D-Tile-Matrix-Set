@@ -1,0 +1,10 @@
+[[ats_xml_tilematrixsetlimits2d_schema]]
+[cols=">20h,<80d",width="100%"]
+|===
+|*Abstract Test {counter:ats-id}* |*/conf/xml-tilematrixsetlimits/schema*
+| Test Purpose | Validate if a TileMatrixSetLimits encoded in XML validates using the XML schemas for a tile matrix set limits.
+|Requirement |<<req__xml_tilematrixsetlimits2d_schema>>
+| Test method | Validate the requirements of the schema
+
+Test passes if TileMatrixSetLimits XML instances pass validation against the tile matrix set limits XML Schemas.
+|===

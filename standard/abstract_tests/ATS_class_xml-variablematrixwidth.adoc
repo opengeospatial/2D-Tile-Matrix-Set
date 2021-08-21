@@ -1,0 +1,16 @@
+[[ats_xml-variablematrixwidth]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/tms/2.0/conf/xml-variablematrixwidth
+|Target type |tile matrix sets
+|Requirements class |<<xml-variablematrixwidth-requirements-class,Requirements Class "XML VariableMatrixWidth">>
+|===
+
+==== Model
+
+include::xml-variablematrixwidth/ATS_xml_variablematrixwidth_model.adoc[]
+
+==== Schema
+
+include::xml-variablematrixwidth/ATS_xml_variablematrixwidth_schema.adoc[]

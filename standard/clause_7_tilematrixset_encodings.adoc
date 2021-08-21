@@ -4,9 +4,9 @@
 [[tms-json-encoding]]
 === JSON encoding
 
-The JSON encoding has been done respecting the naming and types of the original classes. However, there are some differences.  <<class-attributes-JSON-element-quivalences>> describes some exceptions in the mapping between the class attributes and corresponding JSON element.
+The JSON encoding has been done respecting the naming and types of the original classes. However, there are some differences.  <<class-attributes-JSON-element-equivalences>> describes some exceptions in the mapping between the class attributes and corresponding JSON element.
 
-[#class-attributes-JSON-element-quivalences,reftext='{table-caption} {counter:table-num}']
+[#class-attributes-JSON-element-equivalences,reftext='{table-caption} {counter:table-num}']
 .propertiesSchema attributes and JSON Schema properties equivalences
 [width = "100%",options="header"]
 |===
@@ -20,14 +20,14 @@ The JSON encoding has been done respecting the naming and types of the original 
 
 In addition, all elements with multiplicity greater than one changes names to plural. Please be aware of irregular plurals such as `tileMatrix` that changes to `tileMatrices`.
 
-[[jsontilematrixset]]
-==== JSON TileMatrixSet
+[[json-tilematrixset-requirements-class]]
+==== JSON TileMatrixSet requirements class
 
 include::requirements/requirements_json-tilematrixset.adoc[]
 
 include::requirements/json-tilematrixset/REQ_json_tilematrixset_model.adoc[]
 
-// include::requirements/json-tilematrixset/REQ_json_tilematrixset_ietf.adoc[]
+include::requirements/json-tilematrixset/REQ_json_tilematrixset_ietf.adoc[]
 
 include::requirements/json-tilematrixset/REQ_json_tilematrixset_schema.adoc[]
 
@@ -39,8 +39,8 @@ NOTE: A TileMatrixSet description can be embedded in other file formats, such as
 An annex provides <<annex-example-encodings-for-common-tilematrixset-informative>> in JSON.
 
 
-[[json-variablematrixwidth]]
-==== JSON VariableMatrixWidth
+[[json-variablematrixwidth-requirements-class]]
+==== JSON VariableMatrixWidth requirements class
 
 include::requirements/requirements_json-variablematrixwidth.adoc[]
 
@@ -56,8 +56,8 @@ An annex provides <<annex-example-encodings-for-variable-matrix-width-informativ
 === XML encoding
 The XML encoding has been done respecting the naming and types of the original classes. However all attribute names have been transformed to UpperCamelCase.
 
-[[xmltilematrixset-requirements-class]]
-==== XML TileMatrixSet
+[[xml-tilematrixset-requirements-class]]
+==== XML TileMatrixSet requirements class
 
 include::requirements/requirements_xml-tilematrixset.adoc[]
 
@@ -71,9 +71,8 @@ NOTE: A TileMatrixSet description can be embedded in other file formats, such as
 
 An annex provides <<annex-example-encodings-for-common-tilematrixset-informative>> in XML.
 
-[[xml-variablematrixwidth]]
-==== XML VariableMatrixWidth
-
+[[xml-variablematrixwidth-requirements-class]]
+==== XML VariableMatrixWidth requirements class
 
 include::requirements/requirements_xml-variablematrixwidth.adoc[]
 

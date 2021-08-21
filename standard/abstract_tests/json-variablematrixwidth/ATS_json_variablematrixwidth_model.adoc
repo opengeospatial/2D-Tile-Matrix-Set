@@ -1,0 +1,10 @@
+[[ats_json_variablematrixwidth_model]]
+[cols=">20h,<80d",width="100%"]
+|===
+|*Abstract Test {counter:ats-id}* |*/conf/json-variablematrixwidth/model*
+| Test Purpose | Validate if VariableMatrixWidth encoded in JSON implements the class VariableMatrixWidth
+|Requirement |<<req_json_variablematrixwidth_model>>
+| Test method | Validate the requirements of the model
+
+Test passes if VariableMatrixWidth instances follow the data model specified in the requirement and associated tables and its dependencies.
+|===

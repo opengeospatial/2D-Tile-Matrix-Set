@@ -1,0 +1,20 @@
+[[ats_json-variablematrixwidth]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/tms/2.0/conf/json-variablematrixwidth
+|Target type |tile matrix sets
+|Requirements class |<<json-variablematrixwidth-requirements-class,Requirements Class "JSON VariableMatrixWidth">>
+|===
+
+==== Model
+
+include::json-variablematrixwidth/ATS_json_variablematrixwidth_model.adoc[]
+
+==== IEFT
+
+include::json-variablematrixwidth/ATS_json_variablematrixwidth_ietf.adoc[]
+
+==== Schema
+
+include::json-variablematrixwidth/ATS_json_variablematrixwidth_schema.adoc[]

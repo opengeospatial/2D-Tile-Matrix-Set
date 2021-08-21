@@ -1,0 +1,12 @@
+[[ats_tilematrixset]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/tms/2.0/conf/tilematrixset
+|Target type |tile matrix sets
+|Requirements class |<<tilematrixset-requirements-class,Requirements Class "TileMatrixSet">>
+|===
+
+==== Model
+
+include::tilematrixset/ATS_tilematrixset_model.adoc[]

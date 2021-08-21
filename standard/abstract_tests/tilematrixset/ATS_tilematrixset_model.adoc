@@ -1,0 +1,10 @@
+[[ats_tilematrixset_model]]
+[cols=">20h,<80d",width="100%"]
+|===
+| *Abstract Test {counter:ats-id}* | */conf/tilematrixset/model*
+| Test Purpose | Validated that a tile matrix set follows the UML model and the model description in tables
+| Requirement  | <<req_tilematrixset_model>>
+| Test method | Validate the requirements of the model
+
+Test passes if TileMatrixSet instances point to the TileMatrixSet data type definition and follow the data model specified in the Tables related to the requirement and its dependencies.
+|===

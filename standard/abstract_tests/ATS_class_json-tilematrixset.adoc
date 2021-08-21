@@ -1,0 +1,24 @@
+[[ats_json-tilematrixset]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixset
+|Target type |tile matrix sets
+|Requirements class |<<json-tilematrixset-requirements-class,JSON TileMatrixSet">>
+|===
+
+==== Model
+
+include::json-tilematrixset/ATS_json_tilematrixset_model.adoc[]
+
+==== IETF
+
+include::json-tilematrixset/ATS_json_tilematrixset_ietf.adoc[]
+
+==== Schema
+
+include::json-tilematrixset/ATS_json_tilematrixset_schema.adoc[]
+
+==== Media type
+
+include::json-tilematrixset/ATS_json_tilematrixset_media-type.adoc[]

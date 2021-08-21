@@ -1,0 +1,10 @@
+[[ats_json_tilematrixset_ietf]]
+[cols=">20h,<80d",width="100%"]
+|===
+|*Abstract Test {counter:ats-id}* |*/conf/json-tilematrixset/ietf*
+| Test Purpose | Validate that a TileMatrixSet encoded in JSON conforms to IETF RFC7159
+|Requirement |<<req_json_tilematrixset_ietf>>
+| Test method | Validate the requirements of the IETF
+
+Test passes if TileMatrixSet JSON instances pass format validation against the IETF rules.
+|===

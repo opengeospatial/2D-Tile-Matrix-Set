@@ -1,0 +1,10 @@
+[[ats_tilesetmetadata_identifier]]
+[cols=">20h,<80d",width="100%"]
+|===
+|*Abstract Test {counter:ats-id}* |*/conf/tilematrixsetmetadata/identifier*
+| Test Purpose | Validates if a tiled resource or dataset declares support to a tile matrix set by one of the following two methods: a link to a tile matrix set definition (including the TileMatrixSet definition from <<annex-common-tilematrixset-definitions-informative>> and <<annex-example-encodings-for-variable-matrix-width-informative>>) as one of the links in the links list or by explicitly including a TileMatrixSet definition (as an object in the `tileMatrixSet` property).
+|Requirement |<<req_tilesetmetadata_identifier>>
+| Test method | Validate the requirements of the model
+
+Test passes if a tiled resource or dataset declares support to a tile matrix set by one of the following two methods: a link to a tile matrix set definition (including the TileMatrixSet definition from <<annex-common-tilematrixset-definitions-informative>> and <<annex-example-encodings-for-variable-matrix-width-informative>>) as one of the links in the links list or by explicitly including a TileMatrixSet definition (as an object in the `tileMatrixSet` property).
+|===

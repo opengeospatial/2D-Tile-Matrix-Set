@@ -1,0 +1,16 @@
+[[ats_variablematrixwidth]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/tms/2.0/conf/variablematrixwidth
+|Target type |tile matrix sets
+|Requirements class |<<variablematrixwidth-requirements-class,Requirements Class "VariableMatrixWidth">>
+|===
+
+==== Model
+
+include::variablematrixwidth/ATS_variablematrixwidth_model.adoc[]
+
+==== Coalescence
+
+include::variablematrixwidth/ATS_variablematrixwidth_coalescence1.adoc[]

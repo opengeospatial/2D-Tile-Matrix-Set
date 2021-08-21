@@ -2,6 +2,6 @@
 |===
 2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
 2+|http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits {set:cellbgcolor:#FFFFFF}
-|Target type |tile matrix sets
+|Target type |tile set metadata
 |Dependency |http://www.opengis.net/spec/tms/2.0/req/tilematrixset
 |===

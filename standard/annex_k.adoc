@@ -1,5 +1,6 @@
 [appendix]
-[[annex-extending-additional-dimensinos]] // Temporarily keeping this anchor for older links to this annex...
+// Temporarily keeping this anchor for older links to this annex...
+[[annex-extending-additional-dimensinos]]
 [[annex-extending-additional-dimensions]]
 :appendix-caption: Annex
 == Extending TileMatrixSets for additional dimensions (Informative)

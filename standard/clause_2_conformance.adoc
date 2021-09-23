@@ -1,8 +1,8 @@
 == Conformance
 
-This standard defines tile matrix set, tile matrix set limits and tile set metadata.
+This standard defines the concept of tile matrix set, tile matrix set limits and tile set metadata.
 
-Requirements for the following standardization target types are considered.
+Requirements for the following standardization target types are defined.
 
 * TileMatrixSet: This abstract class defines a data model for tile matrix sets [http://www.opengis.net/spec/tms/2.0/req/tilematrixset]. This abstract class has a single conformance class: [http://www.opengis.net/spec/tms/2.0/conf/tilematrixset]. The target is a service or an encoding needing to define TileMatrixSet (e.g., a future version of WMTS service metadata or an OGC API - Tiles).
 * TileMatrixSetLimits: This abstract class defines a data model for tile matrix sets limits [http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits]. This abstract class has a single conformance class: [http://www.opengis.net/spec/tms/2.0/conf/tilematrixsetlimits]. The target is a service, a client, or an encoding needing to define TileMatrixSetLimits (e.g., a future version of WMTS service metadata or an OGC API - Tiles).

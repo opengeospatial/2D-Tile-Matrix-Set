@@ -20,20 +20,20 @@ XML:: eXtensible Markup Language
 [[identifiers]]
 === Identifiers
 
-The normative provisions in this specification are denoted by the URI
+The normative provisions in this Standard are denoted by the URI
 
 http://www.opengis.net/spec/TileMatrixSet/2.0
 
-All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
+All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base URI.
 
 [[commonClasses]]
 === Common Classes
 
-The following classes are extracted from the OWS Common 06-121r9. This way, the data structures presented in this document become independent from OWS Common and can be used in the emerging OGC APIs that depends on OGC API Commons (avoiding a conflicting dependency with the old OWS Common)
+The following classes are extracted from the [OGC 06-121r9] OWS Common Standard. As such, the data structures presented in this document become independent from OWS Common Standard and can be used in the emerging OGC APIs that are dependend on a common standard seting the bases for the OGC APIS called OGC API Common (avoiding a conflicting dependency on the old OWS Common, which provided a common bases for the OGC Web Services instead).
 
 [[multilingualTextEncoding]]
 ==== Multilingual text encoding
-Some text parameters specified with the data type CharacterString in UML are intended to have human-readable values, but not all humans can understand the same languages. This data class can be latter mapped to XML or JSON encodings.
+Some text parameters specified with the data type CharacterString in UML are intended to have human-readable values. However not all humans can understand the same spoken languages. This data class is mapped to XML or JSON encodings afterwards.
 
 The specified approach for allowing the language of a text value to be explicitly stated is indicated by the UML class diagram in the figure.
 

@@ -63,4 +63,6 @@
 
 [30] Vretanos P.A.: OGC Vector Tiles Pilot: WMTS Vector Tiles Extension Engineering Report (OGC 18-083), https://docs.opengeospatial.org/per/18-083.html
 
-[31] Yutzler J.: Vector Tiles Pilot Extension Engineering Report (OGC 18-101), http://docs.opengeospatial.org/per/18-101.html
+[31] Yutzler J.: OGC GeoPackage Encoding Standard (OGC 12-128r17) https://docs.ogc.org/is/12-128r17/12-128r17.html
+
+[32] Yutzler J.: Vector Tiles Pilot Extension Engineering Report (OGC 18-101), http://docs.opengeospatial.org/per/18-101.html

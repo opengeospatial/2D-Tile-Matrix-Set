@@ -29,7 +29,7 @@ All requirements and conformance tests that appear in this document are denoted 
 [[commonClasses]]
 === Common Classes
 
-The following classes are extracted from the [OGC 06-121r9] OWS Common Standard. As such, the data structures presented in this document become independent from OWS Common Standard and can be used in the emerging OGC APIs that are dependend on a common standard seting the bases for the OGC APIS called OGC API Common (avoiding a conflicting dependency on the old OWS Common, which provided a common bases for the OGC Web Services instead).
+The following classes are extracted from the [OGC 06-121r9] OWS Common Standard. As such, the data structures presented in this Standard become independent from OWS Common Standard and can be used independently.
 
 [[multilingualTextEncoding]]
 ==== Multilingual text encoding
@@ -48,7 +48,7 @@ In case that multiple languages are necessary in a single document instance, the
 NOTE: OGC APIs will use the language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. This does not preclude that in other environments the JSON encodings for language string can implement the LanguageString. In practice this means that a JSON schema for a LanguageString element should support both string and language string types.
 
 ==== Description, Title and Keywords
-A basic set of data description parameters that includes human-readable title, description, and keywords is widely used in this standard and defined here as UML.
+A basic set of data description parameters that includes human-readable title, description, and keywords is widely used in this Standard and defined here as UML.
 
 [#img_description-title-keyword-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .Description Title Keywords UML model
@@ -59,10 +59,10 @@ image::figures/DescriptionTitleKeyword.png[DescriptionTitleKeywords UML model]
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| title | Title of this tile matrix set, normally used for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
+| title | Title of a tile matrix set, normally used for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| description | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
+| description | Brief narrative description of a tile matrix set, normally available for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 | keywords | Unordered list of one or more keywords | MD_Keywords class in ISO 19115 | Zero or more (optional)
@@ -78,21 +78,21 @@ Keywords is described from MD_Keywords class in ISO 19115-1 and has a list of ke
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| keyword | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this dataset | LanguageString data structure | One or more (optional)
+| keyword | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a dataset | LanguageString data structure | One or more (optional)
 | type | Type of the keyword | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or one (optional)
 4+|
 |===
 
-NOTE: OGC APIs will use language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. In JSON encodings we are not considering namespaces or codespaces (optional in the model). This will results in a simplification of the keywords in the JSON encoding to a simple array of strings.
+NOTE: OGC APIs will use language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. In JSON encodings namespaces or codespaces (optional in the model) are not considered. This results in a simplification of the keywords in the JSON encoding to a simple array of strings.
 
 ==== BoundingBox
-A (basic) bounding box is one type of bounding box that is used in this document. The Bounding box data structure is specified in the following UML model and table.
+A (basic) bounding box is one type of bounding box that is used in this Standard. The Bounding box data structure is specified in the following UML model and table.
 
 The BoundingBox class describes a Minimum Bounding Rectangle (MBR) surrounding a feature (in the broader sense), in the supported CRS.
 
-A 2DBoundingBox is another type of bounding box. This type is simplified from the basic BoundingBox data type for use only with the 2D geographic coordinate reference system. This is useful to specify the extent 2D part of tile matrix set.
+A 2DBoundingBox is another type of bounding box. This type is simplified from the basic BoundingBox data type for use only with the 2D geographic CRS. This is useful for specifying the extent 2D part of tile matrix set.
 
-A WGS84BoundingBox is another type of bounding box. This type is simplified from the basic BoundingBox data type for use only with the 2D geographic coordinate reference system which uses the WGS 84 geodetic datum, where longitude precedes latitude and both are recorded in decimal degrees.
+A WGS84BoundingBox is another type of bounding box. This type is simplified from the basic BoundingBox data type for use only with the 2D geographic CRS which uses the WGS 84 geodetic datum, where longitude precedes latitude and both are recorded in decimal degrees.
 
 [#img_boundingbox-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .BoundingBox UML model
@@ -121,13 +121,13 @@ Include unless referenced elsewhere
 ^c^  The number of axes and names is specified by the referenced CRS definition, but may also be specified here for convenience. In particular, it makes the axis order more visible.
 |===
 
-The bounding box contents defined will not always specify the MINIMUM rectangular BOUNDING region, if the referenced CRS uses an Ellipsoidal, Spherical, Polar, or Cylindrical coordinate system, as those terms are specified in OGC Abstract Specification Topic 2. Specifically, this box will not specify the minimum rectangular bounding region surrounding a geometry whose set of points span the value discontinuity in an angular coordinate axis. Such axes include the longitude and latitude of Ellipsoidal and Spherical coordinate systems. That geometry could lie within a small region on the surface of the ellipsoid or sphere.
+If the referenced CRS uses an Ellipsoidal, Spherical, Polar, or Cylindrical coordinate system, the bounding box contents defined will not always specify the MINIMUM rectangular BOUNDING region (as those terms are specified in OGC Abstract Specification Topic 2). Specifically, this bounding box will not specify the minimum rectangular bounding region surrounding a geometry in which the set of points spans the value discontinuity in an angular coordinate axis. Such axes include the longitude and latitude of Ellipsoidal and Spherical coordinate systems. That geometry could lie within a small region on the surface of the ellipsoid or sphere.
 
 Theoretically, there are cases where defining a bounding box could be problematic or impossible, such as angular axis of an Ellipsoidal, Spherical, Polar, or Cylindrical coordinate system. However, tiles need to be circumscribed to real coordinates and will deliberately avoid regions of the space where coordinates go to infinite or cannot be defined. For example, the `WorldMercatorWGS84Quad` tile matrix set (based on a cylindrical projection) should not be used close to the poles. Since tiles are conterminous, it is always possible to define a bounding box that includes them all.
 
 ==== CRSType
 
-In this version of this standard we introduce the possibility define a CRS using a full description in addition to a reference to an external CRS catalogue. For descendent compatibility, CRSType can be defaulted as a URI but in here we extend it to a union of three possibilities.
+In this version of the standard, the possibility define a CRS using a full description in addition to a reference to an external CRS catalogue is introduced. For backwards compatibility, CRSType can be defaulted as a URI but in here we extend it to a union of three possibilities.
 
 [#parts-of-crs-type-union,reftext='{table-caption} {counter:table-num}']
 .Parts of CRSType data structure

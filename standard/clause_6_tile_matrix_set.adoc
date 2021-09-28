@@ -3,36 +3,35 @@
 
 === Overview
 
-As stated in [OGC 08-015r2] Abstract Specification Topic 2: Spatial Referencing by Coordinates, a coordinate system is a set of mathematical rules for specifying how coordinates are to be assigned to points in space. A CRS is a coordinate system that is related to the real world by a reference datum. An example of mathematical rules is the application of a sphere or an ellipsoid centered in the datum and the use of a projection to transform the sphere or the ellipsoid into a planar representation of the world. Usually, the resulting planar coordinates are expressed as real numbers that are distances to the origin of the projection. This section introduces a tile scheme called Tile Matrix Set that is defined on top of a CRS. A fundamental part of the definion of a Tile Matrix Set is the Tile Matrix.
+As stated in [OGC 08-015r4] Abstract Specification Topic 2: Referencing by Coordinates, a coordinate system is a set of mathematical rules for specifying how coordinates are to be assigned to points in space. A CRS is a coordinate system that is related to the real world by a reference datum. An example of mathematical rules is the application of a sphere or an ellipsoid centered in the datum and the use of a projection to transform the sphere or the ellipsoid into a planar representation of the world. Usually, the resulting planar coordinates are expressed as real numbers that are distances to the origin of the projection. This section introduces a tile scheme called Tile Matrix Set that is defined on top of a CRS. A fundamental part of the definion of a Tile Matrix Set is the Tile Matrix.
 
 [[tile-matrix]]
 ==== Tile Matrix
 
-A _Tile Matrix_ is a tile scheme defined as a grid coverage. For the [OGC 09-146r6] CIS GeneralGridCoverage, the domain set of a grid describes the direct positions in multi-dimensional coordinate space, depending on the type of grid. In a grid-regular, simple equidistant grids are established. When a regular grid coverage is used to represent the world, the space becomes discrete in each dimension of the grid _domain range_. One possible discrete subdivision is the use of multidimensional atomic _grid cells_. Another is to divide the domain into regular intervals that can be assigned to integer numbers that enumerate and identify _tiles_. This grid of tiles domain range can be defined by:
+A _Tile Matrix_ tile set defined by a tile scheme based on a regular tessellation of a 2D planar surface that follows a regular grid coverage. For the [OGC 09-146r6] CIS GeneralGridCoverage, the domain set of a grid describes the direct positions in multi-dimensional coordinate space, depending on the type of grid. In a grid-regular coverage, simple equidistant grids are established. When a grid-regular coverage is used to represent the world, the space becomes discrete in each dimension of the grid _domain range_. One possible discrete subdivision is the use of multidimensional _grid cells_. Another is to divide the domain into regular intervals that can be assigned to integer numbers that enumerate and identify _tiles_. This grid of tiles domain range can be defined by:
 
 [loweralpha]
-. The extreme corner (called point of origin and corner of origin in a two-dimensional space) of the bounding box of regular grid coverage (e.g., the CRS coordinates of the top left corner of the top left extreme where the integer coordinates are 0);
+. The point of origin and corner of origin in a two-dimensional space of the bounding box of regular grid coverage (e.g., the CRS coordinates of the top left corner of the top left extreme where the integer coordinates are 0). This is the tile set origin that defines where the spatial origin reference point is for the entire tile set.
 . A tile size in CRS units for in each dimension of the CRS; and
 . The size of the tile matrix in tile units (i.e., number of tiles) that closes the bounding box of the tiled space. Frequently the sizes of the two first dimensions are called _matrix width_ and _matrix height_.
 
 [[tile-matrix-in-a-two-dimensional-space.]]
 ===== Tile matrix in a two-dimensional space.
 
-Tiles are originally designed to be rendered in visualization devices that have the space quantized in pixels characterized by a size.
+Two main use cases can be defined for tiles: storage and visualization. When Tiles are rendered in visualization devices that have the space quantized in pixels characterized by a size the concept of scale emerges. Then, the tile size in CRS units of the first two spatial dimensions and the size of the visualization device pixels become related. The two spatial dimensions are aligned with the pixel axes of the device.
 
-The tile size in CRS units of the first two spatial dimensions and the size of the visualization device pixels are related. The two spatial dimensions are aligned with the pixel axes of the device. The relation is a function of the following two parameters:
-In raster tiles, a second regular grid that is coincident with the original regular grid coverage domain range but denser (with smaller cell size but an exact submultiple of that size) is defined. Each grid cell of this new higher resolution grid is called a _grid cell_. The gridded space is defined by the same corner as the original tile matrix. The grid cells are defined by equally dividing the original tiles into __grid cells __using the __number of rendering cells in a tile__ (_tile width_ and _tile height_). In common tiled 2D visualization clients, a part of the _grid cell_ is made coincident with the device pixels and this part of the grid is rendered in the device: the second grid is known as the _extrapolated_ _device grid_. In other words, a tile is divided in a number of cells in each dimension of the CRS in a way that creates cells of the exact same size of the pixels of a visualization device.
+In raster tiles, a second regular grid that is coincident with the time matrix but denser (with smaller cell size but an exact submultiple of that size) is defined. Each grid cell of this new higher resolution grid is called a _grid cell_. The grid cells are defined by equally dividing the original tiles into __grid cells __using the __number of rendering cells in a tile__ (_tile width_ and _tile height_). In common tiled 2D visualization clients, a part of the _grid cell_ is made coincident with the device pixels and this part of the grid is rendered in the device: the second grid is named here as the _extrapolated_ _device grid_. In other words, a tile is divided in a number of cells in each dimension of the CRS in a way that creates cells that will become the exact same size of the pixels of a visualization device during visualization. The relation between both sizes is a function of the following two parameters:
 
 [loweralpha]
 . A scale (expressed as a scale denominator) and
 
-. A grouping __of rendering pixels__ in a tile forming the tile.  Common grouping values are 256x256 or 512x512. Frequently the sizes of the two first dimensions are called _tile width_ and _tile height_.
+. A grouping __of rendering pixels__ in a tile forming the tile. Common grouping values are 256x256 or 512x512. Frequently the sizes of the two first dimensions are called _tile width_ and _tile height_.
 
-NOTE: Commonly _tile width_ and _tile height_ are equal but this constraint is not imposed by this standard.
+NOTE: Commonly _tile width_ and _tile height_ are equal but this constraint is not imposed by this Standard.
 
-The scale denominator is defined here with respect to a “standardized rendering pixel size” of 0.28 mm × 0.28 mm (millimeters). The definition is the same as used in Web Map Service WMS 1.3.0 [OGC 06-042] and in Symbology Encoding (SE) Implementation Specification 1.1.0 [OGC 05-077r4] that was later adopted by WMTS 1.0 [OGC 07-057r7]. Frequently, the true pixel size of the device is unknown and 0.28 mm was the actual size of a common display from 2005. This value is still being used as reference, even if current display devices are built with much smaller pixel sizes.
+Since services can not predict the pizel size of the client visualization device, in this Standard, the scale denominator is defined with respect to a "standardized rendering pixel size" of 0.28 mm × 0.28 mm (millimeters). The definition is the same as used in Web Map Service WMS 1.3.0 [OGC 06-042] and in Symbology Encoding (SE) Implementation Specification 1.1.0 [OGC 05-077r4] that was later adopted by WMTS 1.0 [OGC 07-057r7]. Frequently, the true pixel size of the device is unknown and 0.28 mm was the actual pixel size of a common display from 2005. This value is still being used as reference, even if current display devices are built with much smaller pixel sizes.
 
-NOTE: Since the 1980s, the Microsoft Windows operating system has set their default standard display pixels per inch (PPI) to 96. This value results in an approximated 0.264 mm per pixel. The similarity of this value with the actual 0.28 mm adopted in this standard can create some confusion.
+NOTE: Since the 1980s, the Microsoft Windows operating system has set their default standard display pixels per inch (PPI) to 96. This value results in an approximated 0.264 mm per pixel. The similarity of this value with the actual 0.28 mm adopted in this Standard can create some confusion.
 
 NOTE: Modern display devices (screens) have pixels so small that operating systems allow for defining a presentation scale factor bigger than one (e.g. 150%). In these circumstances, the actual size of the device pixels are not the same as the size used by the operating system.
 
@@ -40,12 +39,11 @@ Normally the _matrix width_ is constant and in this circumstance, having a singl
 
 NOTE: The geometry above is different from WMS, which does allow non-square pixels (although many implementations fail to support non-square pixels properly).
 
+NOTE: In rendered tiles, it is common that the range set represents colors of the cells and is stored in PNG or JPEG files of exactly one tile. Nevertheless, nothing prevents storing other kinds of values in other formats, such as TIFF files.
 
-NOTE: In map tiles, it is common that the range set represents colors of the cells and is stored in PNG or JPEG files of exactly one tile. Nevertheless, nothing prevents to store other kinds of values in other formats, such as TIFF files.
+Tiled vector data also make use of the _extrapolated_ _device grid_, where the tiles are rendered for visualization purposes.
 
-Vector tiles also make use of the _extrapolated_ _device grid_, where vector tiles can be rendered for visualization purposes.
-
-NOTE: Vector tiles expressed in pure vector formats, such as GeoJSON, do not make use of an _extrapolated device grid_. Other vector tiles formats (e.g., MBTiles) define an internal coincident grid denser than the _extrapolated_ __device grid__ and expresses the vector coordinates using indices in this denser grid.
+NOTE: Some tiled vector data expressed in formats such as GeoJSON do not make use of an _extrapolated device grid_. Other tiled formats (e.g., MBTiles) define an internal coincident grid denser than the _extrapolated_ __device grid__ and express the position using indices in this denser grid instead of coordinates.
 
 For the case of a two-dimensional space, given the top left point of the tile matrix in CRS coordinates (tileMatrixMinX, tileMatrixMaxY), the width and height of the tile matrix in tile units (matrixWidth, matrixHeight), the __rendering cells in a tile__ values (tileWidth, tileHeight), the coefficient to convert the coordinate reference system (CRS) units into meters (metersPerUnit), and the scale (1:scaleDenominator), the bottom right corner of the bounding box of a tile matrix (tileMatrixMaxX, tileMatrixMinY) can be calculated as follows:
 
@@ -69,7 +67,7 @@ The tile space therefore looks like this:
 .Tile Space (the corner of origin is topLeft)
 image::figures/1.png[Tile Space]
 
-Each tile in a tile matrix is identified by its __tileCol__ and __tileRow__ indices that have their 0,0 origin in one of the corners of the tile matrix. When the topLeft corner is used, __tileCol__ increases towards the right and __TileRow__ towards the bottom, as shown in Figure 1 (bottomLeft corner can also be used as origin making __TileRow__ increase towards the top).  Annex I <<pseudocode-informative>> in this document includes pseudocode that illustrates the process for obtaining the tile indices that cover a bounding box rectangle and also the computation to get the CRS coordinates that bound a tile.
+Each tile in a tile matrix is identified by its __tileCol__ and __tileRow__ indices that have their 0,0 origin in one of the corners of the tile matrix. When the topLeft corner is used, __tileCol__ increases towards the right and __TileRow__ towards the bottom, as shown in Figure 1 (bottomLeft corner can also be used as origin making __TileRow__ increase towards the top). <<pseudocode-informative>> includes pseudocode that illustrates the process for obtaining the tile indices that cover a bounding box rectangle and also the computation to get the CRS coordinates that bound a tile.
 
 NOTE: A tile matrix can be implemented as a set of image files (e.g., PNG or JPEG) in a file folder, each file representing a single tile
 
@@ -86,7 +84,7 @@ Commonly, several tile matrices are progressively defined covering the expected 
 .Tile Matrix Set representation
 image::figures/2.png[Tile Matrix Set representation]
 
-A Tile Matrix has a unique alphanumeric identifier in the Tile Matrix Set. Some tile-based implementations prefer to use a _zoom level_ number which has the advantage of suggesting some order in the list of tile matrices. This standard does not use the _zoom level_ concept but, to ease adoption of this standard in implementations that prefer numeric zoom levels, many Tile Matrix Sets defined in <<annex-common-tilematrixset-definitions-informative>> use numbers as Tile Matrix identifiers. If this is not the case, the index order in the list of tile matrices defined in a Tile Matrix Set could still be used as a _zoom level ordering_ internally.
+A Tile Matrix has a unique alphanumeric identifier in the Tile Matrix Set. Some tile-based implementations prefer to use a _zoom level_ number or level of detail designation (LoD)  which has the advantage of suggesting some order in the list of tile matrices. This Standard does not use the _zoom level_ concept but, to ease adoption of this standard in implementations that prefer numeric zoom levels, many Tile Matrix Sets defined in <<annex-common-tilematrixset-definitions-informative>> use numbers as Tile Matrix identifiers. In this case, the index order in the list of tile matrices defined in a Tile Matrix Set could still be used as a _zoom level ordering_ internally.
 
 In some other standards, the tile matrix set concept is called an _image pyramid,_ like in clause 11.6 of the OGC KML 2.2 [OGC 07-147r2] standard.  JPEG2000 (ISO/IEC 15444-1) and JPIP (ISO/IEC 15444-9) also use a similar division of the space called _resolution levels_. Nevertheless, in those cases the pyramid is self-defined starting from the more detailed tile matrix (that uses square tiles), and constructing tiles of the next scales by successively aggregating 4 tiles of the previous scale, and so on (see Figure 2), and interpolating each 4 contiguous values of the previous scale into one in the next scale. That approach involves a more rigid structure which has scales related by powers of two and tiles that perfectly overlap tiles on the inferior scale denominators. Tile Matrix Sets presented in this document are more flexible, but KML _superoverlays_ or JPEG2000-based implementations can use this standard with some extra rules to describe their tile matrix sets. This document describes some tile matrix sets with scale sets related by powers of two in the <<annex-common-tilematrixset-definitions-informative>>.
 
@@ -97,13 +95,13 @@ NOTE: Clients and servers have to be careful when comparing floating numbers wit
 [[well-known-scale-sets]]
 ==== Well-known scale sets
 
-When overlaying and presenting together tiles encoded in different tile matrix sets that do not have common sets of scale denominators and the same CRS in an integrated client, rescaling or re-projecting tiles to the common scale of the view might require re-sampling calculations that result in visual quality degradation.
+When overlaying and presenting tiles encoded in different tile matrix sets that do not have common sets of scale denominators and the same CRS in an integrated client, rescaling or re-projecting tiles to the common scale of the view might require re-sampling calculations that result in visual quality degradation.
 
-The recommended way to prevent this problem is make use of the same global tile matrix set, for example, one of those available in <<common-tilematrixset-definitions-informative>>. If the coverage of the data covers only a part of the tile matrix set area, the __tile matrix limits__ can be used to inform about these limitations.
+The recommended way to prevent this problem is make use of the same global tile matrix set. For example, one of those available in <<common-tilematrixset-definitions-informative>>. If the geographic extent of the data covers only a part of the tile matrix set area, the __tile matrix limits__ element of the tileset metadata can be used to inform about these limitations.
 
-If using the same tile matrix set is not possible, using a common coordinate reference system and a common set of scales shared by as many layers and services as possible can also be a solution. Thus, the concept of well-known scale set (WKSS) is introduced.
+If using the same tile matrix set is not possible, using a common CRS and a common set of scales shared by as many layers and services as possible can also be a solution. Thus, the concept of well-known scale set (WKSS) is introduced.
 
-Note that a WKSS only defines a small subset of what is needed to completely define a Tile Matrix Set. A WKSS is an optional feature that does not replace the need to define the Tile Matrix Set and its Tile Matrices. The original purpose of WKSS is no longer necessary if services share and reference common Tile Matrix Sets definitions such as the ones in <<common-tilematrixset-definitions-informative>>.
+Note that a WKSS only defines a small subset of what is needed to completely define a Tile Matrix Set. A WKSS is an optional feature that does not replace the need to define the Tile Matrix Set and its Tile Matrices. The original purpose of WKSS is no longer necessary if services share and reference common Tile Matrix Set definitions such as the ones in <<common-tilematrixset-definitions-informative>>.
 
 A WKSS is a commonly used combination of a CRS and a set of scales. A tile matrix set can declare support for a WKSS set by referencing that WKSS. A client application can confirm that tiles in one tile matrix set are compatible with tiles in another tile matrix set merely by verifying that they declare a common WKSS. The informative <<annex-c-well-known-scale-sets-informative>> provides several WKSSs (and others could be incorporated in the future).
 
@@ -127,13 +125,13 @@ image::figures/3.png[Tile coordinates (a) and Tile matrix coordinates (b) to ide
 [[variable-matrixwidth-tile-matrix]]
 ==== Variable width tile matrices
 
-Until now, it has been assumed that __matrixWidth__ is constant in for all tile rows. This is common usage for projections that do not distort the Earth too much. But when using Equirectangular Plate Carrée projection (see <<common-tilematrixset-definitions-informative>> subsection 2) the distortion increases for tiles closer to the poles. In the extreme, the upper row of the upper tile (the one representing the North Pole) contains a list of repeated values that represents almost the same position in the space. The same can be said for the lower row of the lower tile (the one representing the South Pole). When the tiles are represented in a flat projection, this is an effect that cannot be avoided, but when the data are presented in a virtual globe, the distortion results in redundant information in the poles that need to be eliminated by the client during the rendering. It would be better if the distortion is compensated by the server side instead.
+Until now, it has been assumed that __matrixWidth__ is constant in for all tile rows. This is common usage for projections that do not distort the Earth too much. But when using Equirectangular Plate Carrée projection (see <<common-tilematrixset-definitions-informative>> subsection 2) the distortion increases for tiles closer to the poles. In the extreme, the upper row of the upper tile (the one representing the North Pole) contains a list of repeated values that represents almost the same position in the space. The same can be said for the lower row of the lower tile (the one representing the South Pole). When the tiles are represented in a flat projection, this is an effect that cannot be avoided, but when the data are presented in a virtual globe, the distortion results in redundant information in the poles that need to be eliminated by the client during the rendering. Compensating for distortion is better done at the server side instead.
 
-The solution consists of reducing the number of tiles (__matrixWidth__) in the high latitude rows and generating those tiles with a compressed scale in the _i_ dimension (see Figure 5). To allow that, the tile model must be extended to specify coalescence coefficients (c) that reduce the number of tiles in the width direction by aggregating c horizontal tiles but keeping the __tileWidth__ (and __tileHeight__). The coalescence coefficient will not be applied next to the Equator but will be used in medium and high latitudes (the higher the latitude the bigger the coefficient).
+The solution consists of reducing the number of tiles (__matrixWidth__) in the high latitude rows and generating those tiles with a compressed scale in the _i_ dimension (see Figure 5). To allow this solution, the tile model must be extended to specify coalescence coefficients (c) that reduce the number of tiles in the width direction by aggregating c horizontal tiles but keeping the __tileWidth__ (and __tileHeight__). The coalescence coefficient is not applied next to the Equator but is used in medium and high latitudes (the higher the latitude the larger the coefficient).
 
 Even if tiles can coalesce, this does not change the indexing or the tile matrix set that will be the same as if no coalescence has been applied. For example, if the c coefficient is 4, the __tileCol__ of the first tile will be 0, the __tileCol__ of the second tile will be 4, the __tileCol__ of the third tile will be 8 and so on. In other words, and for the same example, __tileCol__ 0, 1, 2 and 3 points to the same tile.
 
-NOTE: This decision is necessary to still be able to be able to define a rectangle in the space based on tile indices as we do in tile matrix limits section.
+NOTE: This solution is necessary to still be able to define a rectangle in the space based on tile indices as we do in the <<tilematrixsetlimits-requirements-class>>.
 
 [#img_tilematrix-with-variable-matrix-width,reftext='{figure-caption} {counter:figure-num}']
 .TileMatrix with variable matrix width
@@ -146,7 +144,7 @@ image::figures/5.png[TileMatrix with variable matrix width]
 [[tilematrixset-requirements-class]]
 ==== TileMatrixSet requirements class
 
-Requirements class tilematrixset establishes how to describe a TileMatrixSet for a two-dimensional tile space. It is expected that tile matrix sets are defined once and that servers or encodings using or distributing tiles will declare the usage of a tile matrix set by linking to that tile matrix set.
+Requirements class tilematrixset establishes how to describe a TileMatrixSet for a two-dimensional tile space. The expectation is that tile matrix sets are defined once and that servers or encodings using or distributing tiles will declare the usage of a tile matrix set by linking to that tile matrix set.
 
 include::requirements/requirements_tilematrixset.adoc[]
 
@@ -166,32 +164,32 @@ image::figures/TileMatrixSet.png[TileMatrixSet UML model]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 | identifier | Tile matrix set identifier ^g^ | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
-| title ^a^ | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| title ^a^ | Title of a tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^f^
-| description ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of a tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| keywords^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix set | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
+| keywords^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a tile matrix set | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
 
 One for each keyword authority used
-| uri | Reference to an official source for this tileMatrixSet | URI type | Zero or One (optional) Include when an official source exists
+| uri | Reference to an official source for a tile matrix set | URI type | Zero or One (optional) Include when an official source exists
 
-| crs | Coordinate reference system (CRS)^j^ | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory) ^i^
+| crs | Coordinate Reference System (CRS)^j^ | CRSType type, see <<parts-of-crs-type-union>> | One (mandatory) ^i^
 
 | orderedAxes | Ordered list of names of the dimensions defined in the CRS^k^ | Ordered sequence of strings | Zero or one (optional)
 
 | wellKnownScaleSet | Reference to a well-known scale set ^e^ | URI type ^h^ | Zero or one (optional) ^c^
 
-| boundingBox | Minimum bounding rectangle surrounding the tile matrix set, in the crs ^b^ | 2DBoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
+| boundingBox | Minimum bounding rectangle surrounding the tile matrix set, in the CRS ^b^ | 2DBoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
 | tileMatrix | Description of a scale level and its tile matrix | TileMatrix data structure. See <<parts-of-tilematrix-data-structure>> | One or more (mandatory) ^d^
 4+|
 ^a^     The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^     In the same CRS as the TileMatrixSet. boundingBox should be considered informative about the area covered by this TileMatrixSet. It SHOULD NOT be used to calculate the position of the tiles in the CRS space; please use cornerOfOrigin and pointOfOrigin of the corresponding TileMatrix instead. If data is not available for all tiled space, TileMatrixSetLimits will declare what the tiles have data (see <<tilematrixsetlimits-requirements-class>>).
+^b^     In the same CRS as the TileMatrixSet. boundingBox should be considered informative about the area covered by this TileMatrixSet. It SHOULD NOT be used to calculate the position of the tiles in the CRS space. Instead use the cornerOfOrigin and the pointOfOrigin of the corresponding TileMatrix. If data is not available for the entire tiled space, TileMatrixSetLimits will declare what tiles have data (see <<tilematrixsetlimits-requirements-class>>).
 
-^c^     When a tile matrix set conforms to a well-known scale set it can reference it by its URI. If used, the well-known scale set SHALL be consistent with the crs and with the scaleDenominators of the tileMatrix parameters.
+^c^     When a tile matrix set conforms to a well-known scale set, it can reference it by its URI. If used, the well-known scale set SHALL be consistent with the CRS and with the scaleDenominators of the tileMatrix parameters.
 
 ^d^     Commonly more than one. Each tileMatrix of a tileMatrixSet SHALL have a unique (different) scaleDenominator.
 
@@ -201,16 +199,16 @@ One for each keyword authority used
 
 ^g^     TileMatrixSet identifies SHALL be unique (different) for each TileMatrixSet of a server.
 
-^h^     In WMTS 1.0 a URN was used as a reference to a well-known scale set on the URN in WMTS. Later, OGC adopted URIs (instead of URNs) to do references. The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming Authority - Procedures document] specifies rules to transform form URN to URI. Implement a on-the-fly translations based on these rules is possible.
+^h^     In WMTS 1.0 a URN was used as a reference to a well-known scale set. Later, OGC adopted URIs (instead of URNs) to do references. The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming Authority - Procedures document] specifies rules to transform form URN to URI. Implement a on-the-fly translations based on these rules is possible.
 
-^i^     A single CRS can have several realizations and can be complemented by an epoch. In here it was decided that a TileMatrixSet is defined in a generic CRS. The CRS realization and epoch used by a concrete tileset is specified in the tileset metadata.
+^i^     In some cases where high precision is required, the use of precise realizations of the same CRS is needed or the CRS varies slightly and need to be accompanied by an epoch. For this data structure, a TileMatrixSet is defined by the generic CRS name. The CRS realization and epoch used by a concrete tileset is specified in the tileset metadata. In most of the cases, tilesets sharing the same generic CRS overlaps but for some high precise applications and for very fine grained scales, a client can refuse to overlap tilesets not having the same CRS realization or epoch.
 
 ^j^     The CRS of the TileSets using this TileMatrixSet should be compatible with this CRS. See <<TileMatrixSetCRSCompatibility>>
 
 ^k^     This element is not intended to overwrite the CRS axis order but to make it visible to developers by repeating information that is already contained in the CRS definition.
 |===
 
-A part from the general tile matrix set description an array of tile matrix elements is needed to define the distribution of tiles for each scale denominator.
+In addition to a general tile matrix set description, an array of tile matrix elements is needed to define the distribution of tiles for each scale denominator.
 [#parts-of-tilematrix-data-structure,reftext='{table-caption} {counter:table-num}']
 .Parts of TileMatrix data structure
 [width = "100%",options="header"]
@@ -224,7 +222,7 @@ ows:CodeType, as adaptation of MD_Identifier class ISO 19115
 One (mandatory)
 
 | title ^a^ |
-Title of this tile matrix, normally used for display to a human
+Title of a tile matrix, normally used for display to a human
  |
 LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>>
  |
@@ -233,7 +231,7 @@ Zero or more (optional) Include when available and useful
 Include one for each language represented ^d^
 
 | description ^a^ |
-Brief narrative description of this tile matrix, normally available for display to a human
+Brief narrative description of a tile matrix, normally available for display to a human
  |
 LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>>
  |
@@ -242,7 +240,7 @@ Zero or more (optional) Include when available and useful
 Include one for each language represented
 
 | keywords ^c^ |
-Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix
+Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a tile matrix
  |
 MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>>
  |
@@ -250,9 +248,9 @@ Zero or more (optional)
 
 One for each keyword authority used
 
-| scaleDenominator | Scale denominator of this tile matrix ^f^ | Double type | One (mandatory)
+| scaleDenominator | Scale denominator of a tile matrix ^f^ | Double type | One (mandatory)
 
-| cellSize | Cell size of this tile matrix ^f^ | Double type | One (mandatory)
+| cellSize | Cell size of a tile matrix ^f^ | Double type | One (mandatory)
 
 | cornerOfOrigin |
 Corner of the tile matrix used as the origin for numbering tile rows and columns.
@@ -262,21 +260,21 @@ enumeration. See <<parts-of-corner-of-origin-enum>>
 Zero or one (optional). Default value is "topLeft"
 
 | pointOfOrigin ^e^ |
-Position in CRS coordinates of the corner of origin for this tile matrix.
+Position in CRS coordinates of the corner of origin for a tile matrix.
  |
 Ordered sequence of double values ^b^
  |
 One (mandatory)
 
 | tileWidth |
-Width of each tile of this tile matrix in cells
+Width of each tile of a tile matrix in cells
  |
 Positive integer type
  |
 One (mandatory)
 
 | tileHeight |
-Height of each tile of this tile matrix in cells
+Height of each tile of a tile matrix in cells
  |
 Positive integer type
  |
@@ -300,11 +298,11 @@ One (mandatory)
 
 ^b^    The CRS and order of these coordinates shall be as specified by the _crs_ of the parent TileMatrixSet. These are the precise coordinates of the corner of origin (e.g. the top-left corner) for the tile matrix, which is also the corner of the (0, 0) tile. See Figure 1.
 
-^c^    These TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded cell size. It is recommended to avoid repeating the TileMatrixSet identifier as part of the TileMatrix identifier.
+^c^    These TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded cell size. Repeating the TileMatrixSet identifier as part of the TileMatrix identifier should be avoided.
 
-^d^    If no Title is specified, client may display the Identifier value instead.
+^d^    If no Title is specified, clients may display the Identifier value instead.
 
-^e^    In previous versions was called topLeftCorner and cornerOfOrigin did not exist
+^e^    In previous versions this attribute was called topLeftCorner and the concept of cornerOfOrigin did not exist
 
 ^f^    The cell size of the tile can be obtained from the scaleDenominator by multiplying the latter by 0.28 × 10-3 / metersPerUnit. If the CRS uses _meters_ as units of measure for the horizontal dimensions, then metersPerUnit=1; if it uses degrees, then metersPerUnit=2*pi__a__/360 (_a_ is the Earth maximum radius of the ellipsoid; a.k.a the radius of the equator.).
 |===
@@ -331,7 +329,7 @@ NOTE: The bounding box of a tile matrix is not supplied explicitly because it ca
 
 [[TileMatrixSetCRSCompatibility]]
 ===== TileMatrixSet CRS Compatibility
-In general the CRS of the TileSets using a TileMatrixSet should be the same as the CRS of that TileMatrixSet. However there are some situations where there is some flexibility:
+In general, the CRS of the TileSets using a TileMatrixSet should be the same as the CRS of that TileMatrixSet. However there are some situations where there is some flexibility:
 
 * The CRS of the TileSet is a realization of the datum ensemble CRS specified in the TileMatrixSet. E.g. TileSet CRS: EPSG:9057 (G1762 realization of WGS84) and TileMatrixSet CRS: EPSG:4326 (WGS84)
 * The CRS of the TileSet includes additional dimensions beyond the 2 specified in the CRS of the TileMatrixSet. E.g. TileSet CRS: EPSG:4979 (lat, lon, h in WGS84) and TileMatrixSet CRS: EPSG:4326 (lat, lon in WGS84)
@@ -359,13 +357,13 @@ In order to make the description of the model more compact, only the tile rows t
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 | coalesce | Coalescence factor | Positive integer type ^a^ | One (mandatory)
-| minTileRow | First tile row where the coalescence factor applies for this tilematrix | Non negative integer type ^b^ | One (mandatory)
-| maxTileRow | Last tile row where the coalescence factor applies for this tilematrix | Non negative integer type ^c^ | One (mandatory)
+| minTileRow | First tile row where the coalescence factor applies for a tilematrix | Non negative integer type ^b^ | One (mandatory)
+| maxTileRow | Last tile row where the coalescence factor applies for a tilematrix | Non negative integer type ^c^ | One (mandatory)
 4+| ^a^    Shall be more than 1. Rows with Coalescence factor of 1 shall not be described here.
 
 ^b^    From 0 to maxTileRow.
 
-^c^    From minTileRow to matrixWidth-1 of the tileMatrix section of this tileMatrixSet.
+^c^    From minTileRow to matrixWidth-1 of the tileMatrix section of the associated tileMatrixSet.
 |===
  
 include::requirements/variablematrixwidth/REQ_variablematrixwidth_coalescence1.adoc[]

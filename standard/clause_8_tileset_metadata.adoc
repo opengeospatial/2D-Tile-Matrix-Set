@@ -7,9 +7,9 @@
 [[tile-matrix-set-limits-overview]]
 ==== TileMatrixSet limits
 
-If the tile matrix set for a dataset covering a bounding box defines the extreme corner adjusted to the actual content of this dataset, and later the bounding box needs to be extended, then the extreme corner of each TileMatrix will change, which will change the tile indices of any previous tile invalidating any previously cached tile. To overcome this problem, a dataset can optionally use a more generic TileMatrixSet that covers a bigger (or even global) area. In fact, that TileMatrixSet that defines an area that might be covered by the dataset in a future could easily be shared for many datasets and become a common TileMatrixSet.
+Imagine a case where a tileset covers all the bounding box of a tile matrix set. Now, imagine that the tileset extent needs to be expanded beyond the point and corner of origin of each TileMatrix. Changing the point of origin changes the position of any tile row and tile column indices. In other words, in the new tileset, tiles that cover the same bounding box than the previous tileset receives different tile row and tile column indices. This invalidates any cached tile that the client could have stored and all client copies need to be updated. To overcome this problem, a dataset can optionally use a more generic TileMatrixSet that covers a bigger area (or even global one, such as one of defined in <<annex-common-tilematrixset-definitions-informative>>). In fact, that TileMatrixSet that defines an area that might be covered by the dataset in a future could easily be shared for many datasets and become a common TileMatrixSet.
 
-To inform the client about the valid range of tile indices, the TileMatrixSetLimits concept is introduced. A list of TileMatrixSetLimit informs the minimum and a maximum limits of these indices for each TileMatrix that contains actual data. The area outside these limits is considered empty space.
+To inform the client about the valid range of tile indices in a tileset, the TileMatrixSetLimits concept is introduced. A list of TileMatrixSetLimit informs the minimum and maximum limits of these indices for each TileMatrix that contains actual data. The area outside these limits is considered empty space and is not cover by the tileset.
 
 [#img_tilematrix-limits,reftext='{figure-caption} {counter:figure-num}']
 .TileMatrixSet Limits
@@ -25,7 +25,7 @@ Tiles are identified by tileMatrix id, tileRow number and tileCol number. These 
 [[tilematrixsetlimits-requirements-class]]
 ==== TileMatrixSetLimits requirements class
 
-Requirements class tilematrixsetlimits establishes how to describe the limits for a tile set TileMatrixSet. It is expected that many TileMatrixSets are defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region or for a subset of scales. The array of TileMatrixSetLimits data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits.
+Requirements class tilematrixsetlimits establishes how to describe the limits for a tile set TileMatrixSet. It is expected that most TileMatrixSets will be defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region or for a subset of scales. The array of TileMatrixSetLimits data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits.
 
 include::requirements/requirements_tilematrixsetlimits.adoc[]
 
@@ -40,7 +40,7 @@ image::figures/TileMatrixSetLimits.png[TileMatrixSetLimits UML model]
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| tileMatrixSetLimit | Indices limits for this tileMatrix | TileMatrixSetLimits data structure, see <<parts-of-tilematrixlimits-data-structure>> | one or more (mandatory) ^a^
+| tileMatrixSetLimit | Indices limits for a tileMatrix | TileMatrixSetLimits data structure, see <<parts-of-tilematrixlimits-data-structure>> | one or more (mandatory) ^a^
 
 |===
  
@@ -51,10 +51,10 @@ image::figures/TileMatrixSetLimits.png[TileMatrixSetLimits UML model]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 | tileMatrix | Reference to a tileMatrix identifier | ows:CodeType, as adaptation of MD_Identifier class ISO 19115 ^a^ | One (mandatory)
-| minTileRow | Minimum tile row index valid for this layer. | Non negative integer type ^b^ | One (mandatory)
-| maxTileRow | Maximim tile row index valid for this layer. | Non negative integer type ^c^ | One (mandatory)
-| minTileCol | Minimum tile column index valid for this tile column. | Non negative integer type ^d^ | One (mandatory)
-| maxTileCol | Maximum tile column index valid for this tile column. | Non negative integer type ^e^ | One (mandatory)
+| minTileRow | Minimum tile row index valid for a tileset. | Non negative integer type ^b^ | One (mandatory)
+| maxTileRow | Maximim tile row index valid for a tileset. | Non negative integer type ^c^ | One (mandatory)
+| minTileCol | Minimum tile column index valid for a tileset. | Non negative integer type ^d^ | One (mandatory)
+| maxTileCol | Maximum tile column index valid for a tileset. | Non negative integer type ^e^ | One (mandatory)
 4+|
 ^a^    SHALL be an identifier to a tileMatrix element of this tileMatrixSet.
 
@@ -70,7 +70,7 @@ image::figures/TileMatrixSetLimits.png[TileMatrixSetLimits UML model]
 [[tilesetmetadata-requirements-class]]
 ==== TileSetMetadata requirements class
 
-Requirements class TileSetMetadata establishes how to describe TileSet Metadata for a two-dimensional tile space. The TileSetMetadata data structure allows for a dataset declaring the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set, the list of geodata resources used to create the tileset and a recommended center point. Each TileSet in a dataset collection should declare the use of a tile matrix set using this data structure. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata
+Requirements class TileSetMetadata establishes how to describe TileSet Metadata for a two-dimensional tile space. The TileSetMetadata data structure enables a resource to declare the use of a tile matrix set defined elsewhere and, if needed, a limited extent for this tile matrix set, the list of geospatial resources used to create the tileset and a recommended center point. Each TileSet in a geospatial resource should declare the use of a tile matrix set using this data structure. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata
 
 include::requirements/requirements_tilesetmetadata.adoc[]
 
@@ -78,7 +78,7 @@ include::requirements/tilesetmetadata/REQ_tilesetmetadata_identifier.adoc[]
 
 NOTE: To determine if two resources or datasets use the same TileMatrixSet, compare their TileMatrixSet identifier. Alternatively, compare TileMatrixSet definitions for an equivalency (a simple calculation can be performed to verify whether or not two given tile matrices are aligned).
 
-NOTE: If the same TileMatrixSet is externally available in more than one format, it is recommended that the format selected is the closer to the original description document format. For example if a OGC API defines tiles using JSON, it is expected to link to a JSON definition of a TileMatrixSet.
+NOTE: If the same TileMatrixSet is externally available in more than one format, it is recommended that the format selected is the closer to the original description document format. For example, if an OGC API defines tiles using JSON, it is expected to link to a JSON definition of a TileMatrixSet.
  
 include::requirements/tilesetmetadata/REQ_tilesetmetadata_model.adoc[]
 
@@ -92,20 +92,20 @@ image::figures/TileSet.png[TileSetMetadata UML model]
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| title ^a^ | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| title ^a^ | Title of a tile set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| description ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of a tile set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile set | MD_Keywords class in ISO 19115 See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
+| keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a tile set | MD_Keywords class in ISO 19115 See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
 
 One for each keyword authority used
-| version | Version of the Tile Set. Changes if the data behind the tiles has been changed | CharacterString | Zero or one (optional)
+| version | Version of a tile Set. Changes if the data behind the tiles has been changed | CharacterString | Zero or one (optional)
 
-| pointOfContact | Useful information to contact the authors or custodians for the Tile Set  | CharacterString (e.g. e-mail address, a physical address,  phone numbers, etc) | Zero or one (optional)
+| pointOfContact | Useful information to contact the authors or custodians for the tile set  | CharacterString (e.g. e-mail address, a physical address,  phone numbers, etc) | Zero or one (optional)
 
-| accessConstraints | Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set | ClassificationCode code list, see <<parts-of-classification-code-enum>> | Zero or one (optional)
+| accessConstraints | Restrictions on the availability of the tile set that the user needs to be aware of before using or redistributing the Tile Set | ClassificationCode code list, see <<parts-of-classification-code-enum>> | Zero or one (optional)
 
 | license | License applicable to the tiles | CharacterString | Zero or one (optional)
 
@@ -131,9 +131,9 @@ One for each keyword authority used
 
 | layer | Layer elements represented in the tile set | GeospatialData data structure, see <<parts-of-geospatial-data-data-structure>> | Zero or more (optional)
 
-| style | Style used to generate the tiles in the tileset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^i^
+| style | Style used to generate the tiles in the til eset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^i^
 
-| centerPoint | Location of a tile that nicely represents the tileset. Implementations may use this center value to set the default location or to present a representative tile in a user interface | TilePoint data structure, see <<parts-of-tilepoint-data-structure>>.| Zero or more (optional)
+| centerPoint | Location of a tile that nicely represents the tile set. Implementations may use this center value to set the default location or to present a representative tile in a user interface | TilePoint data structure, see <<parts-of-tilepoint-data-structure>>.| Zero or more (optional)
 
 | link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>.^d,e^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
@@ -155,72 +155,72 @@ One for each keyword authority used
 ^j^     It should be compatible with the CRS of the TileMatrixSet. In case the axis order is different from the TileMatrixSet the order of the CRS defined here prevails. See <<TileMatrixSetCRSCompatibility>>
 |===
 
-A Layer can is a set of geographic objects (all of the same type) together in a way that can be presented to the user. IT can also be a coverage. Its elements are defined with a data structure defined in <<parts-of-geospatial-data-data-structure>>.
+A Layer can is a set of geographic objects (all of the same type) together in a way that can be presented to the user. A layer can also be a coverage. Its elements are defined with a data structure defined in <<parts-of-geospatial-data-data-structure>>.
 
 [#parts-of-geospatial-data-data-structure,reftext='{table-caption} {counter:table-num}']
 .Parts of GeospatialData data structure
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| title ^a^ | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| title ^a^ | Title of a geospatial data, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| description ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of a geospatial data, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this layer | MD_Keywords class in ISO 19115 See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
+| keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a geospatial data | MD_Keywords class in ISO 19115 See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
 
 One for each keyword authority used
 
-| identifier | Unique identifier of the Layer | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
+| identifier | Unique identifier of a geospatial data | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
 
-| dataType | Type of data represented in the layer | DataTypeCode code list | one (mandatory)
+| dataType | Type of data represented in a geospatial data | DataTypeCode code list | one (mandatory)
 
-| geometryType | The geometry type of the features shown in this layer | GeometryTypeCode code list | Zero or more (optional)
+| geometryType | The geometry type of the features shown in a geospatial data | GeometryTypeCode code list | Zero or more (optional)
 
 | featureType | Feature type identifier | CharacterString | Zero or one (optional)^i^
 
-| pointOfContact | Useful information to contact the authors or custodians for the Layer | CharacterString  (e.g. e-mail address, a physical address,  phone numbers, etc) | Zero or one (optional)
+| pointOfContact | Useful information to contact the authors or custodians for a geospatial data | CharacterString  (e.g. e-mail address, a physical address,  phone numbers, etc) | Zero or one (optional)
 
-| publisher | Organization or individual responsible for making the layer available | CharacterString | Zero or one (optional)
+| publisher | Organization or individual responsible for making a geospatial data available | CharacterString | Zero or one (optional)
 
-| theme | Category where the layer can be grouped | CharacterString | Zero or more (optional)
+| theme | Category where a geospatial data can be grouped | CharacterString | Zero or more (optional)
 
 | crs | Coordinate Reference System (CRS) | CRSType type, see <<parts-of-crs-type-union>> | Zero or more (optional)
 
-| minScaleDenominator | Minimum scale denominator for usage of the layer | double^c^ | Zero or one (optional)^e^
+| minScaleDenominator | Minimum scale denominator for usage of a geospatial data | double^c^ | Zero or one (optional)^e^
 
-| minCellSize | Minimum cell size for usage of the layer | double^c^ | Zero or one (optional)^e^
+| minCellSize | Minimum cell size for usage of a geospatial data | double^c^ | Zero or one (optional)^e^
 
-| maxScaleDenominator | Maximum cell size for usage of the layer | double^c^ | Zero or one (optional)^f^
+| maxScaleDenominator | Maximum cell size for usage of a geospatial data | double^c^ | Zero or one (optional)^f^
 
-| maxCellSize | Maximum scale denominator for usage of the layer | double^c^ | Zero or one (optional)^f^
+| maxCellSize | Maximum scale denominator for usage of a geospatial data | double^c^ | Zero or one (optional)^f^
 
 | maxTileMatrix | TileMatrix identifier associated with the minScaleDenominator | CharacterString^d^ | Zero or one (optional)^e^
 
 | minTileMatrix | TileMatrix identifier associated with the maxScaleDenominator | CharacterString^d^ | Zero or one (optional)^f^
 
-| boundingBox | Minimum bounding rectangle surrounding the layer ^g^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
+| boundingBox | Minimum bounding rectangle surrounding a geospatial data ^g^ | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>> | Zero or one (optional)
 
-| created | Timestamp indicating when the layer was first produced | DateTime | Zero or one (optional)
+| created | Timestamp indicating when a geospatial data was first produced | DateTime | Zero or one (optional)
 
-| updated | Timestamp of the last layer change/revision | DateTime | Zero or one (optional)
+| updated | Timestamp of the last geospatial data change/revision | DateTime | Zero or one (optional)
 
-| style | Style applied to this layer to generate the tiles in the tileset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^b^
+| style | Style applied to a geospatial data to generate the tiles in the tile set | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^b^
 
-| geoDataClass | URI identifying a class of data contained in this layer (useful to determine compatibility with styles or processes) | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or more (optional)
+| geoDataClass | URI identifying a class of data contained in a geospatial data (useful to determine compatibility with styles or processes) | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or more (optional)
 
-| propertySchema | Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage) | FeatureAttribute data structure. See <<parts-of-feature-attribute-data-structure>> | Zero or more (optional)
+| propertySchema | Properties represented by the features in a geospatial data. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage) | FeatureAttribute data structure. See <<parts-of-feature-attribute-data-structure>> | Zero or more (optional)
 
 | link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>. ^h^ | Zero or more (optional)
 
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply
 
-^b^     If the tileSetMetadata style property mentions a style applied to all layers, this should be omitted
+^b^     If the tileSetMetadata style property mentions a style applied to all geospatial data, this should be omitted
 
 ^c^     SHALL be an scaleDenominator defined in one of the TileMatrix of the TileMatrixSet
 
-^d^     SHALL be an identifier to a tileMatrix element of this tileMatrixSet
+^d^     SHALL be an identifier to a tileMatrix element of this TileMatrixSet
 
 ^e^     If minCellSize, minScaleDenominator and maxTileMatrix are provided they SHALL be related to the same TileMatrix
 
@@ -228,9 +228,9 @@ One for each keyword authority used
 
 ^g^     In the same CRS than the TileMatrixSet
 
-^h^     Possible link 'rel' values are: 'collection' for a URL pointing to the collection represented in this layer
+^h^     Possible link 'rel' values are: 'collection' for a URL pointing to the collection represented in a geospatial data
 
-^i^     Only applicable to layers of datatype='geometries'
+^i^     Only applicable to geospatial data of datatype='geometries'
 |===
 
 A FeatureAttribute element contains attributes that can be found in at least one feature belonging to the layer the FeatureAttribute element belongs to. Its elements are defined in <<parts-of-feature-attribute-data-structure>>.
@@ -240,39 +240,39 @@ A FeatureAttribute element contains attributes that can be found in at least one
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| title ^a^ | Title of this tile matrix set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| title ^a^ | Title of a feature attribute, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^f^
-| description ^a^ | Brief narrative description of this tile matrix set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of a feature attribute, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this attribute | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
+| keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a feature attribute | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
 
 One for each keyword authority used
 
-| identifier | Identifier of the attribute | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
+| identifier | Identifier of a feature attribute | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
 
-| type | The data type of the attribute | CharacterString | One (mandatory)
+| type | The data type of a feature attribute | CharacterString | One (mandatory)
 
-| pattern | Regular expression to validate the values of the attribute | CharacterString | Zero or one (optional)^b^
+| pattern | Regular expression to validate the values of a feature attribute | CharacterString | Zero or one (optional)^b^
 
-| mediaType | Encodings of a complex attribute (e.g. image/png) | CharacterString restricted by RFC6838 section 4.2 | Zero or one (optional)^b^
+| mediaType | Encodings of a complex feature attribute (e.g. image/png) | CharacterString restricted by RFC6838 section 4.2 | Zero or one (optional)^b^
 
-| acceptedValues | Valid values of the attribute | CharacterString | Zero or more (optional)^b^
+| acceptedValues | Valid values of a feature attribute | CharacterString | Zero or more (optional)^b^
 
 | range | Range of valid values expressed as an array of two items | CharacterString | Zero or two (optional)^b^
 
-| lowerMultiplicity | Lower multiplicity of the attribute | Non negative integer | Zero or one (optional)^c^
+| lowerMultiplicity | Lower multiplicity of a feature attribute | Non negative integer | Zero or one (optional)^c^
 
-| upperMultiplicity | Upper Multiplicity of the property | Non negative integer. Use '*' for 'unbounded'  | Zero or one (optional)^d^
+| upperMultiplicity | Upper Multiplicity of a feature attribute | Non negative integer. Use '*' for 'unbounded'  | Zero or one (optional)^d^
 
 | observedProperty | Measured phenomenon (variable) label, commonly a descriptive name | CharacterString | Zero or one (optional)
 
 | observedPropertyURI | URI pointing to a representation of the definition of the measured phenomenon (variable) | URI | Zero or one (optional)
 
-| uom | Units of measure characterizing the values of the attribute | CharacterString | Zero or one (optional)
+| uom | Units of measure characterizing the values of a feature attribute | CharacterString | Zero or one (optional)
 
-| uomURI | URI pointing to a representation of the definition of the units of measure characterizing the values of the attribute | CharacterString | Zero or one (optional)
+| uomURI | URI pointing to a representation of the definition of the units of measure characterizing the values of a feature attribute | CharacterString | Zero or one (optional)
 4+|
 ^a^     The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
@@ -283,20 +283,20 @@ One for each keyword authority used
 ^d^     If missing, many (unbounded) is assumed
 |===
 
-The style structure applicable to the layer is defined in <<parts-of-style-data-structure>>.
+The style structure applicable to the geospatial resource is defined in <<parts-of-style-data-structure>>.
 
 [#parts-of-style-data-structure,reftext='{table-caption} {counter:table-num}']
 .Parts of Style data structure
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| title ^a^ | Title of this style, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| title ^a^ | Title of a style, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented ^f^
-| description ^a^ | Brief narrative description of this style, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of a style, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this style | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
+| keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a style | MD_Keywords class in ISO 19115. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
 
 One for each keyword authority used
 

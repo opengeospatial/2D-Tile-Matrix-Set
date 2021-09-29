@@ -4,7 +4,7 @@
 [[tms-json-encoding]]
 === JSON encoding
 
-The JSON encoding has been done respecting the naming and types of the original classes. However, there are some differences.  <<class-attributes-JSON-element-equivalences>> describes some exceptions in the mapping between the class attributes and corresponding JSON element.
+The JSON encoding is defined respecting the naming and types of the original classes. However, there are some differences.  <<class-attributes-JSON-element-equivalences>> describes some exceptions in the mapping between the class attributes and corresponding JSON element.
 
 [#class-attributes-JSON-element-equivalences,reftext='{table-caption} {counter:table-num}']
 .propertiesSchema attributes and JSON Schema properties equivalences
@@ -12,13 +12,13 @@ The JSON encoding has been done respecting the naming and types of the original 
 |===
 | Class attribute | JSON element | Reason
 | identifier | id | Following common practice in GeoJSON and JSON-LD.
-| BoundingBox class | array of 4 numbers representing lowerLeft and topRight coordinates | Following GeoJSON suggested encoding.
+| BoundingBox class | array of 4 numbers representing lowerLeft and topRight coordinates | Follows GeoJSON (https://datatracker.ietf.org/doc/html/rfc7946) suggested encoding.
 | LanguageString | string | JSON files are generally used in the OGC API as monolingual documents. The language of the document is determined by the HTTP language negotiation headers.
-| keyworks | string array | JSON files are general used in the OGC API as monolingual documents. JSON does not use namespaces or codespaces. |
+| keyworks | string array | JSON files are generally used in the OGC API as monolingual documents. JSON does not use namespaces or codespaces. |
 | WKT | object | The WKT encoding for JSON is an object representing a JSON encoding of the WKT defined by https://proj.org/specifications/projjson.html |
 |===
 
-In addition, all elements with multiplicity greater than one changes names to plural. Please be aware of irregular plurals such as `tileMatrix` that changes to `tileMatrices`.
+In addition, all elements with multiplicity greater than one have names changed to plural. Please be aware of irregular plurals such as `tileMatrix` that changes to `tileMatrices`.
 
 [[json-tilematrixset-requirements-class]]
 ==== JSON TileMatrixSet requirements class
@@ -54,7 +54,7 @@ An annex provides <<annex-example-encodings-for-variable-matrix-width-informativ
 
 [[tms-xml-encoding]]
 === XML encoding
-The XML encoding has been done respecting the naming and types of the original classes. However all attribute names have been transformed to UpperCamelCase.
+The XML encoding is defined respecting the naming and types of the original classes. However, all attribute names have been transformed to UpperCamelCase.
 
 [[xml-tilematrixset-requirements-class]]
 ==== XML TileMatrixSet requirements class

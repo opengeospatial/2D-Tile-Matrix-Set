@@ -43,15 +43,19 @@ See <<Clause_Critical>> for more information on critical changes and
 [cols="1a,1a,1a,2a,6a,2a",options="header"]
 |=======================================================================
 |Source      |Identifier     |Type                 |Section |Description |Purpose
-| | | Substantive | 4 | Align with the Abstract specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space OGC 19-014r3 | Consistency
-| | | Substantive | 5 | OWS Common dependency removed | Interoperability
-| | | Substantive | 5 | Introduction of CRSType that allows for using a full WKT description as an alternative to a CRS link for a CRS definition | Interoperability
-| | | Substantive | 6 | Adding cell size and cornerOfOrigin | Usability
-| | | Substantive | 7 | Removing the JSON-LD due lack of interest and concerns on real use cases. It can be reintroduced at later stage | Interoperability
-| | | Substantive | 7 | JSON encoding rules to derive a JSON encoding from UML | Interoperability
-| | | Substantive | 8 | New data model for tileset metadata that includes the TileMatrixSetLimits | Completeness
-| | | Substantive | 8 | Possibility to link to a tilematrixset defined in a external repository added | Completeness
-| | | Substantive | 8 | New XML and JSON encoding for tileset metadata. It sould be useful for the new OGC API Tiles | Completeness
-| | | Substantive | Annex G | Added variable width GNOSIS Global Grid | Completeness
-| | | Substantive | Annex K | New annex with consideration for Extending TileMatrixSets for additional dimensions | Completeness
+| GitHub | #11 | Administrative | Title | Title was renamed to include "tileset metadata" | Clarity
+| GitHub | #1 | Substantive | 4 | Align with the Abstract specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space OGC 19-014r3 | Consistency
+| GitHub | #13 | Substantive | 5 | OWS Common dependency removed | Interoperability
+| GitHub | #12 | Substantive | 5 | Introduction of CRSType that allows for using a full WKT description as an alternative to a CRS link for a CRS definition | Interoperability
+| GitHub | #4, #5 | Critical | 6 | Adding cell size and cornerOfOrigin | Usability
+| Editor | NA | Substantive | 7 | Removing the JSON-LD due lack of interest and concerns on real use cases. It can be reintroduced at later stage | Interoperability
+| Editor | NA | Critical | 7 | JSON encoding rules to derive a JSON encoding from UML | Interoperability
+| GitHub | #10, #11, #30 | Critical | 8 | New data model for tileset metadata that includes the TileMatrixSetLimits and replaces TileMatrixSetLink | Completeness
+| GitHub | #34 | Critical | 8 | Possibility to link to a tilematrixset defined in a external repository added | Completeness
+| GitHub | #10, #11 | Substantive | 9 | New XML and JSON encoding for tileset metadata. It could be useful for the new OGC API Tiles | Completeness
+| GitHub | #31 | Administrative  | Annex D, F | Axis order in the EuropeanETRS89_LAEAQuad TMS | Consistency
+| GitHub | #22 | Substantive | Annex E | New annex with variable width TMS definition | Completeness
+| GitHub | #17 | Substantive | Annex G | Added variable width TMS for CDB example | Completeness
+| GitHub | #26 | Substantive | Annex J | New annex with consideration for Extending TileMatrixSets for additional dimensions | Completeness
+| GitHub | #6, #7 | Administrative | All | Correction of mistakes and inconsistencies in UML , XML and JSON encodings | Consistency
 |=======================================================================

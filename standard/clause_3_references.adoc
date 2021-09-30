@@ -10,3 +10,5 @@ https://docs.ogc.org/as/19-014r3/19-014r3.html
 [3]  OGC: OGC 09-146r6 Coverage Implementation Schema (“CIS”) Version 1.1, 2017. http://docs.opengeospatial.org/is/09-146r6/09-146r6.html
 
 [4]  IETF: IETF RFC 7159, The JavaScript Object Notation (JSON) Data Interchange Format, 2014. https://www.ietf.org/rfc/rfc7159.txt
+
+[5]  OGC: OGC 18-010r7, Geographic information — Well-known text representation of coordinate reference systems Version 2.0, 2019. http://docs.opengeospatial.org/is/18-010r7/18-010r7.html

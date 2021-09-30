@@ -14,9 +14,11 @@ The JSON encoding is defined respecting the naming and types of the original cla
 | identifier | id | Following common practice in GeoJSON and JSON-LD.
 | BoundingBox class | array of 4 numbers representing lowerLeft and topRight coordinates | Follows GeoJSON (https://datatracker.ietf.org/doc/html/rfc7946) suggested encoding.
 | LanguageString | string | JSON files are generally used in the OGC API as monolingual documents. The language of the document is determined by the HTTP language negotiation headers.
-| keyworks | string array | JSON files are generally used in the OGC API as monolingual documents. JSON does not use namespaces or codespaces. |
-| WKT | object | The WKT encoding for JSON is an object representing a JSON encoding of the WKT defined by https://proj.org/specifications/projjson.html |
+| keywords | string array | JSON files are generally used in the OGC API as monolingual documents. JSON does not use namespaces or codespaces. |
+| WKT | object | The WKT encoding for JSON is an object representing a JSON encoding of the WKT for CRS 2.0 defined by https://proj.org/specifications/projjson.html |
 |===
+
+NOTE: This Standard adopts the https://proj.org/specifications/projjson.html encoding, pending a resolution in the CRS group for adopting a possible future JSON encoding for WKT for CRS 2.0
 
 In addition, all elements with multiplicity greater than one have names changed to plural. Please be aware of irregular plurals such as `tileMatrix` that changes to `tileMatrices`.
 

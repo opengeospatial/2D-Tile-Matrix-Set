@@ -135,7 +135,7 @@ In this version of the standard, the possibility define a CRS using a full descr
 |===
 | Names | Definition | Data type and values
 | uri | A reference to a CRS. Typically a EPSG CRS reference | URI
-| wkt | A string defining the CRS using Well Known Text | CharacterString
+| wkt | A definition for CRS that uses Well-known text representation of coordinate reference systems Version 2.0 | Any
 | referenceSystem | A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115 | MD_ReferenceSystem
 |===
 

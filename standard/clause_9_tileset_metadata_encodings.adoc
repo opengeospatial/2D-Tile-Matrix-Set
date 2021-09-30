@@ -3,7 +3,7 @@
 
 [[tsmd-json-encoding]]
 === JSON encoding
-The JSON encoding has been done respecting the naming and types of the original classes.
+The JSON encoding has been done respecting the naming and types of the original classes. 
 
 [[json-tilematrixsetlimits-requirements-class]]
 ==== JSON TileMatrixSetLimits requirements class

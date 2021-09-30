@@ -125,7 +125,7 @@ include::annex_h.adoc[]
 
 include::annex_i.adoc[]
 
-include::annex_j.adoc[]
+// include::annex_j.adoc[]
 
 include::annex_k.adoc[]
 

@@ -1,6 +1,25 @@
 [[Clause_Critical]]
 == Description of Critical Changes
 
-=== <short name for the change>
+=== Adding cell size and corner of origin
+Cell size of a tile matrix is added to complement the existing Scale denominator of a tile matrix. They are related by the use of the standard 0.28mm pixel size so thy are complementary. Corner of origin was added to allow for bottom - left origin of the tile indices, in addition to the common top left.
 
-There are no critical changes in this release.
+=== JSON encoding rules to derive a JSON encoding from UML
+Some extra rules for deriving JSON encodings from UML that results in a more natural output were introduced.
+
+=== Data model for tileset metadata
+In version 1.0 there was a concept of TileMatrixSetLink (and data structure) designed to allow a dataset to declare the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set. In this standard, this concept has been extended beyond recognition into the TileSetMetadata structure that contains the metadata describing a set of tiles representing the same geospatial data and all conforming to a tile matrix set (a tileset), the limited coverage, and the suggested center point. Even if the new data structure looks different and covers more use cases, the previous functionality provided by the TileMatrixSetLink data structure is still included in the TileSetMetadata structure.
+
+Equivalences from the old version into the new version are:
+
+[#Equivalences-old-new-data-structures,reftext='{table-caption} {counter:table-num}']
+.Equivalences between the old and new data structures
+[width = "100%",options="header"]
+|===
+| Previous version (1.0) | Current version (2.0)
+| TileMatrixSetLink | TileSetMetadata
+| |
+|===
+
+=== Link to a tilematrixset defined in a external repository
+tileMatrixSetURI allows for a reference to an official source for this tileMatrixSet. IT should be used if the tilematrixset is one of the OGC NA TileMatrixSets. At least a TileMatrixSet, or a link with `rel`=tiling-scheme SHALL be provided.

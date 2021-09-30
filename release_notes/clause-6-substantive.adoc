@@ -1,0 +1,47 @@
+[[Clause_Substantive]]
+== Description of Substantive Changes
+This section enumerates the main changes done from the previous version of this Standard. These changes were carefully designed to provide conceptual descendent compatibility. Unfortunately, provided compatibility for XML documents is very restrictive and XML encoding of the previous version will not validate with the schemas of the proposed version.
+
+=== Align with the Abstract specification Topic 22
+Significant effort has been done to align the terminology has been aligned with the Abstract specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space OGC 19-014r3. The most significant addition is the "tile set concept" ("set of tiles - a collection of subsets of the space being partitioned. [OGC 19-014r3]")
+
+=== OWS Common dependency removed
+We removed the dependency to OWS common and imported the necessary element in the document instead: LanguageString, Description Title Keyword data elements and Bounding Box
+
+=== CRSType
+In this version of the standard, the possibility define a CRS using a full description in addition to a reference to an external CRS catalogue is introduced. For backwards compatibility, CRSType can be defaulted as a URI but in here we extend it to a union of three possibilities.
+
+=== Adding cell size and corner of origin
+Cell size of a tile matrix is added to complement the existing Scale denominator of a tile matrix. They are related by the use of the standard 0.28mm pixel size so thy are complementary. Corner of origin was added to allow for bottom - left origin of the tile indices, in addition to the common top left.
+
+=== Removing the JSON-LD
+Due to the lack of interest and concerns on real use cases the JSON-LD encoding was removed. It can be reintroduced at later stage if there is demand.
+
+=== JSON encoding rules to derive a JSON encoding from UML
+Some extra rules for deriving JSON encodins from UML that results in a more natural output were introduced.
+
+=== Data model for tileset metadata
+In version 1.0 there was a concept of TileMatrixSetLink (and data structure) designed to allow a dataset to declare the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set. In this standard, this concept has been extended beyond recognition into the TileSetMetadata structure that contains the metadata describing a set of tiles representing the same geospatial data and all conforming to a tile matrix set (a tileset), the limited coverage, and the suggested center point. Even if the new data structure looks different and covers more use cases, the previous functionality provided by the TileMatrixSetLink data structure is still included in the TileSetMetadata structure.
+
+Equivalences from the old version into the new version are:
+
+[#Equivalences-old-new-data-structures,reftext='{table-caption} {counter:table-num}']
+.Equivalences between the old and new data structures
+[width = "100%",options="header"]
+|===
+| Previous version (1.0) | Current version (2.0)
+| TileMatrixSetLink | TileSetMetadata
+| |
+|===
+
+=== Link to a tilematrixset defined in a external repository
+tileMatrixSetURI allows for a reference to an official source for this tileMatrixSet. IT should be used if the tielematrixset is one of the OGC NA TileMatrixSets. At least a TileMatrixSet, or a link with `rel`=tiling-scheme SHALL be provided.
+
+=== XML and JSON encoding for tileset metadata.
+An XML and JSON ecoding for tileset metadata was included. The JSON encoding should be  useful for the new OGC API - Tiles.
+
+=== Added variable width GNOSIS Global Grid
+JSON and XML definitions of the GNOSISGlobalGrid tile matrix set are added as another example of Variable width tile matrix sets.
+
+=== Extending TileMatrixSets for additional dimensions annex
+The informative annex K proposes approaches for extending TileMatrixSets and TileSet metadata for indexing and accessing 3D, 4D and n-D (n > 2) data as tiles, regardless of whether a simple file-based data store, a database (e.g. a GeoPackage) or a web API is used. All of these approaches assume that the multi-dimensional content spans the two dimensions defined by 2D TileMatrixSets, which are usually either latitude and longitude for geographic CRSes, or X/Easting or Y/Northing for projected CRSes, as well as other extra dimensions.

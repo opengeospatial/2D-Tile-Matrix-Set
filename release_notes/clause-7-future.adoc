@@ -1,0 +1,4 @@
+[[Clause_FutureWork]]
+== Future Work
+The future ork will now focus on reusing this standard in an OGC API - Tiles that is advances at this point. We do not expect immediate changes to this standard in the near future. However the need for harmonization with other approaches for multidimensional tiles has been detected.
+//OPTIONAL: Describe any Change Requests or Issues which are planned to be addressed in a future version of the Standard.

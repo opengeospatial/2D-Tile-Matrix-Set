@@ -1,0 +1,16 @@
+== Introduction
+
+===	Scope
+
+The OGC Two Dimensional Tile Matrix Set and Tile Set Metadata v.2.0 (OGC 17-083r3) is a revision to the GeoPackage extensionOGC Two Dimensional Tile Matrix Set v.1.0 (OGC 17-083r2) that is currently published. The new document is designed to replace OGC 17-083r2 completely. The revision defines a data model for tile matrix sets and how to encode in XML and in JSON. This revision adds a new data model to describe tilesets and how to encode in XML and in JSON.
+
+===	Document contributor contact points
+
+All questions regarding this document should be directed to the contacts provided below or the referenced Standard editor(s).
+
+.Contacts
+[width="80%",options="header"]
+|====================
+|Name |Organization
+|Joan Masó | UAB-CREAF
+|====================

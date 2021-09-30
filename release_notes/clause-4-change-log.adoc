@@ -1,0 +1,57 @@
+[[change-log]]
+== Change Log
+
+=== KEY
+
+* Source:
+** Change Request (CR)
+** GitHub Issue
+** Editor - The CDB document Editor
+** OGC-NA - OGC Naming Authority review
+** Public - Public Comment period
+** SWG decision
+** User - The CDB User Community
+** Other
+
+* Identifier: Change Request number or issue number and pull request/commit in GitHub
+//if an OGC Change Request, format as follows: URL[Change Request number]
+//if a GitHub issue, format as follows: URL[issue number], URL[pull request or commit short identifier]
+
+* Type:
+** A=Administrative
+** S=Substantive
+** C=Critical
+
+See <<Clause_Critical>> for more information on critical changes and
+<<Clause_Substantive>> for more information on substantive changes.
+
+* Section: Section number in the updated document
+* Description: Brief text describing the change
+* Purpose: the reason for the change:
+** Clarity
+** Consistency
+** Interoperability
+** Perfunctory
+** Readability
+** Usability
+** Completeness
+
+
+=== Change Table
+[[table_change_log]]
+.Change Log
+[cols="1a,1a,1a,2a,6a,2a",options="header"]
+|=======================================================================
+|Source      |Identifier     |Type                 |Section |Description |Purpose
+| | | Substantive | 4 | Align with the Abstract specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space OGC 19-014r3 | Consistency
+| | | Substantive | 5 | OWS Common dependency removed | Interoperability
+| | | Substantive | 5 | Introduction of CRSType that allows for using a full WKT description as an alternative to a CRS link for a CRS definition | Interoperability
+| | | Substantive | 6 | Adding cell size and cornerOfOrigin | Usability
+| | | Substantive | 7 | Removing the JSON-LD due lack of interest and concerns on real use cases. It can be reintroduced at later stage | Interoperability
+| | | Substantive | 7 | JSON encoding rules to derive a JSON encoding from UML | Interoperability
+| | | Substantive | 8 | New data model for tileset metadata that includes the TileMatrixSetLimits | Completeness
+| | | Substantive | 8 | Possibility to link to a tilematrixset defined in a external repository added | Completeness
+| | | Substantive | 8 | New XML and JSON encoding for tileset metadata. It sould be useful for the new OGC API Tiles | Completeness
+| | | Substantive | Annex G | Added variable width GNOSIS Global Grid | Completeness
+| | | Substantive | Annex K | New annex with consideration for Extending TileMatrixSets for additional dimensions | Completeness
+|=======================================================================

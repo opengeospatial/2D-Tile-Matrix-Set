@@ -66,4 +66,3 @@ include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=1
 include::../schemas/tms/2.0/xml/examples/tilematrixset/CDBGlobalGrid.xml[lines=190..249]
 </TileMatrixSet>
 ....
- 

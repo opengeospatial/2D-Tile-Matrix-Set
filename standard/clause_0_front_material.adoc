@@ -1,6 +1,6 @@
 [big]*i.     Abstract*
 
-The OGC Tile Matrix Set Standard defines the rules and requirements for a tile matrix set as a way to index space based on a set of regular grids defining a domain (tile matrix) for a limited list of scales in a Coordinate Reference System (CRS) as defined in [OGC 08-005r4] Abstract Specification Topic 2: Referencing by Coordinates. This content was initially included in [OGC 07-057r7] OpenGIS Web Map Tile Service Implementation Standard (WMTS) and was separated in the [OGC 17-083r2] OGC Two Dimensional Tile Matrix Set, to allow reusability in other data formats of services that need a tiling schema. This document is a revision of the [OGC 17-083r2] and the general tile matrix set concept is inherited from it with small additions. In a tile matrix set, each tile matrix is divided into regular tiles. In a tile matrix set, a tile can be univocally identified by a tile column, a tile row, and a tile matrix identifier. The OGC Tile Matrix Set Standard describes a data structure defining the properties of the tile matrix set in both UML diagrams and in tabular form. This document also defines a new data structure, called tile set metadata, that can be used to describe a particular set of tiles following a tile matrix set. XML and JSON encodings are described both for tile matrix sets and tile matrix set metadata. In includes tile matrix set limits, links to the tile matrix set, details of the original data represented by the tile set and a nice point of origin to estart exploring the tile set. Finally, the document offers practical examples of tile matrix sets both for common global projections and for specific regions.
+The OGC Tile Matrix Set Standard defines the rules and requirements for a tile matrix set as a way to index space based on a set of regular grids defining a domain (tile matrix) for a limited list of scales in a Coordinate Reference System (CRS) as defined in [OGC 08-005r4] Abstract Specification Topic 2: Referencing by Coordinates. This content was initially included in [OGC 07-057r7] OpenGIS Web Map Tile Service Implementation Standard (WMTS) and was separated in the [OGC 17-083r2] OGC Two Dimensional Tile Matrix Set, to allow reusability in other data formats of services that need a tiling schema. This document is a revision of the [OGC 17-083r2] and the general tile matrix set concept is inherited from it with small additions. In a tile matrix set, each tile matrix is divided into regular tiles. In a tile matrix set, a tile can be univocally identified by a tile column, a tile row, and a tile matrix identifier. The OGC Tile Matrix Set Standard describes a data structure defining the properties of the tile matrix set in both UML diagrams and in tabular form. This document also defines a new data structure, called tile set metadata, that can be used to describe a particular set of tiles following a tile matrix set. XML and JSON encodings are described both for tile matrix sets and tile matrix set metadata. In includes tile matrix set limits, links to the tile matrix set, details of the original data represented by the tile set and a nice point of origin to start exploring the tile set. Finally, the document offers practical examples of tile matrix sets both for common global projections and for specific regions.
 
 [big]*ii.    Keywords*
 
@@ -10,7 +10,7 @@ ogcdoc, OGC document, tiles, maps, tile matrix set
 
 [big]*iii.   Preface*
 
-In 2007 the OGC approved and released the Web Map Tile Service Standard [OGC 07-057r7] (WMTS). This OGC Standard defines “tile matrix set.” Over time, other OGC standards with requirements for "tiles" or tiled structures needed to use the same definition. Unfortunately, other OGC standards could not use the tile matrix set definition directly because the definition was formally linked to the tile service. This revision uncouples the concept of a tile matrix set from the WMTS standard so that other standards can reference the concept directly. This version of the standard also provides an informative list of commonly used tile matrix sets and ensure s consistency with the [OGC 19-014r3] OGC Abstract Specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space. This document is anticipated to impact and uniform future revisions of other OGC Standards such as GeoPackage and CDB and be used in future formats and services needing tiles for storage or parallel processing.
+In 2007 the OGC approved and released the Web Map Tile Service Standard [OGC 07-057r7] (WMTS). WMTS defines "tile matrix set". Over time, other OGC standards with requirements for "tiles" or tiled structures needed to use the same definition. Unfortunately, other OGC standards could not use the tile matrix set definition directly because the definition was formally linked to the tile service. This revision uncouples the concept of a tile matrix set from the WMTS standard so that other standards can reference the concept directly. This version of the standard also provides an informative list of commonly used tile matrix sets and ensure s consistency with the [OGC 19-014r3] OGC Abstract Specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space. This document is anticipated to impact and uniform future revisions of other OGC Standards such as GeoPackage and CDB and be used in future formats and services needing tiles for storage or parallel processing.
 
 Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
 
@@ -28,11 +28,11 @@ If a server points to a definition of a tile matrix set that is hosted elsewhere
 
 The following organizations submitted this document to the Open Geospatial Consortium (OGC):
 
-*   Universitat Autònoma de Barcelona (UAB-CREAF)
-*   Image Matters LLC
-*   Natural Resources Canada (NRCan)
-*   Ecere Corporation
-*   US Army Geospatial Center
+* Universitat Autonoma de Barcelona (UAB-CREAF)
+* Image Matters LLC
+* Natural Resources Canada (NRCan)
+* Ecere Corporation
+* US Army Geospatial Center
 
 [big]*vi.     Submitters*
 
@@ -41,9 +41,9 @@ All questions regarding this submission should be directed to the editor or the 
 [width="100%",cols="50%,50%",options="header",]
 |==========================================================================================
 |*Name* |*Affiliation*
-|Joan Masó |Universitat Autònoma de Barcelona (UAB-CREAF)
+|Joan Maso |Universitat Autonoma de Barcelona (UAB-CREAF)
 |Jeff Yutzler |Image Matters LLC
 |Peter Rushforth |Canada Centre for Mapping and Earth Observation, Natural Resources Canada
-|Jérôme St-Louis |Ecere Corporation
+|JÃ©rÃ´me St-Louis |Ecere Corporation
 |Jeff Harrison |US Army Geospatial Center
 |==========================================================================================

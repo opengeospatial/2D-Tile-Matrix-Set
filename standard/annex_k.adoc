@@ -55,7 +55,7 @@ image::figures/nd-octree.png[]
 
 === Extended properties for TileMatrix & limits
 
-An `extraDimensions` property can be added consisting of an list of identified (with dimension names) objects (associative array), each one with a description on how the additional
+An `extraDimensions` property can be added consisting of a list of identified (with dimension names) objects (associative array), each one with a description on how the additional
 dimensions are tiled. This information can be added to either a _TileMatrixSet_'s _TileMatrix_ or to a _TileSet_'s _TileMatrixSetLimit_.
 Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows for the re-use of common 2D TileMatrixSets.
 

@@ -117,9 +117,9 @@ One for each keyword authority used
 
 | epoch | Epoch of the Coordinate Reference System (CRS) | Number | Zero or one (optional)
 
-| tileMatrixSet | Tile matrix set definition | TileMatrixSet data strcuture. See <<parts-of-tilematrixset-data-structure>> | Zero or one (optional)^d^
+| tileMatrixSet | Tile matrix set definition | TileMatrixSet data structure. See <<parts-of-tilematrixset-data-structure>> | Zero or one (optional)^d^
 
-| tileMatrixSetURI | Reference to an official source for this tileMatrixSet | URI type^b^ | Zero or One (optional) Include if this is one of the OGC NA TileMatrixSets
+| tileMatrixSetURI | Reference to a Tile Matrix Set on the OGC NA definition server | URI type^b^ | Zero or One (optional) Include if the tile matrix set for this tileset is one of the OGC NA TileMatrixSets
 
 | tileMatrixSetLimit | Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet | TileMatrixSetLimits data structure, see <<parts-of-tilematrixsetlimits-data-structure>> | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^g^
 

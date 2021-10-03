@@ -3,10 +3,10 @@
 This section enumerates the main changes done from the previous version of this Standard. These changes were carefully designed to provide conceptual descendent compatibility. Unfortunately, provided compatibility for XML documents is very restrictive and XML encoding of the previous version will not validate with the schemas of the proposed version.
 
 === Align with the Abstract specification Topic 22
-Significant effort has been done to align the terminology has been aligned with the Abstract specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space OGC 19-014r3. The most significant addition is the "tile set concept" ("set of tiles - a collection of subsets of the space being partitioned. [OGC 19-014r3]")
+Significant effort has been done to align the terminology with the Abstract specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space OGC 19-014r3. The most significant addition is the "tile set concept" ("set of tiles - a collection of subsets of the space being partitioned. [OGC 19-014r3]").
 
 === OWS Common dependency removed
-We removed the dependency to OWS common and imported the necessary element in the document instead: LanguageString, Description Title Keyword data elements and Bounding Box
+We removed the dependency to OWS common and imported the necessary element in the document instead: LanguageString, Description Title Keyword data elements and Bounding Box.
 
 === CRSType
 In this version of the standard, the possibility define a CRS using a full description in addition to a reference to an external CRS catalogue is introduced. For backwards compatibility, CRSType can be defaulted as a URI but in here we extend it to a union of three possibilities.
@@ -14,13 +14,13 @@ In this version of the standard, the possibility define a CRS using a full descr
 === Removing the JSON-LD
 Due to the lack of interest and concerns on real use cases the JSON-LD encoding was removed. It can be reintroduced at later stage if there is demand.
 
-=== XML and JSON encoding for tileset metadata.
+=== XML and JSON encoding for tileset metadata
 An XML and JSON encoding for tileset metadata was included. The JSON encoding should be  useful for the new OGC API - Tiles.
 
-=== New annex with variable width TMS definition.
-This new Annex E includes de description of the variable width TMS that complements some already existing examples that has been moved to the Annex G. It also mentions a possible relationship to the axis-aligned DGGS.
+=== New annex with variable width TileMatrixSets definitions
+This new Annex E includes the description of variable width TileMatrixSets that complements some already existing examples which have been moved to the Annex G. It also mentions a possible relationship to axis-aligned DGGS.
 
-=== Added variable width TMS for CDB example
+=== Added example encodings of CDB variable width TileMatrixSet
 JSON and XML definitions of the CDB tile matrix set are added to Annex G as another example of Variable width tile matrix sets.
 
 === Extending TileMatrixSets for additional dimensions annex

@@ -22,4 +22,4 @@ Equivalences from the old version into the new version are:
 |===
 
 === Link to a tilematrixset defined in a external repository
-tileMatrixSetURI allows for a reference to an official source for this tileMatrixSet. IT should be used if the tilematrixset is one of the OGC NA TileMatrixSets. At least a TileMatrixSet, or a link with `rel`=tiling-scheme SHALL be provided.
+`tileMatrixSetURI` allows tileset metadata to reference an official tileMatrixSet used for a tileset. It should be used if the tilematrixset is one of the OGC NA TileMatrixSets. At least a TileMatrixSet, or a link with `rel`=tiling-scheme SHALL be provided.

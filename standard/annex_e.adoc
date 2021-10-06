@@ -136,21 +136,21 @@ which can be encoded following this standard with the use of variable widths.
 | _Rows 165..169:_ *4*
 | _Rows 170..178:_ *6*
 | _Row 179:_ *12*
-.10+| 1 .10+| 194,125.786 .10+| 0.004882813 .10+| 1024 .10+| 720 .10+| 360 |_Row 0:_ *12*
-| _Rows 1..9:_ *6*
-| _Rows 10..14:_ *4*
-| _Rows 15..19:_ *3*
-| _Rows 20..39:_ *2*
-| _Rows 140..159:_ *2*
-| _Rows 160..164:_ *3*
-| _Rows 165..169:_ *4*
-| _Rows 170..178:_ *6*
-| _Row 179:_ *12*
+.10+| 1 .10+| 194,125.786 .10+| 0.004882813 .10+| 1024 .10+| 720 .10+| 360 |_Row 0..1:_ *12*
+| _Rows 2..19:_ *6*
+| _Rows 20..29:_ *4*
+| _Rows 30..39:_ *3*
+| _Rows 40..79:_ *2*
+| _Rows 280..319:_ *2*
+| _Rows 320..329:_ *3*
+| _Rows 330..339:_ *4*
+| _Rows 340..357:_ *6*
+| _Row 358..359:_ *12*
 |===
 
 For the tile matrices with negative identifiers of the CDB Global Grid, the tiles' geographic extents remain the same as those of tile matrix 0,
 but the tile size in cells is reduced. The levels -1 to 1 are shown here.
-For the CDB Global Grid, the polar adjustment zones corresponding to coalescence factors are the same for all tile matrices of the set.
+For the CDB Global Grid, the polar adjustment zones corresponding to coalescence factors are the same (at a given latitude) for all tile matrices of the set.
 
 [#img_cdb_zones,reftext='{figure-caption} {counter:figure-num}']
 .CDB Zones (from OGC CDB Volume 1)

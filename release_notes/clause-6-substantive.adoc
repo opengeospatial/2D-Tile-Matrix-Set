@@ -9,7 +9,24 @@ Significant effort has been done to align the terminology with the Abstract spec
 We removed the dependency to OWS common and imported the necessary element in the document instead: LanguageString, Description Title Keyword data elements and Bounding Box.
 
 === CRSType
-In this version of the standard, the possibility define a CRS using a full description in addition to a reference to an external CRS catalogue is introduced. For backwards compatibility, CRSType can be defaulted as a URI but in here we extend it to a union of three possibilities.
+In this version of the standard, the possibility to define a CRS using a full description in addition to a reference to an external CRS catalogue is introduced. For backwards compatibility, CRSType can be defaulted as a URI but in here we extend it to a union of three possibilities.
+
+=== Adding `cellSize` and `cornerOfOrigin`
+The `cellSize` of a tile matrix is added to complement the existing `scaleDenominator` of a tile matrix. They are related by the use of the standard 0.28mm pixel size so they are complementary. `cornerOfOrigin` was added to allow for bottom-left origin of the tile rows indices, in addition to the common top-left.
+
+=== Making `boundingBox` optional
+The `boundingBox` property was made optional, highlighting the fact that the space occupied by tiles is really defined by the `pointOfOrigin` as well as the `scaleDenominator` / `resolution`, and the `matrixWidth` and `matrixHeight` of *each* TileMatrix, not the `boundingBox` of the overall TileMatrixSet.
+Examples were updated to not define the bounding box, which should not be relied upon by clients.
+
+=== Adding optional `orderedAxes` to highlight CRS axis ordering
+An optional `orderedAxes` property can be used to highlight the axis ordering of the TileMatrixSet's CRS without having to look up the CRS definition.
+It should also help avoid mistakes where the axis ordering used for specifying the TileMatrices `pointOfOrigin` is inconsistent with the CRS axis ordering.
+However, this property cannot be used to modify the axis ordering defined by the CRS. Examples were updated to include this property.
+
+=== Removing `type` object properties
+The `type` property of the JSON encoding (e.g. `TileMatrixSetType`) were removed, as they were superfluous because wherever it was used, each property
+could only be of a s single type (no polymorphism is required). Additionnally, it was agreed that when such `type` property would be used in future specifications,
+the enumeration values would avoid a `Type` suffix.
 
 === Removing the JSON-LD
 Due to the lack of interest and concerns on real use cases the JSON-LD encoding was removed. It can be reintroduced at later stage if there is demand.

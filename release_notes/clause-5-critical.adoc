@@ -1,11 +1,20 @@
 [[Clause_Critical]]
 == Description of Critical Changes
 
-=== Adding cell size and corner of origin
-Cell size of a tile matrix is added to complement the existing Scale denominator of a tile matrix. They are related by the use of the standard 0.28mm pixel size so thy are complementary. Corner of origin was added to allow for bottom - left origin of the tile indices, in addition to the common top left.
+=== Identifying with `uri` a well-known TileMatrixSet in the official OGC registry
+A TileMatrixSet registered on the official OGC NA TileMatrixSets registry now identifies itself as such with a `uri` property pointing the canonical definition.
+
+=== Replacing `topLeftCorner` by `pointOfOrigin`
+The `topLeftCorner` property is replaced by `pointOfOrigin` to reflect the fact that tile matrix rows can now be counted starting from the bottom (based on the enumeration value of `cornerOfOrigin` property).
+
+=== Renaming `supportedCRS` to `crs`
+The `supportedCRS` property was renamed to the more appropriate `crs`, since it identifies the one CRS in which the TileMatrixSet is defined.
+Additionally, a new clause clarifies the compatibility between a TileSet CRS and its TileMatrixSet CRS, facilitating the re-use of common registered TileMatrixSets.
 
 === JSON encoding rules to derive a JSON encoding from UML
 Some extra rules for deriving JSON encodings from UML that results in a more natural output were introduced.
+
+As a result, some properties were renamed. For example in the JSON encoding, `identifier` was renamed to `id`, and `tileMatrix` was renamed to the plural `tileMatrices` (since its value is an array).
 
 === Data model for tileset metadata
 In version 1.0 there was a concept of TileMatrixSetLink (and data structure) designed to allow a dataset to declare the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set. In this standard, this concept has been extended beyond recognition into the TileSetMetadata structure that contains the metadata describing a set of tiles representing the same geospatial data and all conforming to a tile matrix set (a tileset), the limited coverage, and the suggested center point. Even if the new data structure looks different and covers more use cases, the previous functionality provided by the TileMatrixSetLink data structure is still included in the TileSetMetadata structure.
@@ -21,5 +30,7 @@ Equivalences from the old version into the new version are:
 | |
 |===
 
-=== Link to a tilematrixset defined in a external repository
-`tileMatrixSetURI` allows tileset metadata to reference an official tileMatrixSet used for a tileset. It should be used if the tilematrixset is one of the OGC NA TileMatrixSets. At least a TileMatrixSet, or a link with `rel`=tiling-scheme SHALL be provided.
+=== Linking to (rel: `tiling-scheme`) or embedding a TileMatrixSet definition, and identifying use of registered TileMatrixSet with `tileMatrixSetURI`
+A `tileMatrixSetURI` is now used for the tileset metadata to reference a TileMatrixSet registered on the official OGC NA TileMatrixSets registry.
+In addition, either a link to a TileMatrixSet (using a `rel`=tiling-scheme), or a embedded TileMatrixSet definition (for offline use cases) must be provided.
+This link can be either to an official OGC NA TileMatrixSet definition, or to the server's own local definition (e.g. at `/tileMatrixSets/{tileMatrixSetID}`).

@@ -3,7 +3,7 @@
 
 === Overview
 
-As stated in [OGC 08-015r4] Abstract Specification Topic 2: Referencing by Coordinates, a coordinate system is a set of mathematical rules for specifying how coordinates are to be assigned to points in space. A CRS is a coordinate system that is related to the real world by a reference datum. An example of mathematical rules is the application of a sphere or an ellipsoid centered in the datum and the use of a projection to transform the sphere or the ellipsoid into a planar representation of the world. Usually, the resulting planar coordinates are expressed as real numbers that are distances to the origin of the projection. This section introduces a tile scheme called Tile Matrix Set that is defined on top of a CRS. A fundamental part of the definion of a Tile Matrix Set is the Tile Matrix.
+As stated in [OGC 08-015r4] Abstract Specification Topic 2: Referencing by Coordinates, a coordinate system is a set of mathematical rules for specifying how coordinates are to be assigned to points in space. A CRS is a coordinate system that is related to the real world by a reference datum. An example of mathematical rules is the application of a sphere or an ellipsoid centered in the datum and the use of a projection to transform the sphere or the ellipsoid into a planar representation of the world. Usually, the resulting planar coordinates are expressed as real numbers that are distances to the origin of the projection. This section introduces a tile scheme called Tile Matrix Set that is defined on top of a CRS. A fundamental part of the definition of a Tile Matrix Set is the Tile Matrix.
 
 [[tile-matrix]]
 ==== Tile Matrix

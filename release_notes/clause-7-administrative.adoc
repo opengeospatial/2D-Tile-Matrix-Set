@@ -1,0 +1,37 @@
+[[Clause_Administrative]]
+== Description of Administrative Changes
+This section enumerates the editorial and corrective changes done from the previous version of this Standard.
+The corrections address issues in the previous version which could result in interoperability issues, and as a result implementations are encouraged
+to migrate to this newer version. The previous version will likely be deprecated.
+
+=== Title was renamed to include "tileset metadata"
+The title of the document was renamed from "Two Dimensional Tile Matrix Set" to "Two Dimensional Tile Matrix Set and Tile Set Metadata" to reflect the fact
+that the TileMatrixLink class which served the simple purpose of identifying a TileMatrixSet being used, as well as the limits of a particular tile set,
+has been replaced by a more comprehensive set of metadata about the tile set, including the description of data layers to better support vector tiles use cases.
+
+The document has also been re-organized to more clearly separate into dedicated sections the concepts, schemas, encodings and examples treating with
+either the definition of the tile matrix set or of the tile set metadata.
+
+=== Correcting axis order confusion for the EuropeanETRS89_LAEAQuad TileMatrixSet
+The previous version of this Standard mistakenly assumed a wrong CRS axis order for the _EuropeanETRS89_LAEAQuad_ TileMatrixSet encoding examples.
+
+This was partly because unlike most projected CRS, EPSG:3035 (Lambert Azimuhal Equal Area for Europe, based on ETRS89) defines a _Northing, Easting_ axis order.
+In hope of minimizing the re-occurrence of such axis order confusion in the future, an optional `orderedAxes` was added to the TileMatrixSet definition
+which can highlight the CRS order (without overriding it) to help ensure the consistency and correct interpretation of encoded definitions.
+
+The order of the bounding box coordinates (which should actually be ignored by clients, and was made optional) as well as that of the `pointOfOrigin`
+(`topLeftCorner` in previous version) coordinates should have been flipped, `[ 5500000.0, 2000000.0 ]` being the correct `pointOfOrigin` for all tile matrices.
+The correct bounding box would be northing / Y going from 1,000,000.0 to 5,500,000.0, and easting / X going from 2,000,000.0 to 6,500,000.0, i.e.
+`lowerLeft` being `[ 1000000.0, 2000000.0 ]` and `upperRight` being `[ 5500000.0, 6500000.0 ]`.
+
+=== Correction of mistakes and inconsistencies in UML, XML and JSON encodings
+In addition to the _EuropeanETRS89_LAEAQuad_ axis order confusion, a number of reported mistakes and inconsistencies were corrected in this new version:
+
+- The encoding examples used curved quotes rather than straight quotes, making them invalid JSON and XML.
+- The _WorldMercatorWGS84Quad_ tile matrices were wrongly assigned to a `tileHeight` property rather than `tileMatrices` in its JSON encoding.
+- The _WorldMercatorWGS84Quad_ tile matrix definitions were off by one (`scaleDenominator`, `matrixWidth` and `matrixHeight` would have been correct for the following TileMatrix identifier).
+- The _WorldMercatorWGS84Quad_ `topLeftCorner` (now `pointOfOrigin`) were wrong (geographic coordinates rather than projected coordinates).
+- The `WorldCRS84QuadVariableWidth.json` example encoding of a TileMatrixSet with variable widths had the same identifier as the regular _WorldCRS84Quad_ tile matrix set.
+This example is not registered on the OGC NA registry, and has been removed as it was mostly a duplication of the _GNOSISGlobalGrid_ tile matrix set, with the only exception of
+adding an additional tile matrix. That extra lower zoom level tile matrix 0 made tile matrices correspond with the registered _WorldCRS84Quad_ tile matrix set definition, except for the variable width coalescence factors.
+The _CDBGlobalGrid_ was added as an additional example of a variable width tile matrix set instead.

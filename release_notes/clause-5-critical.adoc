@@ -1,8 +1,13 @@
 [[Clause_Critical]]
 == Description of Critical Changes
+This section enumerates changes from the previous version of this Standard which break compatibility and justified an increase of the major revision number for this new version.
+Because of these changes, clients expecting the old version of the definition of a TileMatrixSet or of a TileMatrixSetLink (replaced) will not be able to readily handle the new version, and clients expecting the new version
+will not be able to readily handle the old version.
+Neither the JSON encoding nor the XML encoding of the previous version will validate against the schemas of the new version, and vice-versa.
+However, from a conceptual standpoint, there is a simple and clear mapping from the previous encoding to the new version, and only few minor changes are required.
 
-=== Identifying with `uri` a well-known TileMatrixSet in the official OGC registry
-A TileMatrixSet registered on the official OGC NA TileMatrixSets registry now identifies itself as such with a `uri` property pointing the canonical definition.
+=== Identifying with `uri` a well-known TileMatrixSet in an authoritative registry
+A TileMatrixSet registered on e.g. the official OGC NA TileMatrixSets registry now identifies itself as such with a `uri` property pointing to the canonical definition.
 
 === Replacing `topLeftCorner` by `pointOfOrigin`
 The `topLeftCorner` property is replaced by `pointOfOrigin` to reflect the fact that tile matrix rows can now be counted starting from the bottom (based on the enumeration value of `cornerOfOrigin` property).
@@ -11,13 +16,13 @@ The `topLeftCorner` property is replaced by `pointOfOrigin` to reflect the fact 
 The `supportedCRS` property was renamed to the more appropriate `crs`, since it identifies the one CRS in which the TileMatrixSet is defined.
 Additionally, a new clause clarifies the compatibility between a TileSet CRS and its TileMatrixSet CRS, facilitating the re-use of common registered TileMatrixSets.
 
-=== JSON encoding rules to derive a JSON encoding from UML
+=== JSON encoding rules to derive a more natural JSON encoding from UML
 Some extra rules for deriving JSON encodings from UML that results in a more natural output were introduced.
 
-As a result, some properties were renamed. For example in the JSON encoding, `identifier` was renamed to `id`, and `tileMatrix` was renamed to the plural `tileMatrices` (since its value is an array).
+As a result, some properties were renamed. For example in the JSON encoding, `identifier` was renamed to `id`, `tileMatrix` was renamed to the plural `tileMatrices` (since its value is an array of multiple tile matrices), and `variableMatrixWidth` was renamed to plural `variableMatrixWidths` as well.
 
 === Data model for tileset metadata
-In version 1.0 there was a concept of TileMatrixSetLink (and data structure) designed to allow a dataset to declare the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set. In this standard, this concept has been extended beyond recognition into the TileSetMetadata structure that contains the metadata describing a set of tiles representing the same geospatial data and all conforming to a tile matrix set (a tileset), the limited coverage, and the suggested center point. Even if the new data structure looks different and covers more use cases, the previous functionality provided by the TileMatrixSetLink data structure is still included in the TileSetMetadata structure.
+In version 1.0 there was a concept of TileMatrixSetLink (and data structure) designed to allow a tiled dataset (tileset) to declare the use of a tile matrix set defined elsewhere and, if needed, a limited coverage for this tile matrix set. In this standard, this concept has been extended into a much more comprehensive TileSetMetadata structure that contains the metadata describing a set of tiles representing the same geospatial data and conforming to the same tile matrix set (a tileset). This metadata includes among other things the inherited description of the tileset limits with respect to the often well-known TileMatrixSet, the source data layers either used to render the tiles (e.g. for map tiles) or contained within the tiles (e.g. for vector tiles) as well as associated schemas for their properties, and an optional center point suggesting where to start visualization. Even if the new data structure looks different and covers more use cases, the previous functionality provided by the TileMatrixSetLink data structure is still included in the TileSetMetadata structure.
 
 Equivalences from the old version into the new version are:
 
@@ -31,6 +36,6 @@ Equivalences from the old version into the new version are:
 |===
 
 === Linking to (rel: `tiling-scheme`) or embedding a TileMatrixSet definition, and identifying use of registered TileMatrixSet with `tileMatrixSetURI`
-A `tileMatrixSetURI` is now used for the tileset metadata to reference a TileMatrixSet registered on the official OGC NA TileMatrixSets registry.
-In addition, either a link to a TileMatrixSet (using a `rel`=tiling-scheme), or a embedded TileMatrixSet definition (for offline use cases) must be provided.
-This link can be either to an official OGC NA TileMatrixSet definition, or to the server's own local definition (e.g. at `/tileMatrixSets/{tileMatrixSetID}`).
+A `tileMatrixSetURI` is now used for the tileset metadata to reference a TileMatrixSet registered on an authoritative TileMatrixSets registry, such as the OGC NA's.
+In addition, either a link to a TileMatrixSet (using a `rel`=tiling-scheme), or an embedded TileMatrixSet definition (for offline use cases) must be provided.
+This link can be either to an authoritative registry TileMatrixSet definition (such as the OGC NA's), or to the server's own local definition (e.g. at `/tileMatrixSets/{tileMatrixSetID}`).

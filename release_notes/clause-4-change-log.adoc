@@ -22,8 +22,9 @@
 ** S=Substantive
 ** C=Critical
 
-See <<Clause_Critical>> for more information on critical changes and
-<<Clause_Substantive>> for more information on substantive changes.
+See <<Clause_Critical>> for more information on critical changes,
+<<Clause_Substantive>> for more information on substantive changes and
+<<Clause_Administrative>> for more information on administrative changes.
 
 * Section: Section number in the updated document
 * Description: Brief text describing the change
@@ -40,26 +41,26 @@ See <<Clause_Critical>> for more information on critical changes and
 === Change Table
 [[table_change_log]]
 .Change Log
-[cols="1a,1a,1a,2a,6a,2a",options="header"]
+[cols="9%,12%,17%,9%,35%,18%",width="100%",options="header"]
 |=======================================================================
 |Source      |Identifier     |Type                 |Section |Description |Purpose
 | GitHub | #11 | Administrative | Title | Title was renamed to include "tileset metadata" | Clarity
 | GitHub | #1 | Substantive | 4 | Align with the Abstract specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space OGC 19-014r3 | Consistency
 | GitHub | #13 | Substantive | 5 | OWS Common dependency removed | Interoperability
-| GitHub | #12 | Substantive | 5 | Introduction of CRSType that allows for using a full WKT description as an alternative to a CRS link for a CRS definition | Interoperability
+| GitHub | #12 | Substantive | 5 | Allowing embedded WKT2 CRS definition in addition to CRS by reference | Interoperability
 | GitHub | #34 | Critical | 6 | Identifying with `uri` a well-known TileMatrixSet in the official OGC registry | Usability
 | GitHub | #5 | Critical | 6 | Replacing `topLeftCorner` by `pointOfOrigin` | Usability
 | GitHub | #30 | Critical | 6 |  Renaming `supportedCRS` to `crs` | Consistency
 | GitHub | #4, #5 | Substantive | 6 | Adding `cellSize` and `cornerOfOrigin` | Usability
 | GitHub | #18 | Substantive | 6 | Making `boundingBox` optional | Usability
 | GitHub | #18 | Substantive | 6 | Adding optional `orderedAxes` to highlight CRS axis ordering | Usability
-| Editor | NA | Critical | 7 | JSON encoding rules to derive a JSON encoding from UML | Interoperability
+| Editor | NA | Critical | 7 | JSON encoding rules to derive a more natural JSON encoding from UML | Interoperability
 | GitHub | #7 | Substantive | 7 | Removing `type` object properties | Consistency
 | Editor | NA | Substantive | 7 | Removing the JSON-LD due lack of interest and concerns on real use cases. It can be reintroduced at later stage | Interoperability
 | GitHub | #10, #11, #30 | Critical | 8 | New data model for tileset metadata that includes the TileMatrixSetLimits and replaces TileMatrixSetLink | Completeness
 | GitHub | #34 | Critical | 8 | Linking to (rel: `tiling-scheme`) or embedding a TileMatrixSet definition, and identifying use of registered TileMatrixSet with `tileMatrixSetURI` | Completeness
 | GitHub | #10, #11 | Substantive | 9 | New XML and JSON encoding for tileset metadata. It could be useful for the new OGC API Tiles | Completeness
-| GitHub | #31 | Administrative  | Annex D, F | Axis order in the EuropeanETRS89_LAEAQuad TMS | Consistency
+| GitHub | #31 | Administrative  | Annex D, F | Correcting axis order confusion for the EuropeanETRS89_LAEAQuad TMS | Consistency
 | GitHub | #22 | Substantive | Annex E | New annex with variable width TMS definitions | Completeness
 | GitHub | #17 | Substantive | Annex G | Added example encodings of CDB variable width TMS | Completeness
 | GitHub | #26 | Substantive | Annex J | New annex with consideration for Extending TileMatrixSets for additional dimensions | Completeness

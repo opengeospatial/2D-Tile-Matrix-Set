@@ -127,7 +127,8 @@ Theoretically, there are cases where defining a bounding box could be problemati
 
 ==== CRSType
 
-In this version of the standard, the possibility define a CRS using a full description in addition to a reference to an external CRS catalogue is introduced. For backwards compatibility, CRSType can be defaulted as a URI but in here we extend it to a union of three possibilities.
+In this version of the standard, the possibility to define a CRS using a full description in addition to a reference to an external CRS catalogue is introduced. For backwards compatibility, CRSType still defaults to a URI but is extended to a union of three possibilities (URI, WKT2 CRS, or ISO 19115 MD_ReferenceSystem).
+
 
 [#parts-of-crs-type-union,reftext='{table-caption} {counter:table-num}']
 .Parts of CRSType data structure

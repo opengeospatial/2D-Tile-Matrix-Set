@@ -69,7 +69,7 @@
 						</element>
 						<element name="TileMatrixSetURI" type="anyURI" minOccurs="0">
 							<annotation>
-								<documentation>Reference to a tileMatrixSet. Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/)</documentation>
+								<documentation>Reference to a tileMatrixSet. Points to a definition of the TileMatrixSet on an official source for the Tile Matrix Set definitions such as the OGC NA definition server (http://www.opengis.net/def/tms/)</documentation>
 							</annotation>
 						</element>
 						<element ref="tmsc:CRS" minOccurs="0">
@@ -412,6 +412,11 @@
 			<element name="Coordinates" type="tmsc:PositionType">
 				<annotation>
 					<documentation>Location of the center point of the tile set.</documentation>
+				</annotation>
+			</element>
+			<element ref="tmsc:CRS" minOccurs="0">
+				<annotation>
+					<documentation>Coordinate Reference System (CRS)</documentation>
 				</annotation>
 			</element>
 			<element name="ScaleDenominator" type="double" minOccurs="0">

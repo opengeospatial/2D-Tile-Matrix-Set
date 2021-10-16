@@ -262,7 +262,7 @@ Zero or one (optional). Default value is "topLeft"
 | pointOfOrigin ^e^ |
 Position in CRS coordinates of the corner of origin for a tile matrix.
  |
-Ordered sequence of double values ^b^
+GM_Point data structure ^b^
  |
 One (mandatory)
 
@@ -296,7 +296,7 @@ One (mandatory)
 4+|
 ^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^    The CRS and order of these coordinates shall be as specified by the _crs_ of the parent TileMatrixSet. These are the precise coordinates of the corner of origin (e.g. the top-left corner) for the tile matrix, which is also the corner of the (0, 0) tile. See Figure 1.
+^b^    As specified in the ISO 19107. The CRS and order of these coordinates shall be as specified by the _crs_ of the parent TileMatrixSet. These are the precise coordinates of the corner of origin (e.g. the top-left corner) for the tile matrix, which is also the corner of the (0, 0) tile. See Figure 1.
 
 ^c^    These TileMatrix identifiers SHALL be unique (different) within the context of the parent TileMatrixSet. Many applications use a correlative numeric value as an identifier. Other alternatives are a rounded scale denominator or a rounded cell size. Repeating the TileMatrixSet identifier as part of the TileMatrix identifier should be avoided.
 

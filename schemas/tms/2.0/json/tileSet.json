@@ -104,7 +104,7 @@
 		},
 		"tileMatrixSetURI":
 		{
-			"description": "Reference to a Tile Matrix Set on the OGC NA definition server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on the definition server.",
+			"description": "Reference to a Tile Matrix Set on an offical source for Tile Matrix Sets such as the OGC NA definition server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on an open official source.",
 			"type": "string",
 			"format": "uri",
 			"examples": ["http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid"]

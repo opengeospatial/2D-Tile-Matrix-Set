@@ -26,7 +26,7 @@
 			<complexContent>
 				<extension base="tmsc:DescriptionType">
 					<sequence>
-						<element ref="tmsc:Identifier">
+						<element ref="tmsc:Identifier" minOccurs="0">
 							<annotation>
 								<documentation>Tile matrix set identifier</documentation>
 							</annotation>

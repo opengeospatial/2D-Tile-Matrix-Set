@@ -119,7 +119,7 @@ One for each keyword authority used
 
 | tileMatrixSet | Tile matrix set definition | TileMatrixSet data structure. See <<parts-of-tilematrixset-data-structure>> | Zero or one (optional)^d^
 
-| tileMatrixSetURI | Reference to a Tile Matrix Set on the OGC NA definition server | URI type^b^ | Zero or One (optional) Include if the tile matrix set for this tileset is one of the OGC NA TileMatrixSets
+| tileMatrixSetURI | Reference to a Tile Matrix Set on an official source for the Tile Matrix Set definitions | URI type^b^ | Zero or One (optional) Include if the tile matrix set for this tileset is available in an accessible official source
 
 | tileMatrixSetLimit | Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet | TileMatrixSetLimits data structure, see <<parts-of-tilematrixsetlimits-data-structure>> | Zero or more (optional) Should be include when the boundary of the data is a fragment of the boundary of the tileMatrixSet ^g^
 
@@ -138,7 +138,7 @@ One for each keyword authority used
 | link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>.^d,e^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
 
-^b^     Points to a definition of the TileMatrixSet in the OGC NA definition server (http://www.opengis.net/def/tms/) (including definitions from <<annex-common-tilematrixset-definitions-informative>> and <<annex-variable-tilematrixset-definitions-informative>>)
+^b^     Points to a definition of the TileMatrixSet in and official source for tile matrix sets such as the OGC NA definition server (http://www.opengis.net/def/tms/) (including definitions from <<annex-common-tilematrixset-definitions-informative>> and <<annex-variable-tilematrixset-definitions-informative>>)
 
 ^d^     At least one of the TileMatrixSet, or a link with `rel`=tiling-scheme SHALL be provided.
 
@@ -355,10 +355,13 @@ A center point is a place and scale that results in a tile that is representativ
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| coordinates | Location of the center point in the tile set | GM_Point data structure | one (mandatory)
-| tileMatrixId | Tile matrix identifier of the tile | CodeType, as adaptation of MD_Identifier class ISO 19115^a^ | One (mandatory)
-| scaleDenominator | Scale denominator of the tile | double^c^ | Zero or one (optional)^e^
-| cellSize | Cell size of the tile | double^c^ | Zero or one (optional)^e^
-^a^     SHALL be an identifier to a tileMatrix in relevant tileMatrixSet.
-^b^     If cellSize and scaleDenominator are provided they SHALL be related to TileMatrix with the indicated tileMatrixId
+| coordinates | Location of the center point in the tile set | GM_Point data structure^a^ | one (mandatory)
+| crs | Coordinate Reference System (CRS) | CRSType type, see <<parts-of-crs-type-union>> | Zero or one (optional)^b^
+| tileMatrix | Tile matrix identifier of the tile | CodeType, as adaptation of MD_Identifier class ISO 19115^c^ | One (mandatory)
+| scaleDenominator | Scale denominator of the tile | double^d^ | Zero or one (optional)
+| cellSize | Cell size of the tile | double^d^ | Zero or one (optional)
+^a^     As specified in the ISO 19107. The CRS and order of these coordinates shall be as specified by the _crs_. 
+^b^     Default value is the CRS of the Tileset and if no specified, the CRS of the TileMatrixSet.
+^c^     SHALL be an identifier to a tileMatrix in relevant tileMatrixSet.
+^d^     If cellSize and scaleDenominator are provided they SHALL be related to TileMatrix with the indicated tileMatrix
 |===

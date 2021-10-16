@@ -3,7 +3,7 @@
 	"title": "Tile Matrix Set Definition",
 	"description": "A definition of a tile matrix set following the Tile Matrix Set standard. For tileset metadata, this property is only required for offline use, as an alternative to tileMatrixSetURI and tileMatrixSetDefinition.",
 	"type": "object",
-	"required": ["id", "crs", "tileMatrices"],
+	"required": ["crs", "tileMatrices"],
 	"properties": {
 		"title": {
 			"description": "Title of this tile matrix set, normally used for display to a human",

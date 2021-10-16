@@ -142,7 +142,7 @@ One for each keyword authority used
 
 ^d^     At least one of the TileMatrixSet, or a link with `rel`=tiling-scheme SHALL be provided.
 
-^e^     Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles; 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file); 'tiling-scheme' for a definition of the TileMatrixSet.
+^e^     Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'item' for a URL template to get a tile; 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file); 'tiling-scheme' for a definition of the TileMatrixSet; 'geodata' for pointing to a single collection (if the tileset represents a single collection);
 
 ^f^     Intended for offline use. In an online use you are supposed to provide links to the tiles that already have the mediaType specified.
 
@@ -228,10 +228,12 @@ One for each keyword authority used
 
 ^g^     In the same CRS than the TileMatrixSet
 
-^h^     Possible link 'rel' values are: 'collection' for a URL pointing to the collection represented in a geospatial data
+^h^     Possible link 'rel' values are: 'geodata' for a URL pointing to the collection of geospatial data.
 
 ^i^     Only applicable to geospatial data of datatype='geometries'
 |===
+
+NOTE: the link 'rel' used here with semantics of pointing from the GeospatialData class to point to a collection representing it cannot be 'collection' because IANA semantics for 'collection' implies that the source is an item and the target a 'collection' of items. We use 'geodata' instead.
 
 A FeatureAttribute element contains attributes that can be found in at least one feature belonging to the layer the FeatureAttribute element belongs to. Its elements are defined in <<parts-of-feature-attribute-data-structure>>.
 

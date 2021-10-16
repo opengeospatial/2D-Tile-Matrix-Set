@@ -122,7 +122,7 @@
 						</element>
 						<element ref="tms:Link" minOccurs="0" maxOccurs="unbounded">
 							<annotation>
-								<documentation>Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles; 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file); 'tiling-scheme' for a definition of the TileMatrixSet</documentation>
+								<documentation>Links to related resources. Possible link 'rel' values are:'dataset' for a URL pointing to the dataset, 'item' for a URL template to get a tile; 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file); 'tiling-scheme' for a definition of the TileMatrixSet; 'geodata' for pointing to a single collection (if the tileset represents a single collection)</documentation>
 							</annotation>
 						</element>
 						<element name="DataType" type="tms:DataTypeType">
@@ -263,7 +263,7 @@
 					</element>
 					<element ref="tms:Link" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>Links related to this layer. Possible link 'rel' values are: 'collection' for a URL pointing to the collection</documentation>
+							<documentation>Links related to this layer. Possible link 'rel' values are: 'geodata' for a URL pointing to the collection of geospatial data.</documentation>
 						</annotation>
 					</element>
 					<element name="DataType" type="tms:DataTypeType">

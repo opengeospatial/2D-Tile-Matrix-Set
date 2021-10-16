@@ -111,7 +111,7 @@
 		},
 		"links":
 		{
-			"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'tiles' for a URL template to get the tiles; 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file); 'tiling-scheme' for a definition of the TileMatrixSet",
+			"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'item' for a URL template to get a tile; 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file); 'tiling-scheme' for a definition of the TileMatrixSet; 'geodata' for pointing to a single collection (if the tileset represents a single collection)",
 			"type": "array",
 			"items": {
 				"$ref": "link.json"
@@ -123,6 +123,7 @@
 		"geospatialData":
 		{
 			"type": "object",
+			"required": ["id", "dataType"],
 			"properties": {
 				"title": {
 					"description": "Title of this tile matrix set, normally used for display to a human",
@@ -225,7 +226,7 @@
 					"$ref": "#/definitions/propertiesSchema"
 				},
 				"links": {
-					"description": "Links related to this layer. Possible link 'rel' values are: 'collection' for a URL pointing to the collection",
+					"description": "Links related to this layer. Possible link 'rel' values are: 'geodata' for a URL pointing to the collection of geospatial data.",
 					"type": "array",
 					"minItems": 1,
 					"items":
@@ -238,6 +239,7 @@
 		"propertiesSchema": {
 			"description": "Attributes of the features or rangetypes of a coverage. Defined by a subset of the JSON Schema for the properties of a feature",
 			"type": "object",
+			"required": ["type", "properties"],
 			"properties":
 			{
 				"type": { "type": "string", "enum": ["object"]},
@@ -304,6 +306,7 @@
 		"tilePoint":
 		{
 			"type": "object",
+			"required": ["coordinates"],
 			"properties":
 			{
 				"coordinates":
@@ -318,8 +321,7 @@
 				"crs": {
 					"description": "Coordinate Reference System (CRS) of the coordinates",
 					"$ref": "crs.json"
-				},
-			
+				},			
 				"tileMatrix":
 				{
 					"description": "TileMatrix identifier associated with the scaleDenominator",
@@ -340,10 +342,7 @@
 		"style":
 		{
 			"type": "object",
-			"required":
-			[
-				"id"
-			],
+			"required": ["id"],
 			"properties":
 			{
 				"id":

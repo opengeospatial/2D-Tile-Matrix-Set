@@ -305,7 +305,7 @@ One for each keyword authority used
 | identifier | Identifier of a style | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
 
 | link | Links to style related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>. ^b^ | Zero or more (optional)
-4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply
+4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>> apply
   |
 ^b^     Possible link 'rel' values are: 'style' for a URL pointing to the style description, 'styleSpec' for a URL pointing to the specification or standard used to define the style.
 |===
@@ -361,7 +361,11 @@ A center point is a place and scale that results in a tile that is representativ
 | scaleDenominator | Scale denominator of the tile | double^d^ | Zero or one (optional)
 | cellSize | Cell size of the tile | double^d^ | Zero or one (optional)
 |===
+
 ^a^     As specified in the ISO 19107. The CRS and order of these coordinates shall be as specified by the _crs_.
+
 ^b^     Default value is the CRS of the Tileset and if no specified, the CRS of the TileMatrixSet.
+
 ^c^     SHALL be an identifier to a tileMatrix in relevant tileMatrixSet.
+
 ^d^     If cellSize and scaleDenominator are provided they SHALL be related to TileMatrix with the indicated tileMatrix

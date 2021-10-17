@@ -185,7 +185,7 @@ One for each keyword authority used
 
 | tileMatrix | Description of a scale level and its tile matrix | TileMatrix data structure. See <<parts-of-tilematrix-data-structure>> | One or more (mandatory) ^d^
 4+|
-^a^     The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
+^a^     The multilingual scoping rules in <<multilingualTextEncoding>> apply.
 
 ^b^     In the same CRS as the TileMatrixSet. boundingBox should be considered informative about the area covered by this TileMatrixSet. It SHOULD NOT be used to calculate the position of the tiles in the CRS space. Instead use the cornerOfOrigin and the pointOfOrigin of the corresponding TileMatrix. If data is not available for the entire tiled space, TileMatrixSetLimits will declare what tiles have data (see <<tilematrixsetlimits-requirements-class>>).
 
@@ -294,7 +294,7 @@ Positive integer type
  |
 One (mandatory)
 4+|
-^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
+^a^    The multilingual scoping rules in <<multilingualTextEncoding>> apply.
 
 ^b^    As specified in the ISO 19107. The CRS and order of these coordinates shall be as specified by the _crs_ of the parent TileMatrixSet. These are the precise coordinates of the corner of origin (e.g. the top-left corner) for the tile matrix, which is also the corner of the (0, 0) tile. See Figure 1.
 

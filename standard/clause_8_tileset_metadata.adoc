@@ -136,7 +136,7 @@ One for each keyword authority used
 | centerPoint | Location of a tile that nicely represents the tile set. Implementations may use this center value to set the default location or to present a representative tile in a user interface | TilePoint data structure, see <<parts-of-tilepoint-data-structure>>.| Zero or more (optional)
 
 | link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>.^d,e^ | Zero or more (optional)
-4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
+4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>> apply.
 
 ^b^     Points to a definition of the TileMatrixSet in and official source for tile matrix sets such as the OGC NA definition server (http://www.opengis.net/def/tms/) (including definitions from <<annex-common-tilematrixset-definitions-informative>> and <<annex-variable-tilematrixset-definitions-informative>>)
 
@@ -214,7 +214,7 @@ One for each keyword authority used
 
 | link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>. ^h^ | Zero or more (optional)
 
-4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>>>> apply
+4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>> apply
 
 ^b^     If the tileSetMetadata style property mentions a style applied to all geospatial data, this should be omitted
 
@@ -276,7 +276,7 @@ One for each keyword authority used
 
 | uomURI | URI pointing to a representation of the definition of the units of measure characterizing the values of a feature attribute | CharacterString | Zero or one (optional)
 4+|
-^a^     The multilingual scoping rules in <<multilingualTextEncoding>>>> apply.
+^a^     The multilingual scoping rules in <<multilingualTextEncoding>> apply.
 
 ^b^     If missing all values compatible with the other restrictions are accepted
 

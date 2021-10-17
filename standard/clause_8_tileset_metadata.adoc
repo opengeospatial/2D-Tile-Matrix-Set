@@ -362,10 +362,10 @@ A center point is a place and scale that results in a tile that is representativ
 | cellSize | Cell size of the tile | double^d^ | Zero or one (optional)
 |===
 
-^a^     As specified in the ISO 19107. The CRS and order of these coordinates shall be as specified by the _crs_.
+^a^ As specified in ISO 19107. The CRS and order of these coordinates shall be as specified by the _crs_.
 
-^b^     Default value is the CRS of the Tileset and if no specified, the CRS of the TileMatrixSet.
+^b^ If unspecified, the default value is the CRS of the Tileset, and if none specified, the CRS of the TileMatrixSet.
 
-^c^     SHALL be an identifier to a tileMatrix in relevant tileMatrixSet.
+^c^ This identifier SHALL be one of the TileMatrices of the TileSet's TileMatrixSet.
 
-^d^     If cellSize and scaleDenominator are provided they SHALL be related to TileMatrix with the indicated tileMatrix
+^d^ If _cellSize_ and _scaleDenominator_ are provided, they SHALL correspond to those of the TileMatrix specified by the _tileMatrix_ identifier.

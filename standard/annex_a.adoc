@@ -13,42 +13,42 @@ include::abstract_tests/ATS_class_tilematrixset.adoc[]
 
 include::abstract_tests/ATS_class_variablematrixwidth.adoc[]
 
-==== Conformance Class JSON TileMatrixSet
+=== Conformance Class JSON TileMatrixSet
 
 include::abstract_tests/ATS_class_json-tilematrixset.adoc[]
 
-==== Conformance Class JSON VariableMatrixWidth
+=== Conformance Class JSON VariableMatrixWidth
 
 include::abstract_tests/ATS_class_json-variablematrixwidth.adoc[]
 
-==== Conformance Class XML TileMatrixSet
+=== Conformance Class XML TileMatrixSet
 
 include::abstract_tests/ATS_class_xml-tilematrixset.adoc[]
 
-==== Conformance Class XML VariableMatrixWidth
+=== Conformance Class XML VariableMatrixWidth
 
 include::abstract_tests/ATS_class_xml-variablematrixwidth.adoc[]
 
-==== Conformance Class TileMatrixSetLimits
+=== Conformance Class TileMatrixSetLimits
 
 include::abstract_tests/ATS_class_tilematrixsetlimits.adoc[]
 
-==== Conformance Class TileSetMetadata
+=== Conformance Class TileSetMetadata
 
 include::abstract_tests/ATS_class_tilesetmetadata.adoc[]
 
-==== Conformance Class JSON TileMatrixSetLimits
+=== Conformance Class JSON TileMatrixSetLimits
 
 include::abstract_tests/ATS_class_json-tilematrixsetlimits.adoc[]
 
-==== Conformance Class JSON TileSetMetadata
+=== Conformance Class JSON TileSetMetadata
 
 include::abstract_tests/ATS_class_json-tilesetmetadata.adoc[]
 
-==== Conformance Class XML TileMatrixSetLimits
+=== Conformance Class XML TileMatrixSetLimits
 
 include::abstract_tests/ATS_class_xml-tilematrixsetlimits.adoc[]
 
-==== Conformance Class XML TileSetMetadata
+=== Conformance Class XML TileSetMetadata
 
 include::abstract_tests/ATS_class_xml-tilesetmetadata.adoc[]

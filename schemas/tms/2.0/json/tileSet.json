@@ -3,7 +3,7 @@
 	"title": "Tile Set Metadata",
 	"description": "A resource describing a tileset based on the OGC TileSet Metadata Standard. At least one of the 'TileMatrixSet',  or a link with 'rel' http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme",
 	"type": "object",
-	"required": ["dataType"],
+	"required": ["dataType", "crs"],
 	"properties":
 	{
 		"title": {

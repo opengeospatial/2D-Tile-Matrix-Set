@@ -112,7 +112,7 @@ One for each keyword authority used
 
 | dataType | Type of data represented in the tiles | DataTypeCode code list | one (mandatory)
 
-| crs | Coordinate Reference System (CRS)^j^ | CRSType type, see <<parts-of-crs-type-union>> | Zero or one (optional)
+| crs | Coordinate Reference System (CRS)^j^ | CRSType type, see <<parts-of-crs-type-union>> | one (mandatory)
 
 | epoch | Epoch of the Coordinate Reference System (CRS) | Number | Zero or one (optional)
 

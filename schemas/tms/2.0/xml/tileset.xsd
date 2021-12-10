@@ -72,7 +72,7 @@
 								<documentation>Reference to a tileMatrixSet. Points to a definition of the TileMatrixSet on an official source for the Tile Matrix Set definitions such as the OGC NA definition server (http://www.opengis.net/def/tms/)</documentation>
 							</annotation>
 						</element>
-						<element ref="tmsc:CRS" minOccurs="0">
+						<element ref="tmsc:CRS">
 							<annotation>
 								<documentation>Coordinate Reference System (CRS)</documentation>
 							</annotation>

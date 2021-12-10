@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
 	"title": "Tile Matrix Set Definition",
-	"description": "A definition of a tile matrix set following the Tile Matrix Set standard. For tileset metadata, this property is only required for offline use, as an alternative to tileMatrixSetURI and tileMatrixSetDefinition.",
+	"description": "A definition of a tile matrix set following the Tile Matrix Set standard. For tileset metadata, such a description (in `tileMatrixSet` property) is only required for offline use, as an alternative to a link with a `http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme` relation type.",
 	"type": "object",
 	"required": ["crs", "tileMatrices"],
 	"properties": {

@@ -5,7 +5,7 @@
 	<annotation>
 		<appinfo>TileMatrixSet 2021-02-02</appinfo>
 		<documentation>
-			This XML Schema Document encodes the TileMatrisSet data structures.
+			This XML Schema Document encodes the TileMatrixSet data structures.
 			TMS is an OGC Standard Copyright (c) 2021 Open Geospatial Consortium, Inc. All Rights Reserved.
 		    To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
 		</documentation>

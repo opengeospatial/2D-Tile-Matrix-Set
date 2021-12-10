@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
 	"title": "Tile Set Metadata",
-	"description": "A resource describing a tileset based on the OGC TileSet Metadata Standard. At least one of the 'TileMatrixSet',  or a link with 'rel' tiling-scheme",
+	"description": "A resource describing a tileset based on the OGC TileSet Metadata Standard. At least one of the 'TileMatrixSet',  or a link with 'rel' http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme",
 	"type": "object",
 	"required": ["dataType"],
 	"properties":
@@ -111,7 +111,7 @@
 		},
 		"links":
 		{
-			"description": "Links to related resources. Possible link 'rel' values are: 'dataset' for a URL pointing to the dataset, 'item' for a URL template to get a tile; 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file); 'tiling-scheme' for a definition of the TileMatrixSet; 'geodata' for pointing to a single collection (if the tileset represents a single collection)",
+			"description": "Links to related resources. Possible link 'rel' values are: 'http://www.opengis.net/def/rel/ogc/1.0/dataset' for a URL pointing to the dataset, 'item' for a URL template to get a tile; 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file); 'http://www.opengis.net/def/rel/ogc/1.0/tiling-scheme' for a definition of the TileMatrixSet; 'http://www.opengis.net/def/rel/ogc/1.0/geodata' for pointing to a single collection (if the tileset represents a single collection)",
 			"type": "array",
 			"items": {
 				"$ref": "link.json"

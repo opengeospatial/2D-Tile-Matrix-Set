@@ -199,7 +199,7 @@ One for each keyword authority used
 
 ^g^     TileMatrixSet identifies SHALL be unique (different) for each TileMatrixSet of a server.
 
-^h^     In WMTS 1.0 a URN was used as a reference to a well-known scale set. Later, OGC adopted URIs (instead of URNs) to do references. The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming Authority - Procedures document] specifies rules to transform form URN to URI. Implement a on-the-fly translations based on these rules is possible.
+^h^     In WMTS 1.0 a URN was used as a reference to a well-known scale set. Later, OGC adopted HTTP URLs as URIs for references. The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming Authority - Procedures document] specifies rules to transform form URN to URI. Implement a on-the-fly translations based on these rules is possible.
 
 ^i^     In some cases where high precision is required, the use of precise realizations of the same CRS is needed or the CRS is dynamic (varies slightly with time) and needs to be accompanied by an epoch. For this data structure, a TileMatrixSet is defined by the generic CRS name. The CRS realization and epoch used by a concrete tileset is specified in the tileset metadata. In most of the cases, tilesets sharing the same generic CRS overlap but for some high precise applications and for very fine grained scales, a client can perform run-time corrections to accurately overlay tilesets based on that information, or alternatively refuse to overlap tilesets not having the same CRS realization or epoch.
 

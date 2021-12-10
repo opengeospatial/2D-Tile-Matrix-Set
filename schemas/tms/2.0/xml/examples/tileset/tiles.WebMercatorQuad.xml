@@ -111,7 +111,7 @@
 	</tmsc:BoundingBox>
 	<Layer>
 		<tmsc:Identifier>AgricultureSrf</tmsc:Identifier>
-		<GeometryType>polygons</GeometryType>
+		<GeometryDimension>2</GeometryDimension>
 		<MinScaleDenominator>4265.4591676995678</MinScaleDenominator>
 		<MinCellSize>1.19432856696</MinCellSize>
 		<MaxTileMatrix>17</MaxTileMatrix>
@@ -148,7 +148,7 @@
 	</Layer>
 	<Layer>
 		<tmsc:Identifier>TransportationGroundCrv</tmsc:Identifier>
-		<GeometryType>lines</GeometryType>
+		<GeometryDimension>1</GeometryDimension>
 		<MinScaleDenominator>4265.4591676995678</MinScaleDenominator>
 		<MinCellSize>1.19432856696</MinCellSize>
 		<MaxTileMatrix>17</MaxTileMatrix>

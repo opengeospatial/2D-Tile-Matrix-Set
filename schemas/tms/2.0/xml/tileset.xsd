@@ -161,13 +161,14 @@
 					</element>
 					<element name="GeometryType" minOccurs="0" maxOccurs="unbounded">
 						<annotation>
-							<documentation>The geometry type of the features shown in this layer</documentation>
+							<documentation>The geometry dimension of the features shown in this layer (0: points, 1: curves, 2: surfaces, 3: solids)</documentation>
 						</annotation>
 						<simpleType>
-							<restriction base="string">
-								<enumeration value="points"/>
-								<enumeration value="lines"/>
-								<enumeration value="polygons"/>
+							<restriction base="integer">
+								<enumeration value="0"/>
+								<enumeration value="1"/>
+								<enumeration value="2"/>
+                        <enumeration value="3"/>
 							</restriction>
 						</simpleType>
 					</element>

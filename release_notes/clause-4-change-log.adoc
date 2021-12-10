@@ -48,7 +48,7 @@ See <<Clause_Critical>> for more information on critical changes,
 | GitHub | #1 | Substantive | 4 | Align with the Abstract specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space OGC 19-014r3 | Consistency
 | GitHub | #13 | Substantive | 5 | OWS Common dependency removed | Interoperability
 | GitHub | #12 | Substantive | 5 | Allowing embedded WKT2 CRS definition in addition to CRS by reference | Interoperability
-| GitHub | #34 | Critical | 6 | Identifying with `uri` a well-known TileMatrixSet in the official OGC registry | Usability
+| GitHub | #34 | Critical | 6 | Identifying with `uri` a well-known TileMatrixSet in an authoritative registry | Usability
 | GitHub | #5 | Critical | 6 | Replacing `topLeftCorner` by `pointOfOrigin` | Usability
 | GitHub | #30 | Critical | 6 |  Renaming `supportedCRS` to `crs` | Consistency
 | GitHub | #4, #5 | Substantive | 6 | Adding `cellSize` and `cornerOfOrigin` | Usability

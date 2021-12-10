@@ -430,8 +430,13 @@
 		},
 		"dataType":
 		{
-			"type": "string",
-			"enum": ["map", "vector", "coverage"]
+         "oneOf" : [
+            { "type": "string" },
+            {
+               "type": "string",
+               "enum": ["map", "vector", "coverage"]
+            }
+         ]
 		}
 	}
 }

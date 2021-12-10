@@ -156,12 +156,12 @@
 				<sequence>
 					<element ref="tmsc:Identifier">
 						<annotation>
-							<documentation>Unique identifier of the Layer. Implemetion of 'identifier'</documentation>
+							<documentation>Unique identifier of the Layer. Implementation of 'identifier'</documentation>
 						</annotation>
 					</element>
-					<element name="GeometryType" minOccurs="0" maxOccurs="unbounded">
+					<element name="GeometryDimension" minOccurs="0" maxOccurs="1">
 						<annotation>
-							<documentation>The geometry dimension of the features shown in this layer (0: points, 1: curves, 2: surfaces, 3: solids)</documentation>
+							<documentation>The geometry dimension of the features shown in this layer (0: points, 1: curves, 2: surfaces, 3: solids, unspecified: mixed or unknown.</documentation>
 						</annotation>
 						<simpleType>
 							<restriction base="integer">

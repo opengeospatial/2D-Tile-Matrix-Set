@@ -165,10 +165,8 @@
 						</annotation>
 						<simpleType>
 							<restriction base="integer">
-								<enumeration value="0"/>
-								<enumeration value="1"/>
-								<enumeration value="2"/>
-                        <enumeration value="3"/>
+								<minInclusive value="0"/>
+								<maxInclusive value="3"/>
 							</restriction>
 						</simpleType>
 					</element>

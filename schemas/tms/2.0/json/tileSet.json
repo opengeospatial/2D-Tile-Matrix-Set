@@ -148,7 +148,8 @@
 				"geometryDimension": {
 					"description": "The geometry dimension of the features shown in this layer (0: points, 1: curves, 2: surfaces, 3: solids), unspecified: mixed or unknown",
 					"type": "integer",
-					"enum": [0, 1, 2, 3]
+					"minimum": 0,
+					"maximum": 3
 				},
 				"featureType": {
 					"description": "Feature type identifier. Only applicable to layers of datatype 'geometries'",

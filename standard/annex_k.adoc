@@ -24,7 +24,7 @@ TileMatrixSet together in the same tile, for the full extent of those additional
 image::figures/nd-extend.png[]
 
 Storing, indexing and accessing the content for the additional dimensions can then be achieved through separate mechanisms, such as using formats
-supporting multiple dimensions (e.g. netCDF for coverages, glTF for 3D models, LAS for point clouds). Despite not being structured as tiles, extra dimensions could still be subset if the APIs such as
+supporting multiple dimensions (e.g. netCDF for coverages, glTF for 3D models, LAS for point clouds). Despite not being structured as tiles, extra dimensions could still be subset if the APIs supports a subsetting mechanism such as
 the `subset` (trimming or slicing) and `datetime` (temporal slicing) query parameters.
 Note that the data density or resolution of the extra dimensions can still be reduced for the lower resolution 2D tile matrices.
 

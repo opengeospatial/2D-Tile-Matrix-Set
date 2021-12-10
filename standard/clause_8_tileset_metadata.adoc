@@ -112,7 +112,7 @@ One for each keyword authority used
 
 | dataType | Type of data represented in the tiles | DataTypeCode code list | one (mandatory)
 
-| crs | Coordinate Reference System (CRS)^j^ | CRSType type, see <<parts-of-crs-type-union>> | Zero or one (optional)
+| crs | Coordinate Reference System (CRS)^j^ | CRSType type, see <<parts-of-crs-type-union>> | one (mandatory)
 
 | epoch | Epoch of the Coordinate Reference System (CRS) | Number | Zero or one (optional)
 
@@ -175,7 +175,7 @@ One for each keyword authority used
 
 | dataType | Type of data represented in a geospatial data | DataTypeCode code list | one (mandatory)
 
-| geometryType | The geometry type of the features shown in a geospatial data | GeometryTypeCode code list | Zero or more (optional)
+| geometryDimension | The geometry type of the features shown in a geospatial data | integer (0: points, 1: curves, 2: surfaces, 3: solids) | Zero or one (optional)
 
 | featureType | Feature type identifier | CharacterString | Zero or one (optional)^i^
 
@@ -335,16 +335,17 @@ The data type applicable to the tileset or the layer is defined in <<parts-of-da
 | coverage | Coverage rangeset. E.g. Arrays of values representing physical quantities that are function of the position in a regular grid.
 |===
 
-The geometry type applicable to the geometries of the layer is defined in <<parts-of-geometry-type-code-enum>>.
+The geometry dimensions applicable to the geometries of the layer are defined in the table below <<geometry-dimensions-table>>.
 
-[#parts-of-geometry-type-code-enum,reftext='{table-caption} {counter:table-num}']
-.Parts of GeometryTypeCode enumeration
+[#geometry-dimensions-table,reftext='{table-caption} {counter:table-num}']
+.Geometry dimensions
 [width = "100%",options="header"]
 |===
-| Names | Definition
-| points | 0D geometries
-| lines | 1D geometries
-| polygons | 2D geometries
+| Dimensions | Definition
+| 0 | 0D geometries (points, e.g. Point/MultiPoint)
+| 1 | 1D geometries (curves, e.g. LineString/MultiLineString)
+| 2 | 2D geometries (surfaces, e.g. Polygon/MultiPolygon)
+| 3 | 3D geometries (solids, e.g. polyhedrons)
 |===
 
 A center point is a place and scale that results in a tile that is representative of the tileset. A tile that contains some variety of objects, is visually appealing and easy to understand will be selected. The center point data structure applicable to the tile set is defined in <<parts-of-tilepoint-data-structure>>.

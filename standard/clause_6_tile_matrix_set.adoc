@@ -29,7 +29,7 @@ In raster tiles, a second regular grid that is coincident with the tile matrix b
 
 NOTE: Commonly _tile width_ and _tile height_ are equal but this constraint is not imposed by this Standard.
 
-Since services cannot predict the pizel size of the client visualization device, in this Standard, the scale denominator is defined with respect to a "standardized rendering pixel size" of 0.28 mm × 0.28 mm (millimeters). The definition is the same as used in Web Map Service WMS 1.3.0 [OGC 06-042] and in Symbology Encoding (SE) Implementation Specification 1.1.0 [OGC 05-077r4] that was later adopted by WMTS 1.0 [OGC 07-057r7]. Frequently, the true pixel size of the device is unknown and 0.28 mm was the actual pixel size of a common display from 2005. This value is still being used as reference, even if current display devices are built with much smaller pixel sizes.
+Since services cannot predict the pixel size of the client visualization device, in this Standard, the scale denominator is defined with respect to a "standardized rendering pixel size" of 0.28 mm × 0.28 mm (millimeters). The definition is the same as used in Web Map Service WMS 1.3.0 [OGC 06-042] and in Symbology Encoding (SE) Implementation Specification 1.1.0 [OGC 05-077r4] that was later adopted by WMTS 1.0 [OGC 07-057r7]. Frequently, the true pixel size of the device is unknown and 0.28 mm was the actual pixel size of a common display from 2005. This value is still being used as reference, even if current display devices are built with much smaller pixel sizes.
 
 NOTE: Since the 1980s, the Microsoft Windows operating system has set their default standard display pixels per inch (PPI) to 96. This value results in an approximated 0.264 mm per pixel. The similarity of this value with the actual 0.28 mm adopted in this Standard can create some confusion.
 
@@ -199,7 +199,7 @@ One for each keyword authority used
 
 ^g^     TileMatrixSet identifies SHALL be unique (different) for each TileMatrixSet of a server.
 
-^h^     In WMTS 1.0 a URN was used as a reference to a well-known scale set. Later, OGC adopted URIs (instead of URNs) to do references. The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming Authority - Procedures document] specifies rules to transform form URN to URI. Implement a on-the-fly translations based on these rules is possible.
+^h^     In WMTS 1.0 a URN was used as a reference to a well-known scale set. Later, OGC adopted HTTP URLs as URIs for references. The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming Authority - Procedures document] specifies rules to transform form URN to URI. Implement a on-the-fly translations based on these rules is possible.
 
 ^i^     In some cases where high precision is required, the use of precise realizations of the same CRS is needed or the CRS is dynamic (varies slightly with time) and needs to be accompanied by an epoch. For this data structure, a TileMatrixSet is defined by the generic CRS name. The CRS realization and epoch used by a concrete tileset is specified in the tileset metadata. In most of the cases, tilesets sharing the same generic CRS overlap but for some high precise applications and for very fine grained scales, a client can perform run-time corrections to accurately overlay tilesets based on that information, or alternatively refuse to overlap tilesets not having the same CRS realization or epoch.
 

@@ -48,7 +48,7 @@
       {
          "id" : "AgricultureSrf",
          "dataType" : "vector",
-         "geometryType" : "polygons",
+         "geometryDimension" : "2",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
          "minCellSize" : 1.19432856696,
@@ -89,7 +89,7 @@
       {
          "id" : "TransportationGroundCrv",
          "dataType" : "vector",
-         "geometryType" : "lines",
+         "geometryDimension" : "1",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
          "minCellSize" : 1.19432856696,

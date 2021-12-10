@@ -21,7 +21,7 @@
          "rel" : "tiling-scheme",
          "type" : "application/json",
          "href" : "/Daraa/ogcapi/tileMatrixSets/WebMercatorQuad"
-      },      
+      },
       {
          "rel"  : "item",
          "href" : "/Daraa/ogcapi/collections/AgricultureSrf/tiles/WebMercatorQuad/{tileMatrix}/{tileRow}/{tileCol}",
@@ -48,7 +48,7 @@
       {
          "id" : "AgricultureSrf",
          "dataType" : "vector",
-         "geometryType" : "polygons",
+         "geometryDimension" : "2",
          "maxTileMatrix" : "17",
          "minScaleDenominator" : 4265.4591676995678,
          "minCellSize" : 1.19432856696,

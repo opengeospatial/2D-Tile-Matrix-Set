@@ -147,7 +147,7 @@ One for each keyword authority used
 
 ^g^     If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all.
 
-^h^     If the bounding box does not specify a CRS, it is inherited from the CRS of the TileSet if available, otherwise from the TileMatrixSet.
+^h^     If the bounding box does not specify a CRS, it is inherited from the CRS of the TileSet.
 
 ^i^     If style property mentions a style applied to all layers, the style property in layer should not be used.
 
@@ -225,7 +225,7 @@ One for each keyword authority used
 
 ^f^     If maxCellSize, maxScaleDenominator and minTileMatrix are provided they SHALL be related to the same TileMatrix
 
-^g^     In the same CRS than the TileMatrixSet
+^g^     In the same CRS as the TileSet
 
 ^h^     Possible link 'rel' values are: 'geodata' for a URL pointing to the collection of geospatial data.
 
@@ -362,7 +362,7 @@ A center point is a place and scale that results in a tile that is representativ
 | cellSize | Cell size of the tile | double^d^ | Zero or one (optional)
 4+|^a^ As specified in ISO 19107. The CRS and order of these coordinates SHALL be as specified by the _crs_.
 
-^b^ If unspecified, the default value is the CRS of the Tileset, and if none specified, the CRS of the TileMatrixSet.
+^b^ If unspecified, the default value is the CRS of the Tileset.
 
 ^c^ This identifier SHALL be one of the TileMatrices of the TileSet's TileMatrixSet.
 

@@ -23,7 +23,7 @@
 |Approval Date:   XXXX-XX-XX
 |Publication Date:   XXXX-XX-XX
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/tms/2.0
-|Internal reference number of this OGC(R) document:    17-083r3
+|Internal reference number of this OGC(R) document:    17-083r4
 |Version: 2.0
 |Category: OGC(R) Implementation Standard
 |Editors:   Joan Masó and Jérôme St-Louis

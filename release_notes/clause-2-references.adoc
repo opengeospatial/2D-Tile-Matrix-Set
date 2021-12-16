@@ -3,4 +3,4 @@
 
 The following normative documents are new or updated references in the Standard to which these Release Notes apply.
 
-OGC: OGC 17-083r3  OGC Two Dimensional Tile Matrix Set and Tile Set Metadata (2021)
+OGC: OGC 17-083r4  OGC Two Dimensional Tile Matrix Set and Tile Set Metadata (2021)

@@ -2,7 +2,7 @@
 
 ===	Scope
 
-The OGC Two Dimensional Tile Matrix Set and Tile Set Metadata v.2.0 (OGC 17-083r3) is a revision to the OGC Two Dimensional Tile Matrix Set v.1.0 (OGC 17-083r2) that is currently published. The new document is designed to replace OGC 17-083r2 completely. The revision defines a data model for tile matrix sets and how to encode in XML and in JSON. This revision adds a new data model to describe tilesets and how to encode in XML and in JSON.
+The OGC Two Dimensional Tile Matrix Set and Tile Set Metadata v.2.0 (OGC 17-083r4) is a revision to the OGC Two Dimensional Tile Matrix Set v.1.0 (OGC 17-083r2) that is currently published. The new document is designed to replace OGC 17-083r2 completely. The revision defines a data model for tile matrix sets and how to encode in XML and in JSON. This revision adds a new data model to describe tilesets and how to encode in XML and in JSON.
 
 ===	Document contributor contact points
 

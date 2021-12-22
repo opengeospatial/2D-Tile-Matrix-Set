@@ -8,7 +8,7 @@
 		"title": {
 			"description": "Title of this tile matrix set, normally used for display to a human",
 			"type": "string",
-			"examples": ["Google Maps Compatible for the World"]
+			"examples": ["Web Mercator Quad for the World"]
 		},
 		"description": {
 			"description": "Brief narrative description of this tile matrix set, normally available for display to a human",
@@ -73,12 +73,12 @@
 				"title": {
 					"description": "Title of this tile matrix set, normally used for display to a human",
 					"type": "string",
-					"examples": ["Google Maps Compatible for the World zoom level 3"]
+					"examples": ["Web Mercator Quad for the World zoom level 3"]
 				},
 				"description": {
 					"description": "Brief narrative description of this tile matrix set, normally available for display to a human",
 					"type": "string",
-					"examples": ["Google Maps Compatible zoom level 3 that is equivalent to a scale of 1:69885283.00358972 and has 19567.87924100512 meters of pixel size in the equator"]
+					"examples": ["Web Mercator Quad zoom level 3 that is equivalent to a scale of 1:69885283.00358972 and has 19567.87924100512 meters of pixel size in the equator"]
 				},
 				"keywords": {
 					"description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this dataset",

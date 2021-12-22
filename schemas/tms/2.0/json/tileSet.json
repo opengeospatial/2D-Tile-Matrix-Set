@@ -138,7 +138,7 @@
 					"type": "string"
 				},
 				"id": {
-					"description": "Unique identifier of the Layer. Implemetion of 'identifier'",
+					"description": "Unique identifier of the Layer. Implementation of 'identifier'",
 					"type": "string"
 				},
 				"dataType": {

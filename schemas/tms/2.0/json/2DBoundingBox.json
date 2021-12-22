@@ -9,7 +9,7 @@
 		},
 		"upperRight" : {
 			"$ref": "2DPoint.json"
-		}
+		},
 		"crs" : {
 			"$ref": "crs.json"
 		},
@@ -20,6 +20,6 @@
 			"items": {
 				"type": "string"
 			}
-		},		
+		}
 	}
 }

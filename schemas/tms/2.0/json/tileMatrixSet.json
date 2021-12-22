@@ -29,7 +29,7 @@
 		"uri": {
 			"description": "Reference to an official source for this tileMatrixSet",
 			"type": "string",
-			"format": "uri",
+			"format": "uri"
 		},
 		"orderedAxes": {
 			"type": "array",

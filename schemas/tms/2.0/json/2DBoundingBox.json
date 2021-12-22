@@ -1,6 +1,6 @@
 {
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
-	"description": "Minimum bounding rectangle surrounding a 2D resource in the CRS indicated elsewere",
+	"description": "Minimum bounding rectangle surrounding a 2D resource in the CRS indicated elsewhere",
 	"type": "object",
 	"required": ["lowerLeft", "upperRight"],
 	"properties": {

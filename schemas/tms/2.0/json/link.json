@@ -7,7 +7,7 @@
         "href",
         "rel"
         ],
-    "properties": {    
+    "properties": {
         "href": {
             "type": "string",
             "examples": ["http://data.example.com/buildings/123"]
@@ -15,6 +15,9 @@
         "rel": {
             "type": "string",
             "examples": ["alternate"]
+            },
+        "templated": {
+            "type": "boolean"
             },
         "type": {
             "type": "string",

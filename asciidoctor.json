@@ -13,7 +13,7 @@
       "r" : [ "asciidoctor-diagram" ]
    },
    "1" : {
-      "OGC_doc_number" : "21-066",
+      "OGC_doc_number" : "21-066r1",
       "urn" : "http://www.opengis.net/doc/NOTES/tms-notes/2.0",
       "title" : "Release Notes for OGC Two Dimensional Tile Matrix Set and Tile Set Metadata v.2.0",
       "path" : "release_notes/rn.adoc",

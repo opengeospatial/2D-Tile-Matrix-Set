@@ -2,7 +2,7 @@
 [cols=">20h,<80d",width="100%"]
 |===
 |*Abstract Test {counter:ats-id}* |*/conf/json-tilesetmetadata/model*
-| Test Purpose | Validate is a TileSetMetadata encoded in JSON implements the class TileSetMetadata
+| Test Purpose | Validate that a TileSetMetadata encoded in JSON implements the class TileSetMetadata
 
 | Test method | Validate the requirements of the model
 

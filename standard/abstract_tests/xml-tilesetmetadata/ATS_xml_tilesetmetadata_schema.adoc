@@ -2,7 +2,7 @@
 [cols=">20h,<80d",width="100%"]
 |===
 |*Abstract Test {counter:ats-id}* |*/conf/xml-tilematrixsetmetadata/schema*
-| Test Purpose |Validate if a TileSetMetadata encoded in XML validates using the XML schema for a tile set metadata.
+| Test Purpose |Validate that a TileSetMetadata encoded in XML validates using the XML schema for a tile set metadata.
 |Requirement |<<req_xml_tilesetmetadata_schema>>
 | Test method | Validate the requirements of the model
 

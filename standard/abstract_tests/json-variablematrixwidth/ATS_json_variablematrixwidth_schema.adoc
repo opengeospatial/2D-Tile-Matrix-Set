@@ -2,7 +2,7 @@
 [cols=">20h,<80d",width="100%"]
 |===
 |*Abstract Test {counter:ats-id}* |*/conf/json-variablematrixwidth/schema*
-| Test Purpose | Validate if a VariableMatrixWidth encoded in JSON validates using the JSON schema for a variable matrix width.
+| Test Purpose | Validate that a VariableMatrixWidth encoded in JSON validates using the JSON schema for a variable matrix width.
 |Requirement |<<req_json_variablematrixwidth_schema>>
 | Test method | Validate the requirements of the schema
 

@@ -2,7 +2,7 @@
 [cols=">20h,<80d",width="100%"]
 |===
 |*Abstract Test {counter:ats-id}* |*/conf/xml-tilematrixset/model*
-| Test Purpose | Validate that aa TileMatrixSet encoded in XML implements the class TileMatrixSet
+| Test Purpose | Validate that a TileMatrixSet encoded in XML implements the class TileMatrixSet
 |Requirement |<<req_xml_tilematrixset_model>>
 | Test method | Validate the requirements of the model
 

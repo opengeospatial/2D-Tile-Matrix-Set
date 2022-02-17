@@ -43,12 +43,12 @@ image::figures/LanguageString.png[LanguageString UML model]
 
 The value parameter specifies the human-language string, and the lang parameter specifies the language (in IETF RFC 4646 syntax) of the string. If a lang parameter is not present, then no language has been specified for the string unless specified by another means.
 
-In case that multiple languages are necessary in a single document instance, the element that is of the LanguageString type should be a list with one entry for each _lang_ code.
+In the case that multiple languages are necessary in a single document instance, the element that is of the LanguageString type should be a list with one entry for each _lang_ code.
 
 NOTE: OGC APIs will use the language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. This does not preclude that in other environments the JSON encodings for language string can implement the LanguageString. In practice this means that a JSON schema for a LanguageString element should support both string and language string types.
 
 ==== Description, Title and Keywords
-A basic set of data description parameters that includes human-readable title, description, and keywords is widely used in this Standard and defined here as UML.
+A basic set of data description parameters that include a human-readable title, description, and keywords are widely used in this Standard and defined here as a UML.
 
 [#img_description-title-keyword-uml-model,reftext='{figure-caption} {counter:figure-num}']
 .Description Title Keywords UML model
@@ -111,7 +111,7 @@ image::figures/BoundingBox.png[BoundingBox UML model]
 normally is the algebraic maximum within this bounding box ^a^
 | Ordered sequence of double values ^b^
 | One (mandatory)
-| CRS | Reference or a definition of the CRS used by the lowerRight and upperRight coordinates  | CRStype | Zero or one (optional)
+| CRS | Reference or a definition of the CRS used by the lowerRight and upperRight coordinates  | CRSType | Zero or one (optional)
 Include unless referenced elsewhere
 | orderedAxis | Ordered list of names of the dimensions defined in the CRS | Ordered sequence of strings | Zero or one (optional) ^c^
 4+| ^a^  Values other than the minimum and maximum may be used as discussed below.

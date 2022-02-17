@@ -127,17 +127,14 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 One can define an arbitrary number of zoom levels and do not need to include all the ones defined here. Here, 18 zoom levels are illustrated.
 
 [#img_tile-matrix-id-1,reftext='{figure-caption} {counter:figure-num}']
-.Tile Matrix Id 1 (2x1 tiles) of the WorldCRS84Quad TileMatrixSet +
-(Source INSPIRE technical guidance)
-image::figures/11.png[Tile Matrix Id 1 (2x1 tiles) of the WorldCRS84Quad TileMatrixSet +
-(Source INSPIRE technical guidance)]
-
+.Tile Matrix Id 1 (2x1 tiles) of the WorldCRS84Quad TileMatrixSet (Source: INSPIRE technical guidance)
+image::figures/11.png[Tile Matrix Id 1 (2x1 tiles) of the WorldCRS84Quad TileMatrixSet (Source: INSPIRE technical guidance)]
 
 NOTE: The zoom level identifiers in this TileMatrixSet do not correspond to the same scale values in Annex E.3 of WMTS 1.0. In this TileMatrixSet, the TileMatrix with identifier “-1” has only one tile with 128 lines left blank. For that reason, many implementers do not want to offer this level (including the INSPIRE technical guidance) and prefer to start with a TileMatrix that represents the world with just 2 tiles (one for the negative longitudes and one for the positive longitudes).
 
 NOTE: The scale denominators for this TileMatrixSet and WorldMercatorWGS84Quad and WebMercatorQuad are the same but the identifiers are displaced by one. This might generate confusion.
 
-NOTE: for INSPIRE: The Technical Guidance for the implementation of INSPIRE View Services defines a TileMatrixSet called InspireCRS84Quad that is identical to this one. Note that the current version of the INSPIRE Technical Guidance cited in the Bibliography Annex could accidentally generate confusion because it is comparing a GoogleCRS84Quad (that is a well-known scale set name) with the InspireCRS84Quad (that is a TileMatrixSet definition that does not link to any WKSS).
+NOTE: For INSPIRE: The Technical Guidance for the implementation of INSPIRE View Services defines a TileMatrixSet called InspireCRS84Quad that is identical to this one. Note that the current version of the INSPIRE Technical Guidance cited in the Bibliography Annex could accidentally generate confusion because it is comparing a GoogleCRS84Quad (that is a well-known scale set name) with the InspireCRS84Quad (that is a TileMatrixSet definition that does not link to any WKSS).
 
 [[world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad]]
 ==== Variant 2: World EPSG:4326 Quad

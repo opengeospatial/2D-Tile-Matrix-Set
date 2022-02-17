@@ -2,7 +2,7 @@
 [width="90%",cols="2,6"]
 |===
 |*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/tilesetmetadata/identifier* {set:cellbgcolor:#FFFFFF}
-|A| A tiled resource or dataset SHALL declare support to a tile matrix set by one of the following two methods: a link to a tile matrix set definition (including the TileMatrixSet definition from <<annex-common-tilematrixset-definitions-informative>> and <<annex-example-encodings-for-variable-matrix-width-informative>>) as one of the links in the links list or by explicitly including a TileMatrixSet definition (as an object in the `tileMatrixSet` property). {set:cellbgcolor:#FFFFFF}
+|A| A tiled resource or dataset SHALL declare support to a tile matrix set by one of the following two methods: a link to a tile matrix set definition (e.g. one of the TileMatrixSet definitions from <<annex-common-tilematrixset-definitions-informative>> and <<annex-variable-tilematrixset-definitions-informative>>) as one of the links in the links list, or by explicitly including a TileMatrixSet definition (as an object in the `tileMatrixSet` property). {set:cellbgcolor:#FFFFFF}
 |B| In an OGC API or an OGC Web Service and if the TileMatrixSet used is registered with the OGC NA definition service, `tileMatrixSetURI` SHALL be populated with a full URI to the OGC NA Definitions Server {set:cellbgcolor:#FFFFFF}
 |===
 

@@ -2,7 +2,7 @@
 [cols=">20h,<80d",width="100%"]
 |===
 |*Abstract Test {counter:ats-id}* |*/conf/xml-tilematrixsetlimits/model*
-| Test Purpose | A TileMatrixSetLimits encoded in XML _shall_ implement the class TileMatrixSetLimits
+| Test Purpose | Validate that a TileMatrixSetLimits encoded in XML implements the class TileMatrixSetLimits.
 |Requirement |<<req_xml_tilematrixsetlimits2d_schema>>
 | Test method | Validate the requirements of the model
 

@@ -2,7 +2,7 @@
 [cols=">20h,<80d",width="100%"]
 |===
 |*Abstract Test {counter:ats-id}* |*/conf/xml-variablematrixwidth/schema*
-| Test Purpose | Validate if a TileSetMetadata encoded in XML validates using the XML schema for a tile matrix set link.
+| Test Purpose | Validate that a TileSetMetadata encoded in XML validates using the XML schema for a tile matrix set link.
 |Requirement |<<req_xml_variablematrixwidth_schema>>
 | Test method | Validate the requirements of the model
 

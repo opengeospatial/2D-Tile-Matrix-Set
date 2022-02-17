@@ -2,7 +2,7 @@
 [cols=">20h,<80d",width="100%"]
 |===
 |*Abstract Test {counter:ats-id}* |*/conf/json-tilematrixsetlimits/ietf*
-| Test Purpose | Validate if a TileSetMetadata encoded in JSON conforms to IETF RFC7159
+| Test Purpose | Validate that a TileSetMetadata encoded in JSON conforms to IETF RFC7159
 |Requirement |<<req_json_tilesetmetadata_ietf>>
 | Test method | Validate the requirements of the IETF
 

@@ -2,7 +2,7 @@
 [cols=">20h,<80d",width="100%"]
 |===
 |*Abstract Test {counter:ats-id}* |*/conf/tilematrixsetlimits/model*
-| Test Purpose | Validate if a tile matrix set limits follows the UML model and model description. Validate if each tileMatrix identifier is mentioned only once in the TileMatrixSetLimits
+| Test Purpose | Validate that a tile matrix set limits follows the UML model and model description. Validate that each tileMatrix identifier is mentioned only once in the TileMatrixSetLimits.
 |Requirement |<<req_tilematrixsetlimits_model>>
 | Test method | Validate the requirements of the model
 

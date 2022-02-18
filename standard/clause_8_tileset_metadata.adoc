@@ -134,7 +134,7 @@ One for each keyword authority used
 
 | centerPoint | Location of a tile that nicely represents the tile set. Implementations may use this center value to set the default location or to present a representative tile in a user interface | TilePoint data structure, see <<parts-of-tilepoint-data-structure>>.| Zero or more (optional)
 
-| link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>.^d,e^ | Zero or more (optional)
+| link | Links to related resources | WebLink data structure, see <<parts-of-web-link-data-structure>>.^d,e^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>> apply.
 
 ^b^     Points to a definition of the TileMatrixSet in and official source for tile matrix sets such as the OGC NA definition server (http://www.opengis.net/def/tms/) (including definitions from <<annex-common-tilematrixset-definitions-informative>> and <<annex-variable-tilematrixset-definitions-informative>>)
@@ -211,7 +211,7 @@ One for each keyword authority used
 
 | propertySchema | Properties represented by the features in a geospatial data. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage) | FeatureAttribute data structure. See <<parts-of-feature-attribute-data-structure>> | Zero or more (optional)
 
-| link | Links to related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>. ^h^ | Zero or more (optional)
+| link | Links to related resources | WebLink data structure, see <<parts-of-web-link-data-structure>>. ^h^ | Zero or more (optional)
 
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>> apply
 
@@ -303,7 +303,7 @@ One for each keyword authority used
 
 | identifier | Identifier of a style | CodeType, as adaptation of MD_Identifier class ISO 19115 | One (mandatory)
 
-| link | Links to style related resources | WebLink data structure, see <<parts-of-atom-link-data-structure>>. ^b^ | Zero or more (optional)
+| link | Links to style related resources | WebLink data structure, see <<parts-of-web-link-data-structure>>. ^b^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>> apply
   |
 ^b^     Possible link 'rel' values are: 'style' for a URL pointing to the style description, 'styleSpec' for a URL pointing to the specification or standard used to define the style.

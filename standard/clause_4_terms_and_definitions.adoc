@@ -109,7 +109,7 @@ NOTE: In this standard, a tile matrix is not used alone and it is part of a tile
 
 *tile matrix set*
 
-tile scheme composed by collection of tile matrices defined at different scales covering approximately the same area and have a common coordinate reference system.
+tile scheme composed by a collection of tile matrices defined at different scales covering approximately the same area and having a common coordinate reference system.
 
 *4.15*        
 

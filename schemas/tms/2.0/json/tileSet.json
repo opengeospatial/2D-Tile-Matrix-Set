@@ -30,15 +30,19 @@
 			"description": "Useful information to contact the authors or custodians for the Tile Set",
 			"type": "string"
 		},
+		"attribution": {
+			"description": "Short reference to recognize the author or provider",
+			"type": "string"
+		},
+		"license": {
+			"description": "License applicable to the tiles",
+			"type": "string"
+		},
 		"accessConstraints": {
 			"description": "Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set",
 			"type": "string",
 			"default": "unclassified",
 			"enum": ["unclassified", "restricted", "confidential", "secret", "topSecret"]
-		},
-		"license": {
-			"description": "License applicable to the tiles",
-			"type": "string"
 		},
 		"mediaTypes": {
 			"description": "Media types available for the tiles",
@@ -157,6 +161,14 @@
 				},
 				"pointOfContact": {
 					"description": "Useful information to contact the authors or custodians for the layer (e.g. e-mail address, a physical address,  phone numbers, etc)",
+					"type": "string"
+				},
+				"attribution": {
+					"description": "Short reference to recognize the author or provider",
+					"type": "string"
+				},
+				"license": {
+					"description": "License applicable to the tiles",
 					"type": "string"
 				},
 				"publisher": {

@@ -38,6 +38,16 @@
 								<documentation>Useful information to contact the authors or custodians for the Tile Set</documentation>
 							</annotation>
 						</element>
+						<element name="Attribution" type="string" minOccurs="0">
+							<annotation>
+								<documentation>Short reference to recognize the author or provider</documentation>
+							</annotation>
+						</element>
+						<element name="License" type="string" minOccurs="0">
+							<annotation>
+								<documentation>License applicable to the tiles</documentation>
+							</annotation>
+						</element>
 						<element name="AccessConstraints" minOccurs="0">
 							<annotation>
 								<documentation>Restrictions on the availability of the Tile Set that the user needs to be aware of before using or redistributing the Tile Set</documentation>
@@ -51,11 +61,6 @@
 									<enumeration value="topSecret"/>
 								</restriction>
 							</simpleType>
-						</element>
-						<element name="License" type="string" minOccurs="0">
-							<annotation>
-								<documentation>License applicable to the tiles</documentation>
-							</annotation>
 						</element>
 						<element name="MediaType" type="tmsc:MediaTypeType" minOccurs="0" maxOccurs="unbounded">
 							<annotation>
@@ -159,7 +164,7 @@
 							<documentation>Unique identifier of the Layer. Implementation of 'identifier'</documentation>
 						</annotation>
 					</element>
-					<element name="GeometryDimension" minOccurs="0" maxOccurs="1">
+					<element name="GeometryDimension" minOccurs="0">
 						<annotation>
 							<documentation>The geometry dimension of the features shown in this layer (0: points, 1: curves, 2: surfaces, 3: solids, unspecified: mixed or unknown.</documentation>
 						</annotation>
@@ -178,6 +183,16 @@
 					<element name="PointOfContact" type="string" minOccurs="0">
 						<annotation>
 							<documentation>Useful information to contact the authors or custodians for the layer. (e.g. e-mail address, a physical address,  phone numbers, etc)</documentation>
+						</annotation>
+					</element>
+					<element name="Attribution" type="string" minOccurs="0">
+						<annotation>
+							<documentation>Short reference to recognize the author or provider</documentation>
+						</annotation>
+					</element>
+					<element name="License" type="string" minOccurs="0">
+						<annotation>
+							<documentation>License applicable to the tiles</documentation>
 						</annotation>
 					</element>
 					<element name="Publisher" type="string" minOccurs="0">

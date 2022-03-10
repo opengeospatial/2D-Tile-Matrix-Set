@@ -104,9 +104,11 @@ One for each keyword authority used
 
 | pointOfContact | Useful information to contact the authors or custodians for the tile set  | CharacterString (e.g. e-mail address, a physical address,  phone numbers, etc) | Zero or one (optional)
 
-| accessConstraints | Restrictions on the availability of the tile set that the user needs to be aware of before using or redistributing the Tile Set | ClassificationCode code list, see <<parts-of-classification-code-enum>> | Zero or one (optional)
+| attribution | Short reference to recognize the author or provider | CharacterString^k^ | Zero or one (optional)
 
 | license | License applicable to the tiles | CharacterString | Zero or one (optional)
+
+| accessConstraints | Restrictions on the availability of the tile set that the user needs to be aware of before using or redistributing the Tile Set | ClassificationCode code list, see <<parts-of-classification-code-enum>> | Zero or one (optional)
 
 | mediaType | Media types available for the tiles | CharacterString restricted by RFC6838 section 4.2 | Zero or more (optional)^f^
 
@@ -152,6 +154,8 @@ One for each keyword authority used
 ^i^     If style property mentions a style applied to all layers, the style property in layer should not be used.
 
 ^j^     It should be compatible with the CRS of the TileMatrixSet. In case the axis order is different from the TileMatrixSet the order of the CRS defined here prevails. See <<TileMatrixSetCRSCompatibility>>
+
+^k^     The intention is to show it in a corner of the viewport. It can contain markup and include a small logo image and links. In this case, note that when used to populate an HTML element there is a risk if it contains malicious script or reveal your identity to 3rt party domains.
 |===
 
 A Layer can is a set of geographic objects (all of the same type) together in a way that can be presented to the user. A layer can also be a coverage. Its elements are defined with a data structure defined in <<parts-of-geospatial-data-data-structure>>.
@@ -180,6 +184,10 @@ One for each keyword authority used
 | featureType | Feature type identifier | CharacterString | Zero or one (optional)^i^
 
 | pointOfContact | Useful information to contact the authors or custodians for a geospatial data | CharacterString  (e.g. e-mail address, a physical address,  phone numbers, etc) | Zero or one (optional)
+
+| attribution | Short reference to recognize the author or provider | CharacterString^j^ | Zero or one (optional)
+
+| license | License applicable to the tiles | CharacterString | Zero or one (optional)
 
 | publisher | Organization or individual responsible for making a geospatial data available | CharacterString | Zero or one (optional)
 
@@ -230,6 +238,9 @@ One for each keyword authority used
 ^h^     Possible link 'rel' values are: 'geodata' for a URL pointing to the collection of geospatial data.
 
 ^i^     Only applicable to geospatial data of datatype='geometries'
+
+^j^     The intention is to show it in a corner of the viewport. It can contain markup and include a small logo image and links. In this case, note that when used to populate an HTML element there is a risk if it contains malicious script or reveal your identity to 3rt party domains.
+
 |===
 
 NOTE: the link 'rel' used here with semantics of pointing from the GeospatialData class to point to a collection representing it cannot be 'collection' because IANA semantics for 'collection' implies that the source is an item and the target a 'collection' of items. We use 'geodata' instead.

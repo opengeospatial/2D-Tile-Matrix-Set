@@ -104,7 +104,7 @@ In the context of a geospatial data _tile set_, a _tile_ contains data for such 
 NOTE: Tiles are useful to efficiently request, transfer, cache, display, store and process geospatial data for a specific resolution and area of interest, providing deterministic performance and scalability
 for arbitrarily large datasets.
 
-NOTE: Tiles can contain a variety of data types, such as grid-based pictorial representations (map tiles), coverage subsets (coverage tiles), or feature-based representations (vector tile).
+NOTE: Tiles can contain a variety of data types, such as grid-based pictorial representations (map tiles), coverage subsets (coverage tiles), or feature-based representations (vector tiles).
 
 *4.13*        
 

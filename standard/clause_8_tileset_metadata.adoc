@@ -18,14 +18,14 @@ image::figures/4.png[TileMatrix Limits]
 [[tileset-medatadata-overview]]
 ==== TileSet metadata
 
-Tiles are identified by tileMatrix id, tileRow number and tileCol number. These three elements only have meaning if they are associated to a tileMatrixSet description that contains the necessary information (in terms of scaleDenominator, cellSize, pointOfOrigin and cornerOfOrigin) to transform the indices into coordinates in a known CRS. The main purpose of the TileSetMetadata is to link the tileset with the tileMatrixSet description. In addition, the model contains elements describing the main characteristics of a tile set, the connection to the tileset with the original data collection and styles as well as a recommended center point to start the navigation.
+Tiles are identified by tileMatrix id, tileRow number and tileCol number. These three elements only have meaning if they are associated to a tileMatrixSet description that contains the necessary information (in terms of scaleDenominator, cellSize, pointOfOrigin and cornerOfOrigin) to transform the indices into coordinates in a known CRS. The main purpose of the TileSetMetadata is to link the tileset with the tileMatrixSet description. In addition, the model contains elements describing the main characteristics of a TileSet, the connection to the tileset with the original data collection and styles as well as a recommended center point to start the navigation.
 
 === Requirements classes
 
 [[tilematrixsetlimits-requirements-class]]
 ==== TileMatrixSetLimits requirements class
 
-Requirements class TileMatrixSetLimits establishes how to describe the limits for a tile set TileMatrixSet. It is expected that most TileMatrixSets will be defined only once and reused many times. In these circumstances, the data used to create the tile set may only exist for a partial region or for a subset of scales. The array of TileMatrixSetLimits data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits.
+Requirements class TileMatrixSetLimits establishes how to describe the limits for a TileSet in the TileMatrixSet. It is expected that most TileMatrixSets will be defined only once and reused many times. In these circumstances, the data used to create the TileSet may only exist for a partial region or for a subset of scales. The array of TileMatrixSetLimits data structures allows for the declaration of a limited coverage of a tile matrix set. The identifying URI for this class is http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits.
 
 include::requirements/requirements_tilematrixsetlimits.adoc[]
 
@@ -91,24 +91,24 @@ image::figures/TileSet.png[TileSetMetadata UML model]
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| title ^a^ | Title of a tile set, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| title ^a^ | Title of a TileSet, normally used for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| description ^a^ | Brief narrative description of a tile set, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
+| description ^a^ | Brief narrative description of a TileSet, normally available for display to a human | LanguageString data structure. See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional) Include when available and useful
 
 Include one for each language represented
-| keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a tile set | MD_Keywords class in ISO 19115 See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
+| keywords ^a^ | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a TileSet | MD_Keywords class in ISO 19115 See <<parts-of-descriptiontitlekeyword-elements>> | Zero or more (optional)
 
 One for each keyword authority used
-| version | Version of a tile Set. Changes if the data behind the tiles has been changed | CharacterString | Zero or one (optional)
+| version | Version of a TileSet. Changes if the data behind the tiles has been changed | CharacterString | Zero or one (optional)
 
-| pointOfContact | Useful information to contact the authors or custodians for the tile set  | CharacterString (e.g. e-mail address, a physical address,  phone numbers, etc) | Zero or one (optional)
+| pointOfContact | Useful information to contact the authors or custodians for the TileSet  | CharacterString (e.g. e-mail address, a physical address,  phone numbers, etc) | Zero or one (optional)
 
 | attribution | Short reference to recognize the author or provider | CharacterString^k^ | Zero or one (optional)
 
 | license | License applicable to the tiles | CharacterString | Zero or one (optional)
 
-| accessConstraints | Restrictions on the availability of the tile set that the user needs to be aware of before using or redistributing the Tile Set | ClassificationCode code list, see <<parts-of-classification-code-enum>> | Zero or one (optional)
+| accessConstraints | Restrictions on the availability of the TileSet that the user needs to be aware of before using or redistributing the TileSet | ClassificationCode code list, see <<parts-of-classification-code-enum>> | Zero or one (optional)
 
 | mediaType | Media types available for the tiles | CharacterString restricted by RFC6838 section 4.2 | Zero or more (optional)^f^
 
@@ -126,15 +126,15 @@ One for each keyword authority used
 
 | boundingBox | Minimum bounding rectangle surrounding the tileset | BoundingBox data structure, see <<parts-of-boundingbox-data-structure>>^h^ | Zero or one (optional)
 
-| created | Timestamp indicating when the Tile Set was first produced | DateTime | Zero or one (optional)
+| created | Timestamp indicating when the TileSet was first produced | DateTime | Zero or one (optional)
 
-| updated | Timestamp of the last Tile Set change/revision | DateTime | Zero or one (optional)
+| updated | Timestamp of the last TileSet change/revision | DateTime | Zero or one (optional)
 
-| layer | Layer elements represented in the tile set | GeospatialData data structure, see <<parts-of-geospatial-data-data-structure>> | Zero or more (optional)
+| layer | Layer elements represented in the TileSet | GeospatialData data structure, see <<parts-of-geospatial-data-data-structure>> | Zero or more (optional)
 
 | style | Style used to generate the tiles in the til eset | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^i^
 
-| centerPoint | Location of a tile that nicely represents the tile set. Implementations may use this center value to set the default location or to present a representative tile in a user interface | TilePoint data structure, see <<parts-of-tilepoint-data-structure>>.| Zero or more (optional)
+| centerPoint | Location of a tile that nicely represents the TileSet. Implementations may use this center value to set the default location or to present a representative tile in a user interface | TilePoint data structure, see <<parts-of-tilepoint-data-structure>>.| Zero or more (optional)
 
 | link | Links to related resources | WebLink data structure, see <<parts-of-web-link-data-structure>>.^d,e^ | Zero or more (optional)
 4+|^a^    The multilingual scoping rules in <<multilingualTextEncoding>> apply.
@@ -213,7 +213,7 @@ One for each keyword authority used
 
 | updated | Timestamp of the last geospatial data change/revision | DateTime | Zero or one (optional)
 
-| style | Style applied to a geospatial data to generate the tiles in the tile set | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^b^
+| style | Style applied to a geospatial data to generate the tiles in the TileSet | Style data structure, see <<parts-of-style-data-structure>> | Zero or one (optional)^b^
 
 | geoDataClass | URI identifying a class of data contained in a geospatial data (useful to determine compatibility with styles or processes) | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or more (optional)
 
@@ -320,7 +320,7 @@ One for each keyword authority used
 ^b^     Possible link 'rel' values are: 'style' for a URL pointing to the style description, 'styleSpec' for a URL pointing to the specification or standard used to define the style.
 |===
 
-The levels of classification applicable to the tile set is defined in <<parts-of-classification-code-enum>>.
+The levels of classification applicable to the TileSet is defined in <<parts-of-classification-code-enum>>.
 
 [#parts-of-classification-code-enum,reftext='{table-caption} {counter:table-num}']
 .Parts of ClassificationCode code list
@@ -359,14 +359,14 @@ The geometry dimensions applicable to the geometries of the layer are defined in
 | 3 | 3D geometries (solids, e.g. polyhedrons)
 |===
 
-A center point is a place and scale that results in a tile that is representative of the tileset. A tile that contains some variety of objects, is visually appealing and easy to understand will be selected. The center point data structure applicable to the tile set is defined in <<parts-of-tilepoint-data-structure>>.
+A center point is a place and scale that results in a tile that is representative of the tileset. A tile that contains some variety of objects, is visually appealing and easy to understand will be selected. The center point data structure applicable to the TileSet is defined in <<parts-of-tilepoint-data-structure>>.
 
 [#parts-of-tilepoint-data-structure,reftext='{table-caption} {counter:table-num}']
 .Parts of TilePoint data structure
 [width = "100%",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| coordinates | Location of the center point in the tile set | GM_Point data structure^a^ | one (mandatory)
+| coordinates | Location of the center point in the TileSet | GM_Point data structure^a^ | one (mandatory)
 | crs | Coordinate Reference System (CRS) | CRSType type, see <<parts-of-crs-type-union>> | Zero or one (optional)^b^
 | tileMatrix | Tile matrix identifier of the tile | CodeType, as adaptation of MD_Identifier class ISO 19115^c^ | One (mandatory)
 | scaleDenominator | Scale denominator of the tile | double^d^ | Zero or one (optional)

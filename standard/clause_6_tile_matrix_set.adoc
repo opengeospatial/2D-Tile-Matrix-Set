@@ -105,7 +105,7 @@ Note that a WKSS only defines a small subset of what is needed to completely def
 
 A WKSS is a commonly used combination of a CRS and a set of scales. A tile matrix set can declare support for a WKSS set by referencing that WKSS. A client application can confirm that tiles in one tile matrix set are compatible with tiles in another tile matrix set merely by verifying that they declare a common WKSS. The informative <<annex-well-known-scale-sets-informative>> provides several WKSSs (and others could be incorporated in the future).
 
-A tile matrix set conforms to a particular WKSS when it uses the same CRS and defines all scale denominators ranging from the largest scale denominator in the WKSS to some low scale denominator (in other words, it is not necessary to define all the lower scale denominators to conform to a WKSS).
+A tile matrix set conforms to a particular WKSS when it uses the same CRS and defines all scale denominators ranging from some large scale denominator in the WKSS to some low scale denominator (in other words, it is not necessary to define all the lower scale denominators to conform to a WKSS).
 
 [[tile-based-coordinates-in-a-tile-matrix-set]]
 ==== Tile based coordinates in a tile matrix set

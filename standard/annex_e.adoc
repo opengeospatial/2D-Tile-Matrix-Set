@@ -9,9 +9,10 @@ This is particularly well suited to define global grids in an Equirectangular Pl
 than tiles at the equator.
 
 Such TileMatrixSets may therefore attempt to approximate equal area tiles.
+This makes them especially suitable for defining a global grid, which may form the basis for defining a Discrete Global Grid System (DGGS) as defined in
+http://www.opengis.net/doc/AS/dggs/2.0[OGC Abstract Specification Topic 21 - Part 1], and _Axis-Aligned DGGS_ per _OGC Abstract Specification Topic 21 - Part 4_.
 Because the resulting tiles would likely only tend towards equal area but still be off by a significant margin,
-they cannot be considered Discrete Global Grid Systems (DGGS) per http://www.opengis.net/doc/AS/dggs/1.0[OGC Abstract Specification Topic 21 - Part 1] which specifies
-a maximum threshold of 1% difference. However, they may qualify as an _Axis-Aligned DGGS_ per _OGC Abstract Specification Topic 21 - Part 4_ introduced in version 2.
+such a DGGS could not however conform to the _Equal-Area Earth DGGS_ conformance class of _Topic 21 - Part 1_, which specifies a maximum threshold of 1% difference.
 
 [#img_ggg-cdb,reftext='{figure-caption} {counter:figure-num}']
 .A comparison of variable width tile matrix sets against the ideal tile shape (source: CDB X sprint)

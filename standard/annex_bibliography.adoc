@@ -15,54 +15,56 @@
 
 [6] DLR: Geospatial Web Services Lists of services and their current status. https://geoservice.dlr.de/web/services#tilecache
 
-[7] Graham D.: Project Report from the SOFWERX Geospatial Tech Sprint II (CDB X) OGC Discussion Paper (OGC 20-092)
+[7] Gibb R.: Topic 21 - Discrete Global Grid Systems - Part 1 Core Reference system and Operations and Equal Area Earth Reference System (OGC 20-040r3), http://www.opengis.net/doc/AS/dggs/2.0
 
-[8] Hobona G, Idol, T.: OGC Vector Tiles Pilot 2: Summary Engineering Report (OGC 19-088r2), http://docs.ogc.org/per/19-088r2.html
+[8] Graham D.: Project Report from the SOFWERX Geospatial Tech Sprint II (CDB X) OGC Discussion Paper (OGC 20-092)
 
-[9] Ingensand J. and Maia K.: OGC Vector Tiles Pilot: Tiled Feature Data Conceptual Model Engineering Report (OGC 18-076), https://docs.opengeospatial.org/per/18-076.html
+[9] Hobona G, Idol, T.: OGC Vector Tiles Pilot 2: Summary Engineering Report (OGC 19-088r2), http://docs.ogc.org/per/19-088r2.html
 
-[10] Jacovella-St-Louis, J.: OGC Testbed-14: CityGML and AR Engineering Report (OGC 18-025), https://docs.ogc.org/per/18-025.html#ClientServerCommunication
+[10] Ingensand J. and Maia K.: OGC Vector Tiles Pilot: Tiled Feature Data Conceptual Model Engineering Report (OGC 18-076), https://docs.opengeospatial.org/per/18-076.html
 
-[11] MapBox: MBTiles Specification. https://github.com/mapbox/mbtiles-spec
+[11] Jacovella-St-Louis, J.: OGC Testbed-14: CityGML and AR Engineering Report (OGC 18-025), https://docs.ogc.org/per/18-025.html#ClientServerCommunication
 
-[12] Masó J.: OGC Testbed-15: Maps and Tiles API Engineering Report (OGC 19-069), https://docs.ogc.org/per/19-069.html
+[12] MapBox: MBTiles Specification. https://github.com/mapbox/mbtiles-spec
 
-[13] Masó J., Pomakis K. and Julià N.: Web Map Tile Service (WMTS), version 1.0. (OGC 07-057r7) http://portal.opengeospatial.org/files/?artifact_id=35326
+[13] Masó J.: OGC Testbed-15: Maps and Tiles API Engineering Report (OGC 19-069), https://docs.ogc.org/per/19-069.html
 
-[14] Masó J.: Map Tile Service (WMTS) Simple Profile, version 1.0 (OGC 13-082r2), http://docs.opengeospatial.org/is/13-082r2/13-082r2.html
+[14] Masó J., Pomakis K. and Julià N.: Web Map Tile Service (WMTS), version 1.0. (OGC 07-057r7) http://portal.opengeospatial.org/files/?artifact_id=35326
 
-[15] Meek S.: OGC Vector Tiles Pilot: Summary Engineering Report (OGC 18-086r1), https://docs.opengeospatial.org/per/18-086r1.html
+[15] Masó J.: Map Tile Service (WMTS) Simple Profile, version 1.0 (OGC 13-082r2), http://docs.opengeospatial.org/is/13-082r2/13-082r2.html
 
-[16] Müller M.: Symology Encoding (SE) Implementation Specification, version 1.1.0 (OGC 05-077r4), http://portal.opengeospatial.org/files/?artifact_id=16700
+[16] Meek S.: OGC Vector Tiles Pilot: Summary Engineering Report (OGC 18-086r1), https://docs.opengeospatial.org/per/18-086r1.html
 
-[17] NGA: Implementation Practice Web Mercator Map Projection. NGA.SIG.0011_1.0_WEBMERC, https://nsgreg.nga.mil/doc/view?i=4105
+[17] Müller M.: Symology Encoding (SE) Implementation Specification, version 1.1.0 (OGC 05-077r4), http://portal.opengeospatial.org/files/?artifact_id=16700
 
-[18] NGA: Map Projections for Tiled Raster Graphics, NGA.SIG.0014_1.0_PROJRAS, V. 1.0, 24 April 2015 https://nsgreg.nga.mil/doc/view?i=1810
+[18] NGA: Implementation Practice Web Mercator Map Projection. NGA.SIG.0011_1.0_WEBMERC, https://nsgreg.nga.mil/doc/view?i=4105
 
-[19] NGA, Mercator-Addendum, Map Projections for Tiled Raster Graphics Addendum for the Mercator Projection, NGA.SIG.0014_1.0_PROJRAS, V. 0.2, 2016-05-17
+[19] NGA: Map Projections for Tiled Raster Graphics, NGA.SIG.0014_1.0_PROJRAS, V. 1.0, 24 April 2015 https://nsgreg.nga.mil/doc/view?i=1810
 
-[20] NGA, National System for Geospatial-Intelligence (NSG) Web Map Tile Service 1.0.0 Interoperability Standard NGA.STND.0063_1.1_WMTS, 2018-04-27
+[20] NGA, Mercator-Addendum, Map Projections for Tiled Raster Graphics Addendum for the Mercator Projection, NGA.SIG.0014_1.0_PROJRAS, V. 0.2, 2016-05-17
 
-[21] NGA: UPS-Amendment, Map Projections for Tiled Raster Graphics Amendment for Universal Polar Stereographic, NGA.SIG.0014_1.0_PROJRAS, V. 0.1, 2016-06-03.
+[21] NGA, National System for Geospatial-Intelligence (NSG) Web Map Tile Service 1.0.0 Interoperability Standard NGA.STND.0063_1.1_WMTS, 2018-04-27
 
-[22] NGA: The Universal Grids and the Transverse Mercator and Polar Stereographic Map Projections, NGA.SIG.0012_2.0.0_UTMUPS, V. 2.0.0, 25 March 2014. https://nsgreg.nga.mil/doc/view?i=4106
+[22] NGA: UPS-Amendment, Map Projections for Tiled Raster Graphics Amendment for Universal Polar Stereographic, NGA.SIG.0014_1.0_PROJRAS, V. 0.1, 2016-06-03.
 
-[23] Portele C.: Geography Markup Language (GML) Encoding Standard, version 3.2.1. (OGC 07-036) http://portal.opengeospatial.org/files/?artifact_id=20509
+[23] NGA: The Universal Grids and the Transverse Mercator and Polar Stereographic Map Projections, NGA.SIG.0012_2.0.0_UTMUPS, V. 2.0.0, 25 March 2014. https://nsgreg.nga.mil/doc/view?i=4106
 
-[24] Reed C.: OGC CDB Core Standard: Volume 1: Model and Physical Data Store Structure (OGC 15-113r5), https://docs.opengeospatial.org/is/15-113r5/15-113r5.html
+[24] Portele C.: Geography Markup Language (GML) Encoding Standard, version 3.2.1. (OGC 07-036) http://portal.opengeospatial.org/files/?artifact_id=20509
 
-[25] Rollins C. and Paniccia M.: National Geospatial-Intelligence Agency ESRI Users Conference, July 22, 2015. https://www.slideshare.net/NGA_GEOINT/ngas-position-on-webmercator
+[25] Reed C.: OGC CDB Core Standard: Volume 1: Model and Physical Data Store Structure (OGC 15-113r5), https://docs.opengeospatial.org/is/15-113r5/15-113r5.html
 
-[26] Snyder J. P.:  Map projections: A working manual. Professional Paper 1395. By:. https://pubs.usgs.gov/pp/1395/report.pdf
+[26] Rollins C. and Paniccia M.: National Geospatial-Intelligence Agency ESRI Users Conference, July 22, 2015. https://www.slideshare.net/NGA_GEOINT/ngas-position-on-webmercator
 
-[27] Stefanakis, E.: Web Mercator Projection & Raster Tile Maps. Two cornerstones of Online Map Service Providers. Annual Conference – 2017 – Ottawa, May 31- June 2, 2017. http://www2.unb.ca/~estef/talks/CCA2017_Technical_Session_Stefanakis.pdf
+[27] Snyder J. P.:  Map projections: A working manual. Professional Paper 1395. By:. https://pubs.usgs.gov/pp/1395/report.pdf
 
-[28] Taleisnik S.: OGC Vector Tiles Pilot 2: Tile Set Metadata Engineering Report (OGC 19-082r1), http://docs.opengeospatial.org/per/19-082r1.html#_metadatadate
+[28] Stefanakis, E.: Web Mercator Projection & Raster Tile Maps. Two cornerstones of Online Map Service Providers. Annual Conference – 2017 – Ottawa, May 31- June 2, 2017. http://www2.unb.ca/~estef/talks/CCA2017_Technical_Session_Stefanakis.pdf
 
-[29] Vretanos P.A.: OGC Vector Tiles Pilot: WFS 3.0 Vector Tiles Extension Engineering Report (OGC 18-078), https://docs.opengeospatial.org/per/18-078.html
+[29] Taleisnik S.: OGC Vector Tiles Pilot 2: Tile Set Metadata Engineering Report (OGC 19-082r1), http://docs.opengeospatial.org/per/19-082r1.html#_metadatadate
 
-[30] Vretanos P.A.: OGC Vector Tiles Pilot: WMTS Vector Tiles Extension Engineering Report (OGC 18-083), https://docs.opengeospatial.org/per/18-083.html
+[30] Vretanos P.A.: OGC Vector Tiles Pilot: WFS 3.0 Vector Tiles Extension Engineering Report (OGC 18-078), https://docs.opengeospatial.org/per/18-078.html
 
-[31] Yutzler J.: OGC GeoPackage Encoding Standard (OGC 12-128r17) https://docs.ogc.org/is/12-128r17/12-128r17.html
+[31] Vretanos P.A.: OGC Vector Tiles Pilot: WMTS Vector Tiles Extension Engineering Report (OGC 18-083), https://docs.opengeospatial.org/per/18-083.html
 
-[32] Yutzler J.: Vector Tiles Pilot Extension Engineering Report (OGC 18-101), http://docs.opengeospatial.org/per/18-101.html
+[32] Yutzler J.: OGC GeoPackage Encoding Standard (OGC 12-128r17) https://docs.ogc.org/is/12-128r17/12-128r17.html
+
+[33] Yutzler J.: Vector Tiles Pilot Extension Engineering Report (OGC 18-101), http://docs.opengeospatial.org/per/18-101.html

@@ -62,7 +62,7 @@ See <<Clause_Critical>> for more information on critical changes,
 | GitHub | #10, #11 | Substantive | 9 | New XML and JSON encoding for tileset metadata. It could be useful for the new OGC API Tiles | Completeness
 | GitHub | #31 | Administrative  | Annex D, F | Correcting axis order confusion for the EuropeanETRS89_LAEAQuad TMS | Consistency
 | GitHub | #22 | Substantive | Annex E | New annex with variable width TMS definitions | Completeness
-| GitHub | #17 | Substantive | Annex G | Added example encodings of CDB variable width TMS | Completeness
+| GitHub | #17 | Substantive | Annex G | Added example encodings of CDB 1 variable width TMS | Completeness
 | GitHub | #26 | Substantive | Annex J | New annex with consideration for Extending TileMatrixSets for additional dimensions | Completeness
 | GitHub | #6, #7 | Administrative | All | Correction of mistakes and inconsistencies in UML, XML and JSON encodings | Consistency
 |=======================================================================

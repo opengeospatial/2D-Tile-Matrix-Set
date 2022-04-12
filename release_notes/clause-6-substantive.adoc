@@ -40,8 +40,8 @@ An XML and JSON encoding for tileset metadata was included. The JSON encoding wi
 === New annex with variable width TileMatrixSets definitions
 This new Annex E includes the description of variable width TileMatrixSets that complements some already existing examples which have been moved to the Annex G. It also mentions a possible relationship to axis-aligned DGGS.
 
-=== Added example encodings of CDB variable width TileMatrixSet
-JSON and XML definitions of the CDB tile matrix set are added to Annex G as another example of Variable width tile matrix sets.
+=== Added example encodings of CDB 1 variable width TileMatrixSet
+JSON and XML definitions of the CDB 1 tile matrix set are added to Annex G as another example of Variable width tile matrix sets.
 
 === New annex with consideration for Extending TileMatrixSets for additional dimensions
 The informative Annex J proposes approaches for extending TileMatrixSets and TileSet metadata for indexing and accessing 3D, 4D and n-D (n > 2) data as tiles, regardless of whether a simple file-based data store, a database (e.g. a GeoPackage) or a web API is used. All of these approaches assume that the multi-dimensional content spans the two dimensions defined by 2D TileMatrixSets, which are usually either latitude and longitude for geographic CRSes, or X/Easting or Y/Northing for projected CRSes, as well as other extra dimensions.

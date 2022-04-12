@@ -98,17 +98,17 @@ the GNOSISGlobalGrid TileMatrix identifier 0.
 image::figures/ggg-0-3.png[]
 
 [[cdb-global-grid-tilematrixset-definition]]
-=== CDBGlobalGrid
+=== CDB 1 GlobalGrid
 
-*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/CDBGlobalGrid*
+*URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/CDB1GlobalGrid*
 
-[#definition-of-the-cdbglobalgrid-tilematrixset,reftext='{table-caption} {counter:table-num}']
+[#definition-of-the-cdb1globalgrid-tilematrixset,reftext='{table-caption} {counter:table-num}']
 
-This CDB Global Grid Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection (EPSG:4326 CRS) for the whole world, based
+This CDB 1 Global Grid Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection (EPSG:4326 CRS) for the whole world, based
 on the level of details and zones defined by the https://docs.ogc.org/is/15-113r6/15-113r6.html[OGC CDB 1.x] specifications,
 which can be encoded following this standard with the use of variable widths.
 
-.Definition of the CDBGlobalGrid TileMatrixSet
+.Definition of the CDB1GlobalGrid TileMatrixSet
 [width="100%",cols="13%,18%,17%,13%,10%,10%,19%"]
 |===
 7+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/4326, EPSG:4326 +
@@ -149,9 +149,9 @@ which can be encoded following this standard with the use of variable widths.
 | _Row 358..359:_ *12*
 |===
 
-For the tile matrices with negative identifiers of the CDB Global Grid, the tiles' geographic extents remain the same as those of tile matrix 0,
+For the tile matrices with negative identifiers of the CDB 1 Global Grid, the tiles' geographic extents remain the same as those of tile matrix 0,
 but the tile size in cells is reduced. The levels -1 to 1 are shown here.
-For the CDB Global Grid, the polar adjustment zones corresponding to coalescence factors are the same (at a given latitude) for all tile matrices of the set.
+For the CDB 1 Global Grid, the polar adjustment zones corresponding to coalescence factors are the same (at a given latitude) for all tile matrices of the set.
 
 [#img_cdb_zones,reftext='{figure-caption} {counter:figure-num}']
 .CDB Zones (from OGC CDB Volume 1)

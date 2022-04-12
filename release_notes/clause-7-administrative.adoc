@@ -34,4 +34,4 @@ In addition to the _EuropeanETRS89_LAEAQuad_ axis order confusion, a number of r
 - The `WorldCRS84QuadVariableWidth.json` example encoding of a TileMatrixSet with variable widths had the same identifier as the regular _WorldCRS84Quad_ tile matrix set.
 This example is not registered on the OGC NA registry, and has been removed as it was mostly a duplication of the _GNOSISGlobalGrid_ tile matrix set, with the only exception of
 adding an additional tile matrix. That extra lower zoom level tile matrix 0 made tile matrices correspond with the registered _WorldCRS84Quad_ tile matrix set definition, except for the variable width coalescence factors.
-The _CDBGlobalGrid_ was added as an additional example of a variable width tile matrix set instead.
+The _CDB1GlobalGrid_ was added as an additional example of a variable width tile matrix set instead.

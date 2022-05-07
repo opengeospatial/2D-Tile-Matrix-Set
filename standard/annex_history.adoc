@@ -1,12 +1,11 @@
-[appendix]
-:appendix-caption: Annex
+[appendix,obligation="normative"]
 == Revision History
 
-[width="100%",cols="20%,20%,20%,20%,20%",options="header",]
-|===============================================================================================================================================================
+[cols="20,20,20,20,20",options="header"]
+|===
 |Date |Release |Author |Paragraph modified |Description
 |2017-08-04 |v0.1 |Joan Maso |All |Initial draft
 |2018-06-07 |v0.7 |Joan Maso |All |Document ready for the RFC period. http://www.opengeospatial.org/standards/requests/169
 |2019-02-07 |v0.14 |Joan Maso |All |Comments accepted introduced. Document sent to the TC for final approval
 |2019-02-28 |v0.15 |Joan Maso |Section 4 and Annex D |Tiling scheme and tile set concept added. EPSG:32661 and 32662 replaced by EPSG:5041 and 5042 respectively
-|===============================================================================================================================================================
+|===

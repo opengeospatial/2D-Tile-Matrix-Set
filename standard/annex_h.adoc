@@ -1,7 +1,7 @@
-[appendix]
+
 [[example-encodings-for-tilesetmetadata-informative]]
-:appendix-caption: Annex
-== Example encodings for TileSetMetadata (Informative)
+[appendix,obligation="informative"]
+== Example encodings for TileSetMetadata
 
 This informative Annex provides an example of use for _TileSetMetadata_ and _TileMatrixSetLimits_ data structures.
 
@@ -15,9 +15,9 @@ The _TileMatrixSetLimits_ data structure is populated to indicate that the resou
 This example illustrates a TileSetMetadata instance encoded in JSON.
 
 [source,json]
-....
+----
 include::../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
-....
+----
 
 [[json-schema-used-to-validate-the-previous-json-document]]
 === TileSetMetadata JSON Schema
@@ -26,18 +26,18 @@ The TileSetMetadata data structure can be included the definition of an API that
 This JSON Schema can be used in an API definition in JSON format and to validate the previous JSON example.
 
 [source,json]
-....
+----
 include::../schemas/tms/2.0/json/tileSet.json[]
-....
+----
 
 === TileMatrixSetLimits JSON Schema
 
 This JSON Schema is referenced by the TileSetMetadata schema to define limits for each tile matrix.
 
 [source,json]
-....
+----
 include::../schemas/tms/2.0/json/tileMatrixLimits.json[]
-....
+----
 
 [[xml-document-instance-using-tilesetmetadata]]
 === Example XML encoding of TileSetMetadata
@@ -45,23 +45,23 @@ include::../schemas/tms/2.0/json/tileMatrixLimits.json[]
 This example illustrates a TileSetMetadata instance encoded in XML.
 
 [source,xml]
-....
+----
 include::../schemas/tms/2.0/xml/examples/tileset/tiles.WebMercatorQuad.xml[]
-....
+----
 
 [[xml-schema-used-to-validate-the-previous-xml-document]]
 === TileSetMetadata XML Schema
 This XML Schema can be used to validate the previous XML example.
 
 [source,xml]
-....
+----
 include::../schemas/tms/2.0/xml/tileset.xsd[]
-....
+----
 
 === TileMatrixSetLimits XML Schema
 This XML Schema is referenced by the TileSetMetadata schema to define limits for each tile matrix.
 
 [source,xml]
-....
+----
 include::../schemas/tms/2.0/xml/tilematrixlimits.xsd[]
-....
+----

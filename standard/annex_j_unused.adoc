@@ -1,7 +1,7 @@
-[appendix]
+
 [[annex-changes-previous-version]]
-:appendix-caption: Annex
-== Changes from previous version (Informative)
+[appendix,obligation="informative"]
+== Changes from previous version
 This annex enumerates the main changes done from the previous version of this Standard. These changes were carefully designed to provide conceptual descendent compatibility. Unfortunately, provided compatibility for XML documents is very restrictive and XML encoding of the previous version will not validate with the schemas of this version. There are many other small changes between both standards.
 
 NOTE: At the point of finalizing this document no OGC standard references version 1.0. New standards are encouraged to use this version.
@@ -11,9 +11,8 @@ In version 1.0 there was a concept of TileMatrixSetLink (and data structure) des
 
 Equivalences from the old version into the new version are:
 
-[#Equivalences-old-new-data-structures,reftext='{table-caption} {counter:table-num}']
 .Equivalences between the old and new data structures
-[width = "100%",options="header"]
+[options="header"]
 |===
 | Previous version (1.0) | Current version (2.0)
 | TileMatrixSetLink | TileSetMetadata

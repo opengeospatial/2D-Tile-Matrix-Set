@@ -3,11 +3,15 @@
 [appendix,obligation="informative"]
 == Example encodings for TileSetMetadata
 
-This informative Annex provides an example of use for _TileSetMetadata_ and _TileMatrixSetLimits_ data structures.
+This informative Annex provides an example of use for _TileSetMetadata_
+and _TileMatrixSetLimits_ data structures.
 
-The _TileSetMetadata_ data structure can be used for a resource to specify the tiling scheme supported by a particular tile set, as well as additional metadata.
+The _TileSetMetadata_ data structure can be used for a resource to
+specify the tiling scheme supported by a particular tile set, as well
+as additional metadata.
 
-The _TileMatrixSetLimits_ data structure is populated to indicate that the resource is only available in a fragment of the tiled space.
+The _TileMatrixSetLimits_ data structure is populated to indicate
+that the resource is only available in a fragment of the tiled space.
 
 [[json-document-instance-using-tilesetmetadata]]
 === Example JSON encoding of TileSetMetadata
@@ -22,8 +26,10 @@ include::../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
 [[json-schema-used-to-validate-the-previous-json-document]]
 === TileSetMetadata JSON Schema
 
-The TileSetMetadata data structure can be included the definition of an API that provides tiles.
-This JSON Schema can be used in an API definition in JSON format and to validate the previous JSON example.
+The TileSetMetadata data structure can be included the definition
+of an API that provides tiles.
+This JSON Schema can be used in an API definition in JSON format and
+to validate the previous JSON example.
 
 [source,json]
 ----
@@ -32,7 +38,8 @@ include::../schemas/tms/2.0/json/tileSet.json[]
 
 === TileMatrixSetLimits JSON Schema
 
-This JSON Schema is referenced by the TileSetMetadata schema to define limits for each tile matrix.
+This JSON Schema is referenced by the TileSetMetadata schema to define
+limits for each tile matrix.
 
 [source,json]
 ----
@@ -59,7 +66,8 @@ include::../schemas/tms/2.0/xml/tileset.xsd[]
 ----
 
 === TileMatrixSetLimits XML Schema
-This XML Schema is referenced by the TileSetMetadata schema to define limits for each tile matrix.
+This XML Schema is referenced by the TileSetMetadata schema to define
+limits for each tile matrix.
 
 [source,xml]
 ----

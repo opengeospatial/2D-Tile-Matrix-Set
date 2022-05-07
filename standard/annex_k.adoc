@@ -1,9 +1,7 @@
-[appendix]
-// Temporarily keeping this anchor for older links to this annex...
-[[annex-extending-additional-dimensinos]]
+
 [[annex-extending-additional-dimensions]]
-:appendix-caption: Annex
-== Extending TileMatrixSets for additional dimensions (Informative)
+[appendix,obligation="informative"]
+== Extending TileMatrixSets for additional dimensions
 
 This informative annex proposes approaches for extending TileMatrixSets and TileSet metadata for indexing and accessing 3D, 4D and n-D (n > 2) data as tiles,
 regardless of whether a simple file-based data store, a database (e.g. a GeoPackage) or a web API is used.
@@ -19,7 +17,6 @@ additional dimensions, as specified in <<TileMatrixSetCRSCompatibility>>.
 One way to extend the use of TileMatrixSet to support additional dimensions is to simply regroup all content falling within a 2D tile boundary of the
 TileMatrixSet together in the same tile, for the full extent of those additional dimensions. In other words, the additional dimensions are not tiled.
 
-[#img_nd_extend,reftext='{figure-caption} {counter:figure-num}']
 .Extending TileMatrixSet vertically with no division
 image::figures/nd-extend.png[]
 
@@ -35,7 +32,6 @@ and it is also used in OGC CDB 1.x (see definition of the <<cdb-global-grid-tile
 
 Another approach is to also "tile" (divide) the extra dimension(s), but tile them in the same number of pieces for all n-D tile matrices.
 
-[#img_nd_divide,reftext='{figure-caption} {counter:figure-num}']
 .Extending TileMatrixSet vertically with the same tilings for all tile matrices (the illustration shows 2 "vertical" tile divisions for the extra "vertical" dimension for all tile matrices)
 image::figures/nd-divide.png[]
 
@@ -49,7 +45,6 @@ Finally, it might be beneficial to increase the number of tiles (divisions) for 
 Often, a 2D TileMatrixSet is built as a quad-tree, and a similar approach can be used with additional dimensions where it becomes an octree,
 or _orthree_ for higher dimensions (orthant being the generalization of quadrants and octants), sometimes also called a _hyperoctree_.
 
-[#img_nd_octree,reftext='{figure-caption} {counter:figure-num}']
 .Extending TileMatrixSet vertically as an octree (The lowest resolution has 2 "vertical" tile divisions while the highest resolution has 8 "vertical" tile divisions)
 image::figures/nd-octree.png[]
 
@@ -59,9 +54,8 @@ An `extraDimensions` property can be added consisting of a list of identified (w
 dimensions are tiled. This information can be added to either a _TileMatrixSet_'s _TileMatrix_ or to a _TileSet_'s _TileMatrixSetLimit_.
 Including this property in the _TileSet_'s _TileMatrixSetLimits_ allows for the re-use of common 2D TileMatrixSets.
 
-[#nd-extensions-fields,reftext='{table-caption} {counter:table-num}']
 .Properties for a ExtraDimension data structure
-[width="100%",cols="21%,47%,17%,15%",options="header"]
+[cols="21,47,17,15",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 | identifier | Dimension identifier ^c^ | ows:CodeType | One (mandatory)

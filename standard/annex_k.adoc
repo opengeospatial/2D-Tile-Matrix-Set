@@ -161,15 +161,15 @@ slices or tiles).
 This _extraDimensions_ property supports any of the three approaches
 proposed above:
 
-- The first approach (no explicit tiling of extra dimensions) does
+* The first approach (no explicit tiling of extra dimensions) does
 not strictly require this _extraDimensions_ property,
 but may benefit from the ability to explicitly list the available
 dimensions and their extent, and to also specify a different _resolution_
 at each tile matrix.
-- The second approach (same division for all tile matrices) is handled
+* The second approach (same division for all tile matrices) is handled
 by specifying the same _divisions_ value for all tile matrices.
 Note that the _resolution_ may still differ.
-- For the third approach (octrees and orthtrees), both the _divisions_
+* For the third approach (octrees and orthtrees), both the _divisions_
 and _resolution_ properties would differ for each tile matrix.
 
 === Data contained in tiles

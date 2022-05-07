@@ -3,20 +3,26 @@
 [appendix,obligation="informative"]
 == Example encodings for Variable Matrix Width TileMatrixSets
 
-This informative Annex provides examples of encodings for tile matrix sets using the Variable Matrix Width requirements class.
+This informative Annex provides examples of encodings for tile matrix
+sets using the Variable Matrix Width requirements class.
 
 === GNOSIS Global Grid
 
-These are the JSON and XML definitions of the GNOSISGlobalGrid tile matrix set (see <<gnosis-global-grid-tilematrixset-definition>>)
-that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices
-for more detailed scales is possible if they follow the same pattern.
+These are the JSON and XML definitions of the GNOSISGlobalGrid tile
+matrix set (see <<gnosis-global-grid-tilematrixset-definition>>)
+that can be reproduced by other standards needing to define a tile
+matrix set. Not all TileMatrix elements need to be included and including
+other TileMatrices for more detailed scales is possible if they follow
+the same pattern.
 
-One can define an arbitrary number of zoom levels. Here, 5 zoom levels are illustrated.
+One can define an arbitrary number of zoom levels. Here, 5 zoom levels
+are illustrated.
 
 [[json-gnosisglobalgrid]]
 ==== GNOSIS Global Grid (JSON encoding)
 
-The complete JSON example can be found in the supplemental material described in <<annex-schema-documents-normative>>
+The complete JSON example can be found in the supplemental material
+described in <<annex-schema-documents-normative>>
 
 [source,json]
 ----
@@ -37,11 +43,15 @@ include::../schemas/tms/2.0/xml/examples/tilematrixset/GNOSISGlobalGrid.xml[line
 
 === CDB 1 Global Grid
 
-These are the JSON and XML definitions of the CDB1GlobalGrid tile matrix set (see <<cdb-global-grid-tilematrixset-definition>>)
-that can be reproduced by other standards needing to define a tile matrix set. Not all TileMatrix elements need to be included and including other TileMatrices
-for more detailed scales is possible if they follow the same pattern.
+These are the JSON and XML definitions of the CDB1GlobalGrid tile
+matrix set (see <<cdb-global-grid-tilematrixset-definition>>)
+that can be reproduced by other standards needing to define a tile
+matrix set. Not all TileMatrix elements need to be included and including
+other TileMatrice for more detailed scales is possible if they follow
+the same pattern.
 
-One can define an arbitrary number of zoom levels. Here, 3 zoom levels are illustrated.
+One can define an arbitrary number of zoom levels. Here, 3 zoom levels
+are illustrated.
 
 
 [[json-cdb1globalgrid]]

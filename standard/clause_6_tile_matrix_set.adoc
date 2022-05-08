@@ -347,8 +347,9 @@ image::TileMatrixSet.png[TileMatrixSet UML model]
 | identifier | Tile matrix set identifier{blank}footnote:g6[TileMatrixSet identifies
 SHALL be unique (different) for each TileMatrixSet of a server.] | CodeType, as
 adaptation of MD_Identifier class <<iso19115>> | Zero or One (optional)
-| title{blank}footnote:a6[The multilingual scoping rules in <<multilingualTextEncoding>> apply.] | Title of a tile matrix set, normally used for
-display to a human | LanguageString data structure. See <<table1>> | Zero or more
+| title{blank}footnote:a6[The multilingual scoping rules in <<multilingualTextEncoding>> apply.]
+| Title of a tile matrix set, normally used for display to a human
+| LanguageString data structure. See <<table1>> | Zero or more
 (optional) Include when available and useful
 
 Include one for each language represented{blank}footnote:f6[If no Title is specified,

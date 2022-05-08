@@ -26,61 +26,67 @@
 :toc-tables: false
 :toc-requirements: false
 
-include::clause_0_front_material.adoc[]
 
-include::clause_1_scope.adoc[]
+include::sections/00-front_material.adoc[]
 
-include::clause_2_conformance.adoc[]
+include::sections/01-scope.adoc[]
 
-include::clause_3_references.adoc[]
+include::sections/02-conformance.adoc[]
 
-include::clause_4_terms_and_definitions.adoc[]
+include::sections/03-reference.adoc[]
 
-include::clause_5_conventions.adoc[]
+include::sections/04-terms_defs.adoc[]
 
-include::clause_6_tile_matrix_set.adoc[]
+include::sections/05-conventions.adoc[]
 
-include::clause_7_tilematrixset_encodings.adoc[]
+include::sections/06-tile_matrix_set.adoc[]
 
-include::clause_8_tileset_metadata.adoc[]
+include::sections/07-tilematrixset_encodings.adoc[]
 
-include::clause_9_tileset_metadata_encodings.adoc[]
+include::sections/08-tileset_metadata.adoc[]
 
-// include::clause_10_json-ld_encoding.adoc[]
+include::sections/09-tileset_metadata_encodings.adoc[]
 
-<<<
+// include::sections/10-json-ld_encoding.adoc[]
+
+
 ////
 add or remove annexes after "A" as necessary
 ////
-include::annex_a.adoc[]
 
-include::annex_b.adoc[]
+include::sections/aa-annex_a.adoc[]
 
-include::annex_c.adoc[]
+include::sections/ab-annex_b.adoc[]
 
-include::annex_d.adoc[]
+include::sections/ac-annex_c.adoc[]
 
-include::annex_e.adoc[]
+include::sections/ad-annex_d.adoc[]
 
-include::annex_f.adoc[]
+include::sections/ae-annex_e.adoc[]
 
-// include::annex_jsonld_unused.adoc[]
+include::sections/af-annex_f.adoc[]
 
-include::annex_g.adoc[]
+// include::sections/af-jsonld_unused.adoc[]
 
-include::annex_h.adoc[]
+include::sections/ag-annex_g.adoc[]
 
-include::annex_i.adoc[]
+include::sections/ah-annex_h.adoc[]
 
-// include::annex_j.adoc[]
+include::sections/ai-annex_i.adoc[]
 
-include::annex_k.adoc[]
+// include::sections/aj-annex_j_unused.adoc[]
+
+include::sections/ak-annex_k.adoc[]
+
 
 ////
 Revision History should be the last annex before the Bibliography
 Bibliography should be the last annex
 ////
-include::annex_history.adoc[]
 
-<<<
-include::annex_bibliography.adoc[]
+include::sections/ax-history.adoc[]
+
+include::sections/az-bibliography.adoc[]
+
+
+

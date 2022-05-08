@@ -1,6 +1,8 @@
+
 [[req_json_variablematrixwidth_ietf]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/json-variablematrixwidth/ietf* {set:cellbgcolor:#FFFFFF}
-2+|A VariableMatrixWidth encoded in JSON _shall_ conform to IETF RFC7159
-|===
+[requirement]
+====
+[%metadata]
+label:: /req/json-variablematrixwidth/ietf
+description:: A VariableMatrixWidth encoded in JSON _shall_ conform to <<rfc7159>>
+====

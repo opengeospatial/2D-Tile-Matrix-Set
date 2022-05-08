@@ -1,10 +1,20 @@
-[[ats_json_tilematrixset_model]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/json-tilematrixset/model*
-| Test Purpose | Validate that a TileMatrixSet encoded in JSON implements the class TileMatrixSet
-|Requirement |<<req_json_tilematrixset_model>>
-| Test method | Validate the requirements of the model
 
-Test passes if TileMatrixSet instances follow the data model specified in the requirement and associated tables and its dependencies.
-|===
+[[ats_json_tilematrixset_model]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/json-tilematrixset/model
+
+subject:: <<req_json_tilematrixset_model>>
+
+test-purpose:: Validate that a TileMatrixSet encoded in JSON implements the class
+TileMatrixSet
+
+[.component,class=test-method]
+--
+Validate the requirements of the model
+
+Test passes if TileMatrixSet instances follow the data model specified in the
+requirement and associated tables and its dependencies.
+--
+====

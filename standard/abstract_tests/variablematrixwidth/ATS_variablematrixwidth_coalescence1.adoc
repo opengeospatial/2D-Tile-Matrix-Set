@@ -1,10 +1,20 @@
-[[ats_variablematrixwidth_coalescence1]]
-[cols=">20h,<80d",width="100%"]
-|===
-| *Abstract Test {counter:ats-id}* | */conf/variablematrixwidth/coalescence1*
-| Test Purpose | Validate that all coalescence factors specified in variable width tile rows are greater than 1.
-| Requirement | <<req_variablematrixwidth_coalescence1>>
-| Test method | Validate the requirements of the model
 
-Test passes if all VariableMatrixWidth elements in the instance have a coalescence factor greater than 1.
-|===
+[[ats_variablematrixwidth_coalescence1]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/variablematrixwidth/coalescence1
+
+subject:: <<req_variablematrixwidth_coalescence1>>
+
+test-purpose:: Validate that all coalescence factors specified in variable width tile 
+rows are greater than 1.
+
+[.component,class=test-method]
+--
+Validate the requirements of the model
+
+Test passes if all VariableMatrixWidth elements in the instance have a coalescence 
+factor greater than 1.
+--
+====

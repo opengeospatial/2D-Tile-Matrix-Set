@@ -1,7 +1,11 @@
+
 [[req_variablematrixwidth_model]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/variablematrixwidth/model* {set:cellbgcolor:#FFFFFF}
-2+|When a tiled resource or dataset has variable width tiles, the resource __or dataset shall__ define the variable matrix width in a tile matrix set using a variablematrixwidth data structure. This will result in the following UML model shown in <<img_variablematrixwidth-uml-model>> and model description in <<parts-of-variablematrixwidth-data-structure>>.
- {set:cellbgcolor:#FFFFFF}
-|===
+[requirement]
+====
+[%metadata]
+label:: /req/variablematrixwidth/model
+description:: When a tiled resource or dataset has variable width tiles, the resource
+_or dataset shall_ define the variable matrix width in a tile matrix set using a
+variablematrixwidth data structure. This will result in the following UML model shown
+in <<fig9>> and model description in <<table9>>.
+====

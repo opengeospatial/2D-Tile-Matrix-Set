@@ -1,6 +1,9 @@
+
 [[req_json_variablematrixwidth_model]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/json-variablematrixwidth/model* {set:cellbgcolor:#FFFFFF}
-2+|A VariableMatrixWidth encoded in JSON _shall_ implement the class VariableMatrixWidth.
-|===
+[requirement]
+====
+[%metadata]
+label:: /req/json-variablematrixwidth/model
+description:: A VariableMatrixWidth encoded in JSON _shall_ implement the class
+VariableMatrixWidth.
+====

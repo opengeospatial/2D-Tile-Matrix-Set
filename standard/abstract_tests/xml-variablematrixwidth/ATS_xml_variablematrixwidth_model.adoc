@@ -1,10 +1,21 @@
-[[ats_xml_variablematrixwidth_model]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/xml-variablematrixwidth/model*
-| Test Purpose | Validate that a TileSetMetadata encoded in XML implements the class TileSetMetadata.
-|Requirement |<<req_xml_variablematrixwidth_model>>
-| Test method | Validate the requirements of the model
 
-Test passes if VariableMatrixWidth instances use a VariableMatrixWidth XML data type definition that follows the data model specified in the requirement and associated tables its dependencies.
-|===
+[[ats_xml_variablematrixwidth_model]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/xml-variablematrixwidth/model
+
+subject:: <<req_xml_variablematrixwidth_model>>
+
+test-purpose:: Validate that a TileSetMetadata encoded in XML implements the class
+TileSetMetadata.
+
+[.component,class=test-method]
+--
+Validate the requirements of the model
+
+Test passes if VariableMatrixWidth instances use a VariableMatrixWidth XML data type
+definition that follows the data model specified in the requirement and associated
+tables its dependencies.
+--
+====

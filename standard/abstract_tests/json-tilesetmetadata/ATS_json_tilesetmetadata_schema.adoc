@@ -1,10 +1,20 @@
-[[ats_json_tilesetmetadata_schema]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/json-tilematrixsetlimits/schema*
-| Test Purpose | Validate that a TileSetMetadata encoded in JSON validates using the JSON schema for a tile set metadata.
-|Requirement |<<req_json_tilesetmetadata_media-type>>
-| Test method: | Validate the requirements of the schema
 
-Test passes if TileSetMetadata JSON instances pass validation against the tile set metadata JSON Schemas.
-|===
+[[ats_json_tilesetmetadata_schema]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/json-tilematrixsetlimits/schema
+
+subject:: <<req_json_tilesetmetadata_media-type>>
+
+test-purpose:: Validate that a TileSetMetadata encoded in JSON validates using the JSON
+schema for a tile set metadata.
+
+[.component,class=test-method]
+--
+Validate the requirements of the schema
+
+Test passes if TileSetMetadata JSON instances pass validation against the tile set
+metadata JSON Schemas.
+--
+====

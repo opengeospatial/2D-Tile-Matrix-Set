@@ -1,10 +1,17 @@
-[[req_tilesetmetadata_model]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/tilesetmetadata/model* {set:cellbgcolor:#FFFFFF}
-| A |When a tiled resource or dataset has tiles available, the metadata describing the tiles (and optionally additional information such as the recommended center point and the data from which it was sourced) SHALL be described using the data model in UML model shown in <<img_tilesetmetadata-uml-model>> and model description in <<parts-of-tilesetmetadata-data-structure>>.
-| B |When a tiled resource or dataset has tiles available only for a region or regions of the complete tiled space, the resource or dataset SHALL declare partial support to a tile matrix set using one or more tile matrix limits data structures defined in <<parts-of-tilematrixlimits-data-structure>>.  {set:cellbgcolor:#FFFFFF}
-|*Dependency* {set:cellbgcolor:#FFFFFF} |/req/tilematrixset
 
-/req/tilematrixsetlimits{set:cellbgcolor:#FFFFFF}
-|===
+[[req_tilesetmetadata_model]]
+[requirement]
+====
+[%metadata]
+label:: /req/tilesetmetadata/model
+part:: When a tiled resource or dataset has tiles available, the metadata describing
+the tiles (and optionally additional information such as the recommended center point
+and the data from which it was sourced) SHALL be described using the data model in UML
+model shown in <<fig13>> and model description in <<table13>>.
+part:: When a tiled resource or dataset has tiles available only for a region or
+regions of the complete tiled space, the resource or dataset SHALL declare partial
+support to a tile matrix set using one or more tile matrix limits data structures
+defined in <<table12>>.
+inherit:: /req/tilematrixset
+inherit:: /req/tilematrixsetlimits
+====

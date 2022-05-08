@@ -124,7 +124,7 @@ within the context of the TileMatrixSet.
 
 ==== Example TileMatrix extended to 4 dimensions (2 extra dimensions)
 
-[source, json]
+[source, json,options="unnumbered"]
 ----
 {
    "identifier" : "0",
@@ -228,21 +228,27 @@ Such models (and potentially their textures as well) would then need
 to be accessible separately from the tiling hierarchy.
 For example, vector tiles could be available as usual at, e.g.:
 
+[source%unnumbered]
+----
     trees/tiles/GNOSISGlobalGrid/13/5200/5715.json
     trees/tiles/GNOSISGlobalGrid/13/5200/5715.mvt
+----
 
 while referencing shared 3D models, available at `models/{modelId}`
 and textures at `textures/{textureId}`, e.g.:
 
+[source%unnumbered]
+----
     trees/models/coniferous_tree01.glb
     trees/models/coniferous_tree01.e3d
     trees/textures/1.jpg
+----
 
 A specific schema can be defined for position, orientation
 (e.g. yaw, pitch, roll), and scale (x, y, z), and a feature encoded
 as GeoJSON could look like:
 
-[source,json]
+[source,json,options="unnumbered"]
 ----
  {
     "type" : "Feature",
@@ -301,9 +307,12 @@ and (_3D Tiles_) Batched 3D Model (consisting of glTF plus a header
 including e.g. a feature table) containing all buildings in a particular
 tile:
 
+[source%unnumbered]
+----
     buildings/tiles/GNOSISGlobalGrid/13/5200/5715.glb
     buildings/tiles/GNOSISGlobalGrid/13/5200/5715.e3d
     buildings/tiles/GNOSISGlobalGrid/13/5200/5715.b3dm
+----
 
 === Relationship with _3D Tiles_ and _i3s_
 

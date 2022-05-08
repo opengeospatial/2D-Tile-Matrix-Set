@@ -27,7 +27,7 @@ of those additional dimensions. In other words, the additional dimensions
 are not tiled.
 
 .Extending TileMatrixSet vertically with no division
-image::figures/nd-extend.png[]
+image::nd-extend.png[]
 
 Storing, indexing and accessing the content for the additional dimensions
 can then be achieved through separate mechanisms, such as using formats
@@ -49,7 +49,7 @@ Another approach is to also "tile" (divide) the extra dimension(s),
 but tile them in the same number of pieces for all n-D tile matrices.
 
 .Extending TileMatrixSet vertically with the same tilings for all tile matrices (the illustration shows 2 "vertical" tile divisions for the extra "vertical" dimension for all tile matrices)
-image::figures/nd-divide.png[]
+image::nd-divide.png[]
 
 Fixed divisions for the extra dimensions may be suitable to scenarios
 where the extra dimensions have a limited extent, such as
@@ -68,7 +68,7 @@ or _orthree_ for higher dimensions (orthant being the generalization
 of quadrants and octants), sometimes also called a _hyperoctree_.
 
 .Extending TileMatrixSet vertically as an octree (The lowest resolution has 2 "vertical" tile divisions while the highest resolution has 8 "vertical" tile divisions)
-image::figures/nd-octree.png[]
+image::nd-octree.png[]
 
 === Extended properties for TileMatrix & limits
 

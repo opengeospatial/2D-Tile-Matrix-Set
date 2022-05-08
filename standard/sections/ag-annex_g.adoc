@@ -26,7 +26,7 @@ described in <<annex-schema-documents-normative>>
 
 [source,json]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/GNOSISGlobalGrid.json[lines=1..90]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/GNOSISGlobalGrid.json[lines=1..90]
       }
    ]
 }
@@ -37,7 +37,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/GNOSISGlobalGrid.json[li
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/GNOSISGlobalGrid.xml[lines=1..80]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/GNOSISGlobalGrid.xml[lines=1..80]
 </TileMatrixSet>
 ----
 
@@ -59,8 +59,8 @@ are illustrated.
 
 [source,json]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/CDB1GlobalGrid.json[lines=1..7]
-include::../schemas/tms/2.0/json/examples/tilematrixset/CDB1GlobalGrid.json[lines=215..282]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/CDB1GlobalGrid.json[lines=1..7]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/CDB1GlobalGrid.json[lines=215..282]
       }
    ]
 }
@@ -72,7 +72,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/CDB1GlobalGrid.json[line
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/CDB1GlobalGrid.xml[lines=1..9]
-include::../schemas/tms/2.0/xml/examples/tilematrixset/CDB1GlobalGrid.xml[lines=190..249]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/CDB1GlobalGrid.xml[lines=1..9]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/CDB1GlobalGrid.xml[lines=190..249]
 </TileMatrixSet>
 ----

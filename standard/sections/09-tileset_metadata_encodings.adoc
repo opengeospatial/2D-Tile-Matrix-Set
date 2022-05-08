@@ -13,13 +13,13 @@ element.
 [[json-tilematrixsetlimits-requirements-class]]
 ==== JSON TileMatrixSetLimits requirements class
 
-include::requirements/requirements_json-tilematrixsetlimits.adoc[]
+include::../requirements/requirements_json-tilematrixsetlimits.adoc[]
 
-include::requirements/json-tilematrixsetlimits/REQ_json_tilematrixsetlimits_model.adoc[]
+include::../requirements/json-tilematrixsetlimits/REQ_json_tilematrixsetlimits_model.adoc[]
 
-include::requirements/json-tilematrixsetlimits/REQ_json_tilematrixsetlimits_ietf.adoc[]
+include::../requirements/json-tilematrixsetlimits/REQ_json_tilematrixsetlimits_ietf.adoc[]
 
-include::requirements/json-tilematrixsetlimits/REQ_json_tilematrixsetlimits_schema.adoc[]
+include::../requirements/json-tilematrixsetlimits/REQ_json_tilematrixsetlimits_schema.adoc[]
 
 [NOTE, keep-separate=true]
 ====
@@ -33,15 +33,15 @@ encoding of TileSetMetadata.>> including TileMatrixSetLimits.
 [[json-tilesetmetadata]]
 ==== JSON TileSetMetadata requirements class
 
-include::requirements/requirements_json-tilesetmetadata.adoc[]
+include::../requirements/requirements_json-tilesetmetadata.adoc[]
 
-include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_model.adoc[]
+include::../requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_model.adoc[]
 
-include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_ietf.adoc[]
+include::../requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_ietf.adoc[]
 
-include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_schema.adoc[]
+include::../requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_schema.adoc[]
 
-include::requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_media-type.adoc[]
+include::../requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_media-type.adoc[]
 
 [NOTE, keep-separate=true]
 ====
@@ -90,11 +90,11 @@ classes. However all attribute names have been transformed to UpperCamelCase.
 [[xml-tilematrixsetlimits-requirements-class]]
 ==== XML TileMatrixSetLimits requirements class
 
-include::requirements/requirements_xml-tilematrixsetlimits.adoc[]
+include::../requirements/requirements_xml-tilematrixsetlimits.adoc[]
 
-include::requirements/xml-tilematrixsetlimits/REQ_xml_tilematrixsetlimits_model.adoc[]
+include::../requirements/xml-tilematrixsetlimits/REQ_xml_tilematrixsetlimits_model.adoc[]
 
-include::requirements/xml-tilematrixsetlimits/REQ_xml_tilematrixsetlimits_schema.adoc[]
+include::../requirements/xml-tilematrixsetlimits/REQ_xml_tilematrixsetlimits_schema.adoc[]
 
 [NOTE,keep-separate=true]
 ====
@@ -108,13 +108,13 @@ encoding of TileSetMetadata>> including TileMatrixSetLimits.
 [[xml-tilesetmetadata-requirements-class]]
 ==== XML TileSetMetadata requirements class
 
-include::requirements/requirements_xml-tilesetmetadata.adoc[]
+include::../requirements/requirements_xml-tilesetmetadata.adoc[]
 
-include::requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_model.adoc[]
+include::../requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_model.adoc[]
 
-include::requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_schema.adoc[]
+include::../requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_schema.adoc[]
 
-include::requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_media-type.adoc[]
+include::../requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_media-type.adoc[]
 
 
 [NOTE,keep-separate=true]

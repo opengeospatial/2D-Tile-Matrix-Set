@@ -16,7 +16,7 @@ TileMatrixSet schema.
 
 [source,json,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/json/tileMatrixSet.json[]
+include::../../schemas/tms/2.0/json/tileMatrixSet.json[]
 ----
 
 === XML schema for TileMatrixSet
@@ -30,7 +30,7 @@ TileMatrixSet schema.
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/tileMatrixSet.xsd[]
+include::../../schemas/tms/2.0/xml/tileMatrixSet.xsd[]
 ----
 
 === Web Mercator Quad
@@ -47,14 +47,14 @@ illustrated.
 
 [source,json,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/WebMercatorQuad.json[]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/WebMercatorQuad.json[]
 ----
 
 ==== Web Mercator Quad (XML encoding)
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/WebMercatorQuad.xml[]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/WebMercatorQuad.xml[]
 ----
 
 === World CRS84 Quad
@@ -73,14 +73,14 @@ illustrated.
 
 [source,json,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/WorldCRS84Quad.json[]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/WorldCRS84Quad.json[]
 ----
 
 ==== World CRS84 Quad (recommended, XML encoding)
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/WorldCRS84Quad.xml[]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/WorldCRS84Quad.xml[]
 ----
 
 *Variant 2: World EPSG:4326 Quad*
@@ -98,14 +98,14 @@ illustrated.
 
 [source,json,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/WGS1984Quad.json[]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/WGS1984Quad.json[]
 ----
 
 ==== World EPSG:4326 Quad (XML encoding)
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/WGS1984Quad.xml[]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/WGS1984Quad.xml[]
 ----
 
 === World Mercator WGS84 Quad
@@ -124,14 +124,14 @@ services.
 
 [source,json,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/WorldMercatorWGS84Quad.json[]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/WorldMercatorWGS84Quad.json[]
 ----
 
 ==== World Mercator WGS84 Quad (XML encoding)
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/WorldMercatorWGS84Quad.xml[]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/WorldMercatorWGS84Quad.xml[]
 ----
 
 === Universal Transverse Mercator WGS84 Quad for zone 31
@@ -147,14 +147,14 @@ pattern.
 
 [source,json,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/UTM31WGS84Quad.json[]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/UTM31WGS84Quad.json[]
 ----
 
 ==== UTM WGS84 Quad for zone 31 (XML encoding)
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/UTM31WGS84Quad.xml[]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/UTM31WGS84Quad.xml[]
 ----
 
 === Arctic Universal Polar Stereographic WGS 84 Quad
@@ -168,14 +168,14 @@ TileMatrices for more detailed scales is possible if they follow the same patter
 
 [source,json,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/UPSArcticWGS84Quad.json[]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/UPSArcticWGS84Quad.json[]
 ----
 
 ==== Arctic UPS WGS 84 Quad (XML encoding)
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/UPSArcticWGS84Quad.xml[]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/UPSArcticWGS84Quad.xml[]
 ----
 
 === Antarctic Universal Polar Stereographic WGS84 Quad
@@ -189,14 +189,14 @@ TileMatrices for more detailed scales is possible if they follow the same patter
 
 [source,json,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/UPSAntarcticWGS84Quad.json[]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/UPSAntarcticWGS84Quad.json[]
 ----
 
 ==== Antarctic UPS WGS84 Quad (XML encoding)
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/UPSAntarcticWGS84Quad.xml[]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/UPSAntarcticWGS84Quad.xml[]
 ----
 
 === European ETRS89 Lambert Azimuthal Equal-Area Quad
@@ -210,14 +210,14 @@ TileMatrices for more detailed scales is possible if they follow the same patter
 
 [source,json,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/EuropeanETRS89_LAEAQuad.json[]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/EuropeanETRS89_LAEAQuad.json[]
 ----
 
 ==== European ETRS89 Lambert Azimuthal Equal-Area Quad (XML encoding)
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/EuropeanETRS89_LAEAQuad.xml[]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/EuropeanETRS89_LAEAQuad.xml[]
 ----
 
 === Canadian Lambert Conformal Conic NAD83
@@ -231,12 +231,12 @@ for more detailed scales is possible if they follow the same pattern.
 
 [source,json,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/json/examples/tilematrixset/CanadianNAD83_LCC.json[]
+include::../../schemas/tms/2.0/json/examples/tilematrixset/CanadianNAD83_LCC.json[]
 ----
 
 ==== Canadian Lambert Conformal Conic NAD83 (XML encoding)
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tilematrixset/CanadianNAD83_LCC.xml[]
+include::../../schemas/tms/2.0/xml/examples/tilematrixset/CanadianNAD83_LCC.xml[]
 ----

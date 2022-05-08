@@ -20,7 +20,7 @@ This example illustrates a TileSetMetadata instance encoded in JSON.
 
 [source,json]
 ----
-include::../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
+include::../../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
 ----
 
 [[json-schema-used-to-validate-the-previous-json-document]]
@@ -33,7 +33,7 @@ to validate the previous JSON example.
 
 [source,json]
 ----
-include::../schemas/tms/2.0/json/tileSet.json[]
+include::../../schemas/tms/2.0/json/tileSet.json[]
 ----
 
 === TileMatrixSetLimits JSON Schema
@@ -43,7 +43,7 @@ limits for each tile matrix.
 
 [source,json]
 ----
-include::../schemas/tms/2.0/json/tileMatrixLimits.json[]
+include::../../schemas/tms/2.0/json/tileMatrixLimits.json[]
 ----
 
 [[xml-document-instance-using-tilesetmetadata]]
@@ -53,7 +53,7 @@ This example illustrates a TileSetMetadata instance encoded in XML.
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/examples/tileset/tiles.WebMercatorQuad.xml[]
+include::../../schemas/tms/2.0/xml/examples/tileset/tiles.WebMercatorQuad.xml[]
 ----
 
 [[xml-schema-used-to-validate-the-previous-xml-document]]
@@ -62,7 +62,7 @@ This XML Schema can be used to validate the previous XML example.
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/tileset.xsd[]
+include::../../schemas/tms/2.0/xml/tileset.xsd[]
 ----
 
 === TileMatrixSetLimits XML Schema
@@ -71,5 +71,5 @@ limits for each tile matrix.
 
 [source,xml,options="unnumbered"]
 ----
-include::../schemas/tms/2.0/xml/tilematrixlimits.xsd[]
+include::../../schemas/tms/2.0/xml/tilematrixlimits.xsd[]
 ----

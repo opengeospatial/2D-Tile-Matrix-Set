@@ -57,9 +57,9 @@ TileMatrixSetLimits data structures allows for the declaration of a limited cove
 of a tile matrix set. The identifying URI for this class is
 http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits.
 
-include::requirements/requirements_tilematrixsetlimits.adoc[]
+include::../requirements/requirements_tilematrixsetlimits.adoc[]
 
-include::requirements/tilematrixsetlimits/REQ_tilematrixsetlimits_model.adoc[]
+include::../requirements/tilematrixsetlimits/REQ_tilematrixsetlimits_model.adoc[]
 
 [[fig12]]
 .TileMatrixLimit array UML model
@@ -110,9 +110,9 @@ tileset and a recommended center point. Each TileSet in a geospatial resource sh
 declare the use of a tile matrix set using this data structure. The identifying URI
 for this class is http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata
 
-include::requirements/requirements_tilesetmetadata.adoc[]
+include::../requirements/requirements_tilesetmetadata.adoc[]
 
-include::requirements/tilesetmetadata/REQ_tilesetmetadata_identifier.adoc[]
+include::../requirements/tilesetmetadata/REQ_tilesetmetadata_identifier.adoc[]
 
 [NOTE,keep-separate=true]
 ====
@@ -137,7 +137,7 @@ document format. For example, if an OGC API defines tiles using JSON, it is expe
 to link to a JSON definition of a TileMatrixSet.
 ====
 
-include::requirements/tilesetmetadata/REQ_tilesetmetadata_model.adoc[]
+include::../requirements/tilesetmetadata/REQ_tilesetmetadata_model.adoc[]
 
 [[fig13]]
 .TileSetMetadata UML model

@@ -118,22 +118,22 @@ system (CRS) units into meters (metersPerUnit), and the scale (1:scaleDenominato
 the bottom right corner of the bounding box of a tile matrix (tileMatrixMaxX,
 tileMatrixMinY) can be calculated as follows:
 
-stem:[cellSize = scaleDenominator xx 0.28 10^{-3} // metersPerUnit(crs)]
+stem:["cellSize" = "scaleDenominator" xx 0.28 10^{-3} // "metersPerUnit"(crs)]
 
-stem:[tileSpanX = tileWidth xx cellSize]
+stem:["tileSpanX" = "tileWidth" xx "cellSize"]
 
-stem:[tileSpanY = tileHeight xx cellSize]
+stem:["tileSpanY" = "tileHeight" xx "cellSize"]
 
-stem:[tileMatrixMaxX = tileMatrixMinX + tileSpanX xx matrixWidth]
+stem:["tileMatrixMaxX" = "tileMatrixMinX" + "tileSpanX" xx "matrixWidth"]
 
-stem:[tileMatrixMinY = tileMatrixMaxY - tileSpanY xx matrixHeight]
+stem:["tileMatrixMinY" = "tileMatrixMaxY" - "tileSpanY" xx "matrixHeight"]
 
-NOTE: In a CRS with coordinates expressed in meters, stem:[metersPerUnit(crs)] equals
+NOTE: In a CRS with coordinates expressed in meters, stem:["metersPerUnit"(crs)] equals
 1.
 
-NOTE: In CRS with coordinates expressed in degrees stem:[metersPerUnit(crs)] equals
-stem:[360//(EquatorialRadius**2**"PI")] (360 degrees are equivalent to the
-EquatorialPerimeter). E.g for WGS84 stem:[metersPerUnit(crs)] is 111319.4908
+NOTE: In CRS with coordinates expressed in degrees stem:["metersPerUnit"(crs)] equals
+stem:[360//("EquatorialRadius"**2**"PI")] (360 degrees are equivalent to the
+EquatorialPerimeter). E.g for WGS84 stem:["metersPerUnit"(crs)] is 111319.4908
 meters/degree.
 
 The tile space therefore looks like this:

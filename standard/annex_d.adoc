@@ -1,20 +1,19 @@
-[appendix]
 [[annex-common-tilematrixset-definitions-informative]]
-:appendix-caption: Annex
-== Common TileMatrixSet definitions (Informative)
+[appendix,obligation=informative]
+== Common TileMatrixSet definitions
 
 This Annex includes some definitions for TileMatrixSets that are commonly used.
 
-[[web-mercator-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0webmercatorquad]]
+[[WebMercatorQuad]]
 === WebMercatorQuad
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/WebMercatorQuad*
 
-[#definition-of-the-webmercatorquad-tilematrixset,reftext='{table-caption} {counter:table-num}']
+[[table27]]
 .Definition of the WebMercatorQuad TileMatrixSet
 [cols="15%,25%,30%,15%,15%",width="100%"]
 |===
-5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3857, WGS 84 / Pseudo-Mercator
+5+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3857, WGS 84 / Pseudo-Mercator
 
 *BBOX LowerLeft:* -20,037,508.3427892, -20,037,508.3427892 (lat/long: -85.0511287798, -180)
 
@@ -55,36 +54,53 @@ This Annex includes some definitions for TileMatrixSets that are commonly used.
 | 24 | 33.3238997476528 | 0.0093306919293428 | 16,777,216 | 16,777,216
 |===
 
-One can define an arbitrary number of zoom levels and do not need to include all the zoom levels defined here. Here, 25 zoom levels are illustrated.
+One can define an arbitrary number of zoom levels and do not need to include all the
+zoom levels defined here. Here, 25 zoom levels are illustrated.
 
-NOTE: Mercator projection distorts the cell size the closer to the poles. The cell sizes provided here are only valid next to the equator in the direction E-W.
+NOTE: Mercator projection distorts the cell size the closer to the poles. The cell
+sizes provided here are only valid next to the equator in the direction E-W.
 
-NOTE: The CRS code 3857 is the official code for Web Mercator. An unofficial code “900913” (GOOGLE spelled with numbers) was initially assigned and is sometimes still used.
+NOTE: The CRS code 3857 is the official code for Web Mercator. An unofficial code
+"900913" (GOOGLE spelled with numbers) was initially assigned and is sometimes still
+used.
 
-[#img_the-3-first-tile-matrix-of-the-webmercatorquad-tilematrixset-source-cca,reftext='{figure-caption} {counter:figure-num}']
+[[fig14]]
 .The 3 first Tile Matrix of the WebMercatorQuad TileMatrixSet (Source CCA)
-image::figures/10.png[The 3 first Tile Matrix of the WebMercatorQuad TileMatrixSet (Source CCA)]
+image::10.png[The 3 first Tile Matrix of the WebMercatorQuad TileMatrixSet (Source CCA)]
 
-This tile matrix set is the most used tile matrix set in the mass market: for example, by Google Maps, Microsoft Bing Maps and Open Street Map tiles. Nevertheless, it has been long criticized because it is a based on a spherical Mercator instead of an ellipsoid. The use of WebMercatorQuad should be limited to visualization. Any additional use (including distance measurements, routing etc.) needs to use the Mercator spherical expressions to transform the coordinate to an appropriate CRS first.
+This tile matrix set is the most used tile matrix set in the mass market: for
+example, by Google Maps, Microsoft Bing Maps and Open Street Map tiles. Nevertheless,
+it has been long criticized because it is a based on a spherical Mercator instead of
+an ellipsoid. The use of WebMercatorQuad should be limited to visualization. Any
+additional use (including distance measurements, routing etc.) needs to use the
+Mercator spherical expressions to transform the coordinate to an appropriate CRS first.
 
-NOTE: For example, the EPSG database version 8.9 says about the 3857: “Uses spherical development of ellipsoidal coordinates. Relative to WGS 84 / World Mercator (CRS code 3395) errors of 0.7 percent in scale and differences in northing of up to 43km in the map (equivalent to 21km on the ground) may arise.”
+NOTE: For example, the EPSG database version 8.9 says about the 3857: "Uses spherical
+development of ellipsoidal coordinates. Relative to WGS 84 / World Mercator (CRS code
+3395) errors of 0.7 percent in scale and differences in northing of up to 43km in the
+map (equivalent to 21km on the ground) may arise."
 
-NOTE: The use of Web Mercator can generate erroneous geospatial positioning information poses an unacceptable risk to global safety of navigation activities, and department of defense, intelligence community, and allied partner systems, missions, and operations that require accurate and precise positioning and navigation information.” The use of WorldMercatorWGS84Quad is recommended.
+NOTE: The use of Web Mercator can generate erroneous geospatial positioning
+information poses an unacceptable risk to global safety of navigation activities, and
+department of defense, intelligence community, and allied partner systems, missions,
+and operations that require accurate and precise positioning and navigation
+information." The use of WorldMercatorWGS84Quad is recommended.
 
 === WorldCRS84Quad
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldCRS84Quad*
 
-[[world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldcrs84quad]]
+[[variant1]]
 ==== Variant 1: World CRS84 Quad (recommended)
 
-This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in the CRS84 CRS for the whole world.
+This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in
+the CRS84 CRS for the whole world.
 
-[#definition-of-the-worldcrs84quad-tilematrixset,reftext='{table-caption} {counter:table-num}']
+[[table28]]
 .Definition of the WorldCRS84Quad TileMatrixSet
 [cols="15%,25%,30%,15%,15%",width="100%"]
 |===
-5+| *CRS*: http://www.opengis.net/def/crs/OGC/1.3/CRS84, CRS84
+5+a| *CRS*: http://www.opengis.net/def/crs/OGC/1.3/CRS84, CRS84
 
 *BBOX LowerLeft:* -180, -90
 
@@ -101,60 +117,95 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 | 0 | 279,541,132.0143589 | 0.703125000000000 | 2 | 1
 | 1 | 139,770,566.0071794 | 0.351562500000000 | 4 | 2
 | 2 | 69,885,283.00358972 | 0.175781250000000 | 8 | 4
-| 3 | 34,942,641.50179486 | 8.78906250000000 × 10^-2^ | 16 | 8
-| 4 | 17,471,320.75089743 | 4.39453125000000 × 10^-2^ | 32 | 16
-| 5 | 8,735,660.375448715 | 2.19726562500000 × 10^-2^ | 64 | 32
-| 6 | 4,367,830.187724357 | 1.09863281250000 × 10^-2^ | 128 | 64
-| 7 | 2,183,915.093862179 | 5.49316406250000 × 10^-3^ | 256 | 128
-| 8 | 1,091,957.546931089 | 2.74658203125000 × 10^-3^ | 512 | 256
-| 9 | 545,978.7734655447 | 1.37329101562500 × 10^-3^ | 1024 | 512
-| 10 | 272,989.3867327723 | 6.86645507812500 × 10^-4^ | 2048 | 1024
-| 11 | 136,494.6933663862 | 3.43322753906250 × 10^-4^ | 4096 | 2048
-| 12 | 68,247.34668319309 | 1.71661376953125 × 10^-4^ | 8192 | 4096
-| 13 | 34,123.67334159654 | 8.58306884765625 × 10^-5^ | 16,384 | 8192
-| 14 | 17,061.83667079827 | 4.29153442382812 × 10^-5^ | 32,768 | 16,384
-| 15 | 8530.918335399136 | 2.14576721191406 × 10^-5^ | 65,536 | 32,768
-| 16 | 4265.459167699568 | 1.07288360595703 × 10^-5^ | 131,072 | 65,536
-| 17 | 2132.729583849784 | 5.36441802978516 × 10^-6^ | 262,144 | 131,072
-| 18 | 1066.36479192489 | 2.68220901489258 × 10^-6^ | 524,288 | 262,144
-| 19 | 533.182395962445 | 1.34110450744629 × 10^-6^ | 1,048,576 | 524,288
-| 20 | 266.591197981222 | 6.70552253723144 × 10^-7^ | 2,097,152 | 1,048,576
-| 21 | 133.295598990611 | 3.35276126861572 × 10^-7^ | 4,194,304 | 2,097,152
-| 22 | 66.6477994953056 | 1.67638063430786 × 10^-7^ | 8,388,608 | 4,194,304
-| 23 | 33.3238997476528 | 8.3819031715393 × 10^-8^ | 16,777,216 | 8,388,608
+| 3 | 34,942,641.50179486 | 8.78906250000000 stem:[xx] 10^-2^ | 16 | 8
+| 4 | 17,471,320.75089743 | 4.39453125000000 stem:[xx] 10^-2^ | 32 | 16
+| 5 | 8,735,660.375448715 | 2.19726562500000 stem:[xx] 10^-2^ | 64 | 32
+| 6 | 4,367,830.187724357 | 1.09863281250000 stem:[xx] 10^-2^ | 128 | 64
+| 7 | 2,183,915.093862179 | 5.49316406250000 stem:[xx] 10^-3^ | 256 | 128
+| 8 | 1,091,957.546931089 | 2.74658203125000 stem:[xx] 10^-3^ | 512 | 256
+| 9 | 545,978.7734655447 | 1.37329101562500 stem:[xx] 10^-3^ | 1024 | 512
+| 10 | 272,989.3867327723 | 6.86645507812500 stem:[xx] 10^-4^ | 2048 | 1024
+| 11 | 136,494.6933663862 | 3.43322753906250 stem:[xx] 10^-4^ | 4096 | 2048
+| 12 | 68,247.34668319309 | 1.71661376953125 stem:[xx] 10^-4^ | 8192 | 4096
+| 13 | 34,123.67334159654 | 8.58306884765625 stem:[xx] 10^-5^ | 16,384 | 8192
+| 14 | 17,061.83667079827 | 4.29153442382812 stem:[xx] 10^-5^ | 32,768 | 16,384
+| 15 | 8530.918335399136 | 2.14576721191406 stem:[xx] 10^-5^ | 65,536 | 32,768
+| 16 | 4265.459167699568 | 1.07288360595703 stem:[xx] 10^-5^ | 131,072 | 65,536
+| 17 | 2132.729583849784 | 5.36441802978516 stem:[xx] 10^-6^ | 262,144 | 131,072
+| 18 | 1066.36479192489 | 2.68220901489258 stem:[xx] 10^-6^ | 524,288 | 262,144
+| 19 | 533.182395962445 | 1.34110450744629 stem:[xx] 10^-6^ | 1,048,576 | 524,288
+| 20 | 266.591197981222 | 6.70552253723144 stem:[xx] 10^-7^ | 2,097,152 | 1,048,576
+| 21 | 133.295598990611 | 3.35276126861572 stem:[xx] 10^-7^ | 4,194,304 | 2,097,152
+| 22 | 66.6477994953056 | 1.67638063430786 stem:[xx] 10^-7^ | 8,388,608 | 4,194,304
+| 23 | 33.3238997476528 | 8.3819031715393 stem:[xx] 10^-8^ | 16,777,216 | 8,388,608
 |===
- 
-One can define an arbitrary number of zoom levels and do not need to include all the ones defined here. Here, 18 zoom levels are illustrated.
 
-[#img_tile-matrix-id-1,reftext='{figure-caption} {counter:figure-num}']
+One can define an arbitrary number of zoom levels and do not need to include all the
+ones defined here. Here, 18 zoom levels are illustrated.
+
+[[fig15]]
 .Tile Matrix Id 1 (2x1 tiles) of the WorldCRS84Quad TileMatrixSet (Source: INSPIRE technical guidance)
-image::figures/11.png[Tile Matrix Id 1 (2x1 tiles) of the WorldCRS84Quad TileMatrixSet (Source: INSPIRE technical guidance)]
+image::11.png[Tile Matrix Id 1 (2x1 tiles) of the WorldCRS84Quad TileMatrixSet (Source: INSPIRE technical guidance)]
 
-NOTE: The zoom level identifiers in this TileMatrixSet do not correspond to the same scale values in Annex E.3 of WMTS 1.0. In this TileMatrixSet, the TileMatrix with identifier “-1” has only one tile with 128 lines left blank. For that reason, many implementers do not want to offer this level (including the INSPIRE technical guidance) and prefer to start with a TileMatrix that represents the world with just 2 tiles (one for the negative longitudes and one for the positive longitudes).
+[NOTE,keep-separate=true]
+====
+The zoom level identifiers in this TileMatrixSet do not correspond to the same scale
+values in Annex E.3 of WMTS 1.0. In this TileMatrixSet, the TileMatrix with
+identifier "-1" has only one tile with 128 lines left blank. For that reason, many
+implementers do not want to offer this level (including the INSPIRE technical
+guidance) and prefer to start with a TileMatrix that represents the world with just 2
+tiles (one for the negative longitudes and one for the positive longitudes).
+====
 
-NOTE: The scale denominators for this TileMatrixSet and WorldMercatorWGS84Quad and WebMercatorQuad are the same but the identifiers are displaced by one. This might generate confusion.
+[NOTE,keep-separate=true]
+====
+The scale denominators for this TileMatrixSet and WorldMercatorWGS84Quad and
+WebMercatorQuad are the same but the identifiers are displaced by one. This might
+generate confusion.
+====
 
-NOTE: For INSPIRE: The Technical Guidance for the implementation of INSPIRE View Services defines a TileMatrixSet called InspireCRS84Quad that is identical to this one. Note that the current version of the INSPIRE Technical Guidance cited in the Bibliography Annex could accidentally generate confusion because it is comparing a GoogleCRS84Quad (that is a well-known scale set name) with the InspireCRS84Quad (that is a TileMatrixSet definition that does not link to any WKSS).
+[NOTE,keep-separate=true]
+====
+For INSPIRE: The Technical Guidance for the implementation of INSPIRE View Services
+defines a TileMatrixSet called InspireCRS84Quad that is identical to this one. Note
+that the current version of the INSPIRE Technical Guidance cited in the Bibliography
+Annex could accidentally generate confusion because it is comparing a GoogleCRS84Quad
+(that is a well-known scale set name) with the InspireCRS84Quad (that is a
+TileMatrixSet definition that does not link to any WKSS).
+====
 
-[[world-crs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0wgs1984quad]]
+[[variant2]]
 ==== Variant 2: World EPSG:4326 Quad
-Despite what is stated in <<TileMatrixSetCRSCompatibility>>, some implementers prefer to define the previous TileMatrixSet using the CRS http://www.opengis.net/def/crs/EPSG/0/4326.
-The definition is the same as the variant defined using http://www.opengis.net/def/crs/OGC/1.3/CRS84 except that CRS coordinates are expressed in latitude, longitude order, affecting the _PointOfOrigin_ and the _BoundingBox_ encoding only.
-For most practical purposes, both variations are equivalent because a TileMatrixSet primarily defines the tiling structure as well as the scale/resolution at each tile matrix, rather than how the data within each tile is stored.
-For many raster and vector tiles formats, CRS84 and EPSG:4326 are equivalent as a particular axis order is enforced.
-Additional parameters to an API for example could also override the default axis order by specifying the CRS as either CRS84 or EPSG:4326.
 
-If possible, defining it in terms of http://www.opengis.net/def/crs/OGC/1.3/CRS84 is recommended instead of this variation,
+Despite what is stated in <<TileMatrixSetCRSCompatibility>>, some implementers prefer
+to define the previous TileMatrixSet using the CRS
+http://www.opengis.net/def/crs/EPSG/0/4326.
+The definition is the same as the variant defined using
+http://www.opengis.net/def/crs/OGC/1.3/CRS84 except that CRS coordinates are
+expressed in latitude, longitude order, affecting the _PointOfOrigin_ and the
+_BoundingBox_ encoding only.
+For most practical purposes, both variations are equivalent because a TileMatrixSet
+primarily defines the tiling structure as well as the scale/resolution at each tile
+matrix, rather than how the data within each tile is stored.
+For many raster and vector tiles formats, CRS84 and EPSG:4326 are equivalent as a
+particular axis order is enforced.
+Additional parameters to an API for example could also override the default axis
+order by specifying the CRS as either CRS84 or EPSG:4326.
+
+If possible, defining it in terms of http://www.opengis.net/def/crs/OGC/1.3/CRS84 is
+recommended instead of this variation,
 because it uses the CRS consistent with the TileMatrixSet URI.
-However, we introduce it here to clarify how an implementation based on EPSG:4326 should look like and avoid confusion.
+However, we introduce it here to clarify how an implementation based on EPSG:4326
+should look like and avoid confusion.
 
-This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in the EPSG:4326 CRS for the whole world.
+This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projection in
+the EPSG:4326 CRS for the whole world.
 
-[#definition-of-the-worldcrs84quad-tilematrixset-4326,reftext='{table-caption} {counter:table-num}']
+[[table29]]
 .Definition of the WorldCRS84Quad TileMatrixSet (EPSG:4326)
 [cols="15%,25%,30%,15%,15%",width="100%"]
 |===
-5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/4326, EPSG:4326
+5+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/4326, EPSG:4326
 
 *BBOX LowerLeft:* -90, -180
 
@@ -171,41 +222,41 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 | 0 | 279,541,132.0143589 | 0.703125000000000 | 2 | 1
 | 1 | 139,770,566.0071794 | 0.351562500000000 | 4 | 2
 | 2 | 69,885,283.00358972 | 0.175781250000000 | 8 | 4
-| 3 | 34,942,641.50179486 | 8.78906250000000 × 10^-2^ | 16 | 8
-| 4 | 17,471,320.75089743 | 4.39453125000000 × 10^-2^ | 32 | 16
-| 5 | 8,735,660.375448715 | 2.19726562500000 × 10^-2^ | 64 | 32
-| 6 | 4,367,830.187724357 | 1.09863281250000 × 10^-2^ | 128 | 64
-| 7 | 2,183,915.093862179 | 5.49316406250000 × 10^-3^ | 256 | 128
-| 8 | 1,091,957.546931089 | 2.74658203125000 × 10^-3^ | 512 | 256
-| 9 | 545,978.7734655447 | 1.37329101562500 × 10^-3^ | 1024 | 512
-| 10 | 272,989.3867327723 | 6.86645507812500 × 10^-4^ | 2048 | 1024
-| 11 | 136,494.6933663862 | 3.43322753906250 × 10^-4^ | 4096 | 2048
-| 12 | 68,247.34668319309 | 1.71661376953125 × 10^-4^ | 8192 | 4096
-| 13 | 34,123.67334159654 | 8.58306884765625 × 10^-5^ | 16,384 | 8192
-| 14 | 17,061.83667079827 | 4.29153442382812 × 10^-5^ | 32,768 | 16,384
-| 15 | 8530.918335399136 | 2.14576721191406 × 10^-5^ | 65,536 | 32,768
-| 16 | 4265.459167699568 | 1.07288360595703 × 10^-5^ | 131,072 | 65,536
-| 17 | 2132.729583849784 | 5.36441802978516 × 10^-6^ | 262,144 | 131,072
-| 18 | 1066.36479192489 | 2.68220901489258 × 10^-6^ | 524,288 | 262,144
-| 19 | 533.182395962445 | 1.34110450744629 × 10^-6^ | 1,048,576 | 524,288
-| 20 | 266.591197981222 | 6.70552253723144 × 10^-7^ | 2,097,152 | 1,048,576
-| 21 | 133.295598990611 | 3.35276126861572 × 10^-7^ | 4,194,304 | 2,097,152
-| 22 | 66.6477994953056 | 1.67638063430786 × 10^-7^ | 8,388,608 | 4,194,304
-| 23 | 33.3238997476528 | 8.3819031715393 × 10^-8^ | 16,777,216 | 8,388,608
+| 3 | 34,942,641.50179486 | 8.78906250000000 stem:[xx] 10^-2^ | 16 | 8
+| 4 | 17,471,320.75089743 | 4.39453125000000 stem:[xx] 10^-2^ | 32 | 16
+| 5 | 8,735,660.375448715 | 2.19726562500000 stem:[xx] 10^-2^ | 64 | 32
+| 6 | 4,367,830.187724357 | 1.09863281250000 stem:[xx] 10^-2^ | 128 | 64
+| 7 | 2,183,915.093862179 | 5.49316406250000 stem:[xx] 10^-3^ | 256 | 128
+| 8 | 1,091,957.546931089 | 2.74658203125000 stem:[xx] 10^-3^ | 512 | 256
+| 9 | 545,978.7734655447 | 1.37329101562500 stem:[xx] 10^-3^ | 1024 | 512
+| 10 | 272,989.3867327723 | 6.86645507812500 stem:[xx] 10^-4^ | 2048 | 1024
+| 11 | 136,494.6933663862 | 3.43322753906250 stem:[xx] 10^-4^ | 4096 | 2048
+| 12 | 68,247.34668319309 | 1.71661376953125 stem:[xx] 10^-4^ | 8192 | 4096
+| 13 | 34,123.67334159654 | 8.58306884765625 stem:[xx] 10^-5^ | 16,384 | 8192
+| 14 | 17,061.83667079827 | 4.29153442382812 stem:[xx] 10^-5^ | 32,768 | 16,384
+| 15 | 8530.918335399136 | 2.14576721191406 stem:[xx] 10^-5^ | 65,536 | 32,768
+| 16 | 4265.459167699568 | 1.07288360595703 stem:[xx] 10^-5^ | 131,072 | 65,536
+| 17 | 2132.729583849784 | 5.36441802978516 stem:[xx] 10^-6^ | 262,144 | 131,072
+| 18 | 1066.36479192489 | 2.68220901489258 stem:[xx] 10^-6^ | 524,288 | 262,144
+| 19 | 533.182395962445 | 1.34110450744629 stem:[xx] 10^-6^ | 1,048,576 | 524,288
+| 20 | 266.591197981222 | 6.70552253723144 stem:[xx] 10^-7^ | 2,097,152 | 1,048,576
+| 21 | 133.295598990611 | 3.35276126861572 stem:[xx] 10^-7^ | 4,194,304 | 2,097,152
+| 22 | 66.6477994953056 | 1.67638063430786 stem:[xx] 10^-7^ | 8,388,608 | 4,194,304
+| 23 | 33.3238997476528 | 8.3819031715393 stem:[xx] 10^-8^ | 16,777,216 | 8,388,608
 |===
 
-[[world-mercator-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0worldmercatorwgs84quad]]
+[[WorldMercatorWGS84Quad]]
 === WorldMercatorWGS84Quad
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/WorldMercatorWGS84Quad*
 
-[#definition-of-the-worldmercatorwgs84quad-tilematrixset,reftext='{table-caption} {counter:table-num}']
+[[table30]]
 .Definition of the WorldMercatorWGS84Quad TileMatrixSet
 [cols="13%,24%,21%,16%,13%,13%",width="100%"]
 |===
-6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3395, WGS 84 / World-Mercator
+6+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3395, WGS 84 / World-Mercator
 
-*BBOX LowerLeft:* -20,037,508.3427892, -20,037,508.3427892  (lat, long: -85.08405903, -180)
+*BBOX LowerLeft:* -20,037,508.3427892, -20,037,508.3427892  (lat, long: -85.08405903, -180)
 
 *BBOX UpperRight:* 20,037,508.3427892, 20,037,508.3427892 (lat, long: 85.08405903, 180)
 
@@ -216,7 +267,7 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 *TileWidth*: 256
 
 *TileHeight*: 256
-| *TileMatrix id* | *Scale Denominator* | *Cell Size (m) (true at the equator)* | *Cell Size (m) at latitude ±31.0606963703645 (informative)* | *Matrix Width* | *Matrix Height*
+| *TileMatrix id* | *Scale Denominator* | *Cell Size (m) (true at the equator)* | *Cell Size (m) at latitude stem:[pm]31.0606963703645 (informative)* | *Matrix Width* | *Matrix Height*
 | 0 |559,082,264.02871774 |156,543.033928040 |134,217.728 |1 |1
 | 1 |279,541,132.01435887 |78,271.5169640205 |67,108.864 |2 |2
 | 2 |139,770,566.00717943 |39,135.7584820102 |33,554.432 |4 |4
@@ -243,38 +294,55 @@ This Tile Matrix Set defines tiles in the Equirectangular Plate Carrée projecti
 | 23 |66.647799495305746 |0.01866138385868 |0.016 |8,388,608 |8,388,608
 | 24 |33.323899747652873 |0.00933069192934 |0.008 |16,777,216 |16,777,216
 |===
- 
 
-One can define an arbitrary number of zoom levels and do not need to include all the zoom levels defined here. Here, 25 zoom levels are illustrated.
+One can define an arbitrary number of zoom levels and do not need to include all the
+zoom levels defined here. Here, 25 zoom levels are illustrated.
 
-This Tile Matrix Set looks similar to the previous one (Web Mercator Quad) but this one is based on an ellipsoidal Mercator. Please note that the most northern latitude cover by this one is 85.08405903 (different from Web Mercator).
+This Tile Matrix Set looks similar to the previous one (Web Mercator Quad) but this
+one is based on an ellipsoidal Mercator. Please note that the most northern latitude
+cover by this one is 85.08405903 (different from Web Mercator).
 
-[#img_tile-matrix-id-1-3,reftext='{figure-caption} {counter:figure-num}']
+[[fig16]]
 .Tile Matrix Id 1 (red lines; 2x2 tiles) and 3 (blue lines; 8x8 tiles) of the WorldMercatorWGS84Quad TileMatrixSet (Source NGA)
-image::figures/12.png[Tile Matrix Id 1 (red lines; 2x2 tiles) and 3 (blue lines; 8x8 tiles) of the WorldMercatorWGS84Quad TileMatrixSet (Source NGA)]
+image::12.png[Tile Matrix Id 1 (red lines; 2x2 tiles) and 3 (blue lines; 8x8 tiles) of the WorldMercatorWGS84Quad TileMatrixSet (Source NGA)]
 
-NOTE: The NGA Geomatics Office reminds the community to use DoD approved World Geodetic System 1984 (WGS 84) applications for all mission critical activities and encourages the use of WGS84 based tile matrix sets like this one and discourages the use of Web Mercator tiles based on Web Mercator such as WebMercatorQuad.
+[NOTE,keep-separate=true]
+====
+The NGA Geomatics Office reminds the community to use DoD approved World Geodetic
+System 1984 (WGS 84) applications for all mission critical activities and encourages
+the use of WGS84 based tile matrix sets like this one and discourages the use of Web
+Mercator tiles based on Web Mercator such as WebMercatorQuad.
+====
 
-NOTE: The NGA Geomatics Office recommends the use of Universal zoom-levels scale set that are defined as true cell size at ±31.0606963703645 degrees of latitude that implies a scale reduction at the equator of 0.857385503731176. This standard recommends the use of scale denominators at the equator for convenience.
+[NOTE,keep-separate=true]
+====
+The NGA Geomatics Office recommends the use of Universal zoom-levels scale set that
+are defined as true cell size at stem:[pm]31.0606963703645 degrees of latitude that
+implies a scale reduction at the equator of 0.857385503731176. This standard
+recommends the use of scale denominators at the equator for convenience.
+====
 
-[[universal-transverse-mercator-wgs84-quad-family-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0utmwgs84quad]]
+[[utm-wgs84]]
 === Universal Transverse Mercator WGS84 Quad family (UTM##WGS84Quad)
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/UTM##WGS84Quad*
 
-The Universal Transversal Mercator (a special case of transverse Mercator), divides the world into 60 zones by longitude. No single zone would make a global or near-global map. Therefore, this definition is a family of 60 TileMatrixSets in a single table.
+The Universal Transversal Mercator (a special case of transverse Mercator), divides
+the world into 60 zones by longitude. No single zone would make a global or
+near-global map. Therefore, this definition is a family of 60 TileMatrixSets in a
+single table.
 
-[#definition-of-the-utmwgs84quad-tilematrixsets,reftext='{table-caption} {counter:table-num}']
+[[table31]]
 .Definition of the UTM##WGS84Quad TileMatrixSets
 [cols="13%,22%,23%,16%,13%,13%",width="100%"]
 |===
-6+|*+++##:+++* it is a number that goes from 01 to 60
+6+a|*##:* it is a number that goes from 01 to 60
 
 *CRSs*: [http://www.opengis.net/def/crs/EPSG/0/32601, http://www.opengis.net/def/crs/EPSG/0/32660] WGS 84 / UTM
 
-*BBOX LowerLeft:* -9,501,965.72931276, -20,003,931.4586255; lat, long: -180, -62+(+++##+++-31)+++*+++6
+*BBOX LowerLeft:* -9,501,965.72931276, -20,003,931.4586255; lat, long: -180, -62+(##-31)+++*+++6
 
-*BBOX UpperRight:* 10,501,965.7293128, 20,003,931.4586255 (lat, long: 180, 68+(+++##+++-31)+++*+++6)
+*BBOX UpperRight:* 10,501,965.7293128, 20,003,931.4586255 (lat, long: 180, 68+(##-31)+++*+++6)
 
 *WellKnownScaleSet*: N/A
 
@@ -284,7 +352,7 @@ The Universal Transversal Mercator (a special case of transverse Mercator), divi
 
 *TileHeight*: 256
 
-| *TileMatrix id* | *Scale Denominator* | *Cell Size (m) along the central meridian* | *Cell Size (m) at a point on the Equator and at longitude ±30.700524332812+3+(##-31)*6* | *Matrix Width* | *Matrix Height*
+| *TileMatrix id* | *Scale Denominator* | *Cell Size (m) along the central meridian* | *Cell Size (m) at a point on the Equator and at longitude stem:[pm]30.700524332812+3+(##-31)*6* | *Matrix Width* | *Matrix Height*
 | 1 | 279,072,704.500914 | 78,140.3572602559 | 67,108.864 | 1 | 2
 | 2 | 139,536,352.250457 | 39,070.178630128 | 33,554.432 | 2 | 4
 | 3 | 69,768,176.1252285 | 19,535.089315064 | 16,777.216 | 4 | 8
@@ -310,34 +378,68 @@ The Universal Transversal Mercator (a special case of transverse Mercator), divi
 | 23 | 66.5361176731382 | 0.0186301129484787 | 0.016 | 4,194,304 | 8,388,608
 | 24 | 33.2680588365691 | 0.00931505647423934 | 0.008 | 8,388,608 | 16,777,216
 |===
- 
 
-One can define an arbitrary number of zoom levels and do not need to include all the zoom levels defined here. Here, 24 zoom levels are illustrated.
 
-NOTE: The southern hemisphere ([http://www.opengis.net/def/crs/EPSG/0/32701, http://www.opengis.net/def/crs/EPSG/0/32760]) is covered by extending the UTM northern CRSs to the south in a way that the southern hemisphere CRSs are neither used nor needed.
+One can define an arbitrary number of zoom levels and do not need to include all the
+zoom levels defined here. Here, 24 zoom levels are illustrated.
 
-NOTE: The UTM projection is supposed to be used in zones that are only 3 degrees apart from the central meridian forming 6-degree wide zones. In some parts of the world, it is useful to relax this limitation to cover a wider object (for example, Spain can be fully represented in UTM30 zone if the 3-degree limit is relaxed). The farther one goes from the central meridian, the more deformations is experienced in the projection. The top left corner of this tile matrix set has been defined 65 degrees apart of the central meridian to allow much more extreme cases, but it is highly recommended that applications limit themselves to the 6-degree wide central area and use TileMatrixSetLimits to define actual boundaries of the tile indices used in this area.
+NOTE: The southern hemisphere ([http://www.opengis.net/def/crs/EPSG/0/32701,
+http://www.opengis.net/def/crs/EPSG/0/32760]) is covered by extending the UTM
+northern CRSs to the south in a way that the southern hemisphere CRSs are neither
+used nor needed.
 
-[#img_tile-matrix-id-1-2,reftext='{figure-caption} {counter:figure-num}']
+NOTE: The UTM projection is supposed to be used in zones that are only 3 degrees
+apart from the central meridian forming 6-degree wide zones. In some parts of the
+world, it is useful to relax this limitation to cover a wider object (for example,
+Spain can be fully represented in UTM30 zone if the 3-degree limit is relaxed). The
+farther one goes from the central meridian, the more deformations is experienced in
+the projection. The top left corner of this tile matrix set has been defined 65
+degrees apart of the central meridian to allow much more extreme cases, but it is
+highly recommended that applications limit themselves to the 6-degree wide central
+area and use TileMatrixSetLimits to define actual boundaries of the tile indices used
+in this area.
+
+[[fig17]]
 .Tile Matrix Id 1 (dashed blue lines; 1x2 tiles) and 2 (red lines; 2x4 tiles) of the UTM18WGS84Quad TileMatrixSet (Source NGA)
-image::figures/13.png[Tile Matrix Id 1 (dashed blue lines; 1x2 tiles) and 2 (red lines; 2x4 tiles) of the UTM18WGS84Quad TileMatrixSet (Source NGA)]
+image::13.png[Tile Matrix Id 1 (dashed blue lines; 1x2 tiles) and 2 (red lines; 2x4 tiles) of the UTM18WGS84Quad TileMatrixSet (Source NGA)]
 
-NOTE: The NGA Geomatics Office recommends the use of Universal zoom-levels scale set that are defined as true cell size at ±30.700524332812 degrees of longitude at both sides of the central meridian that implies a scale reduction at the central meridian of 0.85882463752355. The tiles considering this scale are exactly the same than considering true cell size at the equation and no scale reduction. This standard recommends the use of scale denominators at the equator for convenience.
+[NOTE,keep-separate=true]
+====
+The NGA Geomatics Office recommends the use of Universal zoom-levels scale set that
+are defined as true cell size at stem:[pm]30.700524332812 degrees of longitude at
+both sides of the central meridian that implies a scale reduction at the central
+meridian of 0.85882463752355. The tiles considering this scale are exactly the same
+than considering true cell size at the equation and no scale reduction. This standard
+recommends the use of scale denominators at the equator for convenience.
+====
 
-[[arctic-universal-polar-stereographic-wgs-84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0upsarcticwgs84quad]]
+[[aups-wgs84]]
 === Arctic Universal Polar Stereographic WGS 84 Quad (UPSArcticWGS84Quad)
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/UPSArcticWGS84Quad*
 
-It is difficult to find consensus in the geospatial community for what constitutes the “best” tile matrix set for the polar areas. Even if everyone agrees on using a polar stereographic, the election of the PointOfOrigin and scale denominators is almost arbitrary. This document presents the NGA recommendation for polar stereographic that allows for the representation of more than one hemisphere to 15 degrees into the opposite hemisphere and shares a common set of cell sizes with the WorldMercatorWGS84Quad and the UTM##WGS84Quad. The selection of a CRS for a polar stereographic is difficult and this document follows several criteria (see NOTE 2). In the end, the UPS North that is commonly used in conjunction with UTM was selected.
+It is difficult to find consensus in the geospatial community for what constitutes
+the "best" tile matrix set for the polar areas. Even if everyone agrees on using a
+polar stereographic, the election of the PointOfOrigin and scale denominators is
+almost arbitrary. This document presents the NGA recommendation for polar
+stereographic that allows for the representation of more than one hemisphere to 15
+degrees into the opposite hemisphere and shares a common set of cell sizes with the
+WorldMercatorWGS84Quad and the UTM##WGS84Quad. The selection of a CRS for a polar
+stereographic is difficult and this document follows several criteria (see NOTE 2).
+In the end, the UPS North that is commonly used in conjunction with UTM was selected.
 
-NOTE: In Mercator or Transversal Mercator projections the first scale denominator and top left corner are selected in a way that a single tile can cover all ranges of longitudes or latitudes respectively. Due to the nature of this projection, these criteria cannot be applied. The top left corner selection deeply depends on the application. The very distant top left corner was selected here to include as many applications as possible.
+NOTE: In Mercator or Transversal Mercator projections the first scale denominator and
+top left corner are selected in a way that a single tile can cover all ranges of
+longitudes or latitudes respectively. Due to the nature of this projection, these
+criteria cannot be applied. The top left corner selection deeply depends on the
+application. The very distant top left corner was selected here to include as many
+applications as possible.
 
-[#definition-of-the-upsarcticwgs84quad-tilematrixset,reftext='{table-caption} {counter:table-num}']
+[[table32]]
 .Definition of the UPSArcticWGS84Quad TileMatrixSet
 [width = "100%"]
 |===
-6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/5041, WGS 84 Universal Polar Stereographic North
+6+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/5041, WGS 84 Universal Polar Stereographic North
 
 *BBOX LowerLeft:* -14,440,759.350252, -14,440,759.350252
 
@@ -350,7 +452,7 @@ NOTE: In Mercator or Transversal Mercator projections the first scale denominato
 *TileWidth*: 256
 
 *TileHeight*: 256
-| *Tile Matrix id* | *Scale Denominator* | *Cell Size (m) (true at latitude  ~81)* | *True Cell Size (m) at the pole (informative)* | *Matrix Width* | *Matrix Height*
+| *Tile Matrix id* | *Scale Denominator* | *Cell Size (m) (true at latitude  ~81)* | *True Cell Size (m) at the pole (informative)* | *Matrix Width* | *Matrix Height*
 | 0 | 458,726,544.4 | 128,443.4324 | 129,218.7449 | 1 | 1
 | 1 | 229,363,272.2 | 64,221.71621 | 64,609.37245 | 2 | 2
 | 2 | 114,681,636.1 | 32,110.85811 | 32,304.68622 | 4 | 4
@@ -377,37 +479,55 @@ NOTE: In Mercator or Transversal Mercator projections the first scale denominato
 | 23 | 54.68446545 | 0.01531165 | 0.015404075 | 8,388,608 | 8,388,608
 | 24 | 27.34223273 | 0.007655825 | 0.007702037 | 16,777,216 | 16,777,216
 |===
- 
 
-One can define an arbitrary number of zoom levels and does not need to include all the zoom levels defined here. Here, 25 zoom levels are illustrated.
+One can define an arbitrary number of zoom levels and does not need to include all
+the zoom levels defined here. Here, 25 zoom levels are illustrated.
 
-[#img_tile-martix-id-0-1,reftext='{figure-caption} {counter:figure-num}']
+[[fig18]]
 .Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (blank lines; 2x2 tiles) of the UPSArcticWGS84Quad TileMatrixSet (Source NGA)
-image::figures/14.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (blank lines; 2x2 tiles) of the UPSArcticWGS84Quad TileMatrixSet (Source NGA)]
+image::14.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (blank lines; 2x2 tiles) of the UPSArcticWGS84Quad TileMatrixSet (Source NGA)]
 
+[NOTE,keep-separate=true]
+====
+In practice, there are many polar stereographic CRS and it is difficult to prioritize
+one. In many occasions, the meridian of origin is selected in order to rotate the
+projection and allow a region to become more prominent. Examples are rotations
+emphasizing Greenland or Alaska. To be general, the 0 meridian of origin was
+selected. In addition, polar projections have a variety of standard parallels and
+here is selected 90N. In the UPS system, the North Pole is assigned the coordinates
+x=2,000,000, y=2,000,000.
+====
 
-NOTE: In practice, there are many polar stereographic CRS and it is difficult to prioritize one. In many occasions, the meridian of origin is selected in order to rotate the projection and allow a region to become more prominent. Examples are rotations emphasizing Greenland or Alaska. To be general, the 0 meridian of origin was selected. In addition, polar projections have a variety of standard parallels and here is selected 90N. In the UPS system, the North Pole is assigned the coordinates x=2,000,000, y=2,000,000.
+[NOTE,keep-separate=true]
+====
+NGA has suggested also another TileMatrixSet called _sixteenth tile_ that covers less
+area by having the _PointOfOrigin_ at 2,110,189.837563, 6,110,189.837563, BBOX
+LowerLeft: 2,110,189.837562966, -2,110,189.837562966 and BBOX UpperRight:
+6,110,189.837562966, 6,110,189.837562966. The same result can be achieved by using
+the TileMatrixSetLimits mechanism without having to define an entirely new
+TileMatrixSet.
+====
 
-NOTE: NGA has suggested also another TileMatrixSet called _sixteenth tile_ that covers less area by having the _PointOfOrigin_ at 2,110,189.837563, 6,110,189.837563, BBOX LowerLeft: 2,110,189.837562966, -2,110,189.837562966 and BBOX UpperRight: 6,110,189.837562966, 6,110,189.837562966. The same result can be achieved by using the TileMatrixSetLimits mechanism without having to define an entirely new TileMatrixSet.
-
-[#img_rotation-of-the-meridian,reftext='{figure-caption} {counter:figure-num}']
+[[fig19]]
 .Rotation of the meridian of origin to allow a region to become more prominent (a. EPSG:3995, Arctic WGS 84 Polar Stereographic, b. EPSG:3413 WGS 84 / NSIDC Polar Stereographic North, c. EPSG:5936 / Alaska Polar Stereographic). This TileMatrixSet has 0 rotation angle for the meridian of origin.
-image::figures/15.png[Rotation of the meridian of origin to allow a region to become more prominent (a. EPSG:3995, Arctic WGS 84 Polar Stereographic, b. EPSG:3413 WGS 84 / NSIDC Polar Stereographic North, c. EPSG:5936 / Alaska Polar Stereographic). This TileMatrixSet has 0 rotation angle for the meridian of origin.]
+image::15.png[Rotation of the meridian of origin to allow a region to become more prominent (a. EPSG:3995, Arctic WGS 84 Polar Stereographic, b. EPSG:3413 WGS 84 / NSIDC Polar Stereographic North, c. EPSG:5936 / Alaska Polar Stereographic). This TileMatrixSet has 0 rotation angle for the meridian of origin.]
 
-
-[[antarctic-universal-polar-stereographic-wgs84-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0-upsantarcticwgs84quad]]
+[[aups-wgs84-2]]
 === Antarctic Universal Polar Stereographic WGS84 Quad (UPSAntarcticWGS84Quad)
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/UPSAntarcticWGS84Quad*
 
-There is no consensus in the geospatial community for what constitutes the “best” tile matrix set for the polar stereographic projection. One reason for this is that the election of the PointOfOrigin and scale denominators is almost completely arbitrary. In this document, a TileMatrixSet identical to the Arctic one but with and Antarctic CRS was selected.
+There is no consensus in the geospatial community for what constitutes the "best"
+tile matrix set for the polar stereographic projection. One reason for this is that
+the election of the PointOfOrigin and scale denominators is almost completely
+arbitrary. In this document, a TileMatrixSet identical to the Arctic one but with and
+Antarctic CRS was selected.
 
-
-[#definition-of-the-upsantarcticwgs84quad-tilematrixset,reftext='{table-caption} {counter:table-num}']
+[[table33]]
 .Definition of the UPSAntarcticWGS84Quad TileMatrixSet
 [width = "100%"]
 |===
-6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/5042, WGS 84 Universal Polar Stereographic South
+6+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/5042, WGS 84 Universal Polar Stereographic South
 
 *BBOX LowerLeft:* -14,440,759.350252, -14,440,759.350252
 
@@ -421,7 +541,7 @@ There is no consensus in the geospatial community for what constitutes the “be
 
 *TileHeight*: 256
 
-| *Tile Matrix id* | *Scale Denominator* | *Cell Size (m) (true at latitude  ~-81)* | *True Cell Size (m) at the pole (informative)* | *Matrix Width* | *Matrix Height*
+| *Tile Matrix id* | *Scale Denominator* | *Cell Size (m) (true at latitude  ~-81)* | *True Cell Size (m) at the pole (informative)* | *Matrix Width* | *Matrix Height*
 | 0 | 458,726,544.4 | 128,443.4324 | 129,218.7449 | 1 | 1
 | 1 | 229,363,272.2 | 64,221.71621 | 64,609.37245 | 2 | 2
 | 2 | 114,681,636.1 | 32,110.85811 | 32,304.68622 | 4 | 4
@@ -448,25 +568,25 @@ There is no consensus in the geospatial community for what constitutes the “be
 | 23 | 54.68446545 | 0.01531165 | 0.015404075 | 8,388,608 | 8,388,608
 | 24 | 27.34223273 | 0.007655825 | 0.007702037 | 16,777,216 | 16,777,216
 |===
- 
 
-One can define an arbitrary number of zoom levels and does not need to include all the zoom levels defined here. Here, 25 zoom levels are illustrated.
+One can define an arbitrary number of zoom levels and does not need to include all
+the zoom levels defined here. Here, 25 zoom levels are illustrated.
 
-[#img_tile-matrix-id-0-1-ups,reftext='{figure-caption} {counter:figure-num}']
+[[fig20]]
 .Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black lines; 2x2 tiles) of the UPSAntarcticWGS84Quad TileMatrixSet (Source NGA)
-image::figures/16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black lines; 2x2 tiles) of the UPSAntarcticWGS84Quad TileMatrixSet (Source NGA)]
- 
+image::16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black lines; 2x2 tiles) of the UPSAntarcticWGS84Quad TileMatrixSet (Source NGA)]
 
-[[european-etrs89-laea-quad-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0europeanetrs89_laeaquad]]
+
+[[etrs89]]
 === European ETRS89 Lambert azimuthal equal-area Quad (EuropeanETRS89_LAEAQuad)
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/EuropeanETRS89_LAEAQuad*
 
-[#definition-of-the-europeanetrs89_laeaquad-tilematrixset,reftext='{table-caption} {counter:table-num}']
+[[table34]]
 .Definition of the EuropeanETRS89_LAEAQuad TileMatrixSet
 [cols="15%,25%,30%,15%,15%",width="100%"]
 |===
-5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3035, ETRS89
+5+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3035, ETRS89
 
 *BBOX LowerLeft:* 1,000,000.0, 2,000,000.0
 
@@ -497,22 +617,24 @@ image::figures/16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black li
 | 14 |3831.727164132255 |1.0728836060 |16,384 |16,384
 | 15 |1915.8635820661275 |0.5364418030 |32,768 |32,768
 |===
- 
 
-One can define an arbitrary number of zoom levels and does not need to include all the zoom levels defined here. Here, 16 zoom levels are illustrated.
+One can define an arbitrary number of zoom levels and does not need to include all
+the zoom levels defined here. Here, 16 zoom levels are illustrated.
 
-NOTE: Please note that the EPSG:3035 is defined as: "Cartesian  CS. Axes: northing, easting (Y,X). Orientations: north, east. UoM: m". Be aware the axis order is not (X,Y).
+NOTE: Please note that the EPSG:3035 is defined as: "Cartesian  CS. Axes: northing,
+easting (Y,X). Orientations: north, east. UoM: m". Be aware the axis order is not
+(X,Y).
 
-[[canadian-nad83-lcc-tilematrixset-definition-httpwww.opengis.netdeftilematrixsetogc1.0canadiannad83_lcc]]
+[[nad83]]
 === Canadian NAD83 Lambert Conformal Conic (CanadianNAD83_LCC)
 
 *URI: http://www.opengis.net/def/tilematrixset/OGC/1.0/CanadianNAD83_LCC*
 
-[#Definition-of-the-canadiannad83_lcc-tilematrixset,reftext='{table-caption} {counter:table-num}']
+[[table35]]
 .Definition of the CanadianNAD83_LCC TileMatrixSet
 [cols="14%,16%,16%,16%,14%,12%,12%",width="100%"]
 |===
-7+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3978, NAD83
+7+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3978, NAD83
 
 *BBOX LowerLeft:* -7,786,476.885838887, -5,153,821.09213678
 
@@ -553,6 +675,6 @@ NOTE: Please note that the EPSG:3035 is defined as: "Cartesian  CS. Axes: northi
 | 24 | 396.8757938 | 420 |   | 0.111125222 | 1,469,505 | 1,562,983
 | 25 | 236.2355915 | 250 |   | 0.066145966 | 2,468,768 | 2,625,811
 |===
- 
 
-One can define an arbitrary number of zoom levels and does not need to include all the zoom levels defined here. Here, 26 zoom levels are illustrated.
+One can define an arbitrary number of zoom levels and does not need to include all
+the zoom levels defined here. Here, 26 zoom levels are illustrated.

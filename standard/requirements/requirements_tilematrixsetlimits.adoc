@@ -1,7 +1,8 @@
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
-2+|http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits {set:cellbgcolor:#FFFFFF}
-|Target type |tile set metadata
-|Dependency |http://www.opengis.net/spec/tms/2.0/req/tilematrixset
-|===
+
+[requirements_class]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits
+subject:: tile set metadata
+inherit:: http://www.opengis.net/spec/tms/2.0/req/tilematrixset
+====

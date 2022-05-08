@@ -1,10 +1,18 @@
+
 [[ats_json_tilesetmetadata_model]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/json-tilesetmetadata/model*
-| Test Purpose | Validate that a TileSetMetadata encoded in JSON implements the class TileSetMetadata
+[abstract_test]
+====
+[%metadata]
+label:: /conf/json-tilesetmetadata/model
 
-| Test method | Validate the requirements of the model
+test-purpose:: Validate that a TileSetMetadata encoded in JSON implements the class
+TileSetMetadata
 
-Test passes if TileSetMetadata instances follow the data model specified in the requirement and associated tables and its dependencies.
-|===
+[.component,class=test-method]
+--
+Validate the requirements of the model
+
+Test passes if TileSetMetadata instances follow the data model specified in the
+requirement and associated tables and its dependencies.
+--
+====

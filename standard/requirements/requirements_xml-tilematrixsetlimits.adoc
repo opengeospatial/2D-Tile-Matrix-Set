@@ -2,7 +2,7 @@
 [requirements_class]
 ====
 [%metadata]
-label:: http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixsetlimits 
+label:: http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixsetlimits
 subject:: tile set metadata
 inherit:: http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits
 ====

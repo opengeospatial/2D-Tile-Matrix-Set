@@ -1,10 +1,20 @@
-[[ats_json_variablematrixwidth_schema]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/json-variablematrixwidth/schema*
-| Test Purpose | Validate that a VariableMatrixWidth encoded in JSON validates using the JSON schema for a variable matrix width.
-|Requirement |<<req_json_variablematrixwidth_schema>>
-| Test method | Validate the requirements of the schema
 
-Test passes if VariableMatrixWidth JSON instances pass validation against the variable matrix width JSON Schemas.
-|===
+[[ats_json_variablematrixwidth_schema]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/json-variablematrixwidth/schema
+
+subject:: <<req_json_variablematrixwidth_schema>>
+
+test-purpose:: Validate that a VariableMatrixWidth encoded in JSON validates using the
+JSON schema for a variable matrix width.
+
+[.component,class=test-method]
+--
+Validate the requirements of the schema
+
+Test passes if VariableMatrixWidth JSON instances pass validation against the variable
+matrix width JSON Schemas.
+--
+====

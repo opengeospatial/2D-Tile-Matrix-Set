@@ -1,10 +1,20 @@
-[[ats_xml_tilesetmetadata_media-type]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/xml-tilematrixset/media-type*
-| Test Purpose | Validate that a TileSetMetadata encoded in an independent XML document uses the media type application/xml.
-|Requirement |<<req_xml_tilesetmetadata_media-type>>
-| Test method | Validate the requirements of the media type
 
-Test passes if the independent instances of TileSetMetadata are exposed as application/xml MIME type.
-|===
+[[ats_xml_tilesetmetadata_media-type]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/xml-tilematrixset/media-type
+
+subject:: <<req_xml_tilesetmetadata_media-type>>
+
+test-purpose:: Validate that a TileSetMetadata encoded in an independent XML document
+uses the media type application/xml.
+
+[.component,class=test-method]
+--
+Validate the requirements of the media type
+
+Test passes if the independent instances of TileSetMetadata are exposed as
+application/xml MIME type.
+--
+====

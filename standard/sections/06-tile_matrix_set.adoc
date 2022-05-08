@@ -328,9 +328,9 @@ two-dimensional tile space. The expectation is that tile matrix sets are defined
 and that servers or encodings using or distributing tiles will declare the usage of a
 tile matrix set by linking to that tile matrix set.
 
-include::requirements/requirements_tilematrixset.adoc[]
+include::../requirements/requirements_tilematrixset.adoc[]
 
-include::requirements/tilematrixset/REQ_tilematrixset_model.adoc[]
+include::../requirements/tilematrixset/REQ_tilematrixset_model.adoc[]
 
 [[fig9]]
 .TileMatrixSet UML model
@@ -547,9 +547,9 @@ tiles, if applicable (e.g some formats of vector tiles)
 This requirements class provides the necessary support for variable matrix width tile
 matrix sets.
 
-include::requirements/requirements_variablematrixwidth.adoc[]
+include::../requirements/requirements_variablematrixwidth.adoc[]
 
-include::requirements/variablematrixwidth/REQ_variablematrixwidth_model.adoc[]
+include::../requirements/variablematrixwidth/REQ_variablematrixwidth_model.adoc[]
 
 [[fig10]]
 .VariableMatrixWidth UML model
@@ -573,4 +573,4 @@ Non negative integer type{blank}footnote:[From minTileRow to matrixWidth-1 of th
 tileMatrix section of the associated tileMatrixSet.] | One (mandatory)
 |===
 
-include::requirements/variablematrixwidth/REQ_variablematrixwidth_coalescence1.adoc[]
+include::../requirements/variablematrixwidth/REQ_variablematrixwidth_coalescence1.adoc[]

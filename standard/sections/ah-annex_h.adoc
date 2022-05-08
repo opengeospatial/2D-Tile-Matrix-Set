@@ -18,7 +18,7 @@ that the resource is only available in a fragment of the tiled space.
 
 This example illustrates a TileSetMetadata instance encoded in JSON.
 
-[source,json]
+[source,json,options="unnumbered"]
 ----
 include::../../schemas/tms/2.0/json/examples/tileset/tiles.WebMercatorQuad.json[]
 ----
@@ -31,7 +31,7 @@ of an API that provides tiles.
 This JSON Schema can be used in an API definition in JSON format and
 to validate the previous JSON example.
 
-[source,json]
+[source,json,options="unnumbered"]
 ----
 include::../../schemas/tms/2.0/json/tileSet.json[]
 ----
@@ -41,7 +41,7 @@ include::../../schemas/tms/2.0/json/tileSet.json[]
 This JSON Schema is referenced by the TileSetMetadata schema to define
 limits for each tile matrix.
 
-[source,json]
+[source,json,options="unnumbered"]
 ----
 include::../../schemas/tms/2.0/json/tileMatrixLimits.json[]
 ----

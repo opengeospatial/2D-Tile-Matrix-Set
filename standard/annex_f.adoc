@@ -28,7 +28,7 @@ TileMatrixSets (including the ones reproduced in this annex) should validate aga
 these schemas. The following XML Schema fragment reproduces the main module of the
 TileMatrixSet schema.
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/tileMatrixSet.xsd[]
 ----
@@ -52,7 +52,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/WebMercatorQuad.json[]
 
 ==== Web Mercator Quad (XML encoding)
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/examples/tilematrixset/WebMercatorQuad.xml[]
 ----
@@ -78,7 +78,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/WorldCRS84Quad.json[]
 
 ==== World CRS84 Quad (recommended, XML encoding)
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/examples/tilematrixset/WorldCRS84Quad.xml[]
 ----
@@ -103,7 +103,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/WGS1984Quad.json[]
 
 ==== World EPSG:4326 Quad (XML encoding)
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/examples/tilematrixset/WGS1984Quad.xml[]
 ----
@@ -129,7 +129,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/WorldMercatorWGS84Quad.j
 
 ==== World Mercator WGS84 Quad (XML encoding)
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/examples/tilematrixset/WorldMercatorWGS84Quad.xml[]
 ----
@@ -152,7 +152,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/UTM31WGS84Quad.json[]
 
 ==== UTM WGS84 Quad for zone 31 (XML encoding)
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/examples/tilematrixset/UTM31WGS84Quad.xml[]
 ----
@@ -173,7 +173,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/UPSArcticWGS84Quad.json[
 
 ==== Arctic UPS WGS 84 Quad (XML encoding)
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/examples/tilematrixset/UPSArcticWGS84Quad.xml[]
 ----
@@ -194,7 +194,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/UPSAntarcticWGS84Quad.js
 
 ==== Antarctic UPS WGS84 Quad (XML encoding)
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/examples/tilematrixset/UPSAntarcticWGS84Quad.xml[]
 ----
@@ -215,7 +215,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/EuropeanETRS89_LAEAQuad.
 
 ==== European ETRS89 Lambert Azimuthal Equal-Area Quad (XML encoding)
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/examples/tilematrixset/EuropeanETRS89_LAEAQuad.xml[]
 ----
@@ -236,7 +236,7 @@ include::../schemas/tms/2.0/json/examples/tilematrixset/CanadianNAD83_LCC.json[]
 
 ==== Canadian Lambert Conformal Conic NAD83 (XML encoding)
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/examples/tilematrixset/CanadianNAD83_LCC.xml[]
 ----

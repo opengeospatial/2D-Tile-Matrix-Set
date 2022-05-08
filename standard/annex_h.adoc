@@ -51,7 +51,7 @@ include::../schemas/tms/2.0/json/tileMatrixLimits.json[]
 
 This example illustrates a TileSetMetadata instance encoded in XML.
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/examples/tileset/tiles.WebMercatorQuad.xml[]
 ----
@@ -60,7 +60,7 @@ include::../schemas/tms/2.0/xml/examples/tileset/tiles.WebMercatorQuad.xml[]
 === TileSetMetadata XML Schema
 This XML Schema can be used to validate the previous XML example.
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/tileset.xsd[]
 ----
@@ -69,7 +69,7 @@ include::../schemas/tms/2.0/xml/tileset.xsd[]
 This XML Schema is referenced by the TileSetMetadata schema to define
 limits for each tile matrix.
 
-[source,xml]
+[source,xml,options="unnumbered"]
 ----
 include::../schemas/tms/2.0/xml/tilematrixlimits.xsd[]
 ----

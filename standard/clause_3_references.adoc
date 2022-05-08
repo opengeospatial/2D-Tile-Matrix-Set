@@ -1,14 +1,44 @@
+[bibliography]
 == References
 
-The following normative documents contain provisions that, through references in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies. Other none normative, but influencial references can be found in the bibliography.
+* [[[ogc08-005r4, OGC 08-005r4]]]
 
-[1]  OGC: OGC 08-005r4 Abstract Specification Topic 2: Referencing by coordinates, 2010. https://docs.opengeospatial.org/as/18-005r4/18-005r4.html
+* [[[ogc19-014r3, OGC 19-014r3]]]
 
-[2]  OGC: OGC 19-014r3 OGC Abstract Specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space, 2020
-https://docs.ogc.org/as/19-014r3/19-014r3.html
+* [[[ogc09-146r6, OGC 09-146r6]]]
 
-[3]  OGC: OGC 09-146r6 Coverage Implementation Schema (“CIS”) Version 1.1, 2017. http://docs.opengeospatial.org/is/09-146r6/09-146r6.html
+* [[[rfc7159, IETF RFC 7159]]]
 
-[4]  IETF: IETF RFC 7159, The JavaScript Object Notation (JSON) Data Interchange Format, 2014. https://www.ietf.org/rfc/rfc7159.txt
+* [[[ogc18-010r7, OGC 18-010r7]]]
 
-[5]  OGC: OGC 18-010r7, Geographic information — Well-known text representation of coordinate reference systems Version 2.0, 2019. http://docs.opengeospatial.org/is/18-010r7/18-010r7.html
+* [[[iso19123, ISO 19123]]]
+
+* [[[iso19103, ISO 19103]]]
+
+* [[[ogc17-083r2, OGC 17-083r2]]]
+
+* [[[ogc19-014r1, OGC 19-014r1]]]
+
+* [[[ogc06-121r9, OGC 06-121r9]]]
+
+* [[[rfc4646, IETF RFC 4646]]]
+
+* [[[iso19115, ISO 19115]]]
+
+* [[[rfc8288, IETF RFC 8288]]]
+
+* [[[rfc5646, IETF RFC 5646]]]
+
+* [[[ogc08-015r4, OGC 08-015r4]]]
+
+* [[[ogc07-147r2, OGC 07-147r2]]]
+
+* [[[iso15444-1, ISO 15444-1]]]
+
+* [[[iso15444-9, ISO 15444-9]]]
+
+* [[[iso19107, ISO 19107]]]
+
+* [[[iso19111, ISO 19111]]]
+
+* [[[iso19115-1, ISO 19115-1]]]

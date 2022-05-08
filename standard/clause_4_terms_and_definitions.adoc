@@ -1,176 +1,225 @@
 [[terms-and-definitions]]
 == Terms and Definitions
 
-This document uses the terms defined in Sub-clause 5.3 of [OGC 06-121r9], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
+[.boilerplate]
+=== {blank}
+This document uses the terms defined in <<ogc06-121r9, clause=5.3>>, which is based
+on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of
+International Standards. In particular, the word "shall" (not "must") is the verb
+form used to indicate a requirement to be strictly followed to conform to this
+standard.
 
-For the purposes of this Standard, the following additional terms and definitions apply:
+For the purposes of this Standard, the following additional terms and definitions
+apply:
 
-*4.1*           
-
-*cell*
+=== cell
 
 minimum geometrical spaces delimited by the grid lines of a regular grid.
 
 NOTE: in 2D spaces, cells are often referred as pixels.
 
-NOTE: In this standard, the term _pixel_ is reserved to the individual elements of a visualization device. Tiles are composed by regular grid cells that can be made partially coincident with the pixels of a visualization device for display purposes.
+NOTE: In this standard, the term _pixel_ is reserved to the individual elements of a
+visualization device. Tiles are composed by regular grid cells that can be made
+partially coincident with the pixels of a visualization device for display purposes.
 
-*4.2*
+=== coordinate reference system
 
-*coordinate reference system*
+coordinate system that is related to the real world by a datum
 
-coordinate system that is related to the real world by a datum [ISO 19111]
+[.source]
+<<iso19111>>
 
-*4.3*           
+=== coordinate system
 
-*coordinate system*
+set of mathematical rules for specifying how coordinates are to be assigned to points
 
-set of mathematical rules for specifying how coordinates are to be assigned to points [ISO 19111]
+[.source]
+<<iso19111>>
 
-*4.4*           
+=== domain
 
-*domain*
+well-defined set
 
-well-defined set [ISO/TS 19103:2005]
+NOTE: A mathematical function may be defined on this set, i.e. in a function stem:[f:
+A -> B], stem:[A] is the domain of the function stem:[f].
 
-NOTE: A mathematical function may be defined on this set, i.e. in a function f:A–>B, A is the domain of the function f.
+[.source]
+<<iso19103>>
 
-*4.5*           
 
-*grid*
+=== grid
 
-network composed of two or more sets of curves in which the members of each set intersect the members of the other sets in an algorithmic way [ISO 19123:2005]
+network composed of two or more sets of curves in which the members of each set
+intersect the members of the other sets in an algorithmic way
 
 NOTE: The curves partition a space into grid cells.
 
 NOTE: A grid can be used to define a tessellation of the space.
 
-*4.6*           
+[.source]
+<<iso19123>>
 
-*range set*
+=== range set
 
-set of all values a function f can take as its arguments vary over its domain [OGC 07-036]
+set of all values a function stem:[f] can take as its arguments vary over its domain
 
-*4.7*           
+[.source]
+<<ogc07-036>>>
 
-*raster tile*
+=== raster tile
 
-tile that contains information in a gridded form. Commonly the values of the grid represent colors of each cell in the grid for immediate pictorial representation on visualization devices, but can also be coverage subsets.
+tile that contains information in a gridded form. Commonly the values of the grid
+represent colors of each cell in the grid for immediate pictorial representation on
+visualization devices, but can also be coverage subsets.
 
-NOTE: This concept is used in this standard as a contraposition of "vector tiles". Many of the existing implementations of WMTS 1.0 produce "raster tiles".
+NOTE: This concept is used in this standard as a contraposition of "vector tiles".
+Many of the existing implementations of WMTS 1.0 produce "raster tiles".
 
-*4.8*           
+=== regular grid
 
-*regular grid*
-
-grid whose grid lines have a constant distance along each grid axis [OGC 09-146r6]
+grid whose grid lines have a constant distance along each grid axis
 
 NOTE: A regular grid can be used to define a regular tessellation of the space.
 
-*4.9*
+[.source]
+<<ogc09-146r6>>
 
-*space partitioning*
+=== space partitioning
 
-process of dividing a geometric space (usually a Euclidean space) into two or more disjoint subsets (see also partition of a set). Space partitioning divides a space into non-overlapping regions. Any point in the space can then be identified to lie in exactly one of the regions [OGC 19-014r3]
+process of dividing a geometric space (usually a Euclidean space) into two or more
+disjoint subsets (see also partition of a set). Space partitioning divides a space
+into non-overlapping regions. Any point in the space can then be identified to lie in
+exactly one of the regions
 
-*4.10*
+[.source]
+<<ogc19-014r3>>
 
-*square*
+=== square
 
-regular quadrilateral with four equal sides and four 90 degree angles [OGC 19-014r3]
+regular quadrilateral with four equal sides and four 90 degree angles
 
-*4.11*
+[.source]
+<<ogc19-014r3>>
 
-*tessellation*
+=== tessellation
 
-partitioning of a space into a set of conterminous subspaces having the same dimension as the space being partitioned [ISO 19123]
+partitioning of a space into a set of conterminous subspaces having the same
+dimension as the space being partitioned
 
-NOTE: A tessellation composed of congruent regular polygons or polyhedra is a regular tessellation. One composed of regular, but non-congruent polygons or polyhedra is a semi-regular tessellation. Otherwise the tessellation is irregular.
+NOTE: A tessellation composed of congruent regular polygons or polyhedra is a regular
+tessellation. One composed of regular, but non-congruent polygons or polyhedra is a
+semi-regular tessellation. Otherwise the tessellation is irregular.
 
 NOTE: The expression "same dimension" should be interpreted as "same dimensionality"
 
-*4.12*           
+[.source]
+<<iso19123>>
 
-*tile*
+=== tile
 
-geometric shape with known properties that may or may not be the result of a tiling (tessellation) process. A tile consists of a single connected "piece" without "holes" or "lines" (topological disc).
+geometric shape with known properties that may or may not be the result of a tiling
+(tessellation) process. A tile consists of a single connected "piece" without "holes"
+or "lines" (topological disc).
 
-NOTE: From OGC 19-014r1: Core Tiling Conceptual and Logical Models for 2D Euclidean Space
+NOTE: From <<ogc19-014r1>>: Core Tiling Conceptual and Logical Models for 2D
+Euclidean Space
 
-In the context of a 2D _tile matrix_, a _tile_ is one of the rectangular regions of space, which can be uniquely identified by an integer row and column, making up the tile matrix.
+In the context of a 2D _tile matrix_, a _tile_ is one of the rectangular regions of
+space, which can be uniquely identified by an integer row and column, making up the
+tile matrix.
 
-In the context of a geospatial data _tile set_, a _tile_ contains data for such a partition of space as part of an overall set of tiles for that tiled geospatial data.
+In the context of a geospatial data _tile set_, a _tile_ contains data for such a
+partition of space as part of an overall set of tiles for that tiled geospatial data.
 
-NOTE: Tiles are useful to efficiently request, transfer, cache, display, store and process geospatial data for a specific resolution and area of interest, providing deterministic performance and scalability
+NOTE: Tiles are useful to efficiently request, transfer, cache, display, store and
+process geospatial data for a specific resolution and area of interest, providing
+deterministic performance and scalability
 for arbitrarily large datasets.
 
-NOTE: Tiles can contain a variety of data types, such as grid-based pictorial representations (map tiles), coverage subsets (coverage tiles), or feature-based representations (vector tiles).
+NOTE: Tiles can contain a variety of data types, such as grid-based pictorial
+representations (map tiles), coverage subsets (coverage tiles), or feature-based
+representations (vector tiles).
 
-*4.13*        
+=== tile matrix
 
-*tile matrix*
+tiling grid in a given 2D coordinate reference system, associated to a specific scale
+and partitioning space into regular conterminous _tiles_, each of which being
+assigned a unique identifier
 
+NOTE: Each tile of a tile matrix is uniquely identifiable by a row and a column
+integer indices. The number of rows is referred to as the _matrix height_, while the
+maximum number of columns is referred to
+as the _matrix width_ (the number of columns can vary for different rows in _variable
+width tile matrices_).
 
-tiling grid in a given 2D coordinate reference system, associated to a specific scale and partitioning space into regular conterminous _tiles_, each of which being assigned a unique identifier
+=== tile matrix set
 
-NOTE: Each tile of a tile matrix is uniquely identifiable by a row and a column integer indices. The number of rows is referred to as the _matrix height_, while the maximum number of columns is referred to
-as the _matrix width_ (the number of columns can vary for different rows in _variable width tile matrices_).
+_tiling scheme_ consisting of a set of _tile matrices_ defined at different scales
+covering approximately the same area and having a common coordinate reference system.
 
-*4.14*        
+=== tile indexing scheme
 
-*tile matrix set*
-
-_tiling scheme_ consisting of a set of _tile matrices_ defined at different scales covering approximately the same area and having a common coordinate reference system.
-
-*4.15*
-
-*tile indexing scheme*
-scheme allowing to uniquely reference a _tile_ in a _tiling scheme_ by the use of a unique identifier (or set of identifiers), and reversely, which unique identifier (or unique set of identifiers) corresponds
+scheme allowing to uniquely reference a _tile_ in a _tiling scheme_ by the use of a
+unique identifier (or set of identifiers), and reversely, which unique identifier (or
+unique set of identifiers) corresponds
 to a space satisfying the geometric properties of a specific tile
 
-NOTE: Adapted from the indexing aspect of the _tile scheme_ definition of the OGC 19-014r1: Core Tiling Conceptual and Logical Models for 2D Euclidean Space
+NOTE: Adapted from the indexing aspect of the _tile scheme_ definition of the
+<<ogc19-014r1>>: Core Tiling Conceptual and Logical Models for 2D Euclidean Space
 
-*4.16*
-
-*tile set*
+=== tile set
 
 a set of _tiles_ resulting from tiling data according to a particular _tiling scheme_
 
-NOTE: From OGC 19-014r1: Core Tiling Conceptual and Logical Models for 2D Euclidean Space, but adapted to clarify that in the context of this document, a tile set refers specifically to a set of tiles containing data and following a common tiling scheme.
+NOTE: From <<ogc19-014r1>>: Core Tiling Conceptual and Logical Models for 2D
+Euclidean Space, but adapted to clarify that in the context of this document, a tile
+set refers specifically to a set of tiles containing data and following a common
+tiling scheme.
 
-*4.17*
+=== tiling scheme
 
-*tiling scheme*
+scheme that defines how space is partitioned into individual _tiles_, potentially
+featuring multiple levels of detail (each tiling at a different granularity to
+reflect a different resolution or scale)
 
-scheme that defines how space is partitioned into individual _tiles_, potentially featuring multiple levels of detail (each tiling at a different granularity to reflect a different resolution or scale)
+A tiling scheme defines the spatial reference system and the geometric properties of
+each tile defined by the scheme.
+Those properties include which space each tile occupies, i.e. its extent, as well as
+a tile coordinate origin if a particular corner of origin convention is established.
 
-A tiling scheme defines the spatial reference system and the geometric properties of each tile defined by the scheme.
-Those properties include which space each tile occupies, i.e. its extent, as well as a tile coordinate origin if a particular corner of origin convention is established.
-
-NOTE: A tiling scheme can be defined on top of a CRS as well as other spatial reference systems such as DGGS and other organizations including irregular ones.
+NOTE: A tiling scheme can be defined on top of a CRS as well as other spatial
+reference systems such as DGGS and other organizations including irregular ones.
 In this document, only tiling schemes based on CRSs are supported.
 
-NOTE: From the _tile set scheme_ and _tile scheme_ definitions of OGC 19-014r1: Core Tiling Conceptual and Logical Models for 2D Euclidean Space, adapted to reflect the fact that a _tiling scheme_ already
+NOTE: From the _tile set scheme_ and _tile scheme_ definitions of <<ogc19-014r1>>:
+Core Tiling Conceptual and Logical Models for 2D Euclidean Space, adapted to reflect
+the fact that a _tiling scheme_ already
 imparts individual tiles with an origin and an extent
 
-*4.18*        
+=== tile set metadata
 
-*tile set metadata*
+additional metadata beyond the common properties defining the _tile set_. Such
+metadata could be an abstract, the owner, the author, or other common metadata.
 
-additional metadata beyond the common properties defining the _tile set_. Such metadata could be an abstract, the owner, the author, or other common metadata. [OGC 19-014r3]
+metadata describing common properties defining a _tile set_, layers and styles used
+to produce the tile set, the limits of the tile matrix with actual data and common
+metadata such as abstract, owner, author, etc.
 
-metadata describing common properties defining a _tile set_, layers and styles used to produce the tile set, the limits of the tile matrix with actual data and common metadata such as abstract, owner, author, etc.
+[.source]
+<<ogc19-014r3>>
 
-*4.19*        
+=== vector tile
 
-*vector tile*
+tile that contains vector information that has been generalized (simplified) at the
+tile scale resolution and clipped by the tile boundaries.
 
-tile that contains vector information that has been generalized (simplified) at the tile scale resolution and clipped by the tile boundaries.
+NOTE: The expression "vector tile" has stirred some controversy in the OGC. Actually,
+the OGC uses geometrical features to refer to things that are commonly knows as
+vectors in many GIS tools. However, in this case, this standard recognizes the
+ubiquity of the expression in the sector and assumes that the concept is not
+associated to any particular technology or commercial brand.
 
-NOTE: The expression "vector tile" has stirred some controversy in the OGC. Actually, the OGC uses geometrical features to refer to things that are commonly knows as vectors in many GIS tools. However, in this case, this standard recognizes the ubiquity of the expression in the sector and assumes that the concept is not associated to any particular technology or commercial brand.
+=== well-known scale set
 
-*4.20*        
-
-*well-known scale set*
-
-well-known combination of a coordinate reference system and a set of scales that a tile matrix set declares support for
+well-known combination of a coordinate reference system and a set of scales that a
+tile matrix set declares support for

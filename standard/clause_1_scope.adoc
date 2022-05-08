@@ -1,16 +1,53 @@
 == Scope
 
-This OGC Two Dimensional Tile Matrix Set (TMS) and Tile Set Matadata Standard specifies the concepts of a tile matrix set and tile set metadata, prioritizing their implementation in 2D space. There are also some considerations on how to extend the TMS concept to nD. This Standard also provides both XML and JSON encodings.
+This OGC Two Dimensional Tile Matrix Set (TMS) and Tile Set Matadata Standard
+specifies the concepts of a tile matrix set and tile set metadata, prioritizing their
+implementation in 2D space. There are also some considerations on how to extend the
+TMS concept to nD. This Standard also provides both XML and JSON encodings.
 
-The Tile Matrix Set concept, initially developed as part of the OGC Web Map Tile Service (WMTS) 1.0 Standard, is now provided as an independent standard that can be referenced by other standards such as _OGC API - Tiles_, _OGC GeoPackage_, _OGC CDB_, or the Natural Resources Canada (NRCan)-promoted specification _Map Markup Language (MapML)_. In addition, the OGC Two Dimensional Tile Matrix Set (TMS) and Tile Set Matadata Standard ensures that the TMS concept can be used to structure both gridded as well as vector data in a tiled format.
+The Tile Matrix Set concept, initially developed as part of the OGC Web Map Tile
+Service (WMTS) 1.0 Standard, is now provided as an independent standard that can be
+referenced by other standards such as _OGC API - Tiles_, _OGC GeoPackage_, _OGC CDB_,
+or the Natural Resources Canada (NRCan)-promoted specification _Map Markup Language
+(MapML)_. In addition, the OGC Two Dimensional Tile Matrix Set (TMS) and Tile Set
+Matadata Standard ensures that the TMS concept can be used to structure both gridded
+as well as vector data in a tiled format.
 
-This Standard has been developed as an independent and reusable standard. However, it has been developed in parallel with the OGC API - Tiles Standard and to serve its needs. The OGC API family of standards are being developed to make it easy for anyone to provide geospatial data to the web. The OGC API Standards define resource-centric APIs that take advantage of modern web development practices (mainly API definition documents and JSON encodings). Those Standards can be considered and are being constructed as "building blocks" that can be used to assemble OGC APIs for accessing tiles over the web. Throughout this Standard, some OGC API specific comments are found, that can be ignored for other applications.
+This Standard has been developed as an independent and reusable standard. However, it
+has been developed in parallel with the OGC API - Tiles Standard and to serve its
+needs. The OGC API family of standards are being developed to make it easy for anyone
+to provide geospatial data to the web. The OGC API Standards define resource-centric
+APIs that take advantage of modern web development practices (mainly API definition
+documents and JSON encodings). Those Standards can be considered and are being
+constructed as "building blocks" that can be used to assemble OGC APIs for accessing
+tiles over the web. Throughout this Standard, some OGC API specific comments are
+found, that can be ignored for other applications.
 
-This Standard also contains an informative annex for <<annex-common-tilematrixset-definitions-informative>> with a library of proposed tile matrix set definitions for Mercator, Transverse Mercator, Polar Stereographic, Lambert Azimuthal Equal Area, and Lambert Conformal Conic.
-An additional annex for <<annex-variable-tilematrixset-definitions-informative>> provides tile matrix set definitions, utilizing the variable width capabilities of this standard, which allows for roughly approximate equal area tiles for Plate Carrée projections.
+This Standard also contains an informative annex for
+<<annex-common-tilematrixset-definitions-informative,Common TileMatrixSet definitions
+(Informative)>> with a library of proposed tile matrix set definitions for Mercator,
+Transverse Mercator, Polar Stereographic, Lambert Azimuthal Equal Area, and Lambert
+Conformal Conic.
+An additional annex for
+<<annex-variable-tilematrixset-definitions-informative,Variable width TileMatrixSet
+definitions (Informative)>> provides tile matrix set definitions, utilizing the
+variable width capabilities of this standard, which allows for roughly approximate
+equal area tiles for Plate Carrée projections.
 
-Global identifiers for the Tile Matrix Sets defined in these annexes are registered with an OGC register of official definitions called the OGC Naming Authority in the http://www.opengis.net/def/tms[Tile Matrix Set Register].
+Global identifiers for the Tile Matrix Sets defined in these annexes are registered
+with an OGC register of official definitions called the OGC Naming Authority in the
+http://www.opengis.net/def/tms[Tile Matrix Set Register].
 
-The Tile Set Metadata provides information about the intended use of a Tile Set as well as the origin, access constraints, tiling scheme, layers and feature properties contained within. A tile set is a series of tiles containing data and following a common tiling scheme. Tile Set Metadata is intended to facilitate retrieval of tile sets and describes the major characteristics of tile sets without either accessing the tiles or the content within a tile. The Tile Set Metadata was initially developed in phase two of the OGC Vector Tiles Pilot (https://www.ogc.org/vectortiles2) and the results documented in [OGC 19-082r1] OGC Vector Tiles Pilot 2: Tile Set Metadata Engineering Report.
+The Tile Set Metadata provides information about the intended use of a Tile Set as
+well as the origin, access constraints, tiling scheme, layers and feature properties
+contained within. A tile set is a series of tiles containing data and following a
+common tiling scheme. Tile Set Metadata is intended to facilitate retrieval of tile
+sets and describes the major characteristics of tile sets without either accessing
+the tiles or the content within a tile. The Tile Set Metadata was initially developed
+in phase two of the OGC Vector Tiles Pilot (https://www.ogc.org/vectortiles2) and the
+results documented in <<ogc19-082r1>> OGC Vector Tiles Pilot 2: Tile Set Metadata
+Engineering Report.
 
-NOTE: A previous version of this standard had a JSON-LD encoding of the classes presented in <<tilematrixset-model>>. This encoding was abandoned and not included in this version as no interest was detected.
+NOTE: A previous version of this standard had a JSON-LD encoding of the classes
+presented in [tilematrixset-model]. This encoding was abandoned and not included in
+this version as no interest was detected.

@@ -5,7 +5,6 @@ This section provides details and examples for any conventions used in the docum
 
 === Abbreviations
 
-[horizontal]
 2D:: 2-dimensional
 3D:: 3-dimensional
 CDB:: Abbreviated reference for the OGC CDB Standard.
@@ -24,166 +23,244 @@ The normative provisions in this Standard are denoted by the URI
 
 http://www.opengis.net/spec/TileMatrixSet/2.0
 
-All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base URI.
+All requirements and conformance tests that appear in this document are denoted by
+partial URIs which are relative to this base URI.
 
 [[commonClasses]]
 === Common Classes
 
-The following classes are extracted from the [OGC 06-121r9] OWS Common Standard. As such, the data structures presented in this Standard become independent from OWS Common Standard and can be used independently.
+The following classes are extracted from the <<ogc06-121r9>> OWS Common Standard. As
+such, the data structures presented in this Standard become independent from OWS
+Common Standard and can be used independently.
 
 [[multilingualTextEncoding]]
 ==== Multilingual text encoding
-Some text parameters specified with the data type CharacterString in UML are intended to have human-readable values. However not all humans can understand the same spoken languages. This data class is mapped to XML or JSON encodings afterwards.
 
-The specified approach for allowing the language of a text value to be explicitly stated is indicated by the UML class diagram in the figure.
+Some text parameters specified with the data type CharacterString in UML are intended
+to have human-readable values. However not all humans can understand the same spoken
+languages. This data class is mapped to XML or JSON encodings afterwards.
 
-[#img_languagestring-uml-model,reftext='{figure-caption} {counter:figure-num}']
+The specified approach for allowing the language of a text value to be explicitly
+stated is indicated by the UML class diagram in the figure.
+
+[[fig1]]
 .LanguageString UML model
-image::figures/LanguageString.png[LanguageString UML model]
+image::LanguageString.png[LanguageString UML model]
 
-The value parameter specifies the human-language string, and the lang parameter specifies the language (in IETF RFC 4646 syntax) of the string. If a lang parameter is not present, then no language has been specified for the string unless specified by another means.
+The value parameter specifies the human-language string, and the lang parameter
+specifies the language (in <<rfc4646>> syntax) of the string. If a lang parameter is
+not present, then no language has been specified for the string unless specified by
+another means.
 
-In the case that multiple languages are necessary in a single document instance, the element that is of the LanguageString type should be a list with one entry for each _lang_ code.
+In the case that multiple languages are necessary in a single document instance, the
+element that is of the LanguageString type should be a list with one entry for each
+_lang_ code.
 
-NOTE: OGC APIs will use the language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. This does not preclude that in other environments the JSON encodings for language string can implement the LanguageString. In practice this means that a JSON schema for a LanguageString element should support both string and language string types.
+NOTE: OGC APIs will use the language negotiation with HTTP headers. In this
+situation, it is expected that elements defined as a list of LanguageString will
+default into a single CharacterString that in JSON will default into a string data
+type. This does not preclude that in other environments the JSON encodings for
+language string can implement the LanguageString. In practice this means that a JSON
+schema for a LanguageString element should support both string and language string
+types.
 
 ==== Description, Title and Keywords
-A basic set of data description parameters that include a human-readable title, description, and keywords are widely used in this Standard and defined here as a UML.
 
-[#img_description-title-keyword-uml-model,reftext='{figure-caption} {counter:figure-num}']
+A basic set of data description parameters that include a human-readable title,
+description, and keywords are widely used in this Standard and defined here as a UML.
+
+[[fig2]]
 .Description Title Keywords UML model
-image::figures/DescriptionTitleKeyword.png[DescriptionTitleKeywords UML model]
+image::DescriptionTitleKeyword.png[DescriptionTitleKeywords UML model]
 
-[#parts-of-descriptiontitlekeyword-elements,reftext='{table-caption} {counter:table-num}']
+[[table1]]
 .Parts of Description Title Keyword data elements
-[width = "100%",options="header"]
+[options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| title | Title of a tile matrix set, normally used for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
+| title a| Title of a tile matrix set, normally used for display to a human |
+LanguageString data structure a| Zero or more (optional) Include when available and
+useful
 
 Include one for each language represented
-| description | Brief narrative description of a tile matrix set, normally available for display to a human | LanguageString data structure | Zero or more (optional) Include when available and useful
+
+| description a| Brief narrative description of a tile matrix set, normally available
+for display to a human | LanguageString data structure a| Zero or more (optional)
+Include when available and useful
 
 Include one for each language represented
-| keywords | Unordered list of one or more keywords | MD_Keywords class in ISO 19115 | Zero or more (optional)
+
+| keywords a| Unordered list of one or more keywords a| MD_Keywords class in
+<<iso19115>> a| Zero or more (optional)
 
 One for each keyword authority used (one for each 'type' value)
-4+|
 |===
 
-Keywords is described from MD_Keywords class in ISO 19115-1 and has a list of keywords of the same 'type' specified in the optional 'type' element,
+Keywords is described from MD_Keywords class in <<iso19115-1>> and has a list of
+keywords of the same 'type' specified in the optional 'type' element,
 
-[#parts-of-keyword-elements,reftext='{table-caption} {counter:table-num}']
+[[table2]]
 .Parts of Keyword data elements
-[width = "100%",options="header"]
+[options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| keyword | Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a dataset | LanguageString data structure | One or more (optional)
-| type | Type of the keyword | CodeType, as adaptation of MD_Identifier class ISO 19115 | Zero or one (optional)
-4+|
+| keyword a| Unordered list of one or more commonly used or formalized word(s) or
+phrase(s) used to describe a dataset a| LanguageString data structure | One or more
+(optional)
+| type | Type of the keyword a| CodeType, as adaptation of MD_Identifier class
+<<iso19115>> | Zero or one (optional)
 |===
 
-NOTE: OGC APIs will use language negotiation with HTTP headers. In this situation, it is expected that elements defined as a list of LanguageString will default into a single CharacterString that in JSON will default into a string data type. In JSON encodings namespaces or codespaces (optional in the model) are not considered. This results in a simplification of the keywords in the JSON encoding to a simple array of strings.
+[NOTE,keep-separate=true]
+====
+OGC APIs will use language negotiation with HTTP headers. In this situation, it is
+expected that elements defined as a list of LanguageString will default into a single
+CharacterString that in JSON will default into a string data type. In JSON encodings
+namespaces or codespaces (optional in the model) are not considered. This results in
+a simplification of the keywords in the JSON encoding to a simple array of strings.
+====
 
 ==== BoundingBox
-A (basic) bounding box is one type of bounding box that is used in this Standard. The Bounding box data structure is specified in the following UML model and table.
 
-The BoundingBox class describes a Minimum Bounding Rectangle (MBR) surrounding a feature (in the broader sense), in the supported CRS.
+A (basic) bounding box is one type of bounding box that is used in this Standard. The
+Bounding box data structure is specified in the following UML model and table.
 
-A 2DBoundingBox is another type of bounding box. This type is simplified from the basic BoundingBox data type for use only with the 2D geographic CRS. This is useful for specifying the extent 2D part of tile matrix set.
+The BoundingBox class describes a Minimum Bounding Rectangle (MBR) surrounding a
+feature (in the broader sense), in the supported CRS.
 
-A WGS84BoundingBox is another type of bounding box. This type is simplified from the basic BoundingBox data type for use only with the 2D geographic CRS which uses the WGS 84 geodetic datum, where longitude precedes latitude and both are recorded in decimal degrees.
+A 2DBoundingBox is another type of bounding box. This type is simplified from the
+basic BoundingBox data type for use only with the 2D geographic CRS. This is useful
+for specifying the extent 2D part of tile matrix set.
 
-[#img_boundingbox-uml-model,reftext='{figure-caption} {counter:figure-num}']
+A WGS84BoundingBox is another type of bounding box. This type is simplified from the
+basic BoundingBox data type for use only with the 2D geographic CRS which uses the
+WGS 84 geodetic datum, where longitude precedes latitude and both are recorded in
+decimal degrees.
+
+[[fig3]]
 .BoundingBox UML model
-image::figures/BoundingBox.png[BoundingBox UML model]
+image::BoundingBox.png[BoundingBox UML model]
 
-
-[#parts-of-boundingbox-data-structure,reftext='{table-caption} {counter:table-num}']
+[[table3]]
 .Parts of BoundingBox data structure
-[width = "100%",options="header"]
+[options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| lowerLeft | Coordinates of bounding box corner at which the value of each coordinate normally is the algebraic minimum within this bounding box ^a^
-| Ordered sequence of double values ^b^
+
+| lowerLeft a| Coordinates of bounding box corner at which the value of each
+coordinate normally is the algebraic minimum within this bounding
+box{blank}footnote:a[Values other than the minimum and maximum may be used as
+discussed below.]
+| Ordered sequence of double values{blank}footnote:b[The number of axes included, and
+the order of these axes, as specified by the referenced CRS.]
 | One (mandatory)
-| upperRight | Coordinates of bounding box corner at which the value of each coordinate
-normally is the algebraic maximum within this bounding box ^a^
-| Ordered sequence of double values ^b^
+
+| upperRight a| Coordinates of bounding box corner at which the value of each
+coordinate
+normally is the algebraic maximum within this bounding box{blank}footnote:a[]
+| Ordered sequence of double values{blank}footnote:b[]
 | One (mandatory)
-| CRS | Reference or a definition of the CRS used by the lowerRight and upperRight coordinates  | CRSType | Zero or one (optional)
+
+| CRS a| Reference or a definition of the CRS used by the lowerRight and upperRight
+coordinates  | CRSType | Zero or one (optional)
+
 Include unless referenced elsewhere
-| orderedAxis | Ordered list of names of the dimensions defined in the CRS | Ordered sequence of strings | Zero or one (optional) ^c^
-4+| ^a^  Values other than the minimum and maximum may be used as discussed below.
-
-^b^  The number of axes included, and the order of these axes, as specified by the referenced CRS.
-
-^c^  The number of axes and names is specified by the referenced CRS definition, but may also be specified here for convenience. In particular, it makes the axis order more visible.
+| orderedAxis a| Ordered list of names of the dimensions defined in the CRS | Ordered
+sequence of strings | Zero or one (optional){blank}footnote:c[The number of axes and
+names is specified by the referenced CRS definition, but may also be
+specified here for convenience. In particular, it makes the axis order more visible.]
 |===
 
-If the referenced CRS uses an Ellipsoidal, Spherical, Polar, or Cylindrical coordinate system, the bounding box contents defined will not always specify the MINIMUM rectangular BOUNDING region (as those terms are specified in OGC Abstract Specification Topic 2). Specifically, this bounding box will not specify the minimum rectangular bounding region surrounding a geometry in which the set of points spans the value discontinuity in an angular coordinate axis. Such axes include the longitude and latitude of Ellipsoidal and Spherical coordinate systems. That geometry could lie within a small region on the surface of the ellipsoid or sphere.
+If the referenced CRS uses an Ellipsoidal, Spherical, Polar, or Cylindrical
+coordinate system, the bounding box contents defined will not always specify the
+MINIMUM rectangular BOUNDING region (as those terms are specified in OGC Abstract
+Specification Topic 2). Specifically, this bounding box will not specify the minimum
+rectangular bounding region surrounding a geometry in which the set of points spans
+the value discontinuity in an angular coordinate axis. Such axes include the
+longitude and latitude of Ellipsoidal and Spherical coordinate systems. That geometry
+could lie within a small region on the surface of the ellipsoid or sphere.
 
-Theoretically, there are cases where defining a bounding box could be problematic or impossible, such as angular axis of an Ellipsoidal, Spherical, Polar, or Cylindrical coordinate system. However, tiles need to be circumscribed to real coordinates and will deliberately avoid regions of the space where coordinates go to infinite or cannot be defined. For example, the `WorldMercatorWGS84Quad` tile matrix set (based on a cylindrical projection) should not be used close to the poles. Since tiles are conterminous, it is always possible to define a bounding box that includes them all.
+Theoretically, there are cases where defining a bounding box could be problematic or
+impossible, such as angular axis of an Ellipsoidal, Spherical, Polar, or Cylindrical
+coordinate system. However, tiles need to be circumscribed to real coordinates and
+will deliberately avoid regions of the space where coordinates go to infinite or
+cannot be defined. For example, the `WorldMercatorWGS84Quad` tile matrix set (based
+on a cylindrical projection) should not be used close to the poles. Since tiles are
+conterminous, it is always possible to define a bounding box that includes them all.
 
 ==== CRSType
 
-In this version of the standard, the possibility to define a CRS using a full description in addition to a reference to an external CRS catalogue is introduced. For backwards compatibility, CRSType still defaults to a URI but is extended to a union of three possibilities (URI, WKT2 CRS, or ISO 19115 MD_ReferenceSystem).
+In this version of the standard, the possibility to define a CRS using a full
+description in addition to a reference to an external CRS catalogue is introduced.
+For backwards compatibility, CRSType still defaults to a URI but is extended to a
+union of three possibilities (URI, WKT2 CRS, or <<iso19115>> MD_ReferenceSystem).
 
-
-[#parts-of-crs-type-union,reftext='{table-caption} {counter:table-num}']
+[[table4]]
 .Parts of CRSType data structure
-[width = "100%",options="header"]
+[options="header"]
 |===
 | Names | Definition | Data type and values
-| uri | A reference to a CRS. Typically a EPSG CRS reference | URI
-| wkt | A definition for CRS that uses Well-known text representation of coordinate reference systems Version 2.0 | Any
-| referenceSystem | A reference system data structure as defined in the MD_ReferenceSystem of the ISO 19115 | MD_ReferenceSystem
+
+| uri a| A reference to a CRS. Typically a EPSG CRS reference | URI
+| wkt a| A definition for CRS that uses Well-known text representation of coordinate
+reference systems Version 2.0 | Any
+| referenceSystem a| A reference system data structure as defined in the
+MD_ReferenceSystem of the <<iso19115>> | MD_ReferenceSystem
 |===
 
 ==== WebLink
 
-Many recent standards emphasize the usefulness of links as a way to relate a data structure instance to other data structures and make navigation through resources possible. Essential links are made explicit in the data structures of this document (recognizable by a URI data type) but other links can be added as needed for convenience when a WebLink is available. The data structure defined here allows the addition of other links. The definition is based on the web linking defined in the RFC8288 and the XML serialization present in section 4.2.7 of the RFC4287 and in the JSON serialization found in this IETF draft: https://tools.ietf.org/id/draft-pot-json-link-01.html
+Many recent standards emphasize the usefulness of links as a way to relate a data
+structure instance to other data structures and make navigation through resources
+possible. Essential links are made explicit in the data structures of this document
+(recognizable by a URI data type) but other links can be added as needed for
+convenience when a WebLink is available. The data structure defined here allows the
+addition of other links. The definition is based on the web linking defined in the
+<<rfc8288>> and the XML serialization present in <<rfc4287, section=4.2.7>> and in
+the JSON serialization found in this IETF draft:
+https://tools.ietf.org/id/draft-pot-json-link-01.html
 
-NOTE: In practice, some encodings can opt to specify the essential links as part of this data structure for convenience
+NOTE: In practice, some encodings can opt to specify the essential links as part of
+this data structure for convenience
 
-[#img_web-link-uml-model,reftext='{figure-caption} {counter:figure-num}']
+[[fig4]]
 .Web link UML model
-image::figures/AtomLink.png[Atom link UML model]
+image::AtomLink.png[Atom link UML model]
 
-
-[#parts-of-web-link-data-structure,reftext='{table-caption} {counter:table-num}']
+[[table5]]
 .Parts of WebLink data structure
-[width = "100%",options="header"]
+[options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
-| href | Reference from this resource to a web resource
+
+| href a| Reference from this resource to a web resource
 | URI or a URI template
-| One (mandatory)
+a| One (mandatory)
 
-| rel | Link relation type describing the meaning of the link.
-| CharacterString ^a^
-| Zero or one (optional)
+| rel a| Link relation type describing the meaning of the link.
+| CharacterString{blank}footnote:a5[It can be a name or a URI. If a name is given,
+implementations must consider the link relation type equivalent to the same name
+registered within the IANA Registry of Link Relations. The OGC NA maintains other
+possible values.]
+a| Zero or one (optional)
 
-| type | hint about the type of the representation that is expected to be returned from the href attribute
-| CharacterString ^b^
-| Zero or one (optional)
+| type a| hint about the type of the representation that is expected to be returned
+from the href attribute
+| CharacterString{blank}footnote:b5[It should be a media type format as specified in
+<<rfc6838, section=4.2>>]
+a| Zero or one (optional)
 
-| hreflang | language of the resource pointed to by the href attribute
-| LanguageString data structureCharacterString ^c^
-| Zero or one (optional)
+| hreflang a| language of the resource pointed to by the href attribute
+a| LanguageString data structureCharacterString{blank}footnote:c5[As specified in
+<<rfc5646>>]
+a| Zero or one (optional)
 
 | title | human-readable information about the link
-| CharacterString ^c^
-| Zero or one (optional)
+| CharacterString{blank}footnote:c5[]
+a| Zero or one (optional)
 
 Include one for each language represented
-| length | hint about the length of the linked content in bytes
+| length a| hint about the length of the linked content in bytes
 | nonNegativeInteger
-| Zero or one (optional)
-
-4+| ^a^  It can be a name or a URI. If a name is given, implementations must consider the link relation type equivalent to the same name registered within the IANA Registry of Link Relations. The OGC NA maintains other possible values.
-
-^b^ It should be a media type format as specified in section 4.2 of rfc6838
-
-^c^ As specified in RFC5646
+a| Zero or one (optional)
 |===

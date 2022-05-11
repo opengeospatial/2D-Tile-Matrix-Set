@@ -7,9 +7,9 @@
 [[tile-matrix-set-limits-overview]]
 ==== TileMatrixSet limits
 
-Imagine a case where a tileset covers all the bounding box of a tile matrix set. Now, imagine that the tileset extent needs to be expanded beyond the point and corner of origin of each TileMatrix. Changing the point of origin changes the position of any tile row and tile column indices. In other words, in the new tileset, tiles that cover the same bounding box than the previous tileset receives different tile row and tile column indices. This invalidates any cached tile that the client could have stored and all client copies need to be updated. To overcome this problem, a dataset can optionally use a more generic TileMatrixSet that covers a bigger area (or even global one, such as one of defined in <<annex-common-tilematrixset-definitions-informative>>). In fact, that TileMatrixSet that defines an area that might be covered by the dataset in a future could easily be shared for many datasets and become a common TileMatrixSet.
+Imagine a case where a tileset covers the whole bounding box of a tile matrix set. Now, imagine that the tileset extent needs to be expanded beyond the point and corner of origin of each TileMatrix. Changing the point of origin changes the position of any tile row and tile column indices. In other words, in the new tileset, tiles that cover the same bounding box than the previous tileset receive different tile row and tile column indices. This invalidates any cached tiles that the client could have stored and all client copies need to be updated. To overcome this problem, a dataset can optionally use a more generic TileMatrixSet that covers a bigger area (or even global one, such as one of defined in <<annex-common-tilematrixset-definitions-informative>>). In fact, that TileMatrixSet that defines an area that might be covered by the dataset in a future could easily be shared for many datasets and become a common TileMatrixSet.
 
-To inform the client about the valid range of tile indices in a tileset, the TileMatrixSetLimits concept is introduced. A list of TileMatrixSetLimit informs the minimum and maximum limits of these indices for each TileMatrix that contains actual data. The area outside these limits is considered empty space and is not cover by the tileset.
+To inform the client about the valid range of tile indices in a tileset, the TileMatrixSetLimits concept is introduced. A list of TileMatrixSetLimit informs the minimum and maximum limits of these indices for each TileMatrix that contains actual data. The area outside these limits is considered empty space and is not covered by the tileset.
 
 [#img_tilematrix-limits,reftext='{figure-caption} {counter:figure-num}']
 .TileMatrixSet Limits
@@ -158,7 +158,7 @@ One for each keyword authority used
 ^k^     The intention is to show it in a corner of the viewport. It can contain markup and include a small logo image and links. In this case, note that when used to populate an HTML element there is a risk if it contains malicious script or reveal your identity to 3rt party domains.
 |===
 
-A Layer can is a set of geographic objects (all of the same type) together in a way that can be presented to the user. A layer can also be a coverage. Its elements are defined with a data structure defined in <<parts-of-geospatial-data-data-structure>>.
+A Layer is a set of geographic objects (all of the same type) together in a way that can be presented to the user. A layer can also be a coverage. Its elements are defined with a data structure defined in <<parts-of-geospatial-data-data-structure>>.
 
 [#parts-of-geospatial-data-data-structure,reftext='{table-caption} {counter:table-num}']
 .Parts of GeospatialData data structure

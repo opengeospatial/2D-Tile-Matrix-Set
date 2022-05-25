@@ -49,7 +49,6 @@ include::sections/09-tileset_metadata_encodings.adoc[]
 
 // include::sections/10-json-ld_encoding.adoc[]
 
-
 ////
 add or remove annexes after "A" as necessary
 ////
@@ -78,7 +77,6 @@ include::sections/ai-annex_i.adoc[]
 
 include::sections/ak-annex_k.adoc[]
 
-
 ////
 Revision History should be the last annex before the Bibliography
 Bibliography should be the last annex
@@ -87,6 +85,3 @@ Bibliography should be the last annex
 include::sections/ax-history.adoc[]
 
 include::sections/az-bibliography.adoc[]
-
-
-

@@ -1,0 +1,69 @@
+= OGC 17-083r4
+
+== Contents
+
+`sources/`::
+Source of the document
+
+`sources/17-083r4.adoc`:::
+Main standard document with references to all sections
+
+`sources/sections/*.adoc`:::
+Each section of the standard document is in a separate document: follow
+directions in each document to populate
+
+`sources/figures/`:::
+Figures go here
+
+`sources/image/`:::
+Image files for graphics go here. Image files for figures go in the "figures"
+directory. Only place in here images not used in figures (e.g., as parts of
+tables, as logos, etc.)
+
+`sources/requirements/`:::
+Directory for requirements and requirement classes to be referenced in clause_7_normative_text.adoc
+
+`sources/code/`:::
+Sample code to accompany the standard, if desired
+
+`sources/abstract_tests/`:::
+The Abstract Test Suite comprising one test for every requirement, optional
+
+`sources/UML/`:::
+UML diagrams, if applicable
+
+`site/`::
+(automatically generated, in the `gh-pages` branch) published document.
+
+
+== Usage
+
+=== Installing Metanorma
+
+See https://www.metanorma.org
+
+=== Fetching the document
+
+[source,sh]
+----
+git clone https://github.com/metanorma/iso-iec-smart-terminology/
+----
+
+=== Building the document
+
+[source,sh]
+----
+metanorma site generate
+----
+
+=== Running via Docker or locally
+
+If you have installed the build tools locally, and wish to run the
+locally-installed compilation tools, there is nothing further to set.
+
+If you don't want to deal with local dependencies, use the docker:
+
+[source,sh]
+----
+docker run -v "$(pwd)":/metanorma -w /metanorma -it metanorma/mn metanorma site generate
+----

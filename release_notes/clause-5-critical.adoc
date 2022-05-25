@@ -28,11 +28,10 @@ Equivalences from the old version into the new version are:
 
 [#Equivalences-old-new-data-structures,reftext='{table-caption} {counter:table-num}']
 .Equivalences between the old and new data structures
-[width = "100%",options="header"]
+[cols="a,a",options="header"]
 |===
 | Previous version (1.0) | Current version (2.0)
 | TileMatrixSetLink | TileSetMetadata
-| |
 |===
 
 === Linking to (rel: `tiling-scheme`) or embedding a TileMatrixSet definition, and identifying use of registered TileMatrixSet with `tileMatrixSetURI`

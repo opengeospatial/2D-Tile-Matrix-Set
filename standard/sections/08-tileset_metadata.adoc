@@ -67,36 +67,47 @@ image::TileMatrixSetLimits.png[TileMatrixSetLimits UML model]
 
 [[table11]]
 .TileMatrixSetLimits array
-[options="header"]
+[cols="a,a,a,a",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
-| tileMatrixSetLimit a| Indices limits for a tileMatrix | TileMatrixSetLimits data structure, see <<table12>> a| one or more (mandatory)
+| tileMatrixSetLimit
+| Indices limits for a tileMatrix
+| TileMatrixSetLimits data structure, see <<table12>>
+| one or more (mandatory)
 |===
 
 [[table12]]
 .Parts of TileMatrixLimit data structure
-[options="header"]
+[cols="a,a,a,a",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
-| tileMatrix a| Reference to a tileMatrix identifier a| ows:CodeType, as adaptation
-of MD_Identifier class <<iso19115>>{blank}footnote:[SHALL be an identifier to a
-tileMatrix element of this tileMatrixSet.] | One (mandatory)
+| tileMatrix
+| Reference to a tileMatrix identifier
+| ows:CodeType, as adaptation of MD_Identifier class <<iso19115>>{blank}footnote:[SHALL be an identifier to a tileMatrix element of this tileMatrixSet.]
+| One (mandatory)
 
-| minTileRow a| Minimum tile row index valid for a tileset. a| Non negative integer
-type{blank}footnote:[From 0 to maxTileRow.] | One (mandatory)
+| minTileRow
+| Minimum tile row index valid for a tileset.
+| Non negative integer type{blank}footnote:[From 0 to maxTileRow.]
+| One (mandatory)
 
-| maxTileRow a| Maximim tile row index valid for a tileset. a| Non negative integer
-type{blank}footnote:[From minTileRow to matrixWidth-1 of the tileMatrix of this
-tileMatrixSet.] | One (mandatory)
+| maxTileRow
+| Maximim tile row index valid for a tileset.
+| Non negative integer type{blank}footnote:[From minTileRow to matrixWidth-1 of the tileMatrix of this tileMatrixSet.]
+| One (mandatory)
 
-| minTileCol a| Minimum tile column index valid for a tileset. a| Non negative
-integer type{blank}footnote:[From 0 to maxTileCol.] | One (mandatory)
+| minTileCol
+| Minimum tile column index valid for a tileset.
+| Non negative integer type{blank}footnote:[From 0 to maxTileCol.]
+| One (mandatory)
 
-| maxTileCol a| Maximum tile column index valid for a tileset. a| Non negative
-integer type{blank}footnote:[From minTileCol to tileHeight-1 of the tileMatrix of
-this tileMatrixSet.] | One (mandatory)
+| maxTileCol
+| Maximum tile column index valid for a tileset.
+| Non negative
+integer type{blank}footnote:[From minTileCol to tileHeight-1 of the tileMatrix of this tileMatrixSet.]
+| One (mandatory)
 |===
 
 [[tilesetmetadata-requirements-class]]
@@ -189,7 +200,7 @@ needs to be aware of before using or redistributing the TileSet | Classification
 code list, see <<table17>> | Zero or one (optional)
 
 | mediaType | Media types available for the tiles | CharacterString restricted by
-<<rfc6838, section=4.2>> | Zero or more (optional){blank}footnote:f13[Intended for
+<<rfc6838,section=4.2>> | Zero or more (optional){blank}footnote:f13[Intended for
 offline use. In an online use you are supposed to provide links to the tiles that
 already have the mediaType specified.]
 
@@ -420,7 +431,7 @@ CharacterString | Zero or one (optional){blank}footnote:b15[If missing all value
 compatible with the other restrictions are accepted]
 
 | mediaType | Encodings of a complex feature attribute (e.g. image/png) |
-CharacterString restricted by <<rfc6838, section=4.2>> | Zero or one
+CharacterString restricted by <<rfc6838,section=4.2>> | Zero or one
 (optional){blank}footnote:b15[]
 
 | acceptedValues | Valid values of a feature attribute | CharacterString | Zero or

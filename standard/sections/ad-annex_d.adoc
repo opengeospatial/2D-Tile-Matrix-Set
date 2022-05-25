@@ -11,9 +11,9 @@ This Annex includes some definitions for TileMatrixSets that are commonly used.
 
 [[table27]]
 .Definition of the WebMercatorQuad TileMatrixSet
-[cols="15%,25%,30%,15%,15%",width="100%"]
+[cols="a,a,a,a,a"]
 |===
-5+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3857, WGS 84 / Pseudo-Mercator
+5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3857, WGS 84 / Pseudo-Mercator
 
 *BBOX LowerLeft:* -20,037,508.3427892, -20,037,508.3427892 (lat/long: -85.0511287798, -180)
 
@@ -98,9 +98,9 @@ the CRS84 CRS for the whole world.
 
 [[table28]]
 .Definition of the WorldCRS84Quad TileMatrixSet
-[cols="15%,25%,30%,15%,15%",width="100%"]
+[cols="a,a,a,a,a"]
 |===
-5+a| *CRS*: http://www.opengis.net/def/crs/OGC/1.3/CRS84, CRS84
+5+| *CRS*: http://www.opengis.net/def/crs/OGC/1.3/CRS84, CRS84
 
 *BBOX LowerLeft:* -180, -90
 
@@ -203,9 +203,9 @@ the EPSG:4326 CRS for the whole world.
 
 [[table29]]
 .Definition of the WorldCRS84Quad TileMatrixSet (EPSG:4326)
-[cols="15%,25%,30%,15%,15%",width="100%"]
+[cols="a,a,a,a,a"]
 |===
-5+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/4326, EPSG:4326
+5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/4326, EPSG:4326
 
 *BBOX LowerLeft:* -90, -180
 
@@ -252,9 +252,9 @@ the EPSG:4326 CRS for the whole world.
 
 [[table30]]
 .Definition of the WorldMercatorWGS84Quad TileMatrixSet
-[cols="13%,24%,21%,16%,13%,13%",width="100%"]
+[cols="a,a,a,a,a,a"]
 |===
-6+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3395, WGS 84 / World-Mercator
+6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3395, WGS 84 / World-Mercator
 
 *BBOX LowerLeft:* -20,037,508.3427892, -20,037,508.3427892  (lat, long: -85.08405903, -180)
 
@@ -334,9 +334,9 @@ single table.
 
 [[table31]]
 .Definition of the UTM##WGS84Quad TileMatrixSets
-[cols="13%,22%,23%,16%,13%,13%",width="100%"]
+[cols="a,a,a,a,a,a"]
 |===
-6+a|*##:* it is a number that goes from 01 to 60
+6+|*##:* it is a number that goes from 01 to 60
 
 *CRSs*: [http://www.opengis.net/def/crs/EPSG/0/32601, http://www.opengis.net/def/crs/EPSG/0/32660] WGS 84 / UTM
 
@@ -437,9 +437,9 @@ applications as possible.
 
 [[table32]]
 .Definition of the UPSArcticWGS84Quad TileMatrixSet
-[width = "100%"]
+[cols="a,a,a,a,a,a"]
 |===
-6+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/5041, WGS 84 Universal Polar Stereographic North
+6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/5041, WGS 84 Universal Polar Stereographic North
 
 *BBOX LowerLeft:* -14,440,759.350252, -14,440,759.350252
 
@@ -525,9 +525,9 @@ Antarctic CRS was selected.
 
 [[table33]]
 .Definition of the UPSAntarcticWGS84Quad TileMatrixSet
-[width = "100%"]
+[cols="a,a,a,a,a,a"]
 |===
-6+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/5042, WGS 84 Universal Polar Stereographic South
+6+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/5042, WGS 84 Universal Polar Stereographic South
 
 *BBOX LowerLeft:* -14,440,759.350252, -14,440,759.350252
 
@@ -584,9 +584,9 @@ image::16.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (black lines; 2x2
 
 [[table34]]
 .Definition of the EuropeanETRS89_LAEAQuad TileMatrixSet
-[cols="15%,25%,30%,15%,15%",width="100%"]
+[cols="a,a,a,a,a"]
 |===
-5+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3035, ETRS89
+5+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3035, ETRS89
 
 *BBOX LowerLeft:* 1,000,000.0, 2,000,000.0
 
@@ -632,9 +632,9 @@ easting (Y,X). Orientations: north, east. UoM: m". Be aware the axis order is no
 
 [[table35]]
 .Definition of the CanadianNAD83_LCC TileMatrixSet
-[cols="14%,16%,16%,16%,14%,12%,12%",width="100%"]
+[cols="a,a,a,a,a,a,a"]
 |===
-7+a| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3978, NAD83
+7+| *CRS*: http://www.opengis.net/def/crs/EPSG/0/3978, NAD83
 
 *BBOX LowerLeft:* -7,786,476.885838887, -5,153,821.09213678
 

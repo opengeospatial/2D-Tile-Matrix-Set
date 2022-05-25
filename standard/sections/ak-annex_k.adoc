@@ -81,50 +81,69 @@ in the _TileSet_'s _TileMatrixSetLimits_ allows for the re-use of
 common 2D TileMatrixSets.
 
 .Properties for a ExtraDimension data structure
-[cols="21,47,17,15",options="header"]
+[cols="a,a,a,a",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
-| identifier | Dimension identifier ^c^ | ows:CodeType | One (mandatory)
-| min | minimum value for that dimension (lower bound) | number
+| identifier
+| Dimension identifier
+footnote:[These _ExtraDimension_ identifiers SHALL be unique (different) within
+the context of the TileMatrixSet.]
+| ows:CodeType
 | One (mandatory)
-| max | maximum value for that dimension (upper bound) | number
+
+| min
+| minimum value for that dimension (lower bound)
+| number
 | One (mandatory)
-| uom | unit of measure for defining min, max and resolution | string (URI)
+
+| max
+| maximum value for that dimension (upper bound)
+| number
 | One (mandatory)
-| divisions | in how many segments (trims in _Coverages_ term) the
-space between min & max is divided at this particular tile matrix
-| positiveInteger | Zero or one (optional) Defaults to 1 if unspecified
-| resolution | resolution of the data in the extra dimension. For
-a coverage, this would be separate slices at that resolution interval,
-where the number of slices is equal to `(max - min) / divisions /
-resolution`, (`+1` for _point_ rather than _area_ coverage). For 3D
-models, point clouds, vector features, the resolution would represent
-the average accuracy level at which you will find distinct coordinates.
-| number | Zero or one (optional)
-| temporalDivision   | an alternative to _divisions_ for temporal
-dimensions allowing to divide by unequal temporal units^a^ | enumeration^b^
+
+| uom
+| unit of measure for defining min, max and resolution
+| string (URI)
+| One (mandatory)
+
+| divisions
+| in how many segments (trims in _Coverages_ term) the space between min & max
+is divided at this particular tile matrix
+| positiveInteger
+| Zero or one (optional) Defaults to 1 if unspecified
+
+| resolution
+| resolution of the data in the extra dimension. For a coverage, this would be
+separate slices at that resolution interval, where the number of slices is equal
+to `(max - min) / divisions / resolution`, (`+1` for _point_ rather than _area_
+coverage). For 3D models, point clouds, vector features, the resolution would
+represent the average accuracy level at which you will find distinct
+coordinates.
+| number
 | Zero or one (optional)
-| temporalResolution | an alternative to _resolution_ for temporal
-dimensions allowing to specify a resolution in unequal temporal units^a^
-| enumeration^b^ | Zero or one (optional)
-4+| ^a^ Temporal units such as years and month have unequal number
-of days, and even days have unequal number of seconds when considering
-leap seconds.
-If these are not used, then _divisions_ would divide the temporal
-range equally, and (potentially fractional) seconds would be assumed
-as the resolution unit.
 
-^b^ Possible values are: second, minute, hour, day, week, month, year, ...
+| temporalDivision
+| an alternative to _divisions_ for temporal dimensions allowing to divide by
+unequal temporal units
+footnote:a[Temporal units such as years and month have unequal number of days,
+and even days have unequal number of seconds when considering leap seconds. If
+these are not used, then _divisions_ would divide the temporal range equally,
+and (potentially fractional) seconds would be assumed as the resolution unit.]
+| enumeration footnote:b[Possible values are: second, minute, hour, day, week, month, year, ...]
+| Zero or one (optional)
 
-^c^ These _ExtraDimension_ identifiers SHALL be unique (different)
-within the context of the TileMatrixSet.
+| temporalResolution
+| an alternative to _resolution_ for temporal
+dimensions allowing to specify a resolution in unequal temporal units footnote:a[]
+| enumeration footnote:b[]
+| Zero or one (optional)
 
 |===
 
 ==== Example TileMatrix extended to 4 dimensions (2 extra dimensions)
 
-[source, json,options="unnumbered"]
+[source,json,options="unnumbered"]
 ----
 {
    "identifier" : "0",
@@ -230,8 +249,8 @@ For example, vector tiles could be available as usual at, e.g.:
 
 [source%unnumbered]
 ----
-    trees/tiles/GNOSISGlobalGrid/13/5200/5715.json
-    trees/tiles/GNOSISGlobalGrid/13/5200/5715.mvt
+trees/tiles/GNOSISGlobalGrid/13/5200/5715.json
+trees/tiles/GNOSISGlobalGrid/13/5200/5715.mvt
 ----
 
 while referencing shared 3D models, available at `models/{modelId}`
@@ -239,9 +258,9 @@ and textures at `textures/{textureId}`, e.g.:
 
 [source%unnumbered]
 ----
-    trees/models/coniferous_tree01.glb
-    trees/models/coniferous_tree01.e3d
-    trees/textures/1.jpg
+trees/models/coniferous_tree01.glb
+trees/models/coniferous_tree01.e3d
+trees/textures/1.jpg
 ----
 
 A specific schema can be defined for position, orientation

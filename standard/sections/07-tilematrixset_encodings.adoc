@@ -10,21 +10,31 @@ mapping between the class attributes and corresponding JSON element.
 
 [[table10]]
 .propertiesSchema attributes and JSON Schema properties equivalences
-[options="header"]
+[cols="a,a,a",options="header"]
 |===
 | Class attribute | JSON element | Reason
 
-| identifier | id a| Following common practice in GeoJSON and JSON-LD.
-| BoundingBox class a| array of 4 numbers representing lowerLeft and topRight
-coordinates a| Follows GeoJSON (https://datatracker.ietf.org/doc/html/rfc7946)
-suggested encoding.
-| LanguageString | string a| JSON files are generally used in the OGC API as
-monolingual documents. The language of the document is determined by the HTTP
-language negotiation headers.
-| keywords | string array a| JSON files are generally used in the OGC API as
-monolingual documents. JSON does not use namespaces or codespaces.
-| WKT | object a| The WKT encoding for JSON is an object representing a JSON encoding
+| identifier
+| id
+| Following common practice in GeoJSON and JSON-LD.
+
+| BoundingBox class
+| array of 4 numbers representing lowerLeft and topRight coordinates
+| Follows GeoJSON (https://datatracker.ietf.org/doc/html/rfc7946) suggested encoding.
+
+| LanguageString
+| string
+| JSON files are generally used in the OGC API as monolingual documents. The language of the document is determined by the HTTP language negotiation headers.
+
+| keywords
+| string array
+| JSON files are generally used in the OGC API as monolingual documents. JSON does not use namespaces or codespaces.
+
+| WKT
+| object
+| The WKT encoding for JSON is an object representing a JSON encoding
 of the WKT for CRS 2.0 defined by https://proj.org/specifications/projjson.html
+
 |===
 
 [NOTE,keep-separate=true]

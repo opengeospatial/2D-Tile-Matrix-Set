@@ -13,6 +13,7 @@ NOTE: At the point of finalizing this document no OGC standard references
 version 1.0. New standards are encouraged to use this version.
 
 === TileSetMetadata
+
 In version 1.0 there was a concept of TileMatrixSetLink
 (and data structure) designed to allow a dataset to declare the use
 of a tile matrix set defined elsewhere and, if needed, a limited coverage
@@ -28,14 +29,16 @@ is still included in the TileSetMetadata structure.
 Equivalences from the old version into the new version are:
 
 .Equivalences between the old and new data structures
-[options="header"]
+[cols="a,a",options="header"]
 |===
 | Previous version (1.0) | Current version (2.0)
+
 | TileMatrixSetLink | TileSetMetadata
-| |
+
 |===
 
 === OWS Common dependency removed
+
 In the version 1.0 there was a dependency on the OWS Common BoundingBox
 data structure. It is uncertain at this point if the new OGC API -
 Common will provide recyclable data structures. This version of the

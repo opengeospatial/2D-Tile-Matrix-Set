@@ -128,13 +128,13 @@ stem:["tileMatrixMaxX" = "tileMatrixMinX" + "tileSpanX" xx "matrixWidth"]
 
 stem:["tileMatrixMinY" = "tileMatrixMaxY" - "tileSpanY" xx "matrixHeight"]
 
-NOTE: In a CRS with coordinates expressed in meters, stem:["metersPerUnit"(crs)] equals
-1.
+NOTE: In a CRS with coordinates expressed in meters, stem:["metersPerUnit"(crs)]
+equals 1.
 
-NOTE: In CRS with coordinates expressed in degrees stem:["metersPerUnit"(crs)] equals
-stem:[360//("EquatorialRadius"**2**"PI")] (360 degrees are equivalent to the
-EquatorialPerimeter). E.g for WGS84 stem:["metersPerUnit"(crs)] is 111319.4908
-meters/degree.
+NOTE: In CRS with coordinates expressed in degrees stem:["metersPerUnit"(crs)]
+equals stem:[360//("EquatorialRadius"**2**"PI")] (360 degrees are equivalent to
+the EquatorialPerimeter). E.g for WGS84 stem:["metersPerUnit"(crs)] is
+111319.4908 meters/degree.
 
 The tile space therefore looks like this:
 
@@ -340,40 +340,49 @@ image::TileMatrixSet.png[TileMatrixSet UML model]
 
 [[table6]]
 .Parts of TileMatrixSet data structure
-[options="header"]
+[cols="a,a,a,a",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
-| identifier | Tile matrix set identifier{blank}footnote:g6[TileMatrixSet identifies
-SHALL be unique (different) for each TileMatrixSet of a server.] | CodeType, as
-adaptation of MD_Identifier class <<iso19115>> | Zero or One (optional)
+| identifier
+| Tile matrix set identifier{blank}footnote:g6[TileMatrixSet identifies
+SHALL be unique (different) for each TileMatrixSet of a server.]
+| CodeType, as adaptation of MD_Identifier class <<iso19115>>
+| Zero or One (optional)
+
 | title{blank}footnote:a6[The multilingual scoping rules in <<multilingualTextEncoding>> apply.]
 | Title of a tile matrix set, normally used for display to a human
-| LanguageString data structure. See <<table1>> | Zero or more
-(optional) Include when available and useful
+| LanguageString data structure. See <<table1>>
+| Zero or more (optional) Include when available and useful
 
 Include one for each language represented{blank}footnote:f6[If no Title is specified,
 a client may display the Identifier value instead.]
 
-| description{blank}footnote:a6[] | Brief narrative description of a tile matrix set,
-normally available for display to a human | LanguageString data structure. See
-<<table1>> | Zero or more (optional) Include when available and useful
+| description{blank}footnote:a6[]
+| Brief narrative description of a tile matrix set, normally available for display to a human
+| LanguageString data structure. See <<table1>>
+| Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 
-| keywords{blank}footnote:a6[] | Unordered list of one or more commonly used or
-formalized word(s) or phrase(s) used to describe a tile matrix set | MD_Keywords
-class in <<iso19115>>. See <<table1>> | Zero or more (optional)
+| keywords{blank}footnote:a6[]
+| Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a tile matrix set
+| MD_Keywords class in <<iso19115>>. See <<table1>>
+| Zero or more (optional)
 
 One for each keyword authority used
 
-| uri | Reference to an official source for a tile matrix set | URI type | Zero or
-One (optional) Include when an official source exists
+| uri
+| Reference to an official source for a tile matrix set
+| URI type
+| Zero or One (optional) Include when an official source exists
 
-| crs | Coordinate Reference System (CRS){blank}footnote:j6[The CRS of the TileSets
+| crs
+| Coordinate Reference System (CRS){blank}footnote:j6[The CRS of the TileSets
 using this TileMatrixSet should be compatible with this CRS. See
-<<TileMatrixSetCRSCompatibility>>] | CRSType type, see <<table4>> | One
-(mandatory){blank}footnote:i6[In some cases where high precision is required, the use
+<<TileMatrixSetCRSCompatibility>>]
+| CRSType type, see <<table4>>
+| One (mandatory){blank}footnote:i6[In some cases where high precision is required, the use
 of precise realizations of the same CRS is needed or the CRS is dynamic (varies
 slightly with time) and needs to be accompanied by an epoch. For this data structure,
 a TileMatrixSet is defined by the generic CRS name. The CRS realization and epoch
@@ -383,36 +392,46 @@ applications and for very fine grained scales, a client can perform run-time
 corrections to accurately overlay tilesets based on that information, or
 alternatively refuse to overlap tilesets not having the same CRS realization or epoch.]
 
-| orderedAxes | Ordered list of names of the dimensions defined in the
+| orderedAxes
+| Ordered list of names of the dimensions defined in the
 CRS{blank}footnote:k6[This element is not intended to overwrite the CRS axis order
 but to make it visible to developers by repeating information that is already
-contained in the CRS definition.] | Ordered sequence of strings | Zero or one
-(optional)
+contained in the CRS definition.]
+| Ordered sequence of strings
+| Zero or one (optional)
 
-| wellKnownScaleSet | Reference to a well-known scale set{blank}footnote:e6[Some
+| wellKnownScaleSet
+| Reference to a well-known scale set{blank}footnote:e6[Some
 possible values are defined the in <<annex-well-known-scale-sets-informative>>.] |
 URI type{blank}footnote:h6[In WMTS 1.0 a URN was used as a reference to a well-known
-scale set. Later, OGC adopted HTTP URLs as URIs for references. The
-(https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming Authority
-- Procedures document] specifies rules to transform form URN to URI. Implement a
-on-the-fly translations based on these rules is possible.] | Zero or one
-(optional){blank}footnote:c6[When a tile matrix set conforms to a well-known scale
+scale set. Later, OGC adopted HTTP URLs as URIs for references.
+The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming
+Authority - Procedures document] specifies rules to transform form URN to URI.
+Implement a on-the-fly translations based on these rules is possible.]
+| Zero or one (optional)
+
+footnote:c6[When a tile matrix set conforms to a well-known scale
 set, it can reference it by its URI. If used, the well-known scale set SHALL be
 consistent with the CRS and with the scaleDenominators of the tileMatrix parameters.]
 
-| boundingBox | Minimum bounding rectangle surrounding the tile matrix set, in the
-CRS{blank}footnote:b6[In the same CRS as the TileMatrixSet. boundingBox should be
+| boundingBox
+| Minimum bounding rectangle surrounding the tile matrix set, in the CRS
+
+footnote:b6[In the same CRS as the TileMatrixSet. boundingBox should be
 considered informative about the area covered by this TileMatrixSet. It SHOULD NOT be
 used to calculate the position of the tiles in the CRS space. Instead use the
 cornerOfOrigin and the pointOfOrigin of the corresponding TileMatrix. If data is not
 available for the entire tiled space, TileMatrixSetLimits will declare what tiles
-have data (see <<tilematrixsetlimits-requirements-class>>).] | 2DBoundingBox data
-structure, see <<table3>> | Zero or one (optional)
+have data (see <<tilematrixsetlimits-requirements-class>>).]
+| 2DBoundingBox data structure, see <<table3>>
+| Zero or one (optional)
 
-| tileMatrix | Description of a scale level and its tile matrix | TileMatrix data
-structure. See <<table7>> | One or more (mandatory){blank}footnote:d6[Commonly more
-than one. Each tileMatrix of a tileMatrixSet SHALL have a unique (different)
-scaleDenominator.]
+| tileMatrix
+| Description of a scale level and its tile matrix
+| TileMatrix data structure. See <<table7>>
+| One or more (mandatory){blank}footnote:d6[Commonly more than one. Each
+tileMatrix of a tileMatrixSet SHALL have a unique (different) scaleDenominator.]
+
 |===
 
 In addition to a general tile matrix set description, an array of tile matrix
@@ -420,71 +439,95 @@ elements is needed to define the distribution of tiles for each scale denominato
 
 [[table7]]
 .Parts of TileMatrix data structure
-[options="header"]
+[cols="a,a,a,a",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
-| identifier | Tile matrix identifier{blank}footnote:f7[The cell size of the tile can
-be obtained from the scaleDenominator by multiplying the latter by stem:[0.28 xx
-10^{-3} // "metersPerUnit"]. If the CRS uses _meters_ as units of measure for the
-horizontal dimensions, then stem:["metersPerUnit"=1]; if it uses degrees, then
-stem:["metersPerUnit"=2**"pi" a//360] (stem:[a] is the Earth maximum radius of the
-ellipsoid; a.k.a the radius of the equator.).] a| ows:CodeType, as adaptation of
-MD_Identifier class <<iso19115>> | One (mandatory)
+| identifier
+| Tile matrix identifier
 
-| title{blank}footnote:a7[The multilingual scoping rules in
-<<multilingualTextEncoding>> apply.] a| Title of a tile matrix, normally used for
-display to a human a| LanguageString data structure. See <<table1>> a| Zero or more
-(optional) Include when available and useful
+footnote:f7[The cell size of the tile can be obtained from the scaleDenominator
+by multiplying the latter by stem:[0.28 xx 10^{-3} // "metersPerUnit"]. If the
+CRS uses _meters_ as units of measure for the horizontal dimensions, then
+stem:["metersPerUnit"=1]; if it uses degrees, then stem:["metersPerUnit"=2**"pi"
+a//360] (stem:[a] is the Earth maximum radius of the ellipsoid; a.k.a the radius
+of the equator.).]
+| ows:CodeType, as adaptation of MD_Identifier class <<iso19115>>
+| One (mandatory)
+
+| title
+
+footnote:a7[The multilingual scoping rules in <<multilingualTextEncoding>> apply.]
+| Title of a tile matrix, normally used for display to a human
+| LanguageString data structure. See <<table1>>
+| Zero or more (optional) Include when available and useful
 
 Include one for each language represented{blank}footnote:d7[If no Title is specified,
 clients may display the Identifier value instead.]
 
-a| description{blank}footnote:a7[] a| Brief narrative description of a tile matrix,
-normally available for display to a human a| LanguageString data structure. See
-<<table1>> a| Zero or more (optional) Include when available and useful
+| description{blank}footnote:a7[]
+| Brief narrative description of a tile matrix, normally available for display to a human
+| LanguageString data structure. See <<table1>>
+| Zero or more (optional) Include when available and useful
 
 Include one for each language represented
 
-a| keywords{blank}footnote:c7[These TileMatrix identifiers SHALL be unique
+| keywords{blank}footnote:c7[These TileMatrix identifiers SHALL be unique
 (different) within the context of the parent TileMatrixSet. Many applications use a
 correlative numeric value as an identifier. Other alternatives are a rounded scale
 denominator or a rounded cell size. Repeating the TileMatrixSet identifier as part of
-the TileMatrix identifier should be avoided.] a| Unordered list of one or more
-commonly used or formalized word(s) or phrase(s) used to describe a tile matrix a|
-MD_Keywords class in <<iso19115>>. See <<table1>> a| Zero or more (optional)
+the TileMatrix identifier should be avoided.]
+| Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe a tile matrix
+| MD_Keywords class in <<iso19115>>. See <<table1>>
+| Zero or more (optional)
 
 One for each keyword authority used
 
-a| scaleDenominator a| Scale denominator of a tile matrix{blank}footnote:f7[] |
-Double type | One (mandatory)
+| scaleDenominator
+| Scale denominator of a tile matrix{blank}footnote:f7[]
+| Double type
+| One (mandatory)
 
-| cellSize a| Cell size of a tile matrix{blank}footnote:f7[] | Double type | One
-(mandatory)
+| cellSize
+| Cell size of a tile matrix{blank}footnote:f7[]
+| Double type
+| One (mandatory)
 
-| cornerOfOrigin a| Corner of the tile matrix used as the origin for numbering tile
-rows and columns. | enumeration. See <<table8>> a| Zero or one (optional). Default
-value is "topLeft"
+| cornerOfOrigin
+| Corner of the tile matrix used as the origin for numbering tile rows and
+columns.
+| enumeration. See <<table8>>
+| Zero or one (optional). Default value is "topLeft"
 
 | pointOfOrigin{blank}footnote:e7[In previous versions this attribute was called
-topLeftCorner and the concept of cornerOfOrigin did not exist] a| Position in CRS
-coordinates of the corner of origin for a tile matrix. a| GM_Point data
-structure{blank}footnote:b7[As specified in the <<iso19107>>. The CRS and order of
+topLeftCorner and the concept of cornerOfOrigin did not exist]
+| Position in CRS coordinates of the corner of origin for a tile matrix.
+| GM_Point data structure{blank}footnote:b7[As specified in the <<iso19107>>. The CRS and order of
 these coordinates shall be as specified by the _crs_ of the parent TileMatrixSet.
 These are the precise coordinates of the corner of origin (e.g. the top-left corner)
-for the tile matrix, which is also the corner of the (0, 0) tile. See <<fig5>>.] |
-One (mandatory)
+for the tile matrix, which is also the corner of the (0, 0) tile. See <<fig5>>.]
+| One (mandatory)
 
-| tileWidth a| Width of each tile of a tile matrix in cells | Positive integer type |
-One (mandatory)
+| tileWidth
+| Width of each tile of a tile matrix in cells
+| Positive integer type
+| One (mandatory)
 
-| tileHeight a| Height of each tile of a tile matrix in cells | Positive integer type | One (mandatory)
+| tileHeight
+| Height of each tile of a tile matrix in cells
+| Positive integer type
+| One (mandatory)
 
-| matrixWidth a| Width of the matrix (number of tiles in width) | Positive integer
-type | One (mandatory)
+| matrixWidth
+| Width of the matrix (number of tiles in width)
+| Positive integer type
+| One (mandatory)
 
-| matrixHeight a| Height of the matrix (number of tiles in height) | Positive integer
-type | One (mandatory)
+| matrixHeight
+| Height of the matrix (number of tiles in height)
+| Positive integer type
+| One (mandatory)
+
 |===
 
 [NOTE,keep-separate=true]
@@ -511,14 +554,22 @@ scaleDenominator.
 
 [[table8]]
 .Parts of CornerOfOriginCode enumeration
-[options="header"]
+[cols="a,a",options="header"]
 |===
 | Names | Definition
 
-| topLeft | Top left corner{blank}footnote:a8[The only possibility available in WMTS
-1.0. Sometimes known as "xyz" in other non OGC specifications.]
-| bottomLeft | Bottom left corner{blank}footnote:b8[Used by Tile Map Service.
-Sometimes known as "tms" in other non OGC specifications]
+| topLeft
+| Top left corner
+
+footnote:a8[The only possibility available in WMTS 1.0. Sometimes known as "xyz"
+in other non OGC specifications.]
+
+| bottomLeft
+| Bottom left corner
+
+footnote:b8[Used by Tile Map Service. Sometimes known as "tms" in other non OGC
+specifications]
+
 |===
 
 [[TileMatrixSetCRSCompatibility]]
@@ -560,17 +611,29 @@ have coalesced (i.e., coalescence factor larger than 1) will be encoded.
 
 [[table9]]
 .Parts of VariableMatrixWidth data structure
-[options="header"]
+[cols="a,a,a,a",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
-| coalesce | Coalescence factor | Positive integer type{blank}footnote:[Shall be more
-than 1. Rows with Coalescence factor of 1 shall not be described here.] | One
-(mandatory)
-| minTileRow a| First tile row where the coalescence factor applies for a tilematrix | Non negative integer type{blank}footnote:[From 0 to maxTileRow.] | One (mandatory)
-| maxTileRow a| Last tile row where the coalescence factor applies for a tilematrix |
-Non negative integer type{blank}footnote:[From minTileRow to matrixWidth-1 of the
-tileMatrix section of the associated tileMatrixSet.] | One (mandatory)
+| coalesce
+| Coalescence factor
+| Positive integer type
+
+footnote:[Shall be more than 1. Rows with Coalescence factor of 1 shall not be
+described here.]
+| One (mandatory)
+
+| minTileRow
+| First tile row where the coalescence factor applies for a tilematrix
+| Non negative integer type{blank}footnote:[From 0 to maxTileRow.]
+| One (mandatory)
+
+| maxTileRow
+| Last tile row where the coalescence factor applies for a tilematrix
+| Non negative integer type{blank}footnote:[From minTileRow to matrixWidth-1 of
+the tileMatrix section of the associated tileMatrixSet.]
+| One (mandatory)
+
 |===
 
 include::../requirements/variablematrixwidth/REQ_variablematrixwidth_coalescence1.adoc[]

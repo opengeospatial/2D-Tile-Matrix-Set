@@ -40,8 +40,6 @@ if (tileMinRow < 0) tileMinRow = 0
 if (tileMaxRow >= matrixHeight) tileMaxRow = matrixHeight-1
 ----
 
- 
-
 To fetch all the tiles that cover this bounding box, a client would
 scan through tileMinCol to tileMaxCol and tileMinRow to tileMaxRow,
 all inclusive. A total of

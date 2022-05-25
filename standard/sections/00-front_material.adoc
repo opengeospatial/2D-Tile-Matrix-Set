@@ -23,8 +23,7 @@ origin to start exploring the tile set. Finally, the document offers practical
 examples of tile matrix sets both for common global projections and for specific
 regions.
 
-
-.Preface
+== Preface
 
 In 2007 the OGC approved and released the Web Map Tile Service Standard
 <<ogc07-057r7>> (WMTS). WMTS defines "tile matrix set". Over time, other OGC
@@ -76,12 +75,14 @@ afterwards without the tile service knowing it.
 All questions regarding this submission should be directed to the editor or the
 submitters:
 
-[%unnumbered]
+[cols="a,a",options="header,unnumbered"]
 |===
-h| Name h| Affiliation
+| Name | Affiliation
+
 | Joan Maso | Universitat Autonoma de Barcelona (UAB-CREAF)
 | Jeff Yutzler | Image Matters LLC
 | Peter Rushforth | Canada Centre for Mapping and Earth Observation, Natural Resources Canada
 | Jérôme St-Louis | Ecere Corporation
 | Jeff Harrison | US Army Geospatial Center
+
 |===

@@ -1,4 +1,4 @@
-[appendix,obligation="normative"]
+[appendix,obligation="informative"]
 == Revision History
 
 [cols="a,a,a,a,a",options="header,unnumbered"]

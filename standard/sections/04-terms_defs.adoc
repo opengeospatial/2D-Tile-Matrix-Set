@@ -64,7 +64,7 @@ NOTE: A grid can be used to define a tessellation of the space.
 set of all values a function stem:[f] can take as its arguments vary over its domain
 
 [.source]
-<<ogc07-036>>>
+<<ogc07-036>>
 
 === raster tile
 

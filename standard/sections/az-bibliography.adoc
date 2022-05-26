@@ -1,6 +1,8 @@
 
 [bibliography]
-= Bibliography
+== Bibliography
+
+* [[[ogc07-036, OGC 07-036]]]
 
 * [[[ogc17-041, OGC 17-041]]]
 
@@ -63,8 +65,6 @@ Amendment for Universal Polar Stereographic, NGA.SIG.0014_1.0_PROJRAS, V. 0.1,
 Stereographic Map Projections, NGA.SIG.0012_2.0.0_UTMUPS, V. 2.0.0, 25 March 2014.
 https://nsgreg.nga.mil/doc/view?i=4106
 
-* [[[ogc07-036, OGC 07-036]]]
-
 * [[[ogc15-113r5, OGC 15-113r5]]]
 
 * [[[rollins, 26]]], Rollins C. and Paniccia M.: National Geospatial-Intelligence
@@ -88,3 +88,7 @@ http://www2.unb.ca/~estef/talks/CCA2017_Technical_Session_Stefanakis.pdf
 * [[[ogc12-128r17, OGC 12-128r17]]]
 
 * [[[ogc18-101, OGC 18-101]]]
+
+* [[[rfc4287, IETF RFC 4287]]]
+
+* [[[rfc6838, IETF RFC 6838]]]

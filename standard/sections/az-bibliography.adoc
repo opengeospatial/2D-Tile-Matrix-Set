@@ -23,16 +23,11 @@ status. https://geoservice.dlr.de/web/services#tilecache
 
 * [[[ogc20-040r3, OGC 20-040r3]]]
 
-* [[[ogc20-092, OGC 20-092]]]
-
 * [[[ogc19-088r2, OGC 19-088r2]]]
 
 * [[[ogc18-076, OGC 18-076]]]
 
 * [[[ogc18-025, OGC 18-025]]]
-
-* [[[mapbox, 12]]], MapBox: MBTiles Specification.
-https://github.com/mapbox/mbtiles-spec
 
 * [[[ogc19-069, OGC 19-069]]]
 
@@ -43,6 +38,23 @@ https://github.com/mapbox/mbtiles-spec
 * [[[ogc18-086r1, OGC 18-086r1]]]
 
 * [[[ogc05-077r4, OGC 05-077r4]]]
+
+* [[[ogc15-113r5, OGC 15-113r5]]]
+
+* [[[ogc19-082r1, OGC 19-082r1]]]
+
+* [[[ogc18-078, OGC 18-078]]]
+
+* [[[ogc18-083, OGC 18-083]]]
+
+* [[[ogc12-128r17, OGC 12-128r17]]]
+
+* [[[ogc18-101, OGC 18-101]]]
+
+* [[[ogc-CDBX-paper, OGC CDB-X Sprint Engineering Report]]] OGC. _CDB-X Sprint Engineering Report_. Available from: https://github.com/sofwerx/cdb2-eng-report
+
+* [[[mapbox, 12]]], MapBox: MBTiles Specification. Available from:
+https://github.com/mapbox/mbtiles-spec
 
 * [[[nga-web, 18]]], NGA: Implementation Practice Web Mercator Map Projection.
 NGA.SIG.0011_1.0_WEBMERC, https://nsgreg.nga.mil/doc/view?i=4105
@@ -65,8 +77,6 @@ Amendment for Universal Polar Stereographic, NGA.SIG.0014_1.0_PROJRAS, V. 0.1,
 Stereographic Map Projections, NGA.SIG.0012_2.0.0_UTMUPS, V. 2.0.0, 25 March 2014.
 https://nsgreg.nga.mil/doc/view?i=4106
 
-* [[[ogc15-113r5, OGC 15-113r5]]]
-
 * [[[rollins, 26]]], Rollins C. and Paniccia M.: National Geospatial-Intelligence
 Agency ESRI Users Conference, July 22, 2015.
 https://www.slideshare.net/NGA_GEOINT/ngas-position-on-webmercator
@@ -78,16 +88,6 @@ Paper 1395. By:. https://pubs.usgs.gov/pp/1395/report.pdf
 Two cornerstones of Online Map Service Providers. Annual Conference - 2017 - Ottawa,
 May 31- June 2, 2017.
 http://www2.unb.ca/~estef/talks/CCA2017_Technical_Session_Stefanakis.pdf
-
-* [[[ogc19-082r1, OGC 19-082r1]]]
-
-* [[[ogc18-078, OGC 18-078]]]
-
-* [[[ogc18-083, OGC 18-083]]]
-
-* [[[ogc12-128r17, OGC 12-128r17]]]
-
-* [[[ogc18-101, OGC 18-101]]]
 
 * [[[rfc4287, IETF RFC 4287]]]
 

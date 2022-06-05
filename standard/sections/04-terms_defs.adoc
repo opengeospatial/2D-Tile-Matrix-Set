@@ -121,7 +121,7 @@ geometric shape with known properties that may or may not be the result of a til
 (tessellation) process. A tile consists of a single connected "piece" without "holes"
 or "lines" (topological disc).
 
-NOTE: From <<ogc19-014r1>>: Core Tiling Conceptual and Logical Models for 2D
+NOTE: From <<ogc19-014r3>>: Core Tiling Conceptual and Logical Models for 2D
 Euclidean Space
 
 In the context of a 2D _tile matrix_, a _tile_ is one of the rectangular regions of
@@ -165,13 +165,13 @@ unique set of identifiers) corresponds
 to a space satisfying the geometric properties of a specific tile
 
 NOTE: Adapted from the indexing aspect of the _tile scheme_ definition of the
-<<ogc19-014r1>>: Core Tiling Conceptual and Logical Models for 2D Euclidean Space
+<<ogc19-014r3>>: Core Tiling Conceptual and Logical Models for 2D Euclidean Space
 
 === tile set
 
 a set of _tiles_ resulting from tiling data according to a particular _tiling scheme_
 
-NOTE: From <<ogc19-014r1>>: Core Tiling Conceptual and Logical Models for 2D
+NOTE: From <<ogc19-014r3>>: Core Tiling Conceptual and Logical Models for 2D
 Euclidean Space, but adapted to clarify that in the context of this document, a tile
 set refers specifically to a set of tiles containing data and following a common
 tiling scheme.
@@ -191,7 +191,7 @@ NOTE: A tiling scheme can be defined on top of a CRS as well as other spatial
 reference systems such as DGGS and other organizations including irregular ones.
 In this document, only tiling schemes based on CRSs are supported.
 
-NOTE: From the _tile set scheme_ and _tile scheme_ definitions of <<ogc19-014r1>>:
+NOTE: From the _tile set scheme_ and _tile scheme_ definitions of <<ogc19-014r3>>:
 Core Tiling Conceptual and Logical Models for 2D Euclidean Space, adapted to reflect
 the fact that a _tiling scheme_ already
 imparts individual tiles with an origin and an extent

@@ -3,7 +3,7 @@
 
 === Overview
 
-As stated in <<ogc08-015r4>> Abstract Specification Topic 2: Referencing by
+As stated in <<ogc18-005r5>> Abstract Specification Topic 2: Referencing by
 Coordinates, a coordinate system is a set of mathematical rules for specifying how
 coordinates are to be assigned to points in space. A CRS is a coordinate system that
 is related to the real world by a reference datum. An example of mathematical rules

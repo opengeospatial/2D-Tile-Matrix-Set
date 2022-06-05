@@ -81,7 +81,7 @@ in the _TileSet_'s _TileMatrixSetLimits_ allows for the re-use of
 common 2D TileMatrixSets.
 
 .Properties for a ExtraDimension data structure
-[cols="a,a,a,a",options="header"]
+[cols="1,1,1,1",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 

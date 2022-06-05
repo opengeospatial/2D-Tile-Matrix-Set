@@ -159,7 +159,7 @@ image::BoundingBox.png[BoundingBox UML model]
 
 [[table3]]
 .Parts of BoundingBox data structure
-[cols="a,a,a,a",options="header"]
+[cols="1,1,1,1",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
@@ -224,7 +224,7 @@ union of three possibilities (URI, WKT2 CRS, or <<iso19115>> MD_ReferenceSystem)
 
 [[table4]]
 .Parts of CRSType data structure
-[cols="a,a,a",options="header"]
+[cols="1,1,1",options="header"]
 |===
 | Names | Definition | Data type and values
 
@@ -264,7 +264,7 @@ image::AtomLink.png[Atom link UML model]
 
 [[table5]]
 .Parts of WebLink data structure
-[cols="a,a,a,a",options="header"]
+[cols="1,1,1,1",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 

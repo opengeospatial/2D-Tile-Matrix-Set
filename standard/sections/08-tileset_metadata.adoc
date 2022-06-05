@@ -156,7 +156,7 @@ image::TileSet.png[TileSetMetadata UML model]
 
 [[table13]]
 .Parts of TileSetMetadata data structure
-[cols="a,a,a,a", options="header"]
+[cols="1,1,1,1", options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
@@ -273,7 +273,7 @@ defined with a data structure defined in <<table14>>.
 
 [[table14]]
 .Parts of GeospatialData data structure
-[cols="a,a,a,a", options="header"]
+[cols="1,1,1,1", options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
@@ -398,7 +398,7 @@ are defined in <<table15>>.
 
 [[table15]]
 .Parts of FeatureAttribute data structure
-[cols="a,a,a,a",options="header"]
+[cols="1,1,1,1",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
@@ -466,7 +466,7 @@ The style structure applicable to the geospatial resource is defined in <<table1
 
 [[table16]]
 .Parts of Style data structure
-[cols="a,a,a,a",options="header"]
+[cols="1,1,1,1",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
@@ -502,7 +502,7 @@ The levels of classification applicable to the TileSet is defined in <<table17>>
 
 [[table17]]
 .Parts of ClassificationCode code list
-[cols="a,a",options="header"]
+[cols="1,1",options="header"]
 |===
 | Names | Definition
 | unclassified | Available for general disclosure
@@ -517,7 +517,7 @@ The data type applicable to the tileset or the layer is defined in <<table18>>.
 
 [[table18]]
 .Parts of DataTypeCode code list
-[cols="a,a",options="header"]
+[cols="1,1",options="header"]
 |===
 | Names | Definition
 | map | Images representing colors for pictorial representation on the screen
@@ -531,7 +531,7 @@ table below <<table19>>.
 
 [[table19]]
 .Geometry dimensions
-[cols="a,a",options="header"]
+[cols="1,1",options="header"]
 |===
 | Dimensions | Definition
 | 0 | 0D geometries (points, e.g. Point/MultiPoint)
@@ -547,7 +547,7 @@ the TileSet is defined in <<table20>>.
 
 [[table20]]
 .Parts of TilePoint data structure
-[cols="a,a,a,a",options="header"]
+[cols="1,1,1,1",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 | coordinates | Location of the center point in the TileSet | GM_Point data

@@ -41,7 +41,7 @@ See <<Clause_Critical>> for more information on critical changes,
 === Change Table
 
 .Change Log
-[cols="a,a,a,a,3a,",options="header"]
+[cols="1,1,1,1,3,",options="header"]
 |===
 |Source |Identifier |Type |Section |Description |Purpose
 

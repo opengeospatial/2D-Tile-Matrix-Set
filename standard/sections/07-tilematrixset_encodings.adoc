@@ -48,7 +48,6 @@ In addition, all elements with multiplicity greater than one have names changed 
 plural. Please be aware of irregular plurals such as `tileMatrix` that changes to
 `tileMatrices`.
 
-[[json-tilematrixset-requirements-class]]
 ==== JSON TileMatrixSet requirements class
 
 include::../requirements/requirements_json-tilematrixset.adoc[]
@@ -91,7 +90,6 @@ Example encodings for Variable Matrix Width TileMatrixSets (Informative)>> in JS
 The XML encoding is defined respecting the naming and types of the original classes.
 However, all attribute names have been transformed to UpperCamelCase.
 
-[[xml-tilematrixset-requirements-class]]
 ==== XML TileMatrixSet requirements class
 
 include::../requirements/requirements_xml-tilematrixset.adoc[]
@@ -112,7 +110,6 @@ document prevails.
 An annex provides <<annex-example-encodings-for-common-tilematrixset-informative,
 Example encodings for Common TileMatrixSets (Informative)>> in XML.
 
-[[xml-variablematrixwidth-requirements-class]]
 ==== XML VariableMatrixWidth requirements class
 
 include::../requirements/requirements_xml-variablematrixwidth.adoc[]

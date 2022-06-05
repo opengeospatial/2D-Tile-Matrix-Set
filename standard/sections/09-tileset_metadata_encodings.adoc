@@ -10,7 +10,6 @@ classes. However, there are some differences exposed in the
 some exceptions in the mapping between the class attributes and corresponding JSON
 element.
 
-[[json-tilematrixsetlimits-requirements-class]]
 ==== JSON TileMatrixSetLimits requirements class
 
 include::../requirements/requirements_json-tilematrixsetlimits.adoc[]
@@ -87,7 +86,6 @@ properties.
 The XML encoding has been done respecting the naming and types of the original
 classes. However all attribute names have been transformed to UpperCamelCase.
 
-[[xml-tilematrixsetlimits-requirements-class]]
 ==== XML TileMatrixSetLimits requirements class
 
 include::../requirements/requirements_xml-tilematrixsetlimits.adoc[]
@@ -105,7 +103,6 @@ the reason an associated media type is not provided.
 An annex provides an <<xml-document-instance-using-tilesetmetadata, Example XML
 encoding of TileSetMetadata>> including TileMatrixSetLimits.
 
-[[xml-tilesetmetadata-requirements-class]]
 ==== XML TileSetMetadata requirements class
 
 include::../requirements/requirements_xml-tilesetmetadata.adoc[]

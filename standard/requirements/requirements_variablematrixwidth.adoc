@@ -1,4 +1,5 @@
 
+[[variablematrixwidth-requirements-class]]
 [requirements_class]
 ====
 [%metadata]

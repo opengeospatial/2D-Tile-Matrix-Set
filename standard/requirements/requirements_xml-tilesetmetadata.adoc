@@ -1,4 +1,5 @@
 
+[[xml-tilesetmetadata-requirements-class]]
 [requirements_class]
 ====
 [%metadata]

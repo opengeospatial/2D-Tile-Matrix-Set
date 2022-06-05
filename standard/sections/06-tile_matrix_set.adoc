@@ -320,7 +320,6 @@ image::5.png[TileMatrix with variable matrix width]
 [[tilematrixset-requirements]]
 === TileMatrixSet Requirements Classes
 
-[[tilematrixset-requirements-class]]
 ==== TileMatrixSet requirements class
 
 Requirements class tilematrixset establishes how to describe a TileMatrixSet for a
@@ -592,7 +591,6 @@ the PointOfOrigin and optional BoundingBox within the TileMatrixSet definition
 itself. The CRS of the TileSet affects the coordinates order for the data in the
 tiles, if applicable (e.g some formats of vector tiles)
 
-[[variablematrixwidth-requirements-class]]
 ==== VariableMatrixWidth requirements class
 
 This requirements class provides the necessary support for variable matrix width tile

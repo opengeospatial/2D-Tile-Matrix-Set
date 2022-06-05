@@ -1,4 +1,5 @@
 
+[[xml-tilematrixsetlimits-requirements-class]]
 [requirements_class]
 ====
 [%metadata]

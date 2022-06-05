@@ -46,7 +46,6 @@ navigation.
 
 === Requirements classes
 
-[[tilematrixsetlimits-requirements-class]]
 ==== TileMatrixSetLimits requirements class
 
 Requirements class TileMatrixSetLimits establishes how to describe the limits for a
@@ -110,7 +109,6 @@ integer type{blank}footnote:[From minTileCol to tileHeight-1 of the tileMatrix o
 | One (mandatory)
 |===
 
-[[tilesetmetadata-requirements-class]]
 ==== TileSetMetadata requirements class
 
 Requirements class TileSetMetadata establishes how to describe TileSet Metadata for a

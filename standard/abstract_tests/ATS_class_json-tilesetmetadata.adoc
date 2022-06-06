@@ -1,11 +1,11 @@
 [[ats_json-tilesetmetadata]]
-[cols="1,4",width="90%"]
-|===
-2+|*Conformance Class*
-2+|http://www.opengis.net/spec/tms/2.0/conf/json-tilesetmetadata
-|Target type |tile set metadata
-|Requirements class |<<json-tilesetmetadata-requirements-class,Requirements Class "JSON TileSetMetadata">>
-|===
+[conformance_class]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/tms/2.0/conf/json-tilesetmetadata
+subject:: <<json-tilesetmetadata-requirements-class,Requirements Class "JSON TileSetMetadata">>
+classification:: Target Type:tile set metadata
+====
 
 ==== Model
 

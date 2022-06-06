@@ -1,10 +1,20 @@
-[[ats_json_tilematrixsetlimits_schema]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/json-tilematrixsetlimits/schema*
-| Test Purpose | Validate that a TileMatrixSetLimits encoded in JSON using the JSON schema for a tile matrix set.
-| Requirement |<<req_json_tilematrixsetlimits_schema>>
-| Test method | Validate the requirements of the model
 
-Test passes if TileMatrixSetLimits JSON instances pass validation against the tile matrix set limits JSON Schemas.
-|===
+[[ats_json_tilematrixsetlimits_schema]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/json-tilematrixsetlimits/schema
+
+subject:: <<req_json_tilematrixsetlimits_schema>>
+
+test-purpose:: Validate that a TileMatrixSetLimits encoded in JSON using the JSON
+schema for a tile matrix set.
+
+[.component,class=test-method]
+--
+Validate the requirements of the model
+
+Test passes if TileMatrixSetLimits JSON instances pass validation against the tile
+matrix set limits JSON Schemas.
+--
+====

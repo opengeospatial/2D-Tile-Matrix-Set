@@ -1,0 +1,114 @@
+== Conformance
+
+This standard defines the concept of tile matrix set, tile matrix set limits and tile
+set metadata.
+
+Requirements for the following standardization target types are defined.
+
+* TileMatrixSet: This abstract class defines a data model for tile matrix sets
+[http://www.opengis.net/spec/tms/2.0/req/tilematrixset]. This abstract class has a
+single conformance class: [http://www.opengis.net/spec/tms/2.0/conf/tilematrixset].
+The target is a service or an encoding needing to define TileMatrixSet (e.g., a
+future version of WMTS service metadata or an OGC API - Tiles).
+
+* TileMatrixSetLimits: This abstract class defines a data model for tile matrix sets
+limits [http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits]. This abstract
+class has a single conformance class:
+[http://www.opengis.net/spec/tms/2.0/conf/tilematrixsetlimits]. The target is a
+service, a client, or an encoding needing to define TileMatrixSetLimits (e.g., a
+future version of WMTS service metadata or an OGC API - Tiles).
+
+* TileSetMetadata: This abstract class defines a data model for tile set metadata in 
+[http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata]. This abstract class has a
+single conformance class: [http://www.opengis.net/spec/tms/2.0/conf/tilesetmetadata].
+The target is a service, a client, or an encoding needing to declare conformity to a
+TileMatrixSet or/and a TileMatrixSetLimits (e.g., a future version of WMTS service
+metadata or an OGC API - Tiles).
++
+NOTE: TileSetMetadata in this standard replaces and extends TileMatrixSetLink in the
+version 1.0
+
+* XMLTileMatrixSet: This class defines an encoding in XML for tile matrix sets
+[http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixset]. This class has a single
+conformance class: [http://www.opengis.net/spec/tms/2.0/conf/xml-tilematrixset]. The
+target is a service, a client, or an encoding needing to define a TileMatrixSet in
+XML (e.g., a future version of WMTS service metadata).
+
+* XMLTileMatrixSetLimits: This class defines an encoding in XML for tile matrix sets
+limits in  [http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixsetlimits]. This
+class has a single conformance class:
+[http://www.opengis.net/spec/tms/2.0/conf/xml-tilematrixsetlimits]. The target is a
+service, a client, or an encoding needing to define a TileMatrixSetLimits in XML
+(e.g., a future version of WMTS service metadata or an OGC API - Tiles).
+
+* XMLTileSetMetadata: This class defines an encoding in XML for tile set metadata
+[http://www.opengis.net/spec/tms/2.0/req/xml-tilesetmetadata]. This class has a
+single conformance class:
+[http://www.opengis.net/spec/tms/2.0/conf/xml-tilesetmetadata]. The target is a
+service, a client or an encoding needing to declare conformity to a TileMatrixSet
+or/and a TileMatrixSetLimits using an XML encoding (e.g., a future version of WMTS
+service metadata).
++
+NOTE: XMLTileSetMetadata in this standard replaces and extends XMLTileMatrixSetLink2d
+in the version 1.0
+
+* JSONTileMatrixSet: This class defines an encoding in JSON for tile matrix sets
+[http://www.opengis.net/spec/tms/2.0/req/json-tilematrixset]. This class has a single
+conformance class: [http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixset]. The
+target is a service, a client, or an encoding needing to define a TileMatrixSet in
+JSON (e.g., a future version of an OGC API - Tiles).
+
+* JSONTileMatrixSetLimits: This class defines an encoding in JSON for tile matrix
+sets limits in  [http://www.opengis.net/spec/tms/2.0/req/json-tilematrixsetlimits].
+This class has a single conformance class:
+[http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixsetlimits]. The target is a
+service, a client ,or an encoding needing to define a TileMatrixSet in JSON (e.g., a
+future version of an OGC API - Tiles).
+
+* JSONTileSetMetadata: This class defines an encoding in JSON for tile set metadata
+in  [http://www.opengis.net/spec/tms/2.0/req/json-tilesetmetadata]. This class has a
+single conformance class:
+[http://www.opengis.net/spec/tms/2.0/conf/json-tilesetmetadata]. The target is a
+service, a client, or an encoding needing to declare conformity to a TileMatrixSet
+or/and a TileMatrixSetLimits using a JSON encoding (e.g., a future version of an OGC
+API - Tiles).
++
+NOTE: JSONTileSetMetadata in this standard replaces and extends
+JSONTileMatrixSetLink2d in the version 1.0
+
+////
+* JSONLDTileMatrixSet: This class defines an encoding in JSON-LD for tile matrix
+sets  [http://www.opengis.net/spec/tms/2.0/req/jsonld-tilematrixset]. This class has
+a single conformance class:
+[http://www.opengis.net/spec/tms/2.0/conf/jsonld-tilematrixset] The target is a
+service, a client, or an encoding needing to define a TileMatrixSet in JSON that
+needs to connect to the semantic web (e.g., a future version of an OGC API - Tiles).
+
+* JSONLDTileMatrixSetLimits: This class defines an encoding in JSON-LD for tile
+matrix sets limits
+[http://www.opengis.net/spec/tms/2.0/req/jsonld-tilematrixsetlimits]. This class has
+a single conformance class:
+[http://www.opengis.net/spec/tms/2.0/conf/jsonld-tilematrixsetlimits] The target is a
+service, a client, or an encoding needing to define a TileMatrixSet in JSON that
+needs to connect to the semantic web (e.g., a future version of an OGC API - Tiles).
+* JSONLDTileSetMetadata: This class defines an encoding in JSON-LD for tile set
+metadata [http://www.opengis.net/spec/tms/2.0/req/jsonld-tilesetmetadata]. This class
+has a single conformance class:
+[http://www.opengis.net/spec/tms/2.0/conf/jsonld-tilesetmetadata] The target is a
+service, a client, or an encoding needing to declare conformity to a TileMatrixSet
+or/and a TileMatrixSetLimits using a JSON encoding that needs to connect to the
+semantic web (e.g., a future version of an OGC API - Tiles).
+
+NOTE: JSONLDTileSetMetadata in this standard replaces and extends
+JSONLDTileMatrixSetLink2d in the version 1.0
+////
+
+Conformance with this standard shall be verified using all the relevant tests
+specified in <<annex-conformance-class-abstract-test-suite, Conformance Class
+Abstract Test Suite (Normative)>> (normative) of this document. The framework,
+concepts, and methodology for testing, and the criteria to be achieved to claim
+conformance are specified in the OGC Compliance Testing Policies and Procedures and
+the OGC Compliance Testing web site footnote:[http://www.opengeospatial.org/cite].
+
+All requirements-classes and conformance-classes described in this document are owned
+by the standard(s) identified.

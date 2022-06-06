@@ -1,0 +1,9 @@
+---
+metanorma:
+  source:
+    files:
+      - standard/17-083r4.adoc
+
+  collection:
+    name: OGC 2D Tile Matrix Set
+    organization: OGC

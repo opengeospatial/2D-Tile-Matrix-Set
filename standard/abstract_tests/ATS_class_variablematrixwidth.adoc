@@ -1,11 +1,11 @@
 [[ats_variablematrixwidth]]
-[cols="1,4",width="90%"]
-|===
-2+|*Conformance Class*
-2+|http://www.opengis.net/spec/tms/2.0/conf/variablematrixwidth
-|Target type |tile matrix sets
-|Requirements class |<<variablematrixwidth-requirements-class,Requirements Class "VariableMatrixWidth">>
-|===
+[conformance_class]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/tms/2.0/conf/variablematrixwidth
+subject:: <<variablematrixwidth-requirements-class,Requirements Class "VariableMatrixWidth">>
+classification:: Target Type:tile matrix sets
+====
 
 ==== Model
 

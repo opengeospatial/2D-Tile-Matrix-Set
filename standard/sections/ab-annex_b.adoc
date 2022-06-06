@@ -1,0 +1,50 @@
+[[annex-schema-documents-normative]]
+[appendix,obligation=normative]
+== Schema Documents
+
+In addition to this document, this standard includes several normative Schema
+Documents.
+These Schema Documents are posted online at the URL http://schemas.opengis.net/tms/2.0.
+
+The schemas for both JSON and XML encodings of TileMatrixSets are reproduced in the
+<<annex-example-encodings-for-common-tilematrixset-informative>> section of this
+document, along with examples. Additional examples are found in the
+<<annex-example-encodings-for-variable-matrix-width-informative>> section.
+
+The schemas for both JSON and XML encodings of TileSet Metadata are reproduced in the
+<<example-encodings-for-tilesetmetadata-informative>> sections of this document,
+along with examples.
+
+[[b1-json-schema]]
+=== JSON Schema
+
+The JSON Schema Documents are situated in the json subfolder and are named:
+
+* json/tileMatrixSet.json
+* json/tileMatrixLimits.json
+* json/tileSet.json
+
+They include the schemas necessary to JSON-validate the classes JSONTileMatrixSet,
+JSONTileMatrixSetLimits and JSONTileSetMetadata, respectively.
+
+In addition, the directory named `json/examples/tilematrixset` contains examples of
+the JSON TileMatrixSets encodings,
+while the directory named `json/examples/tileset` contains examples of the JSON
+tileset metadata encodings.
+
+[[b2-xml-schema]]
+=== XML Schema
+
+The XML Schema Documents are situated in the xml subfolder and are named:
+
+* xml/tilematrixset.xsd
+* xml/tilematrixlimits.xsd
+* xml/tileset.xsd
+
+They includes the schemas necessary to XML-validate the classes XMLTileMatrixSet,
+XMLTileMatrixSetLimits and XMLTileSetMetadata, respectively.
+
+In addition, the directory named `xml/examples/tilematrixset` contains examples of
+the XML TileMatrixSets encodings,
+while the directory named `xml/examples/tileset` contains examples of XML tileset
+metadata encodings.

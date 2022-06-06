@@ -1,10 +1,20 @@
-[[ats_json_tilematrixsetlimits_model]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/json-tilematrixsetlimits/model*
-| Test Purpose | Validate that a TileMatrixSetLimits encoded in JSON implements the class TileMatrixSetLimits
-|Requirement |<<req_json_tilematrixsetlimits_model>>
-| Test method | Validate the requirements of the model
 
-Test passes if TileMatrixSetLimits instances follow the data model specified in the requirement and associated tables and its dependencies.
-|===
+[[ats_json_tilematrixsetlimits_model]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/json-tilematrixsetlimits/model
+
+subject:: <<req_json_tilematrixsetlimits_model>>
+
+test-purpose:: Validate that a TileMatrixSetLimits encoded in JSON implements the class
+TileMatrixSetLimits
+
+[.component,class=test-method]
+--
+Validate the requirements of the model
+
+Test passes if TileMatrixSetLimits instances follow the data model specified in the
+requirement and associated tables and its dependencies.
+--
+====

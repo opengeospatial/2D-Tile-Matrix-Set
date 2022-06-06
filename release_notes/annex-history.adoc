@@ -2,8 +2,10 @@
 = Revision History
 
 .Revision History
-[width="90%",options="header"]
-|====================
+[options="header"]
+|===
 |Date |Release |Editor | Primary clauses modified |Descriptions
+
 | | | |
-|====================
+
+|===

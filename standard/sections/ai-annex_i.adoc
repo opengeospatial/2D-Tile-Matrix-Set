@@ -1,0 +1,65 @@
+
+[[annex-pseudocode-informative]]
+[appendix,obligation="informative"]
+== Pseudocode
+
+This informative Annex provides pseudocode that illustrates how to
+get the tiles that cover a bounding box rectangle and how to get the
+CRS coordinates that bound a tile.
+
+[[from-bbox-to-tile-indices]]
+=== From BBOX to tile indices
+
+The following fragment of pseudocode could be used to convert from
+a desired bounding box (bBoxMinX, bBoxMinY, bBoxMaxX, bBoxMaxY) in
+CRS coordinates to a range of tile set indices. This pseudocode uses
+the same notation that subclause 6.1.1 uses. In this pseudocode it
+is assumed that bBoxMinX, bBoxMinY, bBoxMaxX, bBoxMaxY, tileMatrixMinX,
+tileMatrixMinY, tileMatrixMinY, tileMatrixMaxY, tileSpanX and tileSpanY
+are floating point variables (IEEE-754) that have accuracy issues
+derived from the finite precision of the representation. These accuracy
+issues could be amplified in a typical floor() rounding down function
+that could return a value ±1 than what is expected. To overcome this
+issue this code uses a small value (epsilon) added or subtracted in
+a place that is not affected by CRS coordinate precision.
+
+[source,c,options="unnumbered"]
+----
+// to compensate for floating point computation inaccuracies
+epsilon = 1e-6
+
+tileMinCol = floor((bBoxMinX - tileMatrixMinX) / tileSpanX + epsilon)
+tileMaxCol = floor((bBoxMaxX - tileMatrixMinX) / tileSpanX - epsilon)
+tileMinRow = floor((tileMatrixMaxY - bBoxMaxY) / tileSpanY + epsilon)
+tileMaxRow = floor((tileMatrixMaxY - bBoxMinY) / tileSpanY - epsilon)
+
+// to avoid requesting out-of-range tiles
+if (tileMinCol < 0) tileMinCol = 0
+if (tileMaxCol >= matrixWidth) tileMaxCol = matrixWidth-1
+if (tileMinRow < 0) tileMinRow = 0
+if (tileMaxRow >= matrixHeight) tileMaxRow = matrixHeight-1
+----
+
+To fetch all the tiles that cover this bounding box, a client would
+scan through tileMinCol to tileMaxCol and tileMinRow to tileMaxRow,
+all inclusive. A total of
+stem:[("tileMaxCol" - "tileMinCol" + 1) xx ("tileMaxRow" - "tileMinRow" + 1)]
+will be fetched.
+
+[[from-tile-indices-to-bbox]]
+=== From tile indices to BBOX
+
+The following pseudocode could be used to convert from a pair of tile
+indices (tileCol, tileRow) to the bounding box (in CRS coordinates)
+of this tile defined by the upper-left corner (leftX, upperY) of the
+tile:
+
+[source,c,options="unnumbered"]
+----
+leftX = tileCol * tileSpanX + tileMatrixMinX
+upperY = tileMatrixMaxY - tileRow * tileSpanY
+
+and the lower-right corner (rightX, lowerY) of the tile:
+rightX = (tileCol+1) * tileSpanX + tileMatrixMinX
+lowerY = tileMatrixMaxY – (tileRow+1) * tileSpanY
+----

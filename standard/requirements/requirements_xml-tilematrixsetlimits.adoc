@@ -3,5 +3,6 @@
 2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
 2+|http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixsetlimits {set:cellbgcolor:#FFFFFF}
 |Target type |tile set metadata
+|Dependency |https://www.w3.org/TR/xml/: Extensible Markup Language (XML) 1.0
 |Dependency |http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits
 |===

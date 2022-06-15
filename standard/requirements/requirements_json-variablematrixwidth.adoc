@@ -1,10 +1,10 @@
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
-2+|http://www.opengis.net/spec/tms/2.0/req/json-variablematrixwidth {set:cellbgcolor:#FFFFFF}
-|Target type |tile matrix sets
 
-|Dependency |http://www.opengis.net/spec/tms/2.0/req/variablematrixwidth
-|Dependency |http://www.opengis.net/spec/tms/2.0/req/json_tilematrixset
-
-|===
+[[json-variablematrixwidth-requirements-class]]
+[requirements_class]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/tms/2.0/req/json-variablematrixwidth
+subject:: tile matrix sets
+inherit:: http://www.opengis.net/spec/tms/2.0/req/variablematrixwidth
+inherit:: http://www.opengis.net/spec/tms/2.0/req/json_tilematrixset
+====

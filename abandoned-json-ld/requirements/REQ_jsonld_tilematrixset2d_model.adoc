@@ -1,5 +1,5 @@
 [[req_jsonld_tilematrixset2d_model]]
-[width="90%",cols="2,6"]
+[cols="2,6"]
 |===
 |*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/jsonld-tilematrixset2d/model* {set:cellbgcolor:#FFFFFF}
 2+|A TileMatrixSet2D encoded in JSON-LD _shall_ implement the class TileMatrixSet2D +

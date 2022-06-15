@@ -1,12 +1,24 @@
-[[ats_tilematrixsetlimits_model]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/tilematrixsetlimits/model*
-| Test Purpose | Validate that a tile matrix set limits follows the UML model and model description. Validate that each tileMatrix identifier is mentioned only once in the TileMatrixSetLimits.
-|Requirement |<<req_tilematrixsetlimits_model>>
-| Test method | Validate the requirements of the model
 
-Test passes if TileMatrixSetLimits instances point to the TileMatrixSetLimits data type definition and follow the data model specified in the requirements and associated tables and its dependencies.
+[[ats_tilematrixsetlimits_model]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/tilematrixsetlimits/model
+
+subject:: <<req_tilematrixsetlimits_model>>
+
+test-purpose:: Validate that a tile matrix set limits follows the UML model and model
+description. Validate that each tileMatrix identifier is mentioned only once in the
+TileMatrixSetLimits.
+
+[.component,class=test-method]
+--
+Validate the requirements of the model
+
+Test passes if TileMatrixSetLimits instances point to the TileMatrixSetLimits data type
+definition and follow the data model specified in the requirements and associated
+tables and its dependencies.
 
 Test passes if all tileMatrix identifier are different in this TileMatrixSetLimits
-|===
+--
+====

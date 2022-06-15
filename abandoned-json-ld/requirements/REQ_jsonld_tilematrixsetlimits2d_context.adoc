@@ -1,5 +1,5 @@
 [[req_jsonld_tilematrixsetlimits2d_context]]
-[width="90%",cols="2,6"]
+[cols="2,6"]
 |===
 |*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/jsonld-tilematrixsetlimits2d/context* {set:cellbgcolor:#FFFFFF}
 2+|A TileMatrixSetLimits2D encoded in JSON-LD _shall_ include references to the @conted for a tile matrix set limits 2D.

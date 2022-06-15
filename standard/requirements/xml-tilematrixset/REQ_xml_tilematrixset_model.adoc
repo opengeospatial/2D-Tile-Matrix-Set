@@ -1,7 +1,9 @@
+
 [[req_xml_tilematrixset_model]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/xml-tilematrixset/model* {set:cellbgcolor:#FFFFFF}
-2+|A TileMatrixSet encoded in XML shall implement the class TileMatrixSet {set:cellbgcolor:#FFFFFF}
-|*Dependency* {set:cellbgcolor:#FFFFFF} |/req/tilematrixset {set:cellbgcolor:#FFFFFF}
-|===
+[requirement]
+====
+[%metadata]
+label:: /req/xml-tilematrixset/model
+description:: A TileMatrixSet encoded in XML shall implement the class TileMatrixSet
+inherit:: /req/tilematrixset
+====

@@ -1,10 +1,13 @@
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
-2+|http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata {set:cellbgcolor:#FFFFFF}
-|Target type |tile set metadata
-|Dependency |RFC 8288 (Web Linking)  (optional)
-|Dependency |http://www.opengis.net/spec/tms/2.0/req/tilematrixset
-|Dependency |http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits (optional)
-|Dependency |http://www.opengis.net/spec/tms/2.0/req/variablematrixwidth (optional)
-|===
+
+[[tilesetmetadata-requirements-class]]
+[requirements_class]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata
+subject:: tile set metadata
+inherit:: RFC 8288 (Web Linking)  (optional)
+inherit:: http://www.opengis.net/spec/tms/2.0/req/tilematrixset
+inherit:: http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits (optional)
+inherit:: http://www.opengis.net/spec/tms/2.0/req/variablematrixwidth (optional)
+
+====

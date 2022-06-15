@@ -1,11 +1,11 @@
 [[ats_json-tilematrixset]]
-[cols="1,4",width="90%"]
-|===
-2+|*Conformance Class*
-2+|http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixset
-|Target type |tile matrix sets
-|Requirements class |<<json-tilematrixset-requirements-class,JSON TileMatrixSet">>
-|===
+[conformance_class]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixset
+subject:: <<json-tilematrixset-requirements-class,JSON TileMatrixSet">>
+classification:: Target Type:tile matrix sets
+====
 
 ==== Model
 

@@ -1,7 +1,14 @@
+
 [[req_tilematrixsetlimits_model]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/tilematrixsetlimits/model* {set:cellbgcolor:#FFFFFF}
-|A |A tile matrix set limits SHALL consists of an array of <<parts-of-tilematrixlimits-data-structure>> data structures with a multiplicity equal or inferior to the multiplicity of the tileMatrix of this tileMatrixSet and an optional boundingBox, as defined in the UML model shown in <<img_tilematrixsetlimits-uml-model>>
-|B |Each tileMatrix identifier SHALL be mentioned only once in this TileMatrixSetLimits. If a tileMatrix identifier is not mentioned, it should be interpreted as a tileMatrix that is not available.
-|===
+[requirement]
+====
+[%metadata]
+label:: /req/tilematrixsetlimits/model
+part:: A tile matrix set limits SHALL consist of an array of <<table12>> data
+structures with a multiplicity equal or inferior to the multiplicity of the tileMatrix
+of this tileMatrixSet and an optional boundingBox, as defined in the UML model shown in
+<<fig12>>
+part:: Each tileMatrix identifier SHALL be mentioned only once in this
+TileMatrixSetLimits. If a tileMatrix identifier is not mentioned, it should be
+interpreted as a tileMatrix that is not available.
+====

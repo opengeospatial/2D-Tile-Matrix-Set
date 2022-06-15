@@ -1,10 +1,20 @@
-[[ats_json_variablematrixwidth_ietf]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/json-variablematrixwidth/ietf*
-| Test Purpose | Validate that a VariableMatrixWidth encoded in JSON conforms to IETF RFC7159
-|Requirement |<<req_json_variablematrixwidth_ietf>>
-| Test method | Validate the requirements of the IETF rules
 
-Test passes if VariableMatrixWidth JSON instances pass format validation against the IETF rules.
-|===
+[[ats_json_variablematrixwidth_ietf]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/json-variablematrixwidth/ietf
+
+subject:: <<req_json_variablematrixwidth_ietf>>
+
+test-purpose:: Validate that a VariableMatrixWidth encoded in JSON conforms to
+<<rfc7159>>
+
+[.component,class=test-method]
+--
+Validate the requirements of the IETF rules
+
+Test passes if VariableMatrixWidth JSON instances pass format validation against the
+IETF rules.
+--
+====

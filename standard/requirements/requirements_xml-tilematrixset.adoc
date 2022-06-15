@@ -1,8 +1,10 @@
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
-2+|http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixset {set:cellbgcolor:#FFFFFF}
-|Target type |tile matrix sets
-|Dependency |https://www.w3.org/TR/xml/: Extensible Markup Language (XML) 1.0
-|Dependency |http://www.opengis.net/spec/tms/2.0/req/tilematrixset
-|===
+
+[[xml-tilematrixset-requirements-class]]
+[requirements_class]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixset
+subject:: tile matrix sets
+inherit:: https://www.w3.org/TR/xml/: Extensible Markup Language (XML) 1.0
+inherit:: http://www.opengis.net/spec/tms/2.0/req/tilematrixset
+====

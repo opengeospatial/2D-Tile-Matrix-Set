@@ -1,5 +1,5 @@
 [[req_jsonld_variablematrixwidth_context]]
-[width="90%",cols="2,6"]
+[cols="2,6"]
 |===
 |*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/jsonld-variablematrixwidth/context* {set:cellbgcolor:#FFFFFF}
 2+|A VariableMatrixWidth encoded in JSON-LD _shall_ include references to the @context for a variable matrix width.

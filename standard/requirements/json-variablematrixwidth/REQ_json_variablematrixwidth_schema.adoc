@@ -1,6 +1,10 @@
+
 [[req_json_variablematrixwidth_schema]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/json-variablematrixwidth/schema* {set:cellbgcolor:#FFFFFF}
-2+|A VariableMatrixWidth encoded in JSON _shall_ validate using the JSON schema for a variable matrix width (http://schemas.opengis.net/tms/2.0/json/tilematrixset.json#/definitions/variableMatrixWidth)
-|===
+[requirement]
+====
+[%metadata]
+label:: /req/json-variablematrixwidth/schema
+description:: A VariableMatrixWidth encoded in JSON _shall_ validate using the JSON
+schema for a variable matrix width
+(http://schemas.opengis.net/tms/2.0/json/tilematrixset.json#/definitions/variableMatrixWidth)
+====

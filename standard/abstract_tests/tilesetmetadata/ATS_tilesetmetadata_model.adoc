@@ -1,8 +1,20 @@
+
 [[ats_tilesetmetadata_model]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/tilematrixsetmetadata/model*
-| Test Purpose | Validate that when a tiled resource or dataset has tiles available, the metadata describing the tiles is described using the data model in UML model shown in <<img_tilesetmetadata-uml-model>> and model description in <<parts-of-tilesetmetadata-data-structure>>.
-|Requirement |<<req_tilesetmetadata_model>>
-| Test method | Test passes if TileSetMetadata instances point to the TileSetMetadata data type definition and follow the data model specified in the requirement and associated tables and its dependencies.
-|===
+[abstract_test]
+====
+[%metadata]
+label:: /conf/tilematrixsetmetadata/model
+
+subject:: <<req_tilesetmetadata_model>>
+
+test-purpose:: Validate that when a tiled resource or dataset has tiles available, the
+metadata describing the tiles is described using the data model in UML model shown in
+<<fig13>> and model description in <<table13>>.
+
+[.component,class=test-method]
+--
+Test passes if TileSetMetadata instances point to the TileSetMetadata data type
+definition and follow the data model specified in the requirement and associated tables
+and its dependencies.
+--
+====

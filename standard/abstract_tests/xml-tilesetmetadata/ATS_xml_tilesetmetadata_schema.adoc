@@ -1,10 +1,20 @@
-[[ats_xml_tilesetmetadata_schema]]
-[cols=">20h,<80d",width="100%"]
-|===
-|*Abstract Test {counter:ats-id}* |*/conf/xml-tilematrixsetmetadata/schema*
-| Test Purpose |Validate that a TileSetMetadata encoded in XML validates using the XML schema for a tile set metadata.
-|Requirement |<<req_xml_tilesetmetadata_schema>>
-| Test method | Validate the requirements of the model
 
-Test passes if TileSetMetadata XML instances pass validation against the tile set metadata XML Schemas.
-|===
+[[ats_xml_tilesetmetadata_schema]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/xml-tilematrixsetmetadata/schema
+
+subject:: <<req_xml_tilesetmetadata_schema>>
+
+test-purpose:: Validate that a TileSetMetadata encoded in XML validates using the XML
+schema for a tile set metadata.
+
+[.component,class=test-method]
+--
+Validate the requirements of the model
+
+Test passes if TileSetMetadata XML instances pass validation against the tile set
+metadata XML Schemas.
+--
+====

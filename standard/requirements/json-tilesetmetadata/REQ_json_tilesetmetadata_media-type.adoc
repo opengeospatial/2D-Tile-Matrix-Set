@@ -1,6 +1,9 @@
+
 [[req_json_tilesetmetadata_media-type]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/json-tilesetmetadata/media-type* {set:cellbgcolor:#FFFFFF}
-2+|A TileSetMetadata encoded in an independent JSON document _shall_ use the media type application/json.
-|===
+[requirement]
+====
+[%metadata]
+label:: /req/json-tilesetmetadata/media-type
+description:: A TileSetMetadata encoded in an independent JSON document _shall_ use the
+media type application/json.
+====

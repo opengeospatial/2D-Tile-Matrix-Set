@@ -1,6 +1,9 @@
+
 [[req_xml_tilematrixset_media-type]]
-[width="90%",cols="2,6"]
-|===
-|*Requirement {counter:req-id}* {set:cellbgcolor:#CACCCE}|*/req/xml-tilematrixset/media-type* {set:cellbgcolor:#FFFFFF}
-2+|A TileMatrixSet encoded in an independent XML document shall use the media type application/xml. {set:cellbgcolor:#FFFFFF}
-|===
+[requirement]
+====
+[%metadata]
+label:: /req/xml-tilematrixset/media-type
+description:: A TileMatrixSet encoded in an independent XML document shall use the
+media type application/xml.
+====

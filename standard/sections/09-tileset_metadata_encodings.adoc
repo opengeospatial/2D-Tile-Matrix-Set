@@ -1,0 +1,123 @@
+[[tileset-metadata-encodings]]
+== TileSetMetadata encodings
+
+[[tsmd-json-encoding]]
+=== JSON encoding
+
+The JSON encoding has been done respecting the naming and types of the original
+classes. However, there are some differences exposed in the
+<<tilematrixset-encodings>> that also apply here. In particular <<table10>> describes
+some exceptions in the mapping between the class attributes and corresponding JSON
+element.
+
+==== JSON TileMatrixSetLimits requirements class
+
+include::../requirements/requirements_json-tilematrixsetlimits.adoc[]
+
+include::../requirements/json-tilematrixsetlimits/REQ_json_tilematrixsetlimits_model.adoc[]
+
+include::../requirements/json-tilematrixsetlimits/REQ_json_tilematrixsetlimits_ietf.adoc[]
+
+include::../requirements/json-tilematrixsetlimits/REQ_json_tilematrixsetlimits_schema.adoc[]
+
+[NOTE, keep-separate=true]
+====
+A TileMatrixSetLimits description can be embedded within the TileSetMetadata, as for
+the _OGC API - Tiles_ tileset conformance class.
+====
+
+An annex provides an <<json-document-instance-using-tilesetmetadata, Example JSON
+encoding of TileSetMetadata.>> including TileMatrixSetLimits.
+
+[[json-tilesetmetadata]]
+==== JSON TileSetMetadata requirements class
+
+include::../requirements/requirements_json-tilesetmetadata.adoc[]
+
+include::../requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_model.adoc[]
+
+include::../requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_ietf.adoc[]
+
+include::../requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_schema.adoc[]
+
+include::../requirements/json-tilesetmetadata/REQ_json_tilesetmetadata_media-type.adoc[]
+
+[NOTE, keep-separate=true]
+====
+A TileSetMetadata description can be embedded in other file formats, such as a
+Service Metadata document of a WMTS service. In this case, the media type of the
+containing document prevails.
+====
+
+An annex provides an <<json-document-instance-using-tilesetmetadata, Example XML
+encoding of TileSetMetadata>>.
+
+The encoding of PropertySchema adopts the JSON Schema form starting by and element
+propertiesSchema that defines the GeoJSON element "properties" for this layer (the
+composition of "properties" is undefined by GeoJSON but it can be define for a layer
+instance if its features follow a data model). <<table21>> describes the mapping
+between the FeatureAttribute class attributes (in <<table15>>) and the JSON schema
+properties.
+
+[[table21]]
+.propertiesSchema attributes and JSON Schema properties equivalences
+[cols="a,a",options="header"]
+|===
+| .propertiesSchema attributes | JSON Schema properties
+| title | title
+| keywords | N/A
+| identifier | name of the additional property
+| type | combination of 'type' and 'format'
+| pattern | pattern
+| mediaType | contentMediaType
+| acceptedValues | enum
+| range | a combination of 'maximum', 'exclusiveMaximum', 'minimum' and 'exclusiveMinimum'
+| lowerMultiplicity | minItems
+| upperMultiplicity |  maxItems
+| observedProperty | N/A
+| observedPropertyURI | N/A
+| uom | N/A
+| uomURI | N/A
+|===
+
+[[tsmd-xml-encoding]]
+=== XML encoding
+
+The XML encoding has been done respecting the naming and types of the original
+classes. However all attribute names have been transformed to UpperCamelCase.
+
+==== XML TileMatrixSetLimits requirements class
+
+include::../requirements/requirements_xml-tilematrixsetlimits.adoc[]
+
+include::../requirements/xml-tilematrixsetlimits/REQ_xml_tilematrixsetlimits_model.adoc[]
+
+include::../requirements/xml-tilematrixsetlimits/REQ_xml_tilematrixsetlimits_schema.adoc[]
+
+[NOTE,keep-separate=true]
+====
+A TileMatrixSetLimits is normally used as embedded in other XML documents. That is
+the reason an associated media type is not provided.
+====
+
+An annex provides an <<xml-document-instance-using-tilesetmetadata, Example XML
+encoding of TileSetMetadata>> including TileMatrixSetLimits.
+
+==== XML TileSetMetadata requirements class
+
+include::../requirements/requirements_xml-tilesetmetadata.adoc[]
+
+include::../requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_model.adoc[]
+
+include::../requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_schema.adoc[]
+
+include::../requirements/xml-tilesetmetadata/REQ_xml_tilesetmetadata_media-type.adoc[]
+
+
+[NOTE,keep-separate=true]
+====
+A TileSetMetadata does not currently have an associated media type.
+====
+
+An annex provides an <<xml-document-instance-using-tilesetmetadata, Example XML
+encoding of TileSetMetadata>>.

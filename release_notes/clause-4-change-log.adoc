@@ -39,11 +39,12 @@ See <<Clause_Critical>> for more information on critical changes,
 
 
 === Change Table
-[[table_change_log]]
+
 .Change Log
-[cols="9%,12%,17%,9%,35%,18%",width="100%",options="header"]
-|=======================================================================
-|Source      |Identifier     |Type                 |Section |Description |Purpose
+[cols="1,1,1,1,3,",options="header"]
+|===
+|Source |Identifier |Type |Section |Description |Purpose
+
 | GitHub | #11 | Administrative | Title | Title was renamed to include "tileset metadata" | Clarity
 | GitHub | #1 | Substantive | 4 | Align with the Abstract specification Topic 22 - Core Tiling Conceptual and Logical Models for 2D Euclidean Space OGC 19-014r3 | Consistency
 | GitHub | #13 | Substantive | 5 | OWS Common dependency removed | Interoperability
@@ -62,7 +63,8 @@ See <<Clause_Critical>> for more information on critical changes,
 | GitHub | #10, #11 | Substantive | 9 | New XML and JSON encoding for tileset metadata. It could be useful for the new OGC API Tiles | Completeness
 | GitHub | #31 | Administrative  | Annex D, F | Correcting axis order confusion for the EuropeanETRS89_LAEAQuad TMS | Consistency
 | GitHub | #22 | Substantive | Annex E | New annex with variable width TMS definitions | Completeness
-| GitHub | #17 | Substantive | Annex G | Added example encodings of CDB variable width TMS | Completeness
+| GitHub | #17 | Substantive | Annex G | Added example encodings of CDB 1 variable width TMS | Completeness
 | GitHub | #26 | Substantive | Annex J | New annex with consideration for Extending TileMatrixSets for additional dimensions | Completeness
 | GitHub | #6, #7 | Administrative | All | Correction of mistakes and inconsistencies in UML, XML and JSON encodings | Consistency
-|=======================================================================
+
+|===

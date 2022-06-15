@@ -1,8 +1,10 @@
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class* {set:cellbgcolor:#CACCCE}
-2+|http://www.opengis.net/spec/tms/2.0/req/json-tilematrixset {set:cellbgcolor:#FFFFFF}
-|Target type |tile matrix sets
-|Dependency |https://datatracker.ietf.org/doc/html/rfc7159
-|Dependency |http://www.opengis.net/spec/tms/2.0/req/tilematrixset
-|===
+
+[[json-tilematrixset-requirements-class]]
+[requirements_class]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/tms/2.0/req/json-tilematrixset
+subject:: tile matrix sets
+inherit:: https://datatracker.ietf.org/doc/html/rfc7159
+inherit:: http://www.opengis.net/spec/tms/2.0/req/tilematrixset
+====

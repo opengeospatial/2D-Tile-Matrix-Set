@@ -5,5 +5,5 @@
 [%metadata]
 label:: http://www.opengis.net/spec/tms/2.0/req/tilematrixset
 subject:: tile matrix sets
-inherit:: http://www.opengis.net/spec/tile-model/1.0/req/tile-set-scheme
+inherit:: http://www.opengis.net/spec/2d-tile-model/1.0/req/tile-set-scheme
 ====

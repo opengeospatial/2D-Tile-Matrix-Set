@@ -52,10 +52,10 @@
 				"type": "string"
 			}
 		},
-		"dataType": {
-			"description": "Type of data represented in the tileset",
-			"$ref": "#/definitions/dataType"
-		},
+		"dataType": { "allOf": [
+			{ "description": "Type of data represented in the tileset" },
+			{ "$ref": "dataType.json" }
+		] },
 		"tileMatrixSetLimits": {
 			"description": "Limits for the TileRow and TileCol values for each TileMatrix in the tileMatrixSet. If missing, there are no limits other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed are limited and the rest not available at all",
 			"type": "array",
@@ -64,43 +64,43 @@
 				"$ref": "tileMatrixLimits.json"
 			}
 		},
-		"crs": {
-			"description": "Coordinate Reference System (CRS)",
-			"$ref": "crs.json"
-		},
+		"crs": { "allOf": [
+			{ "description": "Coordinate Reference System (CRS)" },
+			{ "$ref": "crs.json" }
+		] },
 		"epoch": {
 			"description": "Epoch of the Coordinate Reference System (CRS)",
 			"type": "number"
 		},
-		"boundingBox": {
-			"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
-			"$ref": "2DBoundingBox.json"
-		},
-		"created": {
-			"description": "When the Tile Set was first produced",
-			"$ref": "timeStamp.json"
-		},
-		"updated": {
-			"description": "Last Tile Set change/revision",
-			"$ref": "timeStamp.json"
-		},
+		"boundingBox": { "allOf": [
+         { "description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS" },
+         { "$ref": "2DBoundingBox.json" }
+		] },
+		"created": { "allOf": [
+			{ "description": "When the Tile Set was first produced" },
+			{ "$ref": "timeStamp.json" }
+		] },
+		"updated": { "allOf": [
+			{ "description": "Last Tile Set change/revision" },
+			{ "$ref": "timeStamp.json" }
+		] },
 		"layers": {
 			"minItems": 1,
 			"type": "array",
 			"items":
 			{
-				"$ref": "#/definitions/geospatialData"
+				"$ref": "geospatialData.json"
 			}
 		},
-		"style": {
-			"description": "Style involving all layers used to generate the tileset",
-			"$ref": "#/definitions/style"
-		},
+		"style": { "allOf": [
+			{ "description": "Style involving all layers used to generate the tileset" },
+			{ "$ref": "style.json" }
+		] },
 		"centerPoint":
-		{
-			"description": "Location of a tile that nicely represents the tileset. Implementations may use this center value to set the default location or to present a representative tile in a user interface",
-			"$ref": "#/definitions/tilePoint"
-		},
+		{ "allOf" : [
+			{ "description": "Location of a tile that nicely represents the tileset. Implementations may use this center value to set the default location or to present a representative tile in a user interface" },
+			{ "$ref": "tilePoint.json" }
+		] },
 		"tileMatrixSet":
 		{
 			"description": "Tile matrix set definition",
@@ -110,8 +110,7 @@
 		{
 			"description": "Reference to a Tile Matrix Set on an offical source for Tile Matrix Sets such as the OGC NA definition server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on an open official source.",
 			"type": "string",
-			"format": "uri",
-			"examples": ["http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid"]
+			"format": "uri"
 		},
 		"links":
 		{
@@ -120,336 +119,6 @@
 			"items": {
 				"$ref": "link.json"
 			}
-		}
-	},
-	"definitions":
-	{
-		"geospatialData":
-		{
-			"type": "object",
-			"required": ["id", "dataType"],
-			"properties": {
-				"title": {
-					"description": "Title of this tile matrix set, normally used for display to a human",
-					"type": "string"
-				},
-				"description": {
-					"description": "Brief narrative description of this tile matrix set, normally available for display to a human",
-					"type": "string"
-				},
-				"keywords": {
-					"description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this layer",
-					"type": "string"
-				},
-				"id": {
-					"description": "Unique identifier of the Layer. Implementation of 'identifier'",
-					"type": "string"
-				},
-				"dataType": {
-					"description": "Type of data represented in the layer",
-					"$ref": "#/definitions/dataType"
-				},
-				"geometryDimension": {
-					"description": "The geometry dimension of the features shown in this layer (0: points, 1: curves, 2: surfaces, 3: solids), unspecified: mixed or unknown",
-					"type": "integer",
-					"minimum": 0,
-					"maximum": 3
-				},
-				"featureType": {
-					"description": "Feature type identifier. Only applicable to layers of datatype 'geometries'",
-					"type": "string"
-				},
-				"pointOfContact": {
-					"description": "Useful information to contact the authors or custodians for the layer (e.g. e-mail address, a physical address,  phone numbers, etc)",
-					"type": "string"
-				},
-				"attribution": {
-					"description": "Short reference to recognize the author or provider",
-					"type": "string"
-				},
-				"license": {
-					"description": "License applicable to the tiles",
-					"type": "string"
-				},
-				"publisher": {
-					"description": "Organization or individual responsible for making the layer available",
-					"type": "string"
-				},
-				"theme": {
-					"description": "Category where the layer can be grouped",
-					"type": "string"
-				},
-				"crs": {
-					"description": "Coordinate Reference System (CRS)",
-					"$ref": "crs.json"
-				},
-				"epoch": {
-					"description": "Epoch of the Coordinate Reference System (CRS)",
-					"type": "number"
-				},
-				"minScaleDenominator": {
-					"description": "Minimum scale denominator for usage of the layer",
-					"type": "number"
-				},
-				"maxScaleDenominator": {
-					"description": "Maximum scale denominator for usage of the layer",
-					"type": "number"
-				},
-				"minCellSize": {
-					"description": "Minimum cell size for usage of the layer",
-					"type": "number"
-				},
-				"maxCellSize": {
-					"description": "Maximum cell size for usage of the layer",
-					"type": "number"
-				},
-				"maxTileMatrix": {
-					"description": "TileMatrix identifier associated with the minScaleDenominator",
-					"type": "string"
-				},
-				"minTileMatrix": {
-					"description": "TileMatrix identifier associated with the maxScaleDenominator",
-					"type": "string"
-				},
-				"boundingBox": {
-					"description": "Minimum bounding rectangle surrounding the layer",
-					"$ref": "2DBoundingBox.json"
-				},
-				"created": {
-					"description": "When the layer was first produced",
-					"$ref": "timeStamp.json"
-				},
-				"updated": {
-					"description": "Last layer change/revision",
-					"$ref": "timeStamp.json"
-				},
-				"style": {
-					"description": "Style used to generate the layer in the tileset",
-					"$ref": "#/definitions/style"
-				},
-				"geoDataClasses": {
-					"description": "URI identifying a class of data contained in this layer (useful to determine compatibility with styles or processes)",
-					"type": "array",
-					"items":{
-						"type": "string"
-					}
-				},
-				"propertiesSchema": {
-					"description": "Properties represented by the features in this layer. Can be the attributes of a feature dataset (datatype=geometries) or the rangeType of a coverage (datatype=coverage)",
-					"$ref": "#/definitions/propertiesSchema"
-				},
-				"links": {
-					"description": "Links related to this layer. Possible link 'rel' values are: 'geodata' for a URL pointing to the collection of geospatial data.",
-					"type": "array",
-					"minItems": 1,
-					"items":
-					{
-						"$ref": "link.json"
-					}
-				}
-			}
-		},
-		"propertiesSchema": {
-			"description": "Attributes of the features or rangetypes of a coverage. Defined by a subset of the JSON Schema for the properties of a feature",
-			"type": "object",
-			"required": ["type", "properties"],
-			"properties":
-			{
-				"type": { "type": "string", "enum": ["object"]},
-				"required": { "description":"Implements 'multiplicity' by citing property 'name' defined as 'additionalProperties'",
-						"type": "array", "minItems": 1 },
-				"properties": {
-					"type": "object",
-					"default": {},
-					"additionalProperties": {
-						"description": "No property names are defined but any property name they should be described by JSON Schema. So 'additionalProperties' implements 'name' ",
-						"type": "object",
-						"properties":
-						{
-							"title": {"type": "string"},
-							"description": {"description":"Implements 'description'", "type": "string"},
-							"type": {"type": "string", "enum": [
-							    "array",
-							    "boolean",
-							    "integer",
-							    "null",
-							    "number",
-							    "object",
-							    "string"
-							]},
-							"enum": { "description":"Implements 'acceptedValues'", "type": "array", "minItems": 1, "uniqueItems": true },
-							"format": { "description":"Complements implementation of 'type'", "type": "string"},
-							"contentMediaType": { "description":"Implements 'mediaType'", "type": "string" },
-							"maximum": { "description":"Implements 'range'", "type": "number"},
-							"exclusiveMaximum": { "description":"Implements 'range'", "type": "number"},
-							"minimum": { "description":"Implements 'range'", "type": "number"},
-							"exclusiveMinimum": { "description":"Implements 'range'", "type": "number"},
-							"pattern": {
-								"type": "string",
-								"format": "regex"
-							},
-							"maxItems": { "description":"Implements 'upperMultiplicity'",
-								"type": "integer",
-								"minimum": 0
-							},
-							"minItems": { "description":"Implements 'lowerMultiplicity'",
-								"type": "integer",
-								"minimum": 0,
-								"default": 0
-							},
-							"observedProperty": {
-								"type": "string"
-							},
-							"observedPropertyURI": {
-								"type": "string",
-								"format": "uri"
-							},
-							"uom": {
-								"type": "string"
-							},
-							"uomURI": {
-								"type": "string",
-								"format": "uri"
-							}
-						}
-					}
-				}
-			}
-		},
-		"tilePoint":
-		{
-			"type": "object",
-			"required": ["coordinates"],
-			"properties":
-			{
-				"coordinates":
-				{
-					"type": "array",
-					"minItems": 2,
-					"maxItems": 2,
-					"items": {
-						"type": "number"
-					}
-				},
-				"crs": {
-					"description": "Coordinate Reference System (CRS) of the coordinates",
-					"$ref": "crs.json"
-				},			
-				"tileMatrix":
-				{
-					"description": "TileMatrix identifier associated with the scaleDenominator",
-					"type": "string"
-				},
-				"scaleDenominator":
-				{
-					"description": "Scale denominator of the tile matrix selected",
-					"type": "number"
-				},
-				"cellSize":
-				{
-					"description": "Cell size of the tile matrix selected",
-					"type": "number"
-				}
-			}
-		},
-		"style":
-		{
-			"type": "object",
-			"required": ["id"],
-			"properties":
-			{
-				"id":
-				{
-					"description": "An identifier for this style. Implementation of 'identifier'",
-					"type": "string"
-				},
-				"title":
-				{
-					"description": "A title for this style",
-					"type": "string"
-				},
-				"description":
-				{
-					"description": "Brief narrative description of this style",
-					"type": "string"
-				},
-				"keywords":
-				{
-					"description": "keywords about this style",
-					"type": "array",
-					"items":
-					{
-						"type": "string"
-					}
-				},
-				"links":
-				{
-					"description": "Links to style related resources. Possible link 'rel' values are: 'style' for a URL pointing to the style description, 'styleSpec' for a URL pointing to the specification or standard used to define the style.",
-					"type": "array",
-					"minItems": 1,
-					"items":
-					{
-						"$ref": "link.json"
-					}
-				}
-			},
-			"examples":
-			[
-				{
-					"id": "night",
-					"title": "Topographic night style",
-					"links":
-					[
-						{
-							"href": "https://example.com/api/1.0/styles/night?f=mapbox",
-							"type": "application/vnd.mapbox.style+json",
-							"rel": "stylesheet"
-						},
-						{
-							"href": "https://example.com/api/1.0/styles/night?f=sld10",
-							"type": "application/vnd.ogc.sld+xml;version=1.0",
-							"rel": "stylesheet"
-						},
-						{
-							"href": "https://example.com/api/1.0/styles/night/metadata?f=json",
-							"type": "application/json",
-							"rel": "describedBy"
-						}
-					]
-				},
-				{
-					"id": "topographic",
-					"title": "Regular topographic style",
-					"links":
-					[
-						{
-							"href": "https://example.com/api/1.0/styles/topographic?f=mapbox",
-							"type": "application/vnd.mapbox.style+json",
-							"rel": "stylesheet"
-						},
-						{
-							"href": "https://example.com/api/1.0/styles/topographic?f=sld10",
-							"type": "application/vnd.ogc.sld+xml;version=1.0",
-							"rel": "stylesheet"
-						},
-						{
-							"href": "https://example.com/api/1.0/styles/topographic/metadata?f=json",
-							"type": "application/json",
-							"rel": "describedBy"
-						}
-					]
-				}
-			]
-		},
-		"dataType":
-		{
-         "oneOf" : [
-            { "type": "string" },
-            {
-               "type": "string",
-               "enum": ["map", "vector", "coverage"]
-            }
-         ]
 		}
 	}
 }

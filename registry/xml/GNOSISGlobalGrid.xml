@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TileMatrixSet id="GNOSISGlobalGrid" xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../../tilematrixset.xsd">
+   <tmsc:Title>GNOSIS Global Grid</tmsc:Title>
+   <tmsc:Identifier>GNOSISGlobalGrid</tmsc:Identifier>
+   <uri>http://www.opengis.net/def/tilematrixset/OGC/1.0/GNOSISGlobalGrid</uri>
+   <tmsc:CRS>
+      <tmsc:URI>http://www.opengis.net/def/crs/EPSG/0/4326</tmsc:URI>
+   </tmsc:CRS>
+   <OrderedAxes>Lat,Lon</OrderedAxes>
+   <WellKnownScaleSet>http://www.opengis.net/def/wkss/OGC/1.0/GoogleCRS84Quad</WellKnownScaleSet>
+   <TileMatrix>
+      <tmsc:Identifier>0</tmsc:Identifier>
+      <ScaleDenominator>139770566.0071794</ScaleDenominator>
+      <CellSize>0.3515625</CellSize>
+      <PointOfOrigin>90 -180</PointOfOrigin>
+      <TileWidth>256</TileWidth>
+      <TileHeight>256</TileHeight>
+      <MatrixWidth>4</MatrixWidth>
+      <MatrixHeight>2</MatrixHeight>
+   </TileMatrix>
+   <TileMatrix>
+      <tmsc:Identifier>1</tmsc:Identifier>
+      <ScaleDenominator>69885283.00358972</ScaleDenominator>
+      <CellSize>0.17578125</CellSize>
+      <PointOfOrigin>90 -180</PointOfOrigin>
+      <TileWidth>256</TileWidth>
+      <TileHeight>256</TileHeight>
+      <MatrixWidth>8</MatrixWidth>
+      <MatrixHeight>4</MatrixHeight>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>0</MinTileRow><MaxTileRow>0</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>3</MinTileRow><MaxTileRow>3</MaxTileRow></VariableMatrixWidth>
+   </TileMatrix>
+   <TileMatrix>
+      <tmsc:Identifier>2</tmsc:Identifier>
+      <ScaleDenominator>34942641.50179486</ScaleDenominator>
+      <CellSize>0.087890625</CellSize>
+      <PointOfOrigin>90 -180</PointOfOrigin>
+      <TileWidth>256</TileWidth>
+      <TileHeight>256</TileHeight>
+      <MatrixWidth>16</MatrixWidth>
+      <MatrixHeight>8</MatrixHeight>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>0</MinTileRow><MaxTileRow>0</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>1</MinTileRow><MaxTileRow>1</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>6</MinTileRow><MaxTileRow>6</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>7</MinTileRow><MaxTileRow>7</MaxTileRow></VariableMatrixWidth>
+   </TileMatrix>
+   <TileMatrix>
+      <tmsc:Identifier>3</tmsc:Identifier>
+      <ScaleDenominator>17471320.7508974298835</ScaleDenominator>
+      <CellSize>0.0439453125</CellSize>
+      <PointOfOrigin>90 -180</PointOfOrigin>
+      <TileWidth>256</TileWidth>
+      <TileHeight>256</TileHeight>
+      <MatrixWidth>32</MatrixWidth>
+      <MatrixHeight>16</MatrixHeight>
+      <VariableMatrixWidth><Coalesce>8</Coalesce><MinTileRow>0</MinTileRow><MaxTileRow>0</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>1</MinTileRow><MaxTileRow>1</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>2</MinTileRow><MaxTileRow>3</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>12</MinTileRow><MaxTileRow>13</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>14</MinTileRow><MaxTileRow>14</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>8</Coalesce><MinTileRow>15</MinTileRow><MaxTileRow>15</MaxTileRow></VariableMatrixWidth>
+   </TileMatrix>
+   <TileMatrix>
+      <tmsc:Identifier>4</tmsc:Identifier>
+      <ScaleDenominator>8735660.3754487149417</ScaleDenominator>
+      <CellSize>0.02197265625</CellSize>
+      <PointOfOrigin>90 -180</PointOfOrigin>
+      <TileWidth>256</TileWidth>
+      <TileHeight>256</TileHeight>
+      <MatrixWidth>64</MatrixWidth>
+      <MatrixHeight>32</MatrixHeight>
+      <VariableMatrixWidth><Coalesce>16</Coalesce><MinTileRow>0</MinTileRow><MaxTileRow>0</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>8</Coalesce><MinTileRow>1</MinTileRow><MaxTileRow>1</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>2</MinTileRow><MaxTileRow>3</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>4</MinTileRow><MaxTileRow>7</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>2</Coalesce><MinTileRow>24</MinTileRow><MaxTileRow>27</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>4</Coalesce><MinTileRow>28</MinTileRow><MaxTileRow>29</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>8</Coalesce><MinTileRow>30</MinTileRow><MaxTileRow>30</MaxTileRow></VariableMatrixWidth>
+      <VariableMatrixWidth><Coalesce>16</Coalesce><MinTileRow>31</MinTileRow><MaxTileRow>31</MaxTileRow></VariableMatrixWidth>
+   </TileMatrix>
+</TileMatrixSet>

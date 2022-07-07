@@ -130,7 +130,7 @@
 								<documentation>Links to related resources. Possible link 'rel' values are:'dataset' for a URL pointing to the dataset, 'item' for a URL template to get a tile; 'alternate' for a URL pointing to another representation of the TileSetMetadata (e.g a TileJSON file); 'tiling-scheme' for a definition of the TileMatrixSet; 'geodata' for pointing to a single collection (if the tileset represents a single collection)</documentation>
 							</annotation>
 						</element>
-						<element name="DataType" type="tms:DataTypeType">
+						<element name="DataType" type="tms:DataTypeOrStringType">
 							<annotation>
 								<documentation>Type of data represented in the tiles</documentation>
 							</annotation>
@@ -280,7 +280,7 @@
 							<documentation>Links related to this layer. Possible link 'rel' values are: 'geodata' for a URL pointing to the collection of geospatial data.</documentation>
 						</annotation>
 					</element>
-					<element name="DataType" type="tms:DataTypeType">
+					<element name="DataType" type="tms:DataTypeOrStringType">
 						<annotation>
 							<documentation>Type of data represented in the layer</documentation>
 						</annotation>
@@ -416,6 +416,9 @@
 			<enumeration value="coverage"/>
 		</restriction>
 	</simpleType>
+   <simpleType name="DataTypeOrStringType">
+		<union memberTypes="tms:DataTypeType string"/>
+   </simpleType>
 	<!-- =========================================================== -->
 	<element name="CenterPoint" type="tms:TilePointType"/>
 	<complexType name="TilePointType">

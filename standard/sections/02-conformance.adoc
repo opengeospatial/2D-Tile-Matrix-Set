@@ -11,6 +11,11 @@ single conformance class: [http://www.opengis.net/spec/tms/2.0/conf/tilematrixse
 The target is a service or an encoding needing to define TileMatrixSet (e.g., a
 future version of WMTS service metadata or an OGC API - Tiles).
 
+* VariableMatrixWidth: This abstract class defines an extension of tile matrix sets for variable width
+[http://www.opengis.net/spec/tms/2.0/req/variablematrixwidth]. This abstract class has a
+single conformance class: [http://www.opengis.net/spec/tms/2.0/conf/variablematrixwidth].
+The target is a service or an encoding needing to define TileMatrixSet with variable width.
+
 * TileMatrixSetLimits: This abstract class defines a data model for tile matrix sets
 limits [http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits]. This abstract
 class has a single conformance class:
@@ -18,7 +23,7 @@ class has a single conformance class:
 service, a client, or an encoding needing to define TileMatrixSetLimits (e.g., a
 future version of WMTS service metadata or an OGC API - Tiles).
 
-* TileSetMetadata: This abstract class defines a data model for tile set metadata in 
+* TileSetMetadata: This abstract class defines a data model for tile set metadata in
 [http://www.opengis.net/spec/tms/2.0/req/tilesetmetadata]. This abstract class has a
 single conformance class: [http://www.opengis.net/spec/tms/2.0/conf/tilesetmetadata].
 The target is a service, a client, or an encoding needing to declare conformity to a
@@ -33,6 +38,11 @@ version 1.0
 conformance class: [http://www.opengis.net/spec/tms/2.0/conf/xml-tilematrixset]. The
 target is a service, a client, or an encoding needing to define a TileMatrixSet in
 XML (e.g., a future version of WMTS service metadata).
+
+* XMLVariableMatrixWidth: This class defines an encoding in XML for variable width tile matrix sets
+[http://www.opengis.net/spec/tms/2.0/req/xml-variablematrixwidth]. This class has a
+single conformance class: [http://www.opengis.net/spec/tms/2.0/conf/xml-variablematrixwidth].
+The target is a service, a client, or an encoding needing to define a TileMatrixSet with variable width in XML.
 
 * XMLTileMatrixSetLimits: This class defines an encoding in XML for tile matrix sets
 limits in  [http://www.opengis.net/spec/tms/2.0/req/xml-tilematrixsetlimits]. This
@@ -57,6 +67,11 @@ in the version 1.0
 conformance class: [http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixset]. The
 target is a service, a client, or an encoding needing to define a TileMatrixSet in
 JSON (e.g., a future version of an OGC API - Tiles).
+
+* JSONVariableMatrixWidth: This class defines an encoding in JSON for variable width tile matrix sets
+[http://www.opengis.net/spec/tms/2.0/req/json-variablematrixwidth]. This class has a
+single conformance class: [http://www.opengis.net/spec/tms/2.0/conf/json-variablematrixwidth].
+The target is a service, a client, or an encoding needing to define a TileMatrixSet with variable width in JSON.
 
 * JSONTileMatrixSetLimits: This class defines an encoding in JSON for tile matrix
 sets limits in  [http://www.opengis.net/spec/tms/2.0/req/json-tilematrixsetlimits].

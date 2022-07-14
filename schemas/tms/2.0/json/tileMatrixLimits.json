@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
 	"title": "TileMatrixLimits",
-	"description": "A resource describing useful to create an array that describes the limits for a tile set TileMatrixSet based on the OGC TileSet Metadata Standard",
+	"description": "The limits for an individual tile matrix of a TileSet's TileMatrixSet, as defined in the OGC 2D TileMatrixSet and TileSet Metadata Standard",
 	"type": "object",
 	"required":
 	[
@@ -15,36 +15,27 @@
 	{
 		"tileMatrix":
 		{
-			"type": "string",
-			"examples": ["5"]
+			"type": "string"
 		},
 		"minTileRow":
 		{
-			"type": "number",
-			"format": "integer",
-			"minimum": 0,
-			"examples": [0]
+			"type": "integer",
+			"minimum": 0
 		},
 		"maxTileRow":
 		{
-			"type": "number",
-			"format": "integer",
-			"minimum": 0,
-			"examples": [1]
+			"type": "integer",
+			"minimum": 0
 		},
 		"minTileCol":
 		{
-			"type": "number",
-			"format": "integer",
-			"minimum": 0,
-			"examples": [3]
+			"type": "integer",
+			"minimum": 0
 		},
 		"maxTileCol":
 		{
-			"type": "number",
-			"format": "integer",
-			"minimum": 0,
-			"examples": [4]
+			"type": "integer",
+			"minimum": 0
 		}
 	}
 }

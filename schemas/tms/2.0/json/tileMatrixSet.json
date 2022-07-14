@@ -7,13 +7,11 @@
 	"properties": {
 		"title": {
 			"description": "Title of this tile matrix set, normally used for display to a human",
-			"type": "string",
-			"examples": ["Web Mercator Quad for the World"]
+			"type": "string"
 		},
 		"description": {
 			"description": "Brief narrative description of this tile matrix set, normally available for display to a human",
-			"type": "string",
-			"examples": ["The most common TileMatrixSet, used in most of the main IT map browsers. It was initially popularized by Google Maps"]
+			"type": "string"
 		},
 		"keywords": {
 			"description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this tile matrix set",
@@ -38,153 +36,27 @@
 				"type": "string"
 			}
 		},
-		"crs": {
-			"description": "Coordinate Reference System (CRS)",
-			"$ref": "crs.json"
-		},
+		"crs": { "allOf": [
+			{ "description": "Coordinate Reference System (CRS)" },
+			{ "$ref": "crs.json" }
+		] },
 		"wellKnownScaleSet": {
 			"description": "Reference to a well-known scale set",
 			"type": "string",
 			"format": "uri"
 		},
 		"boundingBox":
-		{
-			"description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS",
-			"$ref": "2DBoundingBox.json"
-		},
+		{ "allOf": [
+			{ "description": "Minimum bounding rectangle surrounding the tile matrix set, in the supported CRS" },
+			{ "$ref": "2DBoundingBox.json" }
+		] },
 		"tileMatrices":
 		{
 			"type": "array",
 			"description": "Describes scale levels and its tile matrices",
 			"items":
 			{
-				"$ref": "#/definitions/tileMatrix"
-			}
-		}
-	},
-	"definitions":{
-		"tileMatrix":
-		{
-			"description": "",
-			"type": "object",
-			"required": ["id", "scaleDenominator", "cellSize", "pointOfOrigin", "tileWidth", "tileHeight", "matrixWidth", "matrixHeight"],
-			"properties":
-			{
-				"title": {
-					"description": "Title of this tile matrix set, normally used for display to a human",
-					"type": "string",
-					"examples": ["Web Mercator Quad for the World zoom level 3"]
-				},
-				"description": {
-					"description": "Brief narrative description of this tile matrix set, normally available for display to a human",
-					"type": "string",
-					"examples": ["Web Mercator Quad zoom level 3 that is equivalent to a scale of 1:69885283.00358972 and has 19567.87924100512 meters of pixel size in the equator"]
-				},
-				"keywords": {
-					"description": "Unordered list of one or more commonly used or formalized word(s) or phrase(s) used to describe this dataset",
-					"type": "array",
-					"items": {
-						"type": "string"
-					}
-				},
-				"id": {
-					"description": "Identifier selecting one of the scales defined in the TileMatrixSet and representing the scaleDenominator the tile. Implementation of 'identifier'",
-					"type": "string",
-					"examples": ["3"]
-				},
-				"scaleDenominator": {
-					"description": "Scale denominator of this tile matrix",
-					"type": "number",
-					"examples": [69885283]
-				},
-				"cellSize": {
-					"description": "Cell size of this tile matrix",
-					"type": "number",
-					"examples": [19567.87924]
-				},
-				"cornerOfOrigin": {
-					"description": "The corner of the tile matrix (_topLeft_ or _bottomLeft_) used as the origin for numbering tile rows and columns. This corner is also a corner of the (0, 0) tile.",
-					"type": "string",
-					"enum": ["topLeft", "bottomLeft"],
-					"default": "topLeft"
-				},
-				"pointOfOrigin": {
-					"description": "Precise position in CRS coordinates of the corner of origin (e.g. the top-left corner) for this tile matrix. This position is also a corner of the (0, 0) tile. In previous version, this was 'topLeftCorner' and 'cornerOfOrigin' did not exist.",
-					"$ref": "2DPoint.json",
-					"examples":[[-20037508.3427892, 20037508.342789]]
-				},
-				"tileWidth":
-				{
-					"type": "number",
-					"description": "Width of each tile of this tile matrix in pixels",
-					"format": "integer",
-					"minimum": 1,
-					"multipleOf" : 1,
-					"examples": [256]
-				},
-				"tileHeight":
-				{
-					"type": "number",
-					"description": "Height of each tile of this tile matrix in pixels",
-					"format": "integer",
-					"minimum": 1,
-					"multipleOf" : 1,
-					"examples": [256]
-				},
-				"matrixHeight":
-				{
-					"type": "number",
-					"description": "Width of the matrix (number of tiles in width)",
-					"format": "integer",
-					"minimum": 1,
-					"multipleOf" : 1,
-					"examples": [8]
-				},
-				"matrixWidth":
-				{
-					"type": "number",
-					"description": "Height of the matrix (number of tiles in height)",
-					"format": "integer",
-					"minimum": 1,
-					"multipleOf" : 1,
-					"examples": [8]
-				},
-				"variableMatrixWidths": {
-					"description": "Describes the rows that has variable matrix width",
-					"type": "array",
-					"items": {
-						"$ref": "#/definitions/variableMatrixWidth"
-					}
-				}
-			}
-		},
-		"variableMatrixWidth": {
-			"description": "Variable Matrix Width data structure",
-			"type": "object",
-			"required": ["coalesce", "minTileRow", "maxTileRow"],
-			"properties":
-			{
-				"coalesce" : {
-					"description": "Number of tiles in width that coalesce in a single tile for these rows",
-					"type": "number",
-					"format": "integer",
-					"minimum": 2,
-					"multipleOf" : 1
-				},
-				"minTileRow": {
-					"description": "First tile row where the coalescence factor applies for this tilematrix",
-					"type": "number",
-					"format": "integer",
-					"minimum": 0,
-					"multipleOf" : 1
-				},
-				"maxTileRow": {
-					"description": "Last tile row where the coalescence factor applies for this tilematrix",
-					"type": "number",
-					"format": "integer",
-					"minimum": 0,
-					"multipleOf" : 1
-				}
+				"$ref": "tileMatrix.json"
 			}
 		}
 	}

@@ -1,7 +1,7 @@
 {
 	"$schema": "https://json-schema.org/draft/2019-09/schema",
-	"description": "This property indicates the time and date when the response was generated",
+	"description": "This property indicates the time and date when the response was generated using RFC 3339 notation.",
 	"type": "string",
 	"format": "date-time",
-	"examples": ["2017-08-17T08:05:32Z"]
+	"example": "2017-08-17T08:05:32Z"
 }

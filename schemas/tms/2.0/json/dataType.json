@@ -1,0 +1,10 @@
+{
+	"$schema": "https://json-schema.org/draft/2019-09/schema",
+   "oneOf" : [
+      { "type": "string" },
+      {
+         "type": "string",
+         "enum": ["map", "vector", "coverage"]
+      }
+   ]
+}

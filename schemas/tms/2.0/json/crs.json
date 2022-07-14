@@ -3,14 +3,14 @@
       "title": "CRS",
       "oneOf": [
 		{
-			"description": "Simplification of the object into a url if the other properties are not present", 
+			"description": "Simplification of the object into a url if the other properties are not present",
 			"type": "string"
 		},
 		{
 			"type": "object",
 			"oneOf": [
 				{
-					"required": 
+					"required":
 					[
 						"uri"
 					],
@@ -19,25 +19,25 @@
 						"uri": {
 							"description": "Reference to one coordinate reference system (CRS)",
 							"type": "string",
-							"format": "uri"					
+							"format": "uri"
 						}
 					}
 				},
 				{
-					"required": 
+					"required":
 					[
 						"wkt"
 					],
 					"properties":
 					{
-						"wkt": {
-							"description": "A string defining the CRS using the JSON encodng for Well Known Text",
-							"$ref": "projJSON.json"
-						}
+						"wkt": { "allOf": [
+							{ "description": "An object defining the CRS using the JSON encoding for Well-known text representation of coordinate reference systems 2.0" },
+							{ "$ref": "projJSON.json" }
+						] }
 					}
 				},
 				{
-					"required": 
+					"required":
 					[
 						"referenceSystem"
 					],
@@ -49,7 +49,7 @@
 						}
 					}
 				}
-			] 
+			]
 		}
       ]
 }

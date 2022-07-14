@@ -9,27 +9,38 @@
         ],
     "properties": {
         "href": {
+            "description": "Supplies the URI to a remote resource (or resource fragment).",
             "type": "string",
-            "examples": ["http://data.example.com/buildings/123"]
+            "example": "http://data.example.com/buildings/123"
             },
         "rel": {
+            "description": "The type or semantics of the relation.",
             "type": "string",
-            "examples": ["alternate"]
+            "example": "alternate"
             },
         "templated": {
+            "description": "This flag set to true if the link is a URL template.",
             "type": "boolean"
             },
-        "type": {
+        "varBase": {
+            "description": "A base path to retrieve semantic information about the variables used in URL template.",
             "type": "string",
-            "examples": ["application/geo+json"]
+            "example": "/ogcapi/vars/"
+            },
+        "type": {
+            "description": "A hint indicating what the media type of the result of dereferencing the link should be.",
+            "type": "string",
+            "example": "application/geo+json"
             },
         "hreflang": {
+            "description": "A hint indicating what the language of the result of dereferencing the link should be.",
             "type": "string",
-            "examples": ["en"]
+            "example": "en"
             },
         "title": {
-            "type": "string",
-            "examples": ["Trierer Strasse 70, 53115 Bonn"]
+            "description": "Used to label the destination of a link such that it can be used as a human-readable identifier.",
+               "type": "string",
+            "example": "Trierer Strasse 70, 53115 Bonn"
             },
         "length": {
             "type": "integer"

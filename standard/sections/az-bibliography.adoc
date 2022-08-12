@@ -51,7 +51,7 @@ status. https://geoservice.dlr.de/web/services#tilecache
 
 * [[[ogc18-101, OGC 18-101]]]
 
-* [[[ogc-CDBX-paper, OGC CDB-X Sprint Engineering Report]]] OGC. _CDB-X Sprint Engineering Report_. Available from: https://github.com/sofwerx/cdb2-eng-report
+* [[[ogc20-092, OGC 20-092]]] Graham, D., Reed, C.: _CDB X Conceptual Model with Prototyping Examples and Recommendations_. OGC 20-092, Open Geospatial Consortium (2022) https://docs.ogc.org/dp/20-092.html
 
 * [[[mapbox, 12]]], MapBox: MBTiles Specification. Available from:
 https://github.com/mapbox/mbtiles-spec

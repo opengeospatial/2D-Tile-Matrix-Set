@@ -7,8 +7,8 @@ label:: /conf/xml-tilematrixset/model
 
 subject:: <<req_xml_tilematrixset_model>>
 
-test-purpose:: Validate that a TileMatrixSet encoded in XML implements the class
-TileMatrixSet
+test-purpose:: Validate that a TileMatrixSet instance encoded in XML implements the class
+TileMatrixSet.
 
 [.component,class=test-method]
 --

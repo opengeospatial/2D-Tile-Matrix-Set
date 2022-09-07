@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/xml-tilesetmetadata/media-type
-description:: A TileSetMetadata encoded in an independent XML document shall use the
+description:: A TileSetMetadata instance encoded in an independent XML document shall use the
 media type application/xml.
 ====

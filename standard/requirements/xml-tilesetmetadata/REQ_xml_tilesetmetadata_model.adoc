@@ -4,5 +4,5 @@
 ====
 [%metadata]
 label:: /req/xml-tilesetmetadata/model
-description:: A TileSetMetadata encoded in XML shall implement the class TileSetMetadata
+description:: A TileSetMetadata instance encoded in XML shall implement the class TileSetMetadata
 ====

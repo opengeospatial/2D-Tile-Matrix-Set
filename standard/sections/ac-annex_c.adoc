@@ -13,7 +13,7 @@ WGS84 equatorial Earth diameter.
 
 The WKSS concept was introduced in WMTS to improve interoperability, but experience
 has demonstrated that the use of common TileMatrixSets such as those registered on
-the http://www.opengis.net/def/tms[OGC Naming Authority register], and defined in the
+the http://www.opengis.net/def/tms[OGC Naming Authority's register], and defined in the
 <<annex-common-tilematrixset-definitions-informative, common tile matrix sets>> and
 <<annex-variable-tilematrixset-definitions-informative, variable width tile matrix
 sets>> definitions annexes, is even better. The use of WKSS is no longer encouraged

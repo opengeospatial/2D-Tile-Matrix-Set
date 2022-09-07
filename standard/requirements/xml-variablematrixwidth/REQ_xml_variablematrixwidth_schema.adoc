@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/xml-variablematrixwidth/schema
-description:: A VariableMatrixWidth encoded in XML _shall_ validate using the XML
+description:: A VariableMatrixWidth instance encoded in XML _shall_ validate using the XML
 schema for a variable matrix width.
 ====

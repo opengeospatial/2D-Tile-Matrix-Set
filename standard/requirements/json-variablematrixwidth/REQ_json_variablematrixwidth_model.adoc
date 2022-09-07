@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/json-variablematrixwidth/model
-description:: A VariableMatrixWidth encoded in JSON _shall_ implement the class
+description:: A VariableMatrixWidth instance encoded in JSON _shall_ implement the class
 VariableMatrixWidth.
 ====

@@ -33,7 +33,7 @@ domain range can be defined by:
 box of regular grid coverage (e.g., the CRS coordinates of the top left corner of the
 top left extreme where the integer coordinates are 0). This is the tile set origin
 that defines where the spatial origin reference point is for the entire tile set.
-. A tile size in CRS units for in each dimension of the CRS; and
+. A tile size in CRS units for each dimension of the CRS; and
 . The size of the tile matrix in tile units (i.e., number of tiles) that closes the
 bounding box of the tiled space. Frequently the sizes of the two first dimensions are
 called _matrix width_ and _matrix height_.
@@ -73,25 +73,25 @@ imposed by this Standard.
 Since services cannot predict the pixel size of the client visualization device, in
 this Standard, the scale denominator is defined with respect to a "standardized
 rendering pixel size" of stem:[0.28" mm" xx 0.28" mm"] (millimeters). The definition
-is the same as used in Web Map Service WMS 1.3.0 <<ogc06-042>> and in Symbology
+is the same as used in Web Map Service WMS 1.3.0 <<ogc06-042>> and in the Symbology
 Encoding (SE) Implementation Specification 1.1.0 <<ogc05-077r4>> that was later
 adopted by WMTS 1.0 <<ogc07-057r7>>. Frequently, the true pixel size of the device is
 unknown and 0.28 mm was the actual pixel size of a common display from 2005. This
 value is still being used as reference, even if current display devices are built
 with much smaller pixel sizes.
 
-NOTE: Since the 1980s, the Microsoft Windows operating system has set their default
+NOTE: Since the 1980s, the Microsoft Windows operating system has set its default
 standard display pixels per inch (PPI) to 96. This value results in an approximated
 stem:[0.264" mm"] per pixel. The similarity of this value with the actual stem:[0.28"
 mm"] adopted in this Standard can create some confusion.
 
 NOTE: Modern display devices (screens) have pixels so small that operating systems
 allow for defining a presentation scale factor bigger than one (e.g. 150%). In these
-circumstances, the actual size of the device pixels are not the same as the size used
+circumstances, the actual size of the device pixels is not the same as the size used
 by the operating system.
 
-Normally the _matrix width_ is constant and in this circumstance, having a single
-scale factor using a single standardized rendering cell size for the two dimensions,
+Normally the _matrix width_ is constant and, in this circumstance, having a single
+scale factor using a single standardized rendering cell size for the two dimensions
 results in cells that have the same size in the first two dimensions. This is
 commonly known as _square pixels_.
 
@@ -344,7 +344,7 @@ image::TileMatrixSet.png[TileMatrixSet UML model]
 | Names | Definition | Data type and values | Multiplicity and use
 
 | identifier
-| Tile matrix set identifier{blank}footnote:g6[TileMatrixSet identifies
+| Tile matrix set identifier{blank}footnote:g6[TileMatrixSet identifiers
 SHALL be unique (different) for each TileMatrixSet of a server.]
 | CodeType, as adaptation of MD_Identifier class <<iso19115>>
 | Zero or One (optional)
@@ -404,9 +404,9 @@ contained in the CRS definition.]
 possible values are defined the in <<annex-well-known-scale-sets-informative>>.] |
 URI type{blank}footnote:h6[In WMTS 1.0 a URN was used as a reference to a well-known
 scale set. Later, OGC adopted HTTP URLs as URIs for references.
-The (https://docs.opengeospatial.org/pol/09-046r5.html#_naming_rule)[OGC Naming
-Authority - Procedures document] specifies rules to transform form URN to URI.
-Implement a on-the-fly translations based on these rules is possible.]
+The (https://docs.opengeospatial.org/pol/09-046r6.html#_naming_rule)[OGC Naming
+Authority - Procedures document] specifies rules to transform from URN to URLs that resolve to the OGC Definitions Server (http://www.opengis.net/def).
+Implementation of on-the-fly transformations based on these rules is possible.]
 | Zero or one (optional)
 
 footnote:c6[When a tile matrix set conforms to a well-known scale
@@ -416,7 +416,7 @@ consistent with the CRS and with the scaleDenominators of the tileMatrix paramet
 | boundingBox
 | Minimum bounding rectangle surrounding the tile matrix set, in the CRS
 
-footnote:b6[In the same CRS as the TileMatrixSet. boundingBox should be
+footnote:b6[In the same CRS as the TileMatrixSet, boundingBox should be
 considered informative about the area covered by this TileMatrixSet. It SHOULD NOT be
 used to calculate the position of the tiles in the CRS space. Instead use the
 cornerOfOrigin and the pointOfOrigin of the corresponding TileMatrix. If data is not
@@ -575,7 +575,7 @@ specifications]
 ===== TileMatrixSet CRS Compatibility
 
 In general, the CRS of the TileSets using a TileMatrixSet should be the same as the
-CRS of that TileMatrixSet. However there are some situations where there is some
+CRS of that TileMatrixSet. However, there are some situations where there is some
 flexibility:
 
 * The CRS of the TileSet is a realization of the datum ensemble CRS specified in the

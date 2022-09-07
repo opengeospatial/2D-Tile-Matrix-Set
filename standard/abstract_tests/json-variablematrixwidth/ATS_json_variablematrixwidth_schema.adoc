@@ -7,7 +7,7 @@ label:: /conf/json-variablematrixwidth/schema
 
 subject:: <<req_json_variablematrixwidth_schema>>
 
-test-purpose:: Validate that a VariableMatrixWidth encoded in JSON validates using the
+test-purpose:: Verify that a VariableMatrixWidth instance encoded in JSON validates using the
 JSON schema for a variable matrix width.
 
 [.component,class=test-method]

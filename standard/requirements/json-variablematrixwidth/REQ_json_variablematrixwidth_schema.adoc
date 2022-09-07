@@ -4,7 +4,7 @@
 ====
 [%metadata]
 label:: /req/json-variablematrixwidth/schema
-description:: A VariableMatrixWidth encoded in JSON _shall_ validate using the JSON
+description:: A VariableMatrixWidth instance encoded in JSON _shall_ validate using the JSON
 schema for a variable matrix width
 (http://schemas.opengis.net/tms/2.0/json/tilematrixset.json#/definitions/variableMatrixWidth)
 ====

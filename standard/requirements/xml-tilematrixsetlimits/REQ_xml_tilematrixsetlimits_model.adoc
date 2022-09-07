@@ -4,7 +4,7 @@
 ====
 [%metadata]
 label:: /req/xml-tilematrixsetlimits/model
-description:: A TileMatrixSetLimits encoded in XML SHALL implement the class
+description:: A TileMatrixSetLimits instance encoded in XML SHALL implement the class
 TileMatrixSetLimits
 inherit:: /req/tilematrixsetlimits
 ====

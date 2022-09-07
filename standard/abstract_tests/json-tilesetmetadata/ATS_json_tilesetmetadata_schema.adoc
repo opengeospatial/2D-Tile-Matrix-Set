@@ -7,7 +7,7 @@ label:: /conf/json-tilematrixsetlimits/schema
 
 subject:: <<req_json_tilesetmetadata_media-type>>
 
-test-purpose:: Validate that a TileSetMetadata encoded in JSON validates using the JSON
+test-purpose:: Verify that a TileSetMetadata instance encoded in JSON validates using the JSON
 schema for a tile set metadata.
 
 [.component,class=test-method]

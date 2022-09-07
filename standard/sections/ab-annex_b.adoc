@@ -41,7 +41,7 @@ The XML Schema Documents are situated in the xml subfolder and are named:
 * xml/tilematrixlimits.xsd
 * xml/tileset.xsd
 
-They includes the schemas necessary to XML-validate the classes XMLTileMatrixSet,
+They include the schemas necessary to XML-validate the classes XMLTileMatrixSet,
 XMLTileMatrixSetLimits and XMLTileSetMetadata, respectively.
 
 In addition, the directory named `xml/examples/tilematrixset` contains examples of

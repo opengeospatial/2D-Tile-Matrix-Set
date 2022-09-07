@@ -7,7 +7,7 @@ label:: /conf/xml-tilematrixsetlimits/model
 
 subject:: <<req_xml_tilematrixsetlimits_schema>>
 
-test-purpose:: Validate that a TileMatrixSetLimits encoded in XML implements the class
+test-purpose:: Validate that a TileMatrixSetLimits instance encoded in XML implements the class
 TileMatrixSetLimits.
 
 [.component,class=test-method]

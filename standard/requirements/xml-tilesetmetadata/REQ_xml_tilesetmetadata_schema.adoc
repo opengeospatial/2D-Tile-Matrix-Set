@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/xml-tilesetmetadata/schema
-description:: A TileSetMetadata encoded in XML shall validate using the XML schema for
+description:: A TileSetMetadata instance encoded in XML shall validate using the XML schema for
 a TileSetMetadata.
 ====

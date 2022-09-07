@@ -7,7 +7,7 @@ label:: /conf/json-tilematrixset/schema
 
 subject:: <<req_json_tilematrixset_schema>>
 
-test-purpose:: Validate that a TileMatrixSet encoded in JSON using the JSON schema for
+test-purpose:: Verify that a TileMatrixSet instance encoded in JSON validates using the JSON schema for
 a tile matrix set.
 
 [.component,class=test-method]

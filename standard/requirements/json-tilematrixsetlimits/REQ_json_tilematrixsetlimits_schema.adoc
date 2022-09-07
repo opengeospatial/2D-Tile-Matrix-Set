@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/json-tilematrixsetlimits/schema
-description:: A TileMatrixSetLimits encoded in JSON shall validate using the JSON
+description:: A TileMatrixSetLimits instance encoded in JSON shall validate using the JSON
 schemas for a tile matrix set limits.
 ====

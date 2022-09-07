@@ -54,13 +54,13 @@ This Annex includes some definitions for TileMatrixSets that are commonly used.
 | 24 | 33.3238997476528 | 0.0093306919293428 | 16,777,216 | 16,777,216
 |===
 
-One can define an arbitrary number of zoom levels and do not need to include all the
+One can define an arbitrary number of zoom levels and does not need to include all the
 zoom levels defined here. Here, 25 zoom levels are illustrated.
 
 NOTE: Mercator projection distorts the cell size the closer to the poles. The cell
 sizes provided here are only valid next to the equator in the direction E-W.
 
-NOTE: The CRS code 3857 is the official code for Web Mercator. An unofficial code
+NOTE: The EPSG CRS code 3857 is the official code for Web Mercator. An unofficial code
 "900913" (GOOGLE spelled with numbers) was initially assigned and is sometimes still
 used.
 
@@ -69,7 +69,7 @@ used.
 image::10.png[The 3 first Tile Matrix of the WebMercatorQuad TileMatrixSet (Source CCA)]
 
 This tile matrix set is the most used tile matrix set in the mass market: for
-example, by Google Maps, Microsoft Bing Maps and Open Street Map tiles. Nevertheless,
+example, by Google Maps, Microsoft Bing Maps and OpenStreetMap tiles. Nevertheless,
 it has been long criticized because it is a based on a spherical Mercator instead of
 an ellipsoid. The use of WebMercatorQuad should be limited to visualization. Any
 additional use (including distance measurements, routing etc.) needs to use the
@@ -140,7 +140,7 @@ the CRS84 CRS for the whole world.
 | 23 | 33.3238997476528 | 8.3819031715393 stem:[xx] 10^-8^ | 16,777,216 | 8,388,608
 |===
 
-One can define an arbitrary number of zoom levels and do not need to include all the
+One can define an arbitrary number of zoom levels and does not need to include all the
 ones defined here. Here, 18 zoom levels are illustrated.
 
 [[fig15]]
@@ -295,7 +295,7 @@ the EPSG:4326 CRS for the whole world.
 | 24 |33.323899747652873 |0.00933069192934 |0.008 |16,777,216 |16,777,216
 |===
 
-One can define an arbitrary number of zoom levels and do not need to include all the
+One can define an arbitrary number of zoom levels and does not need to include all the
 zoom levels defined here. Here, 25 zoom levels are illustrated.
 
 This Tile Matrix Set looks similar to the previous one (Web Mercator Quad) but this
@@ -308,7 +308,7 @@ image::12.png[Tile Matrix Id 1 (red lines; 2x2 tiles) and 3 (blue lines; 8x8 til
 
 [NOTE,keep-separate=true]
 ====
-The NGA Geomatics Office reminds the community to use DoD approved World Geodetic
+The Geomatics Office at the National Geospatial Intelligence Agency (NGA), a part of the US Department of Defense (DoD), reminds the community to use DoD approved World Geodetic
 System 1984 (WGS 84) applications for all mission critical activities and encourages
 the use of WGS84 based tile matrix sets like this one and discourages the use of Web
 Mercator tiles based on Web Mercator such as WebMercatorQuad.
@@ -380,7 +380,7 @@ single table.
 |===
 
 
-One can define an arbitrary number of zoom levels and do not need to include all the
+One can define an arbitrary number of zoom levels and does not need to include all the
 zoom levels defined here. Here, 24 zoom levels are illustrated.
 
 NOTE: The southern hemisphere ([http://www.opengis.net/def/crs/EPSG/0/32701,
@@ -490,7 +490,7 @@ image::14.png[Tile Matrix Id 0 (exterior line; 1x1 tile) and 1 (blank lines; 2x2
 [NOTE,keep-separate=true]
 ====
 In practice, there are many polar stereographic CRS and it is difficult to prioritize
-one. In many occasions, the meridian of origin is selected in order to rotate the
+one. On many occasions, the meridian of origin is selected in order to rotate the
 projection and allow a region to become more prominent. Examples are rotations
 emphasizing Greenland or Alaska. To be general, the 0 meridian of origin was
 selected. In addition, polar projections have a variety of standard parallels and

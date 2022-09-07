@@ -7,7 +7,7 @@ label:: /conf/xml-tilematrixsetmetadata/schema
 
 subject:: <<req_xml_tilesetmetadata_schema>>
 
-test-purpose:: Validate that a TileSetMetadata encoded in XML validates using the XML
+test-purpose:: Verify that a TileSetMetadata encoded in XML validates using the XML
 schema for a tile set metadata.
 
 [.component,class=test-method]

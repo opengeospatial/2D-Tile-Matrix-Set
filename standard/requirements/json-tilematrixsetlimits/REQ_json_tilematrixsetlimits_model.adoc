@@ -4,7 +4,7 @@
 ====
 [%metadata]
 label:: /req/json-tilematrixsetlimits/model
-description:: A TileMatrixSetLimits encoded in JSON _shall_ implement the class
+description:: A TileMatrixSetLimits instance encoded in JSON _shall_ implement the class
 TileMatrixSetLimits
 inherit:: /req/tilematrixsetlimits
 ====

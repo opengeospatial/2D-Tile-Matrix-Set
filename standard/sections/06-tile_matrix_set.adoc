@@ -404,7 +404,7 @@ contained in the CRS definition.]
 possible values are defined the in <<annex-well-known-scale-sets-informative>>.] |
 URI type{blank}footnote:h6[In WMTS 1.0 a URN was used as a reference to a well-known
 scale set. Later, OGC adopted HTTP URLs as URIs for references.
-The (https://docs.opengeospatial.org/pol/09-046r6.html#_naming_rule)[OGC Naming
+The https://docs.opengeospatial.org/pol/09-046r6.html#_naming_rule)[OGC Naming
 Authority - Procedures document] specifies rules to transform from URN to URLs that resolve to the OGC Definitions Server (http://www.opengis.net/def).
 Implementation of on-the-fly transformations based on these rules is possible.]
 | Zero or one (optional)

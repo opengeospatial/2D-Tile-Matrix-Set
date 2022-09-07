@@ -3,7 +3,7 @@
 ====
 [%metadata]
 label:: http://www.opengis.net/spec/tms/2.0/conf/json-tilematrixset
-subject:: <<json-tilematrixset-requirements-class,JSON TileMatrixSet">>
+subject:: <<json-tilematrixset-requirements-class,Requirements Class "JSON TileMatrixSet">>
 classification:: Target Type:tile matrix sets
 ====
 

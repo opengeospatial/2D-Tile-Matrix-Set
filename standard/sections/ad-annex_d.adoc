@@ -167,7 +167,7 @@ generate confusion.
 [NOTE,keep-separate=true]
 ====
 For INSPIRE: The Technical Guidance for the implementation of INSPIRE View Services
-defines a TileMatrixSet called InspireCRS84Quad that is identical to this one. Note
+defines a TileMatrixSet called InspireCRS84Quad that is identical to this one <<inspire-tg-view-services>>. Note
 that the current version of the INSPIRE Technical Guidance cited in the Bibliography
 Annex could accidentally generate confusion because it is comparing a GoogleCRS84Quad
 (that is a well-known scale set name) with the InspireCRS84Quad (that is a

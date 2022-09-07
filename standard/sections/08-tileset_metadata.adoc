@@ -219,8 +219,8 @@ TileMatrixSet, or a link with `rel`=tiling-scheme SHALL be provided.]
 
 | tileMatrixSetURI | Reference to a Tile Matrix Set on an official source for the
 Tile Matrix Set definitions | URI type{blank}footnote:b13[Points to a definition of
-the TileMatrixSet in and official source for tile matrix sets such as the OGC NA
-definition server (http://www.opengis.net/def/tms/) (including definitions from
+the TileMatrixSet in an official source for tile matrix sets such as the OGC Naming Authority's
+register of tile matrix sets (http://www.opengis.net/def/tms) (including definitions from
 <<annex-common-tilematrixset-definitions-informative>> and
 <<annex-variable-tilematrixset-definitions-informative>>)] | Zero or One (optional)
 Include if the tile matrix set for this tileset is available in an accessible

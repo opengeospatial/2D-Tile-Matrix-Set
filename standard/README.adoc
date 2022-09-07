@@ -36,6 +36,9 @@ UML diagrams, if applicable
 (automatically generated, in the `gh-pages` branch) published document.
 
 
+Spec element mappings::
+https://github.com/opengeospatial/NamingAuthority/blob/master/specification-elements/mappings/17-083r4.csv
+
 == Usage
 
 === Installing Metanorma

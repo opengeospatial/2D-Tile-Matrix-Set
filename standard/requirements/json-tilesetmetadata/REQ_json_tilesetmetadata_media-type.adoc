@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/json-tilesetmetadata/media-type
-description:: A TileSetMetadata encoded in an independent JSON document _shall_ use the
+description:: A TileSetMetadata instance encoded in an independent JSON document _shall_ use the
 media type application/json.
 ====

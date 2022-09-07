@@ -2,7 +2,7 @@
 [appendix,obligation=normative]
 == Conformance Class Abstract Test Suite
 
-A implementation of this standard must satisfy the following system characteristics
+An implementation of this standard must satisfy the following system characteristics
 to be conformant with this specification.
 
 === Conformance Class TileMatrixSet

@@ -7,7 +7,7 @@ label:: /conf/json-variablematrixwidth/ietf
 
 subject:: <<req_json_variablematrixwidth_ietf>>
 
-test-purpose:: Validate that a VariableMatrixWidth encoded in JSON conforms to
+test-purpose:: Validate that a VariableMatrixWidth instance encoded in JSON conforms to
 <<rfc7159>>
 
 [.component,class=test-method]

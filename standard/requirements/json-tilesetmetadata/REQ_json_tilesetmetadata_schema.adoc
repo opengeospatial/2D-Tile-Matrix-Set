@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/json-tilesetmetadata/schema
-description:: A TileSetMetadata encoded in JSON _shall_ validate using the JSON schema
+description:: A TileSetMetadata instance encoded in JSON _shall_ validate using the JSON schema
 for a TileSetMetadata (http://schemas.opengis.net/tms/2.0/json/tileSet.json).
 ====

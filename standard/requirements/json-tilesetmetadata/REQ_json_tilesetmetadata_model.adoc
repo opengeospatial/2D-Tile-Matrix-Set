@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/json-tilesetmetadata/model
-description:: A TileSetMetadata encoded in JSON _shall_ implement the class
+description:: A TileSetMetadata instance encoded in JSON _shall_ implement the class
 TileSetMetadata
 ====

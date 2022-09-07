@@ -7,7 +7,7 @@ label:: /conf/tilematrixsetlimits/model
 
 subject:: <<req_tilematrixsetlimits_model>>
 
-test-purpose:: Validate that a tile matrix set limits follows the UML model and model
+test-purpose:: Validate that a TileMatrixSetLimits instance follows the UML model and model
 description. Validate that each tileMatrix identifier is mentioned only once in the
 TileMatrixSetLimits.
 

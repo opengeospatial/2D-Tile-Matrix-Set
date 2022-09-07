@@ -47,7 +47,7 @@ These are the JSON and XML definitions of the CDB1GlobalGrid tile
 matrix set (see <<cdb-global-grid-tilematrixset-definition>>)
 that can be reproduced by other standards needing to define a tile
 matrix set. Not all TileMatrix elements need to be included and including
-other TileMatrice for more detailed scales is possible if they follow
+other TileMatrices for more detailed scales is possible if they follow
 the same pattern.
 
 One can define an arbitrary number of zoom levels. Here, 3 zoom levels

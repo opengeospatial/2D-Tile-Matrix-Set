@@ -4,7 +4,7 @@
 ====
 [%metadata]
 label:: /req/tilematrixsetlimits/model
-part:: A tile matrix set limits SHALL consist of an array of <<table12>> data
+part:: A TileMatrixSetLimits instance SHALL consist of an array of <<table12>> data
 structures with a multiplicity equal or inferior to the multiplicity of the tileMatrix
 of this tileMatrixSet and an optional boundingBox, as defined in the UML model shown in
 <<fig12>>

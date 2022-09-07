@@ -41,7 +41,7 @@ to have human-readable values. However not all humans can understand the same sp
 languages. This data class is mapped to XML or JSON encodings afterwards.
 
 The specified approach for allowing the language of a text value to be explicitly
-stated is indicated by the UML class diagram in the figure.
+stated is indicated by the UML class diagram in Figure 1.
 
 [[fig1]]
 .LanguageString UML model
@@ -67,7 +67,7 @@ types.
 ==== Description, Title and Keywords
 
 A basic set of data description parameters that include a human-readable title,
-description, and keywords are widely used in this Standard and defined here as a UML.
+description, and keywords are widely used in this Standard and defined here as a UML class diagram.
 
 [[fig2]]
 .Description Title Keywords UML model
@@ -106,8 +106,8 @@ One for each keyword authority used (one for each 'type' value)
 
 |===
 
-Keywords is described from MD_Keywords class in <<iso19115-1>> and has a list of
-keywords of the same 'type' specified in the optional 'type' element,
+The Keywords element is defined according to the MD_Keywords class that is specified in <<iso19115-1>> and has a list of
+keywords of the same 'type' specified in the optional 'type' element.
 
 [[table2]]
 .Parts of Keyword data elements
@@ -131,7 +131,7 @@ keywords of the same 'type' specified in the optional 'type' element,
 ====
 OGC APIs will use language negotiation with HTTP headers. In this situation, it is
 expected that elements defined as a list of LanguageString will default into a single
-CharacterString that in JSON will default into a string data type. In JSON encodings
+CharacterString that in JSON will default into a string data type. In JSON encodings,
 namespaces or codespaces (optional in the model) are not considered. This results in
 a simplification of the keywords in the JSON encoding to a simple array of strings.
 ====
@@ -263,7 +263,7 @@ this data structure for convenience
 image::AtomLink.png[Atom link UML model]
 
 [[table5]]
-.Parts of WebLink data structure
+.Parts of the WebLink data structure
 [cols="1,1,1,1",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
@@ -279,8 +279,8 @@ image::AtomLink.png[Atom link UML model]
 
 footnote:a5[It can be a name or a URI. If a name is given,
 implementations must consider the link relation type equivalent to the same name
-registered within the IANA Registry of Link Relations. The OGC NA maintains other
-possible values.]
+registered within the IANA Registry of Link Relations. The OGC Naming Authority maintains other
+possible values at http://www.opengis.net/def/rel .]
 
 | Zero or one (optional)
 

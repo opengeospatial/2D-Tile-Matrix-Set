@@ -35,12 +35,12 @@ image::4.png[TileMatrix Limits]
 ==== TileSet metadata
 
 Tiles are identified by tileMatrix id, tileRow number and tileCol number. These three
-elements only have meaning if they are associated to a tileMatrixSet description that
+elements only have meaning if they are associated with a tileMatrixSet description that
 contains the necessary information (in terms of scaleDenominator, cellSize,
 pointOfOrigin and cornerOfOrigin) to transform the indices into coordinates in a
-known CRS. The main purpose of the TileSetMetadata is to link the tileset with the
+known CRS. The main purpose of the TileSetMetadata is to link the TileSet with the
 tileMatrixSet description. In addition, the model contains elements describing the
-main characteristics of a TileSet, the connection to the tileset with the original
+main characteristics of a TileSet, the connection to the TileSet with the original
 data collection and styles as well as a recommended center point to start the
 navigation.
 
@@ -53,7 +53,7 @@ TileSet in the TileMatrixSet. It is expected that most TileMatrixSets will be de
 only once and reused many times. In these circumstances, the data used to create the
 TileSet may only exist for a partial region or for a subset of scales. The array of
 TileMatrixSetLimits data structures allows for the declaration of a limited coverage
-of a tile matrix set. The identifying URI for this class is
+of a TileMatrixSet. The identifying URI for this class is
 http://www.opengis.net/spec/tms/2.0/req/tilematrixsetlimits.
 
 include::../requirements/requirements_tilematrixsetlimits.adoc[]
@@ -188,7 +188,7 @@ etc) | Zero or one (optional)
 CharacterString{blank}footnote:k13[The intention is to show it in a corner of the
 viewport. It can contain markup and include a small logo image and links. In this
 case, note that when used to populate an HTML element there is a risk if it contains
-malicious script or reveal your identity to 3rt party domains.] | Zero or one
+malicious scripts or reveals your identity to 3rd party domains.] | Zero or one
 (optional)
 
 | license | License applicable to the tiles | CharacterString | Zero or one (optional)
@@ -219,8 +219,8 @@ TileMatrixSet, or a link with `rel`=tiling-scheme SHALL be provided.]
 
 | tileMatrixSetURI | Reference to a Tile Matrix Set on an official source for the
 Tile Matrix Set definitions | URI type{blank}footnote:b13[Points to a definition of
-the TileMatrixSet in and official source for tile matrix sets such as the OGC NA
-definition server (http://www.opengis.net/def/tms/) (including definitions from
+the TileMatrixSet in an official source for tile matrix sets such as the OGC Naming Authority's
+register of tile matrix sets (http://www.opengis.net/def/tms) (including definitions from
 <<annex-common-tilematrixset-definitions-informative>> and
 <<annex-variable-tilematrixset-definitions-informative>>)] | Zero or One (optional)
 Include if the tile matrix set for this tileset is available in an accessible
@@ -233,7 +233,7 @@ boundary of the tileMatrixSet{blank}footnote:g13[If missing, there are no limits
 other that the ones imposed by the TileMatrixSet. If present the TileMatrices listed
 are limited and the rest not available at all.]
 
-| boundingBox | Minimum bounding rectangle surrounding the tileset | BoundingBox data
+| boundingBox | Minimum bounding rectangle surrounding the TileSet | BoundingBox data
 structure, see <<table3>>{blank}footnote:h13[If the bounding box does not specify a
 CRS, it is inherited from the CRS of the TileSet.] | Zero or one (optional)
 
@@ -246,7 +246,7 @@ Zero or one (optional)
 | layer | Layer elements represented in the TileSet | GeospatialData data structure,
 see <<table14>> | Zero or more (optional)
 
-| style | Style used to generate the tiles in the til eset | Style data structure,
+| style | Style used to generate the tiles in the TileSet | Style data structure,
 see <<table16>> | Zero or one (optional){blank}footnote:i13[If style property
 mentions a style applied to all layers, the style property in layer should not be
 used.]
@@ -276,7 +276,7 @@ defined with a data structure defined in <<table14>>.
 | Names | Definition | Data type and values | Multiplicity and use
 
 | title{blank}footnote:a14[The multilingual scoping rules in
-<<multilingualTextEncoding>> apply] | Title of a geospatial data, normally used for
+<<multilingualTextEncoding>> apply] | Title of the geospatial dataset, normally used for
 display to a human | LanguageString data structure. See <<table1>> | Zero or more
 (optional) Include when available and useful
 
@@ -289,18 +289,18 @@ data, normally available for display to a human | LanguageString data structure.
 Include one for each language represented
 
 | keywords{blank}footnote:a14[] | Unordered list of one or more commonly used or
-formalized word(s) or phrase(s) used to describe a geospatial data | MD_Keywords
+formalized word(s) or phrase(s) used to describe the geospatial dataset | MD_Keywords
 class in <<iso19115>> See <<table1>> | Zero or more (optional)
 
 One for each keyword authority used
 
-| identifier | Unique identifier of a geospatial data | CodeType, as adaptation of
+| identifier | Unique identifier of the geospatial dataset | CodeType, as adaptation of
 MD_Identifier class <<iso19115>> | One (mandatory)
 
-| dataType | Type of data represented in a geospatial data | DataTypeCode code list |
+| dataType | Type of data represented in the geospatial dataset | DataTypeCode code list |
 one (mandatory)
 
-| geometryDimension | The geometry type of the features shown in a geospatial data |
+| geometryDimension | The geometry type of the features shown in the geospatial dataset |
 integer (0: points, 1: curves, 2: surfaces, 3: solids) | Zero or one (optional)
 
 | featureType | Feature type identifier | CharacterString | Zero or one
@@ -315,35 +315,35 @@ numbers, etc) | Zero or one (optional)
 CharacterString{blank}footnote:j14[The intention is to show it in a corner of the
 viewport. It can contain markup and include a small logo image and links. In this
 case, note that when used to populate an HTML element there is a risk if it contains
-malicious script or reveal your identity to 3rt party domains.] | Zero or one
+malicious scripts or reveals your identity to 3rd party domains.] | Zero or one
 (optional)
 
 | license | License applicable to the tiles | CharacterString | Zero or one (optional)
 
-| publisher | Organization or individual responsible for making a geospatial data
+| publisher | Organization or individual responsible for making the geospatial dataset
 available | CharacterString | Zero or one (optional)
 
-| theme | Category where a geospatial data can be grouped | CharacterString | Zero or
+| theme | Category where geospatial data can be grouped | CharacterString | Zero or
 more (optional)
 
 | crs | Coordinate Reference System (CRS) | CRSType type, see <<table4>> | Zero or
 more (optional)
 
-| minScaleDenominator | Minimum scale denominator for usage of a geospatial data |
-double{blank}footnote:c14[SHALL be an scaleDenominator defined in one of the
-TileMatrix of the TileMatrixSet] | Zero or one (optional){blank}footnote:e14[If
+| minScaleDenominator | Minimum scale denominator for usage of the geospatial data |
+double{blank}footnote:c14[SHALL be a scaleDenominator defined in one of the
+TileMatrix elements of the TileMatrixSet] | Zero or one (optional){blank}footnote:e14[If
 minCellSize, minScaleDenominator and maxTileMatrix are provided they SHALL be related
 to the same TileMatrix]
 
-| minCellSize | Minimum cell size for usage of a geospatial data |
+| minCellSize | Minimum cell size for usage of the geospatial data |
 double{blank}footnote:c14[] | Zero or one (optional){blank}footnote:e14[]
 
-| maxScaleDenominator | Maximum cell size for usage of a geospatial data |
+| maxScaleDenominator | Maximum cell size for usage of the geospatial data |
 double{blank}footnote:c14[] | Zero or one (optional){blank}footnote:f14[If
 maxCellSize, maxScaleDenominator and minTileMatrix are provided they SHALL be related
 to the same TileMatrix]
 
-| maxCellSize | Maximum scale denominator for usage of a geospatial data |
+| maxCellSize | Maximum scale denominator for usage of the geospatial data |
 double{blank}footnote:c14[] | Zero or one (optional){blank}footnote:f14[]
 
 | maxTileMatrix | TileMatrix identifier associated with the minScaleDenominator |
@@ -357,22 +357,22 @@ CharacterString{blank}footnote:d14[] | Zero or one (optional){blank}footnote:f14
 data{blank}footnote:g14[In the same CRS as the TileSet] | BoundingBox data structure,
 see <<table3>> | Zero or one (optional)
 
-| created | Timestamp indicating when a geospatial data was first produced | DateTime
+| created | Timestamp indicating when the geospatial data was first produced | DateTime
 | Zero or one (optional)
 
 | updated | Timestamp of the last geospatial data change/revision | DateTime | Zero
 or one (optional)
 
-| style | Style applied to a geospatial data to generate the tiles in the TileSet |
+| style | Style applied to the geospatial data to generate the tiles in the TileSet |
 Style data structure, see <<table16>> | Zero or one (optional){blank}footnote:b14[If
 the tileSetMetadata style property mentions a style applied to all geospatial data,
 this should be omitted]
 
-| geoDataClass | URI identifying a class of data contained in a geospatial data
+| geoDataClass | URI identifying a class of data contained in the geospatial data
 (useful to determine compatibility with styles or processes) | CodeType, as
 adaptation of MD_Identifier class <<iso19115>> | Zero or more (optional)
 
-| propertySchema | Properties represented by the features in a geospatial data. Can
+| propertySchema | Properties represented by the features in the geospatial data. Can
 be the attributes of a feature dataset (datatype=geometries) or the rangeType of a
 coverage (datatype=coverage) | FeatureAttribute data structure. See <<table15>> |
 Zero or more (optional)
@@ -384,7 +384,7 @@ pointing to the collection of geospatial data.] | Zero or more (optional)
 
 [NOTE, keep-separate=true]
 ====
-the link 'rel' used here with semantics of pointing from the GeospatialData class to
+The link 'rel' used here with semantics of pointing from the GeospatialData class to
 point to a collection representing it cannot be 'collection' because IANA semantics
 for 'collection' implies that the source is an item and the target a 'collection' of
 items. We use 'geodata' instead.

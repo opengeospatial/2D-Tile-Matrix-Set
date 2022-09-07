@@ -108,7 +108,7 @@
 		},
 		"tileMatrixSetURI":
 		{
-			"description": "Reference to a Tile Matrix Set on an offical source for Tile Matrix Sets such as the OGC NA definition server (http://www.opengis.net/def/tms/). Required if the tile matrix set is registered on an open official source.",
+			"description": "Reference to a Tile Matrix Set on an official source for Tile Matrix Sets such as the OGC-NA definition server (http://www.opengis.net/def/tms). Required if the tile matrix set is registered on an open official source.",
 			"type": "string",
 			"format": "uri"
 		},

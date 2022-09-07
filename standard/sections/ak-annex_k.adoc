@@ -33,7 +33,7 @@ Storing, indexing and accessing the content for the additional dimensions
 can then be achieved through separate mechanisms, such as using formats
 supporting multiple dimensions (e.g. netCDF for coverages, glTF for
 3D models, LAS for point clouds). Despite not being structured as
-tiles, extra dimensions could still be subset if the APIs supports
+tiles, extra dimensions could still be subset if the API supports
 a subsetting mechanism such as the `subset` (trimming or slicing)
 and `datetime` (temporal slicing) query parameters. Note that the
 data density or resolution of the extra dimensions can still be reduced
@@ -55,8 +55,8 @@ Fixed divisions for the extra dimensions may be suitable to scenarios
 where the extra dimensions have a limited extent, such as
 dividing all tile matrices by a small number of floors, by a few segments
 of altitudes, by month of the year or by a few years.
-Again note that the data density or resolution of the extra dimensions
-can still be reduced for the lower resolution 2D tile matrices
+Again, note that the data density or resolution of the extra dimensions
+can still be reduced for the lower resolution 2D tile matrices.
 
 ==== Octrees and Orthtrees (Hyperoctrees)
 
@@ -80,7 +80,7 @@ or to a _TileSet_'s _TileMatrixSetLimit_. Including this property
 in the _TileSet_'s _TileMatrixSetLimits_ allows for the re-use of
 common 2D TileMatrixSets.
 
-.Properties for a ExtraDimension data structure
+.Properties for an ExtraDimension data structure
 [cols="1,1,1,1",options="header"]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
@@ -214,7 +214,7 @@ may contain coordinates (temporal).
 Coverage tiles can contain additional dimensions, which may or may
 not have gone through a trim operation.
 A precise subset operation corresponds to each of the three proposed
-approach, which would also typically make use of a re-scaling (downsampling)
+approaches, which would also typically make use of a re-scaling (downsampling)
 operation as well to produce the lower resolution tiles.
 
 ==== Point Clouds

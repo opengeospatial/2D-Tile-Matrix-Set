@@ -1,23 +1,19 @@
 [abstract]
 == Abstract
 
-The OGC Tile Matrix Set Standard defines the rules and requirements for a tile matrix
-set as a way to index space based on a set of regular grids defining a domain (tile
+The OGC Two Dimensional Tile Matrix Set and Tile Set Metadata Standard defines the rules and requirements for a tile matrix set as a way to index space based on a set of regular grids defining a domain (tile
 matrix) for a limited list of scales in a Coordinate Reference System (CRS) as
 defined in <<ogc18-005r5>> Abstract Specification Topic 2: Referencing by
-Coordinates. This content was initially included in <<ogc07-057r7>> OpenGIS Web Map
-Tile Service Implementation Standard (WMTS) and was separated in the <<ogc17-083r2>>
-OGC Two Dimensional Tile Matrix Set, to allow reusability in other data formats of
+Coordinates. This content was initially included in the <<ogc07-057r7>> OpenGIS Web Map
+Tile Service Implementation Standard (WMTS) and was separated out into the <<ogc17-083r2>>
+OGC Two Dimensional Tile Matrix Set Standard version 1.0, to support reusability in other data formats of
 services that need a tiling scheme. This document is a revision of the
-<<ogc17-083r2>> and the general tile matrix set concept is inherited from it with
+<<ogc17-083r2>> document and the general tile matrix set concept is inherited from it with
 small additions. In a tile matrix set, each tile matrix is divided into regular
 tiles. In a tile matrix set, a tile can be univocally identified by a tile column, a
-tile row, and a tile matrix identifier. The OGC Tile Matrix Set Standard describes a
-data structure defining the properties of the tile matrix set in both UML diagrams
-and in tabular form. This document also defines a new data structure, called tile set
+tile row, and a tile matrix identifier. The OGC Two Dimensional Tile Matrix Set and Tile Set Metadata Standard describes a data structure defining the properties of the tile matrix set in both Unified Modeling Language (UML) diagrams and in tabular form. This document also defines a new data structure, called tile set
 metadata, that can be used to describe a particular set of tiles following a tile
-matrix set. XML and JSON encodings are described both for tile matrix sets and tile
-matrix set metadata. It includes tile matrix set limits, links to the tile matrix
+matrix set. Extensible Markup Language (XML) and JavaScript Object Notation (JSON) encodings are described both for tile matrix sets and tile matrix set metadata. It includes tile matrix set limits, links to the tile matrix
 set, details of the original data represented by the tile set and a nice point of
 origin to start exploring the tile set. Finally, the document offers practical
 examples of tile matrix sets both for common global projections and for specific
@@ -26,9 +22,9 @@ regions.
 == Preface
 
 In 2007 the OGC approved and released the Web Map Tile Service Standard
-<<ogc07-057r7>> (WMTS). WMTS defines "tile matrix set". Over time, other OGC
-standards with requirements for "tiles" or tiled structures needed to use the same
-definition. Unfortunately, other OGC standards could not use the tile matrix set
+<<ogc07-057r7>> (WMTS). WMTS defines the concept of a "tile matrix set". Over time, other OGC
+Standards with requirements for "tiles" or tiled structures needed to use the same
+definition. Unfortunately, other OGC Standards could not use the tile matrix set
 definition directly because the definition was formally linked to the tile service.
 This revision uncouples the concept of a tile matrix set from the WMTS standard so
 that other standards can reference the concept directly. This version of the standard
@@ -53,7 +49,7 @@ set forth in this document, and to provide supporting documentation._
 The correct definition of a tile matrix set and the availability of tile set metadata
 are crucial to be able to correctly geo-reference a tile. The use of the wrong tile
 matrix set could result in incorrect geo-referencing of the tiles and the features
-represented in those tiles. In an emergency situation, such such incorrect
+represented in those tiles. In an emergency situation, such incorrect
 referencing could result in sending first responders to the wrong location.
 
 In a normal service interaction, the client requests the tile matrix set once and
@@ -82,7 +78,7 @@ submitters:
 | Joan Maso | Universitat Autonoma de Barcelona (UAB-CREAF)
 | Jeff Yutzler | Image Matters LLC
 | Peter Rushforth | Canada Centre for Mapping and Earth Observation, Natural Resources Canada
-| Jérôme St-Louis | Ecere Corporation
+| Jérôme Jacovella-St-Louis | Ecere Corporation
 | Jeff Harrison | US Army Geospatial Center
 
 |===

@@ -4,7 +4,7 @@
 ====
 [%metadata]
 label:: /req/xml-variablematrixwidth/model
-description:: A VariableMatrixWidth encoded in XML _shall_ implement the class
+description:: A VariableMatrixWidth instance encoded in XML _shall_ implement the class
 VariableMatrixWidth
 inherit:: /req/variablematrixwidth
 inherit:: /req/xml-tilematrixset

@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/xml-tilematrixsetlimits/schema
-description:: A TileMatrixSetLimits encoded in XML shall validate using the XML schemas
+description:: A TileMatrixSetLimits instance encoded in XML shall validate using the XML schemas
 for a tile matrix set limits.
 ====

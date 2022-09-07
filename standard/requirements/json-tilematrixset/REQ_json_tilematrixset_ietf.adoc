@@ -4,5 +4,5 @@
 ====
 [%metadata]
 label:: /req/json-tilematrixset/ietf
-description:: A TileMatrixSet encoded in JSON _shall_ conform to <<rfc7159>>
+description:: A TileMatrixSet instance encoded in JSON _shall_ conform to <<rfc7159>>
 ====

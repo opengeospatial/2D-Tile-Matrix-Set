@@ -110,7 +110,7 @@ include::../../schemas/tms/2.0/xml/examples/tilematrixset/WGS1984Quad.xml[]
 
 === World Mercator WGS84 Quad
 
-These are the JSON and XML definitions of the WorldMercatorQuad tile matrix set (see
+These are the JSON and XML definitions of the WorldMercatorWGS84Quad tile matrix set (see
 <<WorldMercatorWGS84Quad>>) that can be reproduced by other standards needing to
 define a tile matrix set. Not all TileMatrix elements need to be included and
 including other TileMatrices for more detailed scales is possible if they follow the
@@ -159,12 +159,12 @@ include::../../schemas/tms/2.0/xml/examples/tilematrixset/UTM31WGS84Quad.xml[]
 
 === Arctic Universal Polar Stereographic WGS 84 Quad
 
-These are the JSON and XML definition of the UPSArcticWGS84Quad tile matrix set (see
+These are the JSON and XML definitions of the UPSArcticWGS84Quad tile matrix set (see
 <<aups-wgs84>>) that can be reproduced by other standards needing to define a tile
 matrix set. Not all TileMatrix elements need to be included and including other
 TileMatrices for more detailed scales is possible if they follow the same pattern.
 
-==== Arctic UPS WGS 84 Quad (JSON enconding)
+==== Arctic UPS WGS 84 Quad (JSON encoding)
 
 [source,json,options="unnumbered"]
 ----

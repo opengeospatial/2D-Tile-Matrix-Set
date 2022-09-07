@@ -7,7 +7,7 @@ label:: /conf/json-variablematrixwidth/model
 
 subject:: <<req_json_variablematrixwidth_model>>
 
-test-purpose:: Validate that VariableMatrixWidth encoded in JSON implements the class
+test-purpose:: Validate that a VariableMatrixWidth instance encoded in JSON implements the class
 VariableMatrixWidth
 
 [.component,class=test-method]

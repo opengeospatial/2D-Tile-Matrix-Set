@@ -7,7 +7,7 @@ label:: /conf/xml-tilematrixset/schema
 
 subject:: <<req_xml_tilematrixset_schema>>
 
-test-purpose:: Validate that a TileMatrixSet encoded in XML validates using the XML
+test-purpose:: Verify that a TileMatrixSet instance encoded in XML validates using the XML
 schema for a tile matrix set.
 
 [.component,class=test-method]

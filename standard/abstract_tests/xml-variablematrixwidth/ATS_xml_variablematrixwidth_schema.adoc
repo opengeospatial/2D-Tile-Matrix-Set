@@ -7,7 +7,7 @@ label:: /conf/xml-variablematrixwidth/schema
 
 subject:: <<req_xml_variablematrixwidth_schema>>
 
-test-purpose:: Validate that a TileSetMetadata encoded in XML validates using the XML
+test-purpose:: Verify that a TileSetMetadata encoded in XML validates using the XML
 schema for a tile matrix set link.
 
 [.component,class=test-method]

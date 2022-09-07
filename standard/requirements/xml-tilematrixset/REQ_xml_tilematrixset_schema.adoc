@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/xml-tilematrixset/schema
-description:: A TileMatrixSet encoded in XML _shall_ validate using the XML schema for
+description:: A TileMatrixSet instance encoded in XML _shall_ validate using the XML schema for
 a tile matrix set.
 ====

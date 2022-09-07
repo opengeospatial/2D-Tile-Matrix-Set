@@ -92,3 +92,5 @@ http://www2.unb.ca/~estef/talks/CCA2017_Technical_Session_Stefanakis.pdf
 * [[[rfc4287, IETF RFC 4287]]]
 
 * [[[rfc6838, IETF RFC 6838]]]
+
+* [[[inspire-tg-view-services, 31]]], INSPIRE Maintenance and Implementation Group: Technical Guidance for the implementation of INSPIRE View Services, Version 3.2.0. European Commission (2022). https://inspire.ec.europa.eu/documents/technical-guidance-implementation-inspire-view-services-1

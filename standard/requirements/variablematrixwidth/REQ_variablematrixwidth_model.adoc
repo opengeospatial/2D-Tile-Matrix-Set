@@ -6,6 +6,6 @@
 label:: /req/variablematrixwidth/model
 description:: When a tiled resource or dataset has variable width tiles, the resource
 _or dataset shall_ define the variable matrix width in a tile matrix set using a
-variablematrixwidth data structure. This will result in the following UML model shown
-in <<fig9>> and model description in <<table9>>.
+VariableMatrixWidth data structure. This will result in the following UML model shown
+in <<fig10>> and model description in <<table9>>.
 ====

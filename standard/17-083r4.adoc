@@ -8,7 +8,7 @@
 :committee:
 :fullname: Joan Masó
 :role: editor
-:fullname_2: Jérôme St-Louis
+:fullname_2: Jérôme Jacovella-St-Louis
 :role_2: editor
 :copyright-year: 2019-2021
 :language: en

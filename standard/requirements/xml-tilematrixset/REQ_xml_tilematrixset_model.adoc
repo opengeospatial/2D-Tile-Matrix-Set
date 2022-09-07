@@ -4,6 +4,6 @@
 ====
 [%metadata]
 label:: /req/xml-tilematrixset/model
-description:: A TileMatrixSet encoded in XML shall implement the class TileMatrixSet
+description:: A TileMatrixSet instance encoded in XML shall implement the class TileMatrixSet
 inherit:: /req/tilematrixset
 ====

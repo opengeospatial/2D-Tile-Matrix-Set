@@ -7,7 +7,7 @@ label:: /conf/xml-tilematrixsetlimits/schema
 
 subject:: <<req_xml_tilematrixsetlimits_schema>>
 
-test-purpose:: Validate that a TileMatrixSetLimits encoded in XML validates using the
+test-purpose:: Verify that a TileMatrixSetLimits instance encoded in XML validates using the
 XML schemas for a tile matrix set limits.
 
 [.component,class=test-method]

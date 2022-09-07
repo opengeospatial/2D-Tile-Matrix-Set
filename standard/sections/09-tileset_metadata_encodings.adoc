@@ -52,9 +52,9 @@ containing document prevails.
 An annex provides an <<json-document-instance-using-tilesetmetadata, Example XML
 encoding of TileSetMetadata>>.
 
-The encoding of PropertySchema adopts the JSON Schema form starting by and element
+The encoding of PropertySchema adopts the JSON Schema form starting with an element
 propertiesSchema that defines the GeoJSON element "properties" for this layer (the
-composition of "properties" is undefined by GeoJSON but it can be define for a layer
+composition of "properties" is undefined by GeoJSON but it can be defined for a layer
 instance if its features follow a data model). <<table21>> describes the mapping
 between the FeatureAttribute class attributes (in <<table15>>) and the JSON schema
 properties.

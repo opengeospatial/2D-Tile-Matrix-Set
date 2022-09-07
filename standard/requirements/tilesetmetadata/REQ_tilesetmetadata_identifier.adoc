@@ -4,13 +4,12 @@
 ====
 [%metadata]
 label:: /req/tilesetmetadata/identifier
-part:: A tiled resource or dataset SHALL declare support to a tile matrix set by one of
+part:: A tiled resource or dataset SHALL declare support for a tile matrix set by one of
 the following two methods: a link to a tile matrix set definition (e.g. one of the
 TileMatrixSet definitions from <<annex-common-tilematrixset-definitions-informative>>
 or <<annex-variable-tilematrixset-definitions-informative>>) as one of the links in the
 links list, or by explicitly including a TileMatrixSet definition (as an object in the
 `tileMatrixSet` property).
 part:: In an OGC API or an OGC Web Service and if the TileMatrixSet used is registered
-with the OGC NA definition service, `tileMatrixSetURI` SHALL be populated with a full
-URI to the OGC NA Definitions Server {set:cellbgcolor:#FFFFFF}
+with the OGC Naming Authority, `tileMatrixSetURI` SHALL be populated with the canonical URI to the definition as listed on the OGC Definitions Server. {set:cellbgcolor:#FFFFFF}
 ====

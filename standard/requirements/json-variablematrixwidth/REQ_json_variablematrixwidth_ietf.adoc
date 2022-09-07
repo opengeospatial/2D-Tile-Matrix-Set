@@ -4,5 +4,5 @@
 ====
 [%metadata]
 label:: /req/json-variablematrixwidth/ietf
-description:: A VariableMatrixWidth encoded in JSON _shall_ conform to <<rfc7159>>
+description:: A VariableMatrixWidth instance encoded in JSON _shall_ conform to <<rfc7159>>
 ====

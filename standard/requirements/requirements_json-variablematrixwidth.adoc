@@ -6,5 +6,5 @@
 label:: http://www.opengis.net/spec/tms/2.0/req/json-variablematrixwidth
 subject:: tile matrix sets
 inherit:: http://www.opengis.net/spec/tms/2.0/req/variablematrixwidth
-inherit:: http://www.opengis.net/spec/tms/2.0/req/json_tilematrixset
+inherit:: http://www.opengis.net/spec/tms/2.0/req/json-tilematrixset
 ====

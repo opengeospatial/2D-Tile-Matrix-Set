@@ -1,9 +1,9 @@
 = OGC Two Dimensional Tile Matrix Set and Tile Set Metadata
 :edition: 2.0
 :docnumber: 17-083r4
-:received-date: XXXX-XX-XX
-:issued-date: XXXX-XX-XX
-:published-date: XXXX-XX-XX
+:received-date: 2021-12-23
+:issued-date: 2022-02-20
+:published-date: 2022-09-09
 :external-id: http://www.opengis.net/doc/IS/tms/2.0
 :committee:
 :fullname: Joan Masó
@@ -15,7 +15,7 @@
 :doctype: standard
 :docsubtype: implementation
 :submitting-organizations: Universitat Autonoma de Barcelona (UAB-CREAF); Image Matters LLC; Natural Resources Canada (NRCan); Ecere Corporation; US Army Geospatial Center
-:status: draft
+:status: approved
 :imagesdir: figures
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf,rxl

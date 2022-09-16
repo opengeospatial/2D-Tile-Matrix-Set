@@ -4,6 +4,19 @@
 
 === Overview
 
+[[tileset-medatadata-overview]]
+==== TileSet metadata
+
+Tiles are identified by tileMatrix id, tileRow number and tileCol number. These three
+elements only have meaning if they are associated with a TileMatrixSet description that
+contains the necessary information (in terms of scaleDenominator, cellSize,
+pointOfOrigin and cornerOfOrigin) to transform the indices into coordinates in a
+known CRS. The main purpose of the TileSetMetadata is to link the TileSet with the
+TileMatrixSet description. In addition, the model contains elements describing the
+main characteristics of a TileSet, preserving the connection from the TileSet to the original
+data collection and styles as well as a recommended center point to start the
+navigation.
+
 [[tile-matrix-set-limits-overview]]
 ==== TileMatrixSet limits
 
@@ -11,18 +24,18 @@ Imagine a case where a tileset covers the whole bounding box of a tile matrix
 set. Now, imagine that the tileset extent needs to be expanded beyond the point
 and corner of origin of each TileMatrix. Changing the point of origin changes
 the position of any tile row and tile column indices. In other words, in the new
-tileset, tiles that cover the same bounding box than the previous tileset
+tileset, tiles that cover the same bounding box as the previous tileset
 receive different tile row and tile column indices. This invalidates any cached
 tiles that the client could have stored and all client copies need to be
 updated. To overcome this problem, a dataset can optionally use a more generic
-TileMatrixSet that covers a bigger area (or even global one, such as one of
-defined in <<annex-common-tilematrixset-definitions-informative>>). In fact,
-that TileMatrixSet that defines an area that might be covered by the dataset in
-a future could easily be shared for many datasets and become a common
+TileMatrixSet that covers a bigger area (or even the entire globe, such as one of
+those defined in <<annex-common-tilematrixset-definitions-informative>>). In fact,
+that TileMatrixSet defining an area that might be covered by the dataset in
+the future could easily be re-used for many other datasets and become a common
 TileMatrixSet.
 
 To inform the client about the valid range of tile indices in a tileset, the
-TileMatrixSetLimits concept is introduced. A list of TileMatrixSetLimit informs
+TileMatrixSetLimits concept is introduced. A list of TileMatrixSetLimits informs
 the minimum and maximum limits of these indices for each TileMatrix that
 contains actual data. The area outside these limits is considered empty space
 and is not covered by the tileset.
@@ -30,19 +43,6 @@ and is not covered by the tileset.
 [[fig11]]
 .TileMatrixSet Limits
 image::4.png[TileMatrix Limits]
-
-[[tileset-medatadata-overview]]
-==== TileSet metadata
-
-Tiles are identified by tileMatrix id, tileRow number and tileCol number. These three
-elements only have meaning if they are associated with a tileMatrixSet description that
-contains the necessary information (in terms of scaleDenominator, cellSize,
-pointOfOrigin and cornerOfOrigin) to transform the indices into coordinates in a
-known CRS. The main purpose of the TileSetMetadata is to link the TileSet with the
-tileMatrixSet description. In addition, the model contains elements describing the
-main characteristics of a TileSet, the connection to the TileSet with the original
-data collection and styles as well as a recommended center point to start the
-navigation.
 
 === Requirements classes
 

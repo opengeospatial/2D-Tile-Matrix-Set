@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Edited with XMLSpy v2008 sp1 (http://www.altova.com) by Joan Masó
 	(UAB-CREAF-MiraMon). Based on previous documents of Keith Pomakis. -->
-<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en">
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en" version="2.0.0">
 	<annotation>
 		<appinfo>TileMatrixSet 2021-02-02</appinfo>
 		<documentation>

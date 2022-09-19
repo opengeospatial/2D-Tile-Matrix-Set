@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schema xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://www.opengis.net/tms/2.0/common" elementFormDefault="qualified" version="2.0.0" xml:lang="en">
 	<annotation>
-		<appinfo>owsAll.xsd 2010-03-19</appinfo>
+		<appinfo>common.xsd 2010-03-19</appinfo>
 		<documentation>This XML Schema Document includes and imports, directly or
       indirectly, all the XML Schemas defined by the OWS Common Implemetation
       Specification.
       
-      OWS is an OGC Standard.
-      Copyright (c) 2009 Open Geospatial Consortium, Inc. All Rights Reserved.
+      OGC TileMatrixSet 2.0 is an OGC Standard.
+      Copyright (c) 2022 Open Geospatial Consortium.
       To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
     </documentation>
 	</annotation>

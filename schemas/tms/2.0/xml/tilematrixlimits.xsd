@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Edited with XMLSpy v2008 sp1 (http://www.altova.com) by Joan Masó 
-	(UAB-CREAF-MiraMon). Based on previous documents of Keith Pomakis. -->
 <schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:tms="http://www.opengis.net/tms/2.0" targetNamespace="http://www.opengis.net/tms/2.0" elementFormDefault="qualified" xml:lang="en" version="2.0.0">
 	<annotation>
-		<appinfo>TileMatrixSet 2021-02-02</appinfo>
+		<appinfo>tilematrixlimits.xsd 2021-02-02</appinfo>
 		<documentation>
 			This XML Schema Document encodes the TileMatrisSet data structures.
-			TMS is an OGC Standard Copyright (c) 2021 Open Geospatial Consortium, Inc. All Rights Reserved. 
-		    To obtain additional rights of use, visit http://www.opengeospatial.org/legal/.
+
+			OGC TMS 2.0 is an OGC Standard.
+			Copyright (c) 2022 Open Geospatial Consortium.
+			To obtain additional rights of use, visit http://www.opengeospatial.org/legal/ .
 		</documentation>
 	</annotation>
 	<!-- *********************************************************************
-	             Includes and imports.                            
+	             Includes and imports.
           ********************************************************************* -->
 	<!--import namespace="http://www.w3.org/1999/xlink" schemaLocation="../../../xlink/1.0.0/xlinks.xsd"/-->
 	<!-- ****************************************************************************************** -->

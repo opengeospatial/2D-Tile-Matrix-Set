@@ -17,5 +17,5 @@
 	<include schemaLocation="description.xsd"/>
 	<include schemaLocation="bbox.xsd"/>
 	<include schemaLocation="crs.xsd"/>
-	<include schemaLocation="mediaType.xsd"/>
+	<include schemaLocation="mediatype.xsd"/>
 </schema>

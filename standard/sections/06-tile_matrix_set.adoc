@@ -343,7 +343,7 @@ image::TileMatrixSet.png[TileMatrixSet UML model]
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
-| identifier
+| id
 | Tile matrix set identifier{blank}footnote:g6[TileMatrixSet identifiers
 SHALL be unique (different) for each TileMatrixSet of a server.]
 | CodeType, as adaptation of MD_Identifier class <<iso19115>>
@@ -442,7 +442,7 @@ elements is needed to define the distribution of tiles for each scale denominato
 |===
 | Names | Definition | Data type and values | Multiplicity and use
 
-| identifier
+| id
 | Tile matrix identifier
 
 footnote:f7[The cell size of the tile can be obtained from the scaleDenominator

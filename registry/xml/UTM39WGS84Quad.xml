@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<TileMatrixSet id="UTM39WGS84Quad" xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<TileMatrixSet id="UTM39WGS84Quad" xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 https://schemas.opengis.net/tms/2.0/xml/tilematrixset.xsd">
    <tmsc:Title>Universal Transverse Mercator Zone 39 WGS84 Quad</tmsc:Title>
    <tmsc:Identifier>UTM39WGS84Quad</tmsc:Identifier>
    <uri>http://www.opengis.net/def/tilematrixset/OGC/1.0/UTM39WGS84Quad</uri>

@@ -1,14 +1,14 @@
 {
-    "id":"Swiss2DTMS",
+    "id":"SwissLV95CellSizes",
     "title": "Switzerland 2D tile matrix set definition",
-    "uri": "http://www.opengis.net/def/tilematrixset/OGC/1.0/Swiss2DTMS",
+    "uri": "http://www.opengis.net/def/tilematrixset/OGC/1.0/SwissLV95CellSizes",
     "crs": "http://www.opengis.net/def/crs/EPSG/0/2056",
-    "orderedAxes": ["X","Y"],
+    "orderedAxes": ["E","N"],
     "tileMatrices":
     [
         {
             "id": "0",
-            "scaleDenominator": 14285714.0,
+            "scaleDenominator": 14285714.285714284,
             "cellSize": 4000,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -18,7 +18,7 @@
         },
         {
             "id": "1",
-            "scaleDenominator": 7142857.0,
+            "scaleDenominator": 7142857.142857142,
             "cellSize": 2000,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -28,7 +28,7 @@
         },
         {
             "id": "2",
-            "scaleDenominator": 3571429.0,
+            "scaleDenominator": 3571428.571428571,
             "cellSize": 1000,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -38,7 +38,7 @@
         },
         {
             "id": "3",
-            "scaleDenominator": 1785714.0,
+            "scaleDenominator": 1785714.2857142854,
             "cellSize": 500,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -48,7 +48,7 @@
         },
         {
             "id": "4",
-            "scaleDenominator": 892857.0,
+            "scaleDenominator": 892857.1428571427,
             "cellSize": 250,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -58,7 +58,7 @@
         },
         {
             "id": "5",
-            "scaleDenominator": 357143.0,
+            "scaleDenominator": 357142.8571428571,
             "cellSize": 100,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -68,7 +68,7 @@
         },
         {
             "id": "6",
-            "scaleDenominator": 178571.0,
+            "scaleDenominator": 178571.42857142855,
             "cellSize": 50,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -78,7 +78,7 @@
         },
         {
             "id": "7",
-            "scaleDenominator": 71429.0,
+            "scaleDenominator": 71428.57142857142,
             "cellSize": 20,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -88,7 +88,7 @@
         },
         {
             "id": "8",
-            "scaleDenominator": 35714.0,
+            "scaleDenominator": 35714.28571428571,
             "cellSize": 10,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -98,7 +98,7 @@
         },
         {
             "id": "9",
-            "scaleDenominator": 17857.0,
+            "scaleDenominator": 17857.142857142855,
             "cellSize": 5,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -108,7 +108,7 @@
         },
         {
             "id": "10",
-            "scaleDenominator": 89289.0,
+            "scaleDenominator": 8928.571428571428,
             "cellSize": 2.5,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -118,7 +118,7 @@
         },
         {
             "id": "11",
-            "scaleDenominator": 3571.0,
+            "scaleDenominator": 3571.428571428571,
             "cellSize": 1,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -128,7 +128,7 @@
         },
         {
             "id": "12",
-            "scaleDenominator": 1786.0,
+            "scaleDenominator": 1785.7142857142856,
             "cellSize": 0.5,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -138,7 +138,7 @@
         },
         {
             "id": "13",
-            "scaleDenominator": 893.0,
+            "scaleDenominator": 892.8571428571428,
             "cellSize": 0.25,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -148,7 +148,7 @@
         },
         {
             "id": "14",
-            "scaleDenominator": 357.0,
+            "scaleDenominator": 357.1428571428571,
             "cellSize": 0.1,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,
@@ -158,7 +158,7 @@
         },
         {
             "id": "15",
-            "scaleDenominator": 179.0,
+            "scaleDenominator": 178.57142857142856,
             "cellSize": 0.05,
             "pointOfOrigin": [2419995.75, 1350004.29],
             "tileWidth": 256,

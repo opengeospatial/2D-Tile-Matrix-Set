@@ -11,6 +11,7 @@
       <tmsc:Identifier>1</tmsc:Identifier>
       <ScaleDenominator>279072704.500914</ScaleDenominator>
       <CellSize>78140.3572602559</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -21,6 +22,7 @@
       <tmsc:Identifier>2</tmsc:Identifier>
       <ScaleDenominator>139536352.250457</ScaleDenominator>
       <CellSize>39070.178630128</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -31,6 +33,7 @@
       <tmsc:Identifier>3</tmsc:Identifier>
       <ScaleDenominator>69768176.1252285</ScaleDenominator>
       <CellSize>19535.089315064</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -41,6 +44,7 @@
       <tmsc:Identifier>4</tmsc:Identifier>
       <ScaleDenominator>34884088.0626143</ScaleDenominator>
       <CellSize>9767.5446575319</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -51,6 +55,7 @@
       <tmsc:Identifier>5</tmsc:Identifier>
       <ScaleDenominator>17442044.0313071</ScaleDenominator>
       <CellSize>4883.772328766</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -61,6 +66,7 @@
       <tmsc:Identifier>6</tmsc:Identifier>
       <ScaleDenominator>8721022.01565356</ScaleDenominator>
       <CellSize>2441.886164383</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -71,6 +77,7 @@
       <tmsc:Identifier>7</tmsc:Identifier>
       <ScaleDenominator>4360511.00782678</ScaleDenominator>
       <CellSize>1220.9430821915</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -81,6 +88,7 @@
       <tmsc:Identifier>8</tmsc:Identifier>
       <ScaleDenominator>2180255.50391339</ScaleDenominator>
       <CellSize>610.471541095749</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -91,6 +99,7 @@
       <tmsc:Identifier>9</tmsc:Identifier>
       <ScaleDenominator>1090127.7519567</ScaleDenominator>
       <CellSize>305.235770547875</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -101,6 +110,7 @@
       <tmsc:Identifier>10</tmsc:Identifier>
       <ScaleDenominator>545063.875978348</ScaleDenominator>
       <CellSize>152.617885273937</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -111,6 +121,7 @@
       <tmsc:Identifier>11</tmsc:Identifier>
       <ScaleDenominator>272531.937989174</ScaleDenominator>
       <CellSize>76.3089426369687</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -121,6 +132,7 @@
       <tmsc:Identifier>12</tmsc:Identifier>
       <ScaleDenominator>136265.968994587</ScaleDenominator>
       <CellSize>38.1544713184843</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -131,6 +143,7 @@
       <tmsc:Identifier>13</tmsc:Identifier>
       <ScaleDenominator>68132.9844972935</ScaleDenominator>
       <CellSize>19.0772356592422</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -141,6 +154,7 @@
       <tmsc:Identifier>14</tmsc:Identifier>
       <ScaleDenominator>34066.4922486467</ScaleDenominator>
       <CellSize>9.53861782962109</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -151,6 +165,7 @@
       <tmsc:Identifier>15</tmsc:Identifier>
       <ScaleDenominator>17033.2461243234</ScaleDenominator>
       <CellSize>4.76930891481054</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -161,6 +176,7 @@
       <tmsc:Identifier>16</tmsc:Identifier>
       <ScaleDenominator>8516.62306216168</ScaleDenominator>
       <CellSize>2.38465445740527</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -171,6 +187,7 @@
       <tmsc:Identifier>17</tmsc:Identifier>
       <ScaleDenominator>4258.31153108084</ScaleDenominator>
       <CellSize>1.19232722870264</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -181,6 +198,7 @@
       <tmsc:Identifier>18</tmsc:Identifier>
       <ScaleDenominator>2129.15576554042</ScaleDenominator>
       <CellSize>0.596163614351318</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -191,6 +209,7 @@
       <tmsc:Identifier>19</tmsc:Identifier>
       <ScaleDenominator>1064.57788277021</ScaleDenominator>
       <CellSize>0.298081807175659</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -201,6 +220,7 @@
       <tmsc:Identifier>20</tmsc:Identifier>
       <ScaleDenominator>532.288941385105</ScaleDenominator>
       <CellSize>0.149040903587829</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -211,6 +231,7 @@
       <tmsc:Identifier>21</tmsc:Identifier>
       <ScaleDenominator>266.144470692553</ScaleDenominator>
       <CellSize>0.0745204517939147</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -221,6 +242,7 @@
       <tmsc:Identifier>22</tmsc:Identifier>
       <ScaleDenominator>133.072235346276</ScaleDenominator>
       <CellSize>0.0372602258969574</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -231,6 +253,7 @@
       <tmsc:Identifier>23</tmsc:Identifier>
       <ScaleDenominator>66.5361176731382</ScaleDenominator>
       <CellSize>0.0186301129484787</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>
@@ -241,6 +264,7 @@
       <tmsc:Identifier>24</tmsc:Identifier>
       <ScaleDenominator>33.2680588365691</ScaleDenominator>
       <CellSize>0.00931505647423934</CellSize>
+      <CornerOfOrigin>topLeft</CornerOfOrigin>
       <PointOfOrigin>-9501965.72931276 20003931.4586255</PointOfOrigin>
       <TileWidth>256</TileWidth>
       <TileHeight>256</TileHeight>

@@ -1,12 +1,12 @@
 {
-    "id": "SwissLV95CellSizes",
+    "id": "cellSize",
     "title": "Switzerland 2D tile matrix set definition",
-    "uri": "http://www.opengis.net/def/tilematrixset/OGC/1.0/SwissLV95CellSizes",
+    "uri": "http://www.opengis.net/def/tilematrixset/OGC/1.0/cellSize",
     "crs": "http://www.opengis.net/def/crs/EPSG/0/2056",
     "orderedAxes": ["E", "N"],
     "tileMatrices": [
         {
-            "id": "0",
+            "id": 0,
             "scaleDenominator": 14285714.285714284,
             "cellSize": 4000,
             "cornerOfOrigin": "topLeft",
@@ -17,7 +17,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "1",
+            "id": 1,
             "scaleDenominator": 13392857.142857142,
             "cellSize": 3750,
             "cornerOfOrigin": "topLeft",
@@ -28,7 +28,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "2",
+            "id": 2,
             "scaleDenominator": 12499999.999999998,
             "cellSize": 3500,
             "cornerOfOrigin": "topLeft",
@@ -39,7 +39,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "3",
+            "id": 3,
             "scaleDenominator": 11607142.857142856,
             "cellSize": 3250,
             "cornerOfOrigin": "topLeft",
@@ -50,7 +50,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "4",
+            "id": 4,
             "scaleDenominator": 10714285.714285713,
             "cellSize": 3000,
             "cornerOfOrigin": "topLeft",
@@ -61,7 +61,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "5",
+            "id": 5,
             "scaleDenominator": 9821428.57142857,
             "cellSize": 2750,
             "cornerOfOrigin": "topLeft",
@@ -72,7 +72,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "6",
+            "id": 6,
             "scaleDenominator": 8928571.428571427,
             "cellSize": 2500,
             "cornerOfOrigin": "topLeft",
@@ -83,7 +83,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "7",
+            "id": 7,
             "scaleDenominator": 8035714.2857142845,
             "cellSize": 2250,
             "cornerOfOrigin": "topLeft",
@@ -94,7 +94,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "8",
+            "id": 8,
             "scaleDenominator": 7142857.142857142,
             "cellSize": 2000,
             "cornerOfOrigin": "topLeft",
@@ -105,7 +105,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "9",
+            "id": 9,
             "scaleDenominator": 6249999.999999999,
             "cellSize": 1750,
             "cornerOfOrigin": "topLeft",
@@ -116,7 +116,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "10",
+            "id": 10,
             "scaleDenominator": 5357142.857142856,
             "cellSize": 1500,
             "cornerOfOrigin": "topLeft",
@@ -127,7 +127,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "11",
+            "id": 11,
             "scaleDenominator": 4464285.714285714,
             "cellSize": 1250,
             "cornerOfOrigin": "topLeft",
@@ -138,7 +138,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "12",
+            "id": 12,
             "scaleDenominator": 3571428.571428571,
             "cellSize": 1000,
             "cornerOfOrigin": "topLeft",
@@ -149,7 +149,7 @@
             "matrixHeight": 1
         },
         {
-            "id": "13",
+            "id": 13,
             "scaleDenominator": 2678571.428571428,
             "cellSize": 750,
             "cornerOfOrigin": "topLeft",
@@ -160,7 +160,7 @@
             "matrixHeight": 2
         },
         {
-            "id": "14",
+            "id": 14,
             "scaleDenominator": 2321428.5714285714,
             "cellSize": 650,
             "cornerOfOrigin": "topLeft",
@@ -171,7 +171,7 @@
             "matrixHeight": 2
         },
         {
-            "id": "15",
+            "id": 15,
             "scaleDenominator": 1785714.2857142854,
             "cellSize": 500,
             "cornerOfOrigin": "topLeft",
@@ -182,7 +182,7 @@
             "matrixHeight": 2
         },
         {
-            "id": "16",
+            "id": 16,
             "scaleDenominator": 892857.1428571427,
             "cellSize": 250,
             "cornerOfOrigin": "topLeft",
@@ -193,7 +193,7 @@
             "matrixHeight": 5
         },
         {
-            "id": "17",
+            "id": 17,
             "scaleDenominator": 357142.8571428571,
             "cellSize": 100,
             "cornerOfOrigin": "topLeft",
@@ -204,7 +204,7 @@
             "matrixHeight": 12
         },
         {
-            "id": "18",
+            "id": 18,
             "scaleDenominator": 178571.42857142855,
             "cellSize": 50,
             "cornerOfOrigin": "topLeft",
@@ -215,7 +215,7 @@
             "matrixHeight": 25
         },
         {
-            "id": "19",
+            "id": 19,
             "scaleDenominator": 71428.57142857142,
             "cellSize": 20,
             "cornerOfOrigin": "topLeft",
@@ -226,7 +226,7 @@
             "matrixHeight": 62
         },
         {
-            "id": "20",
+            "id": 20,
             "scaleDenominator": 35714.28571428571,
             "cellSize": 10,
             "cornerOfOrigin": "topLeft",
@@ -237,7 +237,7 @@
             "matrixHeight": 125
         },
         {
-            "id": "21",
+            "id": 21,
             "scaleDenominator": 17857.142857142855,
             "cellSize": 5,
             "cornerOfOrigin": "topLeft",
@@ -248,7 +248,7 @@
             "matrixHeight": 250
         },
         {
-            "id": "22",
+            "id": 22,
             "scaleDenominator": 8928.571428571428,
             "cellSize": 2.5,
             "cornerOfOrigin": "topLeft",
@@ -259,7 +259,7 @@
             "matrixHeight": 500
         },
         {
-            "id": "23",
+            "id": 23,
             "scaleDenominator": 7142.857142857142,
             "cellSize": 2,
             "cornerOfOrigin": "topLeft",
@@ -270,7 +270,7 @@
             "matrixHeight": 625
         },
         {
-            "id": "24",
+            "id": 24,
             "scaleDenominator": 5357.142857142857,
             "cellSize": 1.5,
             "cornerOfOrigin": "topLeft",
@@ -281,7 +281,7 @@
             "matrixHeight": 833
         },
         {
-            "id": "25",
+            "id": 25,
             "scaleDenominator": 3571.428571428571,
             "cellSize": 1,
             "cornerOfOrigin": "topLeft",
@@ -292,7 +292,7 @@
             "matrixHeight": 1250
         },
         {
-            "id": "26",
+            "id": 26,
             "scaleDenominator": 1785.7142857142856,
             "cellSize": 0.5,
             "cornerOfOrigin": "topLeft",
@@ -303,7 +303,7 @@
             "matrixHeight": 2500
         },
         {
-            "id": "27",
+            "id": 27,
             "scaleDenominator": 892.8571428571428,
             "cellSize": 0.25,
             "cornerOfOrigin": "topLeft",
@@ -314,7 +314,7 @@
             "matrixHeight": 5000
         },
         {
-            "id": "28",
+            "id": 28,
             "scaleDenominator": 357.1428571428571,
             "cellSize": 0.1,
             "cornerOfOrigin": "topLeft",
@@ -325,7 +325,7 @@
             "matrixHeight": 12500
         },
         {
-            "id": "29",
+            "id": 29,
             "scaleDenominator": 178.57142857142856,
             "cellSize": 0.05,
             "cornerOfOrigin": "topLeft",

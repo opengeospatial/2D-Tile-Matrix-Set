@@ -1,0 +1,197 @@
+{
+   "id" : "ISEA9R",
+   "title" : "Icosahedral Snyder Equal Area a9 Rhombic",
+   "description" : "Icosahedral Snyder Equal Area (ISEA) unfolded icoshaedron planar projection, with first vertex at WGS84 58.397145907431°N, 11.25°E and second vertex due North, rotated clockwise 60° and horizontally sheared by a -60° shear angle, mapped to a 5x6 rhombic space, refining in 3x3 (aperture 9)",
+   "uri" : "http://www.opengis.net/def/tilematrixset/OGC/1.0/ISEA9R",
+   "crs" : "http://www.opengis.net/def/crs/OGC/0/153456",
+   "orderedAxes" : [ "x", "y" ],
+   "tileMatrices" : [
+      {
+         "id" : "0",
+         "scaleDenominator" : 112793326.6956736504617,
+         "cellSize" : 0.0041152263374,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 5,
+         "matrixHeight" : 6,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "1",
+         "scaleDenominator" : 37597775.5652245501539,
+         "cellSize" : 0.0013717421125,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 15,
+         "matrixHeight" : 18,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "2",
+         "scaleDenominator" : 12532591.8550748500513,
+         "cellSize" : 0.0004572473708,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 45,
+         "matrixHeight" : 54,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "3",
+         "scaleDenominator" : 4177530.6183582833504,
+         "cellSize" : 0.0001524157903,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 135,
+         "matrixHeight" : 162,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "4",
+         "scaleDenominator" : 1392510.2061194277835,
+         "cellSize" : 0.0000508052634,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 405,
+         "matrixHeight" : 486,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "5",
+         "scaleDenominator" : 464170.0687064759278,
+         "cellSize" : 0.0000169350878,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 1215,
+         "matrixHeight" : 1458,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "6",
+         "scaleDenominator" : 154723.356235491976,
+         "cellSize" : 0.0000056450293,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 3645,
+         "matrixHeight" : 4374,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "7",
+         "scaleDenominator" : 51574.4520784973253,
+         "cellSize" : 0.0000018816764,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 10935,
+         "matrixHeight" : 13122,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "8",
+         "scaleDenominator" : 17191.4840261657751,
+         "cellSize" : 0.0000006272255,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 32805,
+         "matrixHeight" : 39366,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "9",
+         "scaleDenominator" : 5730.4946753885917,
+         "cellSize" : 0.0000002090752,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 98415,
+         "matrixHeight" : 118098,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "10",
+         "scaleDenominator" : 1910.1648917961972,
+         "cellSize" : 0.0000000696917,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 295245,
+         "matrixHeight" : 354294,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "11",
+         "scaleDenominator" : 636.7216305987324,
+         "cellSize" : 0.0000000232306,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 885735,
+         "matrixHeight" : 1062882,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "12",
+         "scaleDenominator" : 212.2405435329108,
+         "cellSize" : 0.0000000077435,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 2657205,
+         "matrixHeight" : 3188646,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "13",
+         "scaleDenominator" : 70.7468478443036,
+         "cellSize" : 0.0000000025812,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 7971615,
+         "matrixHeight" : 9565938,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "14",
+         "scaleDenominator" : 23.5822826147679,
+         "cellSize" : 0.0000000008604,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 23914845,
+         "matrixHeight" : 28697814,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "15",
+         "scaleDenominator" : 7.8607608715893,
+         "cellSize" : 0.0000000002868,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 71744535,
+         "matrixHeight" : 86093442,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      },
+      {
+         "id" : "16",
+         "scaleDenominator" : 2.6202536238631,
+         "cellSize" : 0.0000000000956,
+         "cornerOfOrigin" : "topLeft",
+         "pointOfOrigin" : [ 0, 0 ],
+         "matrixWidth" : 215233605,
+         "matrixHeight" : 258280326,
+         "tileWidth" : 243,
+         "tileHeight" : 243
+      }
+   ]
+}

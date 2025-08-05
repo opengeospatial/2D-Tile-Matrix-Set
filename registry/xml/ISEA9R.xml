@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TileMatrixSet id="ISEA9R" xmlns="http://www.opengis.net/tms/2.0" xmlns:tmsc="http://www.opengis.net/tms/2.0/common" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/tms/2.0 ../../tilematrixset.xsd">
+   <tmsc:Title>Icosahedral Snyder Equal Area a9 Rhombic</tmsc:Title>
+   <tmsc:Description>Icosahedral Snyder Equal Area (ISEA) unfolded icoshaedron planar projection, with first vertex at WGS84 58.397145907431°N, 11.25°E and second vertex due North, rotated clockwise 60° and horizontally sheared by a -60° shear angle, mapped to a 5x6 rhombic space, refining in 3x3 (aperture 9)</tmsc:Description>
+   <tmsc:Identifier>ISEA9R</tmsc:Identifier>
+   <uri>http://www.opengis.net/def/tilematrixset/OGC/1.0/ISEA9R</uri>
+   <tmsc:CRS>
+      <tmsc:URI>http://www.opengis.net/def/crs/OGC/0/153456</tmsc:URI>
+   </tmsc:CRS>
+   <OrderedAxes>x,y</OrderedAxes>
+   <TileMatrix>
+     <tmsc:Identifier>0</tmsc:Identifier>
+     <ScaleDenominator>112793326.6956736504617</ScaleDenominator>
+     <CellSize>0.0041152263374</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>5</MatrixWidth>
+     <MatrixHeight>6</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>1</tmsc:Identifier>
+     <ScaleDenominator>37597775.5652245501539</ScaleDenominator>
+     <CellSize>0.0013717421125</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>15</MatrixWidth>
+     <MatrixHeight>18</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>2</tmsc:Identifier>
+     <ScaleDenominator>12532591.8550748500513</ScaleDenominator>
+     <CellSize>0.0004572473708</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>45</MatrixWidth>
+     <MatrixHeight>54</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>3</tmsc:Identifier>
+     <ScaleDenominator>4177530.6183582833504</ScaleDenominator>
+     <CellSize>0.0001524157903</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>135</MatrixWidth>
+     <MatrixHeight>162</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>4</tmsc:Identifier>
+     <ScaleDenominator>1392510.2061194277835</ScaleDenominator>
+     <CellSize>0.0000508052634</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>405</MatrixWidth>
+     <MatrixHeight>486</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>5</tmsc:Identifier>
+     <ScaleDenominator>464170.0687064759278</ScaleDenominator>
+     <CellSize>0.0000169350878</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>1215</MatrixWidth>
+     <MatrixHeight>1458</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>6</tmsc:Identifier>
+     <ScaleDenominator>154723.356235491976</ScaleDenominator>
+     <CellSize>0.0000056450293</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>3645</MatrixWidth>
+     <MatrixHeight>4374</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>7</tmsc:Identifier>
+     <ScaleDenominator>51574.4520784973253</ScaleDenominator>
+     <CellSize>0.0000018816764</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>10935</MatrixWidth>
+     <MatrixHeight>13122</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>8</tmsc:Identifier>
+     <ScaleDenominator>17191.4840261657751</ScaleDenominator>
+     <CellSize>0.0000006272255</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>32805</MatrixWidth>
+     <MatrixHeight>39366</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>9</tmsc:Identifier>
+     <ScaleDenominator>5730.4946753885917</ScaleDenominator>
+     <CellSize>0.0000002090752</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>98415</MatrixWidth>
+     <MatrixHeight>118098</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>10</tmsc:Identifier>
+     <ScaleDenominator>1910.1648917961972</ScaleDenominator>
+     <CellSize>0.0000000696917</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>295245</MatrixWidth>
+     <MatrixHeight>354294</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>11</tmsc:Identifier>
+     <ScaleDenominator>636.7216305987324</ScaleDenominator>
+     <CellSize>0.0000000232306</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>885735</MatrixWidth>
+     <MatrixHeight>1062882</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>12</tmsc:Identifier>
+     <ScaleDenominator>212.2405435329108</ScaleDenominator>
+     <CellSize>0.0000000077435</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>2657205</MatrixWidth>
+     <MatrixHeight>3188646</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>13</tmsc:Identifier>
+     <ScaleDenominator>70.7468478443036</ScaleDenominator>
+     <CellSize>0.0000000025812</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>7971615</MatrixWidth>
+     <MatrixHeight>9565938</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>14</tmsc:Identifier>
+     <ScaleDenominator>23.5822826147679</ScaleDenominator>
+     <CellSize>0.0000000008604</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>23914845</MatrixWidth>
+     <MatrixHeight>28697814</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>15</tmsc:Identifier>
+     <ScaleDenominator>7.8607608715893</ScaleDenominator>
+     <CellSize>0.0000000002868</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>71744535</MatrixWidth>
+     <MatrixHeight>86093442</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+   <TileMatrix>
+     <tmsc:Identifier>16</tmsc:Identifier>
+     <ScaleDenominator>2.6202536238631</ScaleDenominator>
+     <CellSize>0.0000000000956</CellSize>
+     <PointOfOrigin>0 0</PointOfOrigin>
+     <CornerOfOrigin>topLeft</CornerOfOrigin>
+     <MatrixWidth>215233605</MatrixWidth>
+     <MatrixHeight>258280326</MatrixHeight>
+     <TileWidth>243</TileWidth>
+     <TileHeight>243</TileHeight>
+   </TileMatrix>
+</TileMatrixSet>

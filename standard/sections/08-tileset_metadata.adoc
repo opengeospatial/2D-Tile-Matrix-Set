@@ -160,14 +160,14 @@ image::TileSet.png[TileSetMetadata UML model]
 
 | title{blank}footnote:a13[The multilingual scoping rules in
 <<multilingualTextEncoding>> apply.] | Title of a TileSet, normally used for display
-to a human | LanguageString data structure. See <<table1>> | Zero or more (optional)
+to a human | LanguageString data structure. See <<table1>> | Zero or one (optional)
 Include when available and useful
 
 Include one for each language represented
 
 | description{blank}footnote:a13[] | Brief narrative description of a TileSet,
 normally available for display to a human | LanguageString data structure. See
-<<table1>> | Zero or more (optional) Include when available and useful
+<<table1>> | Zero or one (optional) Include when available and useful
 
 Include one for each language represented
 
